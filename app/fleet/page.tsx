@@ -1,0 +1,414 @@
+import Navigation from "@/components/navigation"
+import Footer from "@/components/footer"
+import Image from "next/image"
+import { Check, ArrowRight, Users, Car, Shield, Star } from "lucide-react"
+
+export default function FleetPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Navigation />
+
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
+                Our Fleet
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Premium comfort, every ride, every time
+              </h1>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
+                Our fleet sets a new standard with top-tier vehicles that blend luxury with cutting-edge features. 
+                From spacious MPVs to executive sedans, every vehicle is meticulously maintained and equipped with 
+                the latest technology for your comfort and safety.
+              </p>
+
+              <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                <Image src="/premium-car-hero.jpg" alt="Premium luxury car" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Fleet Overview */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Diverse fleet for every need
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                At Aylestone Kings, we offer a comprehensive range of vehicles to meet all your transportation needs. 
+                Whether you're traveling solo or with a group, our fleet guarantees comfort, reliability, and style.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Estate Vehicle */}
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                <div className="w-24 h-22 rounded-xl overflow-hidden mb-4 mx-auto">
+                  <Image 
+                    src="/Estate vehicle.png" 
+                    alt="Estate Vehicle" 
+                    width={96}
+                    height={88}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Estate Vehicle</h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                    Perfect for those who need extra space for luggage or equipment. Our estate vehicles combine 
+                    practicality with comfort, making them ideal for airport transfers and shopping trips.
+                  </p>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Spacious luggage area</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Comfortable seating for 5</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Perfect for airport runs</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Executive */}
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                <div className="w-24 h-22 rounded-xl overflow-hidden mb-4 mx-auto">
+                  <Image 
+                    src="/Executive.jpg" 
+                    alt="Executive Car" 
+                    width={96}
+                    height={88}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Executive</h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                    The ultimate in luxury and sophistication. Perfect for business meetings, corporate events, 
+                    and when you want to make a lasting impression with premium travel.
+                  </p>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Premium leather interiors</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Advanced climate control</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Professional chauffeur service</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 5 Seater */}
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                <div className="w-24 h-22 rounded-xl overflow-hidden mb-4 mx-auto">
+                  <Image 
+                    src="/5 seater.png" 
+                    alt="5 Seater Car" 
+                    width={96}
+                    height={88}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">5 Seater</h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                    Ideal for small groups or families. Offering comfortable rides with ample space for passengers 
+                    and luggage, perfect for one-way travel and short trips around the city.
+                  </p>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Compact and efficient</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Great for city travel</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Cost-effective option</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 6 Seater */}
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                <div className="w-24 h-22 rounded-xl overflow-hidden mb-4 mx-auto">
+                  <Image 
+                    src="/6 seater.jpg" 
+                    alt="6 Seater Car" 
+                    width={96}
+                    height={88}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">6 Seater</h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                    Our 6-seater vehicles are perfect for medium-sized groups, ensuring everyone travels comfortably 
+                    with plenty of space for both passengers and luggage.
+                  </p>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Medium group capacity</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Comfortable seating</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Versatile for various trips</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 7 Seater */}
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                <div className="w-24 h-22 rounded-xl overflow-hidden mb-4 mx-auto">
+                  <Image 
+                    src="/7 seater.jpg" 
+                    alt="7 Seater Car" 
+                    width={96}
+                    height={88}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">7 Seater</h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                    Offering even more space for passengers and luggage, making them ideal for larger families 
+                    or groups who need comfortable transportation.
+                  </p>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Large group capacity</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Spacious interior</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Perfect for family trips</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 8 Seater */}
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                <div className="w-24 h-22 rounded-xl overflow-hidden mb-4 mx-auto">
+                  <Image 
+                    src="/8 seater.jpg" 
+                    alt="8 Seater Car" 
+                    width={96}
+                    height={88}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">8 Seater</h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                    Our largest vehicles offer the ultimate comfort for large groups, making them perfect for 
+                    corporate events, family gatherings, or group outings.
+                  </p>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Maximum capacity</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Corporate event ready</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                      <Check className="h-3 w-3 text-green-600" />
+                      <span className="text-xs text-gray-600">Luxury group travel</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* MPV Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div>
+                <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
+                  MPV Vehicles
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  Versatile and spacious travel solutions
+                </h2>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  Our MPV fleet is designed to be versatile and perfect for all passengers. Whether you're heading 
+                  to the airport, a business meeting, or a family outing, our MPVs ensure a smooth and enjoyable ride.
+                </p>
+
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Users className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Spacious Interiors</h4>
+                      <p className="text-gray-600">
+                        Plenty of room for passengers and luggage, ensuring everyone travels in comfort.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Car className="h-6 w-6 text-green-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Comfortable Seating</h4>
+                      <p className="text-gray-600">
+                        Ergonomically designed seats with premium materials for maximum comfort during your journey.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Shield className="h-6 w-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Advanced Safety Features</h4>
+                      <p className="text-gray-600">
+                        Equipped with the latest safety technology to ensure your peace of mind throughout the journey.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative order-last">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-2xl"></div>
+                <Image 
+                  src="/mpv-vehicle.jpg" 
+                  alt="MPV vehicle" 
+                  width={600}
+                  height={400}
+                  className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Executive Cars Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="relative order-last md:order-first">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 to-blue-400/10 rounded-2xl"></div>
+                <Image 
+                  src="/executive-car.jpg" 
+                  alt="Executive car" 
+                  width={600}
+                  height={400}
+                  className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
+                />
+              </div>
+              <div>
+                <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium mb-6">
+                  Executive Service
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                  Business and leisure, perfectly balanced
+                </h2>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  Our executive cars provide luxury on wheels. Perfect for airport transfers, corporate events, 
+                  or important client meetings. Our commitment to luxury and meeting our clients' expectations 
+                  is reflected in every aspect of our executive service.
+                </p>
+
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Star className="h-6 w-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Luxury Interiors</h4>
+                      <p className="text-gray-600">
+                        Premium materials and finishes for a first-class experience that exceeds expectations.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Car className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Advanced Technology</h4>
+                      <p className="text-gray-600">
+                        Cutting-edge infotainment and connectivity options to keep you connected and entertained.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Shield className="h-6 w-6 text-green-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Privacy and Comfort</h4>
+                      <p className="text-gray-600">
+                        Tinted windows and plush seating for a private and comfortable journey every time.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to experience our premium fleet?
+            </h2>
+            <p className="text-xl text-[#E4E4E4] mb-8">
+              Book your ride today and discover the difference that quality vehicles and professional service make.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center gap-3">
+                Book Now
+                <ArrowRight className="h-5 w-5" />
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200">
+                View Pricing
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  )
+}
