@@ -25,7 +25,7 @@ export default function FleetPage() {
               </p>
 
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="/premium-car-hero.jpg" alt="Premium luxury car" fill className="object-cover" />
+                <Image src="/premium-comfort.jpg" alt="Premium luxury car" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
             </div>
@@ -307,7 +307,7 @@ export default function FleetPage() {
               <div className="relative order-1 md:order-2 mb-8 md:mb-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-2xl"></div>
                 <Image 
-                  src="/mpv-vehicle.jpg" 
+                  src="/verstile-spacious.jpg" 
                   alt="MPV vehicle" 
                   width={600}
                   height={400}
@@ -325,7 +325,7 @@ export default function FleetPage() {
               <div className="relative order-1 md:order-2 mb-8 md:mb-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 to-blue-400/10 rounded-2xl"></div>
                 <Image 
-                  src="/executive-car.jpg" 
+                  src="/business-leisure.jpg" 
                   alt="Executive car" 
                   width={600}
                   height={400}

@@ -21,7 +21,7 @@ import { siteData } from "@/lib/data"
 siteData.company.name                    // "Aylestone Kings"
 siteData.company.tagline                 // "Moving Aylestone forward"
 siteData.company.founded                 // "2009"
-siteData.company.founders                // "Colin and Audrey Shanks"
+siteData.company.founders                // ""
 
 // Statistics
 siteData.company.yearsExperience         // "15+"

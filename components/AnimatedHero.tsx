@@ -98,7 +98,7 @@ export default function AnimatedHero() {
           </div>
           
           {/* Right Content - Contact Mode Cards */}
-          <div className="hidden lg:flex max-w-md order-2 justify-center lg:justify-end mb-8 lg:mb-0">
+          <div className="hidden lg:flex max-w-md order-2 justify-center lg:justify-end mb-8 lg:mb-0 mt-20">
             <ContactModeCards />
           </div>
         </div>

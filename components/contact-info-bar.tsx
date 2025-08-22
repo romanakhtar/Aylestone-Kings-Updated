@@ -17,7 +17,7 @@ export default function ContactInfoBar() {
   }
 
   return (
-    <div className="bg-[#06A0A6] text-white py-0.5 px-4 sm:px-6 lg:px-8 fixed top-0 left-0 right-0 z-[60]">
+    <div className="bg-gradient-to-r from-[#06A0A6] via-[#0F0D3E] to-[#06A0A6] text-white py-0.5 px-4 sm:px-6 lg:px-8 fixed top-0 left-0 right-0 z-[60]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-row justify-center sm:justify-between items-center text-xs sm:text-sm">
           {/* Contact Information */}

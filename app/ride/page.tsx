@@ -27,7 +27,7 @@ export default function RidePage() {
             </div>
             <div className="relative">
               <Image
-                src="/"
+                src="/Professional-in-car.jpg"
                 alt="Professional in car"
                 width={600}
                 height={400}

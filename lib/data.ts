@@ -71,6 +71,7 @@ export const siteData = {
     taxiBridgeBackground: "/taxi-bridge-background.jpg",
     communitySupport: "/community-support.jpg",
     innovationTech: "/innovation-tech.jpg",
+    trustedTransport: "/trusted transport.jpg",
 
     // About Page Images
     aboutHero: "/about-hero-image.jpg",

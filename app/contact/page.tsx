@@ -3,19 +3,31 @@ import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Mail, Clock, MessageCircle, Globe } from "lucide-react"
 import Logo from "@/components/logo"
 import { contactInfo } from "@/lib/data"
+import Image from "next/image"
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
 
       {/* Hero Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/contact-bg.jpg" 
+            alt="Contact background" 
+            fill 
+            className="object-cover"
+            priority
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-         
-            
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Contact Us</h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Contact Us</h1>
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
               Get in touch with Aylestone Kings for all your transportation needs 24/7.
             </p>
           </div>

@@ -73,17 +73,17 @@ export default function CompanyPage() {
                 About Us
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                {siteData.companyPage.about.subtitle}
+              Founded in 2009, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone.
               </h2>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
-                {siteData.companyPage.about.description}
+              With over 15 years in the industry, Aylestone Kings has provided best services to the customers. It has been a journey of growth and success, and we are proud to be a part of the community. 
               </p>
               
               {/* Key Achievements */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                 <div className="flex items-center gap-3">
                   <Award className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
-                  <span className="text-[#2E3C44] font-medium">National Lifetime Achievement Award</span>
+                  <span className="text-[#2E3C44] font-medium">Serving the community</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
@@ -91,11 +91,11 @@ export default function CompanyPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Shield className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
-                  <span className="text-[#2E3C44] font-medium">Industry Innovation Leader</span>
+                  <span className="text-[#2E3C44] font-medium">Providing safe and reliable services</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Users className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
-                  <span className="text-[#2E3C44] font-medium">Local Authority Partner</span>
+                  <span className="text-[#2E3C44] font-medium">Local Partner</span>
                 </div>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function CompanyPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1">
               <Image
-                src="/taxi-bridge-background.jpg"
+                src="/serving-many.jpg"
                 alt="Taxi with bridge background"
                 fill
                 className="object-cover"
@@ -177,7 +177,7 @@ export default function CompanyPage() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Check className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
-                  <span className="text-[#2E3C44]">Newcastle United Foundation Support</span>
+                  <span className="text-[#2E3344]">Believing in the community</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Check className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
@@ -190,7 +190,7 @@ export default function CompanyPage() {
               </div>
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-2">
-              <Image src="/community-support.jpg" alt="Community support" fill className="object-cover" />
+              <Image src="/community-support.png" alt="Community support" fill className="object-cover" />
             </div>
           </div>
         </div>

@@ -68,8 +68,8 @@ export default function Home() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-2xl"></div>
               <Image
-                src={siteData.images.companyHistory}
-                alt="Company History"
+                src={siteData.images.trustedTransport}
+                alt="Trusted Transport Service"
                 width={600}
                 height={400}
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
