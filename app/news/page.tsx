@@ -1,6 +1,5 @@
 "use client"
 
-import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import Image from "next/image"
 import Link from "next/link"
@@ -21,7 +20,6 @@ export default function NewsPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
 
       <main className="pt-20">
         {/* Hero Section */}

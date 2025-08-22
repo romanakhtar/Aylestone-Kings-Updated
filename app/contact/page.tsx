@@ -1,4 +1,3 @@
-import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Mail, Clock, MessageCircle, Globe } from "lucide-react"
@@ -8,7 +7,6 @@ import { contactInfo } from "@/lib/data"
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="py-20 bg-gray-50">

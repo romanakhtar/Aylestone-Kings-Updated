@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import { Inter, Roboto } from "next/font/google"
 import "./globals.css"
 import FloatingContactButton from "@/components/FloatingContactButton"
+import ContactInfoBar from "@/components/contact-info-bar"
+import { Navigation } from "@/components/navigation"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,6 +33,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${roboto.variable} antialiased`}>
       <body className="font-sans">
+        <ContactInfoBar />
+        <Navigation />
         {children}
         <FloatingContactButton />
       </body>

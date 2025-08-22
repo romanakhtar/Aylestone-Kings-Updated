@@ -1,4 +1,3 @@
-import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { siteData } from "@/lib/data"
@@ -7,7 +6,6 @@ import { Shield, Users, Award, Clock, MapPin, Check, ArrowRight } from "lucide-r
 export default function CompanyPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-[#0F0D3E] via-[#2E3C44] to-[#06A0A6]/20 overflow-hidden">

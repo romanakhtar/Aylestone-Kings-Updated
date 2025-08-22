@@ -1,11 +1,9 @@
-import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import Image from "next/image"
 
 export default function OurStoryPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="py-20 bg-gray-50">

@@ -1,4 +1,3 @@
-import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { Check, ArrowRight, Users, Car, Shield, Star } from "lucide-react"
@@ -7,7 +6,6 @@ import { contactInfo } from "@/lib/data"
 export default function FleetPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
 
       <main className="pt-20">
         {/* Hero Section */}

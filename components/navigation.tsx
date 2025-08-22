@@ -37,7 +37,7 @@ function Navigation() {
 
   return (
     <header 
-      className={`sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60 shadow-sm transition-transform duration-300 ease-in-out ${
+      className={`relative z-40 bg-white/95 backdrop-blur-xl border-b border-slate-200/60 shadow-sm transition-transform duration-300 ease-in-out ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >

@@ -1,4 +1,3 @@
-import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { Calendar, MapPin, CreditCard, Clock, MessageCircle, Headphones } from "lucide-react"
@@ -8,7 +7,6 @@ import AppDownloadButtons from "@/components/AppDownloadButtons"
 export default function RidePage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="py-20 bg-gray-50">
