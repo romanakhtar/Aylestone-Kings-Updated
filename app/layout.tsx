@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${roboto.variable} antialiased`}>
-      <body className="font-sans">
+      <body className="font-sans pt-5">
         <ContactInfoBar />
         <Navigation />
         {children}

@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown, Phone } from "lucide-react"
 import Logo from "@/components/logo"
@@ -13,6 +14,7 @@ function Navigation() {
   const [isMoreOpen, setIsMoreOpen] = useState(false)
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const { isVisible } = useNavbarScroll({ threshold: 10 })
+  const pathname = usePathname()
 
   const handleMouseEnter = () => {
     if (hoverTimeoutRef.current) {
@@ -37,14 +39,16 @@ function Navigation() {
 
   return (
     <header 
-      className={`relative z-40 bg-white/95 backdrop-blur-xl border-b border-slate-200/60 shadow-sm transition-transform duration-300 ease-in-out ${
+      className={`fixed top-5 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60 shadow-sm transition-transform duration-300 ease-in-out ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Logo />
+          <div className="pt-1">
+            <Logo />
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
@@ -75,9 +79,15 @@ function Navigation() {
                   </div>
                 </div>
               ) : (
-                <Link key={item.name} href={item.href} className="text-slate-700 hover:text-[#06A0A6] font-medium transition-all duration-200 relative group py-2">
+                <Link key={item.name} href={item.href} className={`font-medium transition-all duration-200 relative group py-2 ${
+                  pathname === item.href 
+                    ? 'text-[#06A0A6]' 
+                    : 'text-slate-700 hover:text-[#06A0A6]'
+                }`}>
                   {item.name}
-                  <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] transition-all duration-200 group-hover:w-full"></span>
+                  <span className={`absolute -bottom-0.5 left-0 h-0.5 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] transition-all duration-200 ${
+                    pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}></span>
                 </Link>
               )
             ))}
@@ -126,14 +136,18 @@ function Navigation() {
                     {isMoreOpen && (
                       <div className="pl-6 space-y-1">
                         {navigationItems.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            href={dropdownItem.href}
-                            className="block px-4 py-2.5 text-slate-700 hover:text-[#06A0A6] hover:bg-slate-50 rounded-lg transition-all duration-200 text-sm"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            {dropdownItem.name}
-                          </Link>
+                                            <Link
+                    key={dropdownItem.name}
+                    href={dropdownItem.href}
+                    className={`block px-4 py-2.5 rounded-lg transition-all duration-200 text-sm ${
+                      pathname === dropdownItem.href
+                        ? 'text-[#06A0A6] bg-[#06A0A6]/5'
+                        : 'text-slate-700 hover:text-[#06A0A6] hover:bg-slate-50'
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {dropdownItem.name}
+                  </Link>
                         ))}
                       </div>
                     )}
@@ -142,7 +156,11 @@ function Navigation() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="block px-4 py-2.5 text-slate-700 hover:text-[#06A0A6] hover:bg-slate-50 font-medium rounded-lg transition-all duration-200 text-sm"
+                    className={`block px-4 py-2.5 font-medium rounded-lg transition-all duration-200 text-sm ${
+                      pathname === item.href
+                        ? 'text-[#06A0A6] bg-[#06A0A6]/5'
+                        : 'text-slate-700 hover:text-[#06A0A6] hover:bg-slate-50'
+                    }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
