@@ -4,7 +4,8 @@ export const siteData = {
     name: "Aylestone Kings",
     tagline: "",
     region: "Aylestone and surrounding areas",
-    phone: "+123",
+    phone: "0116 2338888",
+    whatsapp: "+447535855786",
     email: "info@aylestonekings.com",
     address: "Aylestone, Leicester, UK",
     description:
@@ -322,6 +323,7 @@ export const siteData = {
 export const companyInfo = siteData.company
 export const contactInfo = {
   phone: siteData.company.phone,
+  whatsapp: siteData.company.whatsapp,
   email: siteData.company.email,
   address: {
     street: siteData.company.address,
@@ -330,7 +332,7 @@ export const contactInfo = {
     country: "United Kingdom"
   },
   booking: {
-    online: "#",
+    online: "https://aylestonekings.webbooker.icabbi.com/",
     phone: siteData.company.phone
   }
 }

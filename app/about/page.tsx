@@ -1,7 +1,8 @@
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import Image from "next/image"
-import { Shield, Clock, Users, Award, MapPin, Phone, Check, ArrowRight } from "lucide-react"
+import { Shield, Clock, Users, Award, MapPin, Phone, Check, ArrowRight, MessageCircle, Mail, Globe } from "lucide-react"
+import { contactInfo } from "@/lib/data"
 
 export default function AboutPage() {
   return (
@@ -315,9 +316,9 @@ export default function AboutPage() {
                   <div>
                     <p className="font-semibold text-[#0F0D3E] mb-1">Address</p>
                     <p className="text-[#2E3C44]">
-                      31-35 Grainger St, Westfield<br />
-                      Newcastle upon Tyne<br />
-                      Tyne & Wear NE28 6TH
+                      {contactInfo.address.street}<br />
+                      {contactInfo.address.city}, {contactInfo.address.postcode}<br />
+                      {contactInfo.address.country}
                     </p>
                   </div>
                 </div>
@@ -327,7 +328,41 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#0F0D3E] mb-1">Phone</p>
-                    <p className="text-[#2E3C44]">(191) 262 6666</p>
+                    <p className="text-[#2E3C44]">{contactInfo.phone}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="h-6 w-6 text-[#06A0A6]" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#0F0D3E] mb-1">WhatsApp</p>
+                    <p className="text-[#2E3C44]">{contactInfo.whatsapp}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-6 w-6 text-[#06A0A6]" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#0F0D3E] mb-1">Email</p>
+                    <p className="text-[#2E3C44]">{contactInfo.email}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Globe className="h-6 w-6 text-[#06A0A6]" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#0F0D3E] mb-1">Book Online</p>
+                    <a 
+                      href={contactInfo.booking.online} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-[#06A0A6] hover:text-[#0F0D3E] underline"
+                    >
+                      {contactInfo.booking.online}
+                    </a>
                   </div>
                 </div>
               </div>

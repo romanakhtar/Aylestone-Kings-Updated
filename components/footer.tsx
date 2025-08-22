@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, ArrowRight } from "lucide-react"
+import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, ArrowRight, MessageCircle } from "lucide-react"
 import Logo from "@/components/logo"
 import { companyInfo, contactInfo, socialLinks, footerData, copyrightInfo } from "@/lib/data"
 
@@ -74,6 +74,10 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-[#06A0A6]" />
                 <p>{contactInfo.phone}</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <MessageCircle className="h-5 w-5 text-[#06A0A6]" />
+                <p>{contactInfo.whatsapp}</p>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-[#06A0A6]" />

@@ -1,7 +1,8 @@
 'use client'
 
-import { MessageCircle, Phone, Globe } from 'lucide-react'
+import { MessageCircle, Phone, Globe, Mail } from 'lucide-react'
 import AppDownloadButtons from '@/components/AppDownloadButtons'
+import { contactInfo } from '@/lib/data'
 
 interface ContactModeCardsProps {
   className?: string
@@ -15,7 +16,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       color: '#25D366', // WhatsApp green
       bgColor: 'bg-[#25D366]',
       hoverBgColor: 'hover:bg-[#128C7E]',
-      href: 'https://wa.me/441912868888?text=Hi! I need a taxi from Aylestone Kings'
+      href: `https://wa.me/${contactInfo.whatsapp.replace('+', '')}?text=Hi! I need a taxi from Aylestone Kings`
     },
     {
       name: 'Landline',
@@ -23,7 +24,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       color: '#007AFF', // iOS blue
       bgColor: 'bg-[#007AFF]',
       hoverBgColor: 'hover:bg-[#0056CC]',
-      href: 'tel:01912868888'
+      href: `tel:${contactInfo.phone.replace(/\s/g, '')}`
     },
     {
       name: 'Book Online',
@@ -31,7 +32,15 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       color: '#06A0A6', // Company primary color
       bgColor: 'bg-[#06A0A6]',
       hoverBgColor: 'hover:bg-[#0F0D3E]',
-      href: '/ride'
+      href: contactInfo.booking.online
+    },
+    {
+      name: 'Email',
+      icon: Mail,
+      color: '#EA4335', // Gmail red
+      bgColor: 'bg-[#EA4335]',
+      hoverBgColor: 'hover:bg-[#D33A2C]',
+      href: `mailto:${contactInfo.email}?subject=Taxi Booking Request - Aylestone Kings`
     }
   ]
 
@@ -49,8 +58,8 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
             <a
               key={mode.name}
               href={mode.href}
-              target={mode.name === 'Book Online' ? '_self' : '_blank'}
-              rel={mode.name === 'Book Online' ? '' : 'noopener noreferrer'}
+              target={mode.name === 'Book Online' || mode.name === 'Email' ? '_self' : '_blank'}
+              rel={mode.name === 'Book Online' || mode.name === 'Email' ? '' : 'noopener noreferrer'}
               className={`${mode.bgColor} ${mode.hoverBgColor} text-white px-4 lg:px-6 py-3 lg:py-4 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 lg:gap-3 shadow-lg hover:shadow-2xl transform hover:scale-105 group hover:-translate-y-1 border border-white/20 relative overflow-hidden`}
               style={{
                 animationDelay: `${index * 100}ms`
@@ -61,7 +70,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
               
               <IconComponent className="h-4 lg:h-5 w-4 lg:w-5 group-hover:scale-110 transition-transform duration-200 relative z-10" />
               <span className="font-semibold relative z-10 text-sm lg:text-base">{mode.name}</span>
-              {mode.name !== 'Book Online' && (
+              {mode.name !== 'Book Online' && mode.name !== 'Email' && (
                 <span className="text-xs opacity-80 group-hover:translate-x-1 transition-transform duration-200 relative z-10">→</span>
               )}
             </a>

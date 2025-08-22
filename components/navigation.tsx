@@ -34,33 +34,33 @@ function Navigation() {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/50 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Logo />
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-10">
+          <nav className="hidden md:flex space-x-8">
             {navigationItems.main.map((item) => (
               item.hasDropdown ? (
                 <div key={item.name} className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                  <button className="text-slate-700 hover:text-[#06A0A6] font-medium flex items-center transition-all duration-300 relative group">
+                  <button className="text-slate-700 hover:text-[#06A0A6] font-medium flex items-center transition-all duration-200 relative group py-2">
                     {item.name}
                     <ChevronDown
-                      className={`ml-1 h-4 w-4 transition-transform duration-300 ${isMoreOpen ? "rotate-180" : ""}`}
+                      className={`ml-1 h-3.5 w-3.5 transition-transform duration-200 ${isMoreOpen ? "rotate-180" : ""}`}
                     />
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] transition-all duration-200 group-hover:w-full"></span>
                   </button>
                   <div
-                    className={`absolute top-full left-0 pt-3 transition-all duration-300 ${isMoreOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}
+                    className={`absolute top-full left-0 pt-2 transition-all duration-200 ${isMoreOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-1"}`}
                   >
-                    <div className="w-64 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-slate-200/50 overflow-hidden">
+                    <div className="w-56 bg-white/98 backdrop-blur-xl rounded-xl shadow-lg border border-slate-200/60 overflow-hidden">
                       {navigationItems.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
-                          className="block px-6 py-4 text-slate-700 hover:bg-gradient-to-r hover:from-[#06A0A6]/5 hover:to-[#0F0D3E]/5 hover:text-[#06A0A6] border-b border-slate-200/30 transition-all duration-200"
+                          className="block px-5 py-3 text-slate-700 hover:bg-gradient-to-r hover:from-[#06A0A6]/5 hover:to-[#0F0D3E]/5 hover:text-[#06A0A6] border-b border-slate-200/40 transition-all duration-150 text-sm"
                         >
                           {dropdownItem.name}
                         </Link>
@@ -69,26 +69,26 @@ function Navigation() {
                   </div>
                 </div>
               ) : (
-                <Link key={item.name} href={item.href} className="text-slate-700 hover:text-[#06A0A6] font-medium transition-all duration-300 relative group">
+                <Link key={item.name} href={item.href} className="text-slate-700 hover:text-[#06A0A6] font-medium transition-all duration-200 relative group py-2">
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] transition-all duration-200 group-hover:w-full"></span>
                 </Link>
               )
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
             <Button
               onClick={handleCallToBook}
               variant="outline"
-              className="border-slate-300 text-slate-700 hover:border-[#06A0A6] hover:text-[#06A0A6] hover:bg-[#06A0A6]/5 px-6 py-2.5 rounded-xl font-medium transition-all duration-300 shadow-sm hover:shadow-md"
+              className="border-slate-300 text-slate-700 hover:border-[#06A0A6] hover:text-[#06A0A6] hover:bg-[#06A0A6]/5 px-5 py-2 rounded-lg font-medium transition-all duration-200 shadow-sm hover:shadow-md text-sm"
             >
-              <Phone className="h-4 w-4 mr-2" />
+              <Phone className="h-3.5 w-3.5 mr-2" />
               Call to Book
             </Button>
             <Button
               onClick={handleBookOnline}
-              className="bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] hover:from-[#0F0D3E] hover:to-[#06A0A6] text-white px-6 py-2.5 rounded-xl font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+              className="bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] hover:from-[#0F0D3E] hover:to-[#06A0A6] text-white px-5 py-2 rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105 text-sm"
             >
               Book Online
             </Button>
@@ -97,33 +97,33 @@ function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2.5 rounded-xl text-slate-700 hover:text-[#06A0A6] hover:bg-slate-100 transition-all duration-200"
+            className="md:hidden p-2 rounded-lg text-slate-700 hover:text-[#06A0A6] hover:bg-slate-100 transition-all duration-200"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-slate-200/50 bg-white/95 backdrop-blur-xl">
-            <div className="px-4 pt-4 pb-6 space-y-2">
+          <div className="md:hidden border-t border-slate-200/60 bg-white/98 backdrop-blur-xl">
+            <div className="px-4 pt-3 pb-5 space-y-1">
               {navigationItems.main.map((item) => (
                 item.hasDropdown ? (
-                  <div key={item.name} className="space-y-2">
+                  <div key={item.name} className="space-y-1">
                     <button
                       onClick={() => setIsMoreOpen(!isMoreOpen)}
-                      className="flex items-center justify-between w-full px-4 py-3 text-slate-700 hover:text-[#06A0A6] hover:bg-slate-50 font-medium rounded-xl transition-all duration-200"
+                      className="flex items-center justify-between w-full px-4 py-2.5 text-slate-700 hover:text-[#06A0A6] hover:bg-slate-50 font-medium rounded-lg transition-all duration-200 text-sm"
                     >
                       {item.name}
                       <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isMoreOpen ? "rotate-180" : ""}`} />
                     </button>
                     {isMoreOpen && (
-                      <div className="pl-6 space-y-2">
+                      <div className="pl-6 space-y-1">
                         {navigationItems.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block px-4 py-3 text-slate-700 hover:text-[#06A0A6] hover:bg-slate-50 rounded-xl transition-all duration-200"
+                            className="block px-4 py-2.5 text-slate-700 hover:text-[#06A0A6] hover:bg-slate-50 rounded-lg transition-all duration-200 text-sm"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {dropdownItem.name}
@@ -136,23 +136,23 @@ function Navigation() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="block px-4 py-3 text-slate-700 hover:text-[#06A0A6] hover:bg-slate-50 font-medium rounded-xl transition-all duration-200"
+                    className="block px-4 py-2.5 text-slate-700 hover:text-[#06A0A6] hover:bg-slate-50 font-medium rounded-lg transition-all duration-200 text-sm"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
                 )
               ))}
-              <div className="px-4 pt-4 space-y-3">
+              <div className="px-4 pt-3 space-y-2">
                 <Button
                   onClick={() => {
                     handleCallToBook()
                     setIsMenuOpen(false)
                   }}
                   variant="outline"
-                  className="w-full border-slate-300 text-slate-700 hover:border-[#06A0A6] hover:text-[#06A0A6] hover:bg-[#06A0A6]/5 rounded-xl font-medium transition-all duration-200 shadow-sm"
+                  className="w-full border-slate-300 text-slate-700 hover:border-[#06A0A6] hover:text-[#06A0A6] hover:bg-[#06A0A6]/5 rounded-lg font-medium transition-all duration-200 shadow-sm text-sm py-2"
                 >
-                  <Phone className="h-4 w-4 mr-2" />
+                  <Phone className="h-3.5 w-3.5 mr-2" />
                   Call to Book
                 </Button>
                 <Button
@@ -160,7 +160,7 @@ function Navigation() {
                     handleBookOnline()
                     setIsMenuOpen(false)
                   }}
-                  className="w-full bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] hover:from-[#0F0D3E] hover:to-[#06A0A6] text-white rounded-xl font-medium transition-all duration-200 shadow-md"
+                  className="w-full bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] hover:from-[#0F0D3E] hover:to-[#06A0A6] text-white rounded-lg font-medium transition-all duration-200 shadow-md text-sm py-2"
                 >
                   Book Online
                 </Button>
