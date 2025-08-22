@@ -37,7 +37,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
   ]
 
   return (
-    <div className={`bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 p-4 sm:p-6 lg:p-8 ${className} animate-fade-in relative w-full max-w-sm sm:max-w-md`}>
+    <div className={`bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 p-4 sm:p-5 lg:p-6 ${className} animate-fade-in relative w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[260px] xl:max-w-[280px]`}>
       <h3 className="text-xl lg:text-2xl font-bold text-[#0F0D3E] mb-6 lg:mb-8 text-center border-b border-gray-200/50 pb-3 relative z-10">
         Contact Us
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] rounded-full"></div>
@@ -52,7 +52,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
               href={mode.href}
               target={mode.name === 'Book Online' || mode.name === 'Email' ? '_self' : '_blank'}
               rel={mode.name === 'Book Online' || mode.name === 'Email' ? '' : 'noopener noreferrer'}
-              className={`${mode.bgColor} ${mode.hoverBgColor} text-white px-3 sm:px-4 lg:px-6 py-3 lg:py-4 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 lg:gap-3 shadow-lg hover:shadow-2xl transform hover:scale-105 group hover:-translate-y-1 border border-white/20 relative overflow-hidden w-full`}
+              className={`${mode.bgColor} ${mode.hoverBgColor} text-white px-3 sm:px-4 lg:px-4 py-3 lg:py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 lg:gap-3 shadow-lg hover:shadow-2xl transform hover:scale-105 group hover:-translate-y-1 border border-white/20 relative overflow-hidden w-full`}
               style={{
                 animationDelay: `${index * 100}ms`
               }}
@@ -82,7 +82,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       <div className="border-t border-gray-200 my-4 lg:my-6"></div>
       
       {/* App Download Buttons */}
-      <div className="pt-2">
+      <div className="pt-2 hidden sm:block">
         <AppDownloadButtons size="sm" />
       </div>
     </div>

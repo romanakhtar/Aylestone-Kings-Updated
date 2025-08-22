@@ -232,7 +232,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <div>
-              <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#06A0A6] rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
                 Premium Service
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
