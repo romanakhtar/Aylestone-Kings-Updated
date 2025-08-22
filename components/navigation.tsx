@@ -6,11 +6,13 @@ import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown, Phone } from "lucide-react"
 import Logo from "@/components/logo"
 import { contactInfo, navigationItems } from "@/lib/data"
+import { useNavbarScroll } from "@/hooks/use-navbar-scroll"
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMoreOpen, setIsMoreOpen] = useState(false)
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const { isVisible } = useNavbarScroll({ threshold: 10 })
 
   const handleMouseEnter = () => {
     if (hoverTimeoutRef.current) {
@@ -34,7 +36,11 @@ function Navigation() {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60 shadow-sm">
+    <header 
+      className={`sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60 shadow-sm transition-transform duration-300 ease-in-out ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
