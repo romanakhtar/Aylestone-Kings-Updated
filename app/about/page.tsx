@@ -393,7 +393,7 @@ export default function AboutPage() {
 
           {/* CTA Button */}
           <div className="text-center mt-12">
-            <a href="/ride" className="inline-block">
+            <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="inline-block">
               <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
                 Book Your Ride Now
                 <ArrowRight className="h-5 w-5" />

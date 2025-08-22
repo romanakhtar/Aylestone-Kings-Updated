@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { ArrowRight, MapPin, Clock, Shield } from "lucide-react"
-import { siteData } from "@/lib/data"
+import { siteData, contactInfo } from "@/lib/data"
 import AppDownloadButtons from "@/components/AppDownloadButtons"
 import ContactModeCards from "@/components/ContactModeCards"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
@@ -63,7 +63,7 @@ export default function AnimatedHero() {
             </div>
 
             {/* CTA Button */}
-            <a href="/ride" className="inline-block mb-8">
+            <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="inline-block mb-8">
               <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl">
                 {siteData.homepage.hero.ctaText}
                 <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />

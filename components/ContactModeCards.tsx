@@ -1,6 +1,6 @@
 'use client'
 
-import { MessageCircle, Phone, Globe, Mail } from 'lucide-react'
+import { MessageCircle, Phone, Globe } from 'lucide-react'
 import AppDownloadButtons from '@/components/AppDownloadButtons'
 import { contactInfo } from '@/lib/data'
 
@@ -33,14 +33,6 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       bgColor: 'bg-[#06A0A6]',
       hoverBgColor: 'hover:bg-[#0F0D3E]',
       href: contactInfo.booking.online
-    },
-    {
-      name: 'Email',
-      icon: Mail,
-      color: '#EA4335', // Gmail red
-      bgColor: 'bg-[#EA4335]',
-      hoverBgColor: 'hover:bg-[#D33A2C]',
-      href: `mailto:${contactInfo.email}?subject=Taxi Booking Request - Aylestone Kings`
     }
   ]
 

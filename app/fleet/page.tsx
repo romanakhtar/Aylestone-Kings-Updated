@@ -2,6 +2,7 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { Check, ArrowRight, Users, Car, Shield, Star } from "lucide-react"
+import { contactInfo } from "@/lib/data"
 
 export default function FleetPage() {
   return (
@@ -396,10 +397,12 @@ export default function FleetPage() {
               Book your ride today and discover the difference that quality vehicles and professional service make.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center gap-3">
-                Book Now
-                <ArrowRight className="h-5 w-5" />
-              </button>
+              <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer">
+                <button className="bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center gap-3">
+                  Book Now
+                  <ArrowRight className="h-5 w-5" />
+                </button>
+              </a>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200">
                 View Pricing
               </button>

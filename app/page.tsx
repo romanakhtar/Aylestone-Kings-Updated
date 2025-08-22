@@ -2,7 +2,7 @@ import { Navigation } from "@/components/navigation"
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users } from "lucide-react"
-import { siteData } from "@/lib/data"
+import { siteData, contactInfo } from "@/lib/data"
 import AppDownloadButtons from "@/components/AppDownloadButtons"
 import AnimatedHero from "@/components/AnimatedHero"
 
@@ -112,7 +112,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <a href="/ride" className="inline-block w-full">
+              <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="inline-block w-full">
                 <button className="w-full bg-[#06A0A6] hover:bg-[#0F0D3E] text-white py-3 rounded-lg font-medium transition-colors">
                   Book a Ride
                 </button>
