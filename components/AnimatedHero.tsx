@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { ArrowRight, MapPin, Clock, Shield } from "lucide-react"
-import { siteData } from "@/lib/data"
+import { siteData, contactInfo } from "@/lib/data"
 import AppDownloadButtons from "@/components/AppDownloadButtons"
 import ContactModeCards from "@/components/ContactModeCards"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
@@ -26,6 +26,10 @@ export default function AnimatedHero() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const handleBookNow = () => {
+    window.open(contactInfo.booking.online, "_blank")
+  }
 
   return (
     <main className="relative min-h-screen bg-white">
@@ -63,12 +67,13 @@ export default function AnimatedHero() {
             </div>
 
             {/* CTA Button */}
-            <a href="/ride" className="inline-block mb-8">
-              <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl">
-                {siteData.homepage.hero.ctaText}
-                <ArrowRight className="h-5 w-5" />
-              </button>
-            </a>
+            <button 
+              onClick={handleBookNow}
+              className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl mb-8"
+            >
+              {siteData.homepage.hero.ctaText}
+              <ArrowRight className="h-5 w-5" />
+            </button>
 
             {/* Enhanced Car Image with Aylestone Theme */}
             <div className="flex justify-start">

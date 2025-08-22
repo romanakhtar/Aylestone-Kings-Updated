@@ -16,7 +16,9 @@ export default function AppDownloadButtons({ className = '', size = 'md' }: AppD
   return (
     <div className={`flex flex-row gap-3 lg:gap-4 ${className}`}>
       <a 
-        href="#" 
+        href="https://apps.apple.com/gb/app/aylestone-kings/id1061012064" 
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-block transform hover:scale-105 transition-transform duration-200"
         aria-label="Download on the App Store"
       >
@@ -29,7 +31,9 @@ export default function AppDownloadButtons({ className = '', size = 'md' }: AppD
         />
       </a>
       <a 
-        href="#" 
+        href="https://play.google.com/store/apps/details?id=co.uk.aylestone.taxis&hl=en&pli=1" 
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-block transform hover:scale-105 transition-transform duration-200"
         aria-label="Get it on Google Play"
       >

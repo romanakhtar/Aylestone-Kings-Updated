@@ -3,9 +3,14 @@
 import { useState } from 'react'
 import { MessageCircle, X } from 'lucide-react'
 import ContactModeCards from './ContactModeCards'
+import { contactInfo } from '@/lib/data'
 
 export default function FloatingContactButton() {
   const [showMobileContact, setShowMobileContact] = useState(false)
+
+  const handleBookNow = () => {
+    window.open(contactInfo.booking.online, "_blank")
+  }
 
   return (
     <>
@@ -18,7 +23,7 @@ export default function FloatingContactButton() {
           {/* Beautiful gradient container with enhanced shadows */}
           <div className="bg-gradient-to-br from-[#EF5B6A] via-[#FF6B7A] to-[#E04A5A] rounded-2xl shadow-[0_8px_32px_rgba(239,91,106,0.3)] p-1 backdrop-blur-sm relative border border-white/20">
             <button 
-              onClick={() => setShowMobileContact(true)}
+              onClick={handleBookNow}
               className="bg-gradient-to-br from-[#EF5B6A] via-[#FF6B7A] to-[#E04A5A] hover:from-[#E04A5A] hover:via-[#FF6B7A] hover:to-[#EF5B6A] text-white p-4 rounded-xl transition-all duration-500 shadow-lg hover:shadow-[0_12px_40px_rgba(239,91,106,0.4)] transform hover:scale-105 group relative z-10 w-full h-full"
             >
               <div className="flex items-center gap-2">
