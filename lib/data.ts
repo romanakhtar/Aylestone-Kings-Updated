@@ -29,7 +29,8 @@ export const siteData = {
   navigation: {
     main: [
       { name: "Home", href: "/" },
-      { name: "Ride", href: "/ride" },
+      { name: "Ride", href: "/ride" },    
+      { name: "Pricing", href: "/pricing" },
       { name: "Fleet", href: "/fleet" },
       { name: "Contact", href: "/contact" },
       { name: "More", href: "#", hasDropdown: true }
