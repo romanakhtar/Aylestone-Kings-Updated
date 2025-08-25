@@ -401,9 +401,11 @@ export default function FleetPage() {
                   <ArrowRight className="h-3 w-3 sm:h-5 sm:w-5" />
                 </button>
               </a>
-              <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 text-sm sm:text-base">
-                View Pricing
-              </button>
+              <a href="/pricing" className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 text-sm sm:text-base">
+                  View Pricing
+                </button>
+              </a>
             </div>
           </div>
         </section>

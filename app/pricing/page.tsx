@@ -13,7 +13,7 @@ export default function PricingPage() {
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Transparent & Affordable Pricing
-            </h1>
+                </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Experience premium taxi services without the premium price tag. Our competitive rates ensure quality transportation 
               that fits your budget, with no hidden fees or surprises.
@@ -349,10 +349,12 @@ export default function PricingPage() {
                   <ArrowRight className="h-3 w-3 sm:h-5 sm:w-5" />
                 </button>
               </a>
-              <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 text-sm sm:text-base">
-                View Pricing
-              </button>
-            </div>
+              <a href="/contact" className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 text-sm sm:text-base">
+                  Contact Us
+                </button>
+              </a>
+          </div>
         </div>
       </section>
 
