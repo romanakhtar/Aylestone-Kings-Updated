@@ -1,7 +1,7 @@
 import Footer from "@/components/footer"
 import { Calendar, MapPin, CreditCard, Clock, MessageCircle, Headphones, Check, Star, Shield, Zap, Users, Car } from "lucide-react"
-import Logo from "@/components/logo"
-import AppDownloadButtons from "@/components/AppDownloadButtons"
+import {  ArrowRight } from "lucide-react"
+import { contactInfo } from "@/lib/data"
 
 export default function PricingPage() {
   return (
@@ -70,136 +70,138 @@ export default function PricingPage() {
       </section>
 
 
-      {/* Pricing Table Section */}
+            {/* Pricing Table & Vehicle Fleet Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Pricing Comparison Table
+              Pricing & Vehicle Information
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Compare our different service options and pricing structures
+              Compare our pricing and choose the perfect vehicle for your journey
             </p>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-lg shadow-lg">
-              <thead>
-                <tr className="bg-blue-600 text-white">
-                  <th className="px-6 py-4 text-left font-semibold">Destination</th>
-                  <th className="px-6 py-4 text-left font-semibold">1-4 seater (prices from)</th>
-                  <th className="px-6 py-4 text-left font-semibold">6/8 seater (prices from)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">East Midlands</td>
-                  <td className="px-6 py-4 text-gray-700">£40</td>
-                  <td className="px-6 py-4 text-gray-700">£60</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Birmingham</td>
-                  <td className="px-6 py-4 text-gray-700">£55</td>
-                  <td className="px-6 py-4 text-gray-700">£80</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Manchester</td>
-                  <td className="px-6 py-4 text-gray-700">£150</td>
-                  <td className="px-6 py-4 text-gray-700">£200</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Luton</td>
-                  <td className="px-6 py-4 text-gray-700">£120</td>
-                  <td className="px-6 py-4 text-gray-700">£160</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Heathrow</td>
-                  <td className="px-6 py-4 text-gray-700">£150</td>
-                  <td className="px-6 py-4 text-gray-700">£200</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Gatwick</td>
-                  <td className="px-6 py-4 text-gray-700">£200</td>
-                  <td className="px-6 py-4 text-gray-700">£275</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="px-6 py-4 font-medium text-gray-900">Stansted</td>
-                  <td className="px-6 py-4 text-gray-700">£150</td>
-                  <td className="px-6 py-4 text-gray-700">£200</td>
-                </tr>
-              </tbody>
-            </table>
-            
-            {/* Pricing Note */}
-            <div className="mt-4 text-center">
-              <p className="text-sm text-gray-600 italic">
-                Prices shown are starting rates. Additional pickup locations will affect final price. Car park charges are not included.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vehicle Types Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Our Vehicle Fleet
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the perfect vehicle size for your journey and luggage requirements
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Standard Saloon */}
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-              <div className="text-center mb-6">
-                <Car className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Standard Saloon</h3>
-                <p className="text-gray-600">Perfect for small groups and business travel</p>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">Accommodates 4 passengers</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left Side - Pricing Table */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center lg:text-left">
+                Pricing Comparison Table
+              </h3>
+                 <div className="overflow-x-auto">
+                 <table className="w-full bg-white rounded-2xl shadow-xl border border-cyan-200 overflow-hidden">
+                  <thead>
+                    <tr className="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white">
+                      <th className="px-5 py-3 text-left font-semibold text-base">Destination</th>
+                      <th className="px-5 py-3 text-left font-semibold text-base">1-4 seater</th>
+                      <th className="px-5 py-3 text-left font-semibold text-base">6/8 seater</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">East Midlands</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£40</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£60</td>
+                    </tr>
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">Birmingham</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£55</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£80</td>
+                    </tr>
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">Manchester</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£150</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£200</td>
+                    </tr>
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">Luton</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£120</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£160</td>
+                    </tr>
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">Heathrow</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£150</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£200</td>
+                    </tr>
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">Gatwick</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£200</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£275</td>
+                    </tr>
+                    <tr className="hover:bg-cyan-50 transition-colors duration-200">
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">Stansted</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£150</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£200</td>
+                    </tr>
+                  </tbody>
+                </table>
+                
+                {/* Pricing Note */}
+                <div className="mt-4 text-center lg:text-left">
+                  <p className="text-sm text-gray-600 italic">
+                    Prices shown are starting rates. Additional pickup locations will affect final price. Car park charges are not included.
+                  </p>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">Space for 2 suitcases</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">Comfortable seating</span>
-                </div>
-               
               </div>
             </div>
 
-            {/* Minibus 8 Seater */}
-            <div className="bg-blue-50 rounded-2xl p-8 border border-blue-200">
-              <div className="text-center mb-6">
-                <Users className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Minibus 8 Seater</h3>
-                <p className="text-gray-600">Ideal for large groups and family travel</p>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">Accommodates 8 adults</span>
+            {/* Right Side - Vehicle Fleet */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center lg:text-left">
+                Our Vehicle Fleet
+              </h3>
+              <div className="space-y-6">
+                {/* Standard Saloon */}
+                <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-lg">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <Car className="h-12 w-12 text-blue-600" />
+                    <div>
+                      <h4 className="text-xl font-bold text-gray-900">Standard Saloon</h4>
+                      <p className="text-gray-600 text-sm">Perfect for small groups and business travel</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Accommodates 4 passengers</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Space for 2 suitcases</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Comfortable seating</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">Space for 8 suitcases</span>
+
+                {/* Minibus 8 Seater */}
+                <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-lg">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <Users className="h-12 w-12 text-blue-600" />
+                    <div>
+                      <h4 className="text-xl font-bold text-gray-900">Minibus 8 Seater</h4>
+                      <p className="text-gray-600 text-sm">Ideal for large groups and family travel</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Accommodates 8 adults</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Space for 8 suitcases</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Spacious interior</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700">Spacious interior</span>
-                </div>
-               
               </div>
             </div>
           </div>
@@ -332,7 +334,7 @@ export default function PricingPage() {
 
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700">
+      <section className="py-20  bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Experience Affordable Luxury?
@@ -340,7 +342,17 @@ export default function PricingPage() {
           <p className="text-xl text-blue-100 mb-8">
             Download our app today and enjoy transparent pricing, instant quotes, and premium service at competitive rates.
           </p>
-          <AppDownloadButtons />
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+              <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base">
+                  Book Now
+                  <ArrowRight className="h-3 w-3 sm:h-5 sm:w-5" />
+                </button>
+              </a>
+              <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 text-sm sm:text-base">
+                View Pricing
+              </button>
+            </div>
         </div>
       </section>
 

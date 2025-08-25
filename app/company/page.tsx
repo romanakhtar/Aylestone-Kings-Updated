@@ -8,18 +8,9 @@ export default function CompanyPage() {
     <div className="min-h-screen bg-white">
 
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-[#0F0D3E] via-[#2E3C44] to-[#06A0A6]/20 overflow-hidden">
+      <section className="relative py-32  bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white overflow-hidden">
         {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/company-team.jpg"
-            alt="Professional company team"
-            fill
-            className="object-cover opacity-20"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F0D3E]/90 via-[#0F0D3E]/80 to-[#06A0A6]/30"></div>
-        </div>
+       
         
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-32 h-32 bg-[#06A0A6]/20 rounded-full blur-3xl"></div>
