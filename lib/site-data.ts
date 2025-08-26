@@ -4,8 +4,8 @@ export const siteData = {
   company: {
     name: "Aylestone Kings",
     tagline: "Premium Taxi Service",
-    description: "Leading taxi service in North East England since 2009. We provide reliable, professional transportation solutions for individuals and businesses.",
-    founded: 2009,
+    description: "Leading taxi service in North East England since 1995. We provide reliable, professional transportation solutions for individuals and businesses.",
+    founded: 1995,
     logo: {
       icon: {
         primaryColor: "#06A0A6",
@@ -35,7 +35,6 @@ export const siteData = {
   social: {
     facebook: "#",
     instagram: "#",
-    twitter: "#"
   },
 
   // Navigation Menu Items

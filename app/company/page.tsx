@@ -32,7 +32,7 @@ export default function CompanyPage() {
             {/* Enhanced Description */}
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10 font-light">
               We are committed to making your journey comfortable, convenient, and stress-free with 
-              <span className="text-[#06A0A6] font-semibold"> 15+ years of excellence</span> in 
+              <span className="text-[#06A0A6] font-semibold"> 30+ years of excellence</span> in 
               professional transportation services.
             </p>
             
@@ -64,10 +64,10 @@ export default function CompanyPage() {
                 About Us
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-              Founded in 2009, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone.
+              Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone.
               </h2>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
-              With over 15 years in the industry, Aylestone Kings has provided best services to the customers. It has been a journey of growth and success, and we are proud to be a part of the community. 
+              With over 30 years in the industry, Aylestone Kings has provided best services to the customers. It has been a journey of growth and success, and we are proud to be a part of the community. 
               </p>
               
               {/* Key Achievements */}
@@ -78,7 +78,7 @@ export default function CompanyPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
-                  <span className="text-[#2E3C44] font-medium">15+ Years Experience</span>
+                  <span className="text-[#2E3C44] font-medium">30+ Years Experience</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Shield className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />

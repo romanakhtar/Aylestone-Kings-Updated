@@ -9,12 +9,12 @@ export const siteData = {
     email: "info@aylestonekings.com",
     address: "Aylestone, Leicester, UK",
     description:
-      "Founded in 2009, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
-    founded: "2009",
+      "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
+    founded: "1995",
     achievements: "National Lifetime Achievement Award for commitment to the Private Hire and Taxi industry",
     passengersServed: "10,000",
     satisfactionRating: "99.7%",
-    yearsExperience: "15+",
+    yearsExperience: "30+",
     serviceAvailability: "24/7",
     happyCustomers: "10,000+",
     drivers: "Multiple Professional Drivers",
@@ -92,9 +92,9 @@ export const siteData = {
     },
 
     safeTravel: {
-      title: "Trusted Transportation Service Since 2009",
+      title: "Trusted Transportation Service Since 1995",
       description:
-        "Founded in 2009, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
+        "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
     },
 
     appBenefits: {
@@ -232,12 +232,12 @@ export const siteData = {
     },
     about: {
       title: "About Us",
-      subtitle: "Founded in 2009, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
-      description: "Now into its third generation of family leadership, with over 15 years in the industry, Aylestone Kings has evolved into an award-winning business, recognized with accolades such as the National Lifetime Achievement Award for commitment to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Kings has consistently been at the forefront of industry innovation, working closely with local authorities and representing every local authority in the Midlands, seamlessly blending local heritage and family values with global tech innovation."
+      subtitle: "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
+      description: "Now into its third generation of family leadership, with over 30 years in the industry, Aylestone Kings has evolved into an award-winning business, recognized with accolades such as the National Lifetime Achievement Award for commitment to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Kings has consistently been at the forefront of industry innovation, working closely with local authorities and representing every local authority in the Midlands, seamlessly blending local heritage and family values with global tech innovation."
     },
     trusted: {
       title: "Our Reputation",
-      subtitle: "Each year, we serve over 10,608,000 passengers throughout the region, boasting an exceptional 99.7% satisfaction rating.",
+      subtitle: "Each year, we serve over 1000 passengers throughout the region, boasting an exceptional 99.7% satisfaction rating.",
       description: "Whether your journey is safe, comfortable, and efficient. Whether catering to daily commutes or working with public sector institutions and multinational corporations, we can deliver to your needs."
     }
   },
@@ -312,8 +312,8 @@ export const colorScheme = {
   }
 }
 export const copyrightInfo = {
-  year: 2024,
-  text: "© 2024 Aylestone Kings. All rights reserved."
+  year: 2025,
+  text: "© 2025 Aylestone Kings. All rights reserved."
 }
 
 export default siteData

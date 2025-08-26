@@ -65,11 +65,11 @@ The Aylestone Kings website has been successfully refactored to use centralized 
 company: {
   name: "Aylestone Kings",
   tagline: "Moving Aylestone forward",
-  founded: "2009",
+  founded: "1995",
   founders: "Colin and Audrey Shanks",
   passengersServed: "10,608,000",
   satisfactionRating: "99.7%",
-  yearsExperience: "15+",
+  yearsExperience: "30+",
   // ... more properties
 }
 ```

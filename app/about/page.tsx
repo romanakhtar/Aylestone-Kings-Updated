@@ -41,7 +41,7 @@ export default function AboutPage() {
             {/* Enhanced Description */}
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10 font-light">
               Moving the <span className="text-[#06A0A6] font-semibold">North East</span> forward with reliable,
-              professional taxi services since 2009. We're committed to providing safe, efficient, and
+              professional taxi services since 1995. We're committed to providing safe, efficient, and
               convenient transportation solutions for our community.
             </p>
             
@@ -72,7 +72,7 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5 text-[#06A0A6]" />
-                <span className="text-sm">15+ Years Experience</span>
+                <span className="text-sm">30+ Years Experience</span>
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 Our History
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                A legacy of excellence since 2009
+                A legacy of excellence since 1995
               </h2>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
                 Founded by Colin and Audrey Shanks, Aylestone Kings began with a simple Austin Morris marked by a distinctive blue line. 
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 Today, we operate 365 days a year, serving thousands of satisfied customers across the region.
               </p>
               <p className="text-lg text-[#2E3C44] leading-relaxed">
-                Our success is built on the foundation of reliability, safety, and customer satisfaction - values that have guided us for over 15 years.
+                Our success is built on the foundation of reliability, safety, and customer satisfaction - values that have guided us for over 30 years.
               </p>
             </div>
             <div className="relative">
@@ -121,7 +121,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-[#06A0A6] mb-2">15+</div>
+              <div className="text-3xl md:text-4xl font-bold text-[#06A0A6] mb-2">30+</div>
               <div className="text-[#2E3C44]">Years Experience</div>
             </div>
             <div>

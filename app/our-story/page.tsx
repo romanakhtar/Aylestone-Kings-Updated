@@ -53,7 +53,7 @@ export default function OurStoryPage() {
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
                               <div className="bg-[#06A0A6] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
-                2009
+                1995
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">The Beginning</h3>

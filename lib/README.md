@@ -20,11 +20,11 @@ import { siteData } from "@/lib/data"
 // Company information
 siteData.company.name                    // "Aylestone Kings"
 siteData.company.tagline                 // "Moving Aylestone forward"
-siteData.company.founded                 // "2009"
+siteData.company.founded                 // "1995"
 siteData.company.founders                // ""
 
 // Statistics
-siteData.company.yearsExperience         // "15+"
+siteData.company.yearsExperience         // "30+"
 siteData.company.passengersServed        // "10,608,000"
 siteData.company.satisfactionRating      // "99.7%"
 
@@ -35,7 +35,7 @@ siteData.images.companyHistory           // "/company-history.jpg"
 // Page-specific content
 siteData.homepage.hero.title             // "Moving Aylestone forward"
 siteData.fleetPage.hero.title            // "Premium comfort, every ride, every time"
-siteData.companyPage.about.subtitle      // "Founded in 2009 by Colin and Audrey Shanks..."
+siteData.companyPage.about.subtitle      // "Founded in 1995 by Colin and Audrey Shanks..."
 ```
 
 ## Data Structure
@@ -85,7 +85,7 @@ siteData.companyPage.about.subtitle      // "Founded in 2009 by Colin and Audrey
 ```tsx
 // Before (hardcoded)
 <h1>Moving Aylestone forward</h1>
-<p>Founded in 2009 by Colin and Audrey Shanks...</p>
+<p>Founded in 1995...</p>
 
 // After (using centralized data)
 <h1>{siteData.homepage.hero.title}</h1>
