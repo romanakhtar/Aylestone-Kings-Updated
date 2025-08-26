@@ -88,10 +88,9 @@ export default function AnimatedHero() {
                 <Image
                   src={siteData.images.heroTaxi}
                   alt="Modern Taxi Fleet - Aylestone Kings"
-                  width={128}
-                  height={102}
-                  className="relative z-10 w-24 lg:w-32 h-auto drop-shadow-2xl"
-                  priority
+                  width={80}
+                  height={64}
+                  className="relative z-10 w-38 lg:w-[180px] h-auto drop-shadow-2xl"
                 />
               </div>
             </div>
@@ -99,7 +98,7 @@ export default function AnimatedHero() {
           </div>
           
           {/* Right Content - Contact Mode Cards */}
-          <div className="hidden lg:flex max-w-md order-2 justify-center lg:justify-end mb-8 lg:mb-0 mt-20">
+          <div className="hidden lg:flex max-w-md order-2 justify-center lg:justify-end mb-8 lg:mb-0">
             <ContactModeCards />
           </div>
         </div>

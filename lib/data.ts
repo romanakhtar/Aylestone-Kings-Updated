@@ -28,8 +28,7 @@ export const siteData = {
   // Navigation Menu
   navigation: {
     main: [
-      { name: "Home", href: "/" },
-      { name: "Ride", href: "/ride" },    
+      { name: "Home", href: "/" },   
       { name: "Pricing", href: "/pricing" },
       { name: "Fleet", href: "/fleet" },
       { name: "Contact", href: "/contact" },
@@ -37,7 +36,7 @@ export const siteData = {
     ],
     dropdown: [
       { name: "Company", href: "/company" },
-      { name: "News", href: "/news" },
+      { name: "Ride", href: "/ride" },  
     ],
   },
 
@@ -178,50 +177,6 @@ export const siteData = {
     }
   },
 
-  // Drive Page Content
-  drivePage: {
-    hero: {
-      title: "Driver Opportunities",
-      subtitle:
-        "Join our team and enjoy flexible schedules, competitive earnings, and modern technology.",
-    },
-
-    driverBenefits: {
-      title: "Driver Benefits",
-      benefits: [
-        {
-          icon: "Clock",
-          title: "Flexible Schedule",
-          description: "Choose your own working hours and days.",
-        },
-        {
-          icon: "DollarSign",
-          title: "Competitive Earnings",
-          description: "Attractive pay rates and bonus opportunities.",
-        },
-        {
-          icon: "Award",
-          title: "Brand Value",
-          description: "Be part of a trusted and respected brand.",
-        },
-        {
-          icon: "Smartphone",
-          title: "Advanced Technology",
-          description: "Access to cutting-edge booking and navigation systems.",
-        },
-        {
-          icon: "Wrench",
-          title: "24hr Help and Support",
-          description: "Round-the-clock assistance and support.",
-        },
-        {
-          icon: "Car",
-          title: "Modern Fleet",
-          description: "Drive well-maintained, modern vehicles.",
-        },
-      ],
-    },
-  },
 
   // Fleet Page Content
   fleetPage: {
@@ -289,10 +244,8 @@ export const siteData = {
 
   // Social Media Links
   socialMedia: {
-    facebook: "https://facebook.com/aylestonekings",
-    twitter: "https://twitter.com/aylestonekings",
+    facebook: "https://www.facebook.com/share/1EzHEEqLRK/",
     instagram: "https://www.instagram.com/aylestone_kings?igsh=MTJqYW1rZ3RyODd0cA==",
-    linkedin: "https://linkedin.com/company/aylestonekings",
   },
 
   // Footer Content
@@ -316,7 +269,6 @@ export const siteData = {
     legal: [
       { name: "Privacy Policy", href: "/privacy" },
       { name: "Terms of Service", href: "/terms" },
-      { name: "Cookie Policy", href: "/cookies" },
     ],
   },
 }

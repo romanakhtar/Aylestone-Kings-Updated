@@ -23,9 +23,6 @@ export default function Footer() {
               <Link href={socialLinks.instagram} className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-400 hover:text-gray-800 transition-all duration-200">
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href={socialLinks.twitter} className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-400 hover:text-gray-800 transition-all duration-200">
-                <Twitter className="h-5 w-5" />
-              </Link>
             </div>
           </div>
 

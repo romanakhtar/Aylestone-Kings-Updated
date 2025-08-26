@@ -166,8 +166,8 @@ export default function Home() {
                 <Image
                   src="/app-screen-tracking.jpg"
                   alt="App Screenshot 2"
-                  width={300}
-                  height={600}
+                  width={400}
+                  height={800}
                   className="relative z-10 rounded-2xl shadow-2xl"
                 />
               </div>
@@ -231,28 +231,26 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <div>
-              <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6] text-[#2E3C44] rounded-full text-sm font-medium mb-6">
-                Premium Service
-              </div>
+              
               <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 Experience luxury transportation
               </h2>
-              <p className="text-xl text-[#2E3C44] mb-8 leading-relaxed">
+              <p className="text-xl text-white mb-8 leading-relaxed">
                 Our executive fleet features premium vehicles with professional drivers, perfect for business travel, 
                 special occasions, and discerning clients who demand the very best.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#2E3C44]">Luxury vehicles</span>
+                  <Check className="h-5 w-5 text-white" />
+                  <span className="text-white">Luxury vehicles</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#2E3C44]">Professional chauffeurs</span>
+                  <Check className="h-5 w-5 text-white" />
+                  <span className="text-white">Professional drivers</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#2E3C44]">Complimentary amenities</span>
+                  <Check className="h-5 w-5 text-white" />
+                  <span className="text-white">Best rides</span>
                 </div>
               </div>
               <a href="/fleet" className="inline-block">
@@ -283,13 +281,12 @@ export default function Home() {
             
             {/* Green Car Image */}
             <div className="relative inline-block">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/20 to-[#2E3C44]/20 rounded-2xl blur-xl"></div>
+              <div className="absolute inset-0 rounded-2xl blur-xl"></div>
               <Image
                 src="/eco-friendly-taxi-side.png"
                 alt="Eco-Friendly Car"
                 width={600}
                 height={300}
-                className="relative z-10 rounded-2xl shadow-xl"
               />
             </div>
           </div>

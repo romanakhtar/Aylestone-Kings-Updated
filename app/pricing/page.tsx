@@ -2,6 +2,7 @@ import Footer from "@/components/footer"
 import { Calendar, MapPin, CreditCard, Clock, MessageCircle, Headphones, Check, Star, Shield, Zap, Users, Car } from "lucide-react"
 import {  ArrowRight } from "lucide-react"
 import { contactInfo } from "@/lib/data"
+import Link from "next/link"
 
 export default function PricingPage() {
   return (
@@ -132,37 +133,65 @@ export default function PricingPage() {
                   </thead>
                   <tbody>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
-                      <td className="px-6 py-4 font-medium text-gray-900 text-base">East Midlands</td>
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">
+                        <Link href="/pricing/airports/East-Midlands" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                          East Midlands
+                        </Link>
+                      </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £40</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £60</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
-                      <td className="px-6 py-4 font-medium text-gray-900 text-base">Birmingham</td>
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">
+                        <Link href="/pricing/airports/Birmingham" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                          Birmingham
+                        </Link>
+                      </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £55</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £80</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
-                      <td className="px-6 py-4 font-medium text-gray-900 text-base">Manchester</td>
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">
+                        <Link href="/pricing/airports/Manchester" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                          Manchester
+                        </Link>
+                      </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £150</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £200</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
-                      <td className="px-6 py-4 font-medium text-gray-900 text-base">Luton</td>
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">
+                        <Link href="/pricing/airports/Luton" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                          Luton
+                        </Link>
+                      </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £120</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £160</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
-                      <td className="px-6 py-4 font-medium text-gray-900 text-base">Heathrow</td>
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">
+                        <Link href="/pricing/airports/Heathrow" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                          Heathrow
+                        </Link>
+                      </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £150</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £200</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
-                      <td className="px-6 py-4 font-medium text-gray-900 text-base">Gatwick</td>
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">
+                        <Link href="/pricing/airports/Gatwick" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                          Gatwick
+                        </Link>
+                      </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £200</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £275</td>
                     </tr>
                     <tr className="hover:bg-cyan-50 transition-colors duration-200">
-                      <td className="px-6 py-4 font-medium text-gray-900 text-base">Stansted</td>
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">
+                        <Link href="/pricing/airports/Stansted" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                          Stansted
+                        </Link>
+                      </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £150</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £200</td>
                     </tr>

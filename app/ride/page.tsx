@@ -144,10 +144,10 @@ export default function RidePage() {
             <div className="text-center">
               <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
                 <Image
-                  src="/app-screen-booking.png"
+                  src="/app-screen-booking.jpg"
                   alt="Instant Booking Screen"
-                  width={250}
-                  height={500}
+                  width={200}
+                  height={400}
                   className="mx-auto rounded-lg"
                   loading="lazy"
                 />
@@ -163,10 +163,10 @@ export default function RidePage() {
             <div className="text-center">
               <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
                 <Image
-                  src="/1.png"
+                  src="/tracking.jpg"
                   alt="Real-Time Tracking Screen"
-                  width={250}
-                  height={500}
+                  width={200}
+                  height={400}
                   className="mx-auto rounded-lg"
                   loading="lazy"
                 />
@@ -181,10 +181,10 @@ export default function RidePage() {
             <div className="text-center">
               <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
                 <Image
-                  src="/app-screen-history.png"
+                  src="/app-screen-booking.jpg"
                   alt="Booking History Screen"
-                  width={250}
-                  height={500}
+                  width={200}
+                  height={400}
                   className="mx-auto rounded-lg"
                   loading="lazy"
                 />
