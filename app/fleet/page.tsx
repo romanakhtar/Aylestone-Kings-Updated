@@ -47,7 +47,7 @@ export default function FleetPage() {
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 At Aylestone Kings, we offer a comprehensive range of vehicles to meet all your transportation needs. 
-                Whether you're traveling solo or with a group, our fleet guarantees comfort, reliability, and style.
+                Whether you're travelling solo or with a group, our fleet guarantees comfort, reliability, and style.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

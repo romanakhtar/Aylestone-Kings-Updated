@@ -162,7 +162,7 @@ export default function CompanyPage() {
               <h3 className="text-3xl font-bold text-[#0F0D3E] mb-6">Inclusivity and Accessibility</h3>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
                 Aylestone Kings is more than just a transportation service; we're deeply ingrained in our community. 
-                We proudly support the Newcastle United Foundation and collaborate with local charities and organizations 
+                We proudly support the Newcastle United Foundation and collaborate with local charities and organisations 
                 to make a positive impact.
               </p>
               <p className="text-lg text-[#2E3C44] mb-8 leading-relaxed">
@@ -182,7 +182,7 @@ export default function CompanyPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Check className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
-                  <span className="text-[#2E3C44]">Community Outreach Programs</span>
+                  <span className="text-[#2E3C44]">Community Outreach Programmes</span>
                 </div>
               </div>
             </div>

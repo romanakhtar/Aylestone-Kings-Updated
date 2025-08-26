@@ -68,7 +68,7 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">Competitive city center rates</span>
+                    <span className="text-gray-700">Competitive city centre rates</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
@@ -90,7 +90,7 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">Loyalty rewards program</span>
+                    <span className="text-gray-700">Loyalty rewards programme</span>
                   </div>
                 </div>
               </div>
@@ -186,8 +186,7 @@ export default function PricingPage() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-cyan-800 transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-2xl"
-                  >
-                    <MessageCircle className="h-4 w-3 mr-1" />
+                  >                   
                     Book Online
                   </a>
                 </div>
@@ -375,7 +374,7 @@ export default function PricingPage() {
                 <Users className="h-8 w-8 text-orange-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Group Discounts</h3>
-              <p className="text-gray-600">Save more when traveling with family or colleagues</p>
+              <p className="text-gray-600">Save more when travelling with family or colleagues</p>
             </div>
           </div>
         </div>

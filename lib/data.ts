@@ -233,7 +233,7 @@ export const siteData = {
 
     overview: {
       title: "Vehicle Categories",
-      subtitle: "At Aylestone Kings, we offer a comprehensive range of vehicles to meet all your transportation needs. Whether you're traveling solo or with a group, our fleet guarantees comfort, reliability, and style."
+      subtitle: "At Aylestone Kings, we offer a comprehensive range of vehicles to meet all your transportation needs. Whether you're travelling solo or with a group, our fleet guarantees comfort, reliability, and style."
     },
 
     vehicles: [
