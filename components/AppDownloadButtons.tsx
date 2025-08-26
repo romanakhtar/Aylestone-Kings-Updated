@@ -14,6 +14,7 @@ export default function AppDownloadButtons({ className = '', size = 'md' }: AppD
   }
 
   return (
+    
     <div className={`flex flex-row gap-3 lg:gap-4 ${className}`}>
       <a 
         href="https://apps.apple.com/gb/app/aylestone-kings/id1061012064" 
@@ -40,8 +41,8 @@ export default function AppDownloadButtons({ className = '', size = 'md' }: AppD
         <Image
           src={siteData.images.googlePlay}
           alt="Get it on Google Play"
-          width={180}
-          height={60}
+          width={150}
+          height={50}
           className={sizeClasses[size]}
         />
       </a>

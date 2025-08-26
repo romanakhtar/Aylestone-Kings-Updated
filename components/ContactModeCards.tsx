@@ -81,8 +81,9 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       {/* Separator */}
       <div className="border-t border-gray-200 my-4 lg:my-6"></div>
       
-      {/* App Download Buttons */}
+      {/* App Download Section */}
       <div className="pt-2">
+        <h4 className="text-md font-semibold text-[#0F0D3E] mb-3 text-center">Download our app</h4>
         <AppDownloadButtons size="sm" />
       </div>
     </div>

@@ -292,8 +292,7 @@ export const contactInfo = {
 }
 export const socialLinks = {
   facebook: siteData.socialMedia.facebook,
-  instagram: siteData.socialMedia.instagram,
-  twitter: siteData.socialMedia.twitter
+  instagram: siteData.socialMedia.instagram
 }
 export const navigationItems = siteData.navigation
 export const footerData = siteData.footer
