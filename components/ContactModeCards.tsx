@@ -82,7 +82,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       <div className="border-t border-gray-200 my-4 lg:my-6"></div>
       
       {/* App Download Buttons */}
-      <div className="pt-2 hidden sm:block">
+      <div className="pt-2">
         <AppDownloadButtons size="sm" />
       </div>
     </div>
