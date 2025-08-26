@@ -24,8 +24,14 @@ export default function FleetPage() {
                 the latest technology for your comfort and safety.
               </p>
 
-              <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="/premium-comfort.jpg" alt="Premium luxury car" fill className="object-cover" />
+              <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl">
+                <Image 
+                  src="/premium-comfort.jpg" 
+                  alt="Premium luxury car" 
+                  fill 
+                  className="object-cover"
+                  priority
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
             </div>
@@ -54,6 +60,7 @@ export default function FleetPage() {
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center">
@@ -88,6 +95,7 @@ export default function FleetPage() {
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center">
@@ -122,6 +130,7 @@ export default function FleetPage() {
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center">
@@ -156,6 +165,7 @@ export default function FleetPage() {
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center">
@@ -190,6 +200,7 @@ export default function FleetPage() {
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center">
@@ -224,6 +235,7 @@ export default function FleetPage() {
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center">

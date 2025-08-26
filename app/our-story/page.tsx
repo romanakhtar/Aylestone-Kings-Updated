@@ -42,6 +42,7 @@ export default function OurStoryPage() {
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg"
+                loading="lazy"
               />
             </div>
           </div>

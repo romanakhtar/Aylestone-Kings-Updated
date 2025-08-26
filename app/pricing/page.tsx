@@ -13,13 +13,46 @@ export default function PricingPage() {
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Transparent & Affordable Pricing
-                </h1>
+            </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Experience premium taxi services without the premium price tag. Our competitive rates ensure quality transportation 
               that fits your budget, with no hidden fees or surprises.
             </p>
           </div>
           
+          {/* Trust Indicators */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="flex flex-col items-center text-center p-4 bg-white/80 backdrop-blur-sm rounded-lg">
+                <div className="bg-blue-100 rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                  <Shield className="h-5 w-5 text-blue-600" />
+                </div>
+                <p className="text-sm font-medium text-gray-700">Licensed </p>
+              </div>
+              
+              <div className="flex flex-col items-center text-center p-4 bg-white/80 backdrop-blur-sm rounded-lg">
+                <div className="bg-green-100 rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                  <Check className="h-5 w-5 text-green-600" />
+                </div>
+                <p className="text-sm font-medium text-gray-700">DBS-checked drivers</p>
+              </div>
+              
+              <div className="flex flex-col items-center text-center p-4 bg-white/80 backdrop-blur-sm rounded-lg">
+                <div className="bg-purple-100 rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                  <CreditCard className="h-5 w-5 text-purple-600" />
+                </div>
+                <p className="text-sm font-medium text-gray-700">Card & contactless</p>
+              </div>
+              
+              <div className="flex flex-col items-center text-center p-4 bg-white/80 backdrop-blur-sm rounded-lg">
+                <div className="bg-orange-100 rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                  <Clock className="h-5 w-5 text-orange-600" />
+                </div>
+                <p className="text-sm font-medium text-gray-700">24/7 Service</p>
+              </div>
+            </div>
+          </div>
+
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Why Choose Our Pricing?</h2>
@@ -27,7 +60,7 @@ export default function PricingPage() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">No hidden charges or booking fees</span>
+                    <span className="text-gray-700">Safe travels with low prices</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
@@ -82,56 +115,56 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Left Side - Pricing Table */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center lg:text-left">
+            <div className="lg:col-span-2">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center lg:text-left">
                 Pricing Comparison Table
-              </h3>
+              </h2>
                  <div className="overflow-x-auto">
                  <table className="w-full bg-white rounded-2xl shadow-xl border border-cyan-200 overflow-hidden">
                   <thead>
                     <tr className="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white">
                       <th className="px-5 py-3 text-left font-semibold text-base">Destination</th>
-                      <th className="px-5 py-3 text-left font-semibold text-base">1-4 seater</th>
-                      <th className="px-5 py-3 text-left font-semibold text-base">6/8 seater</th>
+                      <th className="px-5 py-3 text-right font-semibold text-base">1-4 seater</th>
+                      <th className="px-5 py-3 text-right font-semibold text-base">6/8 seater</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">East Midlands</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£40</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£60</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £40</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £60</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">Birmingham</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£55</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£80</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £55</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £80</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">Manchester</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£150</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£200</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £150</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £200</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">Luton</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£120</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£160</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £120</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £160</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">Heathrow</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£150</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£200</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £150</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £200</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">Gatwick</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£200</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£275</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £200</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £275</td>
                     </tr>
                     <tr className="hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">Stansted</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£150</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base">£200</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £150</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £200</td>
                     </tr>
                   </tbody>
                 </table>
@@ -141,15 +174,31 @@ export default function PricingPage() {
                   <p className="text-sm text-gray-600 italic">
                     Prices shown are starting rates. Additional pickup locations will affect final price. Car park charges are not included.
                   </p>
+                  <p className="text-sm text-gray-600 italic mt-2">
+                    Night surcharges (10pm-6am) and holiday surcharges may apply. Contact us for exact pricing.
+                  </p>
+                </div>
+                
+                {/* Book Online CTA */}
+                <div className="mt-6 text-center lg:text-left">
+                  <a 
+                    href={contactInfo.booking.online} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-cyan-800 transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-2xl"
+                  >
+                    <MessageCircle className="h-4 w-3 mr-1" />
+                    Book Online
+                  </a>
                 </div>
               </div>
             </div>
 
             {/* Right Side - Vehicle Fleet */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center lg:text-left">
+            <div className="lg:col-span-1 max-w-md mx-auto lg:mx-0">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center lg:text-left">
                 Our Vehicle Fleet
-              </h3>
+              </h2>
               <div className="space-y-6">
                 {/* Standard Saloon */}
                 <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-lg">
@@ -344,8 +393,8 @@ export default function PricingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base">
-                  Book Now
+                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-[E4E4E4] transition-colors duration-200 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base">
+                  Book Online
                   <ArrowRight className="h-3 w-3 sm:h-5 sm:w-5" />
                 </button>
               </a>

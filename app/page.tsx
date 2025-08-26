@@ -73,6 +73,7 @@ export default function Home() {
                 width={600}
                 height={400}
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
+                loading="lazy"
               />
             </div>
           </div>
@@ -230,28 +231,28 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <div>
-              <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6] text-[#2E3C44] rounded-full text-sm font-medium mb-6">
                 Premium Service
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 Experience luxury transportation
               </h2>
-              <p className="text-xl text-[#E4E4E4] mb-8 leading-relaxed">
+              <p className="text-xl text-[#2E3C44] mb-8 leading-relaxed">
                 Our executive fleet features premium vehicles with professional drivers, perfect for business travel, 
                 special occasions, and discerning clients who demand the very best.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
                   <Check className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#E4E4E4]">Luxury vehicles</span>
+                  <span className="text-[#2E3C44]">Luxury vehicles</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Check className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#E4E4E6]">Professional chauffeurs</span>
+                  <span className="text-[#2E3C44]">Professional chauffeurs</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Check className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#E4E4E4]">Complimentary amenities</span>
+                  <span className="text-[#2E3C44]">Complimentary amenities</span>
                 </div>
               </div>
               <a href="/fleet" className="inline-block">

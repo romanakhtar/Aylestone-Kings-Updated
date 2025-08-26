@@ -88,9 +88,10 @@ export default function AnimatedHero() {
                 <Image
                   src={siteData.images.heroTaxi}
                   alt="Modern Taxi Fleet - Aylestone Kings"
-                  width={80}
-                  height={64}
-                  className="relative z-10 w-38 lg:w-[180px] h-auto drop-shadow-2xl"
+                  width={128}
+                  height={102}
+                  className="relative z-10 w-24 lg:w-32 h-auto drop-shadow-2xl"
+                  priority
                 />
               </div>
             </div>

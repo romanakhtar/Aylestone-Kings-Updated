@@ -40,7 +40,13 @@ export default function NewsPage() {
                 </Link>
               </div>
               <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image src={heroNews.image || "/placeholder.svg"} alt={heroNews.title} fill className="object-cover" />
+                <Image 
+                  src={heroNews.image || "/placeholder.svg"} 
+                  alt={heroNews.title} 
+                  fill 
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -61,6 +67,7 @@ export default function NewsPage() {
                       alt={article.title}
                       fill
                       className="object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-6">

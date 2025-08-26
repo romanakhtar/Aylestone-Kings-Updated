@@ -128,10 +128,9 @@ export default function RidePage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Passenger App</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Book rides easily, track real-time, pay cashless with Aylestone Kings.
-            </h3>
+            </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
               Aylestone Kings Passenger App is the ultimate travel companion for a seamless and reliable transportation
               experience. Our app is designed to provide you with convenience, comfort, reliability and safety at your
@@ -150,6 +149,7 @@ export default function RidePage() {
                   width={250}
                   height={500}
                   className="mx-auto rounded-lg"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Instant Booking</h3>
@@ -168,6 +168,7 @@ export default function RidePage() {
                   width={250}
                   height={500}
                   className="mx-auto rounded-lg"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-Time Tracking</h3>
@@ -185,6 +186,7 @@ export default function RidePage() {
                   width={250}
                   height={500}
                   className="mx-auto rounded-lg"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Booking History</h3>

@@ -9,7 +9,7 @@ export const siteData = {
     email: "info@aylestonekings.com",
     address: "Aylestone, Leicester, UK",
     description:
-      "Founded in 2009, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across Aylestone and surrounding areas, offering diverse services 365 days a year with the same commitment to excellence.",
+      "Founded in 2009, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
     founded: "2009",
     achievements: "National Lifetime Achievement Award for commitment to the Private Hire and Taxi industry",
     passengersServed: "10,000",
@@ -19,7 +19,7 @@ export const siteData = {
     happyCustomers: "10,000+",
     drivers: "Multiple Professional Drivers",
     licenses: [
-      "Licensed by Leicester City Council and Welverhampton City Council",
+      "Licensed by Leicester City Council and Wolverhampton City Council",
       "Drivers are DBS checked, ensuring a safe and secure service",
       "Providing airport, courier services and more"
     ]
@@ -81,7 +81,7 @@ export const siteData = {
   // Homepage Content
   homepage: {
     hero: {
-      title: "Moving Aylestone forward",
+      title: "Moving Aylestone Forward",
       subtitle:
         "Aylestone Kings is the ultimate taxi companion for seamless and reliable transportation services in area.",
       ctaText: "Book Your Ride Now",
@@ -93,9 +93,9 @@ export const siteData = {
     },
 
     safeTravel: {
-      title: "Trusted transportation service since 2009",
+      title: "Trusted Transportation Service Since 2009",
       description:
-        "Founded in 2009, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across Aylestone and surrounding areas, offering diverse services 365 days a year with the same commitment to excellence.",
+        "Founded in 2009, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
     },
 
     appBenefits: {
@@ -135,7 +135,7 @@ export const siteData = {
     },
 
     appShowcase: {
-      title: "Experience the Future of Transportation",
+      title: "App Features",
       features: [
         {
           title: "Real-Time Tracking",
@@ -153,7 +153,7 @@ export const siteData = {
     },
 
     serviceCategories: {
-      title: "Complete transportation solutions",
+      title: "Transportation Solutions",
       subtitle: "Whether you're a passenger, driver, or business, we have the perfect solution for your transportation needs.",
       passengers: {
         title: "For Passengers",
@@ -181,7 +181,7 @@ export const siteData = {
   // Drive Page Content
   drivePage: {
     hero: {
-      title: "We're setting the standard for driver-centric innovation",
+      title: "Driver Opportunities",
       subtitle:
         "Join our team and enjoy flexible schedules, competitive earnings, and modern technology.",
     },
@@ -226,13 +226,13 @@ export const siteData = {
   // Fleet Page Content
   fleetPage: {
     hero: {
-      title: "Premium comfort, every ride, every time",
+      title: "Premium Fleet",
       subtitle:
         "Our fleet sets a new standard with top-tier vehicles that blend luxury with cutting-edge features. From spacious MPVs to executive sedans, every vehicle is meticulously maintained and equipped with the latest technology for your comfort and safety.",
     },
 
     overview: {
-      title: "Diverse fleet for every need",
+      title: "Vehicle Categories",
       subtitle: "At Aylestone Kings, we offer a comprehensive range of vehicles to meet all your transportation needs. Whether you're traveling solo or with a group, our fleet guarantees comfort, reliability, and style."
     },
 
@@ -273,15 +273,15 @@ export const siteData = {
   // Company Page Content
   companyPage: {
     hero: {
-      title: "At Aylestone Kings, we are committed to making your journey comfortable, convenient, and stress-free.",
+      title: "About Aylestone Kings",
     },
     about: {
       title: "About Us",
-      subtitle: "Founded in 2009, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across Aylestone and surrounding areas, offering diverse services 365 days a year with the same commitment to excellence.",
+      subtitle: "Founded in 2009, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
       description: "Now into its third generation of family leadership, with over 15 years in the industry, Aylestone Kings has evolved into an award-winning business, recognized with accolades such as the National Lifetime Achievement Award for commitment to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Kings has consistently been at the forefront of industry innovation, working closely with local authorities and representing every local authority in the Midlands, seamlessly blending local heritage and family values with global tech innovation."
     },
     trusted: {
-      title: "Trusted by thousands",
+      title: "Our Reputation",
       subtitle: "Each year, we serve over 10,608,000 passengers throughout the region, boasting an exceptional 99.7% satisfaction rating.",
       description: "Whether your journey is safe, comfortable, and efficient. Whether catering to daily commutes or working with public sector institutions and multinational corporations, we can deliver to your needs."
     }

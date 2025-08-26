@@ -91,7 +91,13 @@ export default function CompanyPage() {
               </div>
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-2">
-              <Image src="/company-history.jpg" alt="Company history" fill className="object-cover" />
+              <Image 
+                src="/company-history.jpg" 
+                alt="Company history" 
+                fill 
+                className="object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
