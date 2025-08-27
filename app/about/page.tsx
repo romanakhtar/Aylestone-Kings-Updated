@@ -1,7 +1,7 @@
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { Shield, Clock, Users, Award, MapPin, Phone, Check, ArrowRight, MessageCircle, Mail, Globe } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, siteData } from "@/lib/data"
 
 export default function AboutPage() {
   return (
@@ -41,7 +41,7 @@ export default function AboutPage() {
             {/* Enhanced Description */}
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10 font-light">
               Moving the <span className="text-[#06A0A6] font-semibold">North East</span> forward with reliable,
-              professional taxi services since 1995. We're committed to providing safe, efficient, and
+              professional taxi services since {siteData.company.founded}. We're committed to providing safe, efficient, and
               convenient transportation solutions for our community.
             </p>
             
@@ -88,10 +88,10 @@ export default function AboutPage() {
                 Our History
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                A legacy of excellence since 1995
+                A legacy of excellence since {siteData.company.founded}
               </h2>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
-                Founded by Colin and Audrey Shanks, Aylestone Kings began with a simple Austin Morris marked by a distinctive blue line. 
+                Aylestone Kings began with a simple Austin Morris marked by a distinctive blue line. 
                 What started as a small family business has grown into one of the most trusted transportation companies in North East England.
               </p>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">

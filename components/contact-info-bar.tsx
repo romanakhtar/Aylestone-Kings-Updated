@@ -13,7 +13,7 @@ export default function ContactInfoBar() {
             {/* Phone */}
             <a
               href={`tel:${contactInfo.phone}`}
-              className="flex items-center gap-2 hover:text-[#E4E4E4] transition-colors duration-200 group"
+              className="flex items-center gap-2 hover:text-[#E4E4E4] transition-smooth group"
             >
               <PhoneCall className="h-3 w-3 sm:h-4 sm:w-4 group-hover:scale-110 transition-transform duration-200" />
               <span className="text-xs sm:text-sm">{contactInfo.phone}</span>
@@ -24,10 +24,10 @@ export default function ContactInfoBar() {
               href={`https://wa.me/${contactInfo.whatsapp.replace('+', '')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-[#E4E4E4] transition-colors duration-200 group"
+              className="flex items-center gap-2 hover:text-[#E4E4E4] transition-smooth group"
             >
               <svg 
-                className="h-3 w-3 sm:h-4 sm:w-4 group-hover:scale-110 transition-transform duration-200" 
+                className="h-3 w-3 sm:h-4 sm:w-4 group-hover:scale-110 transition-smooth" 
                 viewBox="0 0 24 24" 
                 fill="currentColor"
               >
@@ -39,9 +39,9 @@ export default function ContactInfoBar() {
             {/* Email */}
             <a
               href={`mailto:${contactInfo.email}`}
-              className="flex items-center gap-2 hover:text-[#E4E4E4] transition-colors duration-200 group"
+              className="flex items-center gap-2 hover:text-[#E4E4E4] transition-smooth group"
             >
-              <Mail className="h-3 w-3 sm:h-4 sm:w-4 group-hover:scale-110 transition-transform duration-200" />
+              <Mail className="h-3 w-3 sm:h-4 sm:w-4 group-hover:scale-110 transition-smooth" />
               <span className="text-xs sm:text-sm hidden sm:inline">{contactInfo.email}</span>
               <span className="text-xs sm:text-sm sm:hidden">Mail</span>
             </a>

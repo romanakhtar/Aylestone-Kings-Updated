@@ -34,16 +34,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${roboto.variable} antialiased`}>
+    <html lang="en" className={`${inter.variable} ${roboto.variable} antialiased scroll-smooth`}>
       <head>
         <link rel="preconnect" href="https://aylestonekings.webbooker.icabbi.com" />
         <link rel="dns-prefetch" href="https://aylestonekings.webbooker.icabbi.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="font-sans pt-5">
+      <body className="font-sans pt-5 bg-white">
         <ContactInfoBar />
         <Navigation />
-        {children}
+        <main className="transition-smooth">
+          {children}
+        </main>
         <FloatingContactButton />
       </body>
     </html>

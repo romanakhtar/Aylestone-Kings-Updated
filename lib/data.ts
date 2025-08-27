@@ -233,7 +233,7 @@ export const siteData = {
     about: {
       title: "About Us",
       subtitle: "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
-      description: "Now into its third generation of family leadership, with over 30 years in the industry, Aylestone Kings has evolved into an award-winning business, recognized with accolades such as the National Lifetime Achievement Award for commitment to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Kings has consistently been at the forefront of industry innovation, working closely with local authorities and representing every local authority in the Midlands, seamlessly blending local heritage and family values with global tech innovation."
+      description: "With over 30 years in the industry, Aylestone Kings has evolved into an award-winning business, recognized with accolades such as the National Lifetime Achievement Award for commitment to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Kings has consistently been at the forefront of industry innovation, working closely with local authorities and representing every local authority in the Midlands, seamlessly blending local heritage and values with global tech innovation."
     },
     trusted: {
       title: "Our Reputation",

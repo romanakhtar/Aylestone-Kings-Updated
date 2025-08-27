@@ -1,6 +1,6 @@
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { MapPin, Phone, Mail, Clock, MessageCircle, Globe } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, MessageCircle, Globe, Shield, Users } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import Image from "next/image"
 
@@ -19,6 +19,49 @@ export default function ContactPage() {
             <p className="text-xl text-black max-w-3xl mx-auto leading-relaxed">
               Get in touch with Aylestone Kings for all your transportation needs 24/7.
             </p>
+          </div>
+        </div>
+              </section>
+
+      {/* Trust & Licensing Section */}
+      <section className="py-16 bg-gray-50 border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Trusted & Licensed Service
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Your safety and trust are our top priorities. We maintain the highest standards of licensing and security.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Leicester City Council License */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Leicester City Council</h3>
+              <p className="text-gray-600 text-sm">Fully licensed and regulated by Leicester City Council</p>
+            </div>
+
+            {/* Wolverhampton City Council License */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Wolverhampton City Council</h3>
+              <p className="text-gray-600 text-sm">Licensed and regulated by Wolverhampton City Council</p>
+            </div>
+
+            {/* DBS Checked Drivers */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">DBS Checked Drivers</h3>
+              <p className="text-gray-600 text-sm">All drivers are DBS checked for your safety and security</p>
+            </div>
           </div>
         </div>
       </section>
@@ -188,6 +231,58 @@ export default function ContactPage() {
                 </div>
               </div>
 
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Trust Section */}
+      <section className="py-16 bg-gray-50 border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Trust & Security
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Your safety and trust are our top priorities. We maintain the highest standards of licensing and security.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Leicester City Council */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Leicester Licensed</h3>
+              <p className="text-gray-600 text-sm">Fully licensed by Leicester City Council</p>
+            </div>
+
+            {/* Wolverhampton City Council */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Wolverhampton Licensed</h3>
+              <p className="text-gray-600 text-sm">Licensed by Wolverhampton City Council</p>
+            </div>
+
+            {/* DBS Checked */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">DBS Checked</h3>
+              <p className="text-gray-600 text-sm">All drivers are DBS checked for your safety</p>
+            </div>
+
+            {/* 24/7 Service */}
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="h-8 w-8 text-orange-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">24/7 Service</h3>
+              <p className="text-gray-600 text-sm">Round-the-clock availability for your convenience</p>
             </div>
           </div>
         </div>

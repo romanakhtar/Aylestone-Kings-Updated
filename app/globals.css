@@ -3,6 +3,64 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Enhanced Professional Typography and Smooth Transitions */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  body {
+    font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Professional Heading Hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--aylestone-dark-blue);
+  }
+  
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.3;
+  }
+  
+  /* Enhanced Paragraph Styling */
+  p {
+    line-height: 1.7;
+    color: var(--aylestone-dark-grey);
+  }
+  
+  /* Professional Link Styling */
+  a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+  }
+  
+  /* Enhanced Button Styling */
+  button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+}
+
 :root {
   /* Aylestone Taxis Brand Colors */
   --aylestone-cyan: #06A0A6;
@@ -121,10 +179,6 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -133,101 +187,94 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-roboto);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-/* Added custom animations for smooth page interactions */
+/* Professional Smooth Transitions and Utilities */
 @layer utilities {
-  /* Fade in animations */
-  .animate-fade-in {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-fast {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-slow {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Enhanced Hover Effects */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Professional Shadow System */
+  .shadow-professional {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .shadow-professional-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .shadow-professional-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Enhanced Gradient System */
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--aylestone-cyan) 0%, var(--aylestone-dark-blue) 100%);
+  }
+  
+  .gradient-secondary {
+    background: linear-gradient(135deg, var(--aylestone-light-grey) 0%, white 100%);
+  }
+  
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(6, 160, 166, 0.1) 0%, rgba(15, 13, 62, 0.1) 100%);
+  }
+  
+  /* Professional Spacing System */
+  .section-padding {
+    padding: clamp(3rem, 8vw, 6rem) 0;
+  }
+  
+  .container-padding {
+    padding-left: clamp(1rem, 4vw, 2rem);
+    padding-right: clamp(1rem, 4vw, 2rem);
+  }
+  
+  /* Enhanced Animation Classes */
+  .fade-in {
     animation: fadeIn 0.8s ease-out forwards;
   }
-
-  .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+  
+  .slide-up {
+    animation: slideUp 0.8s ease-out forwards;
   }
-
-  /* Slide in animations */
-  .animate-slide-in-left {
-    animation: slideInLeft 1s ease-out forwards;
+  
+  .scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
   }
-
-  .animate-slide-in-right {
-    animation: slideInRight 1s ease-out forwards;
-  }
-
-  /* Floating animation for decorative elements */
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  /* Enhanced floating animations for hero section */
-  .animate-float-slow {
-    animation: float 8s ease-in-out infinite;
-  }
-
-  .animate-float-fast {
-    animation: float 4s ease-in-out infinite;
-  }
-
-  .animate-pulse-subtle {
-    animation: pulseSubtle 4s ease-in-out infinite;
-  }
-
-  .animate-rotate-slow {
-    animation: rotateSlow 20s linear infinite;
-  }
-
-  /* Animation delays */
-  .delay-100 {
-    animation-delay: 0.1s;
-  }
-  .delay-200 {
-    animation-delay: 0.2s;
-  }
-  .delay-300 {
-    animation-delay: 0.3s;
-  }
-  .delay-400 {
-    animation-delay: 0.4s;
-  }
-  .delay-500 {
-    animation-delay: 0.5s;
-  }
-  .delay-600 {
-    animation-delay: 0.6s;
-  }
-  .delay-1000 {
-    animation-delay: 1s;
-  }
-  .delay-2000 {
-    animation-delay: 2s;
+  
+  /* Professional Loading States */
+  .loading-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
   }
 }
 
+/* Professional Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -235,131 +282,305 @@
   }
 }
 
-@keyframes slideInLeft {
+@keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
-@keyframes slideInRight {
+@keyframes scaleIn {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(var(--tw-rotate));
-  }
-  50% {
-    transform: translateY(-10px) rotate(var(--tw-rotate));
-  }
-}
-
-@keyframes pulseSubtle {
-  0%, 100% {
-    opacity: 0.8;
     transform: scale(1);
   }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
 }
 
-@keyframes rotateSlow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Hide scrollbar for carousel */
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Safari and Chrome */
-}
-
-/* Custom keyframes for hero image animation */
-@keyframes slideInFromLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInFromLeftWithBounce {
+@keyframes shimmer {
   0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  80% {
-    transform: translateX(5%);
-    opacity: 1;
+    background-position: -200% 0;
   }
   100% {
-    transform: translateX(0);
-    opacity: 1;
+    background-position: 200% 0;
   }
 }
 
-/* Custom animation classes */
-.animate-slide-in-left {
-  animation: slideInFromLeft 1s ease-out forwards;
-}
-
-.animate-slide-in-left-bounce {
-  animation: slideInFromLeftWithBounce 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-}
-
-/* Performance optimizations for animations */
-.animate-slide-in-left,
-.animate-slide-in-left-bounce {
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-/* Smooth scrolling for the entire page */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar styling */
+/* Enhanced Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #06A0A6;
+  background: var(--aylestone-cyan);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0F0D3E;
+  background: var(--aylestone-dark-blue);
+}
+
+/* Professional Focus States */
+.focus-ring:focus {
+  outline: 2px solid var(--aylestone-cyan);
+  outline-offset: 2px;
+}
+
+/* Enhanced Mobile Experience */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: clamp(2rem, 6vw, 4rem) 0;
+  }
+  
+  .container-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Enhanced Professional Typography */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  body {
+    font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Professional Heading Hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--aylestone-dark-blue);
+  }
+  
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.3;
+  }
+  
+  /* Enhanced Paragraph Styling */
+  p {
+    line-height: 1.7;
+    color: var(--aylestone-dark-grey);
+  }
+  
+  /* Professional Link Styling */
+  a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+  }
+  
+  /* Enhanced Button Styling */
+  button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Professional Smooth Transitions */
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-fast {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-slow {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Enhanced Hover Effects */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Professional Shadow System */
+  .shadow-professional {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .shadow-professional-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .shadow-professional-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Enhanced Gradient System */
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--aylestone-cyan) 0%, var(--aylestone-dark-blue) 100%);
+  }
+  
+  .gradient-secondary {
+    background: linear-gradient(135deg, var(--aylestone-light-grey) 0%, white 100%);
+  }
+  
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(6, 160, 166, 0.1) 0%, rgba(15, 13, 62, 0.1) 100%);
+  }
+  
+  /* Professional Spacing System */
+  .section-padding {
+    padding: clamp(3rem, 8vw, 6rem) 0;
+  }
+  
+  .container-padding {
+    padding-left: clamp(1rem, 4vw, 2rem);
+    padding-right: clamp(1rem, 4vw, 2rem);
+  }
+  
+  /* Enhanced Animation Classes */
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  
+  .scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+  
+  /* Professional Loading States */
+  .loading-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+}
+
+/* Professional Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Enhanced Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--aylestone-cyan);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--aylestone-dark-blue);
+}
+
+/* Professional Focus States */
+.focus-ring:focus {
+  outline: 2px solid var(--aylestone-cyan);
+  outline-offset: 2px;
+}
+
+/* Enhanced Mobile Experience */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: clamp(2rem, 6vw, 4rem) 0;
+  }
+  
+  .container-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Professional Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
 }

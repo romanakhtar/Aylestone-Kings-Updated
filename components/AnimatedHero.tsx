@@ -58,7 +58,7 @@ export default function AnimatedHero() {
                 const icons = [Shield, Clock, MapPin]
                 const IconComponent = icons[index % icons.length]
                 return (
-                  <div key={index} className="flex items-center gap-3 bg-[#E4E4E4] rounded-lg px-3 py-2 border border-[#E4E4E4]">
+                  <div key={index} className="flex items-center gap-3 bg-cyan-500/20 rounded-lg px-3 py-2 border border-cyan-500/30">
                     <IconComponent className="h-4 w-4 text-[#06A0A6]" />
                     <span className="text-[#2E3C44] font-medium text-sm">{feature}</span>
                   </div>
@@ -90,7 +90,7 @@ export default function AnimatedHero() {
                   alt="Modern Taxi Fleet - Aylestone Kings"
                   width={80}
                   height={64}
-                  className="relative z-10 w-38 lg:w-[180px] h-auto drop-shadow-2xl"
+                  className="relative z-10 w-38 lg:w-[280px] h-auto drop-shadow-2xl"
                 />
               </div>
             </div>

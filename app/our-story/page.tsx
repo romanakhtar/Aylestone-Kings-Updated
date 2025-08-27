@@ -1,5 +1,6 @@
 import Footer from "@/components/footer"
 import Image from "next/image"
+import { siteData } from "@/lib/data"
 
 export default function OurStoryPage() {
   return (
@@ -53,12 +54,12 @@ export default function OurStoryPage() {
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
                               <div className="bg-[#06A0A6] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">
-                1995
+                {siteData.company.founded}
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">The Beginning</h3>
                 <p className="text-gray-700">
-                  Aylestone Kings was founded by Colin and Audrey Shanks, starting with a vision to provide reliable transportation services in the North East region.
+                  Aylestone Kings was founded with a vision to provide reliable transportation services in the North East region.
                 </p>
               </div>
               </div>

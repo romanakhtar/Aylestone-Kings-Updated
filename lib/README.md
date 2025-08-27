@@ -21,7 +21,7 @@ import { siteData } from "@/lib/data"
 siteData.company.name                    // "Aylestone Kings"
 siteData.company.tagline                 // "Moving Aylestone forward"
 siteData.company.founded                 // "1995"
-siteData.company.founders                // ""
+// Founders information removed
 
 // Statistics
 siteData.company.yearsExperience         // "30+"
@@ -35,7 +35,7 @@ siteData.images.companyHistory           // "/company-history.jpg"
 // Page-specific content
 siteData.homepage.hero.title             // "Moving Aylestone forward"
 siteData.fleetPage.hero.title            // "Premium comfort, every ride, every time"
-siteData.companyPage.about.subtitle      // "Founded in 1995 by Colin and Audrey Shanks..."
+siteData.companyPage.about.subtitle      // "Founded in 1995, Aylestone Kings started a mission..."
 ```
 
 ## Data Structure

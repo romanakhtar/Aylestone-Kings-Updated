@@ -17,10 +17,10 @@ export default function Footer() {
               {companyInfo.description}
             </p>
             <div className="flex space-x-4">
-              <Link href={socialLinks.facebook} className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-800 hover:bg-gray-400 hover:text-gray-900 transition-all duration-200">
+              <Link href={socialLinks.facebook} className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-800 hover:bg-[#06A0A6] hover:text-white transition-smooth hover:scale-110 shadow-professional hover:shadow-professional-lg">
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link href={socialLinks.instagram} className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-400 hover:text-gray-800 transition-all duration-200">
+              <Link href={socialLinks.instagram} className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-[#06A0A6] hover:text-white transition-smooth hover:scale-110 shadow-professional hover:shadow-professional-lg">
                 <Instagram className="h-5 w-5" />
               </Link>
             </div>
@@ -32,8 +32,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerData.quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-600 hover:text-gray-800 text-sm transition-colors duration-200 flex items-center group">
-                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-200" />
+                  <Link href={link.href} className="text-gray-600 hover:text-[#06A0A6] text-sm transition-smooth flex items-center group">
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
                     {link.name}
                   </Link>
                 </li>
@@ -47,8 +47,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerData.services.map((service) => (
                 <li key={service.name}>
-                  <Link href={service.href} className="text-gray-600 hover:text-gray-800 text-sm transition-colors duration-200 flex items-center group">
-                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-200" />
+                  <Link href={service.href} className="text-gray-600 hover:text-[#06A0A6] text-sm transition-smooth flex items-center group">
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
                     {service.name}
                   </Link>
                 </li>
@@ -83,7 +83,7 @@ export default function Footer() {
             </div>
             
             <div className="mt-6">
-              <Button className="w-full bg-[#0F0D3E] hover:bg-[#048A90] text-white rounded-lg font-semibold transition-all duration-200">
+              <Button className="w-full bg-[#0F0D3E] hover:bg-[#06A0A6] text-white rounded-lg font-semibold transition-smooth shadow-professional hover:shadow-professional-lg hover:scale-105 focus-ring">
                 Contact Us
               </Button>
             </div>

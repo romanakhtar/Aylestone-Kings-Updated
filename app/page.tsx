@@ -13,7 +13,7 @@ export default function Home() {
       <AnimatedHero />
 
       {/* Stats Section */}
-      <section className="py-16 bg-white border-b border-[#E4E4E4]">
+      <section className="section-padding bg-white border-b border-[#E4E4E4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -37,7 +37,7 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 bg-[#E4E4E4]">
+      <section className="section-padding gradient-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -81,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* Service Categories Section */}
-      <section className="py-20 bg-white">
+      <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
