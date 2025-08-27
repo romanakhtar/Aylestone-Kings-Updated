@@ -37,7 +37,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
   ]
 
   return (
-    <div className={`bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 p-4 sm:p-5 lg:p-6 ${className} animate-fade-in relative w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[260px] xl:max-w-[280px]`}>
+    <div className={`bg-cyan-500/20 backdrop-blur-md rounded-2xl shadow-xl border border-cyan-500/30 p-4 sm:p-5 lg:p-6 ${className} animate-fade-in relative w-full max-w-[320px] sm:max-w-[340px] lg:max-w-[260px] xl:max-w-[280px]`}>
       <h3 className="text-xl lg:text-2xl font-bold text-[#0F0D3E] mb-6 lg:mb-8 text-center border-b border-gray-200/50 pb-3 relative z-10">
         Contact Us
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] rounded-full"></div>
@@ -82,7 +82,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       <div className="border-t border-gray-200 my-4 lg:my-6"></div>
       
       {/* App Download Section */}
-      <div className="pt-2">
+      <div className="pt-2 flex flex-col items-center">
         <h4 className="text-md font-semibold text-[#0F0D3E] mb-3 text-center">Download our app</h4>
         <AppDownloadButtons size="sm" />
       </div>

@@ -34,7 +34,7 @@ export default function AnimatedHero() {
   return (
     <main className="relative min-h-screen bg-white">
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-16 min-h-screen flex items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 lg:pt-32 pb-16 min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start w-full">
           {/* Left Content - Main Content with Enhanced Visuals */}
           <div className="max-w-xl order-1">
