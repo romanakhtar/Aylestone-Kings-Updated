@@ -48,14 +48,14 @@ export default function FloatingContactButton() {
 
       {/* Enhanced Mobile Contact Modal */}
       {showMobileContact && (
-        <div className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[9998] flex items-end">
-          <div className="bg-cyan-500/20 backdrop-blur-sm w-[90%] sm:w-4/5 md:w-3/4 mx-auto rounded-3xl p-6 sm:p-8 max-h-[80vh] overflow-y-auto shadow-[0_20px_60px_rgba(6,160,166,0.4)] backdrop-blur-sm border border-cyan-500/30">
-            <div className="flex justify-end mb-6">
+        <div className="lg:hidden fixed inset-0 z-[9998] flex items-center justify-center p-4">
+          <div className="relative">
+            <div className="flex justify-end mb-4">
               <button 
                 onClick={() => setShowMobileContact(false)}
-                className="text-white/90 hover:text-white bg-white/15 hover:bg-white/25 p-3 rounded-full transition-smooth backdrop-blur-sm hover:scale-110 shadow-professional focus-ring"
+                className="text-[#0F0D3E] hover:text-[#06A0A6] bg-white/80 hover:bg-white p-2 rounded-full transition-smooth backdrop-blur-sm hover:scale-110 shadow-professional focus-ring z-10"
               >
-                <X className="h-5 w-5" />
+                <X className="h-4 w-4" />
               </button>
             </div>
             <ContactModeCards />
