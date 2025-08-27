@@ -14,7 +14,7 @@ export const siteData = {
     achievements: "National Lifetime Achievement Award for commitment to the Private Hire and Taxi industry",
     passengersServed: "10,000",
     satisfactionRating: "99.7%",
-    yearsExperience: "30+",
+    yearsExperience: "25+",
     serviceAvailability: "24/7",
     happyCustomers: "10,000+",
     drivers: "Multiple Professional Drivers",
@@ -81,13 +81,92 @@ export const siteData = {
   homepage: {
     hero: {
       title: "Moving Aylestone Forward",
-      subtitle:
-        "Aylestone Kings is the ultimate taxi companion for seamless and reliable transportation services in area.",
+      subtitle: "Your trusted taxi companion — providing fast, reliable and affordable transport across Aylestone and beyond.",
       ctaText: "Book Your Ride Now",
       features: [
         "24/7 Service",
         "GPS Tracking", 
         "Professional Drivers"
+      ]
+    },
+
+    aboutUs: {
+      title: "Over 25 Years' Experience",
+      subtitle: "Reliable Transport Since 1995",
+      description: "Established in 1995, Aylestone Kings set out with one mission: to deliver a professional, affordable and dependable taxi service for the people of Aylestone and the surrounding area. All our drivers are fully DBS-checked for your peace of mind, ensuring a safe and secure service every time. Whether it's airport transfers, courier deliveries or local journeys, we've got you covered."
+    },
+
+    whyChooseUs: {
+      title: "Why Choose Us?",
+      features: [
+        "24/7 availability — day and night",
+        "Live GPS tracking for every journey",
+        "Fully licensed and professional drivers",
+        "Multiple secure payment options"
+      ]
+    },
+
+    forPassengers: {
+      title: "For Passengers",
+      subtitle: "Getting around has never been easier. With our app, you can:",
+      features: [
+        "Book instantly in just a few taps",
+        "Track your driver live in real time",
+        "Enjoy safe, comfortable travel every journey",
+        "Pay your way with flexible payment options"
+      ]
+    },
+
+    businessTravel: {
+      title: "Business Travel Solutions",
+      subtitle: "Professional transport for professional needs. Our corporate accounts offer:",
+      features: [
+        "Centralised account management",
+        "Complete booking history and reporting",
+        "Customisable invoices and reports",
+        "A dedicated account manager for your business"
+      ]
+    },
+
+    quickBooking: {
+      title: "Book a Taxi in Under 10 Seconds",
+      subtitle: "As Aylestone's leading taxi firm, we guarantee priority service for every booking.",
+      description: "With our app you can:",
+      features: [
+        "Book in seconds",
+        "Track your driver live",
+        "Arrive in comfort and on time"
+      ]
+    },
+
+    executiveFleet: {
+      title: "Luxury Transport, Every Time",
+      subtitle: "Travel in style with our premium executive vehicles. Perfect for business travel, special occasions, or clients who demand the very best."
+    },
+
+    sustainability: {
+      title: "Driving a Greener Future",
+      subtitle: "We're committed to reducing our environmental footprint. Our eco-friendly fleet and ongoing green initiatives help us deliver a cleaner, more sustainable future for transport in Aylestone."
+    },
+
+    customerReviews: {
+      title: "What Our Customers Say",
+      reviews: [
+        {
+          text: "Excellent service. The driver Bilal was extremely helpful, the car was spotless, and bottled water was provided. He even texted ahead to let us know he was on his way — a thoughtful touch.",
+          author: "Stafford Thomas",
+          type: "Regular Customer"
+        },
+        {
+          text: "Very pleased with the service. I was collected on time by a polite and professional driver. I'll definitely use Aylestone Kings again.",
+          author: "Esme Tingate",
+          type: "Business Client"
+        },
+        {
+          text: "An outstanding experience. My driver was careful and professional. I reached the airport on time with chilled water and great conversation throughout.",
+          author: "Duncan Whatmore",
+          type: "Airport Transfer"
+        }
       ]
     },
 
@@ -267,8 +346,8 @@ export const siteData = {
     ],
 
     legal: [
-      { name: "Privacy Policy", href: "/privacy" },
-      { name: "Terms of Service", href: "/terms" },
+      { name: "Privacy Policy", href: "/Privacy-policy.pdf" },
+      { name: "Terms of Service", href: "/Privacy-policy.pdf" },
     ],
   },
 }

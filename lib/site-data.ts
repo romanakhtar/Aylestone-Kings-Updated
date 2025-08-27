@@ -69,9 +69,9 @@ export const siteData = {
       { name: "Corporate Travel", href: "#" }
     ],
     legal: [
-      { name: "Terms & Conditions", href: "#" },
-      { name: "Privacy Policy", href: "#" },
-      { name: "Cookie Policy", href: "#" }
+      { name: "Terms & Conditions", href: "/Aylestone_Taxis_Terms_Privacy.pdf" },
+      { name: "Privacy Policy", href: "/Privacy-policy.pdf" },
+      { name: "Cookie Policy", href: "/Aylestone_Taxis_Cookie_Policy.pdf" }
     ]
   },
 

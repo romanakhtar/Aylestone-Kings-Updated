@@ -44,7 +44,7 @@ export default function AnimatedHero() {
             
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-              Moving <span className="text-[#06A0A6] drop-shadow-lg">Aylestone</span> forward
+              {siteData.homepage.hero.title}
             </h1>
 
             {/* Description */}

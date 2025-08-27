@@ -12,30 +12,6 @@ export default function Home() {
       {/* Hero Section */}
       <AnimatedHero />
 
-      {/* Stats Section */}
-      <section className="section-padding bg-white border-b border-[#E4E4E4]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-[#06A0A6] mb-2">{siteData.company.yearsExperience}</div>
-              <div className="text-[#2E3C44]">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-[#06A0A6] mb-2">{siteData.company.serviceAvailability}</div>
-              <div className="text-[#2E3C44]">Service Available</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-[#06A0A6] mb-2">{siteData.company.happyCustomers}</div>
-              <div className="text-[#2E3C44]">Happy Customers</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-[#06A0A6] mb-2">Multiple</div>
-              <div className="text-[#2E3C44]">Professional Drivers</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* About Us Section */}
       <section className="section-padding gradient-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,19 +21,14 @@ export default function Home() {
                 About Us
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                {siteData.homepage.safeTravel.title}
+                {siteData.homepage.aboutUs.title}
               </h2>
-              <p className="text-lg text-[#2E3C44] mb-8 leading-relaxed">
-                {siteData.homepage.safeTravel.description}
+              <p className="text-lg text-[#2E3C44] mb-4 leading-relaxed">
+                {siteData.homepage.aboutUs.subtitle}
               </p>
-              <div className="space-y-4 mb-8">
-                {siteData.company.licenses.map((license, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <Check className="h-5 w-5 text-[#06A0A6]" />
-                    <span className="text-[#2E3C44]">{license}</span>
-                  </div>
-                ))}
-              </div>
+              <p className="text-lg text-[#2E3C44] mb-8 leading-relaxed">
+                {siteData.homepage.aboutUs.description}
+              </p>
               <a href="/about" className="inline-block">
                 <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3">
                   Learn More About Us
@@ -80,74 +51,102 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Service Categories Section */}
+      {/* Why Choose Us Section */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-              {siteData.homepage.serviceCategories.title}
+              {siteData.homepage.whyChooseUs.title}
             </h2>
-            <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
-              {siteData.homepage.serviceCategories.subtitle}
-            </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-            {/* For Passengers */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-[#E4E4E4] hover:shadow-xl transition-all duration-300 group">
-              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30 transition-colors">
-                <MapPin className="h-8 w-8 text-[#06A0A6]" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {siteData.homepage.whyChooseUs.features.map((feature, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Check className="h-8 w-8 text-[#06A0A6]" />
+                </div>
+                <p className="text-[#2E3C44] font-medium">{feature}</p>
               </div>
-              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4">{siteData.homepage.serviceCategories.passengers.title}</h3>
-              <p className="text-[#2E3C44] mb-6">
-                {siteData.homepage.serviceCategories.passengers.description}
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* For Passengers Section */}
+      <section className="section-padding bg-[#E4E4E4]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
+                {siteData.homepage.forPassengers.title}
+              </h2>
+              <p className="text-xl text-[#2E3C44] mb-8 leading-relaxed">
+                {siteData.homepage.forPassengers.subtitle}
               </p>
-              <div className="space-y-3 mb-6">
-                {siteData.homepage.serviceCategories.passengers.features.map((feature, index) => (
+              <div className="space-y-4 mb-8">
+                {siteData.homepage.forPassengers.features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <Check className="h-5 w-5 text-[#06A0A6]" />
                     <span className="text-[#2E3C44]">{feature}</span>
                   </div>
                 ))}
               </div>
-              <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="inline-block w-full">
-                <button className="w-full bg-[#06A0A6] hover:bg-[#0F0D3E] text-white py-3 rounded-lg font-medium transition-colors">
-                  Book a Ride
+              <a href="#app-download" className="inline-block">
+                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3">
+                  Download Our App
+                  <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
             </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-2xl"></div>
+              <Image
+                src="/Professional-in-car.jpg"
+                alt="Passengers enjoying taxi service"
+                width={600}
+                height={400}
+                className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-            {/* For Business */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-[#E4E4E4] hover:shadow-xl transition-all duration-300 group">
-              <div className="w-16 h-16 bg-[#2E3C44]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#2E3C44]/30 transition-colors">
-                <Shield className="h-8 w-8 text-[#2E3C44]" />
-              </div>
-              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4">For Business</h3>
-              <p className="text-[#2E3C44] mb-6">
-                Corporate transportation solutions with dedicated account management and detailed reporting.
+      {/* Business Travel Solutions Section */}
+      <section className="section-padding bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1 relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-2xl"></div>
+              <Image
+                src="/business-leisure.jpg"
+                alt="Business Travel Solutions"
+                width={600}
+                height={400}
+                className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
+                loading="lazy"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
+                {siteData.homepage.businessTravel.title}
+              </h2>
+              <p className="text-xl text-[#2E3C44] mb-8 leading-relaxed">
+                {siteData.homepage.businessTravel.subtitle}
               </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#2E3C44]">Centralized user management</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#2E3C44]">Comprehensive booking history</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#2E3C44]">Customizable reports</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#2E3C44]">Dedicated account manager</span>
-                </div>
+              <div className="space-y-4 mb-8">
+                {siteData.homepage.businessTravel.features.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <Check className="h-5 w-5 text-[#06A0A6]" />
+                    <span className="text-[#2E3C44]">{feature}</span>
+                  </div>
+                ))}
               </div>
-              <a href="/company" className="inline-block w-full">
-                <button className="w-full bg-[#2E3C44] hover:bg-[#0F0D3E] text-white py-3 rounded-lg font-medium transition-colors">
+              <a href="/company" className="inline-block">
+                <button className="bg-[#2E3C44] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3">
                   Business Solutions
+                  <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
             </div>
@@ -155,53 +154,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Passenger App Section */}
+      {/* Quick Booking Section */}
       <section id="app-download" className="py-20 bg-[#E4E4E4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left - App Screenshots */}
-              
-              <div className="relative ml-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/20 to-[#2E3C44]/20 rounded-2xl blur-xl"></div>
-                <Image
-                  src="/app-screen-tracking.jpg"
-                  alt="App Screenshot 2"
-                  width={400}
-                  height={800}
-                  className="relative z-10 rounded-2xl shadow-2xl"
-                />
-              </div>
+            <div className="relative ml-8">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/20 to-[#2E3C44]/20 rounded-2xl blur-xl"></div>
+              <Image
+                src="/app-screen-tracking.jpg"
+                alt="App Screenshot"
+                width={400}
+                height={800}
+                className="relative z-10 rounded-2xl shadow-2xl"
+              />
+            </div>
 
             {/* Right - Content */}
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
-                Passenger App
+                Quick Booking
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-[#2E3C44] mb-6 leading-tight">
-                Book a taxi in under 10 seconds
+                {siteData.homepage.quickBooking.title}
               </h2>
-              <p className="text-xl text-[#2E3C44] mb-8 leading-relaxed">
-                Experience exclusive priority service from Aylestone's leading taxi firm. Our app makes it incredibly easy to book rides quickly, 
-                track your driver in real-time, and arrive at your destination comfortably and on time.
+              <p className="text-xl text-[#2E3C44] mb-6 leading-relaxed">
+                {siteData.homepage.quickBooking.subtitle}
+              </p>
+              <p className="text-lg text-[#2E3C44] mb-8 leading-relaxed">
+                {siteData.homepage.quickBooking.description}
               </p>
               
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#2E3C44] font-medium">Quick booking</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#2E3C44] font-medium">Real-time tracking</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Shield className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#2E3C44] font-medium">Safe & secure</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Users className="h-5 w-5 text-[#06A0A6]" />
-                  <span className="text-[#2E3C44] font-medium">Professional drivers</span>
-                </div>
+              <div className="space-y-4 mb-8">
+                {siteData.homepage.quickBooking.features.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <Check className="h-5 w-5 text-[#06A0A6]" />
+                    <span className="text-[#2E3C44] font-medium">{feature}</span>
+                  </div>
+                ))}
               </div>
 
               <AppDownloadButtons />
@@ -209,10 +199,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
-
-
 
       {/* Executive Fleet Section */}
       <section className="relative py-20 text-white overflow-hidden">
@@ -231,28 +217,12 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <div>
-              
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-                Experience luxury transportation
+                {siteData.homepage.executiveFleet.title}
               </h2>
               <p className="text-xl text-white mb-8 leading-relaxed">
-                Our executive fleet features premium vehicles with professional drivers, perfect for business travel, 
-                special occasions, and discerning clients who demand the very best.
+                {siteData.homepage.executiveFleet.subtitle}
               </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-white" />
-                  <span className="text-white">Luxury vehicles</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-white" />
-                  <span className="text-white">Professional drivers</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-white" />
-                  <span className="text-white">Best rides</span>
-                </div>
-              </div>
               <a href="/fleet" className="inline-block">
                 <button className="bg-[#06A0A6] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 flex items-center gap-3 hover:bg-[#0F0D3E] shadow-lg">
                   View Executive Fleet
@@ -264,7 +234,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Green Policy Section */}
+      {/* Sustainability Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
@@ -272,11 +242,10 @@ export default function Home() {
               Sustainability
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-              Driving a <span className="text-[#06A0A6]">greener future</span>
+              {siteData.homepage.sustainability.title}
             </h2>
             <p className="text-xl text-[#2E3C44] mb-8">
-              We're committed to reducing our environmental impact and promoting sustainable transportation 
-              through our fleet of eco-friendly vehicles and green initiatives.
+              {siteData.homepage.sustainability.subtitle}
             </p>
             
             {/* Green Car Image */}
@@ -287,176 +256,46 @@ export default function Home() {
                 alt="Eco-Friendly Car"
                 width={600}
                 height={300}
+                className="rounded-2xl"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Customer Reviews Carousel */}
+      {/* Customer Reviews Section */}
       <section className="py-20 bg-[#E4E4E4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-              What our customers say
+              {siteData.homepage.customerReviews.title}
             </h2>
-            <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our valued customers have to say about their experience with Aylestone Kings.
-            </p>
           </div>
 
-          <div className="relative">
-            {/* Carousel Container */}
-            <div className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory">
-              {/* Review 1 */}
-              <div className="min-w-[400px] md:min-w-[500px] bg-white p-8 rounded-2xl shadow-lg border border-[#E4E4E4] snap-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {siteData.homepage.customerReviews.reviews.map((review, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg border border-[#E4E4E4]">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
                   ))}
                 </div>
                 <p className="text-[#2E3C44] mb-6 leading-relaxed italic">
-                  "Excellent service. Charming driver Bilal who was very very helpful. Spotless car with water if needed. 
-                  Good idea. Texted ahead to tell us he was on his way, good idea for budgeting our time."
+                  "{review.text}"
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-full flex items-center justify-center">
-                    <span className="text-[#06A0A6] font-semibold text-lg">ST</span>
+                    <span className="text-[#06A0A6] font-semibold text-lg">
+                      {review.author.split(' ').map(n => n[0]).join('')}
+                    </span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#0F0D3E]">Stafford Thomas</h4>
-                    <p className="text-sm text-[#2E3C44]">Regular Customer</p>
+                    <h4 className="font-semibold text-[#0F0D3E]">{review.author}</h4>
+                    <p className="text-sm text-[#2E3C44]">{review.type}</p>
                   </div>
                 </div>
               </div>
-
-              {/* Review 2 */}
-              <div className="min-w-[400px] md:min-w-[500px] bg-white p-8 rounded-2xl shadow-lg border border-gray-100 snap-start">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 leading-relaxed italic">
-                  "Very pleased with the service provided. I was collected on time by a very kind and polite young man 
-                  and will certainly use the company again."
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-green-600 font-semibold text-lg">ET</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Esme Tingate</h4>
-                    <p className="text-sm text-gray-600">Business Client</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Review 3 */}
-              <div className="min-w-[400px] md:min-w-[500px] bg-white p-8 rounded-2xl shadow-lg border border-gray-100 snap-start">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 leading-relaxed italic">
-                  "Excellent experience. Driver very careful, I arrived at the airport on time with chilled water and great chat both ways."
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <span className="text-purple-600 font-semibold text-lg">DW</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Duncan Whatmore</h4>
-                    <p className="text-sm text-gray-600">Airport Transfer</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Review 4 */}
-              <div className="min-w-[400px] md:min-w-[500px] bg-white p-8 rounded-2xl shadow-lg border border-gray-100 snap-start">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 leading-relaxed italic">
-                  "Absolutely outstanding service! The executive car was immaculate and the driver was incredibly professional. 
-                  Made my business trip to the airport stress-free and comfortable. Highly recommend!"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                    <span className="text-orange-600 font-semibold text-lg">SM</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Sarah Mitchell</h4>
-                    <p className="text-sm text-gray-600">Business Executive</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Review 5 */}
-              <div className="min-w-[400px] md:min-w-[500px] bg-white p-8 rounded-2xl shadow-lg border border-gray-100 snap-start">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 leading-relaxed italic">
-                  "Perfect for our family trip! The 8-seater was spacious and clean. Driver was punctual and friendly. 
-                  Kids loved the comfortable ride. Will definitely use again for family outings."
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
-                    <span className="text-pink-600 font-semibold text-lg">DJ</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">David Johnson</h4>
-                    <p className="text-sm text-gray-600">Family Traveler</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Review 6 */}
-              <div className="min-w-[400px] md:min-w-[500px] bg-white p-8 rounded-2xl shadow-lg border border-gray-100 snap-start">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 leading-relaxed italic">
-                  "Corporate event transportation was flawless. The fleet of executive cars impressed our clients. 
-                  Professional drivers and immaculate vehicles. Aylestone Kings exceeded all expectations."
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
-                    <span className="text-indigo-600 font-semibold text-lg">RW</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Robert Wilson</h4>
-                    <p className="text-sm text-gray-600">Event Manager</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation Dots */}
-            <div className="flex justify-center mt-8 gap-2">
-              {[...Array(6)].map((_, i) => (
-                <button
-                  key={i}
-                  className="w-3 h-3 rounded-full bg-gray-300 hover:bg-[#06A0A6] transition-colors duration-200"
-                  aria-label={`Go to review ${i + 1}`}
-                />
-              ))}
-            </div>
-
-            {/* Scroll Indicator */}
-            <div className="text-center mt-6">
-              <p className="text-sm text-gray-500">
-                ← Scroll to see more reviews →
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
