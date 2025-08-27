@@ -15,7 +15,7 @@ export default function AppDownloadButtons({ className = '', size = 'md' }: AppD
 
   return (
     
-    <div className={`flex flex-row gap-3 lg:gap-4 ${className}`}>
+    <div className={`flex flex-row justify-center gap-3 lg:gap-4 ${className}`}>
       <a 
         href="https://apps.apple.com/gb/app/aylestone-kings/id1061012064" 
         target="_blank"

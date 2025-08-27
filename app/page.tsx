@@ -177,7 +177,7 @@ export default function Home() {
               <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
                 Passenger App
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2E3C44] mb-6 leading-tight">
                 Book a taxi in under 10 seconds
               </h2>
               <p className="text-xl text-[#2E3C44] mb-8 leading-relaxed">
@@ -232,7 +232,7 @@ export default function Home() {
             {/* Left Content */}
             <div>
               
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
                 Experience luxury transportation
               </h2>
               <p className="text-xl text-white mb-8 leading-relaxed">
@@ -312,7 +312,7 @@ export default function Home() {
               <div className="min-w-[400px] md:min-w-[500px] bg-white p-8 rounded-2xl shadow-lg border border-[#E4E4E4] snap-start">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-[#EF5B6A] text-[#EF5B6A]" />
+                    <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
                   ))}
                 </div>
                 <p className="text-[#2E3C44] mb-6 leading-relaxed italic">
@@ -334,7 +334,7 @@ export default function Home() {
               <div className="min-w-[400px] md:min-w-[500px] bg-white p-8 rounded-2xl shadow-lg border border-gray-100 snap-start">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed italic">
@@ -356,7 +356,7 @@ export default function Home() {
               <div className="min-w-[400px] md:min-w-[500px] bg-white p-8 rounded-2xl shadow-lg border border-gray-100 snap-start">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed italic">
@@ -377,7 +377,7 @@ export default function Home() {
               <div className="min-w-[400px] md:min-w-[500px] bg-white p-8 rounded-2xl shadow-lg border border-gray-100 snap-start">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed italic">
@@ -399,7 +399,7 @@ export default function Home() {
               <div className="min-w-[400px] md:min-w-[500px] bg-white p-8 rounded-2xl shadow-lg border border-gray-100 snap-start">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed italic">
@@ -421,7 +421,7 @@ export default function Home() {
               <div className="min-w-[400px] md:min-w-[500px] bg-white p-8 rounded-2xl shadow-lg border border-gray-100 snap-start">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed italic">
@@ -464,21 +464,21 @@ export default function Home() {
       {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl text-white font-bold mb-6">
             Ready to experience the difference?
           </h2>
-          <p className="text-xl text-[#E4E4E4] mb-8">
+          <p className="text-xl text-[#E4E4E4] mb-8 max-w-2xl mx-auto">
             Let's start with a conversation about how we can help you with your transportation needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="/contact" className="inline-block">
-              <button className="bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center gap-3">
+              <button className="bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl">
                 Get in touch
                 <ArrowRight className="h-5 w-5" />
               </button>
             </a>
             <a href="#app-download" className="inline-block">
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 shadow-lg hover:shadow-xl">
                 Download our app
               </button>
             </a>

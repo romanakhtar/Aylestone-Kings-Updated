@@ -207,7 +207,7 @@ export default function AboutPage() {
             <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
               Our Mission
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#2E3C44] mb-6">
               Moving forward together
             </h2>
             <div className="max-w-4xl mx-auto">
@@ -294,7 +294,7 @@ export default function AboutPage() {
             <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
               Get In Touch
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#2E3C44] mb-6">
               Ready to experience the difference?
             </h2>
             <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">

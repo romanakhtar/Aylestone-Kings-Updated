@@ -64,7 +64,7 @@ export default function CompanyPage() {
                 About Us
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                {siteData.companyPage.about.subtitle}
+               Aylestone Kings started a mission
               </h2>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
                 {siteData.companyPage.about.description}
