@@ -66,7 +66,7 @@ export default function RidePage() {
               <div className="bg-blue-50 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <MapPin className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-Time Tracking</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-time Tracking</h3>
               <p className="text-gray-600">
                 Track your driver in real time from the moment they are assigned to your ride until they arrive at your
                 pick-up location. Stay informed and never miss a ride.

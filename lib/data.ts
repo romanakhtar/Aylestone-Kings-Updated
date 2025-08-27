@@ -186,7 +186,7 @@ export const siteData = {
         },
         {
           icon: "MapPin",
-          title: "Real-Time Tracking",
+          title: "Real-time Tracking",
           description: "Track your driver in real-time with live GPS updates.",
         },
         {
@@ -216,7 +216,7 @@ export const siteData = {
       title: "App Features",
       features: [
         {
-          title: "Real-Time Tracking",
+          title: "Real-time Tracking",
           description: "Live driver tracking with GPS technology.",
         },
         {

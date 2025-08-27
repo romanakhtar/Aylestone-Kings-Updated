@@ -10,8 +10,8 @@ export default function OurTeamPage() {
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Team</h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Meet the dedicated professionals who make Aylestone Kings the trusted choice for transportation in the
-              Midlands.
+              Meet the dedicated professionals who make Aylestone Kings the trusted choice for transportation in
+              Aylestone and the surrounding area.
             </p>
           </div>
         </div>

@@ -40,7 +40,7 @@ export default function AboutPage() {
             
             {/* Enhanced Description */}
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10 font-light">
-              Moving the <span className="text-[#06A0A6] font-semibold">North East</span> forward with reliable,
+              Moving <span className="text-[#06A0A6] font-semibold">Aylestone</span> forward with reliable,
               professional taxi services since {siteData.company.founded}. We're committed to providing safe, efficient, and
               convenient transportation solutions for our community.
             </p>
@@ -72,7 +72,7 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5 text-[#06A0A6]" />
-                <span className="text-sm">30+ Years Experience</span>
+                <span className="text-sm">25+ Years Experience</span>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function AboutPage() {
               </h2>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
                 Aylestone Kings began with a simple Austin Morris marked by a distinctive blue line. 
-                What started as a small family business has grown into one of the most trusted transportation companies in North East England.
+                What started as a small family business has grown into one of the most trusted transportation companies in Aylestone and the surrounding area.
               </p>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
                 Over the decades, we've maintained our commitment to exceptional service while embracing modern technology and expanding our fleet. 

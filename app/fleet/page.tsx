@@ -18,9 +18,9 @@ export default function FleetPage() {
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Premium comfort, every ride, every time
               </h1>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
                 Our fleet sets a new standard with top-tier vehicles that blend luxury with cutting-edge features. 
-                From spacious MPVs to executive sedans, every vehicle is meticulously maintained and equipped with 
+                From spacious MPVs to executive saloons, every vehicle is meticulously maintained and equipped with 
                 the latest technology for your comfort and safety.
               </p>
 

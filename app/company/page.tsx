@@ -32,7 +32,7 @@ export default function CompanyPage() {
             {/* Enhanced Description */}
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10 font-light scale-in">
               We are committed to making your journey comfortable, convenient, and stress-free with 
-              <span className="text-[#06A0A6] font-semibold"> 30+ years of excellence</span> in 
+              <span className="text-[#06A0A6] font-semibold"> 25+ years of excellence</span> in 
               professional transportation services.
             </p>
             
@@ -78,7 +78,7 @@ export default function CompanyPage() {
                 </div>
                 <div className="flex items-center gap-3 transition-smooth hover:translate-x-2">
                   <Clock className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
-                  <span className="text-[#2E3C44] font-medium">30+ Years Experience</span>
+                  <span className="text-[#2E3C44] font-medium">25+ Years Experience</span>
                 </div>
                 <div className="flex items-center gap-3 transition-smooth hover:translate-x-2">
                   <Shield className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
@@ -153,7 +153,7 @@ export default function CompanyPage() {
               Aligned in Our Values
             </h2>
             <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto leading-relaxed">
-              We're deeply ingrained in our community, supporting local charities and organizations to make a positive impact.
+              We're deeply ingrained in our community, supporting local charities and organisations to make a positive impact.
             </p>
           </div>
           
@@ -162,7 +162,7 @@ export default function CompanyPage() {
               <h3 className="text-3xl font-bold text-[#0F0D3E] mb-6">Inclusivity and Accessibility</h3>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
                 Aylestone Kings is more than just a transportation service; we're deeply ingrained in our community. 
-                We proudly support the Newcastle United Foundation and collaborate with local charities and organisations 
+                We proudly support local charities and collaborate with local charities and organisations 
                 to make a positive impact.
               </p>
               <p className="text-lg text-[#2E3C44] mb-8 leading-relaxed">
@@ -172,10 +172,6 @@ export default function CompanyPage() {
               
               {/* Community Initiatives */}
               <div className="space-y-4">
-                <div className="flex items-center gap-3 transition-smooth hover:translate-x-2">
-                  <Check className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
-                  <span className="text-[#2E3344]">Believing in the community</span>
-                </div>
                 <div className="flex items-center gap-3 transition-smooth hover:translate-x-2">
                   <Check className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
                   <span className="text-[#2E3C44]">Local Charity Partnerships</span>

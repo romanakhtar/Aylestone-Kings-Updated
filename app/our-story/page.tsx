@@ -12,7 +12,7 @@ export default function OurStoryPage() {
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Story</h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              The journey of Aylestone Kings - from humble beginnings to becoming the Midlands' trusted transportation
+              The journey of Aylestone Kings - from humble beginnings to becoming Aylestone's trusted transportation
               service.
             </p>
           </div>
@@ -59,7 +59,7 @@ export default function OurStoryPage() {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">The Beginning</h3>
                 <p className="text-gray-700">
-                  Aylestone Kings was founded with a vision to provide reliable transportation services in the North East region.
+                  Aylestone Kings was founded with a vision to provide reliable transportation services in the Aylestone area.
                 </p>
               </div>
               </div>
@@ -70,7 +70,7 @@ export default function OurStoryPage() {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Expansion</h3>
                 <p className="text-gray-700">
-                  After 5 years of successful operation, Aylestone Kings expanded its fleet and services to cover more areas in the North East region.
+                  After 5 years of successful operation, Aylestone Kings expanded its fleet and services to cover more areas in the Aylestone region.
                 </p>
               </div>
               </div>

@@ -127,8 +127,8 @@ export default function PricingPage() {
                   <thead>
                     <tr className="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white">
                       <th className="px-5 py-3 text-left font-semibold text-base">Destination</th>
-                      <th className="px-5 py-3 text-right font-semibold text-base">1-4 seater</th>
-                      <th className="px-5 py-3 text-right font-semibold text-base">6/8 seater</th>
+                      <th className="px-5 py-3 text-left font-semibold text-base">1-4 seater</th>
+                      <th className="px-5 py-3 text-left font-semibold text-base">6/8 seater</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -138,8 +138,8 @@ export default function PricingPage() {
                           East Midlands
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £40</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £60</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £40</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £60</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
@@ -147,8 +147,8 @@ export default function PricingPage() {
                           Birmingham
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £55</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £80</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £55</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £80</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
@@ -156,8 +156,8 @@ export default function PricingPage() {
                           Manchester
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £150</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £200</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £150</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £200</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
@@ -165,8 +165,8 @@ export default function PricingPage() {
                           Luton
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £120</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £160</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £120</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £160</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
@@ -174,8 +174,8 @@ export default function PricingPage() {
                           Heathrow
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £150</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £200</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £150</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £200</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
@@ -183,8 +183,8 @@ export default function PricingPage() {
                           Gatwick
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £200</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £275</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £200</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £275</td>
                     </tr>
                     <tr className="hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
@@ -192,8 +192,8 @@ export default function PricingPage() {
                           Stansted
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £150</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-right">from £200</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £150</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">from £200</td>
                     </tr>
                   </tbody>
                 </table>
