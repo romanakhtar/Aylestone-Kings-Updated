@@ -17,17 +17,17 @@ export const siteData = {
 
   // Contact Information
   contact: {
-    phone: "0191 286 8888",
-    email: "info@aylestonekings.com",
+    phone: "0116 2338888",
+    email: "info@aylestone-taxis.co.uk",
     address: {
-      street: "Aylestone Kings, 123 Main Street",
-      city: "Newcastle upon Tyne",
-      postcode: "NE1 1AA",
+      street: "753A, Aylestone",
+      city: "Leicester",
+      postcode: "LE2 8TG",
       country: "United Kingdom"
     },
     booking: {
-      online: "https://book.aylestonekings.com",
-      phone: "+44123456789"
+      online: "https://aylestonekings.webbooker.icabbi.com/",
+      phone: "0116 2338888"
     }
   },
 

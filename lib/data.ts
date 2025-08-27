@@ -6,8 +6,8 @@ export const siteData = {
     region: "Aylestone and surrounding areas",
     phone: "0116 2338888",
     whatsapp: "+447535855786",
-    email: "info@aylestonekings.com",
-    address: "Aylestone, Leicester, UK",
+    email: "info@aylestone-taxis.co.uk",
+    address: "753A, Aylestone, Leicester, LE2 8TG, UK",
     description:
       "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
     founded: "1995",
@@ -359,9 +359,9 @@ export const contactInfo = {
   whatsapp: siteData.company.whatsapp,
   email: siteData.company.email,
   address: {
-    street: siteData.company.address,
+    street: "753A, Aylestone",
     city: "Leicester",
-    postcode: "UK",
+    postcode: "LE2 8TG",
     country: "United Kingdom"
   },
   booking: {
