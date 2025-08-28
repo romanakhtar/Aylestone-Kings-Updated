@@ -153,12 +153,12 @@ export const siteData = {
       title: "What Our Customers Say",
       reviews: [
         {
-          text: "Fabulous service. We pre-booked outward journey not return. Turned up early. Rescued us for return journey even though extremely busy and not pre-booked. Adam our driver was a pleasure to spend the time with even told a bit of local history. Went out of his way to set us down in the best places. Would most definitely recommend this service and will save the number in case we are this way again. Thanks guys.!",
+          text: "Fabulous service. We pre-booked outward journey not return. Turned up early. Would most definitely recommend this service and will save the number in case we are this way again. Thanks guys.!",
           author: "Jackie and Pette Scott",
           type: "Airport Transfer"
         },
         {
-          text: "Excellent and professional service given when we used 8 seater for a trip to Derby.",
+          text: "Excellent and professional service given when we used 8 seater for a trip to Derby. Would definitely use again.",
           author: "Krystyna Biddles",
           type: "Regular Customer"
         },
@@ -173,17 +173,17 @@ export const siteData = {
           type: "Regular Customer"
         },
         {
-          text: "Used their wedding car service last month. Beautiful white Mercedes, immaculate driver in a suit, and they even decorated the car with ribbons. Made our special day even more memorable. Thank you!",
+          text: "Used their wedding car service last month. Beautiful white Mercedes, immaculate driver in a suit, and they even decorated the car with ribbons. Thank you!",
           author: "Sophie & Tom Davies",
           type: "Wedding Service"
         },
         {
-          text: "Booked for my mum's airport transfer to Gatwick. She was nervous about travelling alone, but the driver was so kind and reassuring. He even called me when they arrived safely. Outstanding service.",
+          text: "Booked for my mum's airport transfer to Gatwick. She was nervous about travelling alone, but the driver was so kind and reassuring. Outstanding service.",
           author: "Rachel Green",
           type: "Airport Transfer"
         },
         {
-          text: "Had an emergency hospital appointment and needed transport quickly. Aylestone Kings had a car with me within 15 minutes. Driver was so caring and even waited to make sure I got in safely. Lifesavers!",
+          text: "Had an emergency hospital appointment and needed transport quickly. Aylestone Kings had a car with me within 15 minutes. Driver was so caring and made sure I got in safely. ",
           author: "Robert Mitchell",
           type: "Emergency Transport"
         },
