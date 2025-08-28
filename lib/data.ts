@@ -153,34 +153,44 @@ export const siteData = {
       title: "What Our Customers Say",
       reviews: [
         {
-          text: "Excellent service. The driver Bilal was extremely helpful, the car was spotless, and bottled water was provided. He even texted ahead to let us know he was on his way — a thoughtful touch.",
-          author: "Stafford Thomas",
-          type: "Regular Customer"
-        },
-        {
-          text: "Very pleased with the service. I was collected on time by a polite and professional driver. I'll definitely use Aylestone Kings again.",
-          author: "Esme Tingate",
-          type: "Business Client"
-        },
-        {
-          text: "An outstanding experience. My driver was careful and professional. I reached the airport on time with chilled water and great conversation throughout.",
-          author: "Duncan Whatmore",
+          text: "Fabulous service. We pre-booked outward journey not return. Turned up early. Rescued us for return journey even though extremely busy and not pre-booked. Adam our driver was a pleasure to spend the time with even told a bit of local history. Went out of his way to set us down in the best places. Would most definitely recommend this service and will save the number in case we are this way again. Thanks guys.!",
+          author: "Jackie and Pette Scott",
           type: "Airport Transfer"
         },
         {
-          text: "Absolutely fantastic service! The driver was punctual, professional, and made our journey to the airport stress-free. Highly recommend Aylestone Kings for any travel needs.",
-          author: "Sarah Mitchell",
+          text: "Excellent and professional service given when we used 8 seater for a trip to Derby.",
+          author: "Krystyna Biddles",
+          type: "Regular Customer"
+        },
+        {
+          text: "Called for price to airport qouted fab price on the call. Very helpful and reasonably priced. Best services provided.",
+          author: "Javeria Imaan",
           type: "Airport Transfer"
         },
         {
-          text: "Used their service for a business trip and was impressed by the reliability and comfort. The driver knew the best routes and got me to my meeting on time. Will definitely use again.",
-          author: "Michael Chen",
-          type: "Business Client"
+          text: "Booked taxi. Arrive within 3 mins. No messing around. Driver was cheerful despite the early start and got me there perfectly on time.",
+          author: "Rosie Flora",
+          type: "Regular Customer"
         },
         {
-          text: "Outstanding customer service from start to finish. The booking process was simple, the driver was friendly, and the vehicle was immaculate. Aylestone Kings sets the standard for taxi services.",
-          author: "Emma Rodriguez",
-          type: "Regular Customer"
+          text: "Used their wedding car service last month. Beautiful white Mercedes, immaculate driver in a suit, and they even decorated the car with ribbons. Made our special day even more memorable. Thank you!",
+          author: "Sophie & Tom Davies",
+          type: "Wedding Service"
+        },
+        {
+          text: "Booked for my mum's airport transfer to Gatwick. She was nervous about travelling alone, but the driver was so kind and reassuring. He even called me when they arrived safely. Outstanding service.",
+          author: "Rachel Green",
+          type: "Airport Transfer"
+        },
+        {
+          text: "Had an emergency hospital appointment and needed transport quickly. Aylestone Kings had a car with me within 15 minutes. Driver was so caring and even waited to make sure I got in safely. Lifesavers!",
+          author: "Robert Mitchell",
+          type: "Emergency Transport"
+        },
+        {
+          text: "Regular customer for school runs. Drivers are always friendly with the kids, cars are always clean, and they're never late. Takes the stress out of the school run completely.",
+          author: "Amanda Foster",
+          type: "School Transport"
         }
       ]
     },
