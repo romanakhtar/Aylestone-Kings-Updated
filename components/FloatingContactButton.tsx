@@ -53,7 +53,7 @@ export default function FloatingContactButton() {
             <div className="flex justify-end mb-4">
               <button 
                 onClick={() => setShowMobileContact(false)}
-                className="text-[#0F0D3E] hover:text-[#06A0A6] bg-white/80 hover:bg-white p-2 rounded-full transition-smooth backdrop-blur-sm hover:scale-110 shadow-professional focus-ring z-10"
+                className="text-white bg-[#06A0A6] hover:bg-[#059095] p-2 rounded-full transition-smooth hover:scale-110 shadow-professional focus-ring z-10"
               >
                 <X className="h-4 w-4" />
               </button>
