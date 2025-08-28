@@ -198,8 +198,8 @@ export default function Home() {
               <Image
                 src="/app-screen-tracking.jpg"
                 alt="App Screenshot"
-                width={400}
-                height={800}
+                width={500}
+                height={1000}
                 className="relative z-10 rounded-2xl shadow-2xl"
               />
             </div>
