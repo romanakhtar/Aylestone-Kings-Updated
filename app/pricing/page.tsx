@@ -13,7 +13,7 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Transparent & Affordable Pricing
+              Transparent & Affordable Airport Pricing
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Experience premium taxi services without the premium price tag. Our competitive rates ensure quality transportation 
@@ -56,7 +56,7 @@ export default function PricingPage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Why Choose Our Pricing?</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Why Choose Our Airport Pricing?</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
@@ -109,10 +109,10 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Pricing & Vehicle (airport) Information 
+              Airport Pricing & Vehicle Information 
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Compare our pricing and choose the perfect vehicle for your airport journey
+              Compare our airport pricing and choose the perfect vehicle for your airport journey
             </p>
           </div>
 
@@ -120,7 +120,7 @@ export default function PricingPage() {
             {/* Left Side - Pricing Table */}
             <div className="lg:col-span-2">
               <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center lg:text-left">
-                Pricing Comparison Table (airport)
+                Airport Pricing Comparison Table
               </h2>
                  <div className="overflow-x-auto">
                  <table className="w-full bg-white rounded-2xl shadow-xl border border-cyan-200 overflow-hidden">
@@ -293,7 +293,7 @@ export default function PricingPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Get answers to common questions about our pricing and services
+              Get answers to common questions about our airport pricing and services
             </p>
           </div>
 
@@ -366,10 +366,10 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Making Quality Travel Affordable
+              Making Quality Airport Travel Affordable
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We believe everyone deserves reliable, comfortable transportation without breaking the bank
+              We believe everyone deserves reliable, comfortable airport transportation without breaking the bank
             </p>
           </div>
 
@@ -417,7 +417,7 @@ export default function PricingPage() {
             Ready to Experience Affordable Luxury?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Download our app today and enjoy transparent pricing, instant quotes, and premium service at competitive rates.
+            Download our app today and enjoy transparent airport pricing, instant quotes, and premium service at competitive rates.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">

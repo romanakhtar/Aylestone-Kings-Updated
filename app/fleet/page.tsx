@@ -510,7 +510,7 @@ export default function FleetPage() {
               </a>
               <a href="/pricing" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 text-sm sm:text-base">
-                  View Pricing
+                  View Airport Pricing
                 </button>
               </a>
             </div>

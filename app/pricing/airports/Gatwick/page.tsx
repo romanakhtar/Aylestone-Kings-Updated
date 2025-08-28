@@ -45,7 +45,7 @@ export default function GatwickPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Transparent Pricing
+                Transparent Airport Pricing
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Fixed rates from Leicester and surrounding areas to Gatwick Airport. 
@@ -277,7 +277,7 @@ export default function GatwickPage() {
               </a>
               <a href="/pricing" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 text-sm sm:text-base">
-                  View All Pricing
+                  View All Airport Pricing
                 </button>
               </a>
             </div>

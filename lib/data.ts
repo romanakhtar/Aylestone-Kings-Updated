@@ -29,7 +29,7 @@ export const siteData = {
   navigation: {
     main: [
       { name: "Home", href: "/" },   
-      { name: "Pricing", href: "/pricing" },
+      { name: "Airport Pricing", href: "/pricing" },
       { name: "Fleet", href: "/fleet" },
       { name: "Contact", href: "/contact" },
       { name: "More", href: "#", hasDropdown: true }
@@ -166,6 +166,21 @@ export const siteData = {
           text: "An outstanding experience. My driver was careful and professional. I reached the airport on time with chilled water and great conversation throughout.",
           author: "Duncan Whatmore",
           type: "Airport Transfer"
+        },
+        {
+          text: "Absolutely fantastic service! The driver was punctual, professional, and made our journey to the airport stress-free. Highly recommend Aylestone Kings for any travel needs.",
+          author: "Sarah Mitchell",
+          type: "Airport Transfer"
+        },
+        {
+          text: "Used their service for a business trip and was impressed by the reliability and comfort. The driver knew the best routes and got me to my meeting on time. Will definitely use again.",
+          author: "Michael Chen",
+          type: "Business Client"
+        },
+        {
+          text: "Outstanding customer service from start to finish. The booking process was simple, the driver was friendly, and the vehicle was immaculate. Aylestone Kings sets the standard for taxi services.",
+          author: "Emma Rodriguez",
+          type: "Regular Customer"
         }
       ]
     },
@@ -332,7 +347,7 @@ export const siteData = {
     quickLinks: [
       { name: "Ride", href: "/ride" },   
       { name: "Fleet", href: "/fleet" },
-      { name: "Contact", href: "/contact" },
+      { name: "Airport Pricing", href: "/pricing" },
       { name: "About Us", href: "/about" },
       { name: "Our Services", href: "/ride" },
     ],

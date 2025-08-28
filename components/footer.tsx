@@ -83,9 +83,11 @@ export default function Footer() {
             </div>
             
             <div className="mt-6">
-              <Button className="w-full bg-[#0F0D3E] hover:bg-[#06A0A6] text-white rounded-lg font-semibold transition-smooth shadow-professional hover:shadow-professional-lg hover:scale-105 focus-ring">
-                Contact Us
-              </Button>
+              <Link href="/contact">
+                <Button className="w-full bg-[#0F0D3E] hover:bg-[#06A0A6] text-white rounded-lg font-semibold transition-smooth shadow-professional hover:shadow-professional-lg hover:scale-105 focus-ring">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
