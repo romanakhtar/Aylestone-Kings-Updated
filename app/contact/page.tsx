@@ -10,9 +10,7 @@ export default function ContactPage() {
 
       {/* Hero Section */}
       <section className="relative py-20 ">
-        {/* Background Image */}
-        
-        
+        {/* Background Image */}        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">Contact Us</h1>
@@ -22,11 +20,6 @@ export default function ContactPage() {
           </div>
         </div>
               </section>
-
-      
-
-
-
       {/* Contact Information */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -103,10 +96,9 @@ export default function ContactPage() {
                     placeholder="Tell us how we can help you..."
                   ></textarea>
                 </div>
-                <Button className="w-full bg-[#06A0A6] hover:bg-[#0F0D3E] text-white py-3">Send Message</Button>
+                <Button  className="w-full bg-[#06A0A6] hover:bg-[#0F0D3E] text-white py-3">Send Message</Button>
               </form>
             </div>
-
             {/* Contact Details */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>

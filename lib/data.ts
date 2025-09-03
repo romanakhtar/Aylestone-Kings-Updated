@@ -91,7 +91,7 @@ export const siteData = {
     },
 
     aboutUs: {
-      title: "Over 25 Years' Experience",
+      title: "Over 30 Years' Experience",
       subtitle: "Reliable Transport Since 1995",
       description: "Established in 1995, Aylestone Kings set out with one mission: to deliver a professional, affordable and dependable taxi service for the people of Aylestone and the surrounding area. All our drivers are fully DBS-checked for your peace of mind, ensuring a safe and secure service every time. Whether it's airport transfers, courier deliveries or local journeys, we've got you covered."
     },
@@ -130,7 +130,7 @@ export const siteData = {
 
     quickBooking: {
       title: "Book a Taxi in Under 10 Seconds",
-      subtitle: "As Aylestone's leading taxi firm, we guarantee priority service for every booking.",
+      subtitle: "As leicester and leicestershire's leading taxi firm, we guarantee priority service for every booking.",
       description: "With our app you can:",
       features: [
         "Book in seconds",
@@ -337,12 +337,12 @@ export const siteData = {
     about: {
       title: "About Us",
       subtitle: "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
-      description: "With over 30 years in the industry, Aylestone Kings has evolved into an award-winning business, recognized with accolades such as the National Lifetime Achievement Award for commitment to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Kings has consistently been at the forefront of industry innovation, working closely with local authorities and representing every local authority in the Midlands, seamlessly blending local heritage and values with global tech innovation."
+      description: "With over 30 years in the industry, Aylestone Kings has grown into an award-winning business, recognised with honours such as the National Lifetime Achievement Award for its dedication to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Kings has consistently led the way in industry innovation, working closely with local authorities and representing every local authority across the Midlands. The company seamlessly blends local heritage and values with global technological innovation.."
     },
     trusted: {
       title: "Our Reputation",
-      subtitle: "Each year, we serve over 1000 passengers throughout the region, boasting an exceptional 99.7% satisfaction rating.",
-      description: "Whether your journey is safe, comfortable, and efficient. Whether catering to daily commutes or working with public sector institutions and multinational corporations, we can deliver to your needs."
+      subtitle: "Each year, we serve over 1,000 passengers across the region, proudly maintaining an exceptional 99.7% satisfaction rating.",
+      description: "Whether you're looking for a safe, comfortable, and efficient journey — from daily commutes to working with public sector institutions and multinational corporations — we are here to meet your needs."
     }
   },
 

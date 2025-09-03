@@ -10,7 +10,7 @@ export default function CompanyPage() {
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white overflow-hidden">
         {/* Background Image with Overlay */}
-       
+      
         
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-32 h-32 bg-[#06A0A6]/20 rounded-full blur-3xl animate-pulse"></div>
@@ -31,9 +31,9 @@ export default function CompanyPage() {
             
             {/* Enhanced Description */}
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10 font-light scale-in">
-              We are committed to making your journey comfortable, convenient, and stress-free with 
-              <span className="text-[#06A0A6] font-semibold"> 25+ years of excellence</span> in 
-              professional transportation services.
+            We are committed to making your journey comfortable, convenient, and stress-free,
+              <span className="text-[#06A0A6] font-semibold"> backed by over 30 years of excellence </span>
+               in professional transport services. 
             </p>
             
             {/* Trust Indicators */}
@@ -48,7 +48,7 @@ export default function CompanyPage() {
               </div>
               <div className="flex items-center gap-2 transition-smooth hover:text-white">
                 <Award className="h-5 w-5 text-[#06A0A6]" />
-                <span className="text-sm">Award Winning</span>
+                <span className="text-sm">Trusted</span>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function CompanyPage() {
                 </div>
                 <div className="flex items-center gap-3 transition-smooth hover:translate-x-2">
                   <Shield className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
-                  <span className="text-[#2E3C44] font-medium">Providing safe and reliable services</span>
+                  <span className="text-[#2E3C44] font-medium">Safe and reliable services</span>
                 </div>
                 <div className="flex items-center gap-3 transition-smooth hover:translate-x-2">
                   <Users className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
