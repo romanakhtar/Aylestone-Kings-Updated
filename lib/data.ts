@@ -11,7 +11,6 @@ export const siteData = {
     description:
       "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
     founded: "1995",
-    achievements: "National Lifetime Achievement Award for commitment to the Private Hire and Taxi industry",
     passengersServed: "10,000",
     satisfactionRating: "99.7%",
     yearsExperience: "25+",
@@ -337,7 +336,7 @@ export const siteData = {
     about: {
       title: "About Us",
       subtitle: "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
-      description: "With over 30 years in the industry, Aylestone Kings has grown into an award-winning business, recognised with honours such as the National Lifetime Achievement Award for its dedication to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Kings has consistently led the way in industry innovation, working closely with local authorities and representing every local authority across the Midlands. The company seamlessly blends local heritage and values with global technological innovation.."
+      description: "With over 30 years in the industry, Aylestone Kings has grown into a trusted business for its dedication to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Kings has consistently led the way in industry innovation, working closely with local authorities and representing every local authority across the Midlands. The company seamlessly blends local heritage and values with global technological innovation.."
     },
     trusted: {
       title: "Our Reputation",

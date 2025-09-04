@@ -59,7 +59,6 @@ siteData.companyPage.about.subtitle      // "Founded in 1995, Aylestone Kings st
 - **Homepage**: Hero, stats, about, services, app benefits
 - **Fleet**: Vehicle descriptions, features, images
 - **Company**: About, history, trust metrics
-- **Drive**: Driver benefits and information
 
 ### Footer
 - Quick links

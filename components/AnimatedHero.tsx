@@ -37,10 +37,7 @@ export default function AnimatedHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 lg:pt-32 pb-16 min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start w-full">
           {/* Left Content - Main Content with Enhanced Visuals */}
-          <div className="max-w-xl order-1">
-            
-            {/* Aylestone Area Badge */}
-          
+          <div className="max-w-xl order-1 scale-in">
             
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
@@ -69,7 +66,7 @@ export default function AnimatedHero() {
             {/* CTA Button */}
             <button 
               onClick={handleBookNow}
-              className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl mb-8"
+              className=" animate-pulse bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl mb-8"
             >
               {siteData.homepage.hero.ctaText}
               <ArrowRight className="h-5 w-5" />
@@ -98,7 +95,7 @@ export default function AnimatedHero() {
           </div>
           
           {/* Right Content - Contact Mode Cards */}
-          <div className="hidden lg:flex max-w-md order-2 justify-center lg:justify-end mb-8 lg:mb-0">
+          <div className="hidden lg:flex max-w-md order-2 justify-center lg:justify-end mb-8 lg:mb-0 ">
             <ContactModeCards />
           </div>
         </div>
