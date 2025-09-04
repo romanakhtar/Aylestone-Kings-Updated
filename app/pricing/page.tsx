@@ -91,7 +91,7 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">Loyalty rewards programme</span>
+                    <span className="text-gray-700">Providing the best</span>
                   </div>
                 </div>
               </div>
@@ -111,6 +111,9 @@ export default function PricingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Airport Pricing & Vehicle Information 
             </h2>
+            <h3 className="text-xl text-gray-500 mb-4 text-center ">
+                From Aylestone to Leicester and Leicestershire
+              </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Compare our airport pricing and choose the perfect vehicle for your airport journey
             </p>
@@ -122,6 +125,7 @@ export default function PricingPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center lg:text-left">
                 Airport Pricing Comparison Table
               </h2>
+              
                  <div className="overflow-x-auto">
                  <table className="w-full bg-white rounded-2xl shadow-xl border border-cyan-200 overflow-hidden">
                   <thead>
@@ -203,9 +207,7 @@ export default function PricingPage() {
                   <p className="text-sm text-gray-600 italic">
                     Prices shown are starting rates. Additional pickup locations will affect final price. Car park charges are not included.
                   </p>
-                  <p className="text-sm text-gray-600 italic mt-2">
-                    Night surcharges (10pm-6am) and holiday surcharges may apply. Contact us for exact pricing.
-                  </p>
+                 
                 </div>
                 
                 {/* Book Online CTA */}
@@ -216,7 +218,7 @@ export default function PricingPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-cyan-800 transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-2xl"
                   >                   
-                    Book Online
+                    Book Now
                   </a>
                 </div>
               </div>
