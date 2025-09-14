@@ -204,7 +204,6 @@ function Navigation() {
     </header>
   )
 }
-
 // Export both named and default to satisfy all import patterns
 export { Navigation }
 export default Navigation

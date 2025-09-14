@@ -103,7 +103,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Trusted by Millions */}
+      {/* Trusted by Thousands */}
       <section className="section-padding gradient-secondary">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -218,7 +218,7 @@ export default function CompanyPage() {
               {/* CTA Button */}
               <a href="/contact" className="inline-block">
                 <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-smooth shadow-professional-lg hover:shadow-professional-xl hover:scale-105 focus-ring">
-                  Get in Touch
+                  Contact Us
                   <ArrowRight className="h-5 w-5 transition-smooth group-hover:translate-x-1" />
                 </button>
               </a>
@@ -226,7 +226,6 @@ export default function CompanyPage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   )
