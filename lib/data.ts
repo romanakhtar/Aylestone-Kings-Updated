@@ -27,7 +27,8 @@ export const siteData = {
   // Navigation Menu
   navigation: {
     main: [
-      { name: "Home", href: "/" },   
+      { name: "Home", href: "/" }, 
+      { name: "About Us", href: "/about" },  
       { name: "Airport Pricing", href: "/pricing" },
       { name: "Fleet", href: "/fleet" },
       { name: "Contact", href: "/contact" },

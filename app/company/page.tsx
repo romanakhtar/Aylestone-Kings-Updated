@@ -78,7 +78,7 @@ export default function CompanyPage() {
                 </div>
                 <div className="flex items-center gap-3 transition-smooth hover:translate-x-2">
                   <Clock className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />
-                  <span className="text-[#2E3C44] font-medium">25+ Years Experience</span>
+                  <span className="text-[#2E3C44] font-medium">30+ Years Experience</span>
                 </div>
                 <div className="flex items-center gap-3 transition-smooth hover:translate-x-2">
                   <Shield className="h-5 w-5 text-[#06A0A6] flex-shrink-0" />

@@ -48,14 +48,14 @@ export default function AboutPage() {
             {/* Enhanced CTA Section */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/our-story" className="inline-block">
-                <button className="bg-white hover:bg-[#E4E4E4] text-[#06A0A6] px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center gap-3 shadow-xl hover:shadow-2xl hover:scale-105">
+                <button className="border-2 border-white bg-white hover:bg-[#E4E4E4] text-[#06A0A6] px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center gap-3 shadow-xl hover:shadow-2xl hover:scale-105">
                   Our Story
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
-              <a href="/our-team" className="inline-block">
+              <a href="/travel" className="inline-block">
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white hover:text-[#06A0A6] backdrop-blur-sm">
-                  Meet Our Team
+                  Travel With Us
                 </button>
               </a>
             </div>
@@ -72,7 +72,7 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5 text-[#06A0A6]" />
-                <span className="text-sm">25+ Years Experience</span>
+                <span className="text-sm">30+ Years Experience</span>
               </div>
             </div>
           </div>
