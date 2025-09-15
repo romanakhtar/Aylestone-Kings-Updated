@@ -36,7 +36,6 @@ export const siteData = {
     ],
     dropdown: [
       { name: "Company", href: "/company" },
-      { name: "Ride", href: "/ride" },
       { name: "Fleet", href: "/fleet" },
     ],
   },
@@ -356,18 +355,13 @@ export const siteData = {
   // Footer Content
   footer: {
     quickLinks: [
-
-
       { name: "Home", href: "/" }, 
       { name: "About Us", href: "/about" },  
       { name: "Airport Pricing", href: "/pricing" },
       { name: "Travel", href: "/travel" },
       { name: "Contact", href: "/contact" },
       { name: "Company", href: "/company" },
-      { name: "Ride", href: "/ride" },  
       { name: "Fleet", href: "/fleet" },
-
-      
     ],
 
     services: [
@@ -376,7 +370,6 @@ export const siteData = {
       { name: "Students Transport", href: "/travel" },
       { name: "Match-Day Travel", href: "/travel" },
       { name: "Train Station", href: "/travel" },
-
     ],
 
     legal: [

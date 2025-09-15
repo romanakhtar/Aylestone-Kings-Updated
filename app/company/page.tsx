@@ -1,7 +1,7 @@
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { siteData } from "@/lib/data"
-import { Shield, Users, Award, Clock, MapPin, Check, ArrowRight } from "lucide-react"
+import { Shield, Users, Award, Clock,Check, ArrowRight } from "lucide-react"
 
 export default function CompanyPage() {
   return (
@@ -9,28 +9,27 @@ export default function CompanyPage() {
 
     {/* Hero Section */}
     <section className="relative section-padding bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white overflow-hidden">
-        {/* Background Image with Overlay */}
       
         
         {/* Decorative Elements */}
-        <div className="absolute top-0 left-0 w-32 h-32 bg-[#06A0A6]/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-40 h-40 bg-[#EF5B6A]/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-32 h-32 bg-[#06A0A6]/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-40 h-40 bg-[#EF5B6A]/20 rounded-full blur-3xl"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto container-padding">
           <div className="text-center fade-in">
             {/* Enhanced Badge */}
             <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium mb-8 shadow-professional-lg">
-              <Shield className="h-4 w-4 text-[#06A0A6] mr-3 animate-pulse" />
+              <Shield className="h-4 w-4 text-[#06A0A6] mr-3" />
               Our Company
             </div>
             
             {/* Enhanced Title */}
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight slide-up">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
               At <span className="text-[#06A0A6] drop-shadow-lg">Aylestone Kings</span>
             </h1>
             
             {/* Enhanced Description */}
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10 font-light scale-in">
+            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10 font-light">
             We are committed to making your journey comfortable, convenient, and stress-free,
               <span className="text-[#06A0A6] font-semibold"> backed by over 30 years of excellence </span>
                in professional transport services. 

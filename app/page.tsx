@@ -207,7 +207,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <a href="/company" className="inline-block">
+              <a href="/contact" className="inline-block">
                 <button className="bg-[#2E3C44] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3">
                   Business Solutions
                   <ArrowRight className="h-5 w-5" />
@@ -223,8 +223,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left - App Screenshots */}
-            <div className="relative ml-8">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/20 to-[#2E3C44]/20 rounded-2xl blur-xl"></div>
+            <div className="relative">
+              <div className="absolute inset-0 rounded-2xl"></div>
               <Image
                 src="/app-screen-tracking.jpg"
                 alt="App Screenshot"
@@ -288,7 +288,7 @@ export default function Home() {
                 {siteData.homepage.executiveFleet.subtitle}
               </p>
               <a href="/fleet" className="inline-block">
-                <button className="bg-[#06A0A6] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 flex items-center gap-3 hover:bg-[#0F0D3E] shadow-lg">
+                <button className="bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold transition-all duration-200 flex items-center gap-3 hover:bg-[#06A0A6] hover:text-white shadow-lg">
                   View Executive Fleet
                   <ArrowRight className="h-5 w-5" />
                 </button>

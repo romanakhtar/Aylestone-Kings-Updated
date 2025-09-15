@@ -9,7 +9,6 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-[#0F0D3E] via-[#2E3C44] to-[#06A0A6]/20 overflow-hidden">
-        {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/taxi-bridge-background.jpg"
@@ -47,9 +46,9 @@ export default function AboutPage() {
             
             {/* Enhanced CTA Section */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="/our-story" className="inline-block">
+              <a href="/pricing" className="inline-block">
                 <button className="border-2 border-white bg-white hover:bg-[#E4E4E4] text-[#06A0A6] px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center gap-3 shadow-xl hover:shadow-2xl hover:scale-105">
-                  Our Story
+                  View Airport Pricing
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
@@ -91,8 +90,7 @@ export default function AboutPage() {
                 A legacy of excellence since {siteData.company.founded}
               </h2>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
-                Aylestone Kings began with a simple Austin Morris marked by a distinctive blue line. 
-                What started as a small family business has grown into one of the most trusted transportation companies in Aylestone and the surrounding area.
+                Established in 1995, we are a trusted taxi company based in Leicester, proudly serving the local community for nearly three decades. Whether you need a ride to the train station, airport, university, or a day out shopping, our reliable and professional drivers are here to help. We offer safe, comfortable, and affordable transport for individuals, families, students, and businesses — always putting your journey first. With a strong reputation for punctuality and friendly service, we’re your go-to taxi company in Leicester.
               </p>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
                 Over the decades, we've maintained our commitment to exceptional service while embracing modern technology and expanding our fleet. 
@@ -212,13 +210,11 @@ export default function AboutPage() {
             </h2>
             <div className="max-w-4xl mx-auto">
               <p className="text-xl text-[#2E3C44] leading-relaxed mb-8 italic">
-                "To provide the highest quality transportation services while maintaining the highest standards of safety, 
-                reliability, and customer satisfaction. We are committed to being the trusted choice for transportation in North East England."
+                "To provide the highest quality transportation services while upholding the highest standards of safety, reliability, and customer satisfaction. We are committed to being the trusted choice for transportation in North East England."
               </p>
               <p className="text-lg text-[#2E3C44] leading-relaxed">
-                Our mission drives every decision we make, from the vehicles we choose to the drivers we hire. 
-                We believe that exceptional transportation should be accessible to everyone, and we work tirelessly 
-                to make that vision a reality for our community.
+                Our mission guides every decision we make — from the vehicles we operate to the drivers we employ.  
+                We believe that exceptional transport should be accessible to everyone, and we work tirelessly to make that vision a reality for our local community.
               </p>
             </div>
           </div>
@@ -232,7 +228,7 @@ export default function AboutPage() {
                 Why choose Aylestone Kings?
               </h2>
             <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
-              Discover what makes us the preferred choice for transportation in North East England.
+              Discover what makes us the preferred choice for transportation in Leicester and the surrounding areas.              .
             </p>
           </div>
 
@@ -249,7 +245,7 @@ export default function AboutPage() {
                 <Check className="h-6 w-6 text-[#06A0A6] mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-[#0F0D3E] mb-2">Modern Fleet</h3>
-                  <p className="text-[#2E3C44]">Our vehicles are regularly maintained and equipped with the latest technology.</p>
+                  <p className="text-[#2E3C44]">Regularly maintained and equipped with the latest technology vehicles.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">

@@ -1,7 +1,7 @@
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { contactInfo, siteData } from "@/lib/data"
-import { Shield, Users, Award, Clock, MapPin, Check, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 export default function OurTeamPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -198,7 +198,7 @@ export default function OurTeamPage() {
               </a>
               <a href="/pricing" className="w-full sm:w-auto">
                 <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
-                  View Airport Pricing
+                  View Pricing
                 </button>
               </a>
             </div>                   
@@ -230,15 +230,15 @@ export default function OurTeamPage() {
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-700 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                 At Aylestone Kings, our mission is to deliver safe, reliable, and affordable transport services to our local community. Since 1995, we’ve been committed to making every journey smooth and stress-free — whether it’s a quick trip across Leicester or a transfer to the airport.  
+                 We aim to set the standard for local taxi services by combining experienced drivers, a well-maintained fleet, and exceptional customer care. Our goal is simple: to get you where you need to be, comfortably and on time — every time.
               </p>
             </div>
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Our Vision</h3>
               <p className="text-gray-700 leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+                Our vision is to become Leicester’s most trusted and forward-thinking taxi service — recognised for our commitment to reliability, customer satisfaction, and continuous improvement.  
+                We strive to grow alongside our community by embracing technology, enhancing accessibility, and reducing our environmental impact. We see a future where every journey with Aylestone Kings represents quality, care, and confidence.
               </p>
             </div>
           </div>
