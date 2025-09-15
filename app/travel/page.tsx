@@ -244,7 +244,6 @@ export default function OurTeamPage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   )

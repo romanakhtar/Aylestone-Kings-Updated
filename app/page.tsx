@@ -1,5 +1,4 @@
 "use client"
-
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight } from "lucide-react"
@@ -7,6 +6,9 @@ import { siteData, contactInfo } from "@/lib/data"
 import AppDownloadButtons from "@/components/AppDownloadButtons"
 import AnimatedHero from "@/components/AnimatedHero"
 import { useState, useEffect } from "react"
+import Head from 'next/head';
+
+
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
