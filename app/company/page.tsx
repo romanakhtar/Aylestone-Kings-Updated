@@ -8,9 +8,7 @@ export default function CompanyPage() {
     <div className="min-h-screen bg-white">
 
     {/* Hero Section */}
-    <section className="relative section-padding bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white overflow-hidden">
-      
-        
+    <section className="relative section-padding bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white overflow-hidden">      
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-32 h-32 bg-[#06A0A6]/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-40 h-40 bg-[#EF5B6A]/20 rounded-full blur-3xl"></div>
@@ -18,7 +16,7 @@ export default function CompanyPage() {
         <div className="relative z-10 max-w-7xl mx-auto container-padding">
           <div className="text-center fade-in">
             {/* Enhanced Badge */}
-            <p>.</p>
+            <p>,</p>
             <div className=" inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium mb-8 shadow-professional-lg">
               <Shield className="h-4 w-4 text-[#06A0A6] mr-3" />
               Our Company
@@ -31,7 +29,7 @@ export default function CompanyPage() {
             
             {/* Enhanced Description */}
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10 font-light">
-            We are committed to making your journey comfortable, convenient, and stress-free,
+              We are committed to making your journey comfortable, convenient, and stress-free,
               <span className="text-[#06A0A6] font-semibold"> backed by over 30 years of excellence </span>
                in professional transport services. 
             </p>

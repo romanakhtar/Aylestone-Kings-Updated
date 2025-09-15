@@ -230,7 +230,7 @@ export default function OurTeamPage() {
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-700 leading-relaxed">
-                 At Aylestone Kings, our mission is to deliver safe, reliable, and affordable transport services to our local community. Since 1995, we’ve been committed to making every journey smooth and stress-free — whether it’s a quick trip across Leicester or a transfer to the airport.  
+                 At Aylestone Kings, our mission is to deliver safe, reliable, and affordable transport services to our local community. Since 1995, we’ve been committed to making every journey smooth and stress-free.
                  We aim to set the standard for local taxi services by combining experienced drivers, a well-maintained fleet, and exceptional customer care. Our goal is simple: to get you where you need to be, comfortably and on time — every time.
               </p>
             </div>
