@@ -4,7 +4,6 @@ import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { ArrowRight, MapPin, Clock, Shield } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
-import AppDownloadButtons from "@/components/AppDownloadButtons"
 import ContactModeCards from "@/components/ContactModeCards"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 

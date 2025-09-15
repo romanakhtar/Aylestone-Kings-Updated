@@ -7,8 +7,8 @@ export default function CompanyPage() {
   return (
     <div className="min-h-screen bg-white">
 
-      {/* Hero Section */}
-      <section className="relative section-padding bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white overflow-hidden">
+    {/* Hero Section */}
+    <section className="relative section-padding bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white overflow-hidden">
         {/* Background Image with Overlay */}
       
         
@@ -217,7 +217,7 @@ export default function CompanyPage() {
               
               {/* CTA Button */}
               <a href="/contact" className="inline-block">
-                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-smooth shadow-professional-lg hover:shadow-professional-xl hover:scale-105 focus-ring">
+                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
                   Contact Us
                   <ArrowRight className="h-5 w-5 transition-smooth group-hover:translate-x-1" />
                 </button>

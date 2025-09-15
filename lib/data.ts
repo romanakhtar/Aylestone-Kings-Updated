@@ -13,7 +13,7 @@ export const siteData = {
     founded: "1995",
     passengersServed: "10,000",
     satisfactionRating: "99.7%",
-    yearsExperience: "25+",
+    yearsExperience: "30+",
     serviceAvailability: "24/7",
     happyCustomers: "10,000+",
     drivers: "Multiple Professional Drivers",
@@ -30,13 +30,14 @@ export const siteData = {
       { name: "Home", href: "/" }, 
       { name: "About Us", href: "/about" },  
       { name: "Airport Pricing", href: "/pricing" },
-      { name: "Fleet", href: "/fleet" },
+      { name: "Travel", href: "/travel" },
       { name: "Contact", href: "/contact" },
       { name: "More", href: "#", hasDropdown: true }
     ],
     dropdown: [
       { name: "Company", href: "/company" },
-      { name: "Ride", href: "/ride" },  
+      { name: "Ride", href: "/ride" },
+      { name: "Fleet", href: "/fleet" },
     ],
   },
 
@@ -355,19 +356,27 @@ export const siteData = {
   // Footer Content
   footer: {
     quickLinks: [
-      { name: "Ride", href: "/ride" },   
-      { name: "Fleet", href: "/fleet" },
+
+
+      { name: "Home", href: "/" }, 
+      { name: "About Us", href: "/about" },  
       { name: "Airport Pricing", href: "/pricing" },
-      { name: "About Us", href: "/about" },
-      { name: "Our Services", href: "/ride" },
+      { name: "Travel", href: "/travel" },
+      { name: "Contact", href: "/contact" },
+      { name: "Company", href: "/company" },
+      { name: "Ride", href: "/ride" },  
+      { name: "Fleet", href: "/fleet" },
+
+      
     ],
 
     services: [
-      { name: "Airport Transfers", href: "/ride" },
-      { name: "Corporate Travel", href: "/ride" },
-      { name: "Wedding Cars", href: "/fleet" },
-      { name: "School Runs", href: "/ride" },
-      { name: "Hospital Visits", href: "/ride" },
+      { name: "Airport Transfers", href: "/pricing" },
+      { name: "Shopping", href: "/travel" },
+      { name: "Students Transport", href: "/travel" },
+      { name: "Match-Day Travel", href: "/travel" },
+      { name: "Train Station", href: "/travel" },
+
     ],
 
     legal: [
