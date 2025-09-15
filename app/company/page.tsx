@@ -1,7 +1,7 @@
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { siteData } from "@/lib/data"
-import { Shield, Users, Award, Clock,Check, ArrowRight } from "lucide-react"
+import { Shield, Users, Award, Clock, Check, ArrowRight } from "lucide-react"
 
 export default function CompanyPage() {
   return (
@@ -18,7 +18,8 @@ export default function CompanyPage() {
         <div className="relative z-10 max-w-7xl mx-auto container-padding">
           <div className="text-center fade-in">
             {/* Enhanced Badge */}
-            <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium mb-8 shadow-professional-lg">
+            <p>.</p>
+            <div className=" inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium mb-8 shadow-professional-lg">
               <Shield className="h-4 w-4 text-[#06A0A6] mr-3" />
               Our Company
             </div>
