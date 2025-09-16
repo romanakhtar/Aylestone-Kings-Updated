@@ -7,7 +7,6 @@ import ContactInfoBar from "@/components/contact-info-bar"
 import { Navigation } from "@/components/navigation"
 import Script from "next/script";
 
-
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -24,27 +23,55 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Aylestone Kings - Moving the Midlands Forward",
   description: "Professional taxi service in the Midlands. Book your ride online or download our app.",
-  generator: "Roman Akhtar",
+  generator: "Aylestone Kings",
   other: {
     "preconnect": "https://aylestonekings.webbooker.icabbi.com",
   },
 }
-const schemaData = {
-  "@context": "https://schema.org",
-  "@type": "TaxiService",
-  name: "Aylestone Taxis",
-  url: "https://aylestone-taxis.co.uk",
-  telephone: "+44-116-233-8888",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "753A Aylestone Road",
-    addressLocality: "Leicester",
-    postalCode: "LE2 8TG",
-    addressCountry: "GB"
-  },
-  openingHours: "Mo-Su 00:00-23:59"
-};
 
+const schemaData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    name: "Aylestone Taxis",
+    url: "https://aylestone-taxis.co.uk",
+    telephone: "+44-116-233-8888",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "753A Aylestone Road",
+      addressLocality: "Leicester",
+      postalCode: "LE2 8TG",
+      addressCountry: "GB"
+    },
+    openingHours: "Mo-Su 00:00-23:59",
+    sameAs: [
+      "https://www.facebook.com/yourpage",
+      "https://www.instagram.com/yourpage"     
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Aylestone Kings",
+    url: "https://aylestone-taxis.co.uk",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://aylestone-taxis.co.uk/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    name: ["Home", "About", "Airport Pricing", "Contact"],
+    url: [
+      "https://aylestone-taxis.co.uk/",
+      "https://aylestone-taxis.co.uk/about",
+      "https://aylestone-taxis.co.uk/pricing",
+      "https://aylestone-taxis.co.uk/contact"
+    ]
+  }
+]
 
 export default function RootLayout({
   children,
@@ -71,7 +98,7 @@ export default function RootLayout({
           type="application/ld+json"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+        />
       </body>
     </html>
   )
