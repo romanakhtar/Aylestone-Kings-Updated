@@ -93,7 +93,7 @@ export default function FleetPage() {
                 Whether you're travelling solo or with a group, our fleet guarantees comfort, reliability, and style.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
               {/* Estate Vehicle */}
               <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
@@ -107,9 +107,9 @@ export default function FleetPage() {
                   />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Estate Vehicle</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Saloon Car</h3>
                   <p className="text-gray-600 mb-3 md:mb-4 leading-relaxed text-xs md:text-sm">
-                    Perfect for those who need extra space for luggage or equipment. Our estate vehicles combine 
+                    Perfect for those who need extra space for luggage or equipment. Our saloon vehicles combine 
                     practicality with comfort, making them ideal for airport transfers and shopping trips.
                   </p>
                   <div className="space-y-1">
@@ -119,7 +119,7 @@ export default function FleetPage() {
                     </div>
                     <div className="flex items-center gap-2 justify-center">
                       <Check className="h-3 w-3 text-green-600" />
-                      <span className="text-xs text-gray-600">Comfortable seating for 5</span>
+                      <span className="text-xs text-gray-600">Comfortable seating for 4</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center">
                       <Check className="h-3 w-3 text-green-600" />
@@ -164,41 +164,6 @@ export default function FleetPage() {
                 </div>
               </div>
 
-              {/* 5 Seater */}
-              <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
-                <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
-                  <Image 
-                    src="/5 seater.png" 
-                    alt="5 Seater Car" 
-                    width={96}
-                    height={88}
-                    className="w-full h-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center">
-                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">5 Seater</h3>
-                  <p className="text-gray-600 mb-3 md:mb-4 leading-relaxed text-xs md:text-sm">
-                    Ideal for small groups or families. Offering comfortable rides with ample space for passengers 
-                    and luggage, perfect for one-way travel and short trips around the city.
-                  </p>
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2 justify-center">
-                      <Check className="h-3 w-3 text-green-600" />
-                      <span className="text-xs text-gray-600">Compact and efficient</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <Check className="h-3 w-3 text-green-600" />
-                      <span className="text-xs text-gray-600">Great for city travel</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <Check className="h-3 w-3 text-green-600" />
-                      <span className="text-xs text-gray-600">Cost-effective option</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               {/* 6 Seater */}
               <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
@@ -229,41 +194,6 @@ export default function FleetPage() {
                     <div className="flex items-center gap-2 justify-center">
                       <Check className="h-3 w-3 text-green-600" />
                       <span className="text-xs text-gray-600">Versatile for various trips</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* 7 Seater */}
-              <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
-                <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
-                  <Image 
-                    src="/7 seater.jpg" 
-                    alt="7 Seater Car" 
-                    width={96}
-                    height={88}
-                    className="w-full h-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center">
-                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">7 Seater</h3>
-                  <p className="text-gray-600 mb-3 md:mb-4 leading-relaxed text-xs md:text-sm">
-                    Offering even more space for passengers and luggage, making them ideal for larger families 
-                    or groups who need comfortable transportation.
-                  </p>
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2 justify-center">
-                      <Check className="h-3 w-3 text-green-600" />
-                      <span className="text-xs text-gray-600">Large group capacity</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <Check className="h-3 w-3 text-green-600" />
-                      <span className="text-xs text-gray-600">Spacious interior</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center">
-                      <Check className="h-3 w-3 text-green-600" />
-                      <span className="text-xs text-gray-600">Perfect for family trips</span>
                     </div>
                   </div>
                 </div>

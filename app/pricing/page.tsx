@@ -260,7 +260,7 @@ export default function PricingPage() {
                   <div className="flex items-center space-x-4 mb-4">
                     <Car className="h-12 w-12 text-blue-600" />
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">Six seater  VW Sharan </h4>
+                      <h4 className="text-xl font-bold text-gray-900">Six Seater </h4>
                       <p className="text-gray-600 text-sm">Perfect for six people travel</p>
                     </div>
                   </div>
@@ -286,7 +286,7 @@ export default function PricingPage() {
                   <div className="flex items-center space-x-4 mb-4">
                     <Users className="h-12 w-12 text-blue-600" />
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">Eight Seater Mercedes Vito</h4>
+                      <h4 className="text-xl font-bold text-gray-900">Eight Seater</h4>
                       <p className="text-gray-600 text-sm">Ideal for large groups and family travel</p>
                     </div>
                   </div>
