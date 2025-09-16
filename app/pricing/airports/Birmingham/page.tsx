@@ -73,7 +73,7 @@ export default function BirminghamPage() {
                         </div>
                       </td>
                       <td className="px-6 py-4 text-center text-gray-700">1-4 passengers</td>
-                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £55</td>
+                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £60</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
                       <td className="px-6 py-4 font-medium text-gray-900">

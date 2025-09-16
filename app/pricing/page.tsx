@@ -151,7 +151,7 @@ export default function PricingPage() {
                           Birmingham
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£55</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£60</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£80</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
@@ -255,13 +255,38 @@ export default function PricingPage() {
                     </div>
                   </div>
                 </div>
+                {/*  6 Seater */} 
+                <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-lg">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <Car className="h-12 w-12 text-blue-600" />
+                    <div>
+                      <h4 className="text-xl font-bold text-gray-900">Six seater  VW Sharan </h4>
+                      <p className="text-gray-600 text-sm">Perfect for six people travel</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Accommodates 6 passengers</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Space for 3 suitcases</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Comfortable interior</span>
+                    </div>
+                  </div>
+                </div>
 
                 {/* Minibus 8 Seater */}
                 <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-lg">
                   <div className="flex items-center space-x-4 mb-4">
                     <Users className="h-12 w-12 text-blue-600" />
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">Minibus 8 Seater</h4>
+                      <h4 className="text-xl font-bold text-gray-900">Eight Seater Mercedes Vito</h4>
                       <p className="text-gray-600 text-sm">Ideal for large groups and family travel</p>
                     </div>
                   </div>
@@ -281,6 +306,11 @@ export default function PricingPage() {
                     </div>
                   </div>
                 </div>
+                <a href="/fleet" className="w-full sm:w-auto">
+                <button className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-cyan-800 transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-2xl">
+                  View Fleet
+                </button>
+              </a>
               </div>
             </div>
           </div>
