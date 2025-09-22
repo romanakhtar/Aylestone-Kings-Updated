@@ -95,7 +95,7 @@ export default function Home() {
               Trust & Security
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Your safety and trust are our top priorities. We maintain the highest standards of licensing and security.
+              Your safety and trust are our top priorities. We maintain the highest standards of licensing, security and your safety.
             </p>
           </div>
           
