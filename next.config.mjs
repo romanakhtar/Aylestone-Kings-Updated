@@ -11,6 +11,35 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
+  /* redirects for old sitelinks */
+  async redirects() {
+    return [
+      {
+        source: '/index.html',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/services.html',
+        destination: '/travel',
+        permanent: true,
+      },
+      {
+        source: '/faqs.html',
+        destination: '/pricing',
+        permanent: true,
+      },
+      {
+        source: '/corporate.html',
+        destination: '/company',
+        permanent: true,
+      },
+      {
+        source: '/contact.html',
+        destination: '/contact',
+        permanent: true,
+      },
+    ]
+  },
 }
-
 export default nextConfig
