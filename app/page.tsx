@@ -8,8 +8,6 @@ import AnimatedHero from "@/components/AnimatedHero"
 import { useState, useEffect } from "react"
 import Head from 'next/head';
 
-
-
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
