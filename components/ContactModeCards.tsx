@@ -37,7 +37,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
     {
       name: 'Leave a Review',
       icon: Star,
-      color: '#06A0A6', // Company primary color
+      color: '#06A0A6', // Random color
       bgColor: 'bg-[#0056CC]',
       hoverBgColor: 'hover:bg-[#007AFF]',
       href: "https://g.page/r/CZmHFNdaup8XEBM/review"
@@ -88,7 +88,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       </div>
       
       {/* Separator */}
-      <div className="border-t border-gray-200 my-4 lg:my-6"></div>
+      <div className="border-t border-blue-200 my-2 lg:my-2"></div>
       
       {/* App Download Section */}
       <div className="pt-2 flex flex-col items-center">
