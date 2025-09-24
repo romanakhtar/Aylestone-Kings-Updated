@@ -443,13 +443,13 @@ export const siteData = {
       }
     ],
     airportLinks: [
-      { name: "Birmingham Airport", href: "/pricing/airports/birmingham" },
-      { name: "East Midlands Airport", href: "/pricing/airports/east-midlands" },
-      { name: "Heathrow Airport", href: "/pricing/airports/heathrow" },
-      { name: "Gatwick Airport", href: "/pricing/airports/gatwick" },
-      { name: "Luton Airport", href: "/pricing/airports/luton" },
-      { name: "Stansted Airport", href: "/pricing/airports/stansted" },
-      { name: "Manchester Airport", href: "/pricing/airports/manchester" }
+      { name: "Birmingham Airport", href: "/pricing/airports/Birmingham" },
+      { name: "East Midlands Airport", href: "/pricing/airports/East-Midlands" },
+      { name: "Heathrow Airport", href: "/pricing/airports/Heathrow" },
+      { name: "Gatwick Airport", href: "/pricing/airports/Gatwick" },
+      { name: "Luton Airport", href: "/pricing/airports/Luton" },
+      { name: "Stansted Airport", href: "/pricing/airports/Stansted" },
+      { name: "Manchester Airport", href: "/pricing/airports/Manchester" }
     ],
     areaDetails: {
       oadby: {
