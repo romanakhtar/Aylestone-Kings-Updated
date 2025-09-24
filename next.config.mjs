@@ -41,5 +41,16 @@ const nextConfig = {
       },
     ]
   },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        // Support legacy hyphen form /taxis-in-aylestone -> /taxis-in/aylestone
+        {
+          source: '/taxis-in-:slug',
+          destination: '/taxis-in/:slug',
+        },
+      ],
+    }
+  },
 }
 export default nextConfig

@@ -5,6 +5,7 @@ import "./globals.css"
 import FloatingContactButton from "@/components/FloatingContactButton"
 import ContactInfoBar from "@/components/contact-info-bar"
 import { Navigation } from "@/components/navigation"
+import Footer from "@/components/footer"
 import Script from "next/script";
 
 const inter = Inter({
@@ -92,6 +93,7 @@ export default function RootLayout({
         <main className="transition-smooth">
           {children}
         </main>
+        <Footer />
         <FloatingContactButton />
         <Script
           id="schema-markup"

@@ -376,6 +376,86 @@ export const siteData = {
       { name: "Privacy Policy", href: "/Privacy-policy.pdf" },
       { name: "Terms of Service", href: "/Privacy-policy.pdf" },
     ],
+    areaGroups: [
+      {
+        title: "Leicester Areas",
+        items: [
+          { name: "Taxis in Aylestone", href: "/taxis-in-aylestone" },
+          { name: "Taxis in Eyres Monsell", href: "/taxis-in-eyres-monsell" },
+          { name: "Taxis in Glen Parva", href: "/taxis-in-glen-parva" },
+          { name: "Taxis in South Wigston", href: "/taxis-in-south-wigston" },
+          { name: "Taxis in Knighton", href: "/taxis-in-knighton" },
+          { name: "Taxis in Clarendon Park", href: "/taxis-in-clarendon-park" },
+          { name: "Taxis in Stoneygate", href: "/taxis-in-stoneygate" },
+          { name: "Taxis in Oadby", href: "/taxis-in-oadby" },
+          { name: "Taxis in Wigston", href: "/taxis-in-wigston" },
+          { name: "Taxis in Leicester City Centre", href: "/taxis-in-leicester-city-centre" },
+          { name: "Taxis in Fosse Park", href: "/taxis-in-fosse-park" },
+          { name: "Taxis in Braunstone", href: "/taxis-in-braunstone" },
+          { name: "Taxis in Braunstone Town", href: "/taxis-in-braunstone-town" },
+          { name: "Taxis in Evington", href: "/taxis-in-evington" },
+          { name: "Taxis in Humberstone", href: "/taxis-in-humberstone" },
+          { name: "Taxis in Belgrave", href: "/taxis-in-belgrave" },
+          { name: "Taxis in Highfields", href: "/taxis-in-highfields" },
+          { name: "Taxis in Westcotes", href: "/taxis-in-westcotes" },
+          { name: "Taxis in Thurnby Lodge", href: "/taxis-in-thurnby-lodge" },
+          { name: "Taxis in Rushey Mead", href: "/taxis-in-rushey-mead" },
+          { name: "Taxis in Beaumont Leys", href: "/taxis-in-beaumont-leys" },
+          { name: "Taxis in Hamilton", href: "/taxis-in-hamilton" },
+          { name: "Taxis in Syston", href: "/taxis-in-syston" },
+          { name: "Taxis in Wigston Fields", href: "/taxis-in-wigston-fields" },
+          { name: "Taxis in Thurmaston", href: "/taxis-in-thurmaston" },
+          { name: "Taxis in Birstall", href: "/taxis-in-birstall" }
+        ]
+      },
+      {
+        title: "Wider Leicester Districts",
+        items: [
+          { name: "Taxis in Oadby", href: "/taxis-in-oadby" },
+          { name: "Taxis in Wigston", href: "/taxis-in-wigston" },
+          { name: "Taxis in South Wigston", href: "/taxis-in-south-wigston" },
+          { name: "Taxis in Braunstone Town", href: "/taxis-in-braunstone-town" },
+          { name: "Taxis in Wigston Fields", href: "/taxis-in-wigston-fields" },
+          { name: "Taxis in Thurmaston", href: "/taxis-in-thurmaston" },
+          { name: "Taxis in Syston", href: "/taxis-in-syston" },
+          { name: "Taxis in Birstall", href: "/taxis-in-birstall" },
+          { name: "Taxis in Groby", href: "/taxis-in-groby" }
+        ]
+      },
+      {
+        title: "Surrounding Towns",
+        items: [
+          { name: "Taxis in Blaby", href: "/taxis-in-blaby" },
+          { name: "Taxis in Narborough", href: "/taxis-in-narborough" },
+          { name: "Taxis in Enderby", href: "/taxis-in-enderby" },
+          { name: "Taxis in Whetstone", href: "/taxis-in-whetstone" },
+          { name: "Taxis in Countesthorpe", href: "/taxis-in-countesthorpe" },
+          { name: "Taxis in Broughton Astley", href: "/taxis-in-broughton-astley" },
+          { name: "Taxis in Cosby", href: "/taxis-in-cosby" },
+          { name: "Taxis in Kibworth", href: "/taxis-in-kibworth" },
+          { name: "Taxis in Market Harborough", href: "/taxis-in-market-harborough" },
+          { name: "Taxis in Lutterworth", href: "/taxis-in-lutterworth" },
+          { name: "Taxis in Hinckley", href: "/taxis-in-hinckley" },
+          { name: "Taxis in Coalville", href: "/taxis-in-coalville" },
+          { name: "Taxis in Melton Mowbray", href: "/taxis-in-melton-mowbray" },
+          { name: "Taxis in Groby", href: "/taxis-in-groby" }
+        ]
+      }
+    ],
+    airportLinks: [
+      { name: "Birmingham Airport", href: "/pricing/airports/birmingham" },
+      { name: "East Midlands Airport", href: "/pricing/airports/east-midlands" },
+      { name: "Heathrow Airport", href: "/pricing/airports/heathrow" },
+      { name: "Gatwick Airport", href: "/pricing/airports/gatwick" },
+      { name: "Luton Airport", href: "/pricing/airports/luton" },
+      { name: "Stansted Airport", href: "/pricing/airports/stansted" },
+      { name: "Manchester Airport", href: "/pricing/airports/manchester" }
+    ],
+    areaDetails: {
+      oadby: {
+        landmarks: ["University of Leicester Botanic Garden", "The Parade (Oadby town centre)"]
+      }
+    }
   },
 }
 
