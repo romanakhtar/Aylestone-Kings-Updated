@@ -1,4 +1,4 @@
-import Footer from "@/components/footer"
+ 
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 
@@ -285,7 +285,7 @@ export default function BirminghamPage() {
         </section>
       </main>
 
-      <Footer />
+      
     </div>
   )
 }

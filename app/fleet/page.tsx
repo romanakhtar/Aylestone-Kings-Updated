@@ -1,4 +1,4 @@
-import Footer from "@/components/footer"
+ 
 import Image from "next/image"
 import { Check, ArrowRight, Users, Car, Shield, Star, Clock } from "lucide-react"
 import { contactInfo } from "@/lib/data"
@@ -448,7 +448,7 @@ export default function FleetPage() {
         </section>
       </main>
 
-      <Footer />
+      
     </div>
   )
 }

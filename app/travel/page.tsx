@@ -1,4 +1,4 @@
-import Footer from "@/components/footer"
+ 
 import Image from "next/image"
 import { contactInfo, siteData } from "@/lib/data"
 import { ArrowRight } from "lucide-react"
@@ -244,7 +244,7 @@ export default function OurTeamPage() {
           </div>
         </div>
       </section>
-      <Footer />
+      
     </div>
   )
 }

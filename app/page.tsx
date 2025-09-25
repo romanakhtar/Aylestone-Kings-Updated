@@ -1,5 +1,4 @@
 "use client"
-import Footer from "@/components/footer"
 import Image from "next/image"
 import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
@@ -462,8 +461,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }

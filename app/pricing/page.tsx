@@ -1,4 +1,4 @@
-import Footer from "@/components/footer"
+ 
 import { Calendar, MapPin, CreditCard, Clock, MessageCircle, Headphones, Check, Star, Shield, Zap, Users, Car } from "lucide-react"
 import {  ArrowRight } from "lucide-react"
 import { contactInfo } from "@/lib/data"
@@ -389,6 +389,62 @@ export default function PricingPage() {
                 We accept cash, all major credit/debit cards, and digital payments through our app. Corporate accounts can be set up with monthly invoicing for convenience.
               </p>
             </div>
+             {/* FAQ 7 */}
+             <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Do you do airport transfers?
+              </h3>
+              <p className="text-gray-600">
+                Yes, we cover all UK airports including Birmingham, East Midlands, Heathrow, Manchester, and Gatwick. Fixed prices and 24/7 availability.
+              </p>
+            </div>
+
+             {/* FAQ 8 */}
+             <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Are your drivers DBS checked?
+              </h3>
+              <p className="text-gray-600">
+                Yes, all of our drivers are fully licensed and DBS checked for safety and peace of mind.
+              </p>
+            </div>
+
+             {/* FAQ 9 */}
+             <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Do you do school runs?
+              </h3>
+              <p className="text-gray-600">
+                Yes, we provide reliable school run services with DBS-checked drivers. Regular contracts available for parents.
+              </p>
+            </div>
+             {/* FAQ 10 */}
+             <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Do you provide corporate or business accounts?
+              </h3>
+              <p className="text-gray-600">
+                Yes, we offer business accounts with monthly invoicing and priority bookings for companies.
+              </p>
+            </div>
+             {/* FAQ 11 */}
+             <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Can I pre-book a taxi in advance?
+              </h3>
+              <p className="text-gray-600">
+                Absolutely. You can book in advance through our website, WhatsApp, or by phone.
+              </p>
+            </div>
+             {/* FAQ 12 */}
+             <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Do you do school runs?
+              </h3>
+              <p className="text-gray-600">
+                 Yes, we provide reliable school run services with DBS-checked drivers. Regular contracts available for parents.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -467,7 +523,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   )
 }

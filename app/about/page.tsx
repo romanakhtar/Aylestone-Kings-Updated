@@ -1,4 +1,4 @@
-import Footer from "@/components/footer"
+ 
 import Image from "next/image"
 import { Shield, Clock, Users, Award, MapPin, Phone, Check, ArrowRight, MessageCircle, Mail, Globe } from "lucide-react"
 import { contactInfo, siteData } from "@/lib/data"
@@ -397,7 +397,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   )
 }

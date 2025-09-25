@@ -31,8 +31,9 @@ export function generateStaticParams() {
   return getAllAreas().map((a) => ({ slug: slugFromHref(a.href) }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const area = getAreaBySlug(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const area = getAreaBySlug(slug)
   const areaName = area?.name.replace(/^Taxis in\s+/i, "") ?? "Area"
   const title = `${companyInfo.name} — Taxis in ${areaName}`
   const description = `Book reliable taxis in ${areaName} with ${companyInfo.name}. 24/7 service, professional drivers, airport transfers and local journeys.`
@@ -40,12 +41,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title,
     description,
     alternates: {
-      canonical: `/taxis-in/${params.slug}`,
+      canonical: `/taxis-in/${slug}`,
     },
     openGraph: {
       title,
       description,
-      url: `/taxis-in/${params.slug}`,
+      url: `/taxis-in/${slug}`,
       type: 'article',
       siteName: companyInfo.name,
     },
@@ -57,21 +58,22 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function AreaPage({ params }: { params: { slug: string } }) {
-  const area = getAreaBySlug(params.slug)
+export default async function AreaPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const area = getAreaBySlug(slug)
   if (!area) return notFound()
 
   const areaPlain = area.name.replace(/^Taxis in\s+/i, "")
-  const details = (footerData as any).areaDetails?.[params.slug] as { landmarks?: string[] } | undefined
+  const details = (footerData as any).areaDetails?.[slug] as { landmarks?: string[] } | undefined
   const landmarks = details?.landmarks ?? []
   const relatedAreas = getAllAreas()
-    .filter((a) => slugFromHref(a.href) !== params.slug)
-    .slice(0, 8)
+    .filter((a) => slugFromHref(a.href) !== slug)
+    .slice(0, 6)
 
   return (
     <main>
       {/* Hero */}
-      <section className="relative text-white bg-gradient-to-br from-[#0F0D3E] via-[#0F1B5A] to-[#0A7F84]">
+      <section className="relative text-white bg-gradient-to-br from-[#0F0D3E] via-[#0F1B5A] to-[#0A7F84] pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
@@ -79,7 +81,13 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
               <h1 className="mt-2 text-3xl text-white sm:text-4xl md:text-5xl font-extrabold leading-tight">Taxi Service in {areaPlain}</h1>
               <p className="mt-3 max-w-2xl text-white/85">
                 Reliable 24/7 taxis across {areaPlain}, Leicester & Leicestershire. Fixed fares, licensed drivers, and fast pick-ups.
+                Looking for a reliable taxi in {areaPlain}? Our trusted local taxi service is available 24/7, whether you need a short trip, an airport transfer, business travel, or a long-distance journey. With courteous drivers, comfortable modern vehicles, and fair, competitive pricing, we make travelling around {areaPlain} simple, safe, and stress-free.
               </p>
+              <p className="mt-3 max-w-2xl text-white/85">
+                Whether you’re heading to the airport, commuting for work, or exploring the local area, our taxis in {areaPlain} are always ready to get you there on time. We take pride in offering reliable, comfortable, and budget-friendly travel solutions tailored to your needs.
+              </p>
+              <p className="mt-3 max-w-2xl text-white/85">
+              Book your taxi today and get where you need to be – on time, every time.</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href={contactInfo.booking.online}>
@@ -87,7 +95,8 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
                   Book Now
                 </Button>
               </Link>
-              <Link href={`tel:${contactInfo.phone}`}>
+             
+              <Link href="/contact">             
                 <Button variant="outline" className="border-white text-white hover:bg-white/10 rounded-lg">
                   Contact Us
                 </Button>
@@ -111,7 +120,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
             </ul>
           </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-10">
             <div className="space-y-8">
               <div className="space-y-3">
                 <h2 className="text-2xl font-semibold text-gray-900">Your Local Taxi in {areaPlain}</h2>
@@ -239,17 +248,17 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
               </div>
 
             </div>
-            <aside className="space-y-5 lg:sticky lg:top-28 h-fit">
-              <div className="rounded-lg border border-gray-200 p-5">
-                <h3 className="font-semibold text-gray-900 mb-2">Quick contacts</h3>
+            <aside className="space-y-2 lg:sticky lg:top-28 h-fit lg:max-h-[calc(100vh-7rem)]">
+              <div className="rounded-lg border border-gray-200 p-4 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
+                <h3 className="font-semibold text-gray-900 mb-1">Quick contacts</h3>
                 <p className="text-sm text-gray-700">Phone: <Link href={`tel:${contactInfo.phone}`} className="hover:underline underline-offset-2">{contactInfo.phone}</Link></p>
                 <p className="text-sm text-gray-700">Email: <Link href={`mailto:${contactInfo.email}`} className="hover:underline underline-offset-2">{contactInfo.email}</Link></p>
                 <p className="text-sm text-gray-700">Address: {contactInfo.address.street}, {contactInfo.address.city} {contactInfo.address.postcode}</p>
               </div>
-              <div className="rounded-lg border border-gray-200 p-5">
-                <h3 className="font-semibold text-gray-900 mb-2">Popular links</h3>
-                <ul className="space-y-2 text-sm">
-                  {footerData.airportLinks?.map((ap) => (
+              <div className="rounded-lg border border-gray-200 p-4 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
+                <h3 className="font-semibold text-gray-900 mb-1">Popular links</h3>
+                <ul className="grid grid-cols-2 gap-2 text-sm">
+                  {footerData.airportLinks?.slice(0,6).map((ap) => (
                     <li key={ap.name}>
                       <Link href={ap.href} className="text-gray-700 hover:underline underline-offset-2">
                         {ap.name} Transfers
@@ -258,8 +267,8 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
                   ))}
                 </ul>
               </div>
-              <div className="rounded-lg border border-gray-200 p-5">
-                <h3 className="font-semibold text-gray-900 mb-2">Nearby areas we cover</h3>
+              <div className="rounded-lg border border-gray-200 p-4 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">      
+                <h3 className="font-semibold text-gray-900 mb-1">Nearby areas we cover</h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
                   {relatedAreas.map((r) => (
                     <li key={r.href}>
@@ -270,9 +279,9 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
                   ))}
                 </ul>
               </div>
-              <div className="rounded-lg border border-gray-200 p-5 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
-                <h3 className="font-semibold text-gray-900 mb-2">Ready to book?</h3>
-                <p className="text-sm text-gray-700 mb-3">Get an instant quote and confirm your ride in seconds.</p>
+              <div className="rounded-lg border border-gray-200 p-4 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
+                <h3 className="font-semibold text-gray-900 mb-1">Ready to book?</h3>
+                <p className="text-sm text-gray-700 mb-2">Get an instant quote and confirm your ride in seconds.</p>
                 <Link href={contactInfo.booking.online} className="inline-flex items-center bg-[#06A0A6] hover:bg-[#06939a] text-white px-4 py-2 rounded-md transition-smooth gap-2">
                   Book Online <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -290,7 +299,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
           areaServed: areaPlain,
           serviceType: 'Local taxi and airport transfer',
           telephone: contactInfo.phone,
-          url: `https://aylestone-taxis.co.uk/taxis-in/${params.slug}`,
+          url: `https://aylestone-taxis.co.uk/taxis-in/${slug}`,
           availableChannel: { '@type': 'ServiceChannel', serviceUrl: contactInfo.booking.online },
           provider: { '@type': 'LocalBusiness', name: companyInfo.name, address: `${contactInfo.address.street}, ${contactInfo.address.city} ${contactInfo.address.postcode}` }
         }) }}
@@ -302,7 +311,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://aylestone-taxis.co.uk/' },
             { '@type': 'ListItem', position: 2, name: 'Areas', item: 'https://aylestone-taxis.co.uk/areas' },
-            { '@type': 'ListItem', position: 3, name: `Taxis in ${areaPlain}`, item: `https://aylestone-taxis.co.uk/taxis-in/${params.slug}` }
+            { '@type': 'ListItem', position: 3, name: `Taxis in ${areaPlain}`, item: `https://aylestone-taxis.co.uk/taxis-in/${slug}` }
           ]
         }) }}
       />

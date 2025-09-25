@@ -1,6 +1,6 @@
 "use client";
 
-import Footer from "@/components/footer";
+ 
 import { Button } from "@/components/ui/button";
 import {
  MapPin,
@@ -39,7 +39,7 @@ export default function ContactPage() {
  </div>
  </div>
  </section>
- <Footer />
+ 
  </div>
  );
  }
@@ -397,7 +397,7 @@ export default function ContactPage() {
  </div>
  </section>
 
- <Footer />
+       
  </div>
  );
 }

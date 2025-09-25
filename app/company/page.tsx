@@ -1,4 +1,4 @@
-import Footer from "@/components/footer"
+ 
 import Image from "next/image"
 import { siteData } from "@/lib/data"
 import { Shield, Users, Award, Clock, Check, ArrowRight } from "lucide-react"
@@ -224,7 +224,7 @@ export default function CompanyPage() {
           </div>
         </div>
       </section>
-      <Footer />
+      
     </div>
   )
 }
