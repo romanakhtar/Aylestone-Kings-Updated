@@ -105,7 +105,7 @@ export default function PricingPage() {
 
 
             {/* Pricing Table & Vehicle Fleet Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -318,7 +318,7 @@ export default function PricingPage() {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">

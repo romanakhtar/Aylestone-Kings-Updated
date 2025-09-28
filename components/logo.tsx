@@ -14,7 +14,7 @@ export default function Logo({ className = "", showText = true }: LogoProps) {
       <div className="relative w-11 h-11 mr-3 group-hover:shadow-lg group-hover:scale-105 transition-all duration-300 overflow-hidden">
         <Image
           src="/Aylestone-Taxi-Logo.png"
-          alt={`${companyInfo.name} Logo`}
+          alt={`${companyInfo.name} taxi service logo - professional transport in Leicester and Midlands`}
           width={44}
           height={44}
           className="rounded-2xl object-cover"

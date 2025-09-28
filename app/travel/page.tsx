@@ -7,7 +7,7 @@ export default function OurTeamPage() {
     <div className="min-h-screen bg-white">
 
       {/* Hero Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Travel With Us in Comfort & Style
@@ -217,7 +217,7 @@ export default function OurTeamPage() {
       </section>
 
       {/* Our Values */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Drives Us</h2>
