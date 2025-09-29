@@ -86,6 +86,23 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://aylestonekings.webbooker.icabbi.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
+        
+        
+        {/* Google tag (gtag.js) */}
+         <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-997662518"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-997662518');
+          `}
+        </Script>
+
+        
       </head>
       <body className="font-sans pt-5 bg-white">
         <ContactInfoBar />
