@@ -83,7 +83,7 @@ export default function AnimatedHero() {
               >
                 <Image
                   src={siteData.images.heroTaxi}
-                  alt="Modern Taxi Fleet - Aylestone Kings"
+                  alt="Modern white taxi vehicle from Aylestone Kings professional fleet serving Leicester and Midlands since 1995"
                   width={80}
                   height={64}
                   className="relative z-10 w-38 lg:w-[280px] h-auto drop-shadow-2xl"

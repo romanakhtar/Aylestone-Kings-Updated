@@ -14,7 +14,6 @@ export const siteData = {
       }
     }
   },
-
   // Contact Information
   contact: {
     phone: "0116 2338888",

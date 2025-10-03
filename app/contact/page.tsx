@@ -1,6 +1,6 @@
 "use client";
 
-import Footer from "@/components/footer";
+ 
 import { Button } from "@/components/ui/button";
 import {
  MapPin,
@@ -39,7 +39,7 @@ export default function ContactPage() {
  </div>
  </div>
  </section>
- <Footer />
+ 
  </div>
  );
  }
@@ -329,7 +329,7 @@ export default function ContactPage() {
  </section>
 
  {/* Additional Trust Section */}
- <section className="py-16 bg-gray-50 border-y border-gray-100">
+ <section className="py-16 bg-gray-50 bg-gradient-to-r from-[#06A0A6]/10 to-transparent border-y border-gray-100">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="text-center mb-12">
  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -397,7 +397,7 @@ export default function ContactPage() {
  </div>
  </section>
 
- <Footer />
+       
  </div>
  );
 }

@@ -25,7 +25,7 @@ export default function AppDownloadButtons({ className = '', size = 'md' }: AppD
       >
         <Image
           src={siteData.images.appStore}
-          alt="Download on the App Store"
+          alt="Download Aylestone Kings taxi app from the Apple App Store"
           width={150}
           height={50}
           className={sizeClasses[size]}
@@ -40,7 +40,7 @@ export default function AppDownloadButtons({ className = '', size = 'md' }: AppD
       >
         <Image
           src={siteData.images.googlePlay}
-          alt="Get it on Google Play"
+          alt="Download Aylestone Kings taxi app from Google Play Store"
           width={150}
           height={50}
           className={sizeClasses[size]}

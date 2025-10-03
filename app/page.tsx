@@ -1,5 +1,4 @@
 "use client"
-import Footer from "@/components/footer"
 import Image from "next/image"
 import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
@@ -7,8 +6,6 @@ import AppDownloadButtons from "@/components/AppDownloadButtons"
 import AnimatedHero from "@/components/AnimatedHero"
 import { useState, useEffect } from "react"
 import Head from 'next/head';
-
-
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -76,7 +73,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-2xl"></div>
               <Image
                 src={siteData.images.trustedTransport}
-                alt="Trusted Transport Service"
+                alt="Professional taxi drivers and vehicles representing Aylestone Kings trusted transport service in Leicester and Midlands"
                 width={600}
                 height={400}
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
@@ -88,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-gray-50 border-y border-gray-100">
+      <section className="py-16 bg-gray-50 bg-gradient-to-r from-[#06A0A6]/10 to-transparent border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -168,7 +165,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-2xl"></div>
               <Image
                 src="/Professional-in-car.jpg"
-                alt="Passengers enjoying taxi service"
+                alt="Passengers enjoying comfortable and professional taxi service with Aylestone Kings in Leicester"
                 width={600}
                 height={400}
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
@@ -187,7 +184,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-2xl"></div>
               <Image
                 src="/business-leisure.jpg"
-                alt="Business Travel Solutions"
+                alt="Professional business travel solutions and corporate taxi services by Aylestone Kings for Leicester businesses"
                 width={600}
                 height={400}
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
@@ -229,7 +226,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-2xl"></div>
               <Image
                 src="/app-screen-tracking.jpg"
-                alt="App Screenshot"
+                alt="Aylestone Kings mobile app screenshot showing real-time taxi tracking and booking features for Leicester customers"
                 width={500}
                 height={1000}
                 className="relative z-10 rounded-2xl shadow-2xl"
@@ -275,6 +272,7 @@ export default function Home() {
             backgroundImage: 'url(/black-car.jpg)',
             backgroundPosition: 'right center',
           }}
+          aria-label="Luxury black executive taxi vehicle from Aylestone Kings premium fleet"
         />
         {/* Gradient Mask - Fades from transparent on right to solid on left */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#06A0A6] via-[#06A0A6]/80 to-transparent"></div>
@@ -319,7 +317,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-2xl blur-xl"></div>
               <Image
                 src="/eco-friendly-taxi-side.png"
-                alt="Eco-Friendly Car"
+                alt="Eco-friendly and sustainable taxi vehicle from Aylestone Kings green fleet in Leicester"
                 width={600}
                 height={300}
                 className="rounded-2xl"
@@ -464,8 +462,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }

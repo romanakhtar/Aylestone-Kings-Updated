@@ -1,6 +1,6 @@
 'use client'
 
-import { MessageCircle, Phone, Globe } from 'lucide-react'
+import { MessageCircle, Phone, Globe, Star } from 'lucide-react'
 import AppDownloadButtons from '@/components/AppDownloadButtons'
 import { contactInfo } from '@/lib/data'
 
@@ -33,7 +33,16 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       bgColor: 'bg-[#06A0A6]',
       hoverBgColor: 'hover:bg-[#0F0D3E]',
       href: contactInfo.booking.online
+    },
+    {
+      name: 'Leave a Review',
+      icon: Star,
+      color: '#06A0A6', // Random color
+      bgColor: 'bg-[#0056CC]',
+      hoverBgColor: 'hover:bg-[#007AFF]',
+      href: "https://g.page/r/CZmHFNdaup8XEBM/review"
     }
+    
   ]
 
   return (
@@ -79,7 +88,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       </div>
       
       {/* Separator */}
-      <div className="border-t border-gray-200 my-4 lg:my-6"></div>
+      <div className="border-t border-blue-200 my-2 lg:my-2"></div>
       
       {/* App Download Section */}
       <div className="pt-2 flex flex-col items-center">
