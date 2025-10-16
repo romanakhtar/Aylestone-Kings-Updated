@@ -10,7 +10,7 @@ export default function Footer() {
       {/* Areas We Cover (Top Band) */}
       <div className="border-t border-gray-200 bg-gray-50 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10 lg:gap-12">
             {/* Leicester Areas */}
             {footerData.areaGroups?.slice(0,3).map((group) => (
               <div key={group.title}>
@@ -29,6 +29,21 @@ export default function Footer() {
                 </ul>
               </div>
             ))}
+
+            {/* Popular Destinations */}
+            <div>
+              <h4 className="font-bold text-gray-800 text-lg md:text-xl mb-4 tracking-tight">Popular Destinations</h4>
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-2 md:grid-cols-1 md:gap-y-2.5">
+                {(footerData as any).destinationLinks?.slice()?.sort((a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name)).map((item: { name: string; href: string }) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
+                      <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
+                      <span className="leading-6">{item.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             {/* Airport Transfers */}
             <div>
