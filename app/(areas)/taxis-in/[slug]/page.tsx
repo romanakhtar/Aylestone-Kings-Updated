@@ -9,7 +9,9 @@ type AreaItem = { name: string; href: string }
 
 function getAllAreas(): AreaItem[] {
   const groups = footerData.areaGroups ?? []
-  return groups.flatMap((g: { items: AreaItem[] }) => g.items)
+  const areas = groups.flatMap((g: { items: AreaItem[] }) => g.items)
+  const destinations = (footerData as any).destinationLinks ?? []
+  return [...areas, ...destinations]
 }
 function slugFromHref(href: string): string {
   // Support both formats: /taxis-in-aylestone and /taxis-in/aylestone
@@ -63,6 +65,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   if (!area) return notFound()
 
   const areaPlain = area.name.replace(/^Taxis in\s+/i, "")
+  const isDestination = (footerData as any).destinationLinks?.some((d: any) => slugFromHref(d.href) === slug)
   const details = (footerData as any).areaDetails?.[slug] as { landmarks?: string[] } | undefined
   const landmarks = details?.landmarks ?? []
   const relatedAreas = getAllAreas()
@@ -77,16 +80,28 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
               <p className="text-xs sm:text-sm uppercase tracking-widest text-white/80">{companyInfo.name}</p>
-              <h1 className="mt-2 text-3xl text-white sm:text-4xl md:text-5xl font-extrabold leading-tight">Taxi Service in {areaPlain} – Aylestone Taxis</h1>
+              <h1 className="mt-2 text-3xl text-white sm:text-4xl md:text-5xl font-extrabold leading-tight">
+                {isDestination ? `Taxi to ${areaPlain}` : `Taxi Service in ${areaPlain}`} – Aylestone Taxis
+              </h1>
               <p className="mt-3 max-w-2xl text-white/85">
-                Reliable 24/7 taxis across {areaPlain}, Leicester & Leicestershire. Fixed fares, licensed drivers, and fast pick-ups.
-                Looking for a reliable taxi in {areaPlain}? Our trusted local taxi service is available 24/7, whether you need a short trip, an airport transfer, business travel, or a long-distance journey. With courteous drivers, comfortable modern vehicles, and fair, competitive pricing, we make travelling around {areaPlain} simple, safe, and stress-free.
+                {isDestination 
+                  ? `Need a taxi to ${areaPlain}? We offer reliable, on-time journeys with professional drivers and fixed fares. Perfect for appointments, events, shopping and travel connections.`
+                  : `Reliable 24/7 taxis across ${areaPlain}, Leicester & Leicestershire. Fixed fares, licensed drivers, and fast pick-ups.`
+                }
+                {isDestination 
+                  ? ` Book online in seconds — or contact us for help with luggage and special requests.`
+                  : ` Looking for a reliable taxi in ${areaPlain}? Our trusted local taxi service is available 24/7, whether you need a short trip, an airport transfer, business travel, or a long-distance journey. With courteous drivers, comfortable modern vehicles, and fair, competitive pricing, we make travelling around ${areaPlain} simple, safe, and stress-free.`
+                }
               </p>
               <p className="mt-3 max-w-2xl text-white/85">
-                Whether you’re heading to the airport, commuting for work, or exploring the local area, our taxis in {areaPlain} are always ready to get you there on time. We take pride in offering reliable, comfortable, and budget-friendly travel solutions tailored to your needs.
+                {isDestination 
+                  ? `Our drivers know the best routes to ${areaPlain} and can help with luggage, accessibility needs, and special requests.`
+                  : `Whether you're heading to the airport, commuting for work, or exploring the local area, our taxis in ${areaPlain} are always ready to get you there on time. We take pride in offering reliable, comfortable, and budget-friendly travel solutions tailored to your needs.`
+                }
               </p>
               <p className="mt-3 max-w-2xl text-white/85">
-              Book your taxi today and get where you need to be – on time, every time.</p>
+                Book your taxi today and get where you need to be – on time, every time.
+              </p>
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href={contactInfo.booking.online}>
@@ -120,8 +135,15 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           <div className="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-10">
             <div className="space-y-8">
               <div className="space-y-3">
-                <h2 className="text-2xl font-semibold text-gray-900">Your Local Taxi in {areaPlain}</h2>
-                <p className="text-gray-700">Looking for a taxi in {areaPlain}? We’ve served Leicester since 1995 with safe, affordable journeys for school runs, nights out, shopping trips and airport transfers.</p>
+                <h2 className="text-2xl font-semibold text-gray-900">
+                  {isDestination ? `Book a Taxi to ${areaPlain}` : `Your Local Taxi in ${areaPlain}`}
+                </h2>
+                <p className="text-gray-700">
+                  {isDestination 
+                    ? `Heading to ${areaPlain}? Our drivers know the best drop-off points and quickest routes. Fixed fares, card payments, and 24/7 availability.`
+                    : `Looking for a taxi in ${areaPlain}? We've served Leicester since 1995 with safe, affordable journeys for school runs, nights out, shopping trips and airport transfers.`
+                  }
+                </p>
               </div>
 
               {landmarks.length > 0 && (
@@ -132,19 +154,39 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               )}
 
               <div id="popular-journeys" className="rounded-lg border border-gray-200 p-5">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 flex items-center gap-2"><Car className="h-5 w-5 text-[#06A0A6]"/> Popular Journeys from {areaPlain}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 flex items-center gap-2"><Car className="h-5 w-5 text-[#06A0A6]"/> 
+                  {isDestination ? `Popular journeys` : `Popular Journeys from ${areaPlain}`}
+                </h3>
                 <ul className="list-disc pl-5 text-gray-700 space-y-1">
-                  <li>{areaPlain} → Leicester City Centre</li>
-                  <li>{areaPlain} → Birmingham Airport (BHX)</li>
-                  <li>{areaPlain} → East Midlands Airport (EMA)</li>
-                  <li>{areaPlain} → London Heathrow (LHR)</li>
-                  <li>{areaPlain} → Fosse Park / Train Station / Hospitals</li>
+                  {isDestination ? (
+                    <>
+                      <li>Aylestone → {areaPlain}</li>
+                      <li>Leicester City Centre → {areaPlain}</li>
+                      <li>DMU/University area → {areaPlain}</li>
+                      <li>Fosse Park → {areaPlain}</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>{areaPlain} → Leicester City Centre</li>
+                      <li>{areaPlain} → Birmingham Airport (BHX)</li>
+                      <li>{areaPlain} → East Midlands Airport (EMA)</li>
+                      <li>{areaPlain} → London Heathrow (LHR)</li>
+                      <li>{areaPlain} → Fosse Park / Train Station / Hospitals</li>
+                    </>
+                  )}
                 </ul>
               </div>
 
               <div id="airport-transfers" className="rounded-lg border border-gray-200 p-5">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 flex items-center gap-2"><Plane className="h-5 w-5 text-[#06A0A6]"/> Airport Transfers from {areaPlain}</h3>
-                <p className="text-gray-700 mb-3">Fixed-rate, 24/7 transfers with flight tracking and meet &amp; greet on request.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 flex items-center gap-2"><Plane className="h-5 w-5 text-[#06A0A6]"/> 
+                  {isDestination ? `Airport Transfers` : `Airport Transfers from ${areaPlain}`}
+                </h3>
+                <p className="text-gray-700 mb-3">
+                  {isDestination 
+                    ? `Seamless airport connections with meet & greet on request.`
+                    : `Fixed-rate, 24/7 transfers with flight tracking and meet & greet on request.`
+                  }
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {footerData.airportLinks?.map((ap) => {
                     const base = ap.name.replace(/ Airport$/,'')
@@ -188,7 +230,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
               <div className="pt-2">
                 <Link href={contactInfo.booking.online} className="inline-flex items-center bg-[#06A0A6] hover:bg-[#06939a] text-white px-5 py-2.5 rounded-lg shadow-professional hover:shadow-professional-lg transition-smooth gap-2">
-                  Book Your Taxi in {areaPlain}
+                  {isDestination ? `Book Taxi to ${areaPlain}` : `Book Your Taxi in ${areaPlain}`}
                   <ArrowRight className="h-4 w-4"/>
                 </Link>
               </div>
