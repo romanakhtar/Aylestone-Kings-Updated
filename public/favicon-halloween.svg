@@ -1,0 +1,23 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pumpkin background -->
+  <circle cx="16" cy="20" r="12" fill="#FF7B00" stroke="#111111" stroke-width="1"/>
+  
+  <!-- Pumpkin ridges -->
+  <path d="M 8 16 Q 16 12 24 16" stroke="#E65100" stroke-width="2" fill="none"/>
+  <path d="M 8 20 Q 16 16 24 20" stroke="#E65100" stroke-width="2" fill="none"/>
+  <path d="M 8 24 Q 16 20 24 24" stroke="#E65100" stroke-width="2" fill="none"/>
+  
+  <!-- Eyes -->
+  <path d="M 11 14 Q 13 12 15 14 Q 13 16 11 14" fill="#111111"/>
+  <path d="M 17 14 Q 19 12 21 14 Q 19 16 17 14" fill="#111111"/>
+  
+  <!-- Nose -->
+  <path d="M 16 17 Q 17 18 16 19 Q 15 18 16 17" fill="#111111"/>
+  
+  <!-- Mouth -->
+  <path d="M 10 22 Q 16 26 22 22" stroke="#111111" stroke-width="2" fill="none"/>
+  
+  <!-- Stem -->
+  <rect x="15" y="8" width="2" height="4" fill="#2E7D32"/>
+</svg>
+

@@ -6,6 +6,7 @@ import { ArrowRight, MapPin, Clock, Shield } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import ContactModeCards from "@/components/ContactModeCards"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 
 export default function AnimatedHero() {
   const { ref, isVisible } = useScrollAnimation({
@@ -14,6 +15,7 @@ export default function AnimatedHero() {
     triggerOnce: true
   })
 
+  const { isHalloweenActive } = useHalloweenTheme()
   const [scrollY, setScrollY] = useState(0)
   const parallaxRef = useRef<HTMLDivElement>(null)
 
@@ -32,6 +34,10 @@ export default function AnimatedHero() {
 
   return (
     <main className="relative min-h-screen bg-white">
+      {/* Halloween Overlay */}
+      {isHalloweenActive && <div className="halloween-hero-overlay" />}
+      {isHalloweenActive && <div className="halloween-mist" />}
+      
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 lg:pt-32 pb-16 min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start w-full">
@@ -40,7 +46,7 @@ export default function AnimatedHero() {
             
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-              {siteData.homepage.hero.title}
+              {isHalloweenActive ? "No Tricks, Just Safe Rides – Aylestone Taxis Halloween Special 🎃" : siteData.homepage.hero.title}
             </h1>
 
             {/* Description */}
@@ -65,9 +71,10 @@ export default function AnimatedHero() {
             {/* CTA Button */}
             <button 
               onClick={handleBookNow}
-              className=" animate-pulse bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl mb-8"
+              className={`${isHalloweenActive ? 'halloween-cta-glow' : 'animate-pulse bg-[#06A0A6] hover:bg-[#0F0D3E]'} text-white px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl mb-8`}
             >
               {siteData.homepage.hero.ctaText}
+              <span className="halloween-pumpkin">🎃</span>
               <ArrowRight className="h-5 w-5" />
             </button>
 

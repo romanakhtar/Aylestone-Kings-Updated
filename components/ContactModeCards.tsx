@@ -4,6 +4,8 @@ import { MessageCircle, Phone, Globe, Star } from 'lucide-react'
 import AppDownloadButtons from '@/components/AppDownloadButtons'
 import { contactInfo } from '@/lib/data'
 
+import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
+
 interface ContactModeCardsProps {
   className?: string
 }
