@@ -15,7 +15,7 @@ export default function HalloweenToggle() {
       }`}
       title="Toggle Halloween Theme (for testing)"
     >
-      {isHalloweenActive ? '🎃 Halloween ON' : '🎃 Halloween OFF'}
+      {isHalloweenActive ? '🎃 Halloween ON' : 'Halloween OFF'}
     </button>
   )
 }

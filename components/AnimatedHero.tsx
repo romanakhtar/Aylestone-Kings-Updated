@@ -46,7 +46,7 @@ export default function AnimatedHero() {
             
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-              {isHalloweenActive ? "No Tricks, Just Safe Rides – Aylestone Taxis Halloween Special 🎃" : siteData.homepage.hero.title}
+              {isHalloweenActive ? "Moving Aylestone Forward 🎃" : siteData.homepage.hero.title}
             </h1>
 
             {/* Description */}
