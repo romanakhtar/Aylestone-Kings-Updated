@@ -5,11 +5,13 @@ import { siteData, contactInfo } from "@/lib/data"
 import AppDownloadButtons from "@/components/AppDownloadButtons"
 import AnimatedHero from "@/components/AnimatedHero"
 import { useState, useEffect } from "react"
-import Head from 'next/head';
+import Head from 'next/head'
+import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const { isHalloweenActive } = useHalloweenTheme();
 
   const reviews = siteData.homepage.customerReviews.reviews;
   const totalSlides = reviews.length;
@@ -63,7 +65,7 @@ export default function Home() {
                 {siteData.homepage.aboutUs.description}
               </p>
               <a href="/about" className="inline-block">
-                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3">
+                <button className={`${isHalloweenActive ? 'halloween-cta-glow' : 'bg-[#06A0A6] hover:bg-[#0F0D3E]'} text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3`}>
                   Learn More About Us
                   <ArrowRight className="h-5 w-5" />
                 </button>
@@ -439,18 +441,18 @@ export default function Home() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
+      <section className={`py-20 ${isHalloweenActive ? 'bg-gradient-to-r from-[#FF7B00] to-[#111111]' : 'bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E]'} text-white`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl text-white font-bold mb-6">
-            Ready to experience the difference?
+            {isHalloweenActive ? "🎃Ready for a Spook-tacular Ride?🎃" : "Ready to experience the difference?"}
           </h2>
           <p className="text-xl text-[#E4E4E4] mb-8 max-w-2xl mx-auto">
-            Let's start with a conversation about how we can help you with your transportation needs.
+            {isHalloweenActive ? "No tricks, just treats! Book your safe and reliable ride today." : "Let's start with a conversation about how we can help you with your transportation needs."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="/contact" className="inline-block">
-              <button className="bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl">
-                Get in touch
+              <button className={`${isHalloweenActive ? 'bg-white text-[#FF7B00] hover:bg-[#E4E4E4]' : 'bg-white text-[#06A0A6] hover:bg-[#E4E4E4]'} px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl`}>
+                {isHalloweenActive ? "Book Your Ride 🎃" : "Get in touch"}
                 <ArrowRight className="h-5 w-5" />
               </button>
             </a>

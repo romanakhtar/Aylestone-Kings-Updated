@@ -2,10 +2,16 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Roboto } from "next/font/google"
 import "./globals.css"
+import "../styles/halloween.css"
 import FloatingContactButton from "@/components/FloatingContactButton"
 import ContactInfoBar from "@/components/contact-info-bar"
 import { Navigation } from "@/components/navigation"
 import Footer from "@/components/footer"
+import { HalloweenThemeProvider } from "@/components/HalloweenThemeProvider"
+import HalloweenTopBanner from "@/components/HalloweenTopBanner"
+import HalloweenFloatingElements from "@/components/HalloweenFloatingElements"
+import HalloweenSpiderWeb from "@/components/HalloweenSpiderWeb"
+import HalloweenToggle from "@/components/HalloweenToggle"
 import Script from "next/script";
 const inter = Inter({
   subsets: ["latin"],
@@ -104,13 +110,19 @@ export default function RootLayout({
         
       </head>
       <body className="font-sans pt-5 bg-white">
-        <ContactInfoBar />
-        <Navigation />
-        <main className="transition-smooth">
-          {children}
-        </main>
-        <Footer />
-        <FloatingContactButton />
+        <HalloweenThemeProvider>
+          <HalloweenTopBanner />
+          <ContactInfoBar />
+          <Navigation />
+          <HalloweenSpiderWeb />
+          <main className="transition-smooth relative">
+            <HalloweenFloatingElements />
+            {children}
+          </main>
+          <Footer />
+          <FloatingContactButton />
+          <HalloweenToggle />
+        </HalloweenThemeProvider>
         <Script
           id="schema-markup"
           type="application/ld+json"
