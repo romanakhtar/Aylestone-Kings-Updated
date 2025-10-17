@@ -444,7 +444,7 @@ export default function Home() {
       <section className={`py-20 ${isHalloweenActive ? 'bg-gradient-to-r from-[#FF7B00] to-[#111111]' : 'bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E]'} text-white`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl text-white font-bold mb-6">
-            {isHalloweenActive ? "🎃 Ready for a Spook-tacular Ride? 🎃" : "Ready to experience the difference?"}
+            {isHalloweenActive ? "🎃Ready for a Spook-tacular Ride?🎃" : "Ready to experience the difference?"}
           </h2>
           <p className="text-xl text-[#E4E4E4] mb-8 max-w-2xl mx-auto">
             {isHalloweenActive ? "No tricks, just treats! Book your safe and reliable ride today." : "Let's start with a conversation about how we can help you with your transportation needs."}

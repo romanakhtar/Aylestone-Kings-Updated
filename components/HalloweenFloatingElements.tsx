@@ -11,18 +11,16 @@ export default function HalloweenFloatingElements() {
     <> 
       {/* Floating spider-web */}
       <div className="halloween-floating-bat" style={{ top: '', right: '50%', animationDelay: '1000s', fontSize: '40px' }}>
-      🎃
+      🎃 
       </div>
 
       {/* Floating Bats */}
-      <div className="halloween-floating-bat" style={{ top: '5%', right: '10%', animationDelay: '0s', fontSize: '40px' }}>
-        🦇
-      </div>
-      <div className="halloween-floating-bat" style={{ top: '15%', left: '10%', animationDelay: '0s', fontSize: '40px' }}>
+      
+      <div className="halloween-floating-bat" style={{ bottom: '15%', right: '10%', animationDelay: '0s', fontSize: '40px' }}>
         🦇
       </div>
       <div className="halloween-floating-bat" style={{ top: '25%', right: '15%', animationDelay: '2s', fontSize: '40px' }}>
-        🦇
+      👻 
       </div>
       <div className="halloween-floating-bat" style={{ top: '45%', left: '5%', animationDelay: '4s', fontSize: '48px' }}>
         🦇

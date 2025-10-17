@@ -27,7 +27,7 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: "🎃 Aylestone Kings - Moving the Midlands Forward",
+  title: "Aylestone Kings - Moving the Midlands Forward",
   description: "Professional taxi service in the Midlands. Book your ride online or download our app.",
   generator: "Aylestone Kings",
   other: {

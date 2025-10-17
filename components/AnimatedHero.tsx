@@ -34,6 +34,32 @@ export default function AnimatedHero() {
 
   return (
     <main className="relative min-h-screen bg-white">
+      {/* Halloween Background Image - Extended */}
+      {isHalloweenActive && (
+        <div 
+          className="absolute inset-0 bg-center bg-no-repeat bg-left opacity-50 z-0"
+          style={{
+            backgroundImage: 'url(/Halloweenbg.png)',
+            backgroundPosition: 'left center',
+            height: 'calc(100vh)',
+          }}
+          aria-label="Halloween themed background for Aylestone Kings taxi service"
+        />
+      )}
+      
+      {/* Spider Web Background Image */}
+      {isHalloweenActive && (
+        <div 
+          className="absolute inset-0 bg-center bg-no-repeat bg-right opacity-50 z-0"
+          style={{
+            backgroundImage: 'url(/Spider-web2.png)',
+            backgroundPosition: 'right top',
+            backgroundSize: '25.67% auto',
+          }}
+          aria-label="Spider web Halloween decoration for Aylestone Kings taxi service"
+        />
+      )}
+      
       {/* Halloween Overlay */}
       {isHalloweenActive && <div className="halloween-hero-overlay" />}
       {isHalloweenActive && <div className="halloween-mist" />}
@@ -73,11 +99,11 @@ export default function AnimatedHero() {
               onClick={handleBookNow}
               className={`${isHalloweenActive ? 'halloween-cta-glow' : 'animate-pulse bg-[#06A0A6] hover:bg-[#0F0D3E]'} text-white px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl mb-8`}
             >
-              {siteData.homepage.hero.ctaText}
-              <span className="halloween-pumpkin">🎃</span>
+              
+              {isHalloweenActive ? "Book Your Spook-tacular Ride Now 🎃" : "Book Your Ride Now"}
+              <span className="halloween-pumpkin"></span>
               <ArrowRight className="h-5 w-5" />
             </button>
-
             {/* Enhanced Car Image with Aylestone Theme */}
             <div className="flex justify-start">
               <div 
