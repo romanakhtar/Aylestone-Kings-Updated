@@ -1,8 +1,23 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, ArrowRight, MessageCircle } from "lucide-react"
+import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, ArrowRight, MessageCircle, Rocket, ShoppingBag, Theater, Crown, Church, Music, ShoppingCart, Calendar, Star } from "lucide-react"
 import Logo from "@/components/logo"
 import { companyInfo, contactInfo, socialLinks, footerData, copyrightInfo } from "@/lib/data"
+
+// Icon mapping function
+function getIconComponent(iconName: string) {
+  const iconMap: { [key: string]: any } = {
+    Rocket,
+    ShoppingBag,
+    Theater,
+    Crown,
+    Church,
+    Music,
+    ShoppingCart,
+    Calendar
+  }
+  return iconMap[iconName] || MapPin
+}
 
 export default function Footer() {
   return (
@@ -58,6 +73,124 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Priority Areas Section */}
+      <div className="border-t border-gray-200 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Featured Destinations</h3>
+            <p className="text-gray-600 text-lg">Popular locations we serve across Leicester</p>
+          </div>
+          
+          <div className="space-y-8">
+            {/* Op Priority Areas */}
+            <div>
+              <div className="flex items-center mb-6">
+                <Star className="h-6 w-6 text-yellow-500 mr-3" />
+                <h4 className="text-xl font-bold text-gray-800">Top Destinations</h4>
+             </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {(footerData as any).priorityAreas?.opPriority?.map((area: any) => {
+                  const IconComponent = getIconComponent(area.icon)
+                  return (
+                    <Link key={area.name} href={area.href} className="group">
+                      <div className="bg-gradient-to-br from-[#06A0A6]/5 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-[#06A0A6]/30 transition-all duration-300 hover:scale-105">
+                        <div className="flex items-start space-x-4">
+                          <div className="flex-shrink-0">
+                            <div className="w-12 h-12 bg-[#06A0A6]/10 rounded-lg flex items-center justify-center group-hover:bg-[#06A0A6]/20 transition-colors">
+                              <IconComponent className="h-6 w-6 text-[#06A0A6]" />
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            <h5 className="font-semibold text-gray-800 text-lg mb-2 group-hover:text-[#06A0A6] transition-colors">
+                              {area.name}
+                            </h5>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                              {area.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  )
+                })}
+              </div>
+            </div>
+
+            {/* Medium Priority Areas */}
+            <div>
+              <div className="flex items-center mb-6">
+                <div className="h-6 w-6 bg-blue-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">2</span>
+                </div>
+                <h4 className="text-xl font-bold text-gray-800">Popular Attractions</h4>
+            </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {(footerData as any).priorityAreas?.mediumPriority?.map((area: any) => {
+                  const IconComponent = getIconComponent(area.icon)
+                  return (
+                    <Link key={area.name} href={area.href} className="group">
+                      <div className="bg-gradient-to-br from-blue-50 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-300 transition-all duration-300 hover:scale-105">
+                        <div className="flex items-start space-x-4">
+                          <div className="flex-shrink-0">
+                            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                              <IconComponent className="h-6 w-6 text-blue-600" />
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            <h5 className="font-semibold text-gray-800 text-lg mb-2 group-hover:text-blue-600 transition-colors">
+                              {area.name}
+                            </h5>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                              {area.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  )
+                })}
+              </div>
+            </div>
+
+            {/* Optional Priority Areas */}
+            <div>
+              <div className="flex items-center mb-6">
+                <div className="h-6 w-6 bg-gray-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">3</span>
+                </div>
+                <h4 className="text-xl font-bold text-gray-800">Additional Locations</h4>
+             </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {(footerData as any).priorityAreas?.optionalPriority?.map((area: any) => {
+                  const IconComponent = getIconComponent(area.icon)
+                  return (
+                    <Link key={area.name} href={area.href} className="group">
+                      <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-gray-300 transition-all duration-300 hover:scale-105">
+                        <div className="flex items-start space-x-4">
+                          <div className="flex-shrink-0">
+                            <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-200 transition-colors">
+                              <IconComponent className="h-6 w-6 text-gray-600" />
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            <h5 className="font-semibold text-gray-800 text-lg mb-2 group-hover:text-gray-600 transition-colors">
+                              {area.name}
+                            </h5>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                              {area.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  )
+                })}
+              </div>
             </div>
           </div>
         </div>

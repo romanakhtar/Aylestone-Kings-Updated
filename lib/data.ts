@@ -467,21 +467,83 @@ export const siteData = {
       { name: "Taxis in King Power Stadium", href: "/taxis-in-king-power-stadium" },
       { name: "Taxis in Welford Road Stadium", href: "/taxis-in-welford-road-stadium" },
       { name: "Taxis in Morningside Arena", href: "/taxis-in-morningside-arena" },
-      { name: "Taxis in De Montfort Hall", href: "/taxis-in-de-montfort-hall" },
-      { name: "Taxis in Curve Theatre", href: "/taxis-in-curve-theatre" },
       { name: "Taxis in Leicester Racecourse", href: "/taxis-in-leicester-racecourse" },
-      { name: "Taxis in Highcross Leicester", href: "/taxis-in-highcross-leicester" },
-      { name: "Taxis in Haymarket Shopping Centre", href: "/taxis-in-haymarket-shopping-centre" },
       { name: "Taxis in Leicester Market", href: "/taxis-in-leicester-market" },
-      { name: "Taxis in National Space Centre", href: "/taxis-in-national-space-centre" },
       { name: "Taxis in Meridian Business Park", href: "/taxis-in-meridian-business-park" },
       { name: "Taxis in Grove Park", href: "/taxis-in-grove-park" },
       { name: "Taxis in Jame Mosque Leicester", href: "/taxis-in-jame-mosque-leicester" },
       { name: "Taxis in Masjid Umar", href: "/taxis-in-masjid-umar" },
       { name: "Taxis in Shree Hindu Temple Leicester", href: "/taxis-in-shree-hindu-temple-leicester" },
-      { name: "Taxis in Guru Nanak Gurdwara Leicester", href: "/taxis-in-guru-nanak-gurdwara-leicester" },
-      { name: "Taxis in Leicester Cathedral", href: "/taxis-in-leicester-cathedral" }
+      { name: "Taxis in Guru Nanak Gurdwara Leicester", href: "/taxis-in-guru-nanak-gurdwara-leicester" }
     ],
+    priorityAreas: {
+      opPriority: [
+        { 
+          name: "National Space Centre", 
+          href: "/taxis-in-national-space-centre",
+          description: "Leicester's #1 attraction with huge search volume",
+          icon: "Rocket"
+        },
+        { 
+          name: "Highcross Leicester", 
+          href: "/taxis-in-highcross-leicester",
+          description: "Major shopping centre with strong 'taxi to Highcross' demand",
+          icon: "ShoppingBag"
+        },
+        { 
+          name: "Curve Theatre", 
+          href: "/taxis-in-curve-theatre",
+          description: "Events & nightlife, people book taxis late evenings",
+          icon: "Theater"
+        }
+      ],
+      mediumPriority: [
+        { 
+          name: "King Richard III Visitor Centre", 
+          href: "/taxis-in-king-richard-iii-visitor-centre",
+          description: "Big tourist pull, city centre location",
+          icon: "Crown"
+        },
+        { 
+          name: "Leicester Cathedral", 
+          href: "/taxis-in-leicester-cathedral",
+          description: "Historic site and Richard III tomb",
+          icon: "Church"
+        },
+        { 
+          name: "De Montfort Hall", 
+          href: "/taxis-in-de-montfort-hall",
+          description: "Concerts, graduations, large events",
+          icon: "Music"
+        }
+      ],
+      optionalPriority: [
+        { 
+          name: "Haymarket Shopping Centre", 
+          href: "/taxis-in-haymarket-shopping-centre",
+          description: "Secondary to Highcross",
+          icon: "ShoppingCart"
+        },
+        { 
+          name: "Jewry Wall Museum", 
+          href: "/taxis-in-jewry-wall-museum",
+          description: "Smaller attraction searches",
+          icon: "Calendar"
+        },
+        { 
+          name: "New Walk Museum", 
+          href: "/taxis-in-new-walk-museum",
+          description: "Cultural attraction",
+          icon: "Calendar"
+        },
+        { 
+          name: "Athena / City Rooms", 
+          href: "/taxis-in-athena-city-rooms",
+          description: "Event venues, good for weddings/conferences",
+          icon: "Calendar"
+        }
+      ]
+    },
     areaDetails: {
       oadby: {
         landmarks: ["University of Leicester Botanic Garden", "The Parade (Oadby town centre)"]
