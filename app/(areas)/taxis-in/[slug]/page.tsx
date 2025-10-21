@@ -11,7 +11,13 @@ function getAllAreas(): AreaItem[] {
   const groups = footerData.areaGroups ?? []
   const areas = groups.flatMap((g: { items: AreaItem[] }) => g.items)
   const destinations = (footerData as any).destinationLinks ?? []
-  return [...areas, ...destinations]
+  const priorityAreas = (footerData as any).priorityAreas ?? {}
+  const featuredDestinations = [
+    ...(priorityAreas.opPriority ?? []),
+    ...(priorityAreas.mediumPriority ?? []),
+    ...(priorityAreas.optionalPriority ?? [])
+  ]
+  return [...areas, ...destinations, ...featuredDestinations]
 }
 function slugFromHref(href: string): string {
   // Support both formats: /taxis-in-aylestone and /taxis-in/aylestone
@@ -65,7 +71,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   if (!area) return notFound()
 
   const areaPlain = area.name.replace(/^Taxis in\s+/i, "")
-  const isDestination = (footerData as any).destinationLinks?.some((d: any) => slugFromHref(d.href) === slug)
+  const isDestination = (footerData as any).destinationLinks?.some((d: any) => slugFromHref(d.href) === slug) ||
+    (footerData as any).priorityAreas?.opPriority?.some((d: any) => slugFromHref(d.href) === slug) ||
+    (footerData as any).priorityAreas?.mediumPriority?.some((d: any) => slugFromHref(d.href) === slug) ||
+    (footerData as any).priorityAreas?.optionalPriority?.some((d: any) => slugFromHref(d.href) === slug)
   const details = (footerData as any).areaDetails?.[slug] as { landmarks?: string[] } | undefined
   const landmarks = details?.landmarks ?? []
   const relatedAreas = getAllAreas()
