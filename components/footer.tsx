@@ -79,7 +79,20 @@ export default function Footer() {
             <div>
               <h4 className="font-bold text-gray-800 text-lg md:text-xl mb-4 tracking-tight">Supermarkets</h4>
               <ul className="space-y-2.5">
-                {(footerData as any).supermarketLinks?.map((supermarket: { name: string; href: string }) => (
+                {(footerData as any).destinationLinks?.filter((link: { name: string; href: string }) => 
+                  (link.name.includes("Taxi to") && (
+                    link.name.includes("Asda") || 
+                    link.name.includes("Sainsburys") || 
+                    link.name.includes("Tesco") || 
+                    link.name.includes("Aldi") || 
+                    link.name.includes("Lidl") || 
+                    link.name.includes("Morrisons") || 
+                    link.name.includes("Iceland") || 
+                    link.name.includes("Farmfoods") || 
+                    link.name.includes("M&S") || 
+                    link.name.includes("Waitrose")
+                  )) || link.name.includes("Supermarket Taxi Leicester")
+                ).map((supermarket: { name: string; href: string }) => (
                   <li key={supermarket.name}>
                     <Link href={supermarket.href} className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
                       <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />

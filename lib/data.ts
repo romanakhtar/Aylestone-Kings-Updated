@@ -451,19 +451,6 @@ export const siteData = {
       { name: "Stansted Airport", href: "/pricing/airports/Stansted" },
       { name: "Manchester Airport", href: "/pricing/airports/Manchester" }
     ],
-    supermarketLinks: [
-      { name: "Supermarket Taxi Leicester", href: "/supermarket-taxi-leicester" },
-      { name: "Taxi to Asda Fosse Park", href: "/taxis-in-fosse-park" },
-      { name: "Taxi to Sainsburys Grove Triangle", href: "/taxis-in-grove-park" },
-      { name: "Taxi to Tesco Narborough Road", href: "/taxis-in-narborough" },
-      { name: "Taxi to Aldi Aylestone Road", href: "/taxis-in-aylestone" },
-      { name: "Taxi to Lidl Beaumont Leys", href: "/taxis-in-beaumont-leys" },
-      { name: "Taxi to Morrisons Freemens Common", href: "/taxis-in-leicester-city-centre" },
-      { name: "Taxi to Iceland City Centre", href: "/taxis-in-leicester-city-centre" },
-      { name: "Taxi to Farmfoods St Matthews", href: "/taxis-in-leicester-city-centre" },
-      { name: "Taxi to M&S Foodhall City Centre", href: "/taxis-in-leicester-city-centre" },
-      { name: "Taxi to Waitrose Oadby", href: "/taxis-in-oadby" }
-    ],
     destinationLinks: [
       { name: "Taxis in Leicester Royal Infirmary", href: "/taxis-in-leicester-royal-infirmary" },
       { name: "Taxis in Glenfield Hospital", href: "/taxis-in-glenfield-hospital" },
@@ -487,7 +474,17 @@ export const siteData = {
       { name: "Taxis in Jame Mosque Leicester", href: "/taxis-in-jame-mosque-leicester" },
       { name: "Taxis in Masjid Umar", href: "/taxis-in-masjid-umar" },
       { name: "Taxis in Shree Hindu Temple Leicester", href: "/taxis-in-shree-hindu-temple-leicester" },
-      { name: "Taxis in Guru Nanak Gurdwara Leicester", href: "/taxis-in-guru-nanak-gurdwara-leicester" }
+      { name: "Taxis in Guru Nanak Gurdwara Leicester", href: "/taxis-in-guru-nanak-gurdwara-leicester" },
+      { name: "Taxi to Asda Fosse Park", href: "/taxis-in-asda-fosse-park" },
+      { name: "Taxi to Sainsburys Grove Triangle", href: "/taxis-in-sainsburys-grove-triangle" },
+      { name: "Taxi to Tesco Narborough Road", href: "/taxis-in-tesco-narborough-road" },
+      { name: "Taxi to Aldi Aylestone Road", href: "/taxis-in-aldi-aylestone-road" },
+      { name: "Taxi to Lidl Beaumont Leys", href: "/taxis-in-lidl-beaumont-leys" },
+      { name: "Taxi to Morrisons Freemens Common", href: "/taxis-in-morrisons-freemens-common" },
+      { name: "Taxi to Iceland City Centre", href: "/taxis-in-iceland-city-centre" },
+      { name: "Taxi to Farmfoods St Matthews", href: "/taxis-in-farmfoods-st-matthews" },
+      { name: "Taxi to M&S Foodhall City Centre", href: "/taxis-in-m-and-s-foodhall-city-centre" },
+      { name: "Taxi to Waitrose Oadby", href: "/taxis-in-waitrose-oadby" }
     ],
     priorityAreas: {
       opPriority: [
