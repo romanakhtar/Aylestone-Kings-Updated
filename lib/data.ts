@@ -451,6 +451,19 @@ export const siteData = {
       { name: "Stansted Airport", href: "/pricing/airports/Stansted" },
       { name: "Manchester Airport", href: "/pricing/airports/Manchester" }
     ],
+    supermarketLinks: [
+      { name: "Supermarket Taxi Leicester", href: "/supermarket-taxi-leicester" },
+      { name: "Taxi to Asda Fosse Park", href: "/taxis-in-fosse-park" },
+      { name: "Taxi to Sainsburys Grove Triangle", href: "/taxis-in-grove-park" },
+      { name: "Taxi to Tesco Narborough Road", href: "/taxis-in-narborough" },
+      { name: "Taxi to Aldi Aylestone Road", href: "/taxis-in-aylestone" },
+      { name: "Taxi to Lidl Beaumont Leys", href: "/taxis-in-beaumont-leys" },
+      { name: "Taxi to Morrisons Freemens Common", href: "/taxis-in-leicester-city-centre" },
+      { name: "Taxi to Iceland City Centre", href: "/taxis-in-leicester-city-centre" },
+      { name: "Taxi to Farmfoods St Matthews", href: "/taxis-in-leicester-city-centre" },
+      { name: "Taxi to M&S Foodhall City Centre", href: "/taxis-in-leicester-city-centre" },
+      { name: "Taxi to Waitrose Oadby", href: "/taxis-in-oadby" }
+    ],
     destinationLinks: [
       { name: "Taxis in Leicester Royal Infirmary", href: "/taxis-in-leicester-royal-infirmary" },
       { name: "Taxis in Glenfield Hospital", href: "/taxis-in-glenfield-hospital" },
