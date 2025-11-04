@@ -31,6 +31,7 @@ export const siteData = {
       { name: "About Us", href: "/about" },  
       { name: "Airport Pricing", href: "/pricing" },
       { name: "Travel", href: "/travel" },
+      { name: "Blog", href: "/blog" },
       { name: "Contact", href: "/contact" },
       { name: "More", href: "#", hasDropdown: true }
     ],
@@ -359,6 +360,7 @@ export const siteData = {
       { name: "About Us", href: "/about" },  
       { name: "Airport Pricing", href: "/pricing" },
       { name: "Travel", href: "/travel" },
+      { name: "Blog", href: "/blog" },
       { name: "Contact", href: "/contact" },
       { name: "Company", href: "/company" },
       { name: "Fleet", href: "/fleet" },
@@ -559,6 +561,173 @@ export const siteData = {
         landmarks: ["University of Leicester Botanic Garden", "The Parade (Oadby town centre)"]
       }
     }
+  },
+
+  // Blog Page Content
+  blogPage: {
+    title: "Aylestone Kings Blog",
+    subtitle: "Discover insights, tips, and stories about transportation in Leicester",
+    blogs: [
+      {
+        id: "why-leicester-locals-trust-aylestone-taxis",
+        title: "Why Leicester Locals Trust Aylestone Taxis",
+        excerpt: "For over 30 years, Aylestone Kings has been the trusted choice for transportation in Leicester. Discover what makes us the preferred taxi service for thousands of local residents.",
+        content: `
+          <p>When it comes to choosing a taxi service in Leicester, trust is everything. For over 30 years, Aylestone Kings has been serving the local community with reliable, professional, and affordable transportation. But what exactly makes Leicester locals trust us with their journeys?</p>
+          
+          <h2>Deep Local Knowledge</h2>
+          <p>Our drivers know Leicester like the back of their hand. From navigating the busy streets of the city centre to finding the quickest routes during peak hours, our local expertise ensures you arrive at your destination on time, every time. Whether you're heading to the National Space Centre, Highcross Leicester, or any location across the city, we know the best routes.</p>
+          
+          <h2>Proven Track Record</h2>
+          <p>Since 1995, we've built a reputation for excellence. With over 30 years of experience, thousands of satisfied customers, and a 99.7% satisfaction rating, our track record speaks for itself. Leicester locals trust us because we've consistently delivered reliable service year after year.</p>
+          
+          <h2>Safety First</h2>
+          <p>All our drivers are fully licensed by Leicester City Council and undergo rigorous DBS checks. Our vehicles are regularly maintained and inspected to ensure your safety. We're fully insured and operate with the highest safety standards in the industry.</p>
+          
+          <h2>24/7 Availability</h2>
+          <p>Life doesn't stop at 5pm, and neither do we. Our 24/7 service means you can count on us whenever you need us - whether it's an early morning airport transfer, a late-night journey home, or an emergency ride to the hospital.</p>
+          
+          <h2>Transparent Pricing</h2>
+          <p>No hidden fees, no surprises. We believe in transparent, fair pricing. Leicester locals appreciate knowing exactly what they'll pay upfront, with competitive rates that won't break the bank.</p>
+          
+          <h2>Community Commitment</h2>
+          <p>We're not just a taxi service - we're part of the Leicester community. We support local events, understand local needs, and are committed to serving our community for years to come. When you choose Aylestone Kings, you're supporting a local business that cares about Leicester.</p>
+          
+          <p>Join thousands of Leicester locals who trust Aylestone Kings for their transportation needs. Book your ride today and experience the difference that 30 years of excellence makes.</p>
+        `,
+        date: "2025-01-15",
+        author: "Aylestone Kings Team",
+        category: "Community",
+        image: "/Locals-trust.jpg"
+      },
+      {
+        id: "reliable-airport-transfers-from-leicester",
+        title: "Reliable Airport Transfers from Leicester",
+        excerpt: "Planning your next trip? Discover why Aylestone Kings is the preferred choice for stress-free airport transfers from Leicester to all major UK airports.",
+        content: `
+          <p>Planning a trip abroad? Whether you're heading to Birmingham, East Midlands, Heathrow, Gatwick, or any other major UK airport, reliable airport transfers are essential for a stress-free start to your journey. Aylestone Kings has been providing dependable airport transfer services from Leicester for over 30 years.</p>
+          
+          <h2>Why Choose Aylestone Kings for Airport Transfers?</h2>
+          
+          <h3>Punctuality Guaranteed</h3>
+          <p>Missing a flight can be costly and stressful. That's why we guarantee punctuality for all airport transfers. We monitor flight schedules and adjust pickup times accordingly, ensuring you arrive at the airport with plenty of time to spare. Our drivers understand the importance of being on time and plan accordingly.</p>
+          
+          <h3>All Major Airports Covered</h3>
+          <p>We provide reliable transfers from Leicester to all major UK airports:</p>
+          <ul>
+            <li><strong>Birmingham Airport</strong> - Approximately 45 minutes</li>
+            <li><strong>East Midlands Airport</strong> - Approximately 30 minutes</li>
+            <li><strong>Heathrow Airport</strong> - Approximately 2 hours</li>
+            <li><strong>Gatwick Airport</strong> - Approximately 2.5 hours</li>
+            <li><strong>Luton Airport</strong> - Approximately 1.5 hours</li>
+            <li><strong>Stansted Airport</strong> - Approximately 2 hours</li>
+            <li><strong>Manchester Airport</strong> - Approximately 1.5 hours</li>
+          </ul>
+          
+          <h3>Comfortable Vehicles</h3>
+          <p>Start your journey in comfort. Our fleet includes spacious estate vehicles perfect for luggage, executive cars for business travel, and MPVs for larger groups. All vehicles are clean, well-maintained, and equipped with modern amenities.</p>
+          
+          <h3>Meet and Greet Service</h3>
+          <p>For added convenience, we offer meet and greet services at the airport. Your driver will meet you in the arrivals hall with a name board, help with your luggage, and ensure a smooth journey home.</p>
+          
+          <h3>Competitive Pricing</h3>
+          <p>We offer transparent, competitive pricing for all airport transfers. No hidden fees, no surprises. Book in advance for the best rates, and we'll confirm your price upfront.</p>
+          
+          <h3>Easy Booking</h3>
+          <p>Booking your airport transfer is simple. You can book online, call us directly, or use our mobile app. We recommend booking in advance, especially during peak travel seasons, to secure your preferred time slot.</p>
+          
+          <h3>Return Transfers</h3>
+          <p>Need a ride home from the airport? We also provide return transfer services. Simply provide your flight details, and we'll track your flight and adjust pickup times if there are any delays.</p>
+          
+          <h2>Tips for a Smooth Airport Transfer</h2>
+          <ul>
+            <li>Book in advance, especially for early morning or late-night flights</li>
+            <li>Provide your flight details so we can monitor for delays</li>
+            <li>Allow extra time during peak travel periods</li>
+            <li>Pack efficiently - our drivers can help with luggage</li>
+            <li>Have your booking confirmation ready</li>
+          </ul>
+          
+          <p>Don't let airport transfers stress you out. Trust Aylestone Kings for reliable, punctual, and comfortable airport transfers from Leicester. Book your transfer today and travel with confidence.</p>
+        `,
+        date: "2025-01-10",
+        author: "Aylestone Kings Team",
+        category: "Airport Transfers",
+        image: "/Reliable-airport-transfers.jpg"
+      },
+      {
+        id: "explore-leicester-with-aylestone-taxis",
+        title: "Explore Leicester with Aylestone Taxis",
+        excerpt: "Discover Leicester's hidden gems and popular attractions with Aylestone Kings. From historic sites to modern entertainment, we'll get you there in comfort and style.",
+        content: `
+          <p>Leicester is a city rich in history, culture, and entertainment. From the historic King Richard III Visitor Centre to the modern Highcross shopping centre, there's something for everyone to explore. Aylestone Kings makes it easy to discover all that Leicester has to offer with reliable, comfortable taxi services throughout the city.</p>
+          
+          <h2>Historic Attractions</h2>
+          
+          <h3>King Richard III Visitor Centre</h3>
+          <p>Step back in time and discover the fascinating story of King Richard III, whose remains were discovered in Leicester in 2012. The visitor centre offers an immersive experience that brings history to life. Located in the heart of the city, it's easily accessible by taxi.</p>
+          
+          <h3>Leicester Cathedral</h3>
+          <p>Visit the final resting place of King Richard III at Leicester Cathedral. This beautiful historic building is a must-see for history enthusiasts and offers a peaceful retreat in the city centre.</p>
+          
+          <h3>Jewry Wall Museum</h3>
+          <p>Explore Leicester's Roman past at the Jewry Wall Museum. Discover Roman baths and artefacts that tell the story of Leicester's ancient history. Perfect for families and history lovers alike.</p>
+          
+          <h2>Modern Entertainment</h2>
+          
+          <h3>Highcross Leicester</h3>
+          <p>Shop till you drop at Highcross, Leicester's premier shopping destination. With over 100 stores, restaurants, and entertainment options, Highcross offers a complete day out. We regularly provide taxi services to and from Highcross, making it easy to enjoy a shopping day without worrying about parking.</p>
+          
+          <h3>Curve Theatre</h3>
+          <p>Catch a show at Curve, Leicester's award-winning theatre. From West End productions to local performances, Curve offers world-class entertainment. Our taxi service is perfect for theatre nights, especially for late evening performances.</p>
+          
+          <h3>National Space Centre</h3>
+          <p>Embark on a journey through space at the National Space Centre. This interactive museum is perfect for families and space enthusiasts. With exhibits, planetarium shows, and hands-on activities, it's a day out you won't forget.</p>
+          
+          <h2>Sports & Events</h2>
+          
+          <h3>King Power Stadium</h3>
+          <p>Cheer on Leicester City FC at King Power Stadium. Match days are busy, and parking can be challenging. Our taxi service is the perfect solution for getting to and from the stadium stress-free.</p>
+          
+          <h3>Welford Road Stadium</h3>
+          <p>Support the Leicester Tigers at Welford Road Stadium. Whether it's a rugby match or a special event, we'll get you there on time and in comfort.</p>
+          
+          <h3>De Montfort Hall</h3>
+          <p>Enjoy concerts, comedy shows, and events at De Montfort Hall. This historic venue hosts a variety of entertainment throughout the year. Our taxi service ensures you arrive relaxed and ready to enjoy the show.</p>
+          
+          <h2>Shopping & Dining</h2>
+          
+          <h3>Leicester Market</h3>
+          <p>Experience the vibrant atmosphere of Leicester Market, one of the largest outdoor markets in Europe. From fresh produce to unique crafts, there's something for everyone. We provide regular taxi services to the market area.</p>
+          
+          <h3>Golden Mile</h3>
+          <p>Explore Leicester's famous Golden Mile, known for its Indian restaurants, shops, and cultural attractions. Experience authentic cuisine and vibrant culture in this unique part of the city.</p>
+          
+          <h2>Why Choose Aylestone Kings for Exploring Leicester?</h2>
+          
+          <h3>Local Knowledge</h3>
+          <p>Our drivers know Leicester inside and out. We can recommend the best routes, avoid traffic, and even suggest local attractions you might not know about.</p>
+          
+          <h3>Flexible Service</h3>
+          <p>Whether you're planning a day of sightseeing or a night out, we're here when you need us. Our 24/7 service means you can explore Leicester at your own pace.</p>
+          
+          <h3>Comfortable Rides</h3>
+          <p>After a long day of exploring, there's nothing better than a comfortable ride home. Our well-maintained vehicles ensure you travel in comfort throughout your Leicester adventure.</p>
+          
+          <h3>Group Travel</h3>
+          <p>Exploring with friends or family? Our MPV vehicles can accommodate larger groups, making it easy to travel together to Leicester's attractions.</p>
+          
+          <h2>Planning Your Leicester Adventure</h2>
+          <p>Whether you're a local resident looking to rediscover your city or a visitor exploring Leicester for the first time, Aylestone Kings is here to help you get around. Our reliable taxi service makes it easy to visit multiple attractions in one day, without worrying about parking or navigation.</p>
+          
+          <p>Book your taxi today and start exploring everything Leicester has to offer. From historic sites to modern entertainment, we'll get you there safely and comfortably.</p>
+        `,
+        date: "2025-01-05",
+        author: "Aylestone Kings Team",
+        category: "Local Guide",
+        image: "/Explore Leicester.jpg"
+      }
+    ]
   },
 }
 
