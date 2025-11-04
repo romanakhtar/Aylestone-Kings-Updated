@@ -11,7 +11,6 @@ import { HalloweenThemeProvider } from "@/components/HalloweenThemeProvider"
 import HalloweenTopBanner from "@/components/HalloweenTopBanner"
 import HalloweenFloatingElements from "@/components/HalloweenFloatingElements"
 import HalloweenSpiderWeb from "@/components/HalloweenSpiderWeb"
-import HalloweenToggle from "@/components/HalloweenToggle"
 import Script from "next/script";
 const inter = Inter({
   subsets: ["latin"],
@@ -121,7 +120,6 @@ export default function RootLayout({
           </main>
           <Footer />
           <FloatingContactButton />
-          <HalloweenToggle />
         </HalloweenThemeProvider>
         <Script
           id="schema-markup"
