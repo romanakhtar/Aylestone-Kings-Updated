@@ -2,6 +2,12 @@
 import Image from "next/image"
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "East Midlands Airport Transfers from Leicester | Aylestone Taxis",
+  description: "Reliable taxi transfers from Leicester to East Midlands (EMA). Fixed fares, 24/7 service, modern vehicles.",
+}
 
 export default function EastMidlandsPage() {
   return (

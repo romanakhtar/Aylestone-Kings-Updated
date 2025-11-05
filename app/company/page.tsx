@@ -1,6 +1,12 @@
  
 import Image from "next/image"
 import { siteData } from "@/lib/data"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Aylestone Taxis Company | Leicester Taxi Service",
+  description: "Discover Aylestone Taxis – trusted Leicester taxi company with 24/7 service, licensed drivers and modern fleet.",
+}
 import { Shield, Users, Award, Clock, Check, ArrowRight } from "lucide-react"
 
 export default function CompanyPage() {

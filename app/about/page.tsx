@@ -2,6 +2,12 @@
 import Image from "next/image"
 import { Shield, Clock, Users, Award, MapPin, Phone, Check, ArrowRight, MessageCircle, Mail, Globe } from "lucide-react"
 import { contactInfo, siteData } from "@/lib/data"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About Aylestone Taxis | Leicester Taxi Company",
+  description: "Learn about Aylestone Taxis – licensed, reliable taxi company in Leicester offering 24/7 service and airport transfers.",
+}
 
 export default function AboutPage() {
   return (

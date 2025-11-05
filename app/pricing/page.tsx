@@ -1,6 +1,12 @@
  
 import { Calendar, MapPin, CreditCard, Clock, MessageCircle, Headphones, Check, Star, Shield, Zap, Users, Car } from "lucide-react"
 import {  ArrowRight } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Airport Taxi Prices Leicester | Aylestone Taxis",
+  description: "Transparent airport transfer prices from Leicester to BHX, EMA, LHR, LGW, LTN, STN, MAN. Fixed fares with Aylestone Taxis.",
+}
 import { contactInfo } from "@/lib/data"
 import Link from "next/link"
 

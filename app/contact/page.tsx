@@ -13,6 +13,12 @@ import {
  Users,
 } from "lucide-react";
 import { contactInfo } from "@/lib/data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Aylestone Taxis | Book a Taxi in Leicester",
+  description: "Contact Aylestone Taxis by phone, WhatsApp or online. Book a taxi in Leicester 24/7.",
+}
 import { useForm, ValidationError } from "@formspree/react";
 export default function ContactPage() {
  const [state, handleSubmit] = useForm("myzdazng");

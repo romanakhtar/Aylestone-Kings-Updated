@@ -2,6 +2,12 @@
 import Image from "next/image"
 import { Check, ArrowRight, Users, Car, Shield, Star, Clock } from "lucide-react"
 import { contactInfo } from "@/lib/data"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Taxi Fleet in Leicester | Aylestone Taxis",
+  description: "Explore Aylestone Taxis’ fleet: saloon, estate, MPV and minibuses for local journeys and airport transfers in Leicester.",
+}
 
 export default function FleetPage() {
   return (

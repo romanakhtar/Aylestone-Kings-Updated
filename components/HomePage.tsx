@@ -1,15 +1,13 @@
 "use client"
 import Image from "next/image"
 import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight } from "lucide-react"
-import { siteData, contactInfo } from "@/lib/data"
+import { siteData } from "@/lib/data"
 import AppDownloadButtons from "@/components/AppDownloadButtons"
 import AnimatedHero from "@/components/AnimatedHero"
 import { useState, useEffect } from "react"
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 
-
-
-export default function Home() {
+export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const { isHalloweenActive } = useHalloweenTheme();
@@ -19,11 +17,9 @@ export default function Home() {
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, totalSlides]);
 
@@ -98,9 +94,7 @@ export default function Home() {
               Your safety and trust are our top priorities. We maintain the highest standards of licensing, security and your safety.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Leicester City Council */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-blue-600" />
@@ -108,8 +102,6 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Leicester Licensed</h3>
               <p className="text-gray-600 text-sm">Fully licensed by Leicester City Council</p>
             </div>
-
-            {/* Wolverhampton City Council */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-green-600" />
@@ -117,8 +109,6 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Wolverhampton Licensed</h3>
               <p className="text-gray-600 text-sm">Licensed by Wolverhampton City Council</p>
             </div>
-
-            {/* DBS Checked */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-purple-600" />
@@ -126,8 +116,6 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">DBS Checked</h3>
               <p className="text-gray-600 text-sm">All drivers are DBS checked for your safety</p>
             </div>
-
-            {/* 24/7 Service */}
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="h-8 w-8 text-orange-600" />
@@ -138,6 +126,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* For Passengers Section */}
       <section className="section-padding bg-[#E4E4E4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,7 +213,6 @@ export default function Home() {
       <section id="app-download" className="py-20 bg-[#E4E4E4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left - App Screenshots */}
             <div className="relative">
               <div className="absolute inset-0 rounded-2xl"></div>
               <Image
@@ -235,8 +223,6 @@ export default function Home() {
                 className="relative z-10 rounded-2xl shadow-2xl"
               />
             </div>
-
-            {/* Right - Content */}
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
                 Quick Booking
@@ -250,7 +236,6 @@ export default function Home() {
               <p className="text-lg text-[#2E3C44] mb-8 leading-relaxed">
                 {siteData.homepage.quickBooking.description}
               </p>
-              
               <div className="space-y-4 mb-8">
                 {siteData.homepage.quickBooking.features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
@@ -259,7 +244,6 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-
               <AppDownloadButtons />
             </div>
           </div>
@@ -268,7 +252,6 @@ export default function Home() {
 
       {/* Executive Fleet Section */}
       <section className="relative py-20 text-white overflow-hidden">
-        {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
@@ -277,12 +260,9 @@ export default function Home() {
           }}
           aria-label="Luxury black executive taxi vehicle from Aylestone Kings premium fleet"
         />
-        {/* Gradient Mask - Fades from transparent on right to solid on left */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#06A0A6] via-[#06A0A6]/80 to-transparent"></div>
-        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
                 {siteData.homepage.executiveFleet.title}
@@ -314,8 +294,6 @@ export default function Home() {
             <p className="text-xl text-[#2E3C44] mb-8">
               {siteData.homepage.sustainability.subtitle}
             </p>
-            
-            {/* Green Car Image */}
             <div className="relative inline-block">
               <div className="absolute inset-0 rounded-2xl blur-xl"></div>
               <Image
@@ -338,10 +316,7 @@ export default function Home() {
               {siteData.homepage.customerReviews.title}
             </h2>
           </div>
-
-          {/* Carousel Container */}
           <div className="relative">
-            {/* Carousel Track */}
             <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-700 ease-in-out"
@@ -351,7 +326,6 @@ export default function Home() {
                   <div key={index} className="w-full flex-shrink-0 px-4">
                     <div className="max-w-2xl mx-auto">
                       <div className="bg-cyan-500/20 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-cyan-500/30 transform transition-all duration-300 hover:scale-105">
-                        {/* Quote Icon */}
                         <div className="flex justify-center mb-4">
                           <div className="w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-full flex items-center justify-center">
                             <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -359,20 +333,14 @@ export default function Home() {
                             </svg>
                           </div>
                         </div>
-
-                        {/* Stars */}
                         <div className="flex justify-center gap-1 mb-4">
                           {[...Array(5)].map((_, i) => (
                             <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
                           ))}
                         </div>
-
-                        {/* Review Text */}
                         <p className="text-[#0F0D3E] text-base md:text-lg mb-6 leading-relaxed italic text-center font-medium">
                           "{review.text}"
                         </p>
-
-                        {/* Author Info */}
                         <div className="flex flex-col items-center text-center">
                           <div className="w-12 h-12 bg-gradient-to-br from-[#06A0A6]/20 to-[#0F0D3E]/20 rounded-full flex items-center justify-center mb-3">
                             <span className="text-[#06A0A6] font-bold text-lg">
@@ -390,8 +358,6 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
-            {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
               className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 z-10"
@@ -399,7 +365,6 @@ export default function Home() {
             >
               <ChevronLeft className="w-6 h-6 text-[#0F0D3E]" />
             </button>
-
             <button
               onClick={nextSlide}
               className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 z-10"
@@ -407,8 +372,6 @@ export default function Home() {
             >
               <ChevronRight className="w-6 h-6 text-[#0F0D3E]" />
             </button>
-
-            {/* Dots Indicator */}
             <div className="flex justify-center mt-8 gap-3">
               {reviews.map((_, index) => (
                 <button
@@ -423,8 +386,6 @@ export default function Home() {
                 />
               ))}
             </div>
-
-            {/* Auto-play Toggle */}
             <div className="flex justify-center mt-4">
               <button
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}
@@ -468,3 +429,5 @@ export default function Home() {
     </div>
   )
 }
+
+

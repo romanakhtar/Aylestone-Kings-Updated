@@ -2,6 +2,12 @@
 import Image from "next/image"
 import { contactInfo, siteData } from "@/lib/data"
 import { ArrowRight } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Travel With Aylestone Taxis | Leicester Taxi Service",
+  description: "Book reliable travel in Leicester: stations, stadiums, shopping and airports with Aylestone Taxis.",
+}
 export default function OurTeamPage() {
   return (
     <div className="min-h-screen bg-white">

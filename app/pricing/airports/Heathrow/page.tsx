@@ -1,6 +1,12 @@
  
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Heathrow Airport Transfers from Leicester | Aylestone Taxis",
+  description: "Reliable taxi transfers from Leicester to Heathrow (LHR). Fixed fares, 24/7 service, modern vehicles.",
+}
 
 export default function HeathrowPage() {
   return (

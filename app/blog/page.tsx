@@ -128,7 +128,7 @@ export default function BlogPage() {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Experience the reliable, professional taxi service that Leicester locals trust. Book your ride today!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href={contactInfo.booking.online}
                 target="_blank"
