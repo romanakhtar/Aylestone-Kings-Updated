@@ -595,7 +595,7 @@ export const siteData = {
           
           <p>Join thousands of Leicester locals who trust Aylestone Kings for their transportation needs. Book your ride today and experience the difference that 30 years of excellence makes.</p>
         `,
-        date: "2025-01-15",
+        date: "2025-11-04",
         author: "Aylestone Kings Team",
         category: "Community",
         image: "/Locals-trust.jpg"
@@ -650,7 +650,7 @@ export const siteData = {
           
           <p>Don't let airport transfers stress you out. Trust Aylestone Kings for reliable, punctual, and comfortable airport transfers from Leicester. Book your transfer today and travel with confidence.</p>
         `,
-        date: "2025-01-10",
+        date: "2025-11-03",
         author: "Aylestone Kings Team",
         category: "Airport Transfers",
         image: "/Reliable-airport-transfers.jpg"
@@ -722,7 +722,7 @@ export const siteData = {
           
           <p>Book your taxi today and start exploring everything Leicester has to offer. From historic sites to modern entertainment, we'll get you there safely and comfortably.</p>
         `,
-        date: "2025-01-05",
+        date: "2025-11-05",
         author: "Aylestone Kings Team",
         category: "Local Guide",
         image: "/Explore Leicester.jpg"

@@ -128,20 +128,20 @@ export default function BlogPage() {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Experience the reliable, professional taxi service that Leicester locals trust. Book your ride today!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href={contactInfo.booking.online}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block"
+                className="w-full sm:w-auto"
               >
-                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl">
+                <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl">
                   Book Online Now
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
-              <a href={`tel:${contactInfo.phone}`} className="inline-block">
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:bg-white hover:text-[#06A0A6]">
+              <a href={`tel:${contactInfo.phone}`} className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:bg-white hover:text-[#06A0A6]">
                   Call {contactInfo.phone}
                 </button>
               </a>
