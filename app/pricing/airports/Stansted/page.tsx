@@ -1,6 +1,11 @@
- 
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Stansted Airport Taxi from Leicester | Aylestone Taxis",
+  description: "Reliable Leicester taxi service to London Stansted Airport (STN). Fixed rates from £150. 24/7 transfers, licensed drivers, and comfortable vehicles. Book your Leicester to Stansted airport transfer today.",
+}
 
 export default function StanstedPage() {
   return (

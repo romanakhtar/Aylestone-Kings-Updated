@@ -1,7 +1,12 @@
- 
 import Image from "next/image"
 import { Shield, Clock, Users, Award, MapPin, Phone, Check, ArrowRight, MessageCircle, Mail, Globe } from "lucide-react"
 import { contactInfo, siteData } from "@/lib/data"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About Us | Leicester Taxi Service | Aylestone Taxis",
+  description: "Learn about Aylestone Kings - Leicester's trusted taxi company since 1995. Licensed drivers, 24/7 service, and 30+ years of experience serving Leicester and Leicestershire.",
+}
 
 export default function AboutPage() {
   return (
@@ -12,8 +17,9 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/taxi-bridge-background.jpg"
-            alt="Professional taxi service background"
+            alt="Leicester taxi service background showing Aylestone Kings professional transport vehicles and Leicester landmarks"
             fill
+            sizes="100vw"
             className="object-cover opacity-20"
             priority
           />
@@ -39,7 +45,7 @@ export default function AboutPage() {
             
             {/* Enhanced Description */}
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10 font-light">
-              Moving <span className="text-[#06A0A6] font-semibold">Aylestone</span> forward with reliable,
+              <span className="text-[#06A0A6] font-semibold">Driving Leicester Forward</span> with reliable,
               professional taxi services since {siteData.company.founded}. We're committed to providing safe, efficient, and
               convenient transportation solutions for our community.
             </p>
@@ -104,10 +110,12 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-2xl"></div>
               <Image
                 src="/company-history.jpg"
-                alt="Aylestone Kings History"
+                alt="Aylestone Kings taxi company history - Leicester-based taxi service established in 1995, serving the community for over 30 years"
                 width={600}
                 height={400}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
+                loading="lazy"
               />
             </div>
           </div>

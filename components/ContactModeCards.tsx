@@ -65,8 +65,8 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
               rel={mode.name === 'Book Online' || mode.name === 'Email' ? '' : 'noopener noreferrer'}
               className={`${mode.bgColor} ${mode.hoverBgColor} text-white px-3 sm:px-4 lg:px-4 py-3 lg:py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 lg:gap-3 shadow-lg hover:shadow-2xl transform hover:scale-105 group hover:-translate-y-1 border border-white/20 relative overflow-hidden w-full`}
               style={{
-                animationDelay: `${index * 100}ms`
-              }}
+                animationDelay: `${index * 100}ms`,
+              } as React.CSSProperties}
             >
               {/* Subtle overlay effect */}
               <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

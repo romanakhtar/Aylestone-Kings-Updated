@@ -15,13 +15,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   
   if (!blog) {
     return {
-      title: "Blog Post Not Found - Aylestone Kings",
+      title: "Blog Post Not Found | Leicester Taxi Service | Aylestone Taxis",
+      description: "The requested blog post could not be found. Browse our blog for travel tips and Leicester taxi guides.",
     }
   }
 
   return {
-    title: `${blog.title} - Aylestone Kings Blog`,
-    description: blog.excerpt,
+    title: `${blog.title} | Leicester Taxi Service | Aylestone Taxis`,
+    description: `${blog.excerpt} Read more on the Aylestone Kings blog for Leicester taxi tips and travel advice.`,
   }
 }
 
@@ -47,8 +48,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <div className="absolute inset-0 z-0">
           <Image
             src={blog.image}
-            alt={blog.title}
+            alt={`${blog.title} - Aylestone Kings Leicester taxi service blog post background image`}
             fill
+            sizes="100vw"
             className="object-cover opacity-20"
             priority
           />
@@ -103,21 +105,19 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <div className="relative h-96 mb-12 rounded-2xl overflow-hidden shadow-xl">
             <Image
               src={blog.image}
-              alt={blog.title}
+              alt={`${blog.title} - Featured image for Aylestone Kings Leicester taxi service blog post about ${blog.category.toLowerCase()}`}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               className="object-cover"
+              priority
             />
           </div>
 
           {/* Blog Content */}
           <article className="prose prose-lg max-w-none">
             <div 
-              className="blog-content text-[#2E3C44] leading-relaxed"
+              className="blog-content text-[#2E3C44] leading-7 text-lg"
               dangerouslySetInnerHTML={{ __html: blog.content }}
-              style={{
-                fontSize: '1.125rem',
-                lineHeight: '1.75rem',
-              }}
             />
           </article>
         </div>

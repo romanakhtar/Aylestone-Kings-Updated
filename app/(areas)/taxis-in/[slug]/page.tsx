@@ -42,8 +42,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const area = getAreaBySlug(slug)
   const areaName = area?.name.replace(/^Taxis in\s+/i, "") ?? "Area"
-  const title = `${companyInfo.name} — Taxis in ${areaName}`
-  const description = `Book reliable taxis in ${areaName} with ${companyInfo.name}. 24/7 service, professional drivers, airport transfers and local journeys.`
+  const isDestination = (footerData as any).destinationLinks?.some((d: any) => slugFromHref(d.href) === slug) ||
+    (footerData as any).priorityAreas?.opPriority?.some((d: any) => slugFromHref(d.href) === slug) ||
+    (footerData as any).priorityAreas?.mediumPriority?.some((d: any) => slugFromHref(d.href) === slug) ||
+    (footerData as any).priorityAreas?.optionalPriority?.some((d: any) => slugFromHref(d.href) === slug)
+  
+  const title = isDestination 
+    ? `Taxi to ${areaName} from Leicester | Aylestone Taxis`
+    : `Taxi in ${areaName}, Leicester | Leicester Taxi Service | Aylestone Taxis`
+  const description = isDestination
+    ? `Reliable Leicester taxi service to ${areaName}. Book your taxi to ${areaName} with Aylestone Kings. Fixed fares, licensed drivers, 24/7 service, and professional transport from Leicester.`
+    : `Book reliable taxis in ${areaName}, Leicester with Aylestone Kings. 24/7 service, professional drivers, airport transfers, and local journeys throughout Leicester. Licensed, insured, and trusted Leicester taxi service.`
+  
   return {
     title,
     description,

@@ -2,11 +2,15 @@
 import Image from "next/image"
 import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
-import AppDownloadButtons from "@/components/AppDownloadButtons"
+import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
 import { useState, useEffect } from "react"
-import Head from 'next/head'
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
+
+// Dynamically import non-critical component
+const AppDownloadButtons = dynamic(() => import("@/components/AppDownloadButtons"), {
+  ssr: true,
+})
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -78,6 +82,7 @@ export default function Home() {
                 alt="Professional taxi drivers and vehicles representing Aylestone Kings trusted transport service in Leicester and Midlands"
                 width={600}
                 height={400}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
                 loading="lazy"
               />
@@ -170,6 +175,7 @@ export default function Home() {
                 alt="Passengers enjoying comfortable and professional taxi service with Aylestone Kings in Leicester"
                 width={600}
                 height={400}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
                 loading="lazy"
               />
@@ -189,6 +195,7 @@ export default function Home() {
                 alt="Professional business travel solutions and corporate taxi services by Aylestone Kings for Leicester businesses"
                 width={600}
                 height={400}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
                 loading="lazy"
               />
@@ -231,7 +238,9 @@ export default function Home() {
                 alt="Aylestone Kings mobile app screenshot showing real-time taxi tracking and booking features for Leicester customers"
                 width={500}
                 height={1000}
+                sizes="(max-width: 768px) 100vw, 500px"
                 className="relative z-10 rounded-2xl shadow-2xl"
+                loading="lazy"
               />
             </div>
 
@@ -271,8 +280,8 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
-            backgroundImage: 'url(/black-car.jpg)',
-            backgroundPosition: 'right center',
+            backgroundImage: "url('/black-car.jpg')",
+            backgroundPosition: "right center",
           }}
           aria-label="Luxury black executive taxi vehicle from Aylestone Kings premium fleet"
         />
@@ -322,7 +331,9 @@ export default function Home() {
                 alt="Eco-friendly and sustainable taxi vehicle from Aylestone Kings green fleet in Leicester"
                 width={600}
                 height={300}
+                sizes="(max-width: 768px) 100vw, 600px"
                 className="rounded-2xl"
+                loading="lazy"
               />
             </div>
           </div>
@@ -344,7 +355,7 @@ export default function Home() {
             <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-700 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                style={{ transform: `translateX(-${currentSlide * 100}%)` } as React.CSSProperties}
               >
                 {reviews.map((review, index) => (
                   <div key={index} className="w-full flex-shrink-0 px-4">
