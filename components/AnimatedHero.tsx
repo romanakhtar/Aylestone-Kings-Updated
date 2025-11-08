@@ -20,11 +20,18 @@ export default function AnimatedHero() {
   const parallaxRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    let ticking = false
     const handleScroll = () => {
-      setScrollY(window.scrollY)
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrollY(window.scrollY)
+          ticking = false
+        })
+        ticking = true
+      }
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -37,11 +44,12 @@ export default function AnimatedHero() {
       {/* Halloween Background Image - Extended */}
       {isHalloweenActive && (
         <div 
-          className="absolute inset-0 bg-center bg-no-repeat bg-left opacity-50 z-0"
+          className="absolute inset-0 opacity-50 z-0 h-screen"
           style={{
-            backgroundImage: 'url(/Halloweenbg.png)',
-            backgroundPosition: 'left center',
-            height: 'calc(100vh)',
+            backgroundImage: "url('/Halloweenbg.png')",
+            backgroundPosition: "left center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "auto",
           }}
           aria-label="Halloween themed background for Aylestone Kings taxi service"
         />
@@ -50,11 +58,12 @@ export default function AnimatedHero() {
       {/* Spider Web Background Image */}
       {isHalloweenActive && (
         <div 
-          className="absolute inset-0 bg-center bg-no-repeat bg-right opacity-50 z-0"
+          className="absolute inset-0 opacity-50 z-0"
           style={{
-            backgroundImage: 'url(/Spider-web2.png)',
-            backgroundPosition: 'right top',
-            backgroundSize: '25.67% auto',
+            backgroundImage: "url('/Spider-web2.png')",
+            backgroundPosition: "right top",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "25.67% auto",
           }}
           aria-label="Spider web Halloween decoration for Aylestone Kings taxi service"
         />
@@ -72,7 +81,7 @@ export default function AnimatedHero() {
             
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-              {isHalloweenActive ? "Moving Aylestone Forward 🎃" : siteData.homepage.hero.title}
+              {isHalloweenActive ? "Driving Leicester Forward 🎃" : siteData.homepage.hero.title}
             </h1>
 
             {/* Description */}
@@ -108,17 +117,19 @@ export default function AnimatedHero() {
             <div className="flex justify-start">
               <div 
                 ref={parallaxRef}
-                className={`relative transition-all duration-300 ease-out`}
+                className="relative transition-all duration-300 ease-out"
                 style={{
                   transform: `translateX(${Math.min(scrollY * 0.5, 190)}px)`,
                   opacity: Math.max(0.8, 1 - scrollY * 0.0003)
-                }}
+                } as React.CSSProperties}
               >
                 <Image
                   src={siteData.images.heroTaxi}
                   alt="Modern white taxi vehicle from Aylestone Kings professional fleet serving Leicester and Midlands since 1995"
-                  width={80}
-                  height={64}
+                  width={280}
+                  height={224}
+                  priority
+                  sizes="(max-width: 768px) 80px, 280px"
                   className="relative z-10 w-38 lg:w-[280px] h-auto drop-shadow-2xl"
                 />
               </div>

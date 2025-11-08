@@ -3,8 +3,8 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Manchester Airport Taxi | Taxi in Aylestone Leicester | Aylestone Taxis",
-  description: "Reliable taxi service from Leicester to Manchester Airport (MAN). Fixed rates from £150. 24/7 transfers, licensed drivers, and comfortable vehicles. Book your Manchester airport transfer today.",
+  title: "Manchester Airport Taxi from Leicester | Aylestone Taxis",
+  description: "Reliable Leicester taxi service to Manchester Airport (MAN). Fixed rates from £150. 24/7 transfers, licensed drivers, and comfortable vehicles. Book your Leicester to Manchester airport transfer today.",
 }
 
 export default function ManchesterPage() {

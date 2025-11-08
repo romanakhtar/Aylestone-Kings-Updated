@@ -81,8 +81,8 @@ export const siteData = {
   // Homepage Content
   homepage: {
     hero: {
-      title: "Moving Aylestone Forward",
-      subtitle: "Your trusted taxi companion — providing fast, reliable and affordable transport across Aylestone and beyond.",
+      title: "Driving Leicester Forward",
+      subtitle: "Your trusted taxi companion — providing fast, reliable and affordable transport across Leicester and beyond.",
       ctaText: "Book Your Ride Now",
       features: [
         "24/7 Service",

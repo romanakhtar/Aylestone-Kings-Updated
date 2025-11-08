@@ -3,19 +3,28 @@ import type { Metadata } from "next"
 import { Inter, Roboto } from "next/font/google"
 import "./globals.css"
 import "../styles/halloween.css"
-import FloatingContactButton from "@/components/FloatingContactButton"
+import dynamic from "next/dynamic"
 import ContactInfoBar from "@/components/contact-info-bar"
 import { Navigation } from "@/components/navigation"
-import Footer from "@/components/footer"
 import { HalloweenThemeProvider } from "@/components/HalloweenThemeProvider"
-import HalloweenTopBanner from "@/components/HalloweenTopBanner"
-import HalloweenFloatingElements from "@/components/HalloweenFloatingElements"
-import HalloweenSpiderWeb from "@/components/HalloweenSpiderWeb"
-import Script from "next/script";
+import Script from "next/script"
+
+// Dynamically import non-critical components
+const Footer = dynamic(() => import("@/components/footer"))
+
+const FloatingContactButton = dynamic(() => import("@/components/FloatingContactButton"))
+
+const HalloweenTopBanner = dynamic(() => import("@/components/HalloweenTopBanner"))
+
+const HalloweenFloatingElements = dynamic(() => import("@/components/HalloweenFloatingElements"))
+
+const HalloweenSpiderWeb = dynamic(() => import("@/components/HalloweenSpiderWeb"))
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+  preload: true,
+  adjustFontFallback: true,
 })
 
 const roboto = Roboto({
@@ -23,11 +32,13 @@ const roboto = Roboto({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-roboto",
+  preload: true,
+  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
-  title: "Taxi in Aylestone Leicester | Aylestone Taxis | Aylestone Kings",
-  description: "Reliable taxi service in Aylestone and Leicester. 24/7 service, licensed drivers, airport transfers, and local journeys. Book your taxi online or call now. Professional taxi service since 1995.",
+  title: "Taxi in Leicester | Aylestone Taxis | Leicester Taxi Service",
+  description: "Leicester's trusted taxi service since 1995. Reliable 24/7 service, licensed drivers, airport transfers, and local journeys throughout Leicester and Leicestershire. Book your Leicester taxi online or call now.",
   generator: "Aylestone Kings",
   other: {
     "preconnect": "https://aylestonekings.webbooker.icabbi.com",
@@ -86,14 +97,24 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${roboto.variable} antialiased scroll-smooth`}>
       <head>
+        {/* Resource Hints */}
         <link rel="preconnect" href="https://aylestonekings.webbooker.icabbi.com" />
         <link rel="dns-prefetch" href="https://aylestonekings.webbooker.icabbi.com" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        
+        {/* Viewport */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        
+        {/* Favicon */}
         <link rel="icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         
+        {/* Preload critical resources */}
+        <link rel="preload" href="/Aylestone-Taxi-Logo.png" as="image" type="image/png" />
         
-        {/* Google tag (gtag.js) */}
-         <Script
+        {/* Google tag (gtag.js) - Load after page is interactive */}
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-997662518"
           strategy="afterInteractive"
         />
@@ -102,11 +123,11 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-997662518');
+            gtag('config', 'AW-997662518', {
+              page_path: window.location.pathname,
+            });
           `}
         </Script>
-
-        
       </head>
       <body className="font-sans pt-5 bg-white">
         <HalloweenThemeProvider>
@@ -121,10 +142,9 @@ export default function RootLayout({
           <Footer />
           <FloatingContactButton />
         </HalloweenThemeProvider>
-        <Script
-          id="schema-markup"
+        {/* Schema markup - inline for faster parsing */}
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </body>

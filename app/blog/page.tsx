@@ -4,8 +4,8 @@ import { Calendar, User, ArrowRight, BookOpen } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 
 export const metadata = {
-  title: "Blog | Taxi in Aylestone Leicester | Aylestone Taxis",
-  description: "Read the latest blog posts from Aylestone Kings. Travel tips, Leicester taxi guides, airport transfer advice, and transportation insights for Aylestone and Leicester residents.",
+  title: "Blog | Leicester Taxi Service | Aylestone Taxis",
+  description: "Read the latest blog posts from Aylestone Kings. Travel tips, Leicester taxi guides, airport transfer advice, and transportation insights for Leicester and Leicestershire residents.",
 }
 
 export default function BlogPage() {
@@ -18,8 +18,9 @@ export default function BlogPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/taxi-bridge-background.jpg"
-            alt="Blog background"
+            alt="Aylestone Kings blog background - Leicester taxi service blog featuring travel tips and transportation guides"
             fill
+            sizes="100vw"
             className="object-cover opacity-20"
             priority
           />
@@ -64,9 +65,11 @@ export default function BlogPage() {
                 <div className="relative h-64 overflow-hidden">
                   <Image
                     src={blog.image}
-                    alt={blog.title}
+                    alt={`${blog.title} - Aylestone Kings Leicester taxi service blog post about ${blog.category.toLowerCase()}`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                     className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 bg-[#06A0A6] text-white text-sm font-semibold rounded-full">

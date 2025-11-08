@@ -48,11 +48,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     (footerData as any).priorityAreas?.optionalPriority?.some((d: any) => slugFromHref(d.href) === slug)
   
   const title = isDestination 
-    ? `Taxi to ${areaName} | Taxi in Aylestone Leicester | Aylestone Taxis`
-    : `Taxi in ${areaName} Leicester | Taxi in Aylestone Leicester | Aylestone Taxis`
+    ? `Taxi to ${areaName} from Leicester | Aylestone Taxis`
+    : `Taxi in ${areaName}, Leicester | Leicester Taxi Service | Aylestone Taxis`
   const description = isDestination
-    ? `Reliable taxi service to ${areaName} from Leicester. Book your taxi to ${areaName} with Aylestone Kings. Fixed fares, licensed drivers, 24/7 service, and professional transport in Leicester.`
-    : `Book reliable taxis in ${areaName}, Leicester with Aylestone Kings. 24/7 service, professional drivers, airport transfers, and local journeys. Licensed, insured, and trusted taxi service in ${areaName}.`
+    ? `Reliable Leicester taxi service to ${areaName}. Book your taxi to ${areaName} with Aylestone Kings. Fixed fares, licensed drivers, 24/7 service, and professional transport from Leicester.`
+    : `Book reliable taxis in ${areaName}, Leicester with Aylestone Kings. 24/7 service, professional drivers, airport transfers, and local journeys throughout Leicester. Licensed, insured, and trusted Leicester taxi service.`
   
   return {
     title,

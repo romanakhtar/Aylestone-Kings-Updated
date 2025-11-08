@@ -4,8 +4,8 @@ import { Shield, Users, Award, Clock, Check, ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Our Company | Taxi in Aylestone Leicester | Aylestone Taxis",
-  description: "Discover Aylestone Kings - a trusted Leicester taxi company with 30+ years of excellence. Licensed, insured, and committed to providing reliable transport services in Aylestone and across Leicester.",
+  title: "Our Company | Leicester Taxi Service | Aylestone Taxis",
+  description: "Discover Aylestone Kings - a trusted Leicester-based taxi company with 30+ years of excellence. Licensed, insured, and committed to providing reliable transport services throughout Leicester and Leicestershire.",
 }
 
 export default function CompanyPage() {
@@ -96,8 +96,9 @@ export default function CompanyPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-2 hover-lift">
               <Image 
                 src="/company-history.jpg" 
-                alt="Company history" 
+                alt="Aylestone Kings company history - Leicester taxi service established in 1995, serving the community with reliable transport for over 30 years" 
                 fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
                 loading="lazy"
               />
@@ -113,9 +114,11 @@ export default function CompanyPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-1 hover-lift">
               <Image
                 src="/serving-many.jpg"
-                alt="Taxi with bridge background"
+                alt="Aylestone Kings serving thousands of passengers - trusted Leicester taxi service with professional drivers and modern fleet"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
+                loading="lazy"
               />
             </div>
             <div className="order-1 lg:order-2 fade-in">
@@ -186,7 +189,14 @@ export default function CompanyPage() {
               </div>
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-2 hover-lift">
-              <Image src="/community-support.png" alt="Community support" fill className="object-cover transition-smooth hover:scale-105" />
+              <Image 
+                src="/community-support.png" 
+                alt="Aylestone Kings community support and local charity partnerships - Leicester taxi company supporting local organisations and community initiatives" 
+                fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                className="object-cover transition-smooth hover:scale-105"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -197,7 +207,14 @@ export default function CompanyPage() {
         <div className="max-w-7xl mx-auto container-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-1 hover-lift">
-              <Image src="/innovation-tech.png" alt="Innovation and technology" fill className="object-cover transition-smooth hover:scale-105" />
+              <Image 
+                src="/innovation-tech.png" 
+                alt="Aylestone Kings innovation and technology - modern taxi service in Leicester with GPS tracking, mobile app booking, and advanced fleet management" 
+                fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                className="object-cover transition-smooth hover:scale-105"
+                loading="lazy"
+              />
             </div>
             <div className="order-1 lg:order-2 scale-in">
               <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">

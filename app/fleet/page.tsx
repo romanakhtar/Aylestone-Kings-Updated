@@ -4,8 +4,8 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Our Fleet | Taxi in Aylestone Leicester | Aylestone Taxis",
-  description: "Explore Aylestone Kings' premium taxi fleet in Leicester. Saloon cars, MPVs, 6-seaters, 8-seaters, and executive vehicles. Licensed, modern, and well-maintained for your comfort.",
+  title: "Our Fleet | Leicester Taxi Service | Aylestone Taxis",
+  description: "Explore Aylestone Kings' premium taxi fleet serving Leicester. Saloon cars, MPVs, 6-seaters, 8-seaters, and executive vehicles. Licensed, modern, and well-maintained for your comfort throughout Leicester.",
 }
 
 export default function FleetPage() {
@@ -32,8 +32,9 @@ export default function FleetPage() {
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
                   src="/premium-comfort.jpg" 
-                  alt="Premium luxury car" 
+                  alt="Premium luxury taxi vehicle from Aylestone Kings fleet - modern, comfortable transport service in Leicester" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                   className="object-cover"
                   priority
                 />
@@ -104,7 +105,7 @@ export default function FleetPage() {
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
                   <Image 
                     src="/Estate vehicle.png" 
-                    alt="Estate Vehicle" 
+                    alt="Estate saloon taxi vehicle from Aylestone Kings fleet - spacious luggage area, perfect for airport transfers in Leicester" 
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
@@ -139,7 +140,7 @@ export default function FleetPage() {
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
                   <Image 
                     src="/Executive.jpg" 
-                    alt="Executive Car" 
+                    alt="Executive luxury taxi from Aylestone Kings - premium leather interiors, perfect for business travel and corporate events in Leicester" 
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
@@ -174,7 +175,7 @@ export default function FleetPage() {
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
                   <Image 
                     src="/6 seater.jpg" 
-                    alt="6 Seater Car" 
+                    alt="6 seater MPV taxi from Aylestone Kings - comfortable group transport for medium-sized groups in Leicester" 
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
@@ -209,7 +210,7 @@ export default function FleetPage() {
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
                   <Image 
                     src="/8 seater.jpg" 
-                    alt="8 Seater Car" 
+                    alt="8 seater minibus taxi from Aylestone Kings - spacious vehicle perfect for large groups, corporate events, and family travel in Leicester" 
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
@@ -298,7 +299,7 @@ export default function FleetPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-2xl"></div>
                 <Image 
                   src="/verstile-spacious.jpg" 
-                  alt="MPV vehicle" 
+                  alt="Versatile and spacious MPV taxi vehicle from Aylestone Kings - perfect for airport transfers, business meetings, and family outings in Leicester" 
                   width={600}
                   height={400}
                   className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
@@ -316,7 +317,7 @@ export default function FleetPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 to-blue-400/10 rounded-2xl"></div>
                 <Image 
                   src="/business-leisure.jpg" 
-                  alt="Executive car" 
+                  alt="Executive luxury taxi service from Aylestone Kings - premium business and leisure transport in Leicester with advanced technology and comfort" 
                   width={600}
                   height={400}
                   className="relative z-10 w-full h-auto rounded-2xl shadow-xl"

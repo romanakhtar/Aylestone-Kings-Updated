@@ -4,8 +4,8 @@ import { ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Travel With Us | Taxi in Aylestone Leicester | Aylestone Taxis",
-  description: "Travel in comfort with Aylestone Kings. Airport transfers, train station pickups, university taxis, shopping trips, and match day transport in Leicester. Book your ride today.",
+  title: "Travel With Us | Leicester Taxi Service | Aylestone Taxis",
+  description: "Travel in comfort with Aylestone Kings throughout Leicester. Airport transfers, train station pickups, university taxis, shopping trips, and match day transport. Book your Leicester taxi ride today.",
 }
 
 export default function OurTeamPage() {
@@ -51,8 +51,9 @@ export default function OurTeamPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-2 hover-lift">
               <Image 
                 src="/leicester-train-station.jpg" 
-                alt="Leicester Train Station" 
+                alt="Leicester train station taxi pickup service - Aylestone Kings reliable taxi transfers from Leicester Station to destinations across Leicester" 
                 fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
                 loading="lazy"
               />
@@ -68,9 +69,11 @@ export default function OurTeamPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-1 hover-lift">
               <Image
                 src="/de-montfort-university.jpg"
-                alt="Taxi with bridge background"
+                alt="De Montfort University taxi service - Aylestone Kings reliable student transport to and from DMU campus in Leicester"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
+                loading="lazy"
               />
             </div>
             <div className="order-1 lg:order-2 fade-in">
@@ -136,8 +139,9 @@ export default function OurTeamPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-2 hover-lift">
               <Image 
                 src="/fosse-park.jpg" 
-                alt="Leicester Train Station" 
+                alt="Fosse Park shopping centre taxi service - Aylestone Kings reliable transport to Fosse Park shopping destination in Leicester" 
                 fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
                 loading="lazy"
               />
@@ -153,9 +157,11 @@ export default function OurTeamPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-1 hover-lift">
               <Image
                 src="/king-power-stadium.jpg"
-                alt="Taxi with bridge background"
+                alt="King Power Stadium taxi service - Aylestone Kings reliable matchday transport to Leicester City FC stadium and events"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
+                loading="lazy"
               />
             </div>
             <div className="order-1 lg:order-2 fade-in">
@@ -212,8 +218,9 @@ export default function OurTeamPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-2 hover-lift">
               <Image 
                 src="/airport-passage.jpg" 
-                alt="Leicester Train Station" 
+                alt="Airport transfer service from Leicester - Aylestone Kings professional taxi service to all major UK airports including Birmingham, East Midlands, Heathrow, Gatwick, Manchester, Luton, and Stansted" 
                 fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
                 loading="lazy"
               />

@@ -8,7 +8,7 @@ export default function HalloweenTopBanner() {
   if (!isHalloweenActive) return null
 
   return (
-    <div className="halloween-top-banner" style={{ marginTop: '60px', marginBottom: '-100px' }} >
+    <div className="halloween-top-banner mt-[60px] -mb-[100px]">
       🎃 Halloween Weekend – No Surge Prices, Book Now 🎃
     </div>
   )
