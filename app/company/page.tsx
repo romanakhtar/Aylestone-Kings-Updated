@@ -1,7 +1,12 @@
- 
 import Image from "next/image"
 import { siteData } from "@/lib/data"
 import { Shield, Users, Award, Clock, Check, ArrowRight } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Our Company | Taxi in Aylestone Leicester | Aylestone Taxis",
+  description: "Discover Aylestone Kings - a trusted Leicester taxi company with 30+ years of excellence. Licensed, insured, and committed to providing reliable transport services in Aylestone and across Leicester.",
+}
 
 export default function CompanyPage() {
   return (

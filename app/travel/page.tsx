@@ -1,7 +1,13 @@
- 
 import Image from "next/image"
 import { contactInfo, siteData } from "@/lib/data"
 import { ArrowRight } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Travel With Us | Taxi in Aylestone Leicester | Aylestone Taxis",
+  description: "Travel in comfort with Aylestone Kings. Airport transfers, train station pickups, university taxis, shopping trips, and match day transport in Leicester. Book your ride today.",
+}
+
 export default function OurTeamPage() {
   return (
     <div className="min-h-screen bg-white">

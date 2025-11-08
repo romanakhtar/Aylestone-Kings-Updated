@@ -1,8 +1,13 @@
- 
 import { Calendar, MapPin, CreditCard, Clock, MessageCircle, Headphones, Check, Star, Shield, Zap, Users, Car } from "lucide-react"
 import {  ArrowRight } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Airport Pricing | Taxi in Aylestone Leicester | Aylestone Taxis",
+  description: "Transparent airport taxi pricing from Leicester to all UK airports. Fixed rates to Birmingham, East Midlands, Heathrow, Gatwick, Manchester, Luton, and Stansted. Book your airport transfer today.",
+}
 
 export default function PricingPage() {
   return (

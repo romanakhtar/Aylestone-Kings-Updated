@@ -1,6 +1,11 @@
- 
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Gatwick Airport Taxi | Taxi in Aylestone Leicester | Aylestone Taxis",
+  description: "Professional taxi service from Leicester to London Gatwick Airport (LGW). Fixed rates from £200. 24/7 transfers, licensed drivers, and reliable service. Book your Gatwick airport taxi today.",
+}
 
 export default function GatwickPage() {
   return (

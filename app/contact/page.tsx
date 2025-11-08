@@ -14,6 +14,9 @@ import {
 } from "lucide-react";
 import { contactInfo } from "@/lib/data";
 import { useForm, ValidationError } from "@formspree/react";
+
+// Note: Metadata cannot be exported from client components
+// This page's metadata should be handled in a layout or parent component
 export default function ContactPage() {
  const [state, handleSubmit] = useForm("myzdazng");
 

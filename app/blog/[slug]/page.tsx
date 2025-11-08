@@ -15,13 +15,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   
   if (!blog) {
     return {
-      title: "Blog Post Not Found - Aylestone Kings",
+      title: "Blog Post Not Found | Taxi in Aylestone Leicester | Aylestone Taxis",
+      description: "The requested blog post could not be found. Browse our blog for travel tips and taxi guides in Leicester.",
     }
   }
 
   return {
-    title: `${blog.title} - Aylestone Kings Blog`,
-    description: blog.excerpt,
+    title: `${blog.title} | Taxi in Aylestone Leicester | Aylestone Taxis`,
+    description: `${blog.excerpt} Read more on the Aylestone Kings blog for Leicester taxi tips and travel advice.`,
   }
 }
 

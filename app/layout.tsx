@@ -26,8 +26,8 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: "Aylestone Kings - Moving the Midlands Forward",
-  description: "Professional taxi service in the Midlands. Book your ride online or download our app.",
+  title: "Taxi in Aylestone Leicester | Aylestone Taxis | Aylestone Kings",
+  description: "Reliable taxi service in Aylestone and Leicester. 24/7 service, licensed drivers, airport transfers, and local journeys. Book your taxi online or call now. Professional taxi service since 1995.",
   generator: "Aylestone Kings",
   other: {
     "preconnect": "https://aylestonekings.webbooker.icabbi.com",

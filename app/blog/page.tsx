@@ -4,8 +4,8 @@ import { Calendar, User, ArrowRight, BookOpen } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 
 export const metadata = {
-  title: "Blog - Aylestone Kings",
-  description: "Discover insights, tips, and stories about transportation in Leicester",
+  title: "Blog | Taxi in Aylestone Leicester | Aylestone Taxis",
+  description: "Read the latest blog posts from Aylestone Kings. Travel tips, Leicester taxi guides, airport transfer advice, and transportation insights for Aylestone and Leicester residents.",
 }
 
 export default function BlogPage() {
