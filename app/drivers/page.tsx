@@ -3,7 +3,7 @@
 import { useState, useEffect, FormEvent } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Shield, FileText, Car, CreditCard, CheckCircle2 } from 'lucide-react'
+import { Shield, FileText, Car, CreditCard, CheckCircle2, DollarSign, Clock, Users, Award, MapPin, Phone, Mail, HelpCircle, TrendingUp, Star, Briefcase } from 'lucide-react'
 import type { Metadata } from 'next'
 
 // Note: Metadata will be handled via layout or parent
@@ -364,26 +364,515 @@ export default function JoinDriverPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-[#0F0D3E] via-[#2E3C44] to-[#06A0A6]/20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F0D3E]/90 via-[#0F0D3E]/80 to-[#06A0A6]/30"></div>
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F0D3E] via-[#1a1f3a] to-[#0F0D3E] overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F0D3E]/95 via-[#0F0D3E]/90 to-[#06A0A6]/20"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium mb-8 shadow-lg">
-              <Shield className="h-4 w-4 text-[#06A0A6] mr-3" />
-              Join Our Team
+            <div className="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full text-xs font-semibold uppercase tracking-wider mb-8 shadow-xl">
+              <Shield className="h-3.5 w-3.5 text-[#06A0A6] mr-2.5" />
+              Career Opportunities
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Join as a <span className="text-[#06A0A6] drop-shadow-lg">Driver</span>
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-[1.1] tracking-tight">
+              Join as a <span className="text-[#06A0A6]">Driver</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-              Become part of Leicester&apos;s trusted taxi service. We&apos;re looking for professional, 
-              licensed drivers to join our team. Apply today and start your journey with Aylestone Kings.
+            <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed font-light mb-10">
+              Become part of Leicester&apos;s most trusted taxi service. We&apos;re looking for professional, 
+              licensed drivers to join our established team. Apply today and start your journey with Aylestone Kings.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Join Us Section */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
+              Why Join Aylestone Kings?
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
+              Join Leicester&apos;s most trusted taxi service and become part of a team that&apos;s been serving the community for over 30 years.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <DollarSign className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Competitive Earnings</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Earn competitive rates with flexible payment options. Keep more of what you earn with our transparent commission structure.
+              </p>
+            </div>
+
+            <div className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <Clock className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Flexible Schedule</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Choose your own hours with full-time or part-time options. Work day shifts, night shifts, or both - the choice is yours.
+              </p>
+            </div>
+
+            <div className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <Users className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Supportive Team</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Join a friendly, professional team with ongoing support and training. We&apos;re here to help you succeed.
+              </p>
+            </div>
+
+            <div className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <Award className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Established Reputation</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Work with a company that&apos;s been trusted by Leicester residents since 1995. Benefit from our established customer base.
+              </p>
+            </div>
+
+            <div className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <MapPin className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Local Knowledge</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Serve your local community with routes you know best. Work in Leicester and surrounding areas with familiar territory.
+              </p>
+            </div>
+
+            <div className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <TrendingUp className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Growth Opportunities</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Build your career with opportunities for advancement. We value our drivers and invest in their professional development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Requirements Section */}
+      <section className="py-20 md:py-28 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
+              Driver Requirements
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
+              To join our team, you&apos;ll need to meet the following requirements:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="bg-white p-7 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <CheckCircle2 className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">Age & Experience</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Must be 21 years or older with a valid UK driving licence held for at least 2 years.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-7 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <CheckCircle2 className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">Private Hire Licence</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Valid private hire driver&apos;s badge from Leicester City Council, Wolverhampton City Council, or Oadby & Wigston.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-7 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <CheckCircle2 className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">DBS Check</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Enhanced DBS certificate (preferably on the Update Service) to ensure passenger safety and security.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-7 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <CheckCircle2 className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">Right to Work</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Valid right to work in the UK (UK passport, BRP/visa, EU settled status, or share code).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-7 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <CheckCircle2 className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">Clean Driving Record</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    No serious motoring convictions. Maximum 6 penalty points on your licence.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-7 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <CheckCircle2 className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">Professional Attitude</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Excellent customer service skills, reliability, and a professional appearance at all times.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Offer Section */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
+              What We Offer
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
+              As part of the Aylestone Kings team, you&apos;ll receive:
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="space-y-5">
+              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <Star className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2 text-lg">Regular Work & Bookings</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Steady stream of bookings through our established customer base and online booking platform. Work as much or as little as you want.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <Phone className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2 text-lg">24/7 Support</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Round-the-clock support from our operations team. Help is always available when you need it, day or night.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <Briefcase className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2 text-lg">Own or Company Vehicle</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Use your own licensed vehicle or inquire about company vehicle options. We support both arrangements.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <Shield className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2 text-lg">Insurance & Licensing Support</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Guidance and support with insurance requirements and licensing renewals. We help you stay compliant.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <Users className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2 text-lg">Training & Development</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Ongoing training opportunities to improve your skills. Learn about customer service, navigation, and best practices.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <DollarSign className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2 text-lg">Fair Commission Structure</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Transparent and fair commission rates. Weekly payments directly to your bank account with no hidden fees.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Application Process Section */}
+      <section className="py-20 md:py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
+              Application Process
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
+              Getting started is simple. Follow these steps to join our team:
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="space-y-8">
+              <div className="flex gap-8 items-start">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                  1
+                </div>
+                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+                  <h3 className="font-bold text-[#0F0D3E] mb-3 text-xl">Complete Application Form</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Fill out the application form below with all required information. Make sure all documents are ready for upload.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-8 items-start">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                  2
+                </div>
+                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+                  <h3 className="font-bold text-[#0F0D3E] mb-3 text-xl">Document Review</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Our team will review your application and verify all submitted documents. This typically takes 2-3 business days.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-8 items-start">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                  3
+                </div>
+                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+                  <h3 className="font-bold text-[#0F0D3E] mb-3 text-xl">Interview & Assessment</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    If your application is successful, we&apos;ll invite you for an interview and brief assessment to discuss the role.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-8 items-start">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                  4
+                </div>
+                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+                  <h3 className="font-bold text-[#0F0D3E] mb-3 text-xl">Onboarding & Training</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Once accepted, you&apos;ll complete onboarding and training to familiarize yourself with our systems and procedures.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-8 items-start">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                  5
+                </div>
+                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+                  <h3 className="font-bold text-[#0F0D3E] mb-3 text-xl">Start Driving</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Begin taking bookings and start earning! Our team will be available to support you as you get started.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-slate-600 font-light">
+              Common questions about joining Aylestone Kings
+            </p>
+          </div>
+
+          <div className="space-y-5">
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <HelpCircle className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">Do I need my own vehicle?</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    No, you can use your own licensed vehicle or inquire about company vehicle options. Both arrangements are supported.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <HelpCircle className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">What are the working hours?</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    You choose your own hours! We offer full-time and part-time positions with flexible day, night, or both shift options.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <HelpCircle className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">How much can I earn?</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Earnings vary based on hours worked and bookings. We offer competitive rates with a fair commission structure. Weekly payments are made directly to your bank account.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <HelpCircle className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">What documents do I need?</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    You&apos;ll need: valid UK driving licence, private hire badge, DBS certificate, proof of address, right to work documentation, and if using your own vehicle - insurance, MOT, and vehicle licence documents.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <HelpCircle className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">How long does the application process take?</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Typically 1-2 weeks from application submission to starting work, depending on document verification and interview scheduling.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <HelpCircle className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">What areas do you cover?</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    We primarily serve Leicester and surrounding areas including Aylestone, Leicestershire, and the wider Midlands region.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
+                  <HelpCircle className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">Is there training provided?</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Yes! We provide comprehensive onboarding and ongoing training to help you succeed, including customer service, navigation, and company procedures.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white p-10 md:p-14 rounded-3xl shadow-xl border border-slate-200/80 text-center">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
+              Have Questions?
+            </h2>
+            <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto font-light">
+              If you have any questions about joining our team or the application process, don&apos;t hesitate to get in touch.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <a
+                href="tel:01162338888"
+                className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                <Phone className="h-5 w-5" />
+                <span>0116 233 8888</span>
+              </a>
+              <a
+                href="mailto:info@aylestone-taxis.co.uk"
+                className="flex items-center gap-3 px-6 py-3 bg-white border-2 border-[#06A0A6] text-[#06A0A6] rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-all duration-300 hover:shadow-lg"
+              >
+                <Mail className="h-5 w-5" />
+                <span>info@aylestone-taxis.co.uk</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
