@@ -38,6 +38,7 @@ export const siteData = {
     dropdown: [
       { name: "Company", href: "/company" },
       { name: "Fleet", href: "/fleet" },
+      { name: "Join as a Driver", href: "/drivers" },
     ],
   },
 

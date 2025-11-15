@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aylestone Taxis — Driver Signup (Basic)</title>
+  <style>
+    :root{
+      --navy:#0e1a2b;
+      --teal:#1fb3b3;
+      --ink:#0b0f14;
+      --bg:#f7f9fc;
+      --line:#e6ebf2;
+      --error:#c62828;
+      --ok:#1b5e20;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.45;
+    }
+    header{
+      background:linear-gradient(135deg,var(--navy),#142a4a);
+      color:white;
+      padding:28px 18px 22px;
+      text-align:center;
+      border-bottom:4px solid var(--teal);
+    }
+    header .brand{
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:.5px;
+    }
+    header .sub{
+      margin-top:6px;
+      opacity:.9;
+    }
+    main{
+      max-width:880px;
+      margin:24px auto 64px;
+      padding:0 16px;
+    }
+    .card{
+      background:white;
+      border:1px solid var(--line);
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 4px 14px rgba(14,26,43,.06);
+    }
+    .section{
+      padding:18px 18px 6px;
+      border-top:1px solid var(--line);
+    }
+    .section:first-of-type{
+      border-top:none;
+    }
+    .section h2{
+      font-size:18px;
+      margin:0 0 12px;
+      color:var(--navy);
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+      margin-bottom:10px;
+    }
+    .col-12{grid-column:span 12}
+    .col-6{grid-column:span 6}
+    .col-4{grid-column:span 4}
+    .col-3{grid-column:span 3}
+    @media (max-width:760px){
+      .col-6,.col-4,.col-3{grid-column:span 12}
+    }
+    label{
+      font-weight:600;
+      font-size:13px;
+      display:block;
+      margin-bottom:6px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    select{
+      width:100%;
+      padding:12px 12px;
+      border:1px solid var(--line);
+      border-radius:10px;
+      background:#fff;
+      font-size:14px;
+    }
+    input[type="file"]{
+      width:100%;
+      border:1px dashed var(--line);
+      border-radius:10px;
+      padding:10px;
+      background:#fbfdff;
+    }
+    small.help{color:#6b7a90;display:block;margin-top:6px}
+    .row{margin-bottom:10px}
+    .err{
+      color:var(--error);
+      font-size:12px;
+      margin-top:6px;
+      display:none;
+    }
+    .flex{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .radio, .checkbox{
+      display:flex; align-items:center; gap:8px;
+      font-size:14px;
+    }
+    hr.sep{border:none;border-top:1px solid var(--line);margin:8px 0 2px}
+    .actions{
+      padding:16px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:#f2f6fb;
+      border-top:1px solid var(--line);
+      border-bottom-left-radius:12px;
+      border-bottom-right-radius:12px;
+    }
+    .btn{
+      appearance:none;
+      border:none;
+      border-radius:10px;
+      padding:12px 18px;
+      cursor:pointer;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn-primary{
+      background:var(--teal);
+      color:#002024;
+    }
+    .btn-outline{
+      background:white;
+      color:var(--navy);
+      border:1px solid var(--line);
+    }
+    .note{
+      padding:10px 14px;
+      background:#f0fbfb;
+      border:1px solid #d7f0f0;
+      border-radius:10px;
+      font-size:13px;
+      color:#0b3f3f;
+    }
+    .hidden{display:none}
+    footer{
+      text-align:center;
+      color:#7286a3;
+      font-size:12px;
+      margin-top:20px
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Aylestone Taxis</div>
+    <div class="sub">Driver Signup — Basic</div>
+  </header>
+
+  <main>
+    <form id="driverForm" class="card" novalidate>
+      <!-- Personal -->
+      <section class="section" id="sec-personal">
+        <h2>1) Personal</h2>
+        <div class="grid">
+          <div class="col-6">
+            <label for="full_name">Full Name</label>
+            <input id="full_name" name="full_name" type="text" required />
+            <div class="err" data-err-for="full_name">Enter your full name (first & last).</div>
+          </div>
+          <div class="col-3">
+            <label for="dob">Date of Birth</label>
+            <input id="dob" name="dob" type="date" required />
+            <div class="err" data-err-for="dob">Enter a valid date of birth (must be 21+).</div>
+          </div>
+          <div class="col-3">
+            <label for="mobile">Mobile</label>
+            <input id="mobile" name="mobile" type="tel" placeholder="07xxxxxxxxx" required />
+            <div class="err" data-err-for="mobile">Enter a valid UK mobile (07… or +44).</div>
+          </div>
+          <div class="col-6">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+            <div class="err" data-err-for="email">Enter a valid email.</div>
+          </div>
+          <div class="col-6">
+            <label for="ni_number">National Insurance Number</label>
+            <input id="ni_number" name="ni_number" type="text" placeholder="QQ123456C" required />
+            <div class="err" data-err-for="ni_number">Enter a valid NI number (e.g., QQ123456C).</div>
+          </div>
+          <div class="col-12">
+            <label for="address_line1">Address</label>
+            <input id="address_line1" name="address_line1" type="text" required />
+            <div class="err" data-err-for="address_line1">Enter your address.</div>
+          </div>
+          <div class="col-4">
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" required />
+            <div class="err" data-err-for="city">Enter your city.</div>
+          </div>
+          <div class="col-4">
+            <label for="postcode">Postcode</label>
+            <input id="postcode" name="postcode" type="text" placeholder="LE2 7XX" required />
+            <div class="err" data-err-for="postcode">Enter a valid UK postcode.</div>
+          </div>
+          <div class="col-4">
+            <label for="proof_address">Upload Proof of Address</label>
+            <input id="proof_address" name="proof_address" type="file" accept=".pdf,.jpg,.jpeg,.png" required />
+            <small class="help">Utility bill / bank statement / council letter (≤ 10 MB)</small>
+            <div class="err" data-err-for="proof_address">Upload a PDF/JPG/PNG (≤10 MB).</div>
+          </div>
+        </div>
+        <div class="note">Keep your Driving Licence, DBS and Badge ready for upload below.</div>
+      </section>
+
+      <!-- Licence & compliance -->
+      <section class="section" id="sec-licence">
+        <h2>2) Licence &amp; Compliance</h2>
+        <div class="grid">
+          <div class="col-6">
+            <label for="driving_licence_number">Driving Licence Number</label>
+            <input id="driving_licence_number" name="driving_licence_number" type="text" required />
+            <div class="err" data-err-for="driving_licence_number">Enter a valid UK licence number.</div>
+          </div>
+          <div class="col-3">
+            <label for="dl_issue_date">Licence Issue Date</label>
+            <input id="dl_issue_date" name="dl_issue_date" type="date" required />
+            <div class="err" data-err-for="dl_issue_date">Enter issue date.</div>
+          </div>
+          <div class="col-3">
+            <label for="dl_expiry_date">Licence Expiry</label>
+            <input id="dl_expiry_date" name="dl_expiry_date" type="date" required />
+            <div class="err" data-err-for="dl_expiry_date">Enter a valid expiry (today or later).</div>
+          </div>
+
+          <div class="col-4">
+            <label for="licensing_council">Licensing Council</label>
+            <select id="licensing_council" name="licensing_council" required>
+              <option value="">Select</option>
+              <option>Leicester</option>
+              <option>Wolverhampton</option>
+              <option>Oadby &amp; Wigston</option>
+              <option>Other</option>
+            </select>
+            <div class="err" data-err-for="licensing_council">Choose a council.</div>
+          </div>
+          <div class="col-4">
+            <label for="badge_number">Badge / Licence Number</label>
+            <input id="badge_number" name="badge_number" type="text" required />
+            <div class="err" data-err-for="badge_number">Enter badge/licence number.</div>
+          </div>
+          <div class="col-4">
+            <label for="badge_expiry_date">Badge Expiry</label>
+            <input id="badge_expiry_date" name="badge_expiry_date" type="date" required />
+            <div class="err" data-err-for="badge_expiry_date">Enter a valid expiry (today or later).</div>
+          </div>
+
+          <div class="col-4">
+            <label for="dbs_number">DBS Certificate Number</label>
+            <input id="dbs_number" name="dbs_number" type="text" required />
+            <div class="err" data-err-for="dbs_number">Enter DBS certificate number.</div>
+          </div>
+          <div class="col-4">
+            <label for="dbs_issue_date">DBS Issue Date</label>
+            <input id="dbs_issue_date" name="dbs_issue_date" type="date" required />
+            <div class="err" data-err-for="dbs_issue_date">Enter DBS issue date.</div>
+          </div>
+          <div class="col-4">
+            <label for="dbs_update_service">On DBS Update Service?</label>
+            <select id="dbs_update_service" name="dbs_update_service" required>
+              <option value="">Select</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            <div class="err" data-err-for="dbs_update_service">Select Yes/No.</div>
+          </div>
+
+          <div class="col-4">
+            <label for="rtw_status">Right to Work Status</label>
+            <select id="rtw_status" name="right_to_work_status" required>
+              <option value="">Select</option>
+              <option>UK passport</option>
+              <option>BRP/visa</option>
+              <option>EU settled/pre-settled</option>
+              <option>Share code</option>
+            </select>
+            <div class="err" data-err-for="rtw_status">Select one.</div>
+          </div>
+          <div class="col-4 hidden" id="rtw_share_wrap">
+            <label for="rtw_share_code">Share Code</label>
+            <input id="rtw_share_code" name="rtw_share_code" type="text" placeholder="ABCDEF123" />
+            <div class="err" data-err-for="rtw_share_code">Enter a 9‑character share code.</div>
+          </div>
+          <div class="col-4 hidden" id="visa_wrap">
+            <label for="visa_type">Visa Type</label>
+            <input id="visa_type" name="visa_type" type="text" placeholder="Skilled Worker, etc." />
+            <div class="err" data-err-for="visa_type">Enter visa type.</div>
+          </div>
+          <div class="col-4 hidden" id="visa_expiry_wrap">
+            <label for="visa_expiry_date">Visa Expiry</label>
+            <input id="visa_expiry_date" name="visa_expiry_date" type="date" />
+            <div class="err" data-err-for="visa_expiry_date">Enter visa expiry.</div>
+          </div>
+
+          <div class="col-4">
+            <label for="dl_front">Upload Driving Licence (Front)</label>
+            <input id="dl_front" name="upload_driving_licence_front" type="file" accept=".pdf,.jpg,.jpeg,.png" required />
+            <div class="err" data-err-for="dl_front">Upload licence front (≤10 MB).</div>
+          </div>
+          <div class="col-4">
+            <label for="dl_back">Upload Driving Licence (Back)</label>
+            <input id="dl_back" name="upload_driving_licence_back" type="file" accept=".pdf,.jpg,.jpeg,.png" required />
+            <div class="err" data-err-for="dl_back">Upload licence back (≤10 MB).</div>
+          </div>
+          <div class="col-4">
+            <label for="upload_badge">Upload Private Hire Badge</label>
+            <input id="upload_badge" name="upload_badge_licence" type="file" accept=".pdf,.jpg,.jpeg,.png" required />
+            <div class="err" data-err-for="upload_badge">Upload badge/licence (≤10 MB).</div>
+          </div>
+          <div class="col-4">
+            <label for="upload_dbs">Upload DBS Certificate</label>
+            <input id="upload_dbs" name="upload_dbs" type="file" accept=".pdf,.jpg,.jpeg,.png" required />
+            <div class="err" data-err-for="upload_dbs">Upload DBS (≤10 MB).</div>
+          </div>
+          <div class="col-4">
+            <label for="upload_rtw">Upload Right to Work Proof</label>
+            <input id="upload_rtw" name="upload_rtw_proof" type="file" accept=".pdf,.jpg,.jpeg,.png" />
+            <small class="help">Passport photo page, BRP, or share‑code PDF</small>
+            <div class="err" data-err-for="upload_rtw">Upload required for non‑UK passport options.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vehicle -->
+      <section class="section" id="sec-vehicle">
+        <h2>3) Vehicle</h2>
+        <div class="grid">
+          <div class="col-12">
+            <div class="flex">
+              <label class="checkbox"><input type="checkbox" id="owns_vehicle" /> I will use my own licensed vehicle</label>
+            </div>
+          </div>
+          <div class="col-4 veh hidden">
+            <label for="vrm">Vehicle Registration (VRM)</label>
+            <input id="vrm" name="vrm" type="text" placeholder="AB12 CDE" />
+            <div class="err" data-err-for="vrm">Enter UK VRM (e.g., AB12 CDE).</div>
+          </div>
+          <div class="col-4 veh hidden">
+            <label for="make">Make</label>
+            <input id="make" name="make" type="text" />
+            <div class="err" data-err-for="make">Enter make.</div>
+          </div>
+          <div class="col-4 veh hidden">
+            <label for="model">Model</label>
+            <input id="model" name="model" type="text" />
+            <div class="err" data-err-for="model">Enter model.</div>
+          </div>
+          <div class="col-3 veh hidden">
+            <label for="year">Year of Registration</label>
+            <input id="year" name="year" type="number" min="2008" max="2099" />
+            <div class="err" data-err-for="year">Enter year (2008+).</div>
+          </div>
+          <div class="col-3 veh hidden">
+            <label for="colour">Colour</label>
+            <input id="colour" name="colour" type="text" />
+            <div class="err" data-err-for="colour">Enter colour.</div>
+          </div>
+          <div class="col-3 veh hidden">
+            <label for="plate_expiry_date">Plate Expiry</label>
+            <input id="plate_expiry_date" name="plate_expiry_date" type="date" />
+            <div class="err" data-err-for="plate_expiry_date">Enter valid date (≥ today).</div>
+          </div>
+          <div class="col-3 veh hidden">
+            <label for="insurance_expiry_date">Insurance Expiry</label>
+            <input id="insurance_expiry_date" name="insurance_expiry_date" type="date" />
+            <div class="err" data-err-for="insurance_expiry_date">Enter valid date (≥ today).</div>
+          </div>
+          <div class="col-3 veh hidden">
+            <label for="mot_expiry_date">MOT Expiry</label>
+            <input id="mot_expiry_date" name="mot_expiry_date" type="date" />
+            <div class="err" data-err-for="mot_expiry_date">Enter valid date (≥ today).</div>
+          </div>
+
+          <div class="col-4 veh hidden">
+            <label for="upload_ins">Upload Insurance Certificate</label>
+            <input id="upload_ins" name="upload_insurance_certificate" type="file" accept=".pdf,.jpg,.jpeg,.png" />
+            <div class="err" data-err-for="upload_ins">Upload insurance (≤10 MB).</div>
+          </div>
+          <div class="col-4 veh hidden">
+            <label for="upload_mot">Upload MOT Certificate</label>
+            <input id="upload_mot" name="upload_mot" type="file" accept=".pdf,.jpg,.jpeg,.png" />
+            <div class="err" data-err-for="upload_mot">Upload MOT (≤10 MB).</div>
+          </div>
+          <div class="col-4 veh hidden">
+            <label for="upload_plate">Upload Plate Photo</label>
+            <input id="upload_plate" name="upload_plate" type="file" accept=".pdf,.jpg,.jpeg,.png" />
+            <div class="err" data-err-for="upload_plate">Upload plate photo (≤10 MB).</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Payment & Work -->
+      <section class="section" id="sec-payment">
+        <h2>4) Payment &amp; Work Preferences</h2>
+        <div class="grid">
+          <div class="col-4">
+            <label for="account_holder">Account Holder Name</label>
+            <input id="account_holder" name="account_holder" type="text" required />
+            <div class="err" data-err-for="account_holder">Enter account holder name.</div>
+          </div>
+          <div class="col-4">
+            <label for="sort_code">Sort Code</label>
+            <input id="sort_code" name="sort_code" type="text" placeholder="20-00-00" required />
+            <div class="err" data-err-for="sort_code">Enter sort code (NN-NN-NN).</div>
+          </div>
+          <div class="col-4">
+            <label for="account_number">Account Number</label>
+            <input id="account_number" name="account_number" type="text" placeholder="12345678" required />
+            <div class="err" data-err-for="account_number">Enter 8‑digit account number.</div>
+          </div>
+          <div class="col-4">
+            <label for="work_type">Work Type</label>
+            <select id="work_type" name="work_type" required>
+              <option value="">Select</option>
+              <option>Full-Time</option>
+              <option>Part-Time</option>
+            </select>
+            <div class="err" data-err-for="work_type">Select work type.</div>
+          </div>
+          <div class="col-4">
+            <label for="preferred_shifts">Preferred Shift</label>
+            <select id="preferred_shifts" name="preferred_shifts" required>
+              <option value="">Select</option>
+              <option>Day</option>
+              <option>Night</option>
+              <option>Both</option>
+            </select>
+            <div class="err" data-err-for="preferred_shifts">Select a shift.</div>
+          </div>
+          <div class="col-4">
+            <label for="vehicle_option">Vehicle Option</label>
+            <select id="vehicle_option" name="vehicle_option" required>
+              <option value="">Select</option>
+              <option>Own car</option>
+              <option>Company car</option>
+            </select>
+            <div class="err" data-err-for="vehicle_option">Select a vehicle option.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Declarations -->
+      <section class="section" id="sec-declare">
+        <h2>5) Declarations</h2>
+        <div class="grid">
+          <div class="col-12">
+            <label class="checkbox">
+              <input type="checkbox" id="decl_accuracy" required />
+              I confirm all details and documents are true and valid.
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" id="decl_verification" required />
+              I authorise Aylestone Taxis to verify my driving licence, DBS and right‑to‑work.
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" id="decl_gdpr" required />
+              I consent to my data being processed for driver onboarding (GDPR).
+            </label>
+            <div class="err" data-err-for="decls">Please tick all three declarations.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="actions">
+        <div class="note">Accepted files: PDF, JPG, PNG (max 10 MB each)</div>
+        <button class="btn btn-primary" type="submit">Send Application</button>
+      </div>
+    </form>
+
+    <footer>© Aylestone Taxis — Driver Onboarding</footer>
+  </main>
+
+  <script>
+    // Regex patterns
+    const rePostcode = /^[A-Za-z]{1,2}\\d[A-Za-z\\d]?\\s?\\d[A-Za-z]{2}$/;
+    const reMobile = /^(\\+44|0)7\\d{9}$/;
+    const reNI = /^[A-CEGHJ-PR-TW-Z]{2}\\d{6}[A-D]$/i;
+    const reDL = /^[A-Z9]{5}\\d{6}[A-Z]{2}\\d{2}$/i;
+    const reVRM = /^[A-Z]{2}\\d{2}\\s?[A-Z]{3}$/i;
+    const reSort = /^\\d{2}-?\\d{2}-?\\d{2}$/;
+    const reAcct = /^\\d{8}$/;
+    const reShare = /^[A-Z0-9]{9}$/i;
+
+    const $ = (id)=>document.getElementById(id);
+    const err = (name)=>document.querySelector('.err[data-err-for="'+name+'"]');
+    const show = (el)=>el.classList.remove('hidden');
+    const hide = (el)=>el.classList.add('hidden');
+
+    // Conditional RTW fields
+    const rtw = $('rtw_status');
+    const rtwShareWrap = $('rtw_share_wrap');
+    const visaWrap = $('visa_wrap');
+    const visaExpWrap = $('visa_expiry_wrap');
+    const uploadRTW = $('upload_rtw');
+
+    rtw.addEventListener('change', ()=>{
+      const v = rtw.value;
+      hide(rtwShareWrap); hide(visaWrap); hide(visaExpWrap);
+      $('rtw_share_code').required = false;
+      $('visa_type').required = false;
+      $('visa_expiry_date').required = false;
+      uploadRTW.required = false;
+
+      if(v === 'Share code'){
+        show(rtwShareWrap);
+        $('rtw_share_code').required = true;
+        uploadRTW.required = true;
+      } else if(v === 'BRP/visa'){
+        show(visaWrap); show(visaExpWrap);
+        $('visa_type').required = true;
+        $('visa_expiry_date').required = true;
+        uploadRTW.required = true;
+      } else if(v === 'EU settled/pre-settled'){
+        uploadRTW.required = true;
+      } else {
+        // UK passport
+        uploadRTW.required = false;
+      }
+    });
+
+    // Vehicle toggle
+    const owns = $('owns_vehicle');
+    const vehEls = document.querySelectorAll('.veh');
+    owns.addEventListener('change', ()=>{
+      vehEls.forEach(el=> owns.checked ? show(el) : hide(el));
+      // toggle requireds
+      ['vrm','make','model','year','colour','plate_expiry_date','insurance_expiry_date','mot_expiry_date','upload_ins','upload_mot','upload_plate']
+        .forEach(id=> $(id).required = owns.checked);
+    });
+
+    // File validation helper
+    function validFile(input){
+      if(!input.files || !input.files[0]) return false;
+      const f = input.files[0];
+      const okType = /pdf|jpeg|jpg|png/i.test(f.type) || /\.(pdf|jpe?g|png)$/i.test(f.name);
+      const okSize = f.size <= 10 * 1024 * 1024;
+      return okType && okSize;
+    }
+
+    // Date helpers
+    function dateOnOrAfterToday(val){
+      if(!val) return false;
+      const d = new Date(val); d.setHours(0,0,0,0);
+      const t = new Date(); t.setHours(0,0,0,0);
+      return d.getTime() >= t.getTime();
+    }
+    function age21(dateStr){
+      if(!dateStr) return false;
+      const d = new Date(dateStr);
+      const now = new Date();
+      const y = now.getFullYear() - d.getFullYear();
+      const m = now.getMonth() - d.getMonth();
+      const dd = now.getDate() - d.getDate();
+      return y > 21 || (y===21 && (m>0 || (m===0 && dd>=0)));
+    }
+
+    // Show/hide error helper
+    function setError(id, cond){
+      const e = err(id);
+      if(!e) return false;
+      if(!cond){ e.style.display='block'; return true; }
+      e.style.display='none'; return false;
+    }
+
+    // Form submission
+    document.getElementById('driverForm').addEventListener('submit', function(ev){
+      let firstErr = null;
+
+      function invalid(id){
+        if(!firstErr) firstErr = $(id);
+      }
+
+      // Personal
+      const fullNameOk = $('full_name').value.trim().split(' ').length >= 2;
+      if(setError('full_name', fullNameOk)){} else invalid('full_name');
+
+      const dobOk = age21($('dob').value);
+      if(setError('dob', dobOk)){} else invalid('dob');
+
+      const mobOk = reMobile.test($('mobile').value.trim());
+      if(setError('mobile', mobOk)){} else invalid('mobile');
+
+      const emailOk = $('email').checkValidity();
+      if(setError('email', emailOk)){} else invalid('email');
+
+      const niOk = reNI.test($('ni_number').value.trim().toUpperCase());
+      if(setError('ni_number', niOk)){} else invalid('ni_number');
+
+      const addrOk = $('address_line1').value.trim().length>3;
+      if(setError('address_line1', addrOk)){} else invalid('address_line1');
+
+      const cityOk = $('city').value.trim().length>1;
+      if(setError('city', cityOk)){} else invalid('city');
+
+      const pcOk = rePostcode.test($('postcode').value.trim().toUpperCase());
+      if(setError('postcode', pcOk)){} else invalid('postcode');
+
+      const paOk = validFile($('proof_address'));
+      if(setError('proof_address', paOk)){} else invalid('proof_address');
+
+      // Licence & compliance
+      const dlOk = reDL.test($('driving_licence_number').value.trim().toUpperCase());
+      if(setError('driving_licence_number', dlOk)){} else invalid('driving_licence_number');
+
+      const dlIssueOk = !!$('dl_issue_date').value;
+      if(setError('dl_issue_date', dlIssueOk)){} else invalid('dl_issue_date');
+
+      const dlExpOk = dateOnOrAfterToday($('dl_expiry_date').value);
+      if(setError('dl_expiry_date', dlExpOk)){} else invalid('dl_expiry_date');
+
+      const councilOk = !!$('licensing_council').value;
+      if(setError('licensing_council', councilOk)){} else invalid('licensing_council');
+
+      const badgeNoOk = $('badge_number').value.trim().length>2;
+      if(setError('badge_number', badgeNoOk)){} else invalid('badge_number');
+
+      const badgeExpOk = dateOnOrAfterToday($('badge_expiry_date').value);
+      if(setError('badge_expiry_date', badgeExpOk)){} else invalid('badge_expiry_date');
+
+      const dbsNoOk = $('dbs_number').value.trim().length>4;
+      if(setError('dbs_number', dbsNoOk)){} else invalid('dbs_number');
+
+      const dbsIssueOk = !!$('dbs_issue_date').value;
+      if(setError('dbs_issue_date', dbsIssueOk)){} else invalid('dbs_issue_date');
+
+      const dbsUpdOk = !!$('dbs_update_service').value;
+      if(setError('dbs_update_service', dbsUpdOk)){} else invalid('dbs_update_service');
+
+      const rtwOk = !!$('rtw_status').value;
+      if(setError('rtw_status', rtwOk)){} else invalid('rtw_status');
+
+      const rtwVal = $('rtw_status').value;
+      if(rtwVal === 'Share code'){
+        const shareOk = reShare.test($('rtw_share_code').value.trim());
+        if(setError('rtw_share_code', shareOk)){} else invalid('rtw_share_code');
+      }
+      if(rtwVal === 'BRP/visa'){
+        const vtOk = $('visa_type').value.trim().length>1;
+        const veOk = !!$('visa_expiry_date').value;
+        if(setError('visa_type', vtOk)){} else invalid('visa_type');
+        if(setError('visa_expiry_date', veOk)){} else invalid('visa_expiry_date');
+      }
+
+      const dlFrontOk = validFile($('dl_front'));
+      if(setError('dl_front', dlFrontOk)){} else invalid('dl_front');
+      const dlBackOk = validFile($('dl_back'));
+      if(setError('dl_back', dlBackOk)){} else invalid('dl_back');
+      const badgeUpOk = validFile($('upload_badge'));
+      if(setError('upload_badge', badgeUpOk)){} else invalid('upload_badge');
+      const dbsUpOk = validFile($('upload_dbs'));
+      if(setError('upload_dbs', dbsUpOk)){} else invalid('upload_dbs');
+
+      if(rtwVal !== 'UK passport'){
+        const rtwUpOk = validFile($('upload_rtw'));
+        if(setError('upload_rtw', rtwUpOk)){} else invalid('upload_rtw');
+      }
+
+      // Vehicle (conditional)
+      if(owns.checked){
+        const vrmOk = reVRM.test($('vrm').value.trim().toUpperCase());
+        if(setError('vrm', vrmOk)){} else invalid('vrm');
+
+        ['make','model','colour'].forEach(id=>{
+          const ok = $(id).value.trim().length>0;
+          if(setError(id, ok)){} else invalid(id);
+        });
+        const yearOk = (function(v){
+          const y = parseInt(v,10);
+          return !isNaN(y) && y>=2008 && y<=2099;
+        })($('year').value);
+        if(setError('year', yearOk)){} else invalid('year');
+
+        const peOk = dateOnOrAfterToday($('plate_expiry_date').value);
+        if(setError('plate_expiry_date', peOk)){} else invalid('plate_expiry_date');
+        const ieOk = dateOnOrAfterToday($('insurance_expiry_date').value);
+        if(setError('insurance_expiry_date', ieOk)){} else invalid('insurance_expiry_date');
+        const meOk = dateOnOrAfterToday($('mot_expiry_date').value);
+        if(setError('mot_expiry_date', meOk)){} else invalid('mot_expiry_date');
+
+        const insOk = validFile($('upload_ins'));
+        if(setError('upload_ins', insOk)){} else invalid('upload_ins');
+        const motOk = validFile($('upload_mot'));
+        if(setError('upload_mot', motOk)){} else invalid('upload_mot');
+        const plateOk = validFile($('upload_plate'));
+        if(setError('upload_plate', plateOk)){} else invalid('upload_plate');
+      }
+
+      // Payment & work
+      const ahOk = $('account_holder').value.trim().length>2;
+      if(setError('account_holder', ahOk)){} else invalid('account_holder');
+      const scOk = reSort.test($('sort_code').value.trim());
+      if(setError('sort_code', scOk)){} else invalid('sort_code');
+      const anOk = reAcct.test($('account_number').value.trim());
+      if(setError('account_number', anOk)){} else invalid('account_number');
+
+      const wtOk = !!$('work_type').value;
+      if(setError('work_type', wtOk)){} else invalid('work_type');
+      const psOk = !!$('preferred_shifts').value;
+      if(setError('preferred_shifts', psOk)){} else invalid('preferred_shifts');
+      const voOk = !!$('vehicle_option').value;
+      if(setError('vehicle_option', voOk)){} else invalid('vehicle_option');
+
+      // Declarations
+      const declsOk = $('decl_accuracy').checked && $('decl_verification').checked && $('decl_gdpr').checked;
+      if(setError('decls', declsOk)){} else invalid('decl_accuracy');
+
+      if(firstErr){
+        ev.preventDefault();
+        firstErr.scrollIntoView({behavior:'smooth', block:'center'});
+        firstErr.focus({preventScroll:true});
+        return false;
+      }
+
+      // If valid, for demo prevent actual submit and show a JSON payload.
+      ev.preventDefault();
+      const payload = {
+        full_name: $('full_name').value.trim(),
+        dob: $('dob').value,
+        mobile: $('mobile').value.trim(),
+        email: $('email').value.trim(),
+        ni_number: $('ni_number').value.trim().toUpperCase(),
+        address_line1: $('address_line1').value.trim(),
+        city: $('city').value.trim(),
+        postcode: $('postcode').value.trim().toUpperCase(),
+        driving_licence_number: $('driving_licence_number').value.trim().toUpperCase(),
+        dl_issue_date: $('dl_issue_date').value,
+        dl_expiry_date: $('dl_expiry_date').value,
+        licensing_council: $('licensing_council').value,
+        badge_number: $('badge_number').value.trim(),
+        badge_expiry_date: $('badge_expiry_date').value,
+        dbs_number: $('dbs_number').value.trim(),
+        dbs_issue_date: $('dbs_issue_date').value,
+        dbs_update_service: $('dbs_update_service').value === 'yes',
+        right_to_work_status: $('rtw_status').value,
+        rtw_share_code: $('rtw_share_code').value.trim() || undefined,
+        visa_type: $('visa_type').value.trim() || undefined,
+        visa_expiry_date: $('visa_expiry_date').value || undefined,
+        owns_vehicle: owns.checked,
+        vrm: $('vrm').value.trim().toUpperCase() || undefined,
+        make: $('make').value.trim() || undefined,
+        model: $('model').value.trim() || undefined,
+        year: $('year').value || undefined,
+        colour: $('colour').value.trim() || undefined,
+        plate_expiry_date: $('plate_expiry_date').value || undefined,
+        insurance_expiry_date: $('insurance_expiry_date').value || undefined,
+        mot_expiry_date: $('mot_expiry_date').value || undefined,
+        account_holder: $('account_holder').value.trim(),
+        sort_code: $('sort_code').value.trim(),
+        account_number: $('account_number').value.trim(),
+        work_type: $('work_type').value,
+        preferred_shifts: $('preferred_shifts').value,
+        vehicle_option: $('vehicle_option').value
+      };
+      alert('Application ready. Example JSON (send to your API):\\n\\n' + JSON.stringify(payload, null, 2));
+    });
+
+    // File input change validation for type/size feedback
+    document.querySelectorAll('input[type="file"]').forEach(input=>{
+      input.addEventListener('change', ()=>{
+        const ok = validFile(input);
+        setError(input.id, ok);
+      });
+    });
+  </script>
+</body>
+</html>

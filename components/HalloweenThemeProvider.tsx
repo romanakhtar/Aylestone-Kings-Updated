@@ -42,6 +42,9 @@ export function HalloweenThemeProvider({ children }: HalloweenThemeProviderProps
   }, [])
 
   useEffect(() => {
+    // Only run on client side to prevent hydration issues
+    if (typeof document === 'undefined') return
+
     // Apply/remove Halloween theme class on body
     if (isHalloweenActive) {
       document.body.classList.add('halloween-theme')
@@ -61,11 +64,13 @@ export function HalloweenThemeProvider({ children }: HalloweenThemeProviderProps
 
     // Cleanup on unmount
     return () => {
-      document.body.classList.remove('halloween-theme')
-      // Restore regular favicon
-      const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement
-      if (favicon) {
-        favicon.href = '/favicon.png'
+      if (typeof document !== 'undefined') {
+        document.body.classList.remove('halloween-theme')
+        // Restore regular favicon
+        const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement
+        if (favicon) {
+          favicon.href = '/favicon.png'
+        }
       }
     }
   }, [isHalloweenActive])
