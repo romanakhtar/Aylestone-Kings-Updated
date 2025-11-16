@@ -321,13 +321,31 @@ export default function JoinDriverPage() {
       return
     }
 
-    // Form is valid - here you would submit to your API
-    // For now, we'll just show a success message
-    alert('Application submitted successfully! We will review your application and get back to you soon.')
-    e.currentTarget.reset()
-    setOwnsVehicle(false)
-    setRtwStatus('')
-    setIsSubmitting(false)
+    // Form is valid - submit to Formspree (same endpoint as contact form)
+    try {
+      const response = await fetch('https://formspree.io/f/myzdazng', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+        },
+        body: formData,
+      })
+      if (response.ok) {
+        alert('Application submitted successfully! We will review your application and get back to you soon.')
+        e.currentTarget.reset()
+        setOwnsVehicle(false)
+        setRtwStatus('')
+      } else {
+        const data = await response.json().catch(() => ({}))
+        console.error('Formspree error:', data)
+        alert('There was an error submitting your application. Please try again.')
+      }
+    } catch (err) {
+      console.error('Submission failed:', err)
+      alert('Network error while submitting. Please check your connection and try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   // Prevent hydration mismatch by not rendering conditional content until mounted
@@ -385,6 +403,11 @@ export default function JoinDriverPage() {
               Become part of Leicester&apos;s most trusted taxi service. We&apos;re looking for professional, 
               licensed drivers to join our established team. Apply today and start your journey with Aylestone Kings.
             </p>
+            <div className="flex justify-center">
+              <Button asChild className="bg-[#06A0A6] hover:bg-[#05858a] text-white px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                <a href="#driver-application-form">Fill the form</a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -878,9 +901,10 @@ export default function JoinDriverPage() {
       </section>
 
       {/* Form Section */}
-      <section className="py-12 md:py-16">
+      <section id="driver-application-form" className="py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <input type="hidden" name="formType" value="driverSignupForm" />
             {/* Personal Information */}
             <div className="p-6 md:p-8 border-b border-slate-200">
               <div className="flex items-center gap-3 mb-6">
