@@ -340,6 +340,146 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SEO Content Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Intro */}
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-4">
+              {siteData.homepage.seoContent.introHeading}
+            </h2>
+            <p className="text-lg text-[#2E3C44] leading-relaxed">
+              {siteData.homepage.seoContent.introBody}
+            </p>
+            <p className="text-lg text-[#2E3C44] leading-relaxed mt-4">
+              {siteData.homepage.seoContent.mission}
+            </p>
+          </div>
+
+          {/* Booking */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div className="bg-[#E4E4E4] rounded-xl p-6">
+              <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-4">
+                {siteData.homepage.seoContent.booking.heading}
+              </div>
+              <ul className="space-y-2">
+                {siteData.homepage.seoContent.booking.bullets.map((item: string, idx: number) => (
+                  <li key={idx} className="text-[#2E3C44]">{item}</li>
+                ))}
+              </ul>
+              <div className="mt-4 text-[#2E3C44] text-sm">
+                <div>Call: {siteData.company.phone}</div>
+                <div>WhatsApp: {siteData.company.whatsapp}</div>
+                <div>
+                  Book online: <a href={contactInfo.booking.online} className="underline text-[#06A0A6]">Online Booking</a>
+                </div>
+              </div>
+            </div>
+
+            {/* Why Us */}
+            <div className="bg-white rounded-xl p-6 border border-gray-100">
+              <h3 className="text-2xl font-semibold text-[#0F0D3E] mb-4">
+                {siteData.homepage.seoContent.whyUs.heading}
+              </h3>
+              <div className="space-y-3">
+                {siteData.homepage.seoContent.whyUs.items.map((w: {title: string, text: string}, idx: number) => (
+                  <div key={idx}>
+                    <div className="font-semibold text-[#0F0D3E]">{w.title}</div>
+                    <div className="text-[#2E3C44]">{w.text}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Airports */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-semibold text-[#0F0D3E] mb-4">
+              {siteData.homepage.seoContent.airports.heading}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-gray-100">
+                <div className="font-semibold text-[#0F0D3E] mb-2">Airports Covered</div>
+                <ul className="list-disc ml-5 text-[#2E3C44] space-y-1">
+                  {siteData.homepage.seoContent.airports.airportsList.map((a: {name: string, href: string}, idx: number) => (
+                    <li key={idx}>
+                      <a href={a.href} className="text-[#06A0A6] underline hover:no-underline">
+                        {a.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-gray-100 md:col-span-2">
+                <div className="font-semibold text-[#0F0D3E] mb-2">Why choose our airport service?</div>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {siteData.homepage.seoContent.airports.bullets.map((b: string, idx: number) => (
+                    <li key={idx} className="text-[#2E3C44]">{b}</li>
+                  ))}
+                </ul>
+                <p className="text-[#2E3C44] mt-4">{siteData.homepage.seoContent.airports.closing}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-semibold text-[#0F0D3E] mb-4">
+              {siteData.homepage.seoContent.services.heading}
+            </h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {siteData.homepage.seoContent.services.items.map((s: string, idx: number) => (
+                <li key={idx} className="text-[#2E3C44]">{s}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Areas */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-semibold text-[#0F0D3E] mb-4">
+              {siteData.homepage.seoContent.areas.heading}
+            </h3>
+            <p className="text-[#2E3C44]">{siteData.homepage.seoContent.areas.text}</p>
+            {siteData.homepage.seoContent.areas.links && (
+              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-4">
+                {siteData.homepage.seoContent.areas.links.map((loc: {name: string, href: string}, idx: number) => (
+                  <li key={idx}>
+                    <a href={loc.href} className="text-[#06A0A6] underline hover:no-underline">
+                      {loc.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* Fleet */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-semibold text-[#0F0D3E] mb-4">
+              {siteData.homepage.seoContent.fleet.heading}
+            </h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {siteData.homepage.seoContent.fleet.items.map((f: string, idx: number) => (
+                <li key={idx} className="text-[#2E3C44]">{f}</li>
+              ))}
+            </ul>
+            <p className="text-[#2E3C44] mt-3">{siteData.homepage.seoContent.fleet.note}</p>
+          </div>
+
+          {/* Closing CTA Points */}
+          <div className="bg-[#E4E4E4] rounded-xl p-6">
+            <h3 className="text-2xl font-semibold text-[#0F0D3E] mb-4">
+              {siteData.homepage.seoContent.closingCta.heading}
+            </h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              {siteData.homepage.seoContent.closingCta.bullets.map((c: string, idx: number) => (
+                <li key={idx} className="text-[#2E3C44]">{c}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Customer Reviews Section */}
       <section className="py-20 bg-[#E4E4E4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

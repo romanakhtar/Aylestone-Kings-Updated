@@ -124,7 +124,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-997662518', {
-              page_path: window.location.pathname,
+              page_path: typeof window !== 'undefined' ? window.location.pathname : '/',
             });
           `}
         </Script>
