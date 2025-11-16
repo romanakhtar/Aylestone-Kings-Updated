@@ -82,12 +82,12 @@ export const siteData = {
   // Homepage Content
   homepage: {
     hero: {
-      title: "Driving Leicester Forward",
-      subtitle: "Your trusted taxi companion — providing fast, reliable and affordable transport across Leicester and beyond.",
+      title: "Your Trusted Taxi Service in Leicester – Reliable, Affordable & Available 24/7",
+      subtitle: "Welcome to Aylestone Kings, Leicester’s dependable and friendly taxi service. We provide fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide.",
       ctaText: "Book Your Ride Now",
       features: [
-        "24/7 Service",
-        "GPS Tracking", 
+        "Available 24/7",
+        "Immediate Pick-Up",
         "Professional Drivers"
       ]
     },
@@ -95,16 +95,18 @@ export const siteData = {
     aboutUs: {
       title: "Over 30 Years' Experience",
       subtitle: "Reliable Transport Since 1995",
-      description: "Established in 1995, Aylestone Kings set out with one mission: to deliver a professional, affordable and dependable taxi service for the people of Aylestone and the surrounding area. All our drivers are fully DBS-checked for your peace of mind, ensuring a safe and secure service every time. Whether it's airport transfers, courier deliveries or local journeys, we've got you covered."
+      description: "Established in 1995, Aylestone Kings set out with one mission: to deliver the safest, most comfortable, and most reliable taxi service in Leicester at prices everyone can afford. We provide transport across Leicester, Leicestershire, the East Midlands and nationwide — from airport transfers and commutes to appointments and safe rides home. All drivers are fully licensed and DBS-checked."
     },
 
     whyChooseUs: {
       title: "Why Choose Us?",
       features: [
-        "24/7 availability — day and night",
-        "Live GPS tracking for every journey",
-        "Fully licensed and professional drivers",
-        "Multiple secure payment options"
+        "Fast & reliable pick-ups across Leicester",
+        "Competitive fixed fares with no hidden charges",
+        "Fully licensed, DBS-checked professional drivers",
+        "Clean, comfortable and well-maintained cars",
+        "Safe for families, students, businesses and tourists",
+        "Always open – 24/7/365 including bank holidays"
       ]
     },
 
@@ -131,13 +133,14 @@ export const siteData = {
     },
 
     quickBooking: {
-      title: "Book a Taxi in Under 10 Seconds",
-      subtitle: "As leicester and leicestershire's leading taxi firm, we guarantee priority service for every booking.",
-      description: "With our app you can:",
+      title: "Book Your Taxi Instantly",
+      subtitle: "Available day and night with immediate pick-up in most Leicester areas.",
+      description: "Book by phone, WhatsApp or online. Pre-bookings welcome. Instant confirmations.",
       features: [
-        "Book in seconds",
-        "Track your driver live",
-        "Arrive in comfort and on time"
+        "SMS/WhatsApp confirmations",
+        "Pre-bookings welcome",
+        "Professional drivers",
+        "Modern, comfortable fleet"
       ]
     },
 
@@ -149,6 +152,141 @@ export const siteData = {
     sustainability: {
       title: "Driving a Greener Future",
       subtitle: "We're committed to reducing our environmental footprint. Our eco-friendly fleet and ongoing green initiatives help us deliver a cleaner, more sustainable future for transport in Aylestone."
+    },
+
+    // SEO-focused extended homepage content (rendered near page bottom)
+    seoContent: {
+      introHeading: "Your Trusted Taxi Service in Leicester – Reliable, Affordable & Available 24/7",
+      introBody: "We provide fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide. Whether you are heading to the airport, commuting to work, travelling to an appointment, or simply need a safe ride home, we are on hand 24/7.",
+      mission: "Our mission is simple: to deliver the safest, most comfortable, and most reliable taxi service in Leicester, at prices everyone can afford.",
+      booking: {
+        heading: "Book Your Taxi Instantly",
+        bullets: [
+          "Available day and night",
+          "Immediate pick-up in most Leicester areas",
+          "SMS/WhatsApp confirmations",
+          "Pre-bookings welcome",
+          "Professional drivers",
+          "Modern fleet"
+        ]
+      },
+      whyUs: {
+        heading: "Why We Are Leicester’s Favourite Taxi Company",
+        items: [
+          {
+            title: "Fast & Reliable Pick-Ups",
+            text: "We operate from several locations across Leicester for quick dispatch — even during busy periods."
+          },
+          {
+            title: "Competitive, Honest Pricing",
+            text: "Fixed fares, no hidden charges, and clear pricing for all journeys."
+          },
+          {
+            title: "Experienced, Fully Licensed Drivers",
+            text: "DBS-checked, council-licensed, highly trained and customer-focused."
+          },
+          {
+            title: "Clean, Comfortable & Well-Maintained Cars",
+            text: "Saloon, estate, executive, 6- and 8-seaters, and MPVs."
+          },
+          {
+            title: "Safe for Everyone",
+            text: "Families, students, businesses, elderly passengers and tourists rely on us daily."
+          },
+          {
+            title: "Always Open – 24/7/365",
+            text: "We operate all day, every day including bank holidays."
+          }
+        ]
+      },
+      airports: {
+        heading: "Airport Taxi Leicester – Fixed Price Airport Transfers",
+        airportsList: [
+          { name: "East Midlands Airport", href: "/pricing/airports/East-Midlands" },
+          { name: "Birmingham Airport", href: "/pricing/airports/Birmingham" },
+          { name: "Luton Airport", href: "/pricing/airports/Luton" },
+          { name: "Heathrow Airport", href: "/pricing/airports/Heathrow" },
+          { name: "Stansted Airport", href: "/pricing/airports/Stansted" },
+          { name: "Gatwick Airport", href: "/pricing/airports/Gatwick" },
+          { name: "Manchester Airport", href: "/pricing/airports/Manchester" },
+          { name: "London City Airport", href: "/pricing" }
+        ],
+        bullets: [
+          "Fixed prices (no surge pricing)",
+          "Meet & Greet service available",
+          "Flight monitoring included",
+          "Spacious cars for luggage",
+          "Perfect for families, students & businesses"
+        ],
+        closing: "Start or end your journey the right way — with a smooth, stress-free airport transfer."
+      },
+      services: {
+        heading: "Our Taxi Services Across Leicester",
+        items: [
+          "Local Leicester Taxi Service — fast pick-ups and safe travel anywhere in Leicester",
+          "Long-Distance Taxi Travel — comfortable and affordable to any UK destination",
+          "Train Station Transfers — reliable for Leicester Railway Station and beyond",
+          "Corporate & Business Taxi Accounts — professional travel for staff and clients",
+          "School Runs & Student Transport — safe and punctual",
+          "Executive & Chauffeur Service — premium vehicles for business and VIP travel",
+          "Hospital & Medical Appointments — friendly, supportive and on time",
+          "6-Seater & 8-Seater Minibus Taxi — perfect for groups and airport runs",
+          "Parcel Delivery / Courier Service — fast, secure same-day deliveries",
+          "Wheelchair Accessible Taxis — comfortable and supportive transport"
+        ]
+      },
+      areas: {
+        heading: "Areas We Cover in Leicester & Leicestershire",
+        text: "Leicester City Centre, Oadby, Wigston, Evington, Belgrave, Spinney Hills, Highfields, Clarendon Park, Knighton, Hamilton, Beaumont Leys, Braunstone, Aylestone, Thurmaston, Syston, Birstall, Glenfield, Blaby, Narborough, Enderby, Loughborough, Hinckley, Coalville, Melton Mowbray, Market Harborough and more. If you are anywhere in Leicester — we’ll get to you quickly.",
+        links: [
+          { name: "Leicester City Centre", href: "/taxis-in-leicester-city-centre" },
+          { name: "Aylestone", href: "/taxis-in-aylestone" },
+          { name: "Oadby", href: "/taxis-in-oadby" },
+          { name: "Wigston", href: "/taxis-in-wigston" },
+          { name: "Evington", href: "/taxis-in-evington" },
+          { name: "Belgrave", href: "/taxis-in-belgrave" },
+          { name: "Spinney Hills", href: "/taxis-in-spinney-hills" },
+          { name: "Highfields", href: "/taxis-in-highfields" },
+          { name: "Clarendon Park", href: "/taxis-in-clarendon-park" },
+          { name: "Knighton", href: "/taxis-in-knighton" },
+          { name: "Hamilton", href: "/taxis-in-hamilton" },
+          { name: "Beaumont Leys", href: "/taxis-in-beaumont-leys" },
+          { name: "Braunstone", href: "/taxis-in-braunstone" },
+          { name: "Thurmaston", href: "/taxis-in-thurmaston" },
+          { name: "Syston", href: "/taxis-in-syston" },
+          { name: "Birstall", href: "/taxis-in-birstall" },
+          { name: "Glenfield", href: "/taxis-in-glenfield" },
+          { name: "Blaby", href: "/taxis-in-blaby" },
+          { name: "Narborough", href: "/taxis-in-narborough" },
+          { name: "Enderby", href: "/taxis-in-enderby" },
+          { name: "Loughborough", href: "/taxis-in-loughborough" },
+          { name: "Hinckley", href: "/taxis-in-hinckley" },
+          { name: "Coalville", href: "/taxis-in-coalville" },
+          { name: "Melton Mowbray", href: "/taxis-in-melton-mowbray" },
+          { name: "Market Harborough", href: "/taxis-in-market-harborough" }
+        ]
+      },
+      fleet: {
+        heading: "Our Taxi Fleet",
+        items: [
+          "Saloon Cars – perfect for everyday travel",
+          "Executive Cars – premium comfort for business or occasions",
+          "6-Seaters – great for families and groups",
+          "8-Seater Minibuses – spacious and cost-effective",
+          ],
+        note: "Every vehicle is regularly cleaned, inspected and maintained."
+      },
+      closingCta: {
+        heading: "Book Your Taxi Today – Quick, Easy & Reliable",
+        bullets: [
+          "Affordable prices",
+          "Professional drivers",
+          "Clean vehicles",
+          "Fast pick-ups",
+          "24/7 service",
+          "All journeys welcome"
+        ]
+      }
     },
 
     customerReviews: {
