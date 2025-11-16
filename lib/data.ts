@@ -82,7 +82,7 @@ export const siteData = {
   // Homepage Content
   homepage: {
     hero: {
-      title: "Your Trusted Taxi Service in Leicester – Reliable, Affordable & Available 24/7",
+      title: "Driving Leicester Forward",
       subtitle: "Welcome to Aylestone Kings, Leicester’s dependable and friendly taxi service. We provide fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide.",
       ctaText: "Book Your Ride Now",
       features: [
@@ -156,7 +156,7 @@ export const siteData = {
 
     // SEO-focused extended homepage content (rendered near page bottom)
     seoContent: {
-      introHeading: "Your Trusted Taxi Service in Leicester – Reliable, Affordable & Available 24/7",
+      introHeading: "Driving Leicester Forward",
       introBody: "We provide fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide. Whether you are heading to the airport, commuting to work, travelling to an appointment, or simply need a safe ride home, we are on hand 24/7.",
       mission: "Our mission is simple: to deliver the safest, most comfortable, and most reliable taxi service in Leicester, at prices everyone can afford.",
       booking: {
