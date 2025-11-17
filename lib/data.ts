@@ -83,7 +83,7 @@ export const siteData = {
   homepage: {
     hero: {
       title: "Driving Leicester Forward",
-      subtitle: "Welcome to Aylestone Kings, Leicester’s dependable and friendly taxi service. We provide fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide.",
+      subtitle: "Welcome to Aylestone Kings, Leicester's dependable and friendly taxi service. We provide fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide.",
       ctaText: "Book Your Ride Now",
       features: [
         "Available 24/7",
@@ -156,9 +156,9 @@ export const siteData = {
 
     // SEO-focused extended homepage content (rendered near page bottom)
     seoContent: {
-      introHeading: "Driving Leicester Forward",
-      introBody: "We provide fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide. Whether you are heading to the airport, commuting to work, travelling to an appointment, or simply need a safe ride home, we are on hand 24/7.",
-      mission: "Our mission is simple: to deliver the safest, most comfortable, and most reliable taxi service in Leicester, at prices everyone can afford.",
+      introHeading: "Taxi Leicester - Leicester's Most Trusted Taxi Service",
+      introBody: "Looking for a reliable Taxi Leicester, Taxi Near Me Leicester, or Cheap Taxi Leicester? Aylestone Kings is Leicester's leading Leicester Taxi Company, providing fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide. Whether you need a Taxi Leicester for the airport, commuting to work, travelling to an appointment, or simply need a safe ride home, we are on hand 24/7. Our Leicester Airport Taxi service offers fixed-price transfers to all major UK airports including East Midlands Airport.",
+      mission: "As Leicester's trusted Leicester Taxi Company since 1995, our mission is simple: to deliver the safest, most comfortable, and most reliable Taxi Leicester service, at prices everyone can afford. Whether you're searching for a Taxi Near Me Leicester or a Cheap Taxi Leicester, we provide quality service without compromise.",
       booking: {
         heading: "Book Your Taxi Instantly",
         bullets: [

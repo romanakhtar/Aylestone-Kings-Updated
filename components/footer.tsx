@@ -60,6 +60,49 @@ export default function Footer() {
               </ul>
             </div>
 
+            {/* Popular Services - SEO Pages */}
+            <div>
+              <h4 className="font-bold text-gray-800 text-lg md:text-xl mb-4 tracking-tight">Popular Services</h4>
+              <ul className="space-y-2.5">
+                <li>
+                  <Link href="/taxi-leicester" className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
+                    <span className="leading-6">Taxi Leicester</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/taxi-near-me-leicester" className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
+                    <span className="leading-6">Taxi Near Me Leicester</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/leicester-airport-taxi" className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
+                    <span className="leading-6">Leicester Airport Taxi</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/leicester-to-east-midlands-airport-taxi" className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
+                    <span className="leading-6">Leicester to EMA Taxi</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cheap-taxi-leicester" className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
+                    <span className="leading-6">Cheap Taxi Leicester</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/leicester-taxi-company" className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
+                    <span className="leading-6">Leicester Taxi Company</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
             {/* Airport Transfers */}
             <div>
               <h4 className="font-bold text-gray-800 text-lg md:text-xl mb-4 tracking-tight">Airport Transfers</h4>

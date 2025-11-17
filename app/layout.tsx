@@ -37,33 +37,122 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: "Taxi in Leicester | Aylestone Taxis | Leicester Taxi Service",
-  description: "Leicester's trusted taxi service since 1995. Reliable 24/7 service, licensed drivers, airport transfers, and local journeys throughout Leicester and Leicestershire. Book your Leicester taxi online or call now.",
+  title: "Driving Leicester Forward | Aylestone Kings",
+  description: "Leicester's #1 taxi service since 1995. Taxi Leicester, Leicester Airport Taxi, Taxi Near Me Leicester, Cheap Taxi Leicester. 24/7 service, licensed drivers, fixed-price airport transfers. Book your Leicester taxi online or call 0116 2338888.",
+  keywords: "Taxi Leicester, Taxi Near Me Leicester, Leicester Airport Taxi, Leicester to East Midlands Airport Taxi, Leicester Taxi Company, Cheap Taxi Leicester, taxi in Leicester, Leicester taxi service, airport taxi Leicester, taxi company Leicester",
   generator: "Aylestone Kings",
+  authors: [{ name: "Aylestone Kings" }],
+  openGraph: {
+    title: "Taxi Leicester | Leicester Airport Taxi | Aylestone Kings",
+    description: "Leicester's trusted taxi service since 1995. Taxi Leicester, Leicester Airport Taxi, and cheap taxi services. 24/7 service, licensed drivers, fixed-price transfers.",
+    url: "https://aylestone-taxis.co.uk",
+    siteName: "Aylestone Kings",
+    locale: "en_GB",
+    type: "website",
+    images: [
+      {
+        url: "https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Aylestone Kings - Taxi Leicester",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Taxi Leicester | Leicester Airport Taxi | Aylestone Kings",
+    description: "Leicester's trusted taxi service since 1995. Taxi Leicester, Leicester Airport Taxi, and cheap taxi services.",
+    images: ["https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png"],
+  },
+  alternates: {
+    canonical: "https://aylestone-taxis.co.uk",
+  },
   other: {
     "preconnect": "https://aylestonekings.webbooker.icabbi.com",
+    "geo.region": "GB-LEI",
+    "geo.placename": "Leicester",
+    "geo.position": "52.6369;-1.1398",
+    "ICBM": "52.6369, -1.1398",
   },
 }
 
 const schemaData = [
   {
     "@context": "https://schema.org",
-    "@type": "TaxiService",
-    name: "Aylestone Taxis",
+    "@type": "LocalBusiness",
+    "@id": "https://aylestone-taxis.co.uk/#organization",
+    name: "Aylestone Kings",
+    alternateName: "Aylestone Taxis",
     url: "https://aylestone-taxis.co.uk",
+    logo: "https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png",
+    image: "https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png",
     telephone: "+44-116-233-8888",
+    email: "info@aylestone-taxis.co.uk",
+    priceRange: "££",
     address: {
       "@type": "PostalAddress",
       streetAddress: "753A Aylestone Road",
       addressLocality: "Leicester",
+      addressRegion: "Leicestershire",
       postalCode: "LE2 8TG",
       addressCountry: "GB"
     },
-    openingHours: "Mo-Su 00:00-23:59",
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "52.6369",
+      longitude: "-1.1398"
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        opens: "00:00",
+        closes: "23:59"
+      }
+    ],
+    areaServed: {
+      "@type": "City",
+      name: "Leicester"
+    },
     sameAs: [
-      "https://www.facebook.com/yourpage",
-      "https://www.instagram.com/yourpage"     
-    ]
+      "https://www.facebook.com/share/1EzHEEqLRK/",
+      "https://www.instagram.com/aylestone_kings"
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "1000",
+      bestRating: "5",
+      worstRating: "1"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    name: "Aylestone Kings Taxi Service",
+    provider: {
+      "@id": "https://aylestone-taxis.co.uk/#organization"
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Leicester"
+    },
+    serviceType: [
+      "Taxi Leicester",
+      "Leicester Airport Taxi",
+      "Taxi Near Me Leicester",
+      "Cheap Taxi Leicester",
+      "Leicester Taxi Company"
+    ],
+    description: "Professional taxi service in Leicester offering airport transfers, local journeys, and 24/7 transportation services."
   },
   {
     "@context": "https://schema.org",
@@ -78,14 +167,45 @@ const schemaData = [
   },
   {
     "@context": "https://schema.org",
-    "@type": "SiteNavigationElement",
-    name: ["Home", "About", "Airport Pricing", "Contact"],
-    url: [
-      "https://aylestone-taxis.co.uk/",
-      "https://aylestone-taxis.co.uk/about",
-      "https://aylestone-taxis.co.uk/pricing",
-      "https://aylestone-taxis.co.uk/contact"
-    ]
+    "@type": "Service",
+    serviceType: "Taxi Service",
+    provider: {
+      "@id": "https://aylestone-taxis.co.uk/#organization"
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Leicester"
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Taxi Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Taxi Leicester",
+            description: "Professional taxi service throughout Leicester"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Leicester Airport Taxi",
+            description: "Airport transfer service from Leicester to all major UK airports"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Cheap Taxi Leicester",
+            description: "Affordable taxi service in Leicester with competitive pricing"
+          }
+        }
+      ]
+    }
   }
 ]
 
