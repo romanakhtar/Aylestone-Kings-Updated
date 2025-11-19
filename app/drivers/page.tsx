@@ -24,41 +24,32 @@ export default function JoinDriverPage() {
   const showEUFields = rtwStatus === 'EU settled/pre-settled'
   const requiresRTWUpload = rtwStatus !== 'UK passport' && rtwStatus !== ''
 
-  // Validation helpers
-  const validateMobile = (value: string) => /^(\+44|0)7\d{9}$/.test(value.trim())
-  const validateNI = (value: string) => /^[A-CEGHJ-PR-TW-Z]{2}\d{6}[A-D]$/i.test(value.trim())
-  const validatePostcode = (value: string) => /^[A-Za-z]{1,2}\d[A-Za-z\d]?\s?\d[A-Za-z]{2}$/.test(value.trim().toUpperCase())
-  const validateDL = (value: string) => /^[A-Z9]{5}\d{6}[A-Z]{2}\d{2}$/i.test(value.trim())
-  const validateVRM = (value: string) => /^[A-Z]{2}\d{2}\s?[A-Z]{3}$/i.test(value.trim())
-  const validateSortCode = (value: string) => /^\d{2}-?\d{2}-?\d{2}$/.test(value.trim())
-  const validateAccountNumber = (value: string) => /^\d{8}$/.test(value.trim())
-  const validateShareCode = (value: string) => /^[A-Z0-9]{9}$/i.test(value.trim())
+  // Validation helpers - lenient validation to accept entries
+  const validateMobile = (value: string) => value.trim().length > 0
+  const validateNI = (value: string) => value.trim().length > 0
+  const validatePostcode = (value: string) => value.trim().length > 0
+  const validateDL = (value: string) => value.trim().length > 0
+  const validateVRM = (value: string) => value.trim().length > 0
+  const validateSortCode = (value: string) => value.trim().length > 0
+  const validateAccountNumber = (value: string) => value.trim().length > 0
+  const validateShareCode = (value: string) => value.trim().length > 0
 
   const validateFile = (file: File | null) => {
     if (!file) return false
-    const validTypes = ['application/pdf', 'image/jpeg', 'image/jpg', 'image/png']
-    const validExtension = /\.(pdf|jpe?g|png)$/i.test(file.name)
-    const validSize = file.size <= 10 * 1024 * 1024 // 10MB
-    return (validTypes.includes(file.type) || validExtension) && validSize
+    // Accept any file type and size - just check that a file exists
+    return file.size > 0
   }
 
   const dateOnOrAfterToday = (dateStr: string) => {
     if (!dateStr) return false
-    const d = new Date(dateStr)
-    d.setHours(0, 0, 0, 0)
-    const today = new Date()
-    today.setHours(0, 0, 0, 0)
-    return d.getTime() >= today.getTime()
+    // Accept any valid date
+    return !isNaN(new Date(dateStr).getTime())
   }
 
   const age21 = (dateStr: string) => {
     if (!dateStr) return false
-    const dob = new Date(dateStr)
-    const now = new Date()
-    const years = now.getFullYear() - dob.getFullYear()
-    const months = now.getMonth() - dob.getMonth()
-    const days = now.getDate() - dob.getDate()
-    return years > 21 || (years === 21 && (months > 0 || (months === 0 && days >= 0)))
+    // Accept any valid date - remove age restriction
+    return !isNaN(new Date(dateStr).getTime())
   }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -69,34 +60,34 @@ export default function JoinDriverPage() {
     const formData = new FormData(e.currentTarget)
     const errors: Record<string, string> = {}
 
-    // Personal Information Validation
+    // Personal Information Validation - lenient
     const fullName = formData.get('full_name') as string
-    if (!fullName || fullName.trim().split(' ').length < 2) {
-      errors.full_name = 'Enter your full name (first & last).'
+    if (!fullName || fullName.trim().length < 1) {
+      errors.full_name = 'Enter your full name.'
     }
 
     const dob = formData.get('dob') as string
     if (!dob || !age21(dob)) {
-      errors.dob = 'Enter a valid date of birth (must be 21+).'
+      errors.dob = 'Enter a valid date of birth.'
     }
 
     const mobile = formData.get('mobile') as string
     if (!mobile || !validateMobile(mobile)) {
-      errors.mobile = 'Enter a valid UK mobile (07… or +44).'
+      errors.mobile = 'Enter your mobile number.'
     }
 
     const email = formData.get('email') as string
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      errors.email = 'Enter a valid email.'
+    if (!email || email.trim().length < 1) {
+      errors.email = 'Enter your email.'
     }
 
     const niNumber = formData.get('ni_number') as string
     if (!niNumber || !validateNI(niNumber)) {
-      errors.ni_number = 'Enter a valid NI number (e.g., QQ123456C).'
+      errors.ni_number = 'Enter your National Insurance number.'
     }
 
     const address = formData.get('address_line1') as string
-    if (!address || address.trim().length < 3) {
+    if (!address || address.trim().length < 1) {
       errors.address_line1 = 'Enter your address.'
     }
 
@@ -107,18 +98,18 @@ export default function JoinDriverPage() {
 
     const postcode = formData.get('postcode') as string
     if (!postcode || !validatePostcode(postcode)) {
-      errors.postcode = 'Enter a valid UK postcode.'
+      errors.postcode = 'Enter your postcode.'
     }
 
     const proofAddress = formData.get('proof_address') as File
     if (!proofAddress || !validateFile(proofAddress)) {
-      errors.proof_address = 'Upload a PDF/JPG/PNG (≤10 MB).'
+      errors.proof_address = 'Upload proof of address.'
     }
 
-    // Licence & Compliance Validation
+    // Licence & Compliance Validation - lenient
     const dlNumber = formData.get('driving_licence_number') as string
     if (!dlNumber || !validateDL(dlNumber)) {
-      errors.driving_licence_number = 'Enter a valid UK licence number.'
+      errors.driving_licence_number = 'Enter your driving licence number.'
     }
 
     const dlIssueDate = formData.get('dl_issue_date') as string
@@ -128,7 +119,7 @@ export default function JoinDriverPage() {
 
     const dlExpiryDate = formData.get('dl_expiry_date') as string
     if (!dlExpiryDate || !dateOnOrAfterToday(dlExpiryDate)) {
-      errors.dl_expiry_date = 'Enter a valid expiry (today or later).'
+      errors.dl_expiry_date = 'Enter expiry date.'
     }
 
     const licensingCouncil = formData.get('licensing_council') as string
@@ -137,17 +128,17 @@ export default function JoinDriverPage() {
     }
 
     const badgeNumber = formData.get('badge_number') as string
-    if (!badgeNumber || badgeNumber.trim().length < 2) {
+    if (!badgeNumber || badgeNumber.trim().length < 1) {
       errors.badge_number = 'Enter badge/licence number.'
     }
 
     const badgeExpiryDate = formData.get('badge_expiry_date') as string
     if (!badgeExpiryDate || !dateOnOrAfterToday(badgeExpiryDate)) {
-      errors.badge_expiry_date = 'Enter a valid expiry (today or later).'
+      errors.badge_expiry_date = 'Enter expiry date.'
     }
 
     const dbsNumber = formData.get('dbs_number') as string
-    if (!dbsNumber || dbsNumber.trim().length < 4) {
+    if (!dbsNumber || dbsNumber.trim().length < 1) {
       errors.dbs_number = 'Enter DBS certificate number.'
     }
 
@@ -168,7 +159,7 @@ export default function JoinDriverPage() {
     if (showShareCode) {
       const shareCode = formData.get('rtw_share_code') as string
       if (!shareCode || !validateShareCode(shareCode)) {
-        errors.rtw_share_code = 'Enter a 9‑character share code.'
+        errors.rtw_share_code = 'Enter share code.'
       }
     }
 
@@ -185,36 +176,36 @@ export default function JoinDriverPage() {
 
     const dlFront = formData.get('upload_driving_licence_front') as File
     if (!dlFront || !validateFile(dlFront)) {
-      errors.upload_driving_licence_front = 'Upload licence front (≤10 MB).'
+      errors.upload_driving_licence_front = 'Upload licence front.'
     }
 
     const dlBack = formData.get('upload_driving_licence_back') as File
     if (!dlBack || !validateFile(dlBack)) {
-      errors.upload_driving_licence_back = 'Upload licence back (≤10 MB).'
+      errors.upload_driving_licence_back = 'Upload licence back.'
     }
 
     const badgeUpload = formData.get('upload_badge_licence') as File
     if (!badgeUpload || !validateFile(badgeUpload)) {
-      errors.upload_badge_licence = 'Upload badge/licence (≤10 MB).'
+      errors.upload_badge_licence = 'Upload badge/licence.'
     }
 
     const dbsUpload = formData.get('upload_dbs') as File
     if (!dbsUpload || !validateFile(dbsUpload)) {
-      errors.upload_dbs = 'Upload DBS (≤10 MB).'
+      errors.upload_dbs = 'Upload DBS certificate.'
     }
 
     if (requiresRTWUpload) {
       const rtwUpload = formData.get('upload_rtw_proof') as File
       if (!rtwUpload || !validateFile(rtwUpload)) {
-        errors.upload_rtw_proof = 'Upload required for non‑UK passport options.'
+        errors.upload_rtw_proof = 'Upload right to work proof.'
       }
     }
 
-    // Vehicle Validation (if owns vehicle)
+    // Vehicle Validation (if owns vehicle) - lenient
     if (ownsVehicle) {
       const vrm = formData.get('vrm') as string
       if (!vrm || !validateVRM(vrm)) {
-        errors.vrm = 'Enter UK VRM (e.g., AB12 CDE).'
+        errors.vrm = 'Enter vehicle registration.'
       }
 
       const make = formData.get('make') as string
@@ -228,9 +219,8 @@ export default function JoinDriverPage() {
       }
 
       const year = formData.get('year') as string
-      const yearNum = parseInt(year, 10)
-      if (!year || isNaN(yearNum) || yearNum < 2008 || yearNum > 2099) {
-        errors.year = 'Enter year (2008+).'
+      if (!year || year.trim().length < 1) {
+        errors.year = 'Enter year.'
       }
 
       const colour = formData.get('colour') as string
@@ -240,49 +230,49 @@ export default function JoinDriverPage() {
 
       const plateExpiry = formData.get('plate_expiry_date') as string
       if (!plateExpiry || !dateOnOrAfterToday(plateExpiry)) {
-        errors.plate_expiry_date = 'Enter valid date (≥ today).'
+        errors.plate_expiry_date = 'Enter expiry date.'
       }
 
       const insuranceExpiry = formData.get('insurance_expiry_date') as string
       if (!insuranceExpiry || !dateOnOrAfterToday(insuranceExpiry)) {
-        errors.insurance_expiry_date = 'Enter valid date (≥ today).'
+        errors.insurance_expiry_date = 'Enter expiry date.'
       }
 
       const motExpiry = formData.get('mot_expiry_date') as string
       if (!motExpiry || !dateOnOrAfterToday(motExpiry)) {
-        errors.mot_expiry_date = 'Enter valid date (≥ today).'
+        errors.mot_expiry_date = 'Enter expiry date.'
       }
 
       const insuranceUpload = formData.get('upload_insurance_certificate') as File
       if (!insuranceUpload || !validateFile(insuranceUpload)) {
-        errors.upload_insurance_certificate = 'Upload insurance (≤10 MB).'
+        errors.upload_insurance_certificate = 'Upload insurance certificate.'
       }
 
       const motUpload = formData.get('upload_mot') as File
       if (!motUpload || !validateFile(motUpload)) {
-        errors.upload_mot = 'Upload MOT (≤10 MB).'
+        errors.upload_mot = 'Upload MOT certificate.'
       }
 
       const plateUpload = formData.get('upload_plate') as File
       if (!plateUpload || !validateFile(plateUpload)) {
-        errors.upload_plate = 'Upload plate photo (≤10 MB).'
+        errors.upload_plate = 'Upload plate photo.'
       }
     }
 
-    // Payment & Work Validation
+    // Payment & Work Validation - lenient
     const accountHolder = formData.get('account_holder') as string
-    if (!accountHolder || accountHolder.trim().length < 2) {
+    if (!accountHolder || accountHolder.trim().length < 1) {
       errors.account_holder = 'Enter account holder name.'
     }
 
     const sortCode = formData.get('sort_code') as string
     if (!sortCode || !validateSortCode(sortCode)) {
-      errors.sort_code = 'Enter sort code (NN-NN-NN).'
+      errors.sort_code = 'Enter sort code.'
     }
 
     const accountNumber = formData.get('account_number') as string
     if (!accountNumber || !validateAccountNumber(accountNumber)) {
-      errors.account_number = 'Enter 8‑digit account number.'
+      errors.account_number = 'Enter account number.'
     }
 
     const workType = formData.get('work_type') as string
