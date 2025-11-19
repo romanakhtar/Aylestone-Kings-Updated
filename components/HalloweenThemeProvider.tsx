@@ -22,10 +22,15 @@ interface HalloweenThemeProviderProps {
 }
 
 export function HalloweenThemeProvider({ children }: HalloweenThemeProviderProps) {
+  // Initialize with false to match server-side rendering and prevent hydration mismatch
+  // The initial render on both server and client will have isHalloweenActive = false
+  // This ensures deterministic rendering during hydration
   const [isHalloweenActive, setIsHalloweenActive] = useState(false)
 
   useEffect(() => {
     // Check if we're in Halloween season (October)
+    // This runs only on client after hydration to prevent mismatch
+    // Date checks are moved to useEffect to ensure server/client output matches initially
     const now = new Date()
     const currentMonth = now.getMonth() + 1 // getMonth() returns 0-11
     const currentDay = now.getDate()
