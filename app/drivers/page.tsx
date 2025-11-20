@@ -57,7 +57,9 @@ export default function JoinDriverPage() {
     setIsSubmitting(true)
     setFormErrors({})
 
-    const formData = new FormData(e.currentTarget)
+    // Store form reference before async operations
+    const form = e.currentTarget
+    const formData = new FormData(form)
     const errors: Record<string, string> = {}
 
     // Personal Information Validation - lenient
@@ -311,28 +313,103 @@ export default function JoinDriverPage() {
       return
     }
 
-    // Form is valid - submit to Formspree (same endpoint as contact form)
+    // Form is valid - submit to our custom API endpoint
     try {
-      const response = await fetch('https://formspree.io/f/myzdazng', {
+      // Check total file sizes before submission
+      const fileInputs = form.querySelectorAll('input[type="file"]')
+      let totalSize = 0
+      const maxTotalSize = 50 * 1024 * 1024 // 50MB total limit
+      const fileCount: string[] = []
+      
+      fileInputs.forEach((input: Element) => {
+        const fileInput = input as HTMLInputElement
+        if (fileInput.files && fileInput.files.length > 0) {
+          const file = fileInput.files[0]
+          totalSize += file.size
+          fileCount.push(`${fileInput.name}: ${(file.size / 1024 / 1024).toFixed(2)}MB`)
+        }
+      })
+      
+      if (totalSize > maxTotalSize) {
+        alert(`Total file size (${(totalSize / 1024 / 1024).toFixed(2)}MB) exceeds the limit of 50MB. Please reduce file sizes and try again.`)
+        setIsSubmitting(false)
+        return
+      }
+
+      // Ensure formType is included
+      if (!formData.get('formType')) {
+        formData.append('formType', 'driverSignupForm')
+      }
+
+      // Add owns_vehicle as a string value for the API
+      formData.append('owns_vehicle', ownsVehicle.toString())
+
+      // Log form data for debugging (without file contents)
+      const formDataEntries: Record<string, string> = {}
+      for (const [key, value] of formData.entries()) {
+        if (value instanceof File) {
+          formDataEntries[key] = `[File: ${value.name}, ${(value.size / 1024).toFixed(2)}KB]`
+        } else {
+          formDataEntries[key] = value.toString()
+        }
+      }
+      console.log('Submitting form with fields:', formDataEntries)
+      console.log('File sizes:', fileCount)
+
+      const response = await fetch('/api/drivers', {
         method: 'POST',
-        headers: {
-          Accept: 'application/json',
-        },
         body: formData,
       })
-      if (response.ok) {
-        alert('Application submitted successfully! We will review your application and get back to you soon.')
-        e.currentTarget.reset()
+      
+      const responseData = await response.json().catch(() => null)
+      
+      if (response.ok && responseData?.success) {
+        // Reset form using stored reference
+        if (form) {
+          form.reset()
+        }
         setOwnsVehicle(false)
         setRtwStatus('')
+        alert('Application submitted successfully! We will review your application and get back to you soon.')
       } else {
-        const data = await response.json().catch(() => ({}))
-        console.error('Formspree error:', data)
-        alert('There was an error submitting your application. Please try again.')
+        console.error('API error response:', {
+          status: response.status,
+          statusText: response.statusText,
+          data: responseData
+        })
+        
+        // Provide more specific error messages
+        let errorMessage = 'There was an error submitting your application. Please try again.'
+        
+        if (response.status === 413) {
+          errorMessage = 'File size too large. Please reduce file sizes (max 10MB per file, 50MB total) and try again.'
+        } else if (response.status === 429) {
+          errorMessage = 'Too many submissions. Please try again later.'
+        } else if (response.status === 422) {
+          errorMessage = 'Invalid form data. Please check all fields and try again.'
+        } else if (responseData?.error) {
+          errorMessage = responseData.error
+          if (responseData.details) {
+            // Handle both string and object details
+            const details = typeof responseData.details === 'string' 
+              ? responseData.details 
+              : JSON.stringify(responseData.details)
+            errorMessage += `\n\nDetails: ${details}`
+          }
+        } else if (!response.ok) {
+          errorMessage = `Server error (${response.status}). Please try again later.`
+          if (responseData) {
+            errorMessage += `\n\nResponse: ${JSON.stringify(responseData, null, 2)}`
+          }
+        }
+        
+        console.error('Full error details:', responseData)
+        alert(errorMessage)
       }
     } catch (err) {
       console.error('Submission failed:', err)
-      alert('Network error while submitting. Please check your connection and try again.')
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error'
+      alert(`Network error while submitting: ${errorMessage}. Please check your connection and try again.`)
     } finally {
       setIsSubmitting(false)
     }
