@@ -1,8 +1,10 @@
+"use client"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, ArrowRight, MessageCircle, Rocket, ShoppingBag, Theater, Crown, Church, Music, ShoppingCart, Calendar, Star } from "lucide-react"
+import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, ArrowRight, MessageCircle, Rocket, ShoppingBag, Theater, Crown, Church, Music, ShoppingCart, Calendar, Star, ChevronDown, ChevronUp } from "lucide-react"
 import Logo from "@/components/logo"
 import { companyInfo, contactInfo, socialLinks, footerData, copyrightInfo } from "@/lib/data"
+import { useState } from "react"
 
 // Icon mapping function
 function getIconComponent(iconName: string) {
@@ -19,132 +21,126 @@ function getIconComponent(iconName: string) {
   return iconMap[iconName] || MapPin
 }
 
+// Collapsible section component
+function CollapsibleSection({ 
+  title, 
+  items, 
+  initialCount = 8,
+  gridCols = "grid-cols-2 sm:grid-cols-2"
+}: { 
+  title: string
+  items: { name: string; href: string }[]
+  initialCount?: number
+  gridCols?: string
+}) {
+  const [isExpanded, setIsExpanded] = useState(false)
+  const displayItems = isExpanded ? items : items.slice(0, initialCount)
+  const hasMore = items.length > initialCount
+
+  return (
+    <div className="flex flex-col">
+      <h4 className="font-bold text-gray-800 text-lg md:text-xl mb-4 tracking-tight">{title}</h4>
+      <ul className={`grid ${gridCols} gap-x-3 gap-y-2`}>
+        {displayItems.map((item: { name: string; href: string }) => (
+          <li key={item.name} className="min-w-0">
+            <Link href={item.href} className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-start group py-1">
+              <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth flex-shrink-0 mt-0.5" />
+              <span className="leading-5 break-words">{item.name}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      {hasMore && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="mt-3 text-[#06A0A6] hover:text-[#0F0D3E] text-sm font-medium flex items-center gap-1 transition-colors"
+        >
+          {isExpanded ? (
+            <>
+              Show Less <ChevronUp className="h-4 w-4" />
+            </>
+          ) : (
+            <>
+              Show More ({items.length - initialCount} more) <ChevronDown className="h-4 w-4" />
+            </>
+          )}
+        </button>
+      )}
+    </div>
+  )
+}
+
 export default function Footer() {
   return (
     <footer className="bg-gray-100 text-gray-800 ">
       {/* Areas We Cover (Top Band) */}
       <div className="border-t border-gray-200 bg-gray-50 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 lg:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 lg:gap-12 items-start">
             {/* Leicester Areas */}
-            {footerData.areaGroups?.slice(0,3).map((group) => (
-              <div key={group.title}>
-                <h4 className="font-bold text-gray-800 text-lg md:text-xl mb-4 tracking-tight">{group.title}</h4>
-                <ul className="grid grid-cols-2 gap-x-4 gap-y-2 md:grid-cols-1 md:gap-y-2.5">
-                  {[...group.items]
-                    .sort((a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name))
-                    .map((item: { name: string; href: string }) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
-                        <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
-                        <span className="leading-6">{item.name}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {footerData.areaGroups?.slice(0,3).map((group) => {
+              const sortedItems = [...group.items]
+                .sort((a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name))
+              return (
+                <CollapsibleSection
+                  key={group.title}
+                  title={group.title}
+                  items={sortedItems}
+                  initialCount={6}
+                />
+              )
+            })}
 
             {/* Popular Destinations */}
-            <div>
-              <h4 className="font-bold text-gray-800 text-lg md:text-xl mb-4 tracking-tight">Popular Destinations</h4>
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-2 md:grid-cols-1 md:gap-y-2.5">
-                {(footerData as any).destinationLinks?.slice()?.sort((a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name)).map((item: { name: string; href: string }) => (
-                  <li key={item.name}>
-                    <Link href={item.href} className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
-                      <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
-                      <span className="leading-6">{item.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <CollapsibleSection
+              title="Popular Destinations"
+              items={(footerData as any).destinationLinks?.slice()?.sort((a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name)) || []}
+              initialCount={6}
+            />
 
             {/* Popular Services - SEO Pages */}
-            <div>
-              <h4 className="font-bold text-gray-800 text-lg md:text-xl mb-4 tracking-tight">Popular Services</h4>
-              <ul className="space-y-2.5">
-                <li>
-                  <Link href="/taxi-leicester" className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
-                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
-                    <span className="leading-6">Taxi Leicester</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/taxi-near-me-leicester" className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
-                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
-                    <span className="leading-6">Taxi Near Me Leicester</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/leicester-airport-taxi" className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
-                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
-                    <span className="leading-6">Leicester Airport Taxi</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/leicester-to-east-midlands-airport-taxi" className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
-                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
-                    <span className="leading-6">Leicester to EMA Taxi</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/cheap-taxi-leicester" className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
-                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
-                    <span className="leading-6">Cheap Taxi Leicester</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/leicester-taxi-company" className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
-                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
-                    <span className="leading-6">Leicester Taxi Company</span>
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <CollapsibleSection
+              title="Popular Services"
+              items={[
+                { name: "Taxi Leicester", href: "/taxi-leicester" },
+                { name: "Taxi Near Me Leicester", href: "/taxi-near-me-leicester" },
+                { name: "Leicester Airport Taxi", href: "/leicester-airport-taxi" },
+                { name: "Leicester to EMA Taxi", href: "/leicester-to-east-midlands-airport-taxi" },
+                { name: "Cheap Taxi Leicester", href: "/cheap-taxi-leicester" },
+                { name: "Leicester Taxi Company", href: "/leicester-taxi-company" }
+              ]}
+              initialCount={6}
+              gridCols="grid-cols-2 sm:grid-cols-1"
+            />
 
             {/* Airport Transfers */}
-            <div>
-              <h4 className="font-bold text-gray-800 text-lg md:text-xl mb-4 tracking-tight">Airport Transfers</h4>
-              <ul className="space-y-2.5">
-                {footerData.airportLinks?.map((airport) => (
-                  <li key={airport.name}>
-                    <Link href={airport.href} className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
-                      <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
-                      <span className="leading-6">{airport.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <CollapsibleSection
+              title="Airport Transfers"
+              items={footerData.airportLinks || []}
+              initialCount={6}
+              gridCols="grid-cols-2 sm:grid-cols-1"
+            />
 
             {/* Supermarkets */}
-            <div>
-              <h4 className="font-bold text-gray-800 text-lg md:text-xl mb-4 tracking-tight">Supermarkets</h4>
-              <ul className="space-y-2.5">
-                {(footerData as any).destinationLinks?.filter((link: { name: string; href: string }) => 
-                  (link.name.includes("Taxi to") && (
-                    link.name.includes("Asda") || 
-                    link.name.includes("Sainsburys") || 
-                    link.name.includes("Tesco") || 
-                    link.name.includes("Aldi") || 
-                    link.name.includes("Lidl") || 
-                    link.name.includes("Morrisons") || 
-                    link.name.includes("Iceland") || 
-                    link.name.includes("Farmfoods") || 
-                    link.name.includes("M&S") || 
-                    link.name.includes("Waitrose")
-                  )) || link.name.includes("Supermarket Taxi Leicester")
-                ).map((supermarket: { name: string; href: string }) => (
-                  <li key={supermarket.name}>
-                    <Link href={supermarket.href} className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-center group py-1.5">
-                      <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
-                      <span className="leading-6">{supermarket.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <CollapsibleSection
+              title="Supermarkets"
+              items={(footerData as any).destinationLinks?.filter((link: { name: string; href: string }) => 
+                (link.name.includes("Taxi to") && (
+                  link.name.includes("Asda") || 
+                  link.name.includes("Sainsburys") || 
+                  link.name.includes("Tesco") || 
+                  link.name.includes("Aldi") || 
+                  link.name.includes("Lidl") || 
+                  link.name.includes("Morrisons") || 
+                  link.name.includes("Iceland") || 
+                  link.name.includes("Farmfoods") || 
+                  link.name.includes("M&S") || 
+                  link.name.includes("Waitrose")
+                )) || link.name.includes("Supermarket Taxi Leicester")
+              ) || []}
+              initialCount={6}
+              gridCols="grid-cols-2 sm:grid-cols-1"
+            />
           </div>
         </div>
       </div>

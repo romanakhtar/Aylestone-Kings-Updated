@@ -30,15 +30,15 @@ export const siteData = {
       { name: "Home", href: "/" }, 
       { name: "About Us", href: "/about" },  
       { name: "Airport Pricing", href: "/pricing" },
-      { name: "Travel", href: "/travel" },
-      { name: "Blog", href: "/blog" },
+      { name: "Join as a Driver", href: "/drivers" },
       { name: "Contact", href: "/contact" },
       { name: "More", href: "#", hasDropdown: true }
     ],
     dropdown: [
+      { name: "Travel", href: "/travel" },
+      { name: "Blog", href: "/blog" },
       { name: "Company", href: "/company" },
       { name: "Fleet", href: "/fleet" },
-      { name: "Join as a Driver", href: "/drivers" },
     ],
   },
 

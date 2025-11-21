@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight } from "lucide-react"
+import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight, Car } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
@@ -179,6 +179,176 @@ export default function Home() {
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
                 loading="lazy"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* For Drivers Section */}
+      <section className="section-padding bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
+                Career Opportunities
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
+                Join Our Team as a Driver
+              </h2>
+              <p className="text-xl text-[#2E3C44] mb-4 leading-relaxed max-w-3xl mx-auto">
+                Become part of Leicester&apos;s most trusted taxi service. We&apos;re looking for professional, licensed drivers to join our established team.
+              </p>
+              <p className="text-lg text-[#2E3C44] leading-relaxed max-w-3xl mx-auto">
+                With over 30 years of experience serving the Leicester community, Aylestone Kings offers a supportive, professional environment where drivers can thrive. Whether you&apos;re looking for full-time work or part-time flexibility, we have opportunities that fit your lifestyle.
+              </p>
+            </div>
+
+            {/* Benefits Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              <div className="bg-[#E4E4E4] rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Check className="h-6 w-6 text-[#06A0A6]" />
+                  <h3 className="text-lg font-semibold text-[#0F0D3E]">Competitive Earnings</h3>
+                </div>
+                <p className="text-[#2E3C44]">
+                  Earn competitive rates with flexible payment options. Transparent commission structure with weekly payments directly to your bank account. Keep more of what you earn with our fair pricing model.
+                </p>
+              </div>
+
+              <div className="bg-[#E4E4E4] rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Check className="h-6 w-6 text-[#06A0A6]" />
+                  <h3 className="text-lg font-semibold text-[#0F0D3E]">Flexible Schedule</h3>
+                </div>
+                <p className="text-[#2E3C44]">
+                  Choose your own hours with full-time or part-time options. Work day shifts, night shifts, or both - the choice is yours. Perfect for balancing work with personal commitments.
+                </p>
+              </div>
+
+              <div className="bg-[#E4E4E4] rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Check className="h-6 w-6 text-[#06A0A6]" />
+                  <h3 className="text-lg font-semibold text-[#0F0D3E]">Vehicle Options</h3>
+                </div>
+                <p className="text-[#2E3C44]">
+                  Use your own licensed vehicle or inquire about company vehicle options. We support both arrangements and provide guidance on licensing and insurance requirements.
+                </p>
+              </div>
+
+              <div className="bg-[#E4E4E4] rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Check className="h-6 w-6 text-[#06A0A6]" />
+                  <h3 className="text-lg font-semibold text-[#0F0D3E]">24/7 Support</h3>
+                </div>
+                <p className="text-[#2E3C44]">
+                  Round-the-clock support from our dedicated operations team. Help is always available when you need it, day or night. We&apos;re here to support your success.
+                </p>
+              </div>
+
+              <div className="bg-[#E4E4E4] rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Check className="h-6 w-6 text-[#06A0A6]" />
+                  <h3 className="text-lg font-semibold text-[#0F0D3E]">Steady Bookings</h3>
+                </div>
+                <p className="text-[#2E3C44]">
+                  Benefit from our established customer base and online booking platform. Regular work with a steady stream of bookings through our app, phone bookings, and corporate accounts.
+                </p>
+              </div>
+
+              <div className="bg-[#E4E4E4] rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Check className="h-6 w-6 text-[#06A0A6]" />
+                  <h3 className="text-lg font-semibold text-[#0F0D3E]">Training & Development</h3>
+                </div>
+                <p className="text-[#2E3C44]">
+                  Comprehensive onboarding and ongoing training opportunities. Learn best practices, customer service skills, and stay updated with the latest industry standards.
+                </p>
+              </div>
+            </div>
+
+            {/* Additional Benefits List */}
+            <div className="bg-gradient-to-r from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-xl p-8 mb-12">
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-6 text-center">Why Choose Aylestone Kings?</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
+                  <span className="text-[#2E3C44]">Established reputation since 1995</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
+                  <span className="text-[#2E3C44]">Supportive and friendly team environment</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
+                  <span className="text-[#2E3C44]">Modern technology and booking systems</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
+                  <span className="text-[#2E3C44]">Fair and transparent commission structure</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
+                  <span className="text-[#2E3C44]">Guidance on licensing and compliance</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
+                  <span className="text-[#2E3C44]">Work in your local community</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
+                  <span className="text-[#2E3C44]">Opportunities for career growth</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
+                  <span className="text-[#2E3C44]">Professional development support</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Requirements Preview */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-6 text-center">What We&apos;re Looking For</h3>
+              <div className="bg-white border border-gray-200 rounded-xl p-6">
+                <p className="text-[#2E3C44] mb-4 leading-relaxed">
+                  We welcome drivers who meet our requirements:
+                </p>
+                <ul className="space-y-3 text-[#2E3C44]">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#06A0A6] font-bold mt-0.5">•</span>
+                    <span>Valid UK driving licence held for at least 2 years</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#06A0A6] font-bold mt-0.5">•</span>
+                    <span>Private hire driver&apos;s badge from Leicester City Council or Wolverhampton City Council</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#06A0A6] font-bold mt-0.5">•</span>
+                    <span>Enhanced DBS certificate (preferably on the Update Service)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#06A0A6] font-bold mt-0.5">•</span>
+                    <span>Valid right to work in the UK</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#06A0A6] font-bold mt-0.5">•</span>
+                    <span>Professional attitude and excellent customer service skills</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="text-center">
+              <p className="text-lg text-[#2E3C44] mb-6">
+                Ready to start your journey with Aylestone Kings? Apply today and join Leicester&apos;s most trusted taxi service.
+              </p>
+              <a href="/drivers" className="inline-block">
+                <button className={`${isHalloweenActive ? 'halloween-cta-glow' : 'bg-[#06A0A6] hover:bg-[#0F0D3E]'} text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3 mx-auto`}>
+                  Join as a driver now
+                  <ArrowRight className="h-5 w-5" />
+                </button>
+              </a>
             </div>
           </div>
         </div>
