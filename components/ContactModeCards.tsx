@@ -1,6 +1,6 @@
 'use client'
 
-import { MessageCircle, Phone, Globe, Star } from 'lucide-react'
+import { MessageCircle, Phone, Globe, Star, Car } from 'lucide-react'
 import AppDownloadButtons from '@/components/AppDownloadButtons'
 import { contactInfo } from '@/lib/data'
 
@@ -43,6 +43,14 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       bgColor: 'bg-[#0056CC]',
       hoverBgColor: 'hover:bg-[#007AFF]',
       href: "https://g.page/r/CZmHFNdaup8XEBM/review"
+    },
+    {
+      name: 'Become a Driver',
+      icon: Car,
+      color: '#0F0D3E', // Company dark color
+      bgColor: 'bg-[#0F0D3E]',
+      hoverBgColor: 'hover:bg-[#06A0A6]',
+      href: "/drivers"
     }
     
   ]
@@ -61,8 +69,8 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
             <a
               key={mode.name}
               href={mode.href}
-              target={mode.name === 'Book Online' || mode.name === 'Email' ? '_self' : '_blank'}
-              rel={mode.name === 'Book Online' || mode.name === 'Email' ? '' : 'noopener noreferrer'}
+              target={mode.name === 'Book Online' || mode.name === 'Email' || mode.name === 'Become a Driver' ? '_self' : '_blank'}
+              rel={mode.name === 'Book Online' || mode.name === 'Email' || mode.name === 'Become a Driver' ? '' : 'noopener noreferrer'}
               className={`${mode.bgColor} ${mode.hoverBgColor} text-white px-3 sm:px-4 lg:px-4 py-3 lg:py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 lg:gap-3 shadow-lg hover:shadow-2xl transform hover:scale-105 group hover:-translate-y-1 border border-white/20 relative overflow-hidden w-full`}
               style={{
                 animationDelay: `${index * 100}ms`,
@@ -81,7 +89,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
                   <span className="text-xs opacity-90 text-white/90">{contactInfo.phone}</span>
                 )}
               </div>
-              {mode.name !== 'Book Online' && (
+              {mode.name !== 'Book Online' && mode.name !== 'Become a Driver' && (
                 <span className="text-xs opacity-80 group-hover:translate-x-1 transition-transform duration-200 relative z-10 flex-shrink-0">→</span>
               )}
             </a>
