@@ -3,8 +3,19 @@
 import { useState, useEffect, FormEvent } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Shield, FileText, Car, CreditCard, CheckCircle2, PoundSterling, Clock, Users, Award, MapPin, Phone, Mail, HelpCircle, TrendingUp, Star, Briefcase } from 'lucide-react'
+import { Shield, FileText, Car, CreditCard, CheckCircle2, PoundSterling, Clock, Users, Award, MapPin, Phone, Mail, HelpCircle, TrendingUp, Star, Briefcase, Headphones, GraduationCap, CalendarCheck, ArrowRight } from 'lucide-react'
 import type { Metadata } from 'next'
+import { siteData } from '@/lib/data'
+
+// Icon mapping
+const iconMap: Record<string, any> = {
+  pound: PoundSterling,
+  clock: Clock,
+  car: Car,
+  headset: Headphones,
+  'calendar-check': CalendarCheck,
+  'graduation-cap': GraduationCap,
+}
 
 // Note: Metadata will be handled via layout or parent
 export default function JoinDriverPage() {
@@ -415,6 +426,8 @@ export default function JoinDriverPage() {
     }
   }
 
+  const driverContent = siteData.driverPage
+
   // Prevent hydration mismatch by not rendering conditional content until mounted
   if (!hasMounted) {
     return (
@@ -425,14 +438,13 @@ export default function JoinDriverPage() {
             <div className="text-center">
               <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium mb-8 shadow-lg">
                 <Shield className="h-4 w-4 text-[#06A0A6] mr-3" />
-                Join Our Team
+                {driverContent.hero.badge}
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Join as a <span className="text-[#06A0A6] drop-shadow-lg">Driver</span>
+                {driverContent.hero.heading}
               </h1>
               <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-                Become part of Leicester&apos;s trusted taxi service. We&apos;re looking for professional, 
-                licensed drivers to join our team. Apply today and start your journey with Aylestone Kings.
+                {driverContent.hero.subheading}
               </p>
             </div>
           </div>
@@ -459,20 +471,22 @@ export default function JoinDriverPage() {
           <div className="text-center">
             <div className="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full text-xs font-semibold uppercase tracking-wider mb-8 shadow-xl">
               <Shield className="h-3.5 w-3.5 text-[#06A0A6] mr-2.5" />
-              Career Opportunities
+              {driverContent.hero.badge}
             </div>
             
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-[1.1] tracking-tight">
-              Join as a <span className="text-[#06A0A6]">Driver</span>
+              {driverContent.hero.heading}
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed font-light mb-10">
-              Become part of Leicester&apos;s most trusted taxi service. We&apos;re looking for professional, 
-              licensed drivers to join our established team. Apply today and start your journey with Aylestone Kings.
+            <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed font-light mb-6">
+              {driverContent.hero.subheading}
+            </p>
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light mb-10">
+              {driverContent.hero.body}
             </p>
             <div className="flex justify-center">
               <Button asChild className="bg-[#06A0A6] hover:bg-[#05858a] text-white px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-                <a href="#driver-application-form">Fill the form</a>
+                <a href="#driver-application-form">{driverContent.hero.primaryCta.label}</a>
               </Button>
             </div>
           </div>
@@ -1387,167 +1401,102 @@ export default function JoinDriverPage() {
         </div>
       </section>
 
-      {/* Why Join Us Section */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
-              Why Join Aylestone Kings?
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
-              Join Leicester&apos;s most trusted taxi service and become part of a team that&apos;s been serving the community for over 30 years.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <PoundSterling className="h-7 w-7 text-white" />
+      {/* Driver Benefits Section */}
+      {driverContent.sections.find(s => s.id === 'benefits') && (() => {
+        const benefitsSection = driverContent.sections.find(s => s.id === 'benefits')!
+        return (
+          <section className="py-20 md:py-28 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
+                  {benefitsSection.heading}
+                </h2>
               </div>
-              <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Competitive Earnings</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Earn competitive rates with flexible payment options. Keep more of what you earn with our transparent commission structure.
-              </p>
-            </div>
 
-            <div className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <Clock className="h-7 w-7 text-white" />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {benefitsSection.items.map((item, index) => {
+                  const IconComponent = iconMap[item.icon] || Car
+                  return (
+                    <div key={index} className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
+                      <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="h-7 w-7 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">{item.title}</h3>
+                      <p className="text-slate-600 leading-relaxed">
+                        {item.body}
+                      </p>
+                    </div>
+                  )
+                })}
               </div>
-              <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Flexible Schedule</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Choose your own hours with full-time or part-time options. Work day shifts, night shifts, or both - the choice is yours.
-              </p>
             </div>
+          </section>
+        )
+      })()}
 
-            <div className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <Users className="h-7 w-7 text-white" />
+      {/* Why Choose Aylestone Taxis Section */}
+      {driverContent.sections.find(s => s.id === 'why-choose') && (() => {
+        const whyChooseSection = driverContent.sections.find(s => s.id === 'why-choose')!
+        return (
+          <section className="py-20 md:py-28 bg-gradient-to-b from-slate-50 to-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
+                  {whyChooseSection.heading}
+                </h2>
               </div>
-              <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Supportive Team</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Join a friendly, professional team with ongoing support and training. We&apos;re here to help you succeed.
-              </p>
-            </div>
 
-            <div className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <Award className="h-7 w-7 text-white" />
+              <div className="max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {whyChooseSection.items.map((item, index) => {
+                    const isLastOdd = index === whyChooseSection.items.length - 1 && whyChooseSection.items.length % 2 !== 0
+                    return (
+                      <div key={index} className={`flex items-start gap-4 p-6 bg-white rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-300 ${isLastOdd ? 'md:col-span-2 md:max-w-md md:mx-auto' : ''}`}>
+                        <CheckCircle2 className="h-6 w-6 text-[#06A0A6] mt-0.5 flex-shrink-0" />
+                        <span className="text-slate-700 leading-relaxed">{item}</span>
+                      </div>
+                    )
+                  })}
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Established Reputation</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Work with a company that&apos;s been trusted by Leicester residents since 1995. Benefit from our established customer base.
-              </p>
             </div>
-
-            <div className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <MapPin className="h-7 w-7 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Local Knowledge</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Serve your local community with routes you know best. Work in Leicester and surrounding areas with familiar territory.
-              </p>
-            </div>
-
-            <div className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <TrendingUp className="h-7 w-7 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Growth Opportunities</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Build your career with opportunities for advancement. We value our drivers and invest in their professional development.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        )
+      })()}
 
       {/* Requirements Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-slate-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
-              Driver Requirements
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
-              To join our team, you&apos;ll need to meet the following requirements:
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            <div className="bg-white p-7 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
-              <div className="flex items-start gap-5">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
-                  <CheckCircle2 className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">Age & Experience</h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    Must be 21 years or older with a valid UK driving licence held for at least 2 years.
+      {driverContent.sections.find(s => s.id === 'requirements') && (() => {
+        const requirementsSection = driverContent.sections.find(s => s.id === 'requirements')!
+        return (
+          <section className="py-20 md:py-28 bg-gradient-to-b from-slate-50 to-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
+                  {requirementsSection.heading}
+                </h2>
+                {requirementsSection.intro && (
+                  <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
+                    {requirementsSection.intro}
                   </p>
+                )}
+              </div>
+
+              <div className="max-w-5xl mx-auto">
+                <div className="bg-white rounded-xl border border-slate-200/80 shadow-md p-8">
+                  <ul className="space-y-4">
+                    {requirementsSection.items.map((item, index) => (
+                      <li key={index} className="flex items-start gap-4">
+                        <CheckCircle2 className="h-6 w-6 text-[#06A0A6] mt-0.5 flex-shrink-0" />
+                        <span className="text-slate-700 leading-relaxed text-lg">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
-
-            <div className="bg-white p-7 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
-              <div className="flex items-start gap-5">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
-                  <CheckCircle2 className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">Private Hire Licence</h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    Valid private hire driver&apos;s badge from Leicester City Council or Wolverhampton City Council.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-7 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
-              <div className="flex items-start gap-5">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
-                  <CheckCircle2 className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">DBS Check</h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    Enhanced DBS certificate (preferably on the Update Service) to ensure passenger safety and security.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-7 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
-              <div className="flex items-start gap-5">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
-                  <CheckCircle2 className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">Right to Work</h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    Valid right to work in the UK (UK passport, BRP/visa, EU settled status, or share code).
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-7 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
-              <div className="flex items-start gap-5">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
-                  <CheckCircle2 className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">Professional Attitude</h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    Excellent customer service skills, reliability, and a professional appearance at all times.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        )
+      })()}
 
       {/* What We Offer Section */}
       <section className="py-20 md:py-28 bg-white">
@@ -1820,35 +1769,32 @@ export default function JoinDriverPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-slate-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white p-10 md:p-14 rounded-3xl shadow-xl border border-slate-200/80 text-center">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
-              Have Questions?
-            </h2>
-            <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto font-light">
-              If you have any questions about joining our team or the application process, don&apos;t hesitate to get in touch.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <a
-                href="tel:01162338888"
-                className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
-              >
-                <Phone className="h-5 w-5" />
-                <span>0116 233 8888</span>
-              </a>
-              <a
-                href="mailto:info@aylestone-taxis.co.uk"
-                className="flex items-center gap-3 px-6 py-3 bg-white border-2 border-[#06A0A6] text-[#06A0A6] rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-all duration-300 hover:shadow-lg"
-              >
-                <Mail className="h-5 w-5" />
-                <span>info@aylestone-taxis.co.uk</span>
-              </a>
+      {/* Final CTA Section */}
+      {driverContent.sections.find(s => s.id === 'final-cta') && (() => {
+        const finalCtaSection = driverContent.sections.find(s => s.id === 'final-cta')!
+        return (
+          <section className="py-20 md:py-28 bg-gradient-to-b from-white to-slate-50">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-white p-10 md:p-14 rounded-3xl shadow-xl border border-slate-200/80 text-center">
+                <h2 className="text-3xl md:text-4xl font-extrabold text-[#0F0D3E] mb-5 tracking-tight">
+                  {finalCtaSection.heading}
+                </h2>
+                <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+                  {finalCtaSection.body}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                  <Button asChild className="bg-[#06A0A6] hover:bg-[#05858a] text-white px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3">
+                    <a href="#driver-application-form">
+                      {finalCtaSection.primaryCta.label}
+                      <ArrowRight className="h-5 w-5" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        )
+      })()}
     </div>
   )
 }

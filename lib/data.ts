@@ -421,6 +421,105 @@ export const siteData = {
     }
   },
 
+  // Driver Page Content
+  driverPage: {
+    seo: {
+      title: "Become a Driver – Aylestone Taxis Leicester",
+      metaDescription:
+        "Join Aylestone Taxis as a licensed driver in Leicester. Flexible hours, weekly pay, steady bookings, and full local support. Apply online today.",
+    },
+    hero: {
+      badge: "Career Opportunities",
+      heading: "Join Our Team as a Driver",
+      subheading:
+        "Become part of Leicester's most reliable and trusted taxi service. We're looking for licensed, professional drivers to join our established team.",
+      body: "With over 30 years serving the Leicester community, Aylestone Taxis offers a stable, supportive, and rewarding environment for both full-time and part-time drivers. Whether you want flexible hours, night shifts, or weekend work, we have opportunities that fit your lifestyle.",
+      primaryCta: {
+        label: "Join as a Driver Now",
+        href: "/driver-signup",
+      },
+    },
+    sections: [
+      {
+        id: "benefits",
+        type: "grid",
+        heading: "Driver Benefits",
+        columns: 3,
+        items: [
+          {
+            icon: "pound",
+            title: "Competitive Earnings",
+            body: "Earn competitive rates with weekly payments direct to your bank. Our transparent commission structure means you keep more of what you earn.",
+          },
+          {
+            icon: "clock",
+            title: "Flexible Schedule",
+            body: "Choose shifts that suit you — days, nights, weekends or part-time. Perfect for balancing work around your lifestyle and family.",
+          },
+          {
+            icon: "car",
+            title: "Vehicle Options",
+            body: "Use your own licensed vehicle or speak to us about rental options. We can support you with licensing and insurance requirements.",
+          },
+          {
+            icon: "headset",
+            title: "24/7 Support",
+            body: "Round-the-clock driver support from our Leicester-based operations team. Help is always available when you need it.",
+          },
+          {
+            icon: "calendar-check",
+            title: "Steady Bookings",
+            body: "Consistent work from our strong customer base, corporate accounts and app bookings to keep you busy every day.",
+          },
+          {
+            icon: "graduation-cap",
+            title: "Training & Development",
+            body: "Professional onboarding and ongoing support to help you get set up quickly and stay up to date with best practices.",
+          },
+        ],
+      },
+      {
+        id: "why-choose",
+        type: "columns",
+        heading: "Why Choose Aylestone Taxis?",
+        columns: 2,
+        items: [
+          "Trusted taxi service with over 30 years of experience in Leicester",
+          "Modern dispatch technology and booking systems",
+          "Fair and transparent commission structure",
+          "Supportive, friendly team environment",
+          "Guidance with licensing and compliance",
+          "Opportunities for career growth within the company",
+          "Strong reputation and presence in the local community",
+        ],
+      },
+      {
+        id: "requirements",
+        type: "list-block",
+        heading: "What We're Looking For",
+        intro:
+          "We welcome applications from drivers who meet the following requirements:",
+        items: [
+          "Valid UK driving licence held for at least 2 years",
+          "Private hire driver badge from Leicester City Council or Wolverhampton City Council",
+          "Enhanced DBS certificate (Update Service preferred)",
+          "Right to work in the UK",
+          "Professional attitude and excellent customer service skills",
+        ],
+      },
+      {
+        id: "final-cta",
+        type: "cta",
+        heading: "Ready to Start Driving with Aylestone Taxis?",
+        body:
+          "Apply today and join Leicester's most trusted taxi service. Get steady earnings, flexible hours and a local team that's here to support you.",
+        primaryCta: {
+          label: "Join as a Driver Now",
+          href: "/driver-signup",
+        },
+      },
+    ],
+  },
 
   // Fleet Page Content
   fleetPage: {

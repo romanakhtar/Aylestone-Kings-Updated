@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Join as a Driver | Aylestone Taxis | Leicester Taxi Service',
-  description: 'Join Aylestone Kings as a professional taxi driver. We\'re looking for licensed, DBS-checked drivers to join Leicester\'s trusted taxi service. Apply today and start your career with us.',
-  keywords: 'taxi driver jobs Leicester, driver application, join taxi company, Aylestone Kings driver, Leicester taxi driver jobs',
+  title: 'Become a Driver – Aylestone Taxis Leicester',
+  description: 'Join Aylestone Taxis as a licensed driver in Leicester. Flexible hours, weekly pay, steady bookings, and full local support. Apply online today.',
+  keywords: 'taxi driver jobs Leicester, driver application, join taxi company, Aylestone Taxis driver, Leicester taxi driver jobs',
   openGraph: {
-    title: 'Join as a Driver | Aylestone Taxis',
-    description: 'Join Aylestone Kings as a professional taxi driver. Apply today and start your career with Leicester\'s trusted taxi service.',
+    title: 'Become a Driver – Aylestone Taxis Leicester',
+    description: 'Join Aylestone Taxis as a licensed driver in Leicester. Flexible hours, weekly pay, steady bookings, and full local support. Apply online today.',
     type: 'website',
   },
 }
