@@ -1404,6 +1404,7 @@ export default function JoinDriverPage() {
       {/* Driver Benefits Section */}
       {driverContent.sections.find(s => s.id === 'benefits') && (() => {
         const benefitsSection = driverContent.sections.find(s => s.id === 'benefits')!
+        if (!benefitsSection.items) return null
         return (
           <section className="py-20 md:py-28 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1415,6 +1416,7 @@ export default function JoinDriverPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {benefitsSection.items.map((item, index) => {
+                  if (typeof item === 'string') return null
                   const IconComponent = iconMap[item.icon] || Car
                   return (
                     <div key={index} className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
@@ -1437,6 +1439,7 @@ export default function JoinDriverPage() {
       {/* Why Choose Aylestone Taxis Section */}
       {driverContent.sections.find(s => s.id === 'why-choose') && (() => {
         const whyChooseSection = driverContent.sections.find(s => s.id === 'why-choose')!
+        if (!whyChooseSection.items) return null
         return (
           <section className="py-20 md:py-28 bg-gradient-to-b from-slate-50 to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1449,11 +1452,12 @@ export default function JoinDriverPage() {
               <div className="max-w-5xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {whyChooseSection.items.map((item, index) => {
-                    const isLastOdd = index === whyChooseSection.items.length - 1 && whyChooseSection.items.length % 2 !== 0
+                    const isLastOdd = index === whyChooseSection.items!.length - 1 && whyChooseSection.items!.length % 2 !== 0
+                    const itemText = typeof item === 'string' ? item : String(item)
                     return (
                       <div key={index} className={`flex items-start gap-4 p-6 bg-white rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-300 ${isLastOdd ? 'md:col-span-2 md:max-w-md md:mx-auto' : ''}`}>
                         <CheckCircle2 className="h-6 w-6 text-[#06A0A6] mt-0.5 flex-shrink-0" />
-                        <span className="text-slate-700 leading-relaxed">{item}</span>
+                        <span className="text-slate-700 leading-relaxed">{itemText}</span>
                       </div>
                     )
                   })}
@@ -1467,6 +1471,7 @@ export default function JoinDriverPage() {
       {/* Requirements Section */}
       {driverContent.sections.find(s => s.id === 'requirements') && (() => {
         const requirementsSection = driverContent.sections.find(s => s.id === 'requirements')!
+        if (!requirementsSection.items) return null
         return (
           <section className="py-20 md:py-28 bg-gradient-to-b from-slate-50 to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1484,12 +1489,15 @@ export default function JoinDriverPage() {
               <div className="max-w-5xl mx-auto">
                 <div className="bg-white rounded-xl border border-slate-200/80 shadow-md p-8">
                   <ul className="space-y-4">
-                    {requirementsSection.items.map((item, index) => (
-                      <li key={index} className="flex items-start gap-4">
-                        <CheckCircle2 className="h-6 w-6 text-[#06A0A6] mt-0.5 flex-shrink-0" />
-                        <span className="text-slate-700 leading-relaxed text-lg">{item}</span>
-                      </li>
-                    ))}
+                    {requirementsSection.items.map((item, index) => {
+                      const itemText = typeof item === 'string' ? item : String(item)
+                      return (
+                        <li key={index} className="flex items-start gap-4">
+                          <CheckCircle2 className="h-6 w-6 text-[#06A0A6] mt-0.5 flex-shrink-0" />
+                          <span className="text-slate-700 leading-relaxed text-lg">{itemText}</span>
+                        </li>
+                      )
+                    })}
                   </ul>
                 </div>
               </div>
@@ -1772,6 +1780,8 @@ export default function JoinDriverPage() {
       {/* Final CTA Section */}
       {driverContent.sections.find(s => s.id === 'final-cta') && (() => {
         const finalCtaSection = driverContent.sections.find(s => s.id === 'final-cta')!
+        const primaryCta = finalCtaSection.primaryCta
+        if (!primaryCta) return null
         return (
           <section className="py-20 md:py-28 bg-gradient-to-b from-white to-slate-50">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1785,7 +1795,7 @@ export default function JoinDriverPage() {
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                   <Button asChild className="bg-[#06A0A6] hover:bg-[#05858a] text-white px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3">
                     <a href="#driver-application-form">
-                      {finalCtaSection.primaryCta.label}
+                      {primaryCta.label}
                       <ArrowRight className="h-5 w-5" />
                     </a>
                   </Button>
