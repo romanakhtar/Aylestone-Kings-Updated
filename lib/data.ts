@@ -807,6 +807,51 @@ export const siteData = {
     subtitle: "Discover insights, tips, and stories about transportation in Leicester",
     blogs: [
       {
+        id: "black-friday-driver-deal-10-percent-commission",
+        title: "Black Friday Driver Deal – 10% Commission for Returning Drivers",
+        excerpt: "We're launching a limited-time Black Friday offer for former Aylestone drivers who want to return and maximise their earnings during the busiest period of the year.",
+        content: `
+          <p>We're launching a limited-time Black Friday offer for former Aylestone drivers who want to return and maximise their earnings during the busiest period of the year.</p>
+          
+          <h2>Rejoin Before Black Friday</h2>
+          <p>Any driver who rejoins before Black Friday will work on 10% commission until 31 December.</p>
+          <p>This offer is straightforward, with no hidden conditions.</p>
+          
+          <h2>What You Get</h2>
+          
+          <h3>10% Commission</h3>
+          <p>Earn more on every job through the busiest months of the year.</p>
+          
+          <h3>Quick Reactivation</h3>
+          <p>Minimal steps needed — get back on the road fast.</p>
+          
+          <h3>Full Office Support</h3>
+          <p>24/7 assistance, dispatch support, and WhatsApp help whenever needed.</p>
+          
+          <h3>Consistent Work</h3>
+          <p>High demand across Leicester means strong earning potential from day one.</p>
+          
+          <h2>Why Now Is the Best Time to Come Back</h2>
+          <p>November and December bring peak demand for:</p>
+          <ul>
+            <li>Christmas shopping trips</li>
+            <li>Airport transfers</li>
+            <li>Early morning and evening bookings</li>
+            <li>Cold weather travel</li>
+            <li>School runs</li>
+            <li>Night-time journeys</li>
+          </ul>
+          <p>This makes it the most profitable period for drivers, especially with a reduced commission rate.</p>
+          
+          <h2>Ready to Rejoin?</h2>
+          <p>Fill in the online form on this page and our team will contact you the same day to get you activated.</p>
+        `,
+        date: "2025-11-26",
+        author: "Aylestone Kings Team",
+        category: "Drivers",
+        image: "/Driver-blog.png"
+      },
+      {
         id: "why-leicester-locals-trust-aylestone-taxis",
         title: "Why Leicester Locals Trust Aylestone Taxis",
         excerpt: "For over 30 years, Aylestone Kings has been the trusted choice for transportation in Leicester. Discover what makes us the preferred taxi service for thousands of local residents.",
