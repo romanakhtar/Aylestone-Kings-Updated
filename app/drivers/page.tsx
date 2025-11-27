@@ -47,8 +47,24 @@ export default function JoinDriverPage() {
 
   const validateFile = (file: File | null) => {
     if (!file) return false
-    // Accept any file type and size - just check that a file exists
-    return file.size > 0
+    
+    // Check file size
+    if (file.size === 0) return false
+    
+    // Check file type - accept PDF and image types
+    const allowedTypes = [
+      'application/pdf',
+      'image/jpeg',
+      'image/jpg',
+      'image/png'
+    ]
+    const allowedExtensions = ['.pdf', '.jpg', '.jpeg', '.png']
+    
+    const fileExtension = '.' + file.name.split('.').pop()?.toLowerCase()
+    const isValidType = allowedTypes.includes(file.type) || 
+                        (fileExtension && allowedExtensions.includes(fileExtension))
+    
+    return isValidType
   }
 
   const dateOnOrAfterToday = (dateStr: string) => {
@@ -115,8 +131,10 @@ export default function JoinDriverPage() {
     }
 
     const proofAddress = formData.get('proof_address') as File
-    if (!proofAddress || !validateFile(proofAddress)) {
+    if (!proofAddress) {
       errors.proof_address = 'Upload proof of address.'
+    } else if (!validateFile(proofAddress)) {
+      errors.proof_address = 'File must be PDF, JPG, JPEG, or PNG format.'
     }
 
     // Licence & Compliance Validation - lenient
@@ -188,29 +206,39 @@ export default function JoinDriverPage() {
     }
 
     const dlFront = formData.get('upload_driving_licence_front') as File
-    if (!dlFront || !validateFile(dlFront)) {
+    if (!dlFront) {
       errors.upload_driving_licence_front = 'Upload licence front.'
+    } else if (!validateFile(dlFront)) {
+      errors.upload_driving_licence_front = 'File must be PDF, JPG, JPEG, or PNG format.'
     }
 
     const dlBack = formData.get('upload_driving_licence_back') as File
-    if (!dlBack || !validateFile(dlBack)) {
+    if (!dlBack) {
       errors.upload_driving_licence_back = 'Upload licence back.'
+    } else if (!validateFile(dlBack)) {
+      errors.upload_driving_licence_back = 'File must be PDF, JPG, JPEG, or PNG format.'
     }
 
     const badgeUpload = formData.get('upload_badge_licence') as File
-    if (!badgeUpload || !validateFile(badgeUpload)) {
+    if (!badgeUpload) {
       errors.upload_badge_licence = 'Upload badge/licence.'
+    } else if (!validateFile(badgeUpload)) {
+      errors.upload_badge_licence = 'File must be PDF, JPG, JPEG, or PNG format.'
     }
 
     const dbsUpload = formData.get('upload_dbs') as File
-    if (!dbsUpload || !validateFile(dbsUpload)) {
+    if (!dbsUpload) {
       errors.upload_dbs = 'Upload DBS certificate.'
+    } else if (!validateFile(dbsUpload)) {
+      errors.upload_dbs = 'File must be PDF, JPG, JPEG, or PNG format.'
     }
 
     if (requiresRTWUpload) {
       const rtwUpload = formData.get('upload_rtw_proof') as File
-      if (!rtwUpload || !validateFile(rtwUpload)) {
+      if (!rtwUpload) {
         errors.upload_rtw_proof = 'Upload right to work proof.'
+      } else if (!validateFile(rtwUpload)) {
+        errors.upload_rtw_proof = 'File must be PDF, JPG, JPEG, or PNG format.'
       }
     }
 
@@ -257,18 +285,24 @@ export default function JoinDriverPage() {
       }
 
       const insuranceUpload = formData.get('upload_insurance_certificate') as File
-      if (!insuranceUpload || !validateFile(insuranceUpload)) {
+      if (!insuranceUpload) {
         errors.upload_insurance_certificate = 'Upload insurance certificate.'
+      } else if (!validateFile(insuranceUpload)) {
+        errors.upload_insurance_certificate = 'File must be PDF, JPG, JPEG, or PNG format.'
       }
 
       const motUpload = formData.get('upload_mot') as File
-      if (!motUpload || !validateFile(motUpload)) {
+      if (!motUpload) {
         errors.upload_mot = 'Upload MOT certificate.'
+      } else if (!validateFile(motUpload)) {
+        errors.upload_mot = 'File must be PDF, JPG, JPEG, or PNG format.'
       }
 
       const plateUpload = formData.get('upload_plate') as File
-      if (!plateUpload || !validateFile(plateUpload)) {
+      if (!plateUpload) {
         errors.upload_plate = 'Upload plate photo.'
+      } else if (!validateFile(plateUpload)) {
+        errors.upload_plate = 'File must be PDF, JPG, JPEG, or PNG format.'
       }
     }
 
@@ -326,21 +360,38 @@ export default function JoinDriverPage() {
 
     // Form is valid - submit to our custom API endpoint
     try {
-      // Check total file sizes before submission
+      // Check file sizes before submission
       const fileInputs = form.querySelectorAll('input[type="file"]')
       let totalSize = 0
+      const maxFileSize = 10 * 1024 * 1024 // 10MB per file limit
       const maxTotalSize = 50 * 1024 * 1024 // 50MB total limit
       const fileCount: string[] = []
+      const oversizedFiles: string[] = []
       
       fileInputs.forEach((input: Element) => {
         const fileInput = input as HTMLInputElement
         if (fileInput.files && fileInput.files.length > 0) {
           const file = fileInput.files[0]
+          const fileSizeMB = file.size / 1024 / 1024
+          
+          // Check per-file size limit
+          if (file.size > maxFileSize) {
+            oversizedFiles.push(`${fileInput.name}: ${fileSizeMB.toFixed(2)}MB`)
+          }
+          
           totalSize += file.size
-          fileCount.push(`${fileInput.name}: ${(file.size / 1024 / 1024).toFixed(2)}MB`)
+          fileCount.push(`${fileInput.name}: ${fileSizeMB.toFixed(2)}MB`)
         }
       })
       
+      // Check for oversized individual files
+      if (oversizedFiles.length > 0) {
+        alert(`The following files exceed the 10MB limit:\n${oversizedFiles.join('\n')}\n\nPlease reduce file sizes and try again.`)
+        setIsSubmitting(false)
+        return
+      }
+      
+      // Check total size limit
       if (totalSize > maxTotalSize) {
         alert(`Total file size (${(totalSize / 1024 / 1024).toFixed(2)}MB) exceeds the limit of 50MB. Please reduce file sizes and try again.`)
         setIsSubmitting(false)
@@ -645,7 +696,7 @@ export default function JoinDriverPage() {
                     id="proof_address"
                     name="proof_address"
                     type="file"
-                    accept=".pdf,.jpg,.jpeg,.png"
+                    accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"
                     required
                     className={formErrors.proof_address ? 'border-red-500' : ''}
                   />
@@ -914,7 +965,7 @@ export default function JoinDriverPage() {
                     id="upload_driving_licence_front"
                     name="upload_driving_licence_front"
                     type="file"
-                    accept=".pdf,.jpg,.jpeg,.png"
+                    accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"
                     required
                     className={formErrors.upload_driving_licence_front ? 'border-red-500' : ''}
                   />
@@ -931,7 +982,7 @@ export default function JoinDriverPage() {
                     id="upload_driving_licence_back"
                     name="upload_driving_licence_back"
                     type="file"
-                    accept=".pdf,.jpg,.jpeg,.png"
+                    accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"
                     required
                     className={formErrors.upload_driving_licence_back ? 'border-red-500' : ''}
                   />
@@ -948,7 +999,7 @@ export default function JoinDriverPage() {
                     id="upload_badge_licence"
                     name="upload_badge_licence"
                     type="file"
-                    accept=".pdf,.jpg,.jpeg,.png"
+                    accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"
                     required
                     className={formErrors.upload_badge_licence ? 'border-red-500' : ''}
                   />
@@ -965,7 +1016,7 @@ export default function JoinDriverPage() {
                     id="upload_dbs"
                     name="upload_dbs"
                     type="file"
-                    accept=".pdf,.jpg,.jpeg,.png"
+                    accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"
                     required
                     className={formErrors.upload_dbs ? 'border-red-500' : ''}
                   />
@@ -983,7 +1034,7 @@ export default function JoinDriverPage() {
                       id="upload_rtw_proof"
                       name="upload_rtw_proof"
                       type="file"
-                      accept=".pdf,.jpg,.jpeg,.png"
+                      accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"
                       required
                       className={formErrors.upload_rtw_proof ? 'border-red-500' : ''}
                     />
@@ -1159,7 +1210,7 @@ export default function JoinDriverPage() {
                       id="upload_insurance_certificate"
                       name="upload_insurance_certificate"
                       type="file"
-                      accept=".pdf,.jpg,.jpeg,.png"
+                      accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"
                       required={ownsVehicle}
                       className={formErrors.upload_insurance_certificate ? 'border-red-500' : ''}
                     />
@@ -1176,7 +1227,7 @@ export default function JoinDriverPage() {
                       id="upload_mot"
                       name="upload_mot"
                       type="file"
-                      accept=".pdf,.jpg,.jpeg,.png"
+                      accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"
                       required={ownsVehicle}
                       className={formErrors.upload_mot ? 'border-red-500' : ''}
                     />
@@ -1193,7 +1244,7 @@ export default function JoinDriverPage() {
                       id="upload_plate"
                       name="upload_plate"
                       type="file"
-                      accept=".pdf,.jpg,.jpeg,.png"
+                      accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"
                       required={ownsVehicle}
                       className={formErrors.upload_plate ? 'border-red-500' : ''}
                     />

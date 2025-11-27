@@ -132,11 +132,11 @@ export async function POST(request: NextRequest) {
     // Check if SMTP is configured
     const transporter = createTransporter()
     if (!transporter) {
-      console.error('SMTP is not configured')
+      console.error('SMTP is not configured - missing SMTP_USER or SMTP_PASSWORD environment variables')
       return NextResponse.json(
         { 
           error: 'Email service not configured. Please set SMTP_USER and SMTP_PASSWORD environment variables.',
-          details: 'Missing SMTP configuration in .env.local file'
+          details: 'Missing SMTP configuration. See PRODUCTION_DEPLOYMENT.md for setup instructions.'
         },
         { status: 500 }
       )
