@@ -31,6 +31,16 @@ SMTP_PORT=587
 # Optional: Email Addresses
 SMTP_FROM_EMAIL=noreply@aylestone-taxis.co.uk
 DRIVER_FORM_EMAIL=info@aylestone-taxis.co.uk
+
+# Optional: File Storage Configuration
+# Directory where uploaded files are stored (defaults to ./uploads)
+UPLOAD_DIR=./uploads
+
+# File retention period in days (defaults to 30 days)
+FILE_RETENTION_DAYS=30
+
+# Base URL for file download links (auto-detected in production)
+# NEXT_PUBLIC_BASE_URL=https://yourdomain.com
 ```
 
 ### Step 3: Get Your SMTP Credentials
@@ -91,6 +101,33 @@ After creating/updating `.env.local`:
 - ✅ Use App Passwords instead of your main email password when possible
 - ✅ Keep your credentials secure and don't share them
 
+## File Upload System
+
+The driver application form now uses a file upload system that stores files on the server and sends download links via email instead of attaching files directly. This approach:
+
+- ✅ **Handles large files smoothly** - No more email size limit issues
+- ✅ **Faster email delivery** - Emails send quickly without large attachments
+- ✅ **Better reliability** - No SMTP timeouts with large files
+- ✅ **Secure file storage** - Files are stored securely with unique names
+
+### How It Works
+
+1. When a driver submits the form, files are uploaded to the server
+2. Files are stored in the `uploads` directory (configurable via `UPLOAD_DIR`)
+3. Download links are generated and included in the email
+4. Recipients can click the links to download files
+5. Files are automatically cleaned up after the retention period (default: 30 days)
+
+### File Storage Location
+
+- **Development**: Files are stored in `./uploads` directory (created automatically)
+- **Production**: Ensure the upload directory has write permissions
+- **Cloud Storage**: The system can be extended to use cloud storage (AWS S3, etc.) if needed
+
+### File Retention
+
+Files are automatically deleted after the retention period (default: 30 days). You can configure this with the `FILE_RETENTION_DAYS` environment variable.
+
 ## Testing
 
 After configuration, test the driver application form. If emails are sent successfully, you'll see a success message. If there are still errors, check:
@@ -99,6 +136,7 @@ After configuration, test the driver application form. If emails are sent succes
 2. App passwords are enabled (for Gmail/Outlook)
 3. The SMTP server settings match your email provider
 4. Your firewall/network isn't blocking SMTP connections
+5. The upload directory has write permissions (for file storage)
 
 ## Troubleshooting
 
@@ -112,8 +150,20 @@ After configuration, test the driver application form. If emails are sent succes
 - Verify your firewall isn't blocking port 587
 - Try port 465 with `SMTP_PORT=465` (requires `secure: true`)
 
+### "File upload failed" or "File not found"
+- Ensure the `uploads` directory exists and has write permissions
+- Check that `UPLOAD_DIR` environment variable points to a valid directory
+- Verify disk space is available on the server
+- Check server logs for detailed error messages
+
+### "Download link not working"
+- Verify `NEXT_PUBLIC_BASE_URL` is set correctly in production
+- Check that the file still exists (files are deleted after retention period)
+- Ensure the API route `/api/files/download/[filename]` is accessible
+
 ### Still not working?
 - Check the server console logs for detailed error messages
 - Verify your email provider allows SMTP access
 - Some email providers require you to enable "Less secure app access" (not recommended - use App Passwords instead)
+- For file issues, check file permissions and disk space
 

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import { saveFile, formatFileSize } from '@/lib/file-storage'
 
 // Create reusable transporter
 const createTransporter = () => {
@@ -117,17 +118,72 @@ export async function POST(request: NextRequest) {
       </ul>
     `
 
-    // Prepare attachments
-    const attachments = await Promise.all(
-      files.map(async ({ name, file }) => {
-        const arrayBuffer = await file.arrayBuffer()
-        const buffer = Buffer.from(arrayBuffer)
-        return {
-          filename: `${name}_${file.name}`,
-          content: buffer,
+    // Upload files and get download links
+    const fileLinks: Array<{ fieldName: string; originalName: string; downloadUrl: string; size: string }> = []
+    const uploadedFiles: Array<{ filename: string }> = []
+    
+    try {
+      for (const { name, file } of files) {
+        try {
+          const savedFile = await saveFile(file)
+          const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 
+                         process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 
+                         request.headers.get('origin') || 
+                         'http://localhost:3000'
+          const downloadUrl = `${baseUrl}/api/files/download/${savedFile.filename}`
+          
+          fileLinks.push({
+            fieldName: name,
+            originalName: file.name,
+            downloadUrl,
+            size: formatFileSize(file.size),
+          })
+          
+          uploadedFiles.push({ filename: savedFile.filename })
+        } catch (fileError) {
+          console.error(`Error uploading file ${file.name}:`, fileError)
+          // Continue with other files even if one fails
         }
-      })
-    )
+      }
+    } catch (uploadError) {
+      console.error('Error during file upload process:', uploadError)
+      // Continue with email sending even if file upload fails
+    }
+
+    // Add file links section to email
+    if (fileLinks.length > 0) {
+      emailHtml += `
+        <h3>Uploaded Documents</h3>
+        <p>The following documents have been uploaded and are available for download:</p>
+        <ul>
+      `
+      
+      // Map field names to user-friendly labels
+      const fieldLabels: Record<string, string> = {
+        proof_address: 'Proof of Address',
+        upload_driving_licence_front: 'Driving Licence (Front)',
+        upload_driving_licence_back: 'Driving Licence (Back)',
+        upload_badge_licence: 'Private Hire Badge',
+        upload_dbs: 'DBS Certificate',
+        upload_rtw_proof: 'Right to Work Proof',
+        upload_insurance_certificate: 'Insurance Certificate',
+        upload_mot: 'MOT Certificate',
+        upload_plate: 'Plate Photo',
+      }
+      
+      for (const fileLink of fileLinks) {
+        const label = fieldLabels[fileLink.fieldName] || fileLink.fieldName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+        emailHtml += `
+          <li>
+            <strong>${label}:</strong> 
+            <a href="${fileLink.downloadUrl}" style="color: #06A0A6; text-decoration: underline;">${fileLink.originalName}</a> 
+            (${fileLink.size})
+          </li>
+        `
+      }
+      
+      emailHtml += `</ul>`
+    }
 
     // Check if SMTP is configured
     const transporter = createTransporter()
@@ -151,7 +207,7 @@ export async function POST(request: NextRequest) {
         to: emailTo,
         subject: `New Driver Application - ${formFields.full_name || 'Unknown'}`,
         html: emailHtml,
-        attachments: attachments.length > 0 ? attachments : undefined,
+        // No attachments - files are now accessed via download links
       })
 
       console.log('Email sent successfully:', info.messageId)

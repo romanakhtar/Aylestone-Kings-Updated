@@ -223,8 +223,8 @@
           <div class="col-4">
             <label for="proof_address">Upload Proof of Address</label>
             <input id="proof_address" name="proof_address" type="file" accept=".pdf,.jpg,.jpeg,.png" required />
-            <small class="help">Utility bill / bank statement / council letter (≤ 10 MB)</small>
-            <div class="err" data-err-for="proof_address">Upload a PDF/JPG/PNG (≤10 MB).</div>
+            <small class="help">Utility bill / bank statement / council letter (max 50 MB)</small>
+            <div class="err" data-err-for="proof_address">Upload a PDF/JPG/PNG (max 50 MB).</div>
           </div>
         </div>
         <div class="note">Keep your Driving Licence, DBS and Badge ready for upload below.</div>
@@ -322,22 +322,22 @@
           <div class="col-4">
             <label for="dl_front">Upload Driving Licence (Front)</label>
             <input id="dl_front" name="upload_driving_licence_front" type="file" accept=".pdf,.jpg,.jpeg,.png" required />
-            <div class="err" data-err-for="dl_front">Upload licence front (≤10 MB).</div>
+            <div class="err" data-err-for="dl_front">Upload licence front (max 50 MB).</div>
           </div>
           <div class="col-4">
             <label for="dl_back">Upload Driving Licence (Back)</label>
             <input id="dl_back" name="upload_driving_licence_back" type="file" accept=".pdf,.jpg,.jpeg,.png" required />
-            <div class="err" data-err-for="dl_back">Upload licence back (≤10 MB).</div>
+            <div class="err" data-err-for="dl_back">Upload licence back (max 50 MB).</div>
           </div>
           <div class="col-4">
             <label for="upload_badge">Upload Private Hire Badge</label>
             <input id="upload_badge" name="upload_badge_licence" type="file" accept=".pdf,.jpg,.jpeg,.png" required />
-            <div class="err" data-err-for="upload_badge">Upload badge/licence (≤10 MB).</div>
+            <div class="err" data-err-for="upload_badge">Upload badge/licence (max 50 MB).</div>
           </div>
           <div class="col-4">
             <label for="upload_dbs">Upload DBS Certificate</label>
             <input id="upload_dbs" name="upload_dbs" type="file" accept=".pdf,.jpg,.jpeg,.png" required />
-            <div class="err" data-err-for="upload_dbs">Upload DBS (≤10 MB).</div>
+            <div class="err" data-err-for="upload_dbs">Upload DBS (max 50 MB).</div>
           </div>
           <div class="col-4">
             <label for="upload_rtw">Upload Right to Work Proof</label>
@@ -401,17 +401,17 @@
           <div class="col-4 veh hidden">
             <label for="upload_ins">Upload Insurance Certificate</label>
             <input id="upload_ins" name="upload_insurance_certificate" type="file" accept=".pdf,.jpg,.jpeg,.png" />
-            <div class="err" data-err-for="upload_ins">Upload insurance (≤10 MB).</div>
+            <div class="err" data-err-for="upload_ins">Upload insurance (max 50 MB).</div>
           </div>
           <div class="col-4 veh hidden">
             <label for="upload_mot">Upload MOT Certificate</label>
             <input id="upload_mot" name="upload_mot" type="file" accept=".pdf,.jpg,.jpeg,.png" />
-            <div class="err" data-err-for="upload_mot">Upload MOT (≤10 MB).</div>
+            <div class="err" data-err-for="upload_mot">Upload MOT (max 50 MB).</div>
           </div>
           <div class="col-4 veh hidden">
             <label for="upload_plate">Upload Plate Photo</label>
             <input id="upload_plate" name="upload_plate" type="file" accept=".pdf,.jpg,.jpeg,.png" />
-            <div class="err" data-err-for="upload_plate">Upload plate photo (≤10 MB).</div>
+            <div class="err" data-err-for="upload_plate">Upload plate photo (max 50 MB).</div>
           </div>
         </div>
       </section>
@@ -489,7 +489,7 @@
       </section>
 
       <div class="actions">
-        <div class="note">Accepted files: PDF, JPG, PNG (max 10 MB each)</div>
+        <div class="note">Accepted files: PDF, JPG, PNG (max 50 MB each, 200 MB total)</div>
         <button class="btn btn-primary" type="submit">Send Application</button>
       </div>
     </form>
@@ -560,7 +560,7 @@
       if(!input.files || !input.files[0]) return false;
       const f = input.files[0];
       const okType = /pdf|jpeg|jpg|png/i.test(f.type) || /\.(pdf|jpe?g|png)$/i.test(f.name);
-      const okSize = f.size <= 10 * 1024 * 1024;
+      const okSize = f.size <= 50 * 1024 * 1024; // 50MB limit (increased from 10MB)
       return okType && okSize;
     }
 

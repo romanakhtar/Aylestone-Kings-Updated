@@ -363,8 +363,8 @@ export default function JoinDriverPage() {
       // Check file sizes before submission
       const fileInputs = form.querySelectorAll('input[type="file"]')
       let totalSize = 0
-      const maxFileSize = 10 * 1024 * 1024 // 10MB per file limit
-      const maxTotalSize = 50 * 1024 * 1024 // 50MB total limit
+      const maxFileSize = 50 * 1024 * 1024 // 50MB per file limit (increased from 10MB)
+      const maxTotalSize = 200 * 1024 * 1024 // 200MB total limit (increased to accommodate larger files)
       const fileCount: string[] = []
       const oversizedFiles: string[] = []
       
@@ -386,14 +386,14 @@ export default function JoinDriverPage() {
       
       // Check for oversized individual files
       if (oversizedFiles.length > 0) {
-        alert(`The following files exceed the 10MB limit:\n${oversizedFiles.join('\n')}\n\nPlease reduce file sizes and try again.`)
+        alert(`The following files exceed the 50MB limit:\n${oversizedFiles.join('\n')}\n\nPlease reduce file sizes and try again.`)
         setIsSubmitting(false)
         return
       }
       
       // Check total size limit
       if (totalSize > maxTotalSize) {
-        alert(`Total file size (${(totalSize / 1024 / 1024).toFixed(2)}MB) exceeds the limit of 50MB. Please reduce file sizes and try again.`)
+        alert(`Total file size (${(totalSize / 1024 / 1024).toFixed(2)}MB) exceeds the limit of 200MB. Please reduce file sizes and try again.`)
         setIsSubmitting(false)
         return
       }
@@ -444,7 +444,7 @@ export default function JoinDriverPage() {
         let errorMessage = 'There was an error submitting your application. Please try again.'
         
         if (response.status === 413) {
-          errorMessage = 'File size too large. Please reduce file sizes (max 10MB per file, 50MB total) and try again.'
+          errorMessage = 'File size too large. Please reduce file sizes (max 50MB per file, 200MB total) and try again.'
         } else if (response.status === 429) {
           errorMessage = 'Too many submissions. Please try again later.'
         } else if (response.status === 422) {
@@ -700,7 +700,7 @@ export default function JoinDriverPage() {
                     required
                     className={formErrors.proof_address ? 'border-red-500' : ''}
                   />
-                  <p className="mt-1 text-xs text-slate-500">Utility bill / bank statement / council letter (≤ 10 MB)</p>
+                  <p className="mt-1 text-xs text-slate-500">Utility bill / bank statement / council letter (max 50 MB)</p>
                   {formErrors.proof_address && (
                     <p className="mt-1 text-sm text-red-500">{formErrors.proof_address}</p>
                   )}
@@ -1437,7 +1437,7 @@ export default function JoinDriverPage() {
             <div className="p-6 md:p-8 bg-slate-50">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <p className="text-xs text-slate-600">
-                  Accepted files: PDF, JPG, PNG (max 10 MB each)
+                  Accepted files: PDF, JPG, PNG (max 50 MB each, 200 MB total)
                 </p>
                 <Button
                   type="submit"
