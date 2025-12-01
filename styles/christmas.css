@@ -1,0 +1,73 @@
+/* 🎄 Aylestone Taxis - Christmas Theme Styles */
+
+/* Christmas Color Variables */
+:root {
+  --christmas-gold: #D9B35A;
+  --christmas-coral: #EF5B6A;
+  --christmas-navy: #0F0D3E;
+  --christmas-teal: #06A0A6;
+  --christmas-slate: #2E3C44;
+  --christmas-light-grey: #E4E4E4;
+}
+
+/* Christmas Theme */
+.christmas-theme {
+  /* Enhanced brand colors with Christmas accents */
+  --aylestone-cyan: #06A0A6;
+  --aylestone-dark-blue: #0F0D3E;
+  --aylestone-dark-grey: #2E3C44;
+  --aylestone-light-grey: #E4E4E4;
+  
+  /* Christmas accent colors */
+  --christmas-accent: var(--christmas-gold);
+  --christmas-secondary: var(--christmas-coral);
+}
+
+/* Premium Snowfall Effect - Snow Overlay - Only on Homepage */
+body.christmas-theme::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("/snow1.png");
+  background-repeat: repeat;
+  opacity: 0.6;
+  animation: snow-fall 50s linear infinite;
+  z-index: 999;
+  display: block;
+}
+
+/* Snowfall Animation */
+@keyframes snow-fall {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 600px;
+  }
+}
+
+/* Alternative snow layer for depth (optional - using snow2.png) - Only on Homepage */
+body.christmas-theme::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("/snow2.png");
+  background-repeat: repeat;
+  opacity: 0.4;
+  animation: snow-fall-slow 70s linear infinite;
+  z-index: 998;
+  display: block;
+}
+
+/* Slower snowfall animation for depth effect */
+@keyframes snow-fall-slow {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 800px;
+  }
+}
+

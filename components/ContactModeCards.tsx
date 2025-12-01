@@ -1,16 +1,23 @@
 'use client'
 
+import Image from 'next/image'
 import { MessageCircle, Phone, Globe, Star, Car } from 'lucide-react'
 import AppDownloadButtons from '@/components/AppDownloadButtons'
 import { contactInfo } from '@/lib/data'
 
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
+import { useChristmasTheme } from "@/components/ChristmasThemeProvider"
+import { usePathname } from "next/navigation"
 
 interface ContactModeCardsProps {
   className?: string
 }
 
 export default function ContactModeCards({ className = '' }: ContactModeCardsProps) {
+  const { isChristmasActive: isChristmasSeason } = useChristmasTheme()
+  const pathname = usePathname()
+  const isChristmasActive = isChristmasSeason && pathname === '/'
+  
   const contactModes = [
     {
       name: 'WhatsApp',
@@ -56,10 +63,28 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
   ]
 
   return (
-    <div className={`bg-cyan-500/20 backdrop-blur-md rounded-2xl shadow-xl border border-cyan-500/30 p-4 sm:p-5 lg:p-6 ${className} animate-fade-in relative w-full max-w-[320px] sm:max-w-[340px] lg:max-w-[260px] xl:max-w-[280px]`}>
-      <h3 className="text-xl lg:text-2xl font-bold text-[#0F0D3E] mb-6 lg:mb-8 text-center border-b border-gray-200/50 pb-3 relative z-10">
+    <div className={`${isChristmasActive ? 'bg-gradient-to-br from-[#0F0D3E] to-[#2E3C44] border-[#D9B35A]' : 'bg-cyan-500/20 backdrop-blur-md border-cyan-500/30'} rounded-2xl shadow-xl border-2 p-4 sm:p-5 lg:p-6 ${className} animate-fade-in relative w-full max-w-[320px] sm:max-w-[340px] lg:max-w-[260px] xl:max-w-[280px] overflow-visible`}>
+      {/* Santa Hat - Stuck on Top Right Corner */}
+      {isChristmasActive && (
+        <div className="absolute -top-12 -right-10 z-20 pointer-events-none">
+          <Image
+            src="/santa-hat.png"
+            alt="Santa hat decoration"
+            width={100}
+            height={100}
+            className="drop-shadow-lg"
+            style={{
+              transform: 'rotate(-10deg)',
+              filter: 'drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4))'
+            }}
+            unoptimized={true}
+          />
+        </div>
+      )}
+      
+      <h3 className={`text-xl lg:text-2xl font-bold mb-6 lg:mb-8 text-center border-b ${isChristmasActive ? 'text-[#D9B35A] border-[#D9B35A]/50' : 'text-[#0F0D3E] border-gray-200/50'} pb-3 relative z-10`}>
         Contact Us
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] rounded-full"></div>
+        <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 rounded-full ${isChristmasActive ? 'bg-gradient-to-r from-[#D9B35A] to-[#EF5B6A]' : 'bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E]'}`}></div>
       </h3>
       
       <div className="space-y-3 lg:space-y-4">
@@ -98,11 +123,11 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       </div>
       
       {/* Separator */}
-      <div className="border-t border-blue-200 my-2 lg:my-2"></div>
+      <div className={`border-t my-2 lg:my-2 ${isChristmasActive ? 'border-[#D9B35A]/30' : 'border-blue-200'}`}></div>
       
       {/* App Download Section */}
       <div className="pt-2 flex flex-col items-center">
-        <h4 className="text-md font-semibold text-[#0F0D3E] mb-3 text-center">Download our app</h4>
+        <h4 className={`text-md font-semibold mb-3 text-center ${isChristmasActive ? 'text-[#D9B35A]' : 'text-[#0F0D3E]'}`}>Download our app</h4>
         <AppDownloadButtons size="sm" />
       </div>
     </div>
