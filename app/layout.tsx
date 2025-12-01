@@ -3,10 +3,12 @@ import type { Metadata } from "next"
 import { Inter, Roboto } from "next/font/google"
 import "./globals.css"
 import "../styles/halloween.css"
+import "../styles/christmas.css"
 import dynamic from "next/dynamic"
 import ContactInfoBar from "@/components/contact-info-bar"
 import { Navigation } from "@/components/navigation"
 import { HalloweenThemeProvider } from "@/components/HalloweenThemeProvider"
+import { ChristmasThemeProvider } from "@/components/ChristmasThemeProvider"
 import Script from "next/script"
 
 // Dynamically import non-critical components
@@ -251,16 +253,18 @@ export default function RootLayout({
       </head>
       <body className="font-sans pt-5 bg-white">
         <HalloweenThemeProvider>
-          <HalloweenTopBanner />
-          <ContactInfoBar />
-          <Navigation />
-          <HalloweenSpiderWeb />
-          <main className="transition-smooth relative">
-            <HalloweenFloatingElements />
-            {children}
-          </main>
-          <Footer />
-          <FloatingContactButton />
+          <ChristmasThemeProvider>
+            <HalloweenTopBanner />
+            <ContactInfoBar />
+            <Navigation />
+            <HalloweenSpiderWeb />
+            <main className="transition-smooth relative">
+              <HalloweenFloatingElements />
+              {children}
+            </main>
+            <Footer />
+            <FloatingContactButton />
+          </ChristmasThemeProvider>
         </HalloweenThemeProvider>
         {/* Schema markup - inline for faster parsing */}
         <script

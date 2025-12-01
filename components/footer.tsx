@@ -1,10 +1,13 @@
 "use client"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, ArrowRight, MessageCircle, Rocket, ShoppingBag, Theater, Crown, Church, Music, ShoppingCart, Calendar, Star, ChevronDown, ChevronUp } from "lucide-react"
 import Logo from "@/components/logo"
 import { companyInfo, contactInfo, socialLinks, footerData, copyrightInfo } from "@/lib/data"
 import { useState } from "react"
+import { useChristmasTheme } from "@/components/ChristmasThemeProvider"
+import { usePathname } from "next/navigation"
 
 // Icon mapping function
 function getIconComponent(iconName: string) {
@@ -71,8 +74,32 @@ function CollapsibleSection({
 }
 
 export default function Footer() {
+  const { isChristmasActive } = useChristmasTheme()
+  const pathname = usePathname()
+  const isHomepage = pathname === '/'
+  
   return (
     <footer className="bg-gray-100 text-gray-800 ">
+      {/* Christmas Footer Banner - Only on Homepage */}
+      {isChristmasActive && isHomepage && (
+        <div className="w-full relative">
+          <Image 
+            src="/christmas-banner.jpg"
+            alt="Christmas banner decoration for Aylestone Kings taxi service"
+            width={1920}
+            height={200}
+            className="w-full h-auto object-cover"
+            style={{
+              display: 'block',
+              width: '100%',
+              height: 'auto'
+            }}
+            priority={false}
+            loading="lazy"
+            unoptimized={true}
+          />
+        </div>
+      )}
       {/* Areas We Cover (Top Band) */}
       <div className="border-t border-gray-200 bg-gray-50 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
