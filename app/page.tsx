@@ -528,7 +528,7 @@ export default function Home() {
 
           {/* Booking */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div className="bg-[#E4E4E4] rounded-xl p-6">
+            <div className="bg-white rounded-xl p-6 border border-gray-100">
               <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-4">
                 {siteData.homepage.seoContent.booking.heading}
               </div>
@@ -611,11 +611,12 @@ export default function Home() {
             </h3>
             <p className="text-[#2E3C44]">{siteData.homepage.seoContent.areas.text}</p>
             {siteData.homepage.seoContent.areas.links && (
-              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-4">
+              <ul className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-4">
                 {siteData.homepage.seoContent.areas.links.map((loc: {name: string, href: string}, idx: number) => (
                   <li key={idx}>
-                    <a href={loc.href} className="text-[#06A0A6] underline hover:no-underline">
-                      {loc.name}
+                    <a href={loc.href} className="text-[#06A0A6] hover:text-[#0F0D3E] transition-colors flex items-center gap-1.5">
+                      <ArrowRight className="h-3 w-3 flex-shrink-0" />
+                      <span>{loc.name}</span>
                     </a>
                   </li>
                 ))}

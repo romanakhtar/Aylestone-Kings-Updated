@@ -2,10 +2,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, ArrowRight, MessageCircle, Rocket, ShoppingBag, Theater, Crown, Church, Music, ShoppingCart, Calendar, Star, ChevronDown, ChevronUp } from "lucide-react"
+import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, ArrowRight, MessageCircle, Rocket, ShoppingBag, Theater, Crown, Church, Music, ShoppingCart, Calendar, Star } from "lucide-react"
 import Logo from "@/components/logo"
 import { companyInfo, contactInfo, socialLinks, footerData, copyrightInfo } from "@/lib/data"
-import { useState } from "react"
 import { useChristmasTheme } from "@/components/ChristmasThemeProvider"
 import { usePathname } from "next/navigation"
 
@@ -24,51 +23,31 @@ function getIconComponent(iconName: string) {
   return iconMap[iconName] || MapPin
 }
 
-// Collapsible section component
-function CollapsibleSection({ 
+// Area section component - compact and professional
+function AreaSection({ 
   title, 
   items, 
-  initialCount = 8,
-  gridCols = "grid-cols-2 sm:grid-cols-2"
+  gridCols = "grid-cols-1"
 }: { 
   title: string
   items: { name: string; href: string }[]
-  initialCount?: number
   gridCols?: string
 }) {
-  const [isExpanded, setIsExpanded] = useState(false)
-  const displayItems = isExpanded ? items : items.slice(0, initialCount)
-  const hasMore = items.length > initialCount
-
   return (
     <div className="flex flex-col">
-      <h4 className="font-bold text-gray-800 text-lg md:text-xl mb-4 tracking-tight">{title}</h4>
-      <ul className={`grid ${gridCols} gap-x-3 gap-y-2`}>
-        {displayItems.map((item: { name: string; href: string }) => (
+      <h4 className="font-semibold text-[#0F0D3E] text-base mb-3 tracking-tight border-b border-gray-200 pb-2">{title}</h4>
+      <ul className={`grid ${gridCols} gap-y-1.5`}>
+        {items.map((item: { name: string; href: string }) => (
           <li key={item.name} className="min-w-0">
-            <Link href={item.href} className="text-gray-600 hover:underline underline-offset-2 text-sm md:text-base transition-smooth flex items-start group py-1">
-              <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth flex-shrink-0 mt-0.5" />
-              <span className="leading-5 break-words">{item.name}</span>
+            <Link 
+              href={item.href} 
+              className="text-[#2E3C44] hover:text-[#06A0A6] text-xs sm:text-sm transition-colors duration-200 leading-relaxed block py-0.5"
+            >
+              {item.name}
             </Link>
           </li>
         ))}
       </ul>
-      {hasMore && (
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="mt-3 text-[#06A0A6] hover:text-[#0F0D3E] text-sm font-medium flex items-center gap-1 transition-colors"
-        >
-          {isExpanded ? (
-            <>
-              Show Less <ChevronUp className="h-4 w-4" />
-            </>
-          ) : (
-            <>
-              Show More ({items.length - initialCount} more) <ChevronDown className="h-4 w-4" />
-            </>
-          )}
-        </button>
-      )}
     </div>
   )
 }
@@ -101,55 +80,62 @@ export default function Footer() {
         </div>
       )}
       {/* Areas We Cover (Top Band) */}
-      <div className="border-t border-gray-200 bg-gray-50 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 lg:gap-12 items-start">
+      <div className="border-t border-gray-200 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 lg:gap-8 items-start">
+            {/* Popular Destinations */}
+            <AreaSection
+              title="Popular Destinations"
+              items={(footerData as any).destinationLinks?.slice()?.sort((a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name)) || []}
+            />
+
             {/* Leicester Areas */}
-            {footerData.areaGroups?.slice(0,3).map((group) => {
+            {footerData.areaGroups?.slice(0,1).map((group) => {
               const sortedItems = [...group.items]
                 .sort((a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name))
               return (
-                <CollapsibleSection
+                <AreaSection
                   key={group.title}
                   title={group.title}
                   items={sortedItems}
-                  initialCount={6}
                 />
               )
             })}
 
-            {/* Popular Destinations */}
-            <CollapsibleSection
-              title="Popular Destinations"
-              items={(footerData as any).destinationLinks?.slice()?.sort((a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name)) || []}
-              initialCount={6}
-            />
+            {/* Airport Transfers and Popular Services - Combined in one column */}
+            <div className="flex flex-col gap-6">
+              <AreaSection
+                title="Airport Transfers"
+                items={footerData.airportLinks || []}
+              />
+              <AreaSection
+                title="Popular Services"
+                items={[
+                  { name: "Taxi Leicester", href: "/taxi-leicester" },
+                  { name: "Taxi Near Me Leicester", href: "/taxi-near-me-leicester" },
+                  { name: "Leicester Airport Taxi", href: "/leicester-airport-taxi" },
+                  { name: "Leicester to EMA Taxi", href: "/leicester-to-east-midlands-airport-taxi" },
+                  { name: "Cheap Taxi Leicester", href: "/cheap-taxi-leicester" },
+                  { name: "Leicester Taxi Company", href: "/leicester-taxi-company" }
+                ]}
+              />
+            </div>
 
-            {/* Popular Services - SEO Pages */}
-            <CollapsibleSection
-              title="Popular Services"
-              items={[
-                { name: "Taxi Leicester", href: "/taxi-leicester" },
-                { name: "Taxi Near Me Leicester", href: "/taxi-near-me-leicester" },
-                { name: "Leicester Airport Taxi", href: "/leicester-airport-taxi" },
-                { name: "Leicester to EMA Taxi", href: "/leicester-to-east-midlands-airport-taxi" },
-                { name: "Cheap Taxi Leicester", href: "/cheap-taxi-leicester" },
-                { name: "Leicester Taxi Company", href: "/leicester-taxi-company" }
-              ]}
-              initialCount={6}
-              gridCols="grid-cols-2 sm:grid-cols-1"
-            />
-
-            {/* Airport Transfers */}
-            <CollapsibleSection
-              title="Airport Transfers"
-              items={footerData.airportLinks || []}
-              initialCount={6}
-              gridCols="grid-cols-2 sm:grid-cols-1"
-            />
+            {/* Surrounding Towns */}
+            {footerData.areaGroups?.slice(2,3).map((group) => {
+              const sortedItems = [...group.items]
+                .sort((a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name))
+              return (
+                <AreaSection
+                  key={group.title}
+                  title={group.title}
+                  items={sortedItems}
+                />
+              )
+            })}
 
             {/* Supermarkets */}
-            <CollapsibleSection
+            <AreaSection
               title="Supermarkets"
               items={(footerData as any).destinationLinks?.filter((link: { name: string; href: string }) => 
                 (link.name.includes("Taxi to") && (
@@ -165,9 +151,20 @@ export default function Footer() {
                   link.name.includes("Waitrose")
                 )) || link.name.includes("Supermarket Taxi Leicester")
               ) || []}
-              initialCount={6}
-              gridCols="grid-cols-2 sm:grid-cols-1"
             />
+
+            {/* Wider Leicester Districts */}
+            {footerData.areaGroups?.slice(1,2).map((group) => {
+              const sortedItems = [...group.items]
+                .sort((a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name))
+              return (
+                <AreaSection
+                  key={group.title}
+                  title={group.title}
+                  items={sortedItems}
+                />
+              )
+            })}
           </div>
         </div>
       </div>
