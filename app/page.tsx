@@ -410,6 +410,7 @@ export default function Home() {
                 height={1000}
                 sizes="(max-width: 768px) 100vw, 500px"
                 className="relative z-10 rounded-2xl shadow-2xl"
+                style={{ height: "auto" }}
                 loading="lazy"
               />
             </div>
@@ -503,6 +504,7 @@ export default function Home() {
                 height={300}
                 sizes="(max-width: 768px) 100vw, 600px"
                 className="rounded-2xl"
+                style={{ height: "auto" }}
                 loading="lazy"
               />
             </div>

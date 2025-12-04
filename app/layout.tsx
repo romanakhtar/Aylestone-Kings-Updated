@@ -232,9 +232,6 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
         
-        {/* Preload critical resources */}
-        <link rel="preload" href="/Aylestone-Taxi-Logo.png" as="image" type="image/png" />
-        
         {/* Google tag (gtag.js) - Load after page is interactive */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-997662518"

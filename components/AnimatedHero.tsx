@@ -95,25 +95,6 @@ export default function AnimatedHero() {
       {isHalloweenActive && <div className="halloween-hero-overlay" />}
       {isHalloweenActive && <div className="halloween-mist" />}
       
-      {/* Christmas Background Image - Snow/Stars Pattern */}
-      {isChristmasActive && (
-        <div 
-          className="absolute inset-0 z-0 h-screen"
-          style={{
-            backgroundImage: "url('/christmas-snow-background.png')",
-            backgroundPosition: "center",
-            backgroundRepeat: "repeat",
-            backgroundSize: "cover",
-            opacity: 0.7,
-          }}
-          onError={(e) => {
-            // If image fails to load, show a fallback pattern
-            const target = e.target as HTMLDivElement
-            target.style.backgroundImage = "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.15) 2px, rgba(255, 255, 255, 0.15) 4px)"
-          }}
-          aria-label="Christmas themed snow and stars background for Aylestone Kings taxi service"
-        />
-      )}
       
       {/* Christmas Background Pattern Overlay */}
       {isChristmasActive && (

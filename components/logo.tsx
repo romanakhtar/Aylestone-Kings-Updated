@@ -18,6 +18,7 @@ export default function Logo({ className = "", showText = true }: LogoProps) {
           width={44}
           height={44}
           className="rounded-2xl object-cover"
+          priority
         />
       </div>
       

@@ -807,6 +807,47 @@ export const siteData = {
     subtitle: "Discover insights, tips, and stories about transportation in Leicester",
     blogs: [
       {
+        id: "christmas-travel-tips-leicester",
+        title: "Christmas Travel Tips: Getting Around Leicester This Festive Season",
+        excerpt: "Make your Christmas shopping and festive celebrations stress-free with Aylestone Kings. Discover our top tips for navigating Leicester during the busiest time of the year.",
+        content: `
+          <p>The festive season is upon us, and Leicester is buzzing with Christmas shoppers, holiday parties, and family gatherings. Whether you're heading to Highcross for last-minute gifts, attending a Christmas party, or visiting family, getting around Leicester during December can be challenging. Aylestone Kings is here to make your Christmas travel smooth and stress-free.</p>
+          
+          <h2>Plan Ahead for Christmas Shopping</h2>
+          <p>Leicester's shopping centres, including Highcross and Fosse Park, get incredibly busy in December. Avoid the stress of finding parking and navigating crowded streets by booking a taxi in advance. Our drivers know the best routes and can drop you right at the entrance, saving you time and hassle.</p>
+          
+          <h2>Christmas Party Transport</h2>
+          <p>Celebrating with colleagues or friends? Don't let parking or designated driver duties spoil your festive fun. Book Aylestone Kings for your Christmas party transport - both there and back. We offer reliable, safe rides so you can enjoy the celebrations without worrying about getting home safely.</p>
+          
+          <h2>Family Visits Made Easy</h2>
+          <p>Visiting family across Leicester this Christmas? Our spacious vehicles can accommodate the whole family, plus all those presents and luggage. Whether you're heading across the city or to nearby areas, we'll get you there comfortably and on time.</p>
+          
+          <h2>Late-Night Festive Rides</h2>
+          <p>With Christmas markets, late-night shopping, and festive events happening throughout December, you might find yourself needing transport at unusual hours. Aylestone Kings operates 24/7, so whether you need an early morning airport transfer or a late-night ride home from a Christmas party, we're here for you.</p>
+          
+          <h2>Airport Transfers During the Holidays</h2>
+          <p>Picking up family members from the airport? Or heading away for Christmas yourself? Our reliable airport transfer service ensures you don't miss flights or keep loved ones waiting. We monitor flight schedules and adjust pickup times accordingly, so you can focus on enjoying the holidays.</p>
+          
+          <h2>Tips for Stress-Free Christmas Travel</h2>
+          <ul>
+            <li><strong>Book in advance:</strong> December is our busiest month - booking ahead ensures availability</li>
+            <li><strong>Allow extra time:</strong> Traffic can be heavier during the festive season</li>
+            <li><strong>Pack efficiently:</strong> Our drivers can help with shopping bags and luggage</li>
+            <li><strong>Use our app:</strong> Track your taxi and receive real-time updates</li>
+            <li><strong>Plan return journeys:</strong> Book your ride home when booking your outbound journey</li>
+          </ul>
+          
+          <h2>Why Choose Aylestone Kings This Christmas?</h2>
+          <p>With over 30 years of experience serving Leicester, we understand the unique challenges of festive travel. Our local knowledge means we know the best routes to avoid traffic, our reliable service means you won't be left waiting, and our friendly drivers will help make your journey pleasant.</p>
+          
+          <p>Don't let transport worries dampen your Christmas spirit. Book with Aylestone Kings and enjoy a stress-free festive season. From all of us at Aylestone Kings, we wish you a very Merry Christmas and a Happy New Year!</p>
+        `,
+        date: "2025-12-03",
+        author: "Aylestone Kings Team",
+        category: "Travel Tips",
+        image: "/christmas-blog.jpg"
+      },
+      {
         id: "black-friday-driver-deal-10-percent-commission",
         title: "Black Friday Driver Deal – 10% Commission for Returning Drivers",
         excerpt: "We're launching a limited-time Black Friday offer for former Aylestone drivers who want to return and maximise their earnings during the busiest period of the year.",
