@@ -247,6 +247,20 @@ export default function RootLayout({
             });
           `}
         </Script>
+        
+        {/* Google Analytics 4 (GA4) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EN43EPXGHR"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EN43EPXGHR');
+          `}
+        </Script>
       </head>
       <body className="font-sans pt-5 bg-white">
         <HalloweenThemeProvider>
