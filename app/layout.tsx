@@ -217,7 +217,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${roboto.variable} antialiased scroll-smooth`}>
+    <html lang="en" className={`${inter.variable} ${roboto.variable} antialiased`}>
       <head>
         {/* Resource Hints */}
         <link rel="preconnect" href="https://aylestonekings.webbooker.icabbi.com" />
@@ -269,7 +269,7 @@ export default function RootLayout({
             <ContactInfoBar />
             <Navigation />
             <HalloweenSpiderWeb />
-            <main className="transition-smooth relative">
+            <main className="relative">
               <HalloweenFloatingElements />
               {children}
             </main>

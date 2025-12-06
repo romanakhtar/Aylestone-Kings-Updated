@@ -1,11 +1,22 @@
 'use client'
 
 import { useHalloweenTheme } from './HalloweenThemeProvider'
+import { useEffect, useState } from 'react'
 
 export default function HalloweenFloatingElements() {
   const { isHalloweenActive } = useHalloweenTheme()
+  const [isMobile, setIsMobile] = useState(false)
 
-  if (!isHalloweenActive) return null
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  if (!isHalloweenActive || isMobile) return null
 
   return (
     <> 

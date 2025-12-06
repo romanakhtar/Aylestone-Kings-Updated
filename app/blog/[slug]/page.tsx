@@ -10,8 +10,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const blog = siteData.blogPage.blogs.find((b) => b.id === params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const blog = siteData.blogPage.blogs.find((b) => b.id === slug)
   
   if (!blog) {
     return {
@@ -26,14 +27,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const blog = siteData.blogPage.blogs.find((b) => b.id === params.slug)
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const blog = siteData.blogPage.blogs.find((b) => b.id === slug)
 
   if (!blog) {
     notFound()
   }
 
-  const currentIndex = siteData.blogPage.blogs.findIndex((b) => b.id === params.slug)
+  const currentIndex = siteData.blogPage.blogs.findIndex((b) => b.id === slug)
   const nextBlog = currentIndex < siteData.blogPage.blogs.length - 1 
     ? siteData.blogPage.blogs[currentIndex + 1] 
     : null

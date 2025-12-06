@@ -23,7 +23,7 @@ export default function AnimatedHero() {
   const isHomepage = pathname === '/'
   // Only show Christmas theme on homepage during December 1-27
   const isChristmasActive = isChristmasSeason && isHomepage
-  const [scrollY, setScrollY] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
   const parallaxRef = useRef<HTMLDivElement>(null)
   
   // Generate fixed positions for snow crystals (generated once, stays fixed)
@@ -41,20 +41,14 @@ export default function AnimatedHero() {
     return positions
   })
 
+  // Check if mobile and disable scroll animations
   useEffect(() => {
-    let ticking = false
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setScrollY(window.scrollY)
-          ticking = false
-        })
-        ticking = true
-      }
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
     }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
   const handleBookNow = () => {
@@ -107,8 +101,8 @@ export default function AnimatedHero() {
         />
       )}
       
-      {/* Snow Crystals at Fixed Positions - Only on Homepage */}
-      {isChristmasActive && (
+      {/* Snow Crystals at Fixed Positions - Only on Homepage - Hidden on mobile */}
+      {isChristmasActive && !isMobile && (
         <div className="absolute inset-0 z-[5] pointer-events-none overflow-hidden">
           {snowCrystalPositions.map((position, index) => (
             <Image
@@ -163,22 +157,18 @@ export default function AnimatedHero() {
             {/* CTA Button */}
             <button 
               onClick={handleBookNow}
-              className={`${isHalloweenActive ? 'halloween-cta-glow text-white' : isChristmasActive ? 'bg-[#D9B35A] hover:bg-[#EF5B6A] text-[#0F0D3E]' : 'animate-pulse bg-[#06A0A6] hover:bg-[#0F0D3E] text-white'} px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl mb-8`}
+              className={`${isHalloweenActive ? 'halloween-cta-glow text-white' : isChristmasActive ? 'bg-[#D9B35A] hover:bg-[#EF5B6A] text-[#0F0D3E]' : isMobile ? 'bg-[#06A0A6] hover:bg-[#0F0D3E] text-white' : 'animate-pulse bg-[#06A0A6] hover:bg-[#0F0D3E] text-white'} px-8 py-4 rounded-lg font-semibold text-sm flex items-center gap-3 shadow-lg hover:shadow-xl mb-8`}
             >
               {isHalloweenActive ? "Book Your Spook-tacular Ride Now 🎃" : isChristmasActive ? "🎄 Book Your Festive Ride Now 🎄" : "Book Your Ride Now"}
               <span className="halloween-pumpkin"></span>
               <ArrowRight className="h-5 w-5" />
             </button>
-            {/* Enhanced Car Image with Aylestone Theme */}
+            {/* Enhanced Car Image with Aylestone Theme - No parallax on mobile */}
             {!isChristmasActive && (
               <div className="flex justify-start">
                 <div 
                   ref={parallaxRef}
-                  className="relative transition-all duration-300 ease-out"
-                  style={{
-                    transform: `translateX(${Math.min(scrollY * 0.5, 190)}px)`,
-                    opacity: Math.max(0.8, 1 - scrollY * 0.0003)
-                  } as React.CSSProperties}
+                  className="relative"
                 >
                   <Image
                     src={siteData.images.heroTaxi}
@@ -188,6 +178,7 @@ export default function AnimatedHero() {
                     priority
                     sizes="(max-width: 768px) 80px, 280px"
                     className="relative z-10 w-38 lg:w-[280px] h-auto drop-shadow-2xl"
+                    style={{ width: "auto", height: "auto" }}
                   />
                 </div>
               </div>

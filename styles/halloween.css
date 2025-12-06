@@ -223,11 +223,15 @@
     0 0 20px var(--halloween-glow);
 }
 
-/* Mobile Optimizations */
+/* Mobile Optimizations - Disable animations for better performance */
 @media (max-width: 768px) {
   .halloween-top-banner {
     font-size: 12px;
     padding: 6px 12px;
+  }
+  
+  .halloween-top-banner::before {
+    animation: none !important;
   }
   
   .halloween-spider-web {
@@ -239,7 +243,15 @@
   
   .halloween-floating-bat,
   .halloween-floating-leaf {
-    font-size: 12px;
+    display: none !important; /* Hide floating elements on mobile */
+  }
+  
+  .halloween-cta-glow {
+    animation: none !important;
+  }
+  
+  .halloween-pumpkin {
+    animation: none !important;
   }
 }
 
