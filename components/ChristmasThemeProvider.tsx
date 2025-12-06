@@ -69,6 +69,7 @@ export function ChristmasThemeProvider({ children }: ChristmasThemeProviderProps
     window.addEventListener('popstate', handleRouteChange)
     
     // Poll for route changes (Next.js App Router doesn't have a built-in event)
+    // Increased interval to reduce performance impact on mobile
     const intervalId = setInterval(() => {
       const currentPath = window.location.pathname
       const hasTheme = document.body.classList.contains('christmas-theme')
@@ -78,7 +79,7 @@ export function ChristmasThemeProvider({ children }: ChristmasThemeProviderProps
       } else if (currentPath !== '/' && hasTheme) {
         document.body.classList.remove('christmas-theme')
       }
-    }, 100)
+    }, 1000) // Increased from 100ms to 1000ms for better mobile performance
 
     // Cleanup on unmount
     return () => {

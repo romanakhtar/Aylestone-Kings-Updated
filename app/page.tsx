@@ -23,9 +23,13 @@ export default function Home() {
   useEffect(() => {
     if (!isAutoPlaying) return;
     
+    // Check if mobile and use longer interval for better performance
+    const isMobile = window.innerWidth <= 768;
+    const intervalTime = isMobile ? 8000 : 5000; // 8s on mobile, 5s on desktop
+    
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 5000);
+    }, intervalTime);
 
     return () => clearInterval(interval);
   }, [isAutoPlaying, totalSlides]);
@@ -667,7 +671,7 @@ export default function Home() {
             {/* Carousel Track */}
             <div className="overflow-hidden">
               <div 
-                className="flex transition-transform duration-700 ease-in-out"
+                className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` } as React.CSSProperties}
               >
                 {reviews.map((review, index) => (
