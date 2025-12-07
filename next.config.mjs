@@ -7,6 +7,16 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  
+  // Production optimizations
+  productionBrowserSourceMaps: false, // Disable source maps in production for smaller bundles
+  
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
 
   // Image optimization
   images: {
@@ -21,7 +31,52 @@ const nextConfig = {
   // Optimize bundle
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    // Enable CSS optimization
+    optimizeCss: true,
   },
+  
+  // Turbopack configuration (Next.js 16 default)
+  turbopack: {},
+  
+  // Webpack optimizations for production builds (only used in production, not dev)
+  ...(process.env.NODE_ENV === 'production' && {
+    webpack: (config, { dev, isServer }) => {
+      // Production optimizations only
+      if (!dev && !isServer) {
+        config.optimization = {
+          ...config.optimization,
+          minimize: true,
+          moduleIds: 'deterministic',
+          chunkIds: 'deterministic',
+          // Split chunks for better caching
+          splitChunks: {
+            chunks: 'all',
+            cacheGroups: {
+              default: false,
+              vendors: false,
+              // Vendor chunk
+              vendor: {
+                name: 'vendor',
+                chunks: 'all',
+                test: /node_modules/,
+                priority: 20,
+              },
+              // Common chunk
+              common: {
+                name: 'common',
+                minChunks: 2,
+                chunks: 'all',
+                priority: 10,
+                reuseExistingChunk: true,
+                enforce: true,
+              },
+            },
+          },
+        };
+      }
+      return config;
+    },
+  }),
 
   // Headers for caching and security
   async headers() {

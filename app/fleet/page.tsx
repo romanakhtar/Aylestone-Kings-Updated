@@ -31,7 +31,7 @@ export default function FleetPage() {
 
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
-                  src="/premium-comfort.jpg" 
+                  src="/premium-comfort.webp" 
                   alt="Premium luxury taxi vehicle from Aylestone Kings fleet - modern, comfortable transport service in Leicester" 
                   fill 
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
@@ -298,11 +298,12 @@ export default function FleetPage() {
               <div className="relative order-1 md:order-2 mb-8 md:mb-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-2xl"></div>
                 <Image 
-                  src="/verstile-spacious.jpg" 
+                  src="/verstile-spacious.webp" 
                   alt="Versatile and spacious MPV taxi vehicle from Aylestone Kings - perfect for airport transfers, business meetings, and family outings in Leicester" 
                   width={600}
                   height={400}
                   className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
+                  style={{ width: "auto", height: "auto" }}
                 />
               </div>
             </div>
@@ -316,11 +317,12 @@ export default function FleetPage() {
               <div className="relative order-1 md:order-2 mb-8 md:mb-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 to-blue-400/10 rounded-2xl"></div>
                 <Image 
-                  src="/business-leisure.jpg" 
+                  src="/business-leisure.webp" 
                   alt="Executive luxury taxi service from Aylestone Kings - premium business and leisure transport in Leicester with advanced technology and comfort" 
                   width={600}
                   height={400}
                   className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
+                  style={{ width: "auto", height: "auto" }}
                 />
               </div>
               <div className="order-2 md:order-1">

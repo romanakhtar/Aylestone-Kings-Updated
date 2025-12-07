@@ -115,7 +115,8 @@ export default function AboutPage() {
                 height={400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
-                loading="lazy"
+                style={{ width: "auto", height: "auto" }}
+                priority
               />
             </div>
           </div>

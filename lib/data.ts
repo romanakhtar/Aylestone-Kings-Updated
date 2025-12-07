@@ -52,7 +52,7 @@ export const siteData = {
     appStore: "/apple-app-store-download-button-black.png",
 
     // Homepage Images
-    businessmanInCar: "/black-car.jpg",
+    businessmanInCar: "/black-car.webp",
     appScreenBooking: "/app-screen-booking.png",
     appScreenTracking: "/app-screen-tracking.png",
     appScreenHistory: "/app-screen-history.png",
@@ -60,7 +60,7 @@ export const siteData = {
     // Fleet Images
     fleetHero: "/premium-car-hero.jpg",
     estateCar: "/Estate vehicle.png",
-    saloonCar: "/black-car.jpg",
+    saloonCar: "/black-car.webp",
     executiveCar: "/Executive.jpg",
     mpvCar: "/mpv-vehicle.jpg",
     wheelchairCar: "/placeholder.jpg",
@@ -73,7 +73,7 @@ export const siteData = {
     taxiBridgeBackground: "/taxi-bridge-background.jpg",
     communitySupport: "/community-support.jpg",
     innovationTech: "/innovation-tech.jpg",
-    trustedTransport: "/trusted transport.jpg",
+    trustedTransport: "/trusted transport.webp",
 
     // About Page Images
     aboutHero: "/about-hero-image.jpg",
@@ -890,7 +890,7 @@ export const siteData = {
         date: "2025-11-26",
         author: "Aylestone Kings Team",
         category: "Drivers",
-        image: "/Driver-blog.png"
+        image: "/Driver-blog.webp"
       },
       {
         id: "why-leicester-locals-trust-aylestone-taxis",
