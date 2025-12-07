@@ -23,7 +23,7 @@
   --christmas-secondary: var(--christmas-coral);
 }
 
-/* Premium Snowfall Effect - Snow Overlay - Only on Homepage - Disabled on mobile */
+/* Premium Snowfall Effect - Snow Overlay - Only on Homepage */
 body.christmas-theme::before {
   content: "";
   position: fixed;
@@ -37,14 +37,6 @@ body.christmas-theme::before {
   display: block;
 }
 
-/* Disable snowfall on mobile for better performance */
-@media (max-width: 768px) {
-  body.christmas-theme::before,
-  body.christmas-theme::after {
-    display: none !important;
-  }
-}
-
 /* Snowfall Animation */
 @keyframes snow-fall {
   from {
@@ -55,7 +47,7 @@ body.christmas-theme::before {
   }
 }
 
-/* Alternative snow layer for depth (optional - using snow2.png) - Only on Homepage - Disabled on mobile */
+/* Alternative snow layer for depth (optional - using snow2.png) - Only on Homepage */
 body.christmas-theme::after {
   content: "";
   position: fixed;
