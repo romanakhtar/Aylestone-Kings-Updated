@@ -225,12 +225,24 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
+        {/* Preconnect to Google Fonts for faster font loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
         {/* Viewport */}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         
         {/* Favicon */}
         <link rel="icon" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
+        
+        {/* Preload LCP hero image for faster initial render */}
+        <link
+          rel="preload"
+          as="image"
+          href="/white-modern-taxi-side.webp"
+          fetchPriority="high"
+        />
         
         {/* Google tag (gtag.js) - Load after page is interactive */}
         <Script
@@ -248,12 +260,12 @@ export default function RootLayout({
           `}
         </Script>
         
-        {/* Google Analytics 4 (GA4) */}
+        {/* Google Analytics 4 (GA4) - Load with lower priority to not block rendering */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-EN43EPXGHR"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics-tag" strategy="afterInteractive">
+        <Script id="google-analytics-tag" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

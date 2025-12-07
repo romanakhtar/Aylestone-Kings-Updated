@@ -45,7 +45,7 @@ export const siteData = {
   // Images
   images: {
     // Hero Section
-    heroTaxi: "/white-modern-taxi-side.png",
+    heroTaxi: "/white-modern-taxi-side.webp",
 
     // App Store Badges
     googlePlay: "/google-play-download-black.png",
