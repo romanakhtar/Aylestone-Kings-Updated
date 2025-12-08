@@ -50,12 +50,12 @@ export default function OurTeamPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-2 hover-lift">
               <Image 
-                src="/leicester-train-station.jpg" 
+                src="/leicester-train-station.webp" 
                 alt="Leicester train station taxi pickup service - Aylestone Kings reliable taxi transfers from Leicester Station to destinations across Leicester" 
                 fill 
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
-                loading="lazy"
+                priority
               />
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function OurTeamPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-1 hover-lift">
               <Image
-                src="/de-montfort-university.jpg"
+                src="/de-montfort-university.webp"
                 alt="De Montfort University taxi service - Aylestone Kings reliable student transport to and from DMU campus in Leicester"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
@@ -138,7 +138,7 @@ export default function OurTeamPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-2 hover-lift">
               <Image 
-                src="/fosse-park.jpg" 
+                src="/fosse-park.webp" 
                 alt="Fosse Park shopping centre taxi service - Aylestone Kings reliable transport to Fosse Park shopping destination in Leicester" 
                 fill 
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
@@ -156,7 +156,7 @@ export default function OurTeamPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-1 hover-lift">
               <Image
-                src="/king-power-stadium.jpg"
+                src="/king-power-stadium.webp"
                 alt="King Power Stadium taxi service - Aylestone Kings reliable matchday transport to Leicester City FC stadium and events"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"

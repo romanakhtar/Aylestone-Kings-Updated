@@ -100,7 +100,7 @@ export default function CompanyPage() {
                 fill 
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
-                loading="lazy"
+                priority
               />
             </div>
           </div>

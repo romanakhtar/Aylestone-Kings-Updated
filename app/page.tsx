@@ -88,7 +88,8 @@ export default function Home() {
                 height={400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
-                loading="lazy"
+                style={{ width: "auto", height: "auto" }}
+                priority
               />
             </div>
           </div>
@@ -181,6 +182,7 @@ export default function Home() {
                 height={400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
+                style={{ width: "auto", height: "auto" }}
                 loading="lazy"
               />
             </div>
@@ -365,12 +367,13 @@ export default function Home() {
             <div className="order-2 lg:order-1 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-2xl"></div>
               <Image
-                src="/business-leisure.jpg"
+                src="/business-leisure.webp"
                 alt="Professional business travel solutions and corporate taxi services by Aylestone Kings for Leicester businesses"
                 width={600}
                 height={400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
+                style={{ width: "auto", height: "auto" }}
                 loading="lazy"
               />
             </div>
@@ -414,7 +417,7 @@ export default function Home() {
                 height={1000}
                 sizes="(max-width: 768px) 100vw, 500px"
                 className="relative z-10 rounded-2xl shadow-2xl"
-                style={{ height: "auto" }}
+                style={{ width: "auto", height: "auto" }}
                 loading="lazy"
               />
             </div>
@@ -455,7 +458,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
-            backgroundImage: "url('/black-car.jpg')",
+            backgroundImage: "url('/black-car.webp')",
             backgroundPosition: "right center",
           }}
           aria-label="Luxury black executive taxi vehicle from Aylestone Kings premium fleet"
@@ -502,13 +505,13 @@ export default function Home() {
             <div className="relative inline-block">
               <div className="absolute inset-0 rounded-2xl blur-xl"></div>
               <Image
-                src="/eco-friendly-taxi-side.png"
+                src="/eco-friendly-taxi-side.webp"
                 alt="Eco-friendly and sustainable taxi vehicle from Aylestone Kings green fleet in Leicester"
                 width={600}
                 height={300}
                 sizes="(max-width: 768px) 100vw, 600px"
                 className="rounded-2xl"
-                style={{ height: "auto" }}
+                style={{ width: "auto", height: "auto" }}
                 loading="lazy"
               />
             </div>
