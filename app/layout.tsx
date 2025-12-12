@@ -16,6 +16,8 @@ const Footer = dynamic(() => import("@/components/footer"))
 
 const FloatingContactButton = dynamic(() => import("@/components/FloatingContactButton"))
 
+const AnalyticsTracker = dynamic(() => import("@/components/AnalyticsTracker"))
+
 const HalloweenTopBanner = dynamic(() => import("@/components/HalloweenTopBanner"))
 
 const HalloweenFloatingElements = dynamic(() => import("@/components/HalloweenFloatingElements"))
@@ -287,6 +289,7 @@ export default function RootLayout({
             </main>
             <Footer />
             <FloatingContactButton />
+            <AnalyticsTracker />
           </ChristmasThemeProvider>
         </HalloweenThemeProvider>
         {/* Schema markup - inline for faster parsing */}
