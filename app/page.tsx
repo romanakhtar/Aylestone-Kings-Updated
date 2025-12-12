@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image"
-import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight, Car } from "lucide-react"
+import Link from "next/link"
+import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight, Car, Plane } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
@@ -515,6 +516,70 @@ export default function Home() {
                 loading="lazy"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services Section */}
+      <section className="py-20 bg-[#E4E4E4]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
+              Our Taxi Services in Leicester
+            </h2>
+            <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
+              Professional taxi services for all your transportation needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Link href="/airport-transfers-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30 transition-colors">
+                <Plane className="h-8 w-8 text-[#06A0A6]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6] transition-colors">
+                24/7 Airport Transfers in Leicester
+              </h3>
+              <p className="text-[#2E3C44] mb-6">
+                Reliable airport transfers to all major UK airports. Fixed prices, flight monitoring, and professional service.
+              </p>
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-all">
+                Learn More
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link href="/local-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30 transition-colors">
+                <MapPin className="h-8 w-8 text-[#06A0A6]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6] transition-colors">
+                Local Taxi Services Around Aylestone
+              </h3>
+              <p className="text-[#2E3C44] mb-6">
+                Fast, affordable local rides throughout Leicester. Immediate pick-up, competitive prices, and reliable service.
+              </p>
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-all">
+                Learn More
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link href="/long-distance-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30 transition-colors">
+                <Car className="h-8 w-8 text-[#06A0A6]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6] transition-colors">
+                Long-Distance & Corporate Taxi Service
+              </h3>
+              <p className="text-[#2E3C44] mb-6">
+                Comfortable long-distance travel and corporate accounts. Professional transport for business and longer journeys.
+              </p>
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-all">
+                Learn More
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>
