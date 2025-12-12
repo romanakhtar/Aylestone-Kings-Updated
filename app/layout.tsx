@@ -41,9 +41,9 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: "Driving Leicester Forward | Aylestone Kings",
-  description: "Leicester's #1 taxi service since 1995. Taxi Leicester, Leicester Airport Taxi, Taxi Near Me Leicester, Cheap Taxi Leicester. 24/7 service, licensed drivers, fixed-price airport transfers. Book your Leicester taxi online or call 0116 2338888.",
-  keywords: "Taxi Leicester, Taxi Near Me Leicester, Leicester Airport Taxi, Leicester to East Midlands Airport Taxi, Leicester Taxi Company, Cheap Taxi Leicester, taxi in Leicester, Leicester taxi service, airport taxi Leicester, taxi company Leicester",
+  title: "Aylestone Taxis | 24/7 Leicester Airport & Local Taxi Service",
+  description: "Reliable 24/7 taxi service in Leicester. Airport transfers, school runs & local trips. Book online or call now for fast pickup.",
+  keywords: "Taxi Leicester, Taxi Near Me Leicester, Leicester Airport Taxi, Leicester to East Midlands Airport Taxi, Leicester Taxi Company, Cheap Taxi Leicester, taxi in Leicester, Leicester taxi service, airport taxi Leicester, taxi company Leicester, Aylestone Taxis",
   generator: "Aylestone Kings",
   authors: [{ name: "Aylestone Kings" }],
   openGraph: {
