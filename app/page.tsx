@@ -412,7 +412,7 @@ export default function Home() {
             <div className="relative">
               <div className="absolute inset-0 rounded-2xl"></div>
               <Image
-                src="/app-screen-tracking.jpg"
+                src="/app-screen-tracking.webp"
                 alt="Aylestone Kings mobile app screenshot showing real-time taxi tracking and booking features for Leicester customers"
                 width={500}
                 height={1000}
