@@ -409,22 +409,22 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left - App Screenshots */}
-            <div className="relative">
+            <div className="relative order-2 lg:order-1 flex justify-center lg:justify-start">
               <div className="absolute inset-0 rounded-2xl"></div>
               <Image
                 src="/app-screen-tracking.webp"
                 alt="Aylestone Kings mobile app screenshot showing real-time taxi tracking and booking features for Leicester customers"
-                width={500}
-                height={1000}
-                sizes="(max-width: 768px) 100vw, 500px"
-                className="relative z-10 rounded-2xl shadow-2xl"
+                width={600}
+                height={400}
+                sizes="(max-width: 768px) 100vw, 600px"
+                className="relative z-10 w-full max-w-md lg:max-w-none rounded-2xl shadow-2xl"
                 style={{ width: "auto", height: "auto" }}
                 loading="lazy"
               />
             </div>
 
             {/* Right - Content */}
-            <div>
+            <div className="order-1 lg:order-2">
               <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
                 Quick Booking
               </div>
