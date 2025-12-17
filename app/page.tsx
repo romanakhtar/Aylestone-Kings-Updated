@@ -416,8 +416,8 @@ export default function Home() {
                 alt="Aylestone Kings mobile app screenshot showing real-time taxi tracking and booking features for Leicester customers"
                 width={600}
                 height={400}
-                sizes="(max-width: 768px) 100vw, 600px"
-                className="relative z-10 w-full max-w-md lg:max-w-none rounded-2xl shadow-2xl"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                className="relative z-10 w-full h-auto rounded-2xl shadow-2xl"
                 style={{ width: "auto", height: "auto" }}
                 loading="lazy"
               />
