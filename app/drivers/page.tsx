@@ -426,6 +426,13 @@ export default function JoinDriverPage() {
       const responseData = await response.json().catch(() => null)
       
       if (response.ok && responseData?.success) {
+        // Track successful driver form submission
+        if (typeof window !== 'undefined' && window.dataLayer) {
+          window.dataLayer.push({
+            event: 'lead_driver_form_submit',
+            lead_type: 'driver_form'
+          })
+        }
         // Reset form using stored reference
         if (form) {
           form.reset()

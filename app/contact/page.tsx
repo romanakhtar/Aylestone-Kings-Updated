@@ -14,11 +14,24 @@ import {
 } from "lucide-react";
 import { contactInfo } from "@/lib/data";
 import { useForm, ValidationError } from "@formspree/react";
+import { useEffect, useRef } from "react";
 
 // Note: Metadata cannot be exported from client components
 // This page's metadata should be handled in a layout or parent component
 export default function ContactPage() {
  const [state, handleSubmit] = useForm("myzdazng");
+ const hasTracked = useRef(false);
+
+ // Track successful form submission (only once)
+ useEffect(() => {
+   if (state.succeeded && !hasTracked.current && typeof window !== 'undefined' && window.dataLayer) {
+     hasTracked.current = true;
+     window.dataLayer.push({
+       event: 'lead_contact_form_submit',
+       lead_type: 'contact_form'
+     })
+   }
+ }, [state.succeeded]);
 
  if (state.succeeded) {
  return (

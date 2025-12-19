@@ -13,6 +13,29 @@ declare global {
       targetId: string | Date,
       config?: Record<string, any>
     ) => void
+    dataLayer?: Array<any>
+  }
+}
+
+/**
+ * Safely initialize dataLayer and push events to GTM
+ * @param eventData - The event data object to push to dataLayer
+ */
+export function pushToDataLayer(eventData: Record<string, any>): void {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  // Initialize dataLayer if it doesn't exist
+  if (!window.dataLayer) {
+    window.dataLayer = []
+  }
+
+  // Push event to dataLayer
+  try {
+    window.dataLayer.push(eventData)
+  } catch (error) {
+    console.error('Error pushing to dataLayer:', error)
   }
 }
 

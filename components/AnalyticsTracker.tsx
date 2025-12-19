@@ -39,12 +39,16 @@ export default function AnalyticsTracker() {
       return
     }
 
+    // Set to track elements that have been processed in the current event cycle
+    const trackedInCycle = new WeakSet<HTMLElement>()
+
     // Track button clicks using event delegation
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement
       
       // Find the closest button or anchor element (handles nested elements like icons inside buttons)
       let button: HTMLElement | null = null
+      let anchor: HTMLElement | null = null
       
       // Check for button elements
       if (target.tagName === 'BUTTON' || target.closest('button')) {
@@ -52,7 +56,7 @@ export default function AnalyticsTracker() {
       }
       // Check for anchor tags that act as buttons (call links, WhatsApp links, etc.)
       else if (target.tagName === 'A' || target.closest('a')) {
-        const anchor = target.closest('a') || (target.tagName === 'A' ? target : null)
+        anchor = target.closest('a') || (target.tagName === 'A' ? target : null)
         if (anchor) {
           const href = anchor.getAttribute('href') || ''
           // Track anchor tags that are buttons or have common button-like hrefs
@@ -66,6 +70,36 @@ export default function AnalyticsTracker() {
             anchor.classList.contains('btn')
           ) {
             button = anchor
+          }
+        }
+      }
+
+      // Track WhatsApp and tel: links with dataLayer (only if not already tracked by onClick handler)
+      // Skip if element has been marked as tracked (by onClick handlers) or already tracked in this cycle
+      if (anchor && !trackedInCycle.has(anchor) && !anchor.getAttribute('data-gtm-tracked')) {
+        const href = anchor.getAttribute('href') || ''
+        
+        // Track WhatsApp clicks
+        if (href.includes('wa.me') || href.includes('whatsapp.com')) {
+          if (typeof window !== 'undefined' && window.dataLayer) {
+            trackedInCycle.add(anchor)
+            anchor.setAttribute('data-gtm-tracked', 'true')
+            window.dataLayer.push({
+              event: 'lead_whatsapp_click',
+              lead_type: 'whatsapp'
+            })
+          }
+        }
+        
+        // Track tel: clicks
+        if (href.startsWith('tel:')) {
+          if (typeof window !== 'undefined' && window.dataLayer) {
+            trackedInCycle.add(anchor)
+            anchor.setAttribute('data-gtm-tracked', 'true')
+            window.dataLayer.push({
+              event: 'lead_call_click',
+              lead_type: 'call'
+            })
           }
         }
       }

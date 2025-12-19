@@ -30,10 +30,25 @@ function Navigation() {
   }
 
   const handleBookOnline = () => {
+    // Track booking click event
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'lead_booking_click',
+        lead_type: 'booking',
+        platform: 'icabbi'
+      })
+    }
     window.open(contactInfo.booking.online, "_blank")
   }
 
   const handleCallToBook = () => {
+    // Track call click event
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'lead_call_click',
+        lead_type: 'call'
+      })
+    }
     window.open(`tel:${contactInfo.booking.phone}`, "_self")
   }
 
