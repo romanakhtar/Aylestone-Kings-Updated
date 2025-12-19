@@ -234,6 +234,9 @@ export default function RootLayout({
         {/* Viewport */}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="2Oa-KPBkU1bFahLJg39LPCLSYeH1SxCpA_eP9s1J09M" />
+        
         {/* Favicon */}
         <link rel="icon" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
