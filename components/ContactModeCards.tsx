@@ -90,10 +90,31 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       <div className="space-y-3 lg:space-y-4">
         {contactModes.map((mode, index) => {
           const IconComponent = mode.icon
+          const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+            // Mark element as tracked to prevent double tracking
+            const target = e.currentTarget
+            target.setAttribute('data-gtm-tracked', 'true')
+            
+            // Track WhatsApp clicks
+            if (mode.name === 'WhatsApp' && typeof window !== 'undefined' && window.dataLayer) {
+              window.dataLayer.push({
+                event: 'lead_whatsapp_click',
+                lead_type: 'whatsapp'
+              })
+            }
+            // Track tel: (Landline) clicks
+            if (mode.name === 'Landline' && typeof window !== 'undefined' && window.dataLayer) {
+              window.dataLayer.push({
+                event: 'lead_call_click',
+                lead_type: 'call'
+              })
+            }
+          }
           return (
             <a
               key={mode.name}
               href={mode.href}
+              onClick={handleClick}
               target={mode.name === 'Book Online' || mode.name === 'Email' || mode.name === 'Become a Driver' ? '_self' : '_blank'}
               rel={mode.name === 'Book Online' || mode.name === 'Email' || mode.name === 'Become a Driver' ? '' : 'noopener noreferrer'}
               className={`${mode.bgColor} ${mode.hoverBgColor} text-white px-3 sm:px-4 lg:px-4 py-3 lg:py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 lg:gap-3 shadow-lg hover:shadow-2xl transform hover:scale-105 group hover:-translate-y-1 border border-white/20 relative overflow-hidden w-full`}

@@ -45,6 +45,14 @@ export default function AnimatedHero() {
   }, [])
 
   const handleBookNow = () => {
+    // Track booking click event
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'lead_booking_click',
+        lead_type: 'booking',
+        platform: 'icabbi'
+      })
+    }
     window.open(contactInfo.booking.online, "_blank")
   }
 
