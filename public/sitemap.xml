@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
   <url>
     <loc>https://www.aylestone-taxis.co.uk/</loc>
     <lastmod>2025-01-15</lastmod>
@@ -51,7 +52,28 @@
     <changefreq>weekly</changefreq>
   </url>
 
-  <!-- Main Pages -->
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/airport-transfers-leicester</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/local-taxi-leicester</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/long-distance-taxi-leicester</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Main Navigation Pages -->
   <url>
     <loc>https://www.aylestone-taxis.co.uk/about</loc>
     <lastmod>2025-01-15</lastmod>
@@ -67,13 +89,6 @@
   </url>
 
   <url>
-    <loc>https://www.aylestone-taxis.co.uk/travel</loc>
-    <lastmod>2025-01-15</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
     <loc>https://www.aylestone-taxis.co.uk/contact</loc>
     <lastmod>2025-01-15</lastmod>
     <priority>0.8</priority>
@@ -81,14 +96,14 @@
   </url>
 
   <url>
-    <loc>https://www.aylestone-taxis.co.uk/fleet</loc>
+    <loc>https://www.aylestone-taxis.co.uk/drivers</loc>
     <lastmod>2025-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://www.aylestone-taxis.co.uk/company</loc>
+    <loc>https://www.aylestone-taxis.co.uk/travel</loc>
     <lastmod>2025-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
@@ -101,7 +116,21 @@
     <changefreq>weekly</changefreq>
   </url>
 
-  <!-- Airport Pages -->
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/company</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/fleet</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Airport Pricing Pages -->
   <url>
     <loc>https://www.aylestone-taxis.co.uk/pricing/airports/East-Midlands</loc>
     <lastmod>2025-01-15</lastmod>
@@ -148,6 +177,664 @@
     <loc>https://www.aylestone-taxis.co.uk/pricing/airports/Manchester</loc>
     <lastmod>2025-01-15</lastmod>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/blog/christmas-travel-tips-leicester</loc>
+    <lastmod>2025-12-03</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/blog/black-friday-driver-deal-10-percent-commission</loc>
+    <lastmod>2025-11-26</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/blog/why-leicester-locals-trust-aylestone-taxis</loc>
+    <lastmod>2025-11-04</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/blog/reliable-airport-transfers-from-leicester</loc>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/blog/explore-leicester-with-aylestone-taxis</loc>
+    <lastmod>2025-11-05</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/blog/best-taxi-service-leicester-airport-transfers</loc>
+    <lastmod>2025-12-10</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/blog/how-to-book-taxi-leicester-quickly</loc>
+    <lastmod>2025-12-11</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/blog/local-taxi-service-vs-ride-sharing-apps-leicester</loc>
+    <lastmod>2025-12-12</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/blog/top-tips-smooth-airport-pickup-leicester</loc>
+    <lastmod>2025-12-13</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/blog/affordable-school-run-taxi-services-leicester</loc>
+    <lastmod>2025-12-14</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Area Pages - Leicester Areas -->
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/aylestone</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/eyres-monsell</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/glen-parva</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/south-wigston</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/knighton</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/clarendon-park</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/stoneygate</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/oadby</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/wigston</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/leicester-city-centre</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/fosse-park</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/braunstone</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/braunstone-town</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/evington</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/humberstone</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/belgrave</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/highfields</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/westcotes</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/thurnby-lodge</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/rushey-mead</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/beaumont-leys</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/hamilton</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/syston</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/wigston-fields</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/thurmaston</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/birstall</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Surrounding Towns -->
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/blaby</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/narborough</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/enderby</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/whetstone</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/countesthorpe</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/broughton-astley</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/cosby</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/kibworth</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/market-harborough</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/lutterworth</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/hinckley</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/coalville</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/melton-mowbray</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/groby</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Destination Links - Hospitals, Universities, Stations, etc. -->
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/leicester-royal-infirmary</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/glenfield-hospital</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/leicester-general-hospital</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/spire-leicester-hospital</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/nuffield-health-leicester-hospital</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/university-of-leicester</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/de-montfort-university</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/leicester-college</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/leicester-railway-station</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/south-wigston-station</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/narborough-station</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/st-margarets-bus-station</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/king-power-stadium</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/welford-road-stadium</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/morningside-arena</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/leicester-racecourse</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/leicester-market</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/meridian-business-park</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/grove-park</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/jame-mosque-leicester</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/masjid-umar</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/shree-hindu-temple-leicester</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/guru-nanak-gurdwara-leicester</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/asda-fosse-park</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/sainsburys-grove-triangle</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/tesco-narborough-road</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/aldi-aylestone-road</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/lidl-beaumont-leys</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/morrisons-freemens-common</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/iceland-city-centre</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/farmfoods-st-matthews</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/m-and-s-foodhall-city-centre</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/waitrose-oadby</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Priority Areas - High Priority Attractions -->
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/national-space-centre</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/highcross-leicester</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/curve-theatre</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Priority Areas - Medium Priority -->
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/king-richard-iii-visitor-centre</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/leicester-cathedral</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/de-montfort-hall</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Priority Areas - Optional Priority -->
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/haymarket-shopping-centre</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.65</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/jewry-wall-museum</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.65</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/new-walk-museum</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.65</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.aylestone-taxis.co.uk/taxis-in/athena-city-rooms</loc>
+    <lastmod>2025-01-15</lastmod>
+    <priority>0.65</priority>
     <changefreq>monthly</changefreq>
   </url>
 
