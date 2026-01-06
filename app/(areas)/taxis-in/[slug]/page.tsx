@@ -54,16 +54,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     ? `Reliable Leicester taxi service to ${areaName}. Book your taxi to ${areaName} with Aylestone Kings. Fixed fares, licensed drivers, 24/7 service, and professional transport from Leicester.`
     : `Book reliable taxis in ${areaName}, Leicester with Aylestone Kings. 24/7 service, professional drivers, airport transfers, and local journeys throughout Leicester. Licensed, insured, and trusted Leicester taxi service.`
   
+  const baseUrl = 'https://aylestone-taxis.co.uk'
+  const canonicalUrl = `${baseUrl}/taxis-in/${slug}`
+  
   return {
     title,
     description,
     alternates: {
-      canonical: `/taxis-in/${slug}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
       title,
       description,
-      url: `/taxis-in/${slug}`,
+      url: canonicalUrl,
       type: 'article',
       siteName: companyInfo.name,
     },
