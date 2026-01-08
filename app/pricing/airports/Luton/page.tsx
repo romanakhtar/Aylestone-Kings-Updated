@@ -3,7 +3,7 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Luton Airport Taxi from Leicester | Aylestone Taxis",
+  title: "Luton Airport Taxi from Leicester | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
   description: "Professional Leicester taxi service to Luton Airport (LTN). Fixed rates from £120. 24/7 transfers, licensed drivers, and reliable service. Book your Leicester to Luton airport taxi today.",
 }
 

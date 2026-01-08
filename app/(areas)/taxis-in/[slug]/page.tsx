@@ -41,18 +41,18 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const area = getAreaBySlug(slug)
-  const areaName = area?.name.replace(/^Taxis in\s+/i, "") ?? "Area"
+  const areaName = area?.name.replace(/^Taxis in\s+/i, "").replace(/^Taxi to\s+/i, "") ?? "Area"
   const isDestination = (footerData as any).destinationLinks?.some((d: any) => slugFromHref(d.href) === slug) ||
     (footerData as any).priorityAreas?.opPriority?.some((d: any) => slugFromHref(d.href) === slug) ||
     (footerData as any).priorityAreas?.mediumPriority?.some((d: any) => slugFromHref(d.href) === slug) ||
     (footerData as any).priorityAreas?.optionalPriority?.some((d: any) => slugFromHref(d.href) === slug)
   
   const title = isDestination 
-    ? `Taxi to ${areaName} from Leicester | Aylestone Taxis`
-    : `Taxi in ${areaName}, Leicester | Leicester Taxi Service | Aylestone Taxis`
+    ? `Taxi to ${areaName} | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis`
+    : `Taxi in ${areaName} | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis`
   const description = isDestination
-    ? `Reliable Leicester taxi service to ${areaName}. Book your taxi to ${areaName} with Aylestone Kings. Fixed fares, licensed drivers, 24/7 service, and professional transport from Leicester.`
-    : `Book reliable taxis in ${areaName}, Leicester with Aylestone Kings. 24/7 service, professional drivers, airport transfers, and local journeys throughout Leicester. Licensed, insured, and trusted Leicester taxi service.`
+    ? `Book taxi to ${areaName} - local taxi service with fixed fares. Fast booking, 24/7 availability, licensed drivers. Book your taxi to ${areaName} online now or call 0116 2338888.`
+    : `Taxi in ${areaName} - local taxi service available 24/7. Book online now for fast pickups, fixed fares, and professional drivers. Affordable taxi in ${areaName} with airport transfers. Call 0116 2338888 or book instantly.`
   
   const baseUrl = 'https://aylestone-taxis.co.uk'
   const canonicalUrl = `${baseUrl}/taxis-in/${slug}`
@@ -83,7 +83,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const area = getAreaBySlug(slug)
   if (!area) return notFound()
 
-  const areaPlain = area.name.replace(/^Taxis in\s+/i, "")
+  const areaPlain = area.name.replace(/^Taxis in\s+/i, "").replace(/^Taxi to\s+/i, "")
   const isDestination = (footerData as any).destinationLinks?.some((d: any) => slugFromHref(d.href) === slug) ||
     (footerData as any).priorityAreas?.opPriority?.some((d: any) => slugFromHref(d.href) === slug) ||
     (footerData as any).priorityAreas?.mediumPriority?.some((d: any) => slugFromHref(d.href) === slug) ||
@@ -279,8 +279,28 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
               {/* FAQs */}
               <div id="faqs" className="rounded-lg border border-gray-200 p-5">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-3">FAQs about taxis in {areaPlain}</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-3">FAQs about taxi in {areaPlain}</h2>
                 <div className="space-y-4">
+                  <details className="group border border-gray-100 rounded-md p-4">
+                    <summary className="cursor-pointer text-gray-900 font-medium">Where can I find an affordable taxi in {areaPlain}?</summary>
+                    <p className="mt-2 text-gray-700">Aylestone Kings provides an affordable taxi in {areaPlain} with fixed fares and no hidden charges. Book online, by phone, or WhatsApp for competitive rates.</p>
+                  </details>
+                  <details className="group border border-gray-100 rounded-md p-4">
+                    <summary className="cursor-pointer text-gray-900 font-medium">Do you offer airport taxi services from {areaPlain}?</summary>
+                    <p className="mt-2 text-gray-700">Yes. Our airport taxi service covers all major UK airports from {areaPlain}, including Birmingham, East Midlands, Heathrow, and Gatwick with fixed pricing.</p>
+                  </details>
+                  <details className="group border border-gray-100 rounded-md p-4">
+                    <summary className="cursor-pointer text-gray-900 font-medium">How much does an affordable taxi in {areaPlain} cost?</summary>
+                    <p className="mt-2 text-gray-700">Our affordable taxi in {areaPlain} offers competitive rates with upfront quotes. Local journeys start from competitive prices, and airport transfers have fixed fares.</p>
+                  </details>
+                  <details className="group border border-gray-100 rounded-md p-4">
+                    <summary className="cursor-pointer text-gray-900 font-medium">Is your taxi in {areaPlain} available 24/7?</summary>
+                    <p className="mt-2 text-gray-700">Yes. Our taxi in {areaPlain} operates 24/7, including weekends and bank holidays. Fast pickups available throughout Leicester.</p>
+                  </details>
+                  <details className="group border border-gray-100 rounded-md p-4">
+                    <summary className="cursor-pointer text-gray-900 font-medium">Can I pre-book an airport taxi from {areaPlain}?</summary>
+                    <p className="mt-2 text-gray-700">Absolutely. Pre-book your airport taxi from {areaPlain} for peace of mind. We monitor flights and provide meet & greet service on request.</p>
+                  </details>
                   <details className="group border border-gray-100 rounded-md p-4">
                     <summary className="cursor-pointer text-gray-900 font-medium">How much is a taxi from {areaPlain} to Leicester City Centre?</summary>
                     <p className="mt-2 text-gray-700">Fares vary with traffic and pickup point, but we offer fixed, competitive pricing. Get an instant quote and book online.</p>
@@ -299,7 +319,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   </details>
                   <details className="group border border-gray-100 rounded-md p-4">
                     <summary className="cursor-pointer text-gray-900 font-medium">Do you provide child seats on request?</summary>
-                    <p className="mt-2 text-gray-700">Yes. Add a note during booking and we’ll provide appropriate child seating where available.</p>
+                    <p className="mt-2 text-gray-700">Yes. Add a note during booking and we'll provide appropriate child seating where available.</p>
                   </details>
                   <details className="group border border-gray-100 rounded-md p-4">
                     <summary className="cursor-pointer text-gray-900 font-medium">Can I pay by card?</summary>
@@ -373,6 +393,102 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://aylestone-taxis.co.uk/' },
             { '@type': 'ListItem', position: 2, name: 'Areas', item: 'https://aylestone-taxis.co.uk/areas' },
             { '@type': 'ListItem', position: 3, name: `Taxis in ${areaPlain}`, item: `https://aylestone-taxis.co.uk/taxis-in/${slug}` }
+          ]
+        }) }}
+      />
+      <Script id="faq-schema" type="application/ld+json" strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: `Where can I find an affordable taxi in ${areaPlain}?`,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: `Aylestone Kings provides an affordable taxi in ${areaPlain} with fixed fares and no hidden charges. Book online, by phone, or WhatsApp for competitive rates.`
+              }
+            },
+            {
+              '@type': 'Question',
+              name: `Do you offer airport taxi services from ${areaPlain}?`,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: `Yes. Our airport taxi service covers all major UK airports from ${areaPlain}, including Birmingham, East Midlands, Heathrow, and Gatwick with fixed pricing.`
+              }
+            },
+            {
+              '@type': 'Question',
+              name: `How much does an affordable taxi in ${areaPlain} cost?`,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: `Our affordable taxi in ${areaPlain} offers competitive rates with upfront quotes. Local journeys start from competitive prices, and airport transfers have fixed fares.`
+              }
+            },
+            {
+              '@type': 'Question',
+              name: `Is your taxi in ${areaPlain} available 24/7?`,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: `Yes. Our taxi in ${areaPlain} operates 24/7, including weekends and bank holidays. Fast pickups available throughout Leicester.`
+              }
+            },
+            {
+              '@type': 'Question',
+              name: `Can I pre-book an airport taxi from ${areaPlain}?`,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: `Absolutely. Pre-book your airport taxi from ${areaPlain} for peace of mind. We monitor flights and provide meet & greet service on request.`
+              }
+            },
+            {
+              '@type': 'Question',
+              name: `How much is a taxi from ${areaPlain} to Leicester City Centre?`,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: `Fares vary with traffic and pickup point, but we offer fixed, competitive pricing. Get an instant quote and book online.`
+              }
+            },
+            {
+              '@type': 'Question',
+              name: `Do you offer 24/7 pickups in ${areaPlain}?`,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: `Yes. Our service operates day and night, including weekends and bank holidays.`
+              }
+            },
+            {
+              '@type': 'Question',
+              name: `Can I book a return from the airport?`,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: `Absolutely. We monitor your flight and can arrange meet & greet at arrivals. Add your return during booking or contact us.`
+              }
+            },
+            {
+              '@type': 'Question',
+              name: `What vehicle types are available?`,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: `Choose from saloons, estates, MPVs and minibuses for larger groups. All vehicles are clean, comfortable and licensed.`
+              }
+            },
+            {
+              '@type': 'Question',
+              name: `Do you provide child seats on request?`,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: `Yes. Add a note during booking and we'll provide appropriate child seating where available.`
+              }
+            },
+            {
+              '@type': 'Question',
+              name: `Can I pay by card?`,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: `We accept multiple secure payment methods including card and contactless, subject to vehicle availability.`
+              }
+            }
           ]
         }) }}
       />

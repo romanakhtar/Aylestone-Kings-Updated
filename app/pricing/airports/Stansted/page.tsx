@@ -3,7 +3,7 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Stansted Airport Taxi from Leicester | Aylestone Taxis",
+  title: "Stansted Airport Taxi from Leicester | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
   description: "Reliable Leicester taxi service to London Stansted Airport (STN). Fixed rates from £150. 24/7 transfers, licensed drivers, and comfortable vehicles. Book your Leicester to Stansted airport transfer today.",
 }
 

@@ -5,14 +5,14 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Leicester to East Midlands Airport Taxi | Fixed Price Transfers | Aylestone Kings",
+  title: "Leicester to East Midlands Airport Taxi | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
   description: "Leicester to East Midlands Airport Taxi - Fixed price transfers from Leicester to EMA. From £40, 24/7 service, licensed drivers. Book your Leicester to East Midlands Airport Taxi now - call 0116 2338888.",
   keywords: "Leicester to East Midlands Airport Taxi, Leicester to EMA taxi, East Midlands Airport taxi from Leicester, Leicester EMA transfer",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/leicester-to-east-midlands-airport-taxi",
   },
   openGraph: {
-    title: "Leicester to East Midlands Airport Taxi | Fixed Price Transfers | Aylestone Kings",
+    title: "Leicester to East Midlands Airport Taxi | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
     description: "Leicester to East Midlands Airport Taxi - Fixed price transfers from Leicester to EMA. From £40, 24/7 service.",
     url: "https://aylestone-taxis.co.uk/leicester-to-east-midlands-airport-taxi",
   },
