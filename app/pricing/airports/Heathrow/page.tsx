@@ -3,7 +3,7 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Heathrow Airport Taxi from Leicester | Aylestone Taxis",
+  title: "Heathrow Airport Taxi from Leicester | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
   description: "Reliable Leicester taxi service to London Heathrow Airport (LHR). Fixed rates from £150. 24/7 transfers, licensed drivers, and comfortable vehicles. Book your Leicester to Heathrow airport transfer today.",
 }
 

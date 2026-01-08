@@ -4,7 +4,7 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "East Midlands Airport Taxi from Leicester | Aylestone Taxis",
+  title: "East Midlands Airport Taxi from Leicester | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
   description: "Reliable Leicester taxi service to East Midlands Airport (EMA). Fixed rates from £40. 24/7 service, licensed drivers, and comfortable vehicles. Book your Leicester to EMA airport transfer today.",
 }
 

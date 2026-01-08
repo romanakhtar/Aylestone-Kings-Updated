@@ -134,8 +134,8 @@ export const siteData = {
 
     quickBooking: {
       title: "Book Your Taxi Instantly",
-      subtitle: "Available day and night with immediate pick-up in most Leicester areas.",
-      description: "Book by phone, WhatsApp or online. Pre-bookings welcome. Instant confirmations.",
+      subtitle: "Available all year round day and night with immediate pick-up in most Leicester areas.",
+      description: "Book by landline, WhatsApp or online. Pre-bookings welcome. Instant confirmations.",
       features: [
         "SMS/WhatsApp confirmations",
         "Pre-bookings welcome",
@@ -146,29 +146,31 @@ export const siteData = {
 
     executiveFleet: {
       title: "Luxury Transport, Every Time",
-      subtitle: "Travel in style with our premium executive vehicles. Perfect for business travel, special occasions, or clients who demand the very best."
+      subtitle: "Travel in refined comfort with our luxury executive vehicles. Ideal for business journeys, special occasions, or discerning clients who expect nothing less than exceptional service."
     },
 
     sustainability: {
       title: "Driving a Greener Future",
-      subtitle: "We're committed to reducing our environmental footprint. Our eco-friendly fleet and ongoing green initiatives help us deliver a cleaner, more sustainable future for transport in Aylestone."
+      subtitle: "Based in Leicester, we provide reliable, eco-friendly transport services designed to reduce environmental impact. Our modern, low-emission fleet and ongoing sustainability initiatives help create cleaner, greener travel solutions for the Leicester community."
     },
 
     // SEO-focused extended homepage content (rendered near page bottom)
     seoContent: {
       introHeading: "Taxi Leicester - Leicester's Most Trusted Taxi Service",
-      introBody: "Looking for a reliable Taxi Leicester, Taxi Near Me Leicester, or Cheap Taxi Leicester? Aylestone Kings is Leicester's leading Leicester Taxi Company, providing fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide. Whether you need a Taxi Leicester for the airport, commuting to work, travelling to an appointment, or simply need a safe ride home, we are on hand 24/7. Our Leicester Airport Taxi service offers fixed-price transfers to all major UK airports including East Midlands Airport.",
-      mission: "As Leicester's trusted Leicester Taxi Company since 1995, our mission is simple: to deliver the safest, most comfortable, and most reliable Taxi Leicester service, at prices everyone can afford. Whether you're searching for a Taxi Near Me Leicester or a Cheap Taxi Leicester, we provide quality service without compromise.",
-      booking: {
-        heading: "Book Your Taxi Instantly",
-        bullets: [
-          "Available day and night",
-          "Immediate pick-up in most Leicester areas",
-          "SMS/WhatsApp confirmations",
-          "Pre-bookings welcome",
-          "Professional drivers",
-          "Modern fleet"
-        ]
+      introBody: "Looking for a reliable Taxi in Leicester or a Taxi Near Me? Aylestone Kings is a leading Leicester taxi company, offering fast, professional and affordable taxi services across Leicester, Leicestershire and the wider East Midlands. Whether you need a cheap taxi in Leicester for your daily commute, a safe ride home, an appointment, or a reliable Leicester airport taxi, we’re available 24/7. Our fixed-price airport transfers serve all major UK airports, including East Midlands Airport, ensuring a smooth and stress-free journey every time.",
+
+  mission: "As a trusted Leicester taxi company serving the local community since 1995, our mission is to provide safe, comfortable and reliable taxi services across Leicester at competitive prices. Whether you’re searching for a Taxi Leicester, Taxi Near Me Leicester, or a dependable airport transfer, we deliver quality service you can rely on.",
+
+  booking: {
+    heading: "Book Your Leicester Taxi Instantly",
+    bullets: [
+      "24/7 taxi service across Leicester",
+      "Fast pick-ups in Aylestone and surrounding areas",
+      "SMS and WhatsApp booking confirmations",
+      "Advance bookings available",
+      "Fully licensed, professional drivers",
+      "Modern, clean and well-maintained fleet"
+    ]
       },
       whyUs: {
         heading: "Why We Are Leicester’s Favourite Taxi Company",
@@ -239,31 +241,31 @@ export const siteData = {
         heading: "Areas We Cover in Leicester & Leicestershire",
         text: "Leicester City Centre, Oadby, Wigston, Evington, Belgrave, Spinney Hills, Highfields, Clarendon Park, Knighton, Hamilton, Beaumont Leys, Braunstone, Aylestone, Thurmaston, Syston, Birstall, Glenfield, Blaby, Narborough, Enderby, Loughborough, Hinckley, Coalville, Melton Mowbray, Market Harborough and more. If you are anywhere in Leicester — we’ll get to you quickly.",
         links: [
-          { name: "Leicester City Centre", href: "/taxis-in-leicester-city-centre" },
-          { name: "Aylestone", href: "/taxis-in-aylestone" },
-          { name: "Oadby", href: "/taxis-in-oadby" },
-          { name: "Wigston", href: "/taxis-in-wigston" },
-          { name: "Evington", href: "/taxis-in-evington" },
-          { name: "Belgrave", href: "/taxis-in-belgrave" },
-          { name: "Spinney Hills", href: "/taxis-in-spinney-hills" },
-          { name: "Highfields", href: "/taxis-in-highfields" },
-          { name: "Clarendon Park", href: "/taxis-in-clarendon-park" },
-          { name: "Knighton", href: "/taxis-in-knighton" },
-          { name: "Hamilton", href: "/taxis-in-hamilton" },
-          { name: "Beaumont Leys", href: "/taxis-in-beaumont-leys" },
-          { name: "Braunstone", href: "/taxis-in-braunstone" },
-          { name: "Thurmaston", href: "/taxis-in-thurmaston" },
-          { name: "Syston", href: "/taxis-in-syston" },
-          { name: "Birstall", href: "/taxis-in-birstall" },
-          { name: "Glenfield", href: "/taxis-in-glenfield" },
-          { name: "Blaby", href: "/taxis-in-blaby" },
-          { name: "Narborough", href: "/taxis-in-narborough" },
-          { name: "Enderby", href: "/taxis-in-enderby" },
-          { name: "Loughborough", href: "/taxis-in-loughborough" },
-          { name: "Hinckley", href: "/taxis-in-hinckley" },
-          { name: "Coalville", href: "/taxis-in-coalville" },
-          { name: "Melton Mowbray", href: "/taxis-in-melton-mowbray" },
-          { name: "Market Harborough", href: "/taxis-in-market-harborough" }
+          { name: "Leicester City Centre", href: "/taxis-in/leicester-city-centre" },
+          { name: "Aylestone", href: "/taxis-in/aylestone" },
+          { name: "Oadby", href: "/taxis-in/oadby" },
+          { name: "Wigston", href: "/taxis-in/wigston" },
+          { name: "Evington", href: "/taxis-in/evington" },
+          { name: "Belgrave", href: "/taxis-in/belgrave" },
+          { name: "Spinney Hills", href: "/taxis-in/spinney-hills" },
+          { name: "Highfields", href: "/taxis-in/highfields" },
+          { name: "Clarendon Park", href: "/taxis-in/clarendon-park" },
+          { name: "Knighton", href: "/taxis-in/knighton" },
+          { name: "Hamilton", href: "/taxis-in/hamilton" },
+          { name: "Beaumont Leys", href: "/taxis-in/beaumont-leys" },
+          { name: "Braunstone", href: "/taxis-in/braunstone" },
+          { name: "Thurmaston", href: "/taxis-in/thurmaston" },
+          { name: "Syston", href: "/taxis-in/syston" },
+          { name: "Birstall", href: "/taxis-in/birstall" },
+          { name: "Glenfield", href: "/taxis-in/glenfield" },
+          { name: "Blaby", href: "/taxis-in/blaby" },
+          { name: "Narborough", href: "/taxis-in/narborough" },
+          { name: "Enderby", href: "/taxis-in/enderby" },
+          { name: "Loughborough", href: "/taxis-in/loughborough" },
+          { name: "Hinckley", href: "/taxis-in/hinckley" },
+          { name: "Coalville", href: "/taxis-in/coalville" },
+          { name: "Melton Mowbray", href: "/taxis-in/melton-mowbray" },
+          { name: "Market Harborough", href: "/taxis-in/market-harborough" }
         ]
       },
       fleet: {
@@ -622,65 +624,65 @@ export const siteData = {
       {
         title: "Leicester Areas",
         items: [
-          { name: "Taxis in Aylestone", href: "/taxis-in-aylestone" },
-          { name: "Taxis in Eyres Monsell", href: "/taxis-in-eyres-monsell" },
-          { name: "Taxis in Glen Parva", href: "/taxis-in-glen-parva" },
-          { name: "Taxis in South Wigston", href: "/taxis-in-south-wigston" },
-          { name: "Taxis in Knighton", href: "/taxis-in-knighton" },
-          { name: "Taxis in Clarendon Park", href: "/taxis-in-clarendon-park" },
-          { name: "Taxis in Stoneygate", href: "/taxis-in-stoneygate" },
-          { name: "Taxis in Oadby", href: "/taxis-in-oadby" },
-          { name: "Taxis in Wigston", href: "/taxis-in-wigston" },
-          { name: "Taxis in Leicester City Centre", href: "/taxis-in-leicester-city-centre" },
-          { name: "Taxis in Fosse Park", href: "/taxis-in-fosse-park" },
-          { name: "Taxis in Braunstone", href: "/taxis-in-braunstone" },
-          { name: "Taxis in Braunstone Town", href: "/taxis-in-braunstone-town" },
-          { name: "Taxis in Evington", href: "/taxis-in-evington" },
-          { name: "Taxis in Humberstone", href: "/taxis-in-humberstone" },
-          { name: "Taxis in Belgrave", href: "/taxis-in-belgrave" },
-          { name: "Taxis in Highfields", href: "/taxis-in-highfields" },
-          { name: "Taxis in Westcotes", href: "/taxis-in-westcotes" },
-          { name: "Taxis in Thurnby Lodge", href: "/taxis-in-thurnby-lodge" },
-          { name: "Taxis in Rushey Mead", href: "/taxis-in-rushey-mead" },
-          { name: "Taxis in Beaumont Leys", href: "/taxis-in-beaumont-leys" },
-          { name: "Taxis in Hamilton", href: "/taxis-in-hamilton" },
-          { name: "Taxis in Syston", href: "/taxis-in-syston" },
-          { name: "Taxis in Wigston Fields", href: "/taxis-in-wigston-fields" },
-          { name: "Taxis in Thurmaston", href: "/taxis-in-thurmaston" },
-          { name: "Taxis in Birstall", href: "/taxis-in-birstall" }
+          { name: "Taxis in Aylestone", href: "/taxis-in/aylestone" },
+          { name: "Taxis in Eyres Monsell", href: "/taxis-in/eyres-monsell" },
+          { name: "Taxis in Glen Parva", href: "/taxis-in/glen-parva" },
+          { name: "Taxis in South Wigston", href: "/taxis-in/south-wigston" },
+          { name: "Taxis in Knighton", href: "/taxis-in/knighton" },
+          { name: "Taxis in Clarendon Park", href: "/taxis-in/clarendon-park" },
+          { name: "Taxis in Stoneygate", href: "/taxis-in/stoneygate" },
+          { name: "Taxis in Oadby", href: "/taxis-in/oadby" },
+          { name: "Taxis in Wigston", href: "/taxis-in/wigston" },
+          { name: "Taxis in Leicester City Centre", href: "/taxis-in/leicester-city-centre" },
+          { name: "Taxis in Fosse Park", href: "/taxis-in/fosse-park" },
+          { name: "Taxis in Braunstone", href: "/taxis-in/braunstone" },
+          { name: "Taxis in Braunstone Town", href: "/taxis-in/braunstone-town" },
+          { name: "Taxis in Evington", href: "/taxis-in/evington" },
+          { name: "Taxis in Humberstone", href: "/taxis-in/humberstone" },
+          { name: "Taxis in Belgrave", href: "/taxis-in/belgrave" },
+          { name: "Taxis in Highfields", href: "/taxis-in/highfields" },
+          { name: "Taxis in Westcotes", href: "/taxis-in/westcotes" },
+          { name: "Taxis in Thurnby Lodge", href: "/taxis-in/thurnby-lodge" },
+          { name: "Taxis in Rushey Mead", href: "/taxis-in/rushey-mead" },
+          { name: "Taxis in Beaumont Leys", href: "/taxis-in/beaumont-leys" },
+          { name: "Taxis in Hamilton", href: "/taxis-in/hamilton" },
+          { name: "Taxis in Syston", href: "/taxis-in/syston" },
+          { name: "Taxis in Wigston Fields", href: "/taxis-in/wigston-fields" },
+          { name: "Taxis in Thurmaston", href: "/taxis-in/thurmaston" },
+          { name: "Taxis in Birstall", href: "/taxis-in/birstall" }
         ]
       },
       {
         title: "Wider Leicester Districts",
         items: [
-          { name: "Taxis in Oadby", href: "/taxis-in-oadby" },
-          { name: "Taxis in Wigston", href: "/taxis-in-wigston" },
-          { name: "Taxis in South Wigston", href: "/taxis-in-south-wigston" },
-          { name: "Taxis in Braunstone Town", href: "/taxis-in-braunstone-town" },
-          { name: "Taxis in Wigston Fields", href: "/taxis-in-wigston-fields" },
-          { name: "Taxis in Thurmaston", href: "/taxis-in-thurmaston" },
-          { name: "Taxis in Syston", href: "/taxis-in-syston" },
-          { name: "Taxis in Birstall", href: "/taxis-in-birstall" },
-          { name: "Taxis in Groby", href: "/taxis-in-groby" }
+          { name: "Taxis in Oadby", href: "/taxis-in/oadby" },
+          { name: "Taxis in Wigston", href: "/taxis-in/wigston" },
+          { name: "Taxis in South Wigston", href: "/taxis-in/south-wigston" },
+          { name: "Taxis in Braunstone Town", href: "/taxis-in/braunstone-town" },
+          { name: "Taxis in Wigston Fields", href: "/taxis-in/wigston-fields" },
+          { name: "Taxis in Thurmaston", href: "/taxis-in/thurmaston" },
+          { name: "Taxis in Syston", href: "/taxis-in/syston" },
+          { name: "Taxis in Birstall", href: "/taxis-in/birstall" },
+          { name: "Taxis in Groby", href: "/taxis-in/groby" }
         ]
       },
       {
         title: "Surrounding Towns",
         items: [
-          { name: "Taxis in Blaby", href: "/taxis-in-blaby" },
-          { name: "Taxis in Narborough", href: "/taxis-in-narborough" },
-          { name: "Taxis in Enderby", href: "/taxis-in-enderby" },
-          { name: "Taxis in Whetstone", href: "/taxis-in-whetstone" },
-          { name: "Taxis in Countesthorpe", href: "/taxis-in-countesthorpe" },
-          { name: "Taxis in Broughton Astley", href: "/taxis-in-broughton-astley" },
-          { name: "Taxis in Cosby", href: "/taxis-in-cosby" },
-          { name: "Taxis in Kibworth", href: "/taxis-in-kibworth" },
-          { name: "Taxis in Market Harborough", href: "/taxis-in-market-harborough" },
-          { name: "Taxis in Lutterworth", href: "/taxis-in-lutterworth" },
-          { name: "Taxis in Hinckley", href: "/taxis-in-hinckley" },
-          { name: "Taxis in Coalville", href: "/taxis-in-coalville" },
-          { name: "Taxis in Melton Mowbray", href: "/taxis-in-melton-mowbray" },
-          { name: "Taxis in Groby", href: "/taxis-in-groby" }
+          { name: "Taxis in Blaby", href: "/taxis-in/blaby" },
+          { name: "Taxis in Narborough", href: "/taxis-in/narborough" },
+          { name: "Taxis in Enderby", href: "/taxis-in/enderby" },
+          { name: "Taxis in Whetstone", href: "/taxis-in/whetstone" },
+          { name: "Taxis in Countesthorpe", href: "/taxis-in/countesthorpe" },
+          { name: "Taxis in Broughton Astley", href: "/taxis-in/broughton-astley" },
+          { name: "Taxis in Cosby", href: "/taxis-in/cosby" },
+          { name: "Taxis in Kibworth", href: "/taxis-in/kibworth" },
+          { name: "Taxis in Market Harborough", href: "/taxis-in/market-harborough" },
+          { name: "Taxis in Lutterworth", href: "/taxis-in/lutterworth" },
+          { name: "Taxis in Hinckley", href: "/taxis-in/hinckley" },
+          { name: "Taxis in Coalville", href: "/taxis-in/coalville" },
+          { name: "Taxis in Melton Mowbray", href: "/taxis-in/melton-mowbray" },
+          { name: "Taxis in Groby", href: "/taxis-in/groby" }
         ]
       }
     ],
@@ -694,57 +696,57 @@ export const siteData = {
       { name: "Manchester Airport", href: "/pricing/airports/Manchester" }
     ],
     destinationLinks: [
-      { name: "Taxis in Leicester Royal Infirmary", href: "/taxis-in-leicester-royal-infirmary" },
-      { name: "Taxis in Glenfield Hospital", href: "/taxis-in-glenfield-hospital" },
-      { name: "Taxis in Leicester General Hospital", href: "/taxis-in-leicester-general-hospital" },
-      { name: "Taxis in Spire Leicester Hospital", href: "/taxis-in-spire-leicester-hospital" },
-      { name: "Taxis in Nuffield Health Leicester Hospital", href: "/taxis-in-nuffield-health-leicester-hospital" },
-      { name: "Taxis in University of Leicester", href: "/taxis-in-university-of-leicester" },
-      { name: "Taxis in De Montfort University", href: "/taxis-in-de-montfort-university" },
-      { name: "Taxis in Leicester College", href: "/taxis-in-leicester-college" },
-      { name: "Taxis in Leicester Railway Station", href: "/taxis-in-leicester-railway-station" },
-      { name: "Taxis in South Wigston Station", href: "/taxis-in-south-wigston-station" },
-      { name: "Taxis in Narborough Station", href: "/taxis-in-narborough-station" },
-      { name: "Taxis in St Margaret's Bus Station", href: "/taxis-in-st-margarets-bus-station" },
-      { name: "Taxis in King Power Stadium", href: "/taxis-in-king-power-stadium" },
-      { name: "Taxis in Welford Road Stadium", href: "/taxis-in-welford-road-stadium" },
-      { name: "Taxis in Morningside Arena", href: "/taxis-in-morningside-arena" },
-      { name: "Taxis in Leicester Racecourse", href: "/taxis-in-leicester-racecourse" },
-      { name: "Taxis in Leicester Market", href: "/taxis-in-leicester-market" },
-      { name: "Taxis in Meridian Business Park", href: "/taxis-in-meridian-business-park" },
-      { name: "Taxis in Grove Park", href: "/taxis-in-grove-park" },
-      { name: "Taxis in Jame Mosque Leicester", href: "/taxis-in-jame-mosque-leicester" },
-      { name: "Taxis in Masjid Umar", href: "/taxis-in-masjid-umar" },
-      { name: "Taxis in Shree Hindu Temple Leicester", href: "/taxis-in-shree-hindu-temple-leicester" },
-      { name: "Taxis in Guru Nanak Gurdwara Leicester", href: "/taxis-in-guru-nanak-gurdwara-leicester" },
-      { name: "Taxi to Asda Fosse Park", href: "/taxis-in-asda-fosse-park" },
-      { name: "Taxi to Sainsburys Grove Triangle", href: "/taxis-in-sainsburys-grove-triangle" },
-      { name: "Taxi to Tesco Narborough Road", href: "/taxis-in-tesco-narborough-road" },
-      { name: "Taxi to Aldi Aylestone Road", href: "/taxis-in-aldi-aylestone-road" },
-      { name: "Taxi to Lidl Beaumont Leys", href: "/taxis-in-lidl-beaumont-leys" },
-      { name: "Taxi to Morrisons Freemens Common", href: "/taxis-in-morrisons-freemens-common" },
-      { name: "Taxi to Iceland City Centre", href: "/taxis-in-iceland-city-centre" },
-      { name: "Taxi to Farmfoods St Matthews", href: "/taxis-in-farmfoods-st-matthews" },
-      { name: "Taxi to M&S Foodhall City Centre", href: "/taxis-in-m-and-s-foodhall-city-centre" },
-      { name: "Taxi to Waitrose Oadby", href: "/taxis-in-waitrose-oadby" }
+      { name: "Taxis in Leicester Royal Infirmary", href: "/taxis-in/leicester-royal-infirmary" },
+      { name: "Taxis in Glenfield Hospital", href: "/taxis-in/glenfield-hospital" },
+      { name: "Taxis in Leicester General Hospital", href: "/taxis-in/leicester-general-hospital" },
+      { name: "Taxis in Spire Leicester Hospital", href: "/taxis-in/spire-leicester-hospital" },
+      { name: "Taxis in Nuffield Health Leicester Hospital", href: "/taxis-in/nuffield-health-leicester-hospital" },
+      { name: "Taxis in University of Leicester", href: "/taxis-in/university-of-leicester" },
+      { name: "Taxis in De Montfort University", href: "/taxis-in/de-montfort-university" },
+      { name: "Taxis in Leicester College", href: "/taxis-in/leicester-college" },
+      { name: "Taxis in Leicester Railway Station", href: "/taxis-in/leicester-railway-station" },
+      { name: "Taxis in South Wigston Station", href: "/taxis-in/south-wigston-station" },
+      { name: "Taxis in Narborough Station", href: "/taxis-in/narborough-station" },
+      { name: "Taxis in St Margaret's Bus Station", href: "/taxis-in/st-margarets-bus-station" },
+      { name: "Taxis in King Power Stadium", href: "/taxis-in/king-power-stadium" },
+      { name: "Taxis in Welford Road Stadium", href: "/taxis-in/welford-road-stadium" },
+      { name: "Taxis in Morningside Arena", href: "/taxis-in/morningside-arena" },
+      { name: "Taxis in Leicester Racecourse", href: "/taxis-in/leicester-racecourse" },
+      { name: "Taxis in Leicester Market", href: "/taxis-in/leicester-market" },
+      { name: "Taxis in Meridian Business Park", href: "/taxis-in/meridian-business-park" },
+      { name: "Taxis in Grove Park", href: "/taxis-in/grove-park" },
+      { name: "Taxis in Jame Mosque Leicester", href: "/taxis-in/jame-mosque-leicester" },
+      { name: "Taxis in Masjid Umar", href: "/taxis-in/masjid-umar" },
+      { name: "Taxis in Shree Hindu Temple Leicester", href: "/taxis-in/shree-hindu-temple-leicester" },
+      { name: "Taxis in Guru Nanak Gurdwara Leicester", href: "/taxis-in/guru-nanak-gurdwara-leicester" },
+      { name: "Taxi to Asda Fosse Park", href: "/taxis-in/asda-fosse-park" },
+      { name: "Taxi to Sainsburys Grove Triangle", href: "/taxis-in/sainsburys-grove-triangle" },
+      { name: "Taxi to Tesco Narborough Road", href: "/taxis-in/tesco-narborough-road" },
+      { name: "Taxi to Aldi Aylestone Road", href: "/taxis-in/aldi-aylestone-road" },
+      { name: "Taxi to Lidl Beaumont Leys", href: "/taxis-in/lidl-beaumont-leys" },
+      { name: "Taxi to Morrisons Freemens Common", href: "/taxis-in/morrisons-freemens-common" },
+      { name: "Taxi to Iceland City Centre", href: "/taxis-in/iceland-city-centre" },
+      { name: "Taxi to Farmfoods St Matthews", href: "/taxis-in/farmfoods-st-matthews" },
+      { name: "Taxi to M&S Foodhall City Centre", href: "/taxis-in/m-and-s-foodhall-city-centre" },
+      { name: "Taxi to Waitrose Oadby", href: "/taxis-in/waitrose-oadby" }
     ],
     priorityAreas: {
       opPriority: [
         { 
           name: "National Space Centre", 
-          href: "/taxis-in-national-space-centre",
+          href: "/taxis-in/national-space-centre",
           description: "Leicester's #1 attraction with huge search volume",
           icon: "Rocket"
         },
         { 
           name: "Highcross Leicester", 
-          href: "/taxis-in-highcross-leicester",
+          href: "/taxis-in/highcross-leicester",
           description: "Major shopping centre with strong 'taxi to Highcross' demand",
           icon: "ShoppingBag"
         },
         { 
           name: "Curve Theatre", 
-          href: "/taxis-in-curve-theatre",
+          href: "/taxis-in/curve-theatre",
           description: "Events & nightlife, people book taxis late evenings",
           icon: "Theater"
         }
@@ -752,19 +754,19 @@ export const siteData = {
       mediumPriority: [
         { 
           name: "King Richard III Visitor Centre", 
-          href: "/taxis-in-king-richard-iii-visitor-centre",
+          href: "/taxis-in/king-richard-iii-visitor-centre",
           description: "Big tourist pull, city centre location",
           icon: "Crown"
         },
         { 
           name: "Leicester Cathedral", 
-          href: "/taxis-in-leicester-cathedral",
+          href: "/taxis-in/leicester-cathedral",
           description: "Historic site and Richard III tomb",
           icon: "Church"
         },
         { 
           name: "De Montfort Hall", 
-          href: "/taxis-in-de-montfort-hall",
+          href: "/taxis-in/de-montfort-hall",
           description: "Concerts, graduations, large events",
           icon: "Music"
         }
@@ -772,25 +774,25 @@ export const siteData = {
       optionalPriority: [
         { 
           name: "Haymarket Shopping Centre", 
-          href: "/taxis-in-haymarket-shopping-centre",
+          href: "/taxis-in/haymarket-shopping-centre",
           description: "Secondary to Highcross",
           icon: "ShoppingCart"
         },
         { 
           name: "Jewry Wall Museum", 
-          href: "/taxis-in-jewry-wall-museum",
+          href: "/taxis-in/jewry-wall-museum",
           description: "Smaller attraction searches",
           icon: "Calendar"
         },
         { 
           name: "New Walk Museum", 
-          href: "/taxis-in-new-walk-museum",
+          href: "/taxis-in/new-walk-museum",
           description: "Cultural attraction",
           icon: "Calendar"
         },
         { 
           name: "Athena / City Rooms", 
-          href: "/taxis-in-athena-city-rooms",
+          href: "/taxis-in/athena-city-rooms",
           description: "Event venues, good for weddings/conferences",
           icon: "Calendar"
         }
