@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Main Navigation Pages
   urls.push(createUrl('/about', 0.8, 'monthly'))
+  urls.push(createUrl('/services', 0.8, 'monthly'))
   urls.push(createUrl('/pricing', 0.8, 'monthly'))
   urls.push(createUrl('/contact', 0.8, 'monthly'))
   urls.push(createUrl('/drivers', 0.7, 'monthly'))
