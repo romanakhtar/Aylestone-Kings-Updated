@@ -142,8 +142,8 @@ function Navigation() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 ease-out overflow-hidden ${
-          isMenuOpen ? 'max-h-139 opacity-100' : 'max-h-0 opacity-0'
+        <div className={`md:hidden transition-all duration-300 ease-out ${
+          isMenuOpen ? 'max-h-[85vh] opacity-100 overflow-y-auto' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <div className="border-t border-slate-200/60 bg-white/98 backdrop-blur-xl">
             <div className="px-4 pt-3 pb-5 space-y-1">
