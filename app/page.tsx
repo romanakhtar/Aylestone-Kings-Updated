@@ -1,12 +1,14 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
+import Script from "next/script"
 import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight, Car, Plane } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
 import { useState, useEffect } from "react"
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 // Dynamically import non-critical component
 const AppDownloadButtons = dynamic(() => import("@/components/AppDownloadButtons"), {
@@ -835,6 +837,139 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Common questions about booking a taxi in Leicester
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="item-1" className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm">
+              <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
+                How do I book a taxi in Leicester?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                Book online in seconds or call our office. You can book instantly or pre-book for later.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2" className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm">
+              <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
+                Are you available 24/7?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                Yes, we operate 24/7 including weekends and bank holidays.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3" className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm">
+              <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
+                Do you offer fixed prices?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                Yes, you'll see the price before confirming your booking.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4" className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm">
+              <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
+                Can I pre-book a taxi in advance?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                Yes, pre-booking is available and recommended during busy times.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm">
+              <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
+                Do you provide airport transfers?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                Yes, we provide fixed-price airport transfers to all major UK airports.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6" className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm">
+              <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
+                Do you have larger vehicles for groups or luggage?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 leading-relaxed">
+                Yes, you can choose the appropriate vehicle type during booking, subject to availability.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      {/* FAQ Schema */}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "How do I book a taxi in Leicester?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Book online in seconds or call our office. You can book instantly or pre-book for later.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are you available 24/7?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we operate 24/7 including weekends and bank holidays.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you offer fixed prices?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, you'll see the price before confirming your booking.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I pre-book a taxi in advance?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, pre-booking is available and recommended during busy times.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you provide airport transfers?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we provide fixed-price airport transfers to all major UK airports.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you have larger vehicles for groups or luggage?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, you can choose the appropriate vehicle type during booking, subject to availability.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Call to Action Section */}
       <section className={`py-20 ${isHalloweenActive ? 'bg-gradient-to-r from-[#FF7B00] to-[#111111]' : 'bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E]'} text-white`}>

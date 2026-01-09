@@ -132,9 +132,12 @@ function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-slate-700 hover:text-[#06A0A6] hover:bg-slate-100 transition-smooth focus-ring"
+            className="md:hidden flex items-center gap-2 px-3 py-2 rounded-lg text-slate-700 hover:text-[#06A0A6] hover:bg-slate-100 transition-smooth focus-ring"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            <span className="text-sm font-medium">{isMenuOpen ? "Close" : "Menu"}</span>
           </button>
         </div>
 

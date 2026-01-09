@@ -19,6 +19,14 @@ export default function AnimatedHero() {
   const [isMobile, setIsMobile] = useState(false)
   const parallaxRef = useRef<HTMLDivElement>(null)
   
+  // Core homepage search-intent messaging (used when not in seasonal modes)
+  const isSeasonal = isHalloweenActive || isChristmasActive
+  const coreFeatures = [
+    "24/7 Leicester taxis",
+    "Fixed affordable fares",
+    "Licensed Leicester taxis",
+  ]
+  
   // Generate fixed positions for snow crystals (generated once, stays fixed)
   const [snowCrystalPositions] = useState(() => {
     const positions = []
@@ -132,38 +140,98 @@ export default function AnimatedHero() {
           <div className={`${isChristmasActive ? 'order-1 lg:order-1' : 'order-1'} max-w-xl`}>
             
             {/* Main Heading */}
-            <h1 className={`text-5xl md:text-6xl font-bold mb-6 leading-tight ${isChristmasActive ? 'text-white' : 'text-[#0F0D3E]'}`}>
-              {isHalloweenActive ? "Driving Leicester Forward 🎃" : isChristmasActive ? "Driving Leicester Forward This Christmas" : siteData.homepage.hero.title}
+            <h1
+              className={`text-5xl md:text-6xl font-bold mb-4 leading-tight ${
+                isChristmasActive ? 'text-white' : 'text-[#0F0D3E]'
+              }`}
+            >
+              {isHalloweenActive
+                ? "Driving Leicester Forward 🎃"
+                : isChristmasActive
+                ? "Leicester Taxi Service This Christmas"
+                : "Reliable Leicester Taxis – Available 24/7"}
             </h1>
 
             {/* Description */}
-            <p className={`text-xl mb-8 leading-relaxed ${isChristmasActive ? 'text-[#E4E4E4]' : 'text-[#2E3C44]'}`}>
-              {siteData.homepage.hero.subtitle}
+            <p
+              className={`text-xl mb-6 leading-relaxed ${
+                isChristmasActive ? 'text-[#E4E4E4]' : 'text-[#2E3C44]'
+              }`}
+            >
+              {isSeasonal
+                ? siteData.homepage.hero.subtitle
+                : "Fixed prices, local drivers, and airport transfers. Book in seconds."}
             </p>
 
             {/* Enhanced Features with Icons */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-              {siteData.homepage.hero.features.map((feature, index) => {
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              {(isSeasonal ? siteData.homepage.hero.features : coreFeatures).map(
+                (feature, index) => {
                 const icons = [Shield, Clock, MapPin]
                 const IconComponent = icons[index % icons.length]
                 return (
-                  <div key={index} className={`flex items-center gap-3 rounded-lg px-3 py-2 border ${isChristmasActive ? 'bg-[#D9B35A]/20 border-[#D9B35A]/30' : 'bg-cyan-500/20 border-cyan-500/30'}`}>
-                    <IconComponent className={`h-4 w-4 ${isChristmasActive ? 'text-[#D9B35A]' : 'text-[#06A0A6]'}`} />
-                    <span className={`font-medium text-sm ${isChristmasActive ? 'text-white' : 'text-[#2E3C44]'}`}>{feature}</span>
+                    <div
+                      key={index}
+                      className={`flex items-center gap-3 rounded-lg px-3 py-2 border ${
+                        isChristmasActive
+                          ? 'bg-[#D9B35A]/20 border-[#D9B35A]/30'
+                          : 'bg-cyan-500/20 border-cyan-500/30'
+                      }`}
+                    >
+                      <IconComponent
+                        className={`h-4 w-4 ${
+                          isChristmasActive ? 'text-[#D9B35A]' : 'text-[#06A0A6]'
+                        }`}
+                      />
+                      <span
+                        className={`font-medium text-sm ${
+                          isChristmasActive ? 'text-white' : 'text-[#2E3C44]'
+                        }`}
+                      >
+                        {feature}
+                      </span>
                   </div>
                 )
-              })}
+                }
+              )}
             </div>
 
-            {/* CTA Button */}
+            {/* Primary Booking CTA */}
             <button 
               onClick={handleBookNow}
-              className={`${isHalloweenActive ? 'halloween-cta-glow text-white' : isChristmasActive ? 'bg-[#D9B35A] hover:bg-[#EF5B6A] text-[#0F0D3E]' : 'bg-[#06A0A6] hover:bg-[#0F0D3E] text-white'} px-8 py-4 rounded-lg font-semibold text-sm flex items-center gap-3 shadow-lg hover:shadow-xl mb-8`}
+              className={`${
+                isHalloweenActive
+                  ? 'halloween-cta-glow text-white'
+                  : isChristmasActive
+                  ? 'bg-[#D9B35A] hover:bg-[#EF5B6A] text-[#0F0D3E]'
+                  : 'bg-[#06A0A6] hover:bg-[#0F0D3E] text-white'
+              } w-full sm:w-auto px-8 py-4 rounded-lg font-semibold text-sm flex items-center justify-center gap-3 shadow-lg hover:shadow-xl mb-4`}
             >
-              {isHalloweenActive ? "Book Your Spook-tacular Ride Now 🎃" : isChristmasActive ? "🎄 Book Your Festive Ride Now 🎄" : "Book Your Ride Now"}
+              {isHalloweenActive
+                ? "Book Your Spook-tacular Ride Now 🎃"
+                : isChristmasActive
+                ? "🎄 Book Your Festive Ride Now 🎄"
+                : "Book Taxi Online"}
               <span className="halloween-pumpkin"></span>
               <ArrowRight className="h-5 w-5" />
             </button>
+
+            {/* Visible phone number */}
+            <div className="mb-8 flex flex-col sm:flex-row sm:items-center gap-3">
+              <a
+                href={`tel:${contactInfo.phone}`}
+                className={`w-full sm:w-auto inline-flex items-center justify-center rounded-lg px-8 py-4 text-sm font-semibold shadow-md hover:shadow-lg transition-all whitespace-nowrap ${
+                  isChristmasActive
+                    ? 'bg-white text-[#0F0D3E] hover:bg-gray-100'
+                    : 'bg-white text-[#0F0D3E] hover:bg-gray-100 border border-[#06A0A6]/30'
+                }`}
+              >
+                <span className="mr-3 text-xs font-medium uppercase tracking-wide text-[#06A0A6]">
+                  Call 24/7
+                </span>
+                <span className="text-sm font-semibold">{contactInfo.phone}</span>
+              </a>
+            </div>
             {/* Enhanced Car Image with Aylestone Theme - No parallax on mobile */}
             {!isChristmasActive && (
               <div className="flex justify-start">
