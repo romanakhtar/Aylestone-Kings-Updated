@@ -142,10 +142,10 @@ function Navigation() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 ease-out overflow-hidden ${
-          isMenuOpen ? 'max-h-139 opacity-100' : 'max-h-0 opacity-0'
+        <div className={`md:hidden transition-all duration-300 ease-out ${
+          isMenuOpen ? 'max-h-[85vh] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <div className="border-t border-slate-200/60 bg-white/98 backdrop-blur-xl">
+          <div className="border-t border-slate-200/60 bg-white/98 backdrop-blur-xl overflow-y-auto max-h-[85vh]">
             <div className="px-4 pt-3 pb-5 space-y-1">
               {navigationItems.main.map((item) => (
                 item.hasDropdown ? (
@@ -158,7 +158,7 @@ function Navigation() {
                       <ChevronDown className={`h-4 w-4 transition-smooth ${isMoreOpen ? "rotate-180" : ""}`} />
                     </button>
                     <div className={`transition-all duration-300 ease-out overflow-hidden ${
-                      isMoreOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+                      isMoreOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                     }`}>
                       <div className="pl-6 space-y-1">
                         {navigationItems.dropdown.map((dropdownItem) => (
@@ -193,7 +193,7 @@ function Navigation() {
                   </Link>
                 )
               ))}
-              <div className="px-4 pt-3 space-y-2">
+              <div className="px-4 pt-3 space-y-2 pb-4">
                 <Button
                   onClick={() => {
                     handleCallToBook()
