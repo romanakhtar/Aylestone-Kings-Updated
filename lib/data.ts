@@ -1875,7 +1875,7 @@ export const siteData = {
           
           <p>Don't let early morning or late-night travel stress you out. Our taxi services in Leicester are available 24/7 to ensure you can travel safely and comfortably at any time. Book your early morning or late-night taxi today and experience reliable transport whenever you need it.</p>
         `,
-        date: "2025-12-15",
+        date: "2025-01-15",
         author: "Aylestone Kings Team",
         category: "Travel Tips",
         image: "/Early morning and late night travel.webp"
@@ -2078,7 +2078,7 @@ export const siteData = {
           
           <p>Experience comprehensive coverage and reliable service with Aylestone Taxis. Our local taxi service in Leicester covers all areas, ensuring you can get where you need to go, whenever you need to get there. Book your journey today and discover why Leicester residents trust us for their transport needs.</p>
         `,
-        date: "2025-12-16",
+        date: "2025-01-16",
         author: "Aylestone Kings Team",
         category: "Local Guide",
         image: "/Reliable taxi service in leicester-You can rely on.webp"
