@@ -1710,6 +1710,378 @@ export const siteData = {
         author: "Aylestone Kings Team",
         category: "School Transport",
         image: "/Scgool-blog.webp"
+      },
+      {
+        id: "taxi-services-leicester-early-morning-late-night-travel",
+        title: "Taxi Services in Leicester for Early Morning & Late Night Travel",
+        excerpt: "Need a reliable taxi service in Leicester for early morning or late night travel? Aylestone Taxis provides 24/7 service for airport transfers, night shifts, and early appointments.",
+        content: `
+          <p>Whether you need an early morning airport transfer, a late-night ride home, or transport for night shift work, finding reliable taxi services in Leicester during off-peak hours can be challenging. Aylestone Taxis provides 24/7 taxi services in Leicester, ensuring you can travel safely and comfortably at any time of day or night.</p>
+          
+          <h2>Why Choose Taxi Services in Leicester for Early Morning & Late Night Travel?</h2>
+          
+          <h3>24/7 Availability</h3>
+          <p>Unlike many transport options, our taxi services in Leicester operate 24 hours a day, 7 days a week, including bank holidays. Whether you need a 4am airport transfer or a 2am ride home, we're here when you need us.</p>
+          
+          <h3>Reliability</h3>
+          <p>Early morning and late-night travel often requires punctuality - missing a flight or being late for work isn't an option. Our taxi services in Leicester guarantee reliable, on-time service, even during off-peak hours when other transport options may be unavailable.</p>
+          
+          <h3>Safety</h3>
+          <p>Traveling during early morning or late-night hours requires extra safety considerations. Our taxi services in Leicester ensure:</p>
+          <ul>
+            <li>Fully licensed, DBS-checked drivers</li>
+            <li>Regularly maintained, safe vehicles</li>
+            <li>Professional, experienced drivers</li>
+            <li>Fully insured service</li>
+            <li>GPS tracking for added security</li>
+          </ul>
+          
+          <h2>Early Morning Taxi Services in Leicester</h2>
+          
+          <h3>Airport Transfers</h3>
+          <p>Early morning flights require early starts. Our taxi services in Leicester specialize in early morning airport transfers to:</p>
+          <ul>
+            <li><strong>East Midlands Airport</strong> - 30-minute transfers</li>
+            <li><strong>Birmingham Airport</strong> - 45-minute transfers</li>
+            <li><strong>Heathrow Airport</strong> - 2-hour transfers</li>
+            <li><strong>Gatwick Airport</strong> - 2.5-hour transfers</li>
+            <li>All other major UK airports</li>
+          </ul>
+          <p>We monitor flight schedules and adjust pickup times accordingly, ensuring you arrive at the airport with plenty of time to spare, even for those 6am departures.</p>
+          
+          <h3>Early Morning Appointments</h3>
+          <p>Whether you have a hospital appointment, business meeting, or early work shift, our taxi services in Leicester ensure you arrive on time. Book in advance for peace of mind, and we'll be at your door at the exact time you need.</p>
+          
+          <h3>School Runs</h3>
+          <p>Early morning school runs can be stressful. Our taxi services in Leicester provide reliable transport for children, ensuring they arrive at school safely and on time, every time.</p>
+          
+          <h2>Late Night Taxi Services in Leicester</h2>
+          
+          <h3>Night Out Transport</h3>
+          <p>Enjoying Leicester's nightlife? Our late-night taxi services in Leicester provide safe, reliable transport home after:</p>
+          <ul>
+            <li>Evening events at Curve Theatre</li>
+            <li>Concerts at De Montfort Hall</li>
+            <li>Restaurants and bars</li>
+            <li>Sports events</li>
+            <li>Social gatherings</li>
+          </ul>
+          
+          <h3>Night Shift Workers</h3>
+          <p>If you work night shifts, our taxi services in Leicester offer reliable transport to and from work. Set up regular bookings for consistent, dependable service that works around your schedule.</p>
+          
+          <h3>Late-Night Airport Pickups</h3>
+          <p>Late-night flight arrivals can be stressful, especially if you're tired after a long journey. Our taxi services in Leicester provide comfortable, reliable airport pickups, even for flights arriving after midnight.</p>
+          
+          <h2>Benefits of Using Taxi Services in Leicester for Off-Peak Travel</h2>
+          
+          <h3>Convenience</h3>
+          <p>Public transport may be limited or unavailable during early morning or late-night hours. Our taxi services in Leicester provide door-to-door transport whenever you need it.</p>
+          
+          <h3>Comfort</h3>
+          <p>After a long flight or late night, comfort matters. Our taxi services in Leicester offer clean, comfortable vehicles with professional drivers who understand the importance of a smooth journey.</p>
+          
+          <h3>Peace of Mind</h3>
+          <p>Knowing you have reliable transport arranged gives you peace of mind. Whether it's an early morning flight or a late-night journey home, our taxi services in Leicester ensure you're never stranded.</p>
+          
+          <h2>How to Book Early Morning or Late-Night Taxi Services</h2>
+          
+          <h3>Book in Advance</h3>
+          <p>For early morning or late-night journeys, booking in advance is essential. This ensures:</p>
+          <ul>
+            <li>Availability during off-peak hours</li>
+            <li>Time to provide specific requirements</li>
+            <li>Peace of mind knowing transport is arranged</li>
+            <li>Better pricing options</li>
+          </ul>
+          
+          <h3>Booking Methods</h3>
+          <p>Book our taxi services in Leicester through:</p>
+          <ul>
+            <li><strong>Online:</strong> Book 24/7 through our website</li>
+            <li><strong>Phone:</strong> Call 0116 2338888</li>
+            <li><strong>WhatsApp:</strong> Message +447535855786</li>
+            <li><strong>Mobile App:</strong> Book and track your journey</li>
+          </ul>
+          
+          <h2>What to Expect</h2>
+          
+          <h3>Punctuality</h3>
+          <p>Our taxi services in Leicester guarantee punctual service, even during off-peak hours. We understand that early morning and late-night journeys often have tight schedules, and we ensure you arrive on time.</p>
+          
+          <h3>Professional Service</h3>
+          <p>Our drivers are professional, courteous, and experienced in handling early morning and late-night journeys. They understand the importance of a smooth, comfortable ride, especially when you're tired or stressed.</p>
+          
+          <h3>Comfortable Vehicles</h3>
+          <p>Our fleet includes comfortable vehicles suitable for any journey. From spacious estate cars for luggage to executive vehicles for business travel, we have the right vehicle for your needs.</p>
+          
+          <h2>Special Considerations for Early Morning & Late-Night Travel</h2>
+          
+          <h3>Airport Transfers</h3>
+          <p>For early morning airport transfers, we recommend:</p>
+          <ul>
+            <li>Booking at least 24 hours in advance</li>
+            <li>Providing flight details for monitoring</li>
+            <li>Allowing extra time for traffic</li>
+            <li>Confirming pickup time the night before</li>
+          </ul>
+          
+          <h3>Late-Night Journeys</h3>
+          <p>For late-night travel, we ensure:</p>
+          <ul>
+            <li>Safe, reliable service</li>
+            <li>Professional drivers</li>
+            <li>GPS tracking for security</li>
+            <li>Comfortable, well-lit vehicles</li>
+          </ul>
+          
+          <h2>Areas We Cover</h2>
+          <p>Our taxi services in Leicester cover all areas for early morning and late-night travel, including:</p>
+          <ul>
+            <li>Leicester City Centre</li>
+            <li>Aylestone</li>
+            <li>Oadby</li>
+            <li>Wigston</li>
+            <li>Evington</li>
+            <li>Belgrave</li>
+            <li>Highfields</li>
+            <li>Braunstone</li>
+            <li>Beaumont Leys</li>
+            <li>And all surrounding areas</li>
+          </ul>
+          
+          <h2>Why Choose Aylestone Taxis for Early Morning & Late-Night Travel?</h2>
+          <p>Choose our taxi services in Leicester for off-peak travel because:</p>
+          <ul>
+            <li>24/7 availability</li>
+            <li>Reliable, punctual service</li>
+            <li>Professional, DBS-checked drivers</li>
+            <li>Safe, comfortable vehicles</li>
+            <li>Fixed prices with no surprises</li>
+            <li>Local knowledge of Leicester</li>
+            <li>30+ years of experience</li>
+            <li>Flight monitoring for airport transfers</li>
+          </ul>
+          
+          <h2>Tips for Early Morning & Late-Night Travel</h2>
+          <ul>
+            <li>Book in advance, especially for airport transfers</li>
+            <li>Confirm your booking the day before</li>
+            <li>Have contact details ready</li>
+            <li>Allow extra time for traffic</li>
+            <li>Keep your phone charged</li>
+            <li>Have booking confirmation ready</li>
+          </ul>
+          
+          <p>Don't let early morning or late-night travel stress you out. Our taxi services in Leicester are available 24/7 to ensure you can travel safely and comfortably at any time. Book your early morning or late-night taxi today and experience reliable transport whenever you need it.</p>
+        `,
+        date: "2025-12-15",
+        author: "Aylestone Kings Team",
+        category: "Travel Tips",
+        image: "/Early morning and late night travel.webp"
+      },
+      {
+        id: "areas-we-cover-leicester-local-taxi-service",
+        title: "Areas We Cover in Leicester – Local Taxi Service You Can Rely On",
+        excerpt: "Discover the comprehensive coverage of Aylestone Taxis across Leicester and surrounding areas. From city centre to suburbs, we provide reliable local taxi service throughout the region.",
+        content: `
+          <p>When you need a reliable local taxi service in Leicester, coverage matters. Aylestone Taxis provides comprehensive taxi services across Leicester and surrounding areas, ensuring you can get where you need to go, wherever you are in the region.</p>
+          
+          <h2>Comprehensive Coverage Across Leicester</h2>
+          <p>As a trusted local taxi service in Leicester, we cover all areas of the city and beyond. Whether you're in the city centre, suburbs, or surrounding towns, we're here to provide reliable transport.</p>
+          
+          <h2>Leicester City Centre Areas</h2>
+          <p>Our local taxi service in Leicester covers all city centre areas:</p>
+          <ul>
+            <li><strong>Leicester City Centre</strong> - Fast pickups for shopping, dining, and business</li>
+            <li><strong>Highcross Leicester</strong> - Reliable transport to and from the shopping centre</li>
+            <li><strong>Curve Theatre</strong> - Perfect for evening performances and events</li>
+            <li><strong>Leicester Market</strong> - Regular service to the historic market area</li>
+            <li><strong>Cultural Quarter</strong> - Transport to museums, galleries, and attractions</li>
+          </ul>
+          
+          <h2>Residential Areas We Serve</h2>
+          <p>Our local taxi service in Leicester covers residential areas throughout the city:</p>
+          
+          <h3>South Leicester</h3>
+          <ul>
+            <li><strong>Aylestone</strong> - Our home base, with excellent coverage</li>
+            <li><strong>Eyres Monsell</strong> - Reliable local service</li>
+            <li><strong>Glen Parva</strong> - Regular taxi service</li>
+            <li><strong>South Wigston</strong> - Fast pickups</li>
+            <li><strong>Wigston</strong> - Comprehensive coverage</li>
+            <li><strong>Wigston Fields</strong> - Local taxi service</li>
+          </ul>
+          
+          <h3>East Leicester</h3>
+          <ul>
+            <li><strong>Evington</strong> - Regular service</li>
+            <li><strong>Humberstone</strong> - Reliable transport</li>
+            <li><strong>Thurnby Lodge</strong> - Local taxi service</li>
+            <li><strong>Rushey Mead</strong> - Fast pickups</li>
+            <li><strong>Belgrave</strong> - Comprehensive coverage</li>
+            <li><strong>Spinney Hills</strong> - Regular service</li>
+            <li><strong>Highfields</strong> - Reliable local taxi</li>
+          </ul>
+          
+          <h3>West Leicester</h3>
+          <ul>
+            <li><strong>Braunstone</strong> - Regular taxi service</li>
+            <li><strong>Braunstone Town</strong> - Fast pickups</li>
+            <li><strong>Beaumont Leys</strong> - Comprehensive coverage</li>
+            <li><strong>Westcotes</strong> - Reliable transport</li>
+            <li><strong>Glenfield</strong> - Local taxi service</li>
+          </ul>
+          
+          <h3>North Leicester</h3>
+          <ul>
+            <li><strong>Hamilton</strong> - Regular service</li>
+            <li><strong>Thurmaston</strong> - Reliable local taxi</li>
+            <li><strong>Syston</strong> - Fast pickups</li>
+            <li><strong>Birstall</strong> - Comprehensive coverage</li>
+          </ul>
+          
+          <h3>Central Leicester</h3>
+          <ul>
+            <li><strong>Clarendon Park</strong> - Regular taxi service</li>
+            <li><strong>Knighton</strong> - Reliable transport</li>
+            <li><strong>Stoneygate</strong> - Local taxi service</li>
+            <li><strong>New Walk</strong> - Fast pickups</li>
+          </ul>
+          
+          <h2>Surrounding Towns & Areas</h2>
+          <p>Our local taxi service in Leicester extends beyond the city to surrounding towns:</p>
+          
+          <h3>Oadby & Surrounding Areas</h3>
+          <ul>
+            <li><strong>Oadby</strong> - Regular service to this popular area</li>
+            <li><strong>University of Leicester Botanic Garden</strong> - Transport to attractions</li>
+          </ul>
+          
+          <h3>Blaby District</h3>
+          <ul>
+            <li><strong>Blaby</strong> - Reliable local taxi service</li>
+            <li><strong>Narborough</strong> - Fast pickups</li>
+            <li><strong>Enderby</strong> - Comprehensive coverage</li>
+            <li><strong>Whetstone</strong> - Regular service</li>
+            <li><strong>Countesthorpe</strong> - Reliable transport</li>
+            <li><strong>Broughton Astley</strong> - Local taxi service</li>
+            <li><strong>Cosby</strong> - Fast pickups</li>
+          </ul>
+          
+          <h3>Wider Leicestershire</h3>
+          <ul>
+            <li><strong>Loughborough</strong> - Regular taxi service</li>
+            <li><strong>Hinckley</strong> - Reliable local taxi</li>
+            <li><strong>Coalville</strong> - Comprehensive coverage</li>
+            <li><strong>Melton Mowbray</strong> - Fast pickups</li>
+            <li><strong>Market Harborough</strong> - Regular service</li>
+            <li><strong>Kibworth</strong> - Reliable transport</li>
+            <li><strong>Lutterworth</strong> - Local taxi service</li>
+            <li><strong>Groby</strong> - Fast pickups</li>
+          </ul>
+          
+          <h2>Key Destinations We Serve</h2>
+          <p>Our local taxi service in Leicester provides transport to key destinations throughout the area:</p>
+          
+          <h3>Transport Hubs</h3>
+          <ul>
+            <li><strong>Leicester Railway Station</strong> - Regular service</li>
+            <li><strong>South Wigston Station</strong> - Fast pickups</li>
+            <li><strong>Narborough Station</strong> - Reliable transport</li>
+            <li><strong>St Margaret's Bus Station</strong> - Local taxi service</li>
+          </ul>
+          
+          <h3>Hospitals & Medical Facilities</h3>
+          <ul>
+            <li><strong>Leicester Royal Infirmary</strong> - Regular service</li>
+            <li><strong>Glenfield Hospital</strong> - Reliable transport</li>
+            <li><strong>Leicester General Hospital</strong> - Fast pickups</li>
+            <li><strong>Spire Leicester Hospital</strong> - Local taxi service</li>
+            <li><strong>Nuffield Health Leicester Hospital</strong> - Comprehensive coverage</li>
+          </ul>
+          
+          <h3>Educational Institutions</h3>
+          <ul>
+            <li><strong>University of Leicester</strong> - Regular service for students</li>
+            <li><strong>De Montfort University</strong> - Reliable transport</li>
+            <li><strong>Leicester College</strong> - Fast pickups</li>
+            <li>Primary and secondary schools throughout Leicester</li>
+          </ul>
+          
+          <h3>Shopping & Retail</h3>
+          <ul>
+            <li><strong>Highcross Leicester</strong> - Regular service</li>
+            <li><strong>Fosse Park</strong> - Reliable transport</li>
+            <li><strong>Haymarket Shopping Centre</strong> - Local taxi service</li>
+            <li>Supermarkets including Asda, Tesco, Sainsbury's, Aldi, Lidl, Morrisons, and more</li>
+          </ul>
+          
+          <h3>Entertainment & Attractions</h3>
+          <ul>
+            <li><strong>King Power Stadium</strong> - Match day transport</li>
+            <li><strong>Welford Road Stadium</strong> - Rugby match service</li>
+            <li><strong>Curve Theatre</strong> - Evening performance transport</li>
+            <li><strong>De Montfort Hall</strong> - Concert and event service</li>
+            <li><strong>National Space Centre</strong> - Visitor transport</li>
+            <li><strong>King Richard III Visitor Centre</strong> - Tourist transport</li>
+            <li><strong>Leicester Cathedral</strong> - Regular service</li>
+          </ul>
+          
+          <h2>Why Our Coverage Matters</h2>
+          
+          <h3>Local Knowledge</h3>
+          <p>Our drivers know Leicester and surrounding areas inside and out. This local knowledge means:</p>
+          <ul>
+            <li>Faster journeys using best routes</li>
+            <li>Understanding of traffic patterns</li>
+            <li>Knowledge of local landmarks</li>
+            <li>Familiarity with parking restrictions</li>
+          </ul>
+          
+          <h3>Reliable Service</h3>
+          <p>Our comprehensive coverage means we can provide reliable service wherever you are in Leicester. We have vehicles positioned throughout the area for fast pickups.</p>
+          
+          <h3>Consistent Availability</h3>
+          <p>Whether you're in the city centre or surrounding areas, our local taxi service in Leicester is available 24/7. We don't limit our service to certain areas - we cover the whole region.</p>
+          
+          <h2>How to Book Our Local Taxi Service</h2>
+          <p>Booking our local taxi service in Leicester is easy:</p>
+          <ul>
+            <li><strong>Online:</strong> Book through our website 24/7</li>
+            <li><strong>Phone:</strong> Call 0116 2338888</li>
+            <li><strong>WhatsApp:</strong> Message +447535855786</li>
+            <li><strong>Mobile App:</strong> Book and track your journey</li>
+          </ul>
+          
+          <h2>What Makes Our Coverage Special?</h2>
+          <p>Our local taxi service in Leicester stands out because:</p>
+          <ul>
+            <li><strong>30+ years of experience</strong> serving Leicester</li>
+            <li><strong>Comprehensive coverage</strong> of all areas</li>
+            <li><strong>Local knowledge</strong> of routes and traffic</li>
+            <li><strong>24/7 availability</strong> across all areas</li>
+            <li><strong>Fast pickups</strong> throughout the region</li>
+            <li><strong>Reliable service</strong> you can count on</li>
+            <li><strong>Professional drivers</strong> who know the area</li>
+            <li><strong>Fixed prices</strong> with no surprises</li>
+          </ul>
+          
+          <h2>Areas Not Listed?</h2>
+          <p>If your area isn't listed above, don't worry - we likely still serve it! Our local taxi service in Leicester covers a wide area, and we're always happy to discuss your specific location. Contact us to confirm coverage and get a quote.</p>
+          
+          <h2>Regular Service Areas</h2>
+          <p>We provide regular, reliable service to all areas listed, with fast pickup times and professional service. Whether you need a one-off journey or regular transport, our local taxi service in Leicester is here to help.</p>
+          
+          <h2>Getting Started</h2>
+          <p>Ready to use our local taxi service in Leicester? Whether you're in the city centre, suburbs, or surrounding areas, we're here to provide reliable transport. Book online, call us, or message us on WhatsApp - we're available 24/7 to serve you.</p>
+          
+          <p>Experience comprehensive coverage and reliable service with Aylestone Taxis. Our local taxi service in Leicester covers all areas, ensuring you can get where you need to go, whenever you need to get there. Book your journey today and discover why Leicester residents trust us for their transport needs.</p>
+        `,
+        date: "2025-12-16",
+        author: "Aylestone Kings Team",
+        category: "Local Guide",
+        image: "/Reliable taxi service in leicester-You can rely on.webp"
       }
     ]
   },
