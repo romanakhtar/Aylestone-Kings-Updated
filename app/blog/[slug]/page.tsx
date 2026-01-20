@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import Script from "next/script"
 import { Calendar, User, ArrowLeft, ArrowRight, BookOpen } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import { notFound } from "next/navigation"
@@ -211,6 +212,121 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
         </div>
       </section>
+
+      {/* Schema Markup for SEO */}
+      <Script
+        id="blog-post-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "@id": `https://aylestone-taxis.co.uk/blog/${blog.id}#blogpost`,
+            headline: blog.title,
+            description: blog.excerpt,
+            image: {
+              "@type": "ImageObject",
+              url: `https://aylestone-taxis.co.uk${blog.image}`,
+              width: 1200,
+              height: 630,
+            },
+            datePublished: blog.date,
+            dateModified: blog.date,
+            author: {
+              "@type": "Organization",
+              name: blog.author,
+              url: "https://aylestone-taxis.co.uk",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Aylestone Kings",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png",
+              },
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://aylestone-taxis.co.uk/blog/${blog.id}`,
+            },
+            articleSection: blog.category,
+            keywords: [
+              "taxi service Leicester",
+              "Leicester taxi",
+              "Aylestone taxis",
+              blog.category.toLowerCase(),
+              ...blog.title.toLowerCase().split(" ").filter((word) => word.length > 3),
+            ],
+            inLanguage: "en-GB",
+            isAccessibleForFree: true,
+            url: `https://aylestone-taxis.co.uk/blog/${blog.id}`,
+          }),
+        }}
+      />
+      <Script
+        id="blog-breadcrumbs-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://aylestone-taxis.co.uk/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog",
+                item: "https://aylestone-taxis.co.uk/blog",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: blog.title,
+                item: `https://aylestone-taxis.co.uk/blog/${blog.id}`,
+              },
+            ],
+          }),
+        }}
+      />
+      <Script
+        id="blog-article-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: blog.title,
+            description: blog.excerpt,
+            image: `https://aylestone-taxis.co.uk${blog.image}`,
+            datePublished: blog.date,
+            dateModified: blog.date,
+            author: {
+              "@type": "Organization",
+              name: blog.author,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Aylestone Kings",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png",
+              },
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://aylestone-taxis.co.uk/blog/${blog.id}`,
+            },
+          }),
+        }}
+      />
     </div>
   )
 }
