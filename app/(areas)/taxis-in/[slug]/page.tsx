@@ -305,14 +305,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     <summary className="cursor-pointer text-gray-900 font-medium">How much is a taxi from {areaPlain} to Leicester City Centre?</summary>
                     <p className="mt-2 text-gray-700">Fares vary with traffic and pickup point, but we offer fixed, competitive pricing. Get an instant quote and book online.</p>
                   </details>
-                  <details className="group border border-gray-100 rounded-md p-4">
-                    <summary className="cursor-pointer text-gray-900 font-medium">Do you offer 24/7 pickups in {areaPlain}?</summary>
-                    <p className="mt-2 text-gray-700">Yes. Our service operates day and night, including weekends and bank holidays.</p>
-                  </details>
-                  <details className="group border border-gray-100 rounded-md p-4">
-                    <summary className="cursor-pointer text-gray-900 font-medium">Can I book a return from the airport?</summary>
-                    <p className="mt-2 text-gray-700">Absolutely. We monitor your flight and can arrange meet &amp; greet at arrivals. Add your return during booking or contact us.</p>
-                  </details>
+                 
+                 
                   <details className="group border border-gray-100 rounded-md p-4">
                     <summary className="cursor-pointer text-gray-900 font-medium">What vehicle types are available?</summary>
                     <p className="mt-2 text-gray-700">Choose from saloons, estates, MPVs and minibuses for larger groups. All vehicles are clean, comfortable and licensed.</p>
