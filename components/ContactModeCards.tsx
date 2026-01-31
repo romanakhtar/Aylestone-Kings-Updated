@@ -7,6 +7,7 @@ import { contactInfo } from '@/lib/data'
 
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 import { useChristmasTheme } from "@/components/ChristmasThemeProvider"
+import { useValentineTheme } from "@/components/ValentineThemeProvider"
 import { usePathname } from "next/navigation"
 
 interface ContactModeCardsProps {
@@ -15,8 +16,10 @@ interface ContactModeCardsProps {
 
 export default function ContactModeCards({ className = '' }: ContactModeCardsProps) {
   const { isChristmasActive: isChristmasSeason } = useChristmasTheme()
+  const { isValentineActive: isValentineSeason } = useValentineTheme()
   const pathname = usePathname()
   const isChristmasActive = isChristmasSeason && pathname === '/'
+  const isValentineActive = isValentineSeason && pathname === '/'
   
   const contactModes = [
     {
@@ -63,7 +66,20 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
   ]
 
   return (
-    <div className={`${isChristmasActive ? 'bg-gradient-to-br from-[#0F0D3E] to-[#2E3C44] border-[#D9B35A]' : 'bg-cyan-500/20 backdrop-blur-md border-cyan-500/30'} rounded-2xl shadow-xl border-2 p-4 sm:p-5 lg:p-6 ${className} animate-fade-in relative w-full max-w-[320px] sm:max-w-[340px] lg:max-w-[260px] xl:max-w-[280px] overflow-visible`}>
+    <div 
+      className={`${
+        isValentineActive
+          ? ''
+          : isChristmasActive
+          ? 'bg-gradient-to-br from-[#0F0D3E] to-[#2E3C44] border-[#D9B35A]'
+          : 'bg-cyan-500/20 backdrop-blur-md border-cyan-500/30'
+      } rounded-2xl shadow-xl border-2 p-4 sm:p-5 lg:p-6 ${className} animate-fade-in relative w-full max-w-[320px] sm:max-w-[340px] lg:max-w-[260px] xl:max-w-[280px] overflow-visible`}
+      style={isValentineActive ? { 
+        background: 'linear-gradient(135deg, #7F1D1D 0%, #9D174D 40%, #BE185D 75%, #EC4899 100%)',
+        borderColor: 'rgba(236, 72, 153, 0.4)',
+        boxShadow: '0 25px 50px -12px rgba(131, 24, 67, 0.25), 0 0 0 1px rgba(255,255,255,0.05) inset'
+      } : undefined}
+    >
       {/* Santa Hat - Stuck on Top Right Corner */}
       {isChristmasActive && (
         <div className="absolute -top-12 -right-10 z-20 pointer-events-none">
@@ -81,10 +97,30 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
           />
         </div>
       )}
+      {/* Valentine decoration - Above contact card */}
+      {isValentineActive && (
+        <div className="absolute -top-12 -right-10 z-20 pointer-events-none">
+          <Image
+            src="/Valentine-Heart.webp"
+            alt="Valentine decoration"
+            width={100}
+            height={100}
+            className="drop-shadow-lg"
+            style={{
+              transform: 'rotate(-10deg)',
+              filter: 'drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4))'
+            }}
+          />
+        </div>
+      )}
       
-      <h3 className={`text-xl lg:text-2xl font-bold mb-6 lg:mb-8 text-center border-b ${isChristmasActive ? 'text-[#D9B35A] border-[#D9B35A]/50' : 'text-[#0F0D3E] border-gray-200/50'} pb-3 relative z-10`}>
+      <h3 className={`text-xl lg:text-2xl font-bold mb-6 lg:mb-8 text-center border-b ${
+        isValentineActive ? 'text-[#FBCFE8] border-[#EF5B6A]/50' : isChristmasActive ? 'text-[#D9B35A] border-[#D9B35A]/50' : 'text-[#0F0D3E] border-gray-200/50'
+      } pb-3 relative z-10`}>
         Contact Us
-        <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 rounded-full ${isChristmasActive ? 'bg-gradient-to-r from-[#D9B35A] to-[#EF5B6A]' : 'bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E]'}`}></div>
+        <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 rounded-full ${
+          isValentineActive ? 'bg-gradient-to-r from-[#EF5B6A] to-[#FBCFE8]' : isChristmasActive ? 'bg-gradient-to-r from-[#D9B35A] to-[#EF5B6A]' : 'bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E]'
+        }`}></div>
       </h3>
       
       <div className="space-y-3 lg:space-y-4">
@@ -144,11 +180,11 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       </div>
       
       {/* Separator */}
-      <div className={`border-t my-2 lg:my-2 ${isChristmasActive ? 'border-[#D9B35A]/30' : 'border-blue-200'}`}></div>
+      <div className={`border-t my-2 lg:my-2 ${isValentineActive ? 'border-[#EF5B6A]/30' : isChristmasActive ? 'border-[#D9B35A]/30' : 'border-blue-200'}`}></div>
       
       {/* App Download Section */}
       <div className="pt-2 flex flex-col items-center">
-        <h4 className={`text-md font-semibold mb-3 text-center ${isChristmasActive ? 'text-[#D9B35A]' : 'text-[#0F0D3E]'}`}>Download our app</h4>
+        <h4 className={`text-md font-semibold mb-3 text-center ${isValentineActive ? 'text-[#FBCFE8]' : isChristmasActive ? 'text-[#D9B35A]' : 'text-[#0F0D3E]'}`}>Download our app</h4>
         <AppDownloadButtons size="sm" />
       </div>
     </div>

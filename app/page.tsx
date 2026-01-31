@@ -8,6 +8,7 @@ import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
 import { useState, useEffect } from "react"
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
+import { useValentineTheme } from "@/components/ValentineThemeProvider"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 // Dynamically import non-critical component
@@ -19,6 +20,7 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const { isHalloweenActive } = useHalloweenTheme();
+  const { isValentineActive } = useValentineTheme();
 
   const reviews = siteData.homepage.customerReviews.reviews;
   const totalSlides = reviews.length;
@@ -972,23 +974,27 @@ export default function Home() {
       />
 
       {/* Call to Action Section */}
-      <section className={`py-20 ${isHalloweenActive ? 'bg-gradient-to-r from-[#FF7B00] to-[#111111]' : 'bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E]'} text-white`}>
+      <section className={`py-20 ${
+        isHalloweenActive ? 'bg-gradient-to-r from-[#FF7B00] to-[#111111]' : isValentineActive ? 'bg-gradient-to-r from-[#EF5B6A] to-[#0F0D3E]' : 'bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E]'
+      } text-white`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl text-white font-bold mb-6">
-            {isHalloweenActive ? "🎃Ready for a Spook-tacular Ride?🎃" : "Ready to experience the difference?"}
+            {isHalloweenActive ? "🎃Ready for a Spook-tacular Ride?🎃" : isValentineActive ? "Pre-book Your Valentine's Evening" : "Ready to experience the difference?"}
           </h2>
           <p className="text-xl text-[#E4E4E4] mb-8 max-w-2xl mx-auto">
-            {isHalloweenActive ? "No tricks, just treats! Book your safe and reliable ride today." : "Let's start with a conversation about how we can help you with your transportation needs."}
+            {isHalloweenActive ? "No tricks, just treats! Book your safe and reliable ride today." : isValentineActive ? "Reliable, safe and on time. Book with confidence." : "Let's start with a conversation about how we can help you with your transportation needs."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="/contact" className="inline-block">
-              <button className={`${isHalloweenActive ? 'bg-white text-[#FF7B00] hover:bg-[#E4E4E4]' : 'bg-white text-[#06A0A6] hover:bg-[#E4E4E4]'} px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl`}>
-                {isHalloweenActive ? "Book Your Ride 🎃" : "Get in touch"}
+              <button className={`${
+                isHalloweenActive ? 'bg-white text-[#FF7B00] hover:bg-[#E4E4E4]' : isValentineActive ? 'bg-white text-[#EF5B6A] hover:bg-[#E4E4E4]' : 'bg-white text-[#06A0A6] hover:bg-[#E4E4E4]'
+              } px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl`}>
+                {isHalloweenActive ? "Book Your Ride 🎃" : isValentineActive ? "Get in touch" : "Get in touch"}
                 <ArrowRight className="h-5 w-5" />
               </button>
             </a>
             <a href="#app-download" className="inline-block">
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 shadow-lg hover:shadow-xl">
+              <button className={`border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white transition-all duration-200 shadow-lg hover:shadow-xl ${isValentineActive ? 'hover:text-[#EF5B6A]' : 'hover:text-[#06A0A6]'}`}>
                 Download our app
               </button>
             </a>

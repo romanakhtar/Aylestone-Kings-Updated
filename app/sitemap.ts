@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   urls.push(createUrl('/airport-transfers-leicester', 0.9, 'weekly'))
   urls.push(createUrl('/local-taxi-leicester', 0.9, 'weekly'))
   urls.push(createUrl('/long-distance-taxi-leicester', 0.9, 'weekly'))
+  urls.push(createUrl('/valentines-day-taxi-leicester', 0.9, 'weekly'))
 
   // Airport Pricing Pages
   const airports = [
