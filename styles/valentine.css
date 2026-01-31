@@ -1,0 +1,13 @@
+/* Valentine theme: Red, Pink, Light red, Light pink accents. Active Feb 1–14 only. */
+
+:root {
+  --valentine-red: #DC2626;
+  --valentine-pink: #EC4899;
+  --valentine-light-red: #FCA5A5;
+  --valentine-light-pink: #FBCFE8;
+  --valentine-coral: #EF5B6A; /* Brand coral accent */
+}
+
+body.valentine-theme {
+  /* Optional global overrides when Valentine theme is on homepage */
+}

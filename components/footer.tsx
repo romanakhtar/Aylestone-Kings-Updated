@@ -6,6 +6,7 @@ import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, ArrowRight, MessageC
 import Logo from "@/components/logo"
 import { companyInfo, contactInfo, socialLinks, footerData, copyrightInfo } from "@/lib/data"
 import { useChristmasTheme } from "@/components/ChristmasThemeProvider"
+import { useValentineTheme } from "@/components/ValentineThemeProvider"
 import { usePathname } from "next/navigation"
 
 // Icon mapping function
@@ -54,11 +55,23 @@ function AreaSection({
 
 export default function Footer() {
   const { isChristmasActive } = useChristmasTheme()
+  const { isValentineActive } = useValentineTheme()
   const pathname = usePathname()
   const isHomepage = pathname === '/'
   
   return (
     <footer className="bg-gray-100 text-gray-800 ">
+      {/* Valentine Footer Ribbon - Only on Homepage, Feb 1–14 */}
+      {isValentineActive && isHomepage && (
+        <div
+          className="w-full min-h-[120px] sm:min-h-[160px] bg-cover bg-no-repeat bg-center"
+          style={{
+            
+          }}
+          role="img"
+          aria-label="Valentine's Day taxi service - Aylestone Kings Leicester"
+        />
+      )}
       {/* Christmas Footer Banner - Only on Homepage */}
       {isChristmasActive && isHomepage && (
         <div className="w-full relative">

@@ -4,11 +4,13 @@ import { Inter, Roboto } from "next/font/google"
 import "./globals.css"
 import "../styles/halloween.css"
 import "../styles/christmas.css"
+import "../styles/valentine.css"
 import dynamic from "next/dynamic"
 import ContactInfoBar from "@/components/contact-info-bar"
 import { Navigation } from "@/components/navigation"
 import { HalloweenThemeProvider } from "@/components/HalloweenThemeProvider"
 import { ChristmasThemeProvider } from "@/components/ChristmasThemeProvider"
+import { ValentineThemeProvider } from "@/components/ValentineThemeProvider"
 import Script from "next/script"
 
 // Dynamically import non-critical components
@@ -303,17 +305,19 @@ export default function RootLayout({
         {/* End Google Tag Manager (noscript) */}
         <HalloweenThemeProvider>
           <ChristmasThemeProvider>
-            <HalloweenTopBanner />
-            <ContactInfoBar />
-            <Navigation />
-            <HalloweenSpiderWeb />
-            <main className="relative">
-              <HalloweenFloatingElements />
-              {children}
-            </main>
-            <Footer />
-            <FloatingContactButton />
-            <AnalyticsTracker />
+            <ValentineThemeProvider>
+              <HalloweenTopBanner />
+              <ContactInfoBar />
+              <Navigation />
+              <HalloweenSpiderWeb />
+              <main className="relative">
+                <HalloweenFloatingElements />
+                {children}
+              </main>
+              <Footer />
+              <FloatingContactButton />
+              <AnalyticsTracker />
+            </ValentineThemeProvider>
           </ChristmasThemeProvider>
         </HalloweenThemeProvider>
         {/* Schema markup - inline for faster parsing */}
