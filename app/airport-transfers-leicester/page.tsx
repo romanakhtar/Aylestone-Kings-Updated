@@ -1,22 +1,37 @@
-import Image from "next/image"
-import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Plane, Calendar } from "lucide-react"
-import { contactInfo, siteData } from "@/lib/data"
-import type { Metadata } from "next"
-import Link from "next/link"
+import Image from "next/image";
+import {
+  Check,
+  ArrowRight,
+  MapPin,
+  Clock,
+  Shield,
+  Star,
+  Phone,
+  Plane,
+  Calendar,
+} from "lucide-react";
+import { contactInfo, siteData } from "@/lib/data";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Leicester Airport Taxi Service | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-  description: "Book a taxi from Leicester to the airport. Reliable 24/7 airport transfers with Aylestone Taxis. Call or book online.",
-  keywords: "airport taxi Leicester, Leicester airport transfers, airport taxi service Leicester, East Midlands airport taxi, Heathrow taxi Leicester, Gatwick taxi Leicester",
+  title:
+    "Leicester Airport Taxi Service | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
+  description:
+    "Book a taxi from Leicester to the airport. Reliable 24/7 airport transfers with Aylestone Taxis. Call or book online.",
+  keywords:
+    "airport taxi Leicester, Leicester airport transfers, airport taxi service Leicester, East Midlands airport taxi, Heathrow taxi Leicester, Gatwick taxi Leicester",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/airport-transfers-leicester",
   },
   openGraph: {
-    title: "Leicester Airport Taxi Service | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-    description: "Book a taxi from Leicester to the airport. Reliable 24/7 airport transfers with Aylestone Taxis.",
+    title:
+      "Leicester Airport Taxi Service | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
+    description:
+      "Book a taxi from Leicester to the airport. Reliable 24/7 airport transfers with Aylestone Taxis.",
     url: "https://aylestone-taxis.co.uk/airport-transfers-leicester",
   },
-}
+};
 
 export default function AirportTransfersLeicesterPage() {
   return (
@@ -30,21 +45,30 @@ export default function AirportTransfersLeicesterPage() {
                 Airport Transfers Leicester
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                Airport Taxi Service in Leicester
+                Book your airport transfer with Aylestone Taxi.
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Need a reliable <strong>airport taxi service in Leicester</strong>? Aylestone Taxis provides fast, professional airport transfers 
-                to all major UK airports. Fixed prices, 24/7 service, and flight monitoring for peace of mind.
+                Need a reliable taxi for your airport transfer in Leicester?
+                Book your Leicester airport transfer with Aylestone Taxi. 24/7
+                service, safe and comfortable rides, on time every time!
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <a
+                  href={contactInfo.booking.online}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
                   <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg">
                     <Plane className="h-6 w-6" />
                     Book Airport Transfer
                   </button>
                 </a>
-                <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="w-full sm:w-auto">
+                <a
+                  href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
+                  className="w-full sm:w-auto"
+                >
                   <button className="w-full sm:w-auto border-2 border-[#06A0A6] text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-all duration-200 text-lg flex items-center justify-center gap-3">
                     <Phone className="h-6 w-6" />
                     Call {contactInfo.phone}
@@ -62,8 +86,9 @@ export default function AirportTransfersLeicesterPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
                 Why Choose Our Airport Taxi Service?
               </h2>
-              <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
-                Professional airport transfers with fixed prices, flight monitoring, and 24/7 availability
+              <p className="text-xl text-[#2E3C44] max-w-2xl mx-auto">
+                Professional airport transfers with fixed prices, flight
+                monitoring, and 24/7 availability
               </p>
             </div>
 
@@ -72,10 +97,20 @@ export default function AirportTransfersLeicesterPage() {
                 <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
                   <Plane className="h-6 w-6 text-[#06A0A6]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">All Major Airports</h3>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">
+                  All Major UK Airports Covered
+                </h3>
                 <p className="text-[#2E3C44]">
-                  We serve all major UK airports including East Midlands, Birmingham, Heathrow, Gatwick, 
-                  Stansted, Luton, and Manchester. Fixed prices for peace of mind.
+                  We provide airport transfers from Leicester to:
+                  <li> East Midlands Airport</li>
+                  <li> Birmingham Airport</li>
+                  <li> Heathrow Airport</li>
+                  <li> Gatwick Airport</li>
+                  <li> Stansted Airport</li>
+                  <li> Luton Airport</li>
+                  <li> Manchester Airport</li>
+                  Enjoy fixed prices for complete peace of mind when booking
+                  your Leicester airport taxi.
                 </p>
               </div>
 
@@ -83,10 +118,14 @@ export default function AirportTransfersLeicesterPage() {
                 <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
                   <Clock className="h-6 w-6 text-[#06A0A6]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Flight Monitoring</h3>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">
+                  Flight Monitoring for Stress-Free Pickups
+                </h3>
                 <p className="text-[#2E3C44]">
-                  We monitor your flight status and adjust pickup times automatically. 
-                  No need to worry about delays or early arrivals.
+                  We monitor your flight in real time and automatically adjust
+                  collection times for delays or early arrivals. Whether you're
+                  travelling for business or leisure, your driver will be ready
+                  when you land.
                 </p>
               </div>
 
@@ -94,10 +133,14 @@ export default function AirportTransfersLeicesterPage() {
                 <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
                   <Shield className="h-6 w-6 text-[#06A0A6]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Fixed Prices</h3>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">
+                  Fixed Prices – No Hidden Charges
+                </h3>
                 <p className="text-[#2E3C44]">
-                  No hidden charges or surge pricing. Know exactly what you'll pay upfront. 
-                  Transparent pricing for all airport transfers.
+                  With Aylestone Taxi, there are no surge prices or unexpected
+                  fees. You’ll know exactly what you’re paying before your
+                  journey begins. Transparent pricing is guaranteed on all
+                  Leicester airport transfers.
                 </p>
               </div>
 
@@ -105,10 +148,14 @@ export default function AirportTransfersLeicesterPage() {
                 <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
                   <Calendar className="h-6 w-6 text-[#06A0A6]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Pre-Bookings Welcome</h3>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">
+                  Pre-Book Your Airport Taxi
+                </h3>
                 <p className="text-[#2E3C44]">
-                  Book your airport transfer in advance for peace of mind. 
-                  We'll be there on time, every time.
+                  Advance bookings are welcome and recommended, especially
+                  during peak travel times. Secure your Leicester airport
+                  transfer early and travel with confidence knowing we’ll be
+                  there on time.
                 </p>
               </div>
 
@@ -116,10 +163,13 @@ export default function AirportTransfersLeicesterPage() {
                 <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
                   <Star className="h-6 w-6 text-[#06A0A6]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Professional Drivers</h3>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">
+                  Licensed & Professional Drivers
+                </h3>
                 <p className="text-[#2E3C44]">
-                  All our drivers are fully licensed, DBS checked, and experienced in airport transfers. 
-                  Your safety and comfort are our priority.
+                  All our drivers are fully licensed, DBS-checked, and
+                  experienced in long-distance and airport journeys. Your
+                  safety, comfort and punctuality are always our top priorities.
                 </p>
               </div>
 
@@ -127,10 +177,13 @@ export default function AirportTransfersLeicesterPage() {
                 <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
                   <MapPin className="h-6 w-6 text-[#06A0A6]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Luggage Assistance</h3>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">
+                  Luggage Assistance & Spacious Vehicles
+                </h3>
                 <p className="text-[#2E3C44]">
-                  Our drivers help with luggage loading and unloading. 
-                  Spacious vehicles accommodate all your travel needs.
+                  Travelling with suitcases or hand luggage? Our drivers assist
+                  with loading and unloading, and our vehicles offer plenty of
+                  space for a comfortable journey.
                 </p>
               </div>
             </div>
@@ -142,8 +195,12 @@ export default function AirportTransfersLeicesterPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-                How to Book Your Airport Transfer
+                How to Book Your Leicester Airport Taxi
               </h2>
+              <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
+                Booking your Leicester airport transfer with Aylestone Taxi is
+                simple, fast and reliable.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -151,10 +208,14 @@ export default function AirportTransfersLeicesterPage() {
                 <div className="w-12 h-12 bg-[#06A0A6] rounded-full flex items-center justify-center mb-4 mx-auto">
                   <span className="text-white font-bold text-lg">1</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3 text-center">Book Online or Call</h3>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3 text-center">
+                  Book Online or Call Us
+                </h3>
                 <p className="text-[#2E3C44] text-center">
-                  Book your airport transfer online or call {contactInfo.phone}. 
-                  Provide your flight details and we'll handle the rest.
+                  Book your airport taxi online in minutes or call{" "}
+                  {contactInfo.phone} to speak directly with our team. Provide
+                  your flight number, collection address in Leicester, and
+                  travel time — we’ll take care of the rest.
                 </p>
               </div>
 
@@ -162,10 +223,14 @@ export default function AirportTransfersLeicesterPage() {
                 <div className="w-12 h-12 bg-[#06A0A6] rounded-full flex items-center justify-center mb-4 mx-auto">
                   <span className="text-white font-bold text-lg">2</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3 text-center">We Monitor Your Flight</h3>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3 text-center">
+                  We Monitor Your Flight in Real Time
+                </h3>
                 <p className="text-[#2E3C44] text-center">
-                  We track your flight status and adjust pickup times automatically. 
-                  You'll receive SMS/WhatsApp confirmations.
+                  We track your flight status to adjust your pickup time
+                  automatically in case of delays or early arrivals. You’ll
+                  receive confirmation via SMS or WhatsApp, so you always know
+                  your driver details and arrival time.
                 </p>
               </div>
 
@@ -173,10 +238,14 @@ export default function AirportTransfersLeicesterPage() {
                 <div className="w-12 h-12 bg-[#06A0A6] rounded-full flex items-center justify-center mb-4 mx-auto">
                   <span className="text-white font-bold text-lg">3</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3 text-center">Reliable Pickup</h3>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3 text-center">
+                  On-Time, Professional Pickup
+                </h3>
                 <p className="text-[#2E3C44] text-center">
-                  Your driver arrives on time, helps with luggage, and ensures a comfortable journey 
-                  to or from the airport.
+                  Your licensed driver will arrive promptly at your Leicester
+                  pickup location or airport terminal. We assist with luggage
+                  and ensure a smooth, comfortable journey to or from the
+                  airport — stress-free from start to finish.
                 </p>
               </div>
             </div>
@@ -188,27 +257,62 @@ export default function AirportTransfersLeicesterPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-                Airports We Serve
+                Airports We Serve – Fixed-Price Airport Transfers from Leicester
               </h2>
               <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
-                Fixed-price transfers to all major UK airports from Leicester
+                Book your Leicester airport transfer with Aylestone Taxi today
+                and travel with confidence knowing we’ll be there on time.
               </p>
             </div>
-
+            {/* Fixed-Price Airport Transfers from Leicester */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: "East Midlands Airport", href: "/pricing/airports/East-Midlands" },
-                { name: "Birmingham Airport", href: "/pricing/airports/Birmingham" },
-                { name: "Heathrow Airport", href: "/pricing/airports/Heathrow" },
-                { name: "Gatwick Airport", href: "/pricing/airports/Gatwick" },
-                { name: "Stansted Airport", href: "/pricing/airports/Stansted" },
-                { name: "Luton Airport", href: "/pricing/airports/Luton" },
-                { name: "Manchester Airport", href: "/pricing/airports/Manchester" },
+                {
+                  name: "East Midlands Airport Taxi from Leicester",
+                  desc: "Fast and affordable airport transfers from Leicester to East Midlands Airport with fixed fares and 24/7 availability.",
+                  href: "/pricing/airports/East-Midlands",
+                },
+                {
+                  name: "Birmingham Airport Taxi from Leicester",
+                  desc: "Reliable long-distance Leicester taxi service to Birmingham Airport with professional drivers and transparent pricing.",
+                  href: "/pricing/airports/Birmingham",
+                },
+                {
+                  name: "Heathrow Airport Taxi from Leicester",
+                  desc: "Comfortable and stress-free Leicester to Heathrow airport transfers with fixed prices and on-time pickups.",
+                  href: "/pricing/airports/Heathrow",
+                },
+                {
+                  name: "Gatwick Airport Taxi from Leicester",
+                  desc: "Direct Leicester to Gatwick airport taxi service, ideal for business and leisure travellers.",
+                  href: "/pricing/airports/Gatwick",
+                },
+                {
+                  name: "Stansted Airport Taxi from Leicester",
+                  desc: "Professional Leicester airport taxi service to Stansted Airport with experienced DBS-checked drivers.",
+                  href: "/pricing/airports/Stansted",
+                },
+                {
+                  name: "Luton Airport Taxi from Leicester",
+                  desc: "Book a fixed-price Leicester to Luton airport transfer with reliable 24/7 service.",
+                  href: "/pricing/airports/Luton",
+                },
+                {
+                  name: "Manchester Airport Taxi from Leicester",
+                  desc: "Long-distance Leicester taxi to Manchester Airport offering comfort, punctuality and competitive pricing.",
+                  href: "/pricing/airports/Manchester",
+                },
               ].map((airport, idx) => (
-                <Link key={idx} href={airport.href} className="bg-[#E4E4E4] p-6 rounded-xl hover:bg-[#06A0A6]/10 transition-colors">
+                <Link
+                  key={idx}
+                  href={airport.href}
+                  className="bg-[#E4E4E4] p-6 rounded-xl hover:bg-[#06A0A6]/10 transition-colors"
+                >
                   <Plane className="h-8 w-8 text-[#06A0A6] mb-3" />
-                  <p className="text-[#0F0D3E] font-semibold text-lg">{airport.name}</p>
-                  <p className="text-[#2E3C44] text-sm mt-2">Fixed-price transfers available</p>
+                  <h3 className="text-[#0F0D3E] font-semibold text-lg">
+                    {airport.name}
+                  </h3>
+                  <p className="text-[#2E3C44] text-sm mt-2">{airport.desc}</p>
                 </Link>
               ))}
             </div>
@@ -220,17 +324,42 @@ export default function AirportTransfersLeicesterPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-4">
-                Other Services You Might Need
+                Explore More Taxi Services in Leicester
               </h2>
+              <p className="text-lg text-[#2E3C44] max-w-3xl mx-auto">
+                In addition to our professional airport transfers, Aylestone
+                Taxi offers reliable local and long-distance taxi services
+                across Leicester and the UK.
+              </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Link href="/local-taxi-leicester" className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Local Taxi Service</h3>
-                <p className="text-[#2E3C44]">Quick and affordable local rides around Leicester</p>
+              <Link
+                href="/local-taxi-leicester"
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all"
+              >
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">
+                  Local Taxi Service in Leicester
+                </h3>
+                <p className="text-[#2E3C44]">
+                  Fast, affordable and dependable local taxi journeys across
+                  Leicester. Ideal for shopping trips, appointments, nights out
+                  and daily travel.
+                </p>
               </Link>
-              <Link href="/long-distance-taxi-leicester" className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Long-Distance & Corporate</h3>
-                <p className="text-[#2E3C44]">Comfortable long-distance travel and corporate accounts</p>
+
+              <Link
+                href="/long-distance-taxi-leicester"
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all"
+              >
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">
+                  Long-Distance & Corporate Taxi Service
+                </h3>
+                <p className="text-[#2E3C44]">
+                  Comfortable long-distance taxi travel from Leicester to
+                  destinations across the UK, including corporate accounts and
+                  executive transport.
+                </p>
               </Link>
             </div>
           </div>
@@ -240,20 +369,32 @@ export default function AirportTransfersLeicesterPage() {
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">
-              Book Your Airport Transfer Today
+              Book Your Leicester Airport Taxi Today
             </h2>
             <p className="text-xl text-[#E4E4E4] mb-8">
-              Reliable airport taxi service in Leicester with fixed prices and flight monitoring. 
-              Book online or call us now.
+              Need a reliable airport transfer from Leicester? Aylestone Taxi
+              offers fixed prices, 24/7 availability, professional drivers and
+              real-time flight monitoring. Secure your airport taxi now for a
+              safe, comfortable and stress-free journey.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <a
+                href={contactInfo.booking.online}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
                 <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center justify-center gap-3">
-                  Book Airport Transfer
+                  Book Leicester Airport Taxi
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
-              <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="w-full sm:w-auto">
+
+              <a
+                href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
+                className="w-full sm:w-auto"
+              >
                 <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 flex items-center justify-center gap-3">
                   <Phone className="h-5 w-5" />
                   Call {contactInfo.phone}
@@ -264,6 +405,5 @@ export default function AirportTransfersLeicesterPage() {
         </section>
       </main>
     </div>
-  )
+  );
 }
-
