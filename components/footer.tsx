@@ -132,6 +132,7 @@ export default function Footer() {
                   { name: "Leicester Airport Taxi", href: "/leicester-airport-taxi" },
                   { name: "Leicester to EMA Taxi", href: "/leicester-to-east-midlands-airport-taxi" },
                   { name: "Cheap Taxi Leicester", href: "/cheap-taxi-leicester" },
+                  { name: "24 Hour Taxi Leicester", href: "/24-hour-taxi-leicester" },
                   { name: "Leicester Taxi Company", href: "/leicester-taxi-company" }
                 ]}
               />

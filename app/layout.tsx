@@ -45,7 +45,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Aylestone Taxis | 24/7 Leicester Airport & Local Taxi Service",
   description: "Reliable 24/7 taxi service in Leicester. Airport transfers, school runs & local trips. Book online or call now for fast pickup.",
-  keywords: "Taxi Leicester, Taxi Near Me Leicester, Leicester Airport Taxi, Leicester to East Midlands Airport Taxi, Leicester Taxi Company, Cheap Taxi Leicester, taxi in Leicester, Leicester taxi service, airport taxi Leicester, taxi company Leicester, Aylestone Taxis",
+  keywords: "Taxi Leicester, Taxi Near Me Leicester, Leicester Airport Taxi, Leicester to East Midlands Airport Taxi, Leicester Taxi Company, Cheap Taxi Leicester, 24 Hour Taxi Leicester, taxi in Leicester, Leicester taxi service, airport taxi Leicester, taxi company Leicester, Aylestone Taxis",
   generator: "Aylestone Kings",
   authors: [{ name: "Aylestone Kings" }],
   openGraph: {
@@ -156,6 +156,7 @@ const schemaData = [
       "Leicester Airport Taxi",
       "Taxi Near Me Leicester",
       "Cheap Taxi Leicester",
+      "24 Hour Taxi Leicester",
       "Leicester Taxi Company"
     ],
     description: "Professional taxi service in Leicester offering airport transfers, local journeys, and 24/7 transportation services."
@@ -208,6 +209,14 @@ const schemaData = [
             "@type": "Service",
             name: "Cheap Taxi Leicester",
             description: "Affordable taxi service in Leicester with competitive pricing"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "24 Hour Taxi Leicester",
+            description: "Round-the-clock taxi service in Leicester, 24/7 including bank holidays"
           }
         }
       ]

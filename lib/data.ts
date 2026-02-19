@@ -20,19 +20,19 @@ export const siteData = {
     licenses: [
       "Licensed by Leicester City Council and Wolverhampton City Council",
       "Drivers are DBS checked, ensuring a safe and secure service",
-      "Providing airport, courier services and more"
-    ]
+      "Providing airport, courier services and more",
+    ],
   },
 
   // Navigation Menu
   navigation: {
     main: [
-      { name: "Home", href: "/" }, 
-      { name: "About Us", href: "/about" },  
+      { name: "Home", href: "/" },
+      { name: "About Us", href: "/about" },
       { name: "Airport Pricing", href: "/pricing" },
       { name: "Join as a Driver", href: "/drivers" },
       { name: "Contact", href: "/contact" },
-      { name: "More", href: "#", hasDropdown: true }
+      { name: "More", href: "#", hasDropdown: true },
     ],
     dropdown: [
       { name: "Services", href: "/services" },
@@ -85,19 +85,17 @@ export const siteData = {
   homepage: {
     hero: {
       title: "Aylestone Taxis – Your Trusted Taxi Service in Leicester",
-      subtitle: "Welcome to Aylestone Kings, Leicester's dependable and friendly taxi service. We provide fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide.",
+      subtitle:
+        "Welcome to Aylestone Kings, Leicester's dependable and friendly taxi service. We provide fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide.",
       ctaText: "Book Your Ride Now",
-      features: [
-        "Available 24/7",
-        "Immediate Pick-Up",
-        "Professional Drivers"
-      ]
+      features: ["Available 24/7", "Immediate Pick-Up", "Professional Drivers"],
     },
 
     aboutUs: {
       title: "Over 30 Years' Experience",
       subtitle: "Reliable Transport Since 1995",
-      description: "Established in 1995, Aylestone Kings set out with one mission: to deliver the safest, most comfortable, and most reliable taxi service in Leicester at prices everyone can afford. We provide transport across Leicester, Leicestershire, the East Midlands and nationwide — from airport transfers and commutes to appointments and safe rides home. All drivers are fully licensed and DBS-checked."
+      description:
+        "Established in 1995, Aylestone Kings set out with one mission: to deliver the safest, most comfortable, and most reliable taxi service in Leicester at prices everyone can afford. We provide transport across Leicester, Leicestershire, the East Midlands and nationwide — from airport transfers and commutes to appointments and safe rides home. All drivers are fully licensed and DBS-checked.",
     },
 
     whyChooseUs: {
@@ -108,8 +106,8 @@ export const siteData = {
         "Fully licensed, DBS-checked professional drivers",
         "Clean, comfortable and well-maintained cars",
         "Safe for families, students, businesses and tourists",
-        "Always open – 24/7/365 including bank holidays"
-      ]
+        "Always open – 24/7/365 including bank holidays",
+      ],
     },
 
     forPassengers: {
@@ -119,110 +117,121 @@ export const siteData = {
         "Book instantly in just a few taps",
         "Track your driver live in real time",
         "Enjoy safe, comfortable travel every journey",
-        "Pay your way with flexible payment options"
-      ]
+        "Pay your way with flexible payment options",
+      ],
     },
 
     businessTravel: {
       title: "Business Travel Solutions",
-      subtitle: "Professional transport for professional needs. Our corporate accounts offer:",
+      subtitle:
+        "Professional transport for professional needs. Our corporate accounts offer:",
       features: [
         "Centralised account management",
         "Complete booking history and reporting",
         "Customisable invoices and reports",
-        "A dedicated account manager for your business"
-      ]
+        "A dedicated account manager for your business",
+      ],
     },
 
     quickBooking: {
       title: "Book Your Taxi Instantly",
-      subtitle: "Available all year round day and night with immediate pick-up in most Leicester areas.",
-      description: "Book by landline, WhatsApp or online. Pre-bookings welcome. Instant confirmations.",
+      subtitle:
+        "Available all year round day and night with immediate pick-up in most Leicester areas.",
+      description:
+        "Book by landline, WhatsApp or online. Pre-bookings welcome. Instant confirmations.",
       features: [
         "SMS/WhatsApp confirmations",
         "Pre-bookings welcome",
         "Professional drivers",
-        "Modern, comfortable fleet"
-      ]
+        "Modern, comfortable fleet",
+      ],
     },
 
     executiveFleet: {
       title: "Luxury Transport, Every Time",
-      subtitle: "Travel in refined comfort with our luxury executive vehicles. Ideal for business journeys, special occasions, or discerning clients who expect nothing less than exceptional service."
+      subtitle:
+        "Travel in refined comfort with our luxury executive vehicles. Ideal for business journeys, special occasions, or discerning clients who expect nothing less than exceptional service.",
     },
 
     sustainability: {
       title: "Driving a Greener Future",
-      subtitle: "Based in Leicester, we provide reliable, eco-friendly transport services designed to reduce environmental impact. Our modern, low-emission fleet and ongoing sustainability initiatives help create cleaner, greener travel solutions for the Leicester community."
+      subtitle:
+        "Based in Leicester, we provide reliable, eco-friendly transport services designed to reduce environmental impact. Our modern, low-emission fleet and ongoing sustainability initiatives help create cleaner, greener travel solutions for the Leicester community.",
     },
 
     // SEO-focused extended homepage content (rendered near page bottom)
     seoContent: {
-      introHeading: "Taxi Leicester - Leicester's Most Trusted Taxi Service",
-      introBody: "Looking for a reliable Taxi in Leicester or a Taxi Near Me? Aylestone Kings is a leading Leicester taxi company, offering fast, professional and affordable taxi services across Leicester, Leicestershire and the wider East Midlands. Whether you need a cheap taxi in Leicester for your daily commute, a safe ride home, an appointment, or a reliable Leicester airport taxi, we’re available 24/7. Our fixed-price airport transfers serve all major UK airports, including East Midlands Airport, ensuring a smooth and stress-free journey every time.",
+      introHeading: "Leicester Taxi Service – Trusted Since 1995",
+      introBody:
+        "Looking for a reliable taxi in Leicester? Aylestone Kings provides fast, professional, and affordable taxi services across Leicester, Leicestershire and the wider East Midlands. Whether you need a local journey, a safe ride home, corporate travel, or a dependable airport transfer, our licensed drivers are available 24/7.",
 
-  mission: "As a trusted Leicester taxi company serving the local community since 1995, our mission is to provide safe, comfortable and reliable taxi services across Leicester at competitive prices. Whether you’re searching for a Taxi Leicester, Taxi Near Me Leicester, or a dependable airport transfer, we deliver quality service you can rely on.",
+      mission:
+        "We specialise in fixed-price airport transfers from Leicester to East Midlands Airport, Birmingham Airport, Heathrow and other major UK airports. With on-time pickups, comfortable vehicles, and experienced local drivers, we ensure every journey is smooth and stress-free.",
 
-  booking: {
-    heading: "Book Your Leicester Taxi Instantly",
-    bullets: [
-      "24/7 taxi service across Leicester",
-      "Fast pick-ups in Aylestone and surrounding areas",
-      "SMS and WhatsApp booking confirmations",
-      "Advance bookings available",
-      "Fully licensed, professional drivers",
-      "Modern, clean and well-maintained fleet"
-    ]
+      booking: {
+        heading: "Book Your Leicester Taxi Instantly",
+        bullets: [
+          "24/7 taxi service across Leicester",
+          "Fast pick-ups in Aylestone and surrounding areas",
+          "SMS and WhatsApp booking confirmations",
+          "Advance bookings available",
+          "Fully licensed, professional drivers",
+          "Modern, clean and well-maintained fleet",
+        ],
       },
       whyUs: {
         heading: "Why We Are Leicester’s Favourite Taxi Company",
         items: [
           {
             title: "Fast & Reliable Pick-Ups",
-            text: "We operate from several locations across Leicester for quick dispatch — even during busy periods."
+            text: "We operate from several locations across Leicester for quick dispatch — even during busy periods.",
           },
           {
             title: "Competitive, Honest Pricing",
-            text: "Fixed fares, no hidden charges, and clear pricing for all journeys."
+            text: "Fixed fares, no hidden charges, and clear pricing for all journeys.",
           },
           {
             title: "Experienced, Fully Licensed Drivers",
-            text: "DBS-checked, council-licensed, highly trained and customer-focused."
+            text: "DBS-checked, council-licensed, highly trained and customer-focused.",
           },
           {
             title: "Clean, Comfortable & Well-Maintained Cars",
-            text: "Saloon, estate, executive, 6- and 8-seaters, and MPVs."
+            text: "Saloon, estate, executive, 6- and 8-seaters, and MPVs.",
           },
           {
             title: "Safe for Everyone",
-            text: "Families, students, businesses, elderly passengers and tourists rely on us daily."
+            text: "Families, students, businesses, elderly passengers and tourists rely on us daily.",
           },
           {
             title: "Always Open – 24/7/365",
-            text: "We operate all day, every day including bank holidays."
-          }
-        ]
+            text: "We operate all day, every day including bank holidays.",
+          },
+        ],
       },
       airports: {
         heading: "Airport Taxi Leicester – Fixed Price Airport Transfers",
         airportsList: [
-          { name: "East Midlands Airport", href: "/pricing/airports/East-Midlands" },
+          {
+            name: "East Midlands Airport",
+            href: "/pricing/airports/East-Midlands",
+          },
           { name: "Birmingham Airport", href: "/pricing/airports/Birmingham" },
           { name: "Luton Airport", href: "/pricing/airports/Luton" },
           { name: "Heathrow Airport", href: "/pricing/airports/Heathrow" },
           { name: "Stansted Airport", href: "/pricing/airports/Stansted" },
           { name: "Gatwick Airport", href: "/pricing/airports/Gatwick" },
           { name: "Manchester Airport", href: "/pricing/airports/Manchester" },
-          { name: "London City Airport", href: "/pricing" }
+          { name: "London City Airport", href: "/pricing" },
         ],
         bullets: [
           "Fixed prices (no surge pricing)",
           "Meet & Greet service available",
           "Flight monitoring included",
           "Spacious cars for luggage",
-          "Perfect for families, students & businesses"
+          "Perfect for families, students & businesses",
         ],
-        closing: "Start or end your journey the right way — with a smooth, stress-free airport transfer."
+        closing:
+          "Start or end your journey the right way — with a smooth, stress-free airport transfer.",
       },
       services: {
         heading: "Our Taxi Services Across Leicester",
@@ -236,14 +245,17 @@ export const siteData = {
           "Hospital & Medical Appointments — friendly, supportive and on time",
           "6-Seater & 8-Seater Minibus Taxi — perfect for groups and airport runs",
           "Parcel Delivery / Courier Service — fast, secure same-day deliveries",
-          "Wheelchair Accessible Taxis — comfortable and supportive transport"
-        ]
+          "Wheelchair Accessible Taxis — comfortable and supportive transport",
+        ],
       },
       areas: {
         heading: "Areas We Cover in Leicester & Leicestershire",
         text: "Leicester City Centre, Oadby, Wigston, Evington, Belgrave, Spinney Hills, Highfields, Clarendon Park, Knighton, Hamilton, Beaumont Leys, Braunstone, Aylestone, Thurmaston, Syston, Birstall, Glenfield, Blaby, Narborough, Enderby, Loughborough, Hinckley, Coalville, Melton Mowbray, Market Harborough and more. If you are anywhere in Leicester — we’ll get to you quickly.",
         links: [
-          { name: "Leicester City Centre", href: "/taxis-in/leicester-city-centre" },
+          {
+            name: "Leicester City Centre",
+            href: "/taxis-in/leicester-city-centre",
+          },
           { name: "Aylestone", href: "/taxis-in/aylestone" },
           { name: "Oadby", href: "/taxis-in/oadby" },
           { name: "Wigston", href: "/taxis-in/wigston" },
@@ -267,8 +279,8 @@ export const siteData = {
           { name: "Hinckley", href: "/taxis-in/hinckley" },
           { name: "Coalville", href: "/taxis-in/coalville" },
           { name: "Melton Mowbray", href: "/taxis-in/melton-mowbray" },
-          { name: "Market Harborough", href: "/taxis-in/market-harborough" }
-        ]
+          { name: "Market Harborough", href: "/taxis-in/market-harborough" },
+        ],
       },
       fleet: {
         heading: "Our Taxi Fleet",
@@ -277,8 +289,8 @@ export const siteData = {
           "Executive Cars – premium comfort for business or occasions",
           "6-Seaters – great for families and groups",
           "8-Seater Minibuses – spacious and cost-effective",
-          ],
-        note: "Every vehicle is regularly cleaned, inspected and maintained."
+        ],
+        note: "Every vehicle is regularly cleaned, inspected and maintained.",
       },
       closingCta: {
         heading: "Book Your Taxi Today – Quick, Easy & Reliable",
@@ -288,9 +300,9 @@ export const siteData = {
           "Clean vehicles",
           "Fast pick-ups",
           "24/7 service",
-          "All journeys welcome"
-        ]
-      }
+          "All journeys welcome",
+        ],
+      },
     },
 
     customerReviews: {
@@ -299,44 +311,44 @@ export const siteData = {
         {
           text: "Fabulous service. We pre-booked outward journey not return. Turned up early. Would most definitely recommend this service and will save the number in case we are this way again. Thanks guys.!",
           author: "Jackie and Pette Scott",
-          type: "Airport Transfer"
+          type: "Airport Transfer",
         },
         {
           text: "Excellent and professional service given when we used 8 seater for a trip to Derby. Would definitely use again.",
           author: "Krystyna Biddles",
-          type: "Regular Customer"
+          type: "Regular Customer",
         },
         {
           text: "Called for price to airport qouted fab price on the call. Very helpful and reasonably priced. Best services provided.",
           author: "Javeria Imaan",
-          type: "Airport Transfer"
+          type: "Airport Transfer",
         },
         {
           text: "Booked taxi. Arrive within 3 mins. No messing around. Driver was cheerful despite the early start and got me there perfectly on time.",
           author: "Rosie Flora",
-          type: "Regular Customer"
+          type: "Regular Customer",
         },
         {
           text: "Used their wedding car service last month. Beautiful white Mercedes, immaculate driver in a suit, and they even decorated the car with ribbons. Thank you!",
           author: "Sophie & Tom Davies",
-          type: "Wedding Service"
+          type: "Wedding Service",
         },
         {
           text: "Booked for my mum's airport transfer to Gatwick. She was nervous about travelling alone, but the driver was so kind and reassuring. Outstanding service.",
           author: "Rachel Green",
-          type: "Airport Transfer"
+          type: "Airport Transfer",
         },
         {
           text: "Had an emergency hospital appointment and needed transport quickly. Aylestone Kings had a car with me within 15 minutes. Driver was so caring and made sure I got in safely. ",
           author: "Robert Mitchell",
-          type: "Emergency Transport"
+          type: "Emergency Transport",
         },
         {
           text: "Regular customer for school runs. Drivers are always friendly with the kids, cars are always clean, and they're never late. Takes the stress out of the school run completely.",
           author: "Amanda Foster",
-          type: "School Transport"
-        }
-      ]
+          type: "School Transport",
+        },
+      ],
     },
 
     safeTravel: {
@@ -401,28 +413,31 @@ export const siteData = {
 
     serviceCategories: {
       title: "Transportation Solutions",
-      subtitle: "Whether you're a passenger, driver, or business, we have the perfect solution for your transportation needs.",
+      subtitle:
+        "Whether you're a passenger, driver, or business, we have the perfect solution for your transportation needs.",
       passengers: {
         title: "For Passengers",
-        description: "Book rides in seconds, track your driver in real-time, and enjoy safe, comfortable journeys.",
+        description:
+          "Book rides in seconds, track your driver in real-time, and enjoy safe, comfortable journeys.",
         features: [
           "Instant booking system",
           "Live driver tracking",
           "Multiple payment options",
-          "Professional drivers"
-        ]
+          "Professional drivers",
+        ],
       },
       drivers: {
         title: "For Drivers",
-        description: "Join our team and enjoy flexible schedules, competitive earnings, and modern technology.",
+        description:
+          "Join our team and enjoy flexible schedules, competitive earnings, and modern technology.",
         features: [
           "Flexible schedules",
           "Competitive earnings",
           "Modern fleet",
-          "24/7 support"
-        ]
-      }
-    }
+          "24/7 support",
+        ],
+      },
+    },
   },
 
   // Driver Page Content
@@ -515,8 +530,7 @@ export const siteData = {
         id: "final-cta",
         type: "cta",
         heading: "Ready to Start Driving with Aylestone Taxis?",
-        body:
-          "Apply today and join Leicester's most trusted taxi service. Get steady earnings, flexible hours and a local team that's here to support you.",
+        body: "Apply today and join Leicester's most trusted taxi service. Get steady earnings, flexible hours and a local team that's here to support you.",
         primaryCta: {
           label: "Join as a Driver Now",
           href: "/driver-signup",
@@ -535,38 +549,68 @@ export const siteData = {
 
     overview: {
       title: "Vehicle Categories",
-      subtitle: "At Aylestone Kings, we offer a comprehensive range of vehicles to meet all your transportation needs. Whether you're travelling solo or with a group, our fleet guarantees comfort, reliability, and style."
+      subtitle:
+        "At Aylestone Kings, we offer a comprehensive range of vehicles to meet all your transportation needs. Whether you're travelling solo or with a group, our fleet guarantees comfort, reliability, and style.",
     },
 
     vehicles: [
       {
         name: "Estate Vehicle",
-        description: "Perfect for those who need extra space for luggage or equipment. Our estate vehicles combine practicality with comfort, making them ideal for airport transfers and shopping trips.",
-        features: ["Spacious luggage area", "Comfortable seating for 5", "Perfect for airport runs"],
+        description:
+          "Perfect for those who need extra space for luggage or equipment. Our estate vehicles combine practicality with comfort, making them ideal for airport transfers and shopping trips.",
+        features: [
+          "Spacious luggage area",
+          "Comfortable seating for 5",
+          "Perfect for airport runs",
+        ],
         image: "estateCar",
       },
       {
         name: "Executive",
-        description: "The ultimate in luxury and sophistication. Perfect for business meetings, corporate events, and when you want to make a lasting impression with premium travel.",
-        features: ["Luxury interior", "Premium sound system", "Climate control", "Professional service"],
+        description:
+          "The ultimate in luxury and sophistication. Perfect for business meetings, corporate events, and when you want to make a lasting impression with premium travel.",
+        features: [
+          "Luxury interior",
+          "Premium sound system",
+          "Climate control",
+          "Professional service",
+        ],
         image: "executiveCar",
       },
       {
         name: "MPV Vehicles",
-        description: "Perfect for group travel and family outings. Spacious interiors accommodate larger groups comfortably.",
-        features: ["Seats up to 8 passengers", "Extra luggage space", "Comfortable seating", "Group friendly"],
+        description:
+          "Perfect for group travel and family outings. Spacious interiors accommodate larger groups comfortably.",
+        features: [
+          "Seats up to 8 passengers",
+          "Extra luggage space",
+          "Comfortable seating",
+          "Group friendly",
+        ],
         image: "mpvCar",
       },
       {
         name: "Saloon Cars",
-        description: "Professional and comfortable vehicles ideal for business travel and daily commutes.",
-        features: ["Professional appearance", "Comfortable ride", "Fuel efficient", "Reliable service"],
+        description:
+          "Professional and comfortable vehicles ideal for business travel and daily commutes.",
+        features: [
+          "Professional appearance",
+          "Comfortable ride",
+          "Fuel efficient",
+          "Reliable service",
+        ],
         image: "saloonCar",
       },
       {
         name: "Luxury Vehicles",
-        description: "Top-of-the-line vehicles for the ultimate premium experience and VIP treatment.",
-        features: ["Premium amenities", "Chauffeur service", "Luxury interior", "VIP treatment"],
+        description:
+          "Top-of-the-line vehicles for the ultimate premium experience and VIP treatment.",
+        features: [
+          "Premium amenities",
+          "Chauffeur service",
+          "Luxury interior",
+          "VIP treatment",
+        ],
         image: "luxuryCar",
       },
     ],
@@ -579,27 +623,32 @@ export const siteData = {
     },
     about: {
       title: "About Us",
-      subtitle: "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
-      description: "With over 30 years in the industry, Aylestone Kings has grown into a trusted business for its dedication to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Kings has consistently led the way in industry innovation, working closely with local authorities and representing every local authority across the Midlands. The company seamlessly blends local heritage and values with global technological innovation.."
+      subtitle:
+        "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
+      description:
+        "With over 30 years in the industry, Aylestone Kings has grown into a trusted business for its dedication to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Kings has consistently led the way in industry innovation, working closely with local authorities and representing every local authority across the Midlands. The company seamlessly blends local heritage and values with global technological innovation..",
     },
     trusted: {
       title: "Our Reputation",
-      subtitle: "Each year, we serve over 10,000 passengers across the region, proudly maintaining an exceptional 99.7% satisfaction rating.",
-      description: "Whether you're looking for a safe, comfortable, and efficient journey — from daily commutes to working with public sector institutions and multinational corporations — we are here to meet your needs."
-    }
+      subtitle:
+        "Each year, we serve over 10,000 passengers across the region, proudly maintaining an exceptional 99.7% satisfaction rating.",
+      description:
+        "Whether you're looking for a safe, comfortable, and efficient journey — from daily commutes to working with public sector institutions and multinational corporations — we are here to meet your needs.",
+    },
   },
 
   // Social Media Links
   socialMedia: {
     facebook: "https://www.facebook.com/share/1EzHEEqLRK/",
-    instagram: "https://www.instagram.com/aylestone_kings?igsh=MTJqYW1rZ3RyODd0cA==",
+    instagram:
+      "https://www.instagram.com/aylestone_kings?igsh=MTJqYW1rZ3RyODd0cA==",
   },
 
   // Footer Content
   footer: {
     quickLinks: [
-      { name: "Home", href: "/" }, 
-      { name: "About Us", href: "/about" },  
+      { name: "Home", href: "/" },
+      { name: "About Us", href: "/about" },
       { name: "Airport Pricing", href: "/pricing" },
       { name: "Travel", href: "/travel" },
       { name: "Blog", href: "/blog" },
@@ -611,7 +660,12 @@ export const siteData = {
     services: [
       { name: "Airport Transfers", href: "/airport-transfers-leicester" },
       { name: "Local Taxi Service", href: "/local-taxi-leicester" },
-      { name: "Long-Distance & Corporate", href: "/long-distance-taxi-leicester" },
+      { name: "24 Hour Taxi Leicester", href: "/24-hour-taxi-leicester" },
+      { name: "Cheap Taxi Leicester", href: "/cheap-taxi-leicester" },
+      {
+        name: "Long-Distance & Corporate",
+        href: "/long-distance-taxi-leicester",
+      },
       { name: "Shopping", href: "/travel" },
       { name: "Students Transport", href: "/travel" },
       { name: "Match-Day Travel", href: "/travel" },
@@ -635,10 +689,16 @@ export const siteData = {
           { name: "Taxis in Stoneygate", href: "/taxis-in/stoneygate" },
           { name: "Taxis in Oadby", href: "/taxis-in/oadby" },
           { name: "Taxis in Wigston", href: "/taxis-in/wigston" },
-          { name: "Taxis in Leicester City Centre", href: "/taxis-in/leicester-city-centre" },
+          {
+            name: "Taxis in Leicester City Centre",
+            href: "/taxis-in/leicester-city-centre",
+          },
           { name: "Taxis in Fosse Park", href: "/taxis-in/fosse-park" },
           { name: "Taxis in Braunstone", href: "/taxis-in/braunstone" },
-          { name: "Taxis in Braunstone Town", href: "/taxis-in/braunstone-town" },
+          {
+            name: "Taxis in Braunstone Town",
+            href: "/taxis-in/braunstone-town",
+          },
           { name: "Taxis in Evington", href: "/taxis-in/evington" },
           { name: "Taxis in Humberstone", href: "/taxis-in/humberstone" },
           { name: "Taxis in Belgrave", href: "/taxis-in/belgrave" },
@@ -651,8 +711,8 @@ export const siteData = {
           { name: "Taxis in Syston", href: "/taxis-in/syston" },
           { name: "Taxis in Wigston Fields", href: "/taxis-in/wigston-fields" },
           { name: "Taxis in Thurmaston", href: "/taxis-in/thurmaston" },
-          { name: "Taxis in Birstall", href: "/taxis-in/birstall" }
-        ]
+          { name: "Taxis in Birstall", href: "/taxis-in/birstall" },
+        ],
       },
       {
         title: "Wider Leicester Districts",
@@ -660,13 +720,16 @@ export const siteData = {
           { name: "Taxis in Oadby", href: "/taxis-in/oadby" },
           { name: "Taxis in Wigston", href: "/taxis-in/wigston" },
           { name: "Taxis in South Wigston", href: "/taxis-in/south-wigston" },
-          { name: "Taxis in Braunstone Town", href: "/taxis-in/braunstone-town" },
+          {
+            name: "Taxis in Braunstone Town",
+            href: "/taxis-in/braunstone-town",
+          },
           { name: "Taxis in Wigston Fields", href: "/taxis-in/wigston-fields" },
           { name: "Taxis in Thurmaston", href: "/taxis-in/thurmaston" },
           { name: "Taxis in Syston", href: "/taxis-in/syston" },
           { name: "Taxis in Birstall", href: "/taxis-in/birstall" },
-          { name: "Taxis in Groby", href: "/taxis-in/groby" }
-        ]
+          { name: "Taxis in Groby", href: "/taxis-in/groby" },
+        ],
       },
       {
         title: "Surrounding Towns",
@@ -676,191 +739,293 @@ export const siteData = {
           { name: "Taxis in Enderby", href: "/taxis-in/enderby" },
           { name: "Taxis in Whetstone", href: "/taxis-in/whetstone" },
           { name: "Taxis in Countesthorpe", href: "/taxis-in/countesthorpe" },
-          { name: "Taxis in Broughton Astley", href: "/taxis-in/broughton-astley" },
+          {
+            name: "Taxis in Broughton Astley",
+            href: "/taxis-in/broughton-astley",
+          },
           { name: "Taxis in Cosby", href: "/taxis-in/cosby" },
           { name: "Taxis in Kibworth", href: "/taxis-in/kibworth" },
-          { name: "Taxis in Market Harborough", href: "/taxis-in/market-harborough" },
+          {
+            name: "Taxis in Market Harborough",
+            href: "/taxis-in/market-harborough",
+          },
           { name: "Taxis in Lutterworth", href: "/taxis-in/lutterworth" },
           { name: "Taxis in Hinckley", href: "/taxis-in/hinckley" },
           { name: "Taxis in Coalville", href: "/taxis-in/coalville" },
           { name: "Taxis in Melton Mowbray", href: "/taxis-in/melton-mowbray" },
-          { name: "Taxis in Groby", href: "/taxis-in/groby" }
-        ]
-      }
+          { name: "Taxis in Groby", href: "/taxis-in/groby" },
+        ],
+      },
     ],
     airportLinks: [
       { name: "Birmingham Airport", href: "/pricing/airports/Birmingham" },
-      { name: "East Midlands Airport", href: "/pricing/airports/East-Midlands" },
+      {
+        name: "East Midlands Airport",
+        href: "/pricing/airports/East-Midlands",
+      },
       { name: "Heathrow Airport", href: "/pricing/airports/Heathrow" },
       { name: "Gatwick Airport", href: "/pricing/airports/Gatwick" },
       { name: "Luton Airport", href: "/pricing/airports/Luton" },
       { name: "Stansted Airport", href: "/pricing/airports/Stansted" },
-      { name: "Manchester Airport", href: "/pricing/airports/Manchester" }
+      { name: "Manchester Airport", href: "/pricing/airports/Manchester" },
     ],
     destinationLinks: [
-      { name: "Taxis in Leicester Royal Infirmary", href: "/taxis-in/leicester-royal-infirmary" },
-      { name: "Taxis in Glenfield Hospital", href: "/taxis-in/glenfield-hospital" },
-      { name: "Taxis in Leicester General Hospital", href: "/taxis-in/leicester-general-hospital" },
-      { name: "Taxis in Spire Leicester Hospital", href: "/taxis-in/spire-leicester-hospital" },
-      { name: "Taxis in Nuffield Health Leicester Hospital", href: "/taxis-in/nuffield-health-leicester-hospital" },
-      { name: "Taxis in University of Leicester", href: "/taxis-in/university-of-leicester" },
-      { name: "Taxis in De Montfort University", href: "/taxis-in/de-montfort-university" },
-      { name: "Taxis in Leicester College", href: "/taxis-in/leicester-college" },
-      { name: "Taxis in Leicester Railway Station", href: "/taxis-in/leicester-railway-station" },
-      { name: "Taxis in South Wigston Station", href: "/taxis-in/south-wigston-station" },
-      { name: "Taxis in Narborough Station", href: "/taxis-in/narborough-station" },
-      { name: "Taxis in St Margaret's Bus Station", href: "/taxis-in/st-margarets-bus-station" },
-      { name: "Taxis in King Power Stadium", href: "/taxis-in/king-power-stadium" },
-      { name: "Taxis in Welford Road Stadium", href: "/taxis-in/welford-road-stadium" },
-      { name: "Taxis in Morningside Arena", href: "/taxis-in/morningside-arena" },
-      { name: "Taxis in Leicester Racecourse", href: "/taxis-in/leicester-racecourse" },
+      {
+        name: "Taxis in Leicester Royal Infirmary",
+        href: "/taxis-in/leicester-royal-infirmary",
+      },
+      {
+        name: "Taxis in Glenfield Hospital",
+        href: "/taxis-in/glenfield-hospital",
+      },
+      {
+        name: "Taxis in Leicester General Hospital",
+        href: "/taxis-in/leicester-general-hospital",
+      },
+      {
+        name: "Taxis in Spire Leicester Hospital",
+        href: "/taxis-in/spire-leicester-hospital",
+      },
+      {
+        name: "Taxis in Nuffield Health Leicester Hospital",
+        href: "/taxis-in/nuffield-health-leicester-hospital",
+      },
+      {
+        name: "Taxis in University of Leicester",
+        href: "/taxis-in/university-of-leicester",
+      },
+      {
+        name: "Taxis in De Montfort University",
+        href: "/taxis-in/de-montfort-university",
+      },
+      {
+        name: "Taxis in Leicester College",
+        href: "/taxis-in/leicester-college",
+      },
+      {
+        name: "Taxis in Leicester Railway Station",
+        href: "/taxis-in/leicester-railway-station",
+      },
+      {
+        name: "Taxis in South Wigston Station",
+        href: "/taxis-in/south-wigston-station",
+      },
+      {
+        name: "Taxis in Narborough Station",
+        href: "/taxis-in/narborough-station",
+      },
+      {
+        name: "Taxis in St Margaret's Bus Station",
+        href: "/taxis-in/st-margarets-bus-station",
+      },
+      {
+        name: "Taxis in King Power Stadium",
+        href: "/taxis-in/king-power-stadium",
+      },
+      {
+        name: "Taxis in Welford Road Stadium",
+        href: "/taxis-in/welford-road-stadium",
+      },
+      {
+        name: "Taxis in Morningside Arena",
+        href: "/taxis-in/morningside-arena",
+      },
+      {
+        name: "Taxis in Leicester Racecourse",
+        href: "/taxis-in/leicester-racecourse",
+      },
       { name: "Taxis in Leicester Market", href: "/taxis-in/leicester-market" },
-      { name: "Taxis in Meridian Business Park", href: "/taxis-in/meridian-business-park" },
+      {
+        name: "Taxis in Meridian Business Park",
+        href: "/taxis-in/meridian-business-park",
+      },
       { name: "Taxis in Grove Park", href: "/taxis-in/grove-park" },
-      { name: "Taxis in Jame Mosque Leicester", href: "/taxis-in/jame-mosque-leicester" },
+      {
+        name: "Taxis in Jame Mosque Leicester",
+        href: "/taxis-in/jame-mosque-leicester",
+      },
       { name: "Taxis in Masjid Umar", href: "/taxis-in/masjid-umar" },
-      { name: "Taxis in Shree Hindu Temple Leicester", href: "/taxis-in/shree-hindu-temple-leicester" },
-      { name: "Taxis in Guru Nanak Gurdwara Leicester", href: "/taxis-in/guru-nanak-gurdwara-leicester" },
+      {
+        name: "Taxis in Shree Hindu Temple Leicester",
+        href: "/taxis-in/shree-hindu-temple-leicester",
+      },
+      {
+        name: "Taxis in Guru Nanak Gurdwara Leicester",
+        href: "/taxis-in/guru-nanak-gurdwara-leicester",
+      },
       { name: "Taxi to Asda Fosse Park", href: "/taxis-in/asda-fosse-park" },
-      { name: "Taxi to Sainsburys Grove Triangle", href: "/taxis-in/sainsburys-grove-triangle" },
-      { name: "Taxi to Tesco Narborough Road", href: "/taxis-in/tesco-narborough-road" },
-      { name: "Taxi to Aldi Aylestone Road", href: "/taxis-in/aldi-aylestone-road" },
-      { name: "Taxi to Lidl Beaumont Leys", href: "/taxis-in/lidl-beaumont-leys" },
-      { name: "Taxi to Morrisons Freemens Common", href: "/taxis-in/morrisons-freemens-common" },
-      { name: "Taxi to Iceland City Centre", href: "/taxis-in/iceland-city-centre" },
-      { name: "Taxi to Farmfoods St Matthews", href: "/taxis-in/farmfoods-st-matthews" },
-      { name: "Taxi to M&S Foodhall City Centre", href: "/taxis-in/m-and-s-foodhall-city-centre" },
-      { name: "Taxi to Waitrose Oadby", href: "/taxis-in/waitrose-oadby" }
+      {
+        name: "Taxi to Sainsburys Grove Triangle",
+        href: "/taxis-in/sainsburys-grove-triangle",
+      },
+      {
+        name: "Taxi to Tesco Narborough Road",
+        href: "/taxis-in/tesco-narborough-road",
+      },
+      {
+        name: "Taxi to Aldi Aylestone Road",
+        href: "/taxis-in/aldi-aylestone-road",
+      },
+      {
+        name: "Taxi to Lidl Beaumont Leys",
+        href: "/taxis-in/lidl-beaumont-leys",
+      },
+      {
+        name: "Taxi to Morrisons Freemens Common",
+        href: "/taxis-in/morrisons-freemens-common",
+      },
+      {
+        name: "Taxi to Iceland City Centre",
+        href: "/taxis-in/iceland-city-centre",
+      },
+      {
+        name: "Taxi to Farmfoods St Matthews",
+        href: "/taxis-in/farmfoods-st-matthews",
+      },
+      {
+        name: "Taxi to M&S Foodhall City Centre",
+        href: "/taxis-in/m-and-s-foodhall-city-centre",
+      },
+      { name: "Taxi to Waitrose Oadby", href: "/taxis-in/waitrose-oadby" },
     ],
     priorityAreas: {
       opPriority: [
-        { 
-          name: "National Space Centre", 
+        {
+          name: "National Space Centre",
           href: "/taxis-in/national-space-centre",
           description: "Leicester's #1 attraction with huge search volume",
-          icon: "Rocket"
+          icon: "Rocket",
         },
-        { 
-          name: "Highcross Leicester", 
+        {
+          name: "Highcross Leicester",
           href: "/taxis-in/highcross-leicester",
-          description: "Major shopping centre with strong 'taxi to Highcross' demand",
-          icon: "ShoppingBag"
+          description:
+            "Major shopping centre with strong 'taxi to Highcross' demand",
+          icon: "ShoppingBag",
         },
-        { 
-          name: "Curve Theatre", 
+        {
+          name: "Curve Theatre",
           href: "/taxis-in/curve-theatre",
           description: "Events & nightlife, people book taxis late evenings",
-          icon: "Theater"
-        }
+          icon: "Theater",
+        },
       ],
       mediumPriority: [
-        { 
-          name: "King Richard III Visitor Centre", 
+        {
+          name: "King Richard III Visitor Centre",
           href: "/taxis-in/king-richard-iii-visitor-centre",
           description: "Big tourist pull, city centre location",
-          icon: "Crown"
+          icon: "Crown",
         },
-        { 
-          name: "Leicester Cathedral", 
+        {
+          name: "Leicester Cathedral",
           href: "/taxis-in/leicester-cathedral",
           description: "Historic site and Richard III tomb",
-          icon: "Church"
+          icon: "Church",
         },
-        { 
-          name: "De Montfort Hall", 
+        {
+          name: "De Montfort Hall",
           href: "/taxis-in/de-montfort-hall",
           description: "Concerts, graduations, large events",
-          icon: "Music"
-        }
+          icon: "Music",
+        },
       ],
       optionalPriority: [
-        { 
-          name: "Haymarket Shopping Centre", 
+        {
+          name: "Haymarket Shopping Centre",
           href: "/taxis-in/haymarket-shopping-centre",
           description: "Secondary to Highcross",
-          icon: "ShoppingCart"
+          icon: "ShoppingCart",
         },
-        { 
-          name: "Jewry Wall Museum", 
+        {
+          name: "Jewry Wall Museum",
           href: "/taxis-in/jewry-wall-museum",
           description: "Smaller attraction searches",
-          icon: "Calendar"
+          icon: "Calendar",
         },
-        { 
-          name: "New Walk Museum", 
+        {
+          name: "New Walk Museum",
           href: "/taxis-in/new-walk-museum",
           description: "Cultural attraction",
-          icon: "Calendar"
+          icon: "Calendar",
         },
-        { 
-          name: "Athena / City Rooms", 
+        {
+          name: "Athena / City Rooms",
           href: "/taxis-in/athena-city-rooms",
           description: "Event venues, good for weddings/conferences",
-          icon: "Calendar"
-        }
-      ]
+          icon: "Calendar",
+        },
+      ],
     },
     areaDetails: {
       oadby: {
-        landmarks: ["University of Leicester Botanic Garden", "The Parade (Oadby town centre)"]
-      }
-    }
+        landmarks: [
+          "University of Leicester Botanic Garden",
+          "The Parade (Oadby town centre)",
+        ],
+      },
+    },
   },
 
   // Blog Page Content
   blogPage: {
     title: "Aylestone Kings Blog",
-    subtitle: "Discover insights, tips, and stories about transportation in Leicester",
+    subtitle:
+      "Discover insights, tips, and stories about transportation in Leicester",
     blogs: [
       {
-        id: "black-friday-driver-deal-10-percent-commission",
-        title: "Black Friday Driver Deal – 10% Commission for Returning Drivers",
-        excerpt: "We're launching a limited-time Black Friday offer for former Aylestone drivers who want to return and maximise their earnings during the busiest period of the year.",
+        id: "leicester-to-east-midlands-airport-taxi-travel-guide-prices-booking-tips",
+        title:
+          "Leicester to East Midlands Airport Taxi – Travel Guide, Prices & Booking Tips",
+        excerpt:
+          "Your complete guide to getting from Leicester to East Midlands Airport (EMA) by taxi. Fixed prices from £40, 24/7 service, and expert booking tips for stress-free airport transfers.",
         content: `
-          <p>We're launching a limited-time Black Friday offer for former Aylestone drivers who want to return and maximise their earnings during the busiest period of the year.</p>
+          <p>Travelling from Leicester to East Midlands Airport (EMA)? A taxi is often the most convenient option for a stress-free start to your journey. This guide covers everything you need to know: travel times, prices, and how to book your Leicester to East Midlands Airport taxi with confidence.</p>
           
-          <h2>Rejoin Before Black Friday</h2>
-          <p>Any driver who rejoins before Black Friday will work on 10% commission until 31 December.</p>
-          <p>This offer is straightforward, with no hidden conditions.</p>
+          <h2>Why Choose a Leicester to East Midlands Airport Taxi?</h2>
+          <p>East Midlands Airport is Leicester's closest major airport, making it a popular choice for both business and leisure travellers. A dedicated taxi transfer from Leicester offers door-to-door convenience, fixed pricing, and reliable service – ideal when you need to catch a flight without worrying about parking or public transport connections.</p>
           
-          <h2>What You Get</h2>
+          <h2>Journey Details & Travel Time</h2>
+          <p>The journey from Leicester to East Midlands Airport typically takes around 30–40 minutes, depending on traffic. The route follows the M1 and A50, with experienced drivers knowing the best times and alternatives to avoid delays. We recommend allowing extra time during peak hours and bank holidays.</p>
           
-          <h3>10% Commission</h3>
-          <p>Earn more on every job through the busiest months of the year.</p>
-          
-          <h3>Quick Reactivation</h3>
-          <p>Minimal steps needed — get back on the road fast.</p>
-          
-          <h3>Full Office Support</h3>
-          <p>24/7 assistance, dispatch support, and WhatsApp help whenever needed.</p>
-          
-          <h3>Consistent Work</h3>
-          <p>High demand across Leicester means strong earning potential from day one.</p>
-          
-          <h2>Why Now Is the Best Time to Come Back</h2>
-          <p>November and December bring peak demand for:</p>
+          <h2>Prices for Leicester to East Midlands Airport Taxi</h2>
+          <p>Aylestone Kings offers fixed-price transfers – no meter running and no surprise charges. Typical rates include:</p>
           <ul>
-            <li>Christmas shopping trips</li>
-            <li>Airport transfers</li>
-            <li>Early morning and evening bookings</li>
-            <li>Cold weather travel</li>
-            <li>School runs</li>
-            <li>Night-time journeys</li>
+            <li><strong>Standard Saloon</strong> (1–4 passengers) – from £40</li>
+            <li><strong>MPV / Minibus</strong> (6–8 passengers) – from £60</li>
           </ul>
-          <p>This makes it the most profitable period for drivers, especially with a reduced commission rate.</p>
+          <p>Prices are from Leicester city centre; pickups from outlying areas may vary. Always confirm your final price at the time of booking.</p>
           
-          <h2>Ready to Rejoin?</h2>
-          <p>Fill in the online form on this page and our team will contact you the same day to get you activated.</p>
+          <h2>Booking Tips for Your Leicester to EMA Taxi</h2>
+          
+          <h3>Book in Advance</h3>
+          <p>For early morning or late-night flights, book at least 24 hours ahead to secure availability and your preferred vehicle type.</p>
+          
+          <h3>Provide Flight Details</h3>
+          <p>Share your flight number when booking. We monitor flights for delays and adjust pickup times so you are never left waiting or rushing.</p>
+          
+          <h3>Consider Return Transfers</h3>
+          <p>Booking a return taxi at the same time can simplify your trip and often helps with planning and availability.</p>
+          
+          <h3>Check Vehicle Size</h3>
+          <p>If you have extra luggage or a larger group, choose an MPV or minibus for more space and comfort.</p>
+          
+          <h2>What to Expect from Your Transfer</h2>
+          <p>All Aylestone Kings drivers are fully licensed, DBS-checked, and experienced in airport transfers. We provide door-to-door pickup, help with luggage, and meet-and-greet options on return journeys. Our 24/7 service means you can travel at any time, whether your flight departs at dawn or arrives late at night.</p>
+          
+          <h2>Ready to Book?</h2>
+          <p>Book your Leicester to East Midlands Airport taxi online, call 0116 2338888, or use WhatsApp for a quick confirmation. Fixed prices, reliable drivers, and peace of mind – your journey to EMA starts here.</p>
         `,
-        date: "2025-11-26",
+        date: "2025-02-19",
         author: "Aylestone Kings Team",
-        category: "Drivers",
-        image: "/Driver-blog.webp"
+        category: "Airport Transfers",
+        image: "/Reliable-airport-transfers.jpg",
       },
       {
         id: "why-leicester-locals-trust-aylestone-taxis",
         title: "Why Leicester Locals Trust Aylestone Taxis",
-        excerpt: "For over 30 years, Aylestone Kings has been the trusted choice for transportation in Leicester. Discover what makes us the preferred taxi service for thousands of local residents.",
+        excerpt:
+          "For over 30 years, Aylestone Kings has been the trusted choice for transportation in Leicester. Discover what makes us the preferred taxi service for thousands of local residents.",
         content: `
           <p>When it comes to choosing a taxi service in Leicester, trust is everything. For over 30 years, Aylestone Kings has been serving the local community with reliable, professional, and affordable transportation. But what exactly makes Leicester locals trust us with their journeys?</p>
           
@@ -887,12 +1052,13 @@ export const siteData = {
         date: "2025-11-04",
         author: "Aylestone Kings Team",
         category: "Community",
-        image: "/Locals-trust.jpg"
+        image: "/Locals-trust.jpg",
       },
       {
         id: "reliable-airport-transfers-from-leicester",
         title: "Reliable Airport Transfers from Leicester",
-        excerpt: "Planning your next trip? Discover why Aylestone Kings is the preferred choice for stress-free airport transfers from Leicester to all major UK airports.",
+        excerpt:
+          "Planning your next trip? Discover why Aylestone Kings is the preferred choice for stress-free airport transfers from Leicester to all major UK airports.",
         content: `
           <p>Planning a trip abroad? Whether you're heading to Birmingham, East Midlands, Heathrow, Gatwick, or any other major UK airport, reliable airport transfers are essential for a stress-free start to your journey. Aylestone Kings has been providing dependable airport transfer services from Leicester for over 30 years.</p>
           
@@ -942,12 +1108,13 @@ export const siteData = {
         date: "2025-11-03",
         author: "Aylestone Kings Team",
         category: "Airport Transfers",
-        image: "/Reliable-airport-transfers.jpg"
+        image: "/Reliable-airport-transfers.jpg",
       },
       {
         id: "explore-leicester-with-aylestone-taxis",
         title: "Explore Leicester with Aylestone Taxis",
-        excerpt: "Discover Leicester's hidden gems and popular attractions with Aylestone Kings. From historic sites to modern entertainment, we'll get you there in comfort and style.",
+        excerpt:
+          "Discover Leicester's hidden gems and popular attractions with Aylestone Kings. From historic sites to modern entertainment, we'll get you there in comfort and style.",
         content: `
           <p>Leicester is a city rich in history, culture, and entertainment. From the historic King Richard III Visitor Centre to the modern Highcross shopping centre, there's something for everyone to explore. Aylestone Kings makes it easy to discover all that Leicester has to offer with reliable, comfortable taxi services throughout the city.</p>
           
@@ -1014,12 +1181,13 @@ export const siteData = {
         date: "2025-11-05",
         author: "Aylestone Kings Team",
         category: "Local Guide",
-        image: "/Explore Leicester.jpg"
+        image: "/Explore Leicester.jpg",
       },
       {
         id: "best-taxi-service-leicester-airport-transfers",
         title: "Best Taxi Service in Leicester for Airport Transfers",
-        excerpt: "Discover why Aylestone Taxis is the best taxi service in Leicester for airport transfers. Fast, reliable, and affordable airport taxi service with fixed prices and flight monitoring.",
+        excerpt:
+          "Discover why Aylestone Taxis is the best taxi service in Leicester for airport transfers. Fast, reliable, and affordable airport taxi service with fixed prices and flight monitoring.",
         content: `
           <p>When it comes to airport transfers from Leicester, you need a taxi service you can trust. Aylestone Taxis has been providing reliable airport taxi services in Leicester for over 30 years, making us the best choice for your airport transfer needs.</p>
           
@@ -1089,12 +1257,13 @@ export const siteData = {
         date: "2025-12-10",
         author: "Aylestone Kings Team",
         category: "Airport Transfers",
-        image: "/BestAirportService-blog.webp"
+        image: "/BestAirportService-blog.webp",
       },
       {
         id: "how-to-book-taxi-leicester-quickly",
         title: "How to Book a Taxi in Leicester",
-        excerpt: "Learn how to book a taxi in Leicester quickly and easily. Online booking, phone booking, and WhatsApp options for fast taxi service in Leicester.",
+        excerpt:
+          "Learn how to book a taxi in Leicester quickly and easily. Online booking, phone booking, and WhatsApp options for fast taxi service in Leicester.",
         content: `
           <p>Need a taxi in Leicester quickly? Whether you're running late for an appointment, heading to the airport, or just need a ride around Leicester, booking a taxi should be fast and simple. Here's your complete guide to booking a taxi in Leicester quickly with Aylestone Taxis.</p>
           
@@ -1203,12 +1372,14 @@ export const siteData = {
         date: "2025-12-11",
         author: "Aylestone Kings Team",
         category: "Booking Guide",
-        image: "/HowTo-blog.png"
+        image: "/HowTo-blog.png",
       },
       {
         id: "local-taxi-service-vs-ride-sharing-apps-leicester",
-        title: "Why Choose a Local Taxi Service Over Ride-Sharing Apps in Leicester",
-        excerpt: "Discover why choosing a local taxi service in Leicester beats ride-sharing apps. Fixed prices, licensed drivers, local knowledge, and reliable service with Aylestone Taxis.",
+        title:
+          "Why Choose a Local Taxi Service Over Ride-Sharing Apps in Leicester",
+        excerpt:
+          "Discover why choosing a local taxi service in Leicester beats ride-sharing apps. Fixed prices, licensed drivers, local knowledge, and reliable service with Aylestone Taxis.",
         content: `
           <p>When you need a ride in Leicester, you have two main options: local taxi services like Aylestone Taxis or ride-sharing apps like Uber. While ride-sharing apps might seem convenient, there are compelling reasons why choosing a local taxi service in Leicester is often the better choice.</p>
           
@@ -1323,12 +1494,13 @@ export const siteData = {
         date: "2025-12-12",
         author: "Aylestone Kings Team",
         category: "Travel Tips",
-        image: "/WhyUs-blog.webp"
+        image: "/WhyUs-blog.webp",
       },
       {
         id: "top-tips-smooth-airport-pickup-leicester",
         title: "Top Tips for a Smooth Airport Pickup in Leicester",
-        excerpt: "Essential tips for a smooth airport pickup in Leicester. How to ensure reliable airport transfers, what to expect, and how to prepare for your journey.",
+        excerpt:
+          "Essential tips for a smooth airport pickup in Leicester. How to ensure reliable airport transfers, what to expect, and how to prepare for your journey.",
         content: `
           <p>Planning an airport pickup in Leicester? Whether you're picking up family members, friends, or clients, a smooth airport transfer requires preparation and choosing the right service. Here are our top tips for ensuring a smooth airport pickup in Leicester with Aylestone Taxis.</p>
           
@@ -1486,12 +1658,13 @@ export const siteData = {
         date: "2025-12-13",
         author: "Aylestone Kings Team",
         category: "Airport Transfers",
-        image: "/Tips-blog.webp"
+        image: "/Tips-blog.webp",
       },
       {
         id: "affordable-school-run-taxi-services-leicester",
         title: "Affordable School Run Taxi Services in Leicester",
-        excerpt: "Safe, reliable, and affordable school run taxi services in Leicester. Professional drivers, DBS checked, and child-friendly vehicles for school transport.",
+        excerpt:
+          "Safe, reliable, and affordable school run taxi services in Leicester. Professional drivers, DBS checked, and child-friendly vehicles for school transport.",
         content: `
           <p>Finding reliable, affordable school run taxi services in Leicester can be a challenge for busy parents. Aylestone Taxis provides safe, professional, and affordable school run services throughout Leicester, giving parents peace of mind and children a reliable way to get to and from school.</p>
           
@@ -1710,12 +1883,14 @@ export const siteData = {
         date: "2025-12-14",
         author: "Aylestone Kings Team",
         category: "School Transport",
-        image: "/Scgool-blog.webp"
+        image: "/Scgool-blog.webp",
       },
       {
         id: "taxi-services-leicester-early-morning-late-night-travel",
-        title: "Taxi Services in Leicester for Early Morning & Late Night Travel",
-        excerpt: "Need a reliable taxi service in Leicester for early morning or late night travel? Aylestone Taxis provides 24/7 service for airport transfers, night shifts, and early appointments.",
+        title:
+          "Taxi Services in Leicester for Early Morning & Late Night Travel",
+        excerpt:
+          "Need a reliable taxi service in Leicester for early morning or late night travel? Aylestone Taxis provides 24/7 service for airport transfers, night shifts, and early appointments.",
         content: `
           <p>Whether you need an early morning airport transfer, a late-night ride home, or transport for night shift work, finding reliable taxi services in Leicester during off-peak hours can be challenging. Aylestone Taxis provides 24/7 taxi services in Leicester, ensuring you can travel safely and comfortably at any time of day or night.</p>
           
@@ -1879,12 +2054,14 @@ export const siteData = {
         date: "2025-01-15",
         author: "Aylestone Kings Team",
         category: "Travel Tips",
-        image: "/Early morning and late night travel.webp"
+        image: "/Early morning and late night travel.webp",
       },
       {
         id: "areas-we-cover-leicester-local-taxi-service",
-        title: "Areas We Cover in Leicester – Local Taxi Service You Can Rely On",
-        excerpt: "Discover the comprehensive coverage of Aylestone Taxis across Leicester and surrounding areas. From city centre to suburbs, we provide reliable local taxi service throughout the region.",
+        title:
+          "Areas We Cover in Leicester – Local Taxi Service You Can Rely On",
+        excerpt:
+          "Discover the comprehensive coverage of Aylestone Taxis across Leicester and surrounding areas. From city centre to suburbs, we provide reliable local taxi service throughout the region.",
         content: `
           <p>When you need a reliable local taxi service in Leicester, coverage matters. Aylestone Taxis provides comprehensive taxi services across Leicester and surrounding areas, ensuring you can get where you need to go, wherever you are in the region.</p>
           
@@ -2082,14 +2259,14 @@ export const siteData = {
         date: "2025-01-16",
         author: "Aylestone Kings Team",
         category: "Local Guide",
-        image: "/Reliable taxi service in leicester-You can rely on.webp"
-      }
-    ]
+        image: "/Reliable taxi service in leicester-You can rely on.webp",
+      },
+    ],
   },
-}
+};
 
 // Export individual sections for easier imports
-export const companyInfo = siteData.company
+export const companyInfo = siteData.company;
 export const contactInfo = {
   phone: siteData.company.phone,
   whatsapp: siteData.company.whatsapp,
@@ -2098,19 +2275,19 @@ export const contactInfo = {
     street: "753A, Aylestone Rd, Aylestone",
     city: "Leicester",
     postcode: "LE2 8TG",
-    country: "United Kingdom"
+    country: "United Kingdom",
   },
   booking: {
     online: "https://aylestonekings.webbooker.icabbi.com/",
-    phone: siteData.company.phone
-  }
-}
+    phone: siteData.company.phone,
+  },
+};
 export const socialLinks = {
   facebook: siteData.socialMedia.facebook,
-  instagram: siteData.socialMedia.instagram
-}
-export const navigationItems = siteData.navigation
-export const footerData = siteData.footer
+  instagram: siteData.socialMedia.instagram,
+};
+export const navigationItems = siteData.navigation;
+export const footerData = siteData.footer;
 export const colorScheme = {
   primary: "#06A0A6",
   secondary: "#0F0D3E",
@@ -2118,17 +2295,17 @@ export const colorScheme = {
   text: {
     primary: "#0F0D3E",
     secondary: "#E4E4E4",
-    muted: "#6B7280"
+    muted: "#6B7280",
   },
   background: {
     primary: "#FFFFFF",
     secondary: "#F8FAFC",
-    dark: "#0F0D3E"
-  }
-}
+    dark: "#0F0D3E",
+  },
+};
 export const copyrightInfo = {
   year: 2025,
-  text: "© 2025 Aylestone Kings. All rights reserved."
-}
+  text: "© 2025 Aylestone Kings. All rights reserved.",
+};
 
-export default siteData
+export default siteData;

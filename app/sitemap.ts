@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   urls.push(createUrl('/leicester-to-east-midlands-airport-taxi', 0.9, 'weekly'))
   urls.push(createUrl('/leicester-taxi-company', 0.9, 'weekly'))
   urls.push(createUrl('/cheap-taxi-leicester', 0.9, 'weekly'))
+  urls.push(createUrl('/24-hour-taxi-leicester', 0.9, 'weekly'))
   urls.push(createUrl('/airport-transfers-leicester', 0.9, 'weekly'))
   urls.push(createUrl('/local-taxi-leicester', 0.9, 'weekly'))
   urls.push(createUrl('/long-distance-taxi-leicester', 0.9, 'weekly'))

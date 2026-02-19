@@ -73,7 +73,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
           : isChristmasActive
           ? 'bg-gradient-to-br from-[#0F0D3E] to-[#2E3C44] border-[#D9B35A]'
           : 'bg-cyan-500/20 backdrop-blur-md border-cyan-500/30'
-      } rounded-2xl shadow-xl border-2 p-4 sm:p-5 lg:p-6 ${className} animate-fade-in relative w-full max-w-[320px] sm:max-w-[340px] lg:max-w-[260px] xl:max-w-[280px] overflow-visible`}
+      } rounded-2xl shadow-xl border-2 p-4 sm:p-5 lg:p-4 ${className} animate-fade-in relative w-full max-w-[320px] sm:max-w-[340px] lg:max-w-[260px] xl:max-w-[280px] overflow-visible`}
       style={isValentineActive ? { 
         background: 'linear-gradient(135deg, #7F1D1D 0%, #9D174D 40%, #BE185D 75%, #EC4899 100%)',
         borderColor: 'rgba(236, 72, 153, 0.4)',
@@ -114,7 +114,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
         </div>
       )}
       
-      <h3 className={`text-xl lg:text-2xl font-bold mb-6 lg:mb-8 text-center border-b ${
+      <h3 className={`text-xl lg:text-lg font-bold mb-6 lg:mb-4 text-center border-b ${
         isValentineActive ? 'text-[#FBCFE8] border-[#EF5B6A]/50' : isChristmasActive ? 'text-[#D9B35A] border-[#D9B35A]/50' : 'text-[#0F0D3E] border-gray-200/50'
       } pb-3 relative z-10`}>
         Contact Us
@@ -123,7 +123,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
         }`}></div>
       </h3>
       
-      <div className="space-y-3 lg:space-y-4">
+      <div className="space-y-3 lg:space-y-2.5">
         {contactModes.map((mode, index) => {
           const IconComponent = mode.icon
           const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -153,7 +153,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
               onClick={handleClick}
               target={mode.name === 'Book Online' || mode.name === 'Email' || mode.name === 'Become a Driver' ? '_self' : '_blank'}
               rel={mode.name === 'Book Online' || mode.name === 'Email' || mode.name === 'Become a Driver' ? '' : 'noopener noreferrer'}
-              className={`${mode.bgColor} ${mode.hoverBgColor} text-white px-3 sm:px-4 lg:px-4 py-3 lg:py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 lg:gap-3 shadow-lg hover:shadow-2xl transform hover:scale-105 group hover:-translate-y-1 border border-white/20 relative overflow-hidden w-full`}
+              className={`${mode.bgColor} ${mode.hoverBgColor} text-white px-3 sm:px-4 lg:px-3 py-3 lg:py-2.5 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 lg:gap-2 shadow-lg hover:shadow-2xl transform hover:scale-105 group hover:-translate-y-1 border border-white/20 relative overflow-hidden w-full`}
               style={{
                 animationDelay: `${index * 100}ms`,
               } as React.CSSProperties}
@@ -161,9 +161,9 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
               {/* Subtle overlay effect */}
               <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
-              <IconComponent className="h-4 lg:h-5 w-4 lg:w-5 group-hover:scale-110 transition-transform duration-200 relative z-10 flex-shrink-0" />
+              <IconComponent className="h-4 lg:h-4 w-4 lg:w-4 group-hover:scale-110 transition-transform duration-200 relative z-10 flex-shrink-0" />
               <div className="flex flex-col items-start relative z-10 flex-1 min-w-0">
-                <span className="font-semibold text-sm lg:text-base">{mode.name}</span>
+                <span className="font-semibold text-sm lg:text-xs">{mode.name}</span>
                 {mode.name === 'WhatsApp' && (
                   <span className="text-xs opacity-90 text-white/90 break-all">{contactInfo.whatsapp}</span>
                 )}
@@ -183,8 +183,8 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       <div className={`border-t my-2 lg:my-2 ${isValentineActive ? 'border-[#EF5B6A]/30' : isChristmasActive ? 'border-[#D9B35A]/30' : 'border-blue-200'}`}></div>
       
       {/* App Download Section */}
-      <div className="pt-2 flex flex-col items-center">
-        <h4 className={`text-md font-semibold mb-3 text-center ${isValentineActive ? 'text-[#FBCFE8]' : isChristmasActive ? 'text-[#D9B35A]' : 'text-[#0F0D3E]'}`}>Download our app</h4>
+      <div className="pt-2 flex flex-col items-center lg:pt-1">
+        <h4 className={`text-md lg:text-sm font-semibold mb-3 lg:mb-2 text-center ${isValentineActive ? 'text-[#FBCFE8]' : isChristmasActive ? 'text-[#D9B35A]' : 'text-[#0F0D3E]'}`}>Download our app</h4>
         <AppDownloadButtons size="sm" />
       </div>
     </div>

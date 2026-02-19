@@ -13,6 +13,7 @@ import {
 import { contactInfo, siteData } from "@/lib/data";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title:
@@ -316,6 +317,20 @@ export default function AirportTransfersLeicesterPage() {
                 </Link>
               ))}
             </div>
+
+            {/* Blog Guide */}
+            <div className="mt-12 text-center">
+              <Link
+                href="/blog/leicester-to-east-midlands-airport-taxi-travel-guide-prices-booking-tips"
+                className="inline-flex items-center gap-2 text-[#06A0A6] hover:text-[#0F0D3E] font-semibold text-lg transition-colors"
+              >
+                Leicester to East Midlands Airport Taxi – Travel Guide, Prices & Booking Tips
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+              <p className="text-[#2E3C44] text-sm mt-2 max-w-2xl mx-auto">
+                Read our full guide to Leicester to EMA transfers, including prices, journey times and booking tips.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -365,6 +380,80 @@ export default function AirportTransfersLeicesterPage() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-8 text-center">
+              Frequently Asked Questions – Leicester Airport Taxi
+            </h2>
+
+            <div className="space-y-4">
+              <details className="border rounded-lg p-4">
+                <summary className="font-semibold cursor-pointer text-lg">
+                  How do I book a Leicester airport taxi?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  You can book online through our website or call us directly on 0116 2338888. Provide your flight details and pickup location in Leicester, and we'll handle the rest.
+                </p>
+              </details>
+
+              <details className="border rounded-lg p-4">
+                <summary className="font-semibold cursor-pointer text-lg">
+                  Do you monitor my flight?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  Yes, we track your flight status in real time and adjust your pickup time automatically for early arrivals or delays.
+                </p>
+              </details>
+
+              <details className="border rounded-lg p-4">
+                <summary className="font-semibold cursor-pointer text-lg">
+                  Are your drivers licensed and DBS-checked?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  Absolutely. All our drivers are fully licensed, insured, and DBS-checked to ensure your safety and comfort.
+                </p>
+              </details>
+
+              <details className="border rounded-lg p-4">
+                <summary className="font-semibold cursor-pointer text-lg">
+                  Can you help with luggage?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  Yes, our drivers assist with loading and unloading your luggage, and our vehicles are spacious enough to accommodate all your travel needs.
+                </p>
+              </details>
+
+              <details className="border rounded-lg p-4">
+                <summary className="font-semibold cursor-pointer text-lg">
+                  Do you offer fixed-price airport transfers?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  Yes, all airport transfers from Leicester have fixed prices with no hidden charges, so you know exactly what you'll pay upfront.
+                </p>
+              </details>
+
+              <details className="border rounded-lg p-4">
+                <summary className="font-semibold cursor-pointer text-lg">
+                  Can I pre-book my airport taxi?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  Definitely. We recommend pre-booking to secure your Leicester airport taxi, especially during peak travel times. You'll have peace of mind knowing we'll arrive on time.
+                </p>
+              </details>
+
+              <details className="border rounded-lg p-4">
+                <summary className="font-semibold cursor-pointer text-lg">
+                  Do you operate 24/7?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  Yes, Aylestone Taxi operates 24 hours a day, 7 days a week, ensuring you can always get a reliable Leicester airport transfer whenever you need one.
+                </p>
+              </details>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -403,6 +492,77 @@ export default function AirportTransfersLeicesterPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Schema */}
+        <Script
+          id="airport-faq-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "How do I book a Leicester airport taxi?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "You can book online through our website or call us directly on 0116 2338888. Provide your flight details and pickup location in Leicester, and we'll handle the rest.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Do you monitor my flight?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, we track your flight status in real time and adjust your pickup time automatically for early arrivals or delays.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Are your drivers licensed and DBS-checked?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Absolutely. All our drivers are fully licensed, insured, and DBS-checked to ensure your safety and comfort.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Can you help with luggage?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, our drivers assist with loading and unloading your luggage, and our vehicles are spacious enough to accommodate all your travel needs.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Do you offer fixed-price airport transfers?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, all airport transfers from Leicester have fixed prices with no hidden charges, so you know exactly what you'll pay upfront.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Can I pre-book my airport taxi?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Definitely. We recommend pre-booking to secure your Leicester airport taxi, especially during peak travel times. You'll have peace of mind knowing we'll arrive on time.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Do you operate 24/7?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, Aylestone Taxi operates 24 hours a day, 7 days a week, ensuring you can always get a reliable Leicester airport transfer whenever you need one.",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
       </main>
     </div>
   );
