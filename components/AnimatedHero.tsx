@@ -26,9 +26,9 @@ export default function AnimatedHero() {
   // Core homepage search-intent messaging (used when not in seasonal modes)
   const isSeasonal = isHalloweenActive || isChristmasActive || isValentineActive
   const coreFeatures = [
-    "24/7 Leicester taxis",
-    "Fixed affordable fares",
-    "Licensed Leicester taxis",
+    "24/7 Leicester Taxi Service",
+    "Fixed & Transparent Fares",
+    "Licensed & DBS-Checked Drivers",
   ]
   
   // Generate fixed positions for snow crystals (generated once, stays fixed)
@@ -200,7 +200,7 @@ export default function AnimatedHero() {
             
             {/* Main Heading */}
             <h1
-              className={`text-5xl md:text-6xl font-bold mb-4 leading-tight ${
+              className={`text-3xl md:text-4xl font-bold mb-4 leading-tight ${
                 isChristmasActive ? 'text-white' : 'text-[#0F0D3E]'
               }`}
             >
@@ -210,12 +210,12 @@ export default function AnimatedHero() {
                 ? "Reliable, Safe Taxi for Your Valentine's Evening"
                 : isChristmasActive
                 ? "Leicester Taxi Service This Christmas"
-                : "Reliable Leicester Taxis – Available 24/7"}
+                : "Leicester Taxi Service & Airport Transfers – Available 24/7"}
             </h1>
 
             {/* Description */}
             <p
-              className={`text-xl mb-6 leading-relaxed ${
+              className={`text-xl mb-4 leading-relaxed ${
                 isChristmasActive ? 'text-[#E4E4E4]' : 'text-[#2E3C44]'
               }`}
             >
@@ -223,7 +223,7 @@ export default function AnimatedHero() {
                 ? "Pre-book with confidence. Licensed, safe and on time — every time."
                 : isSeasonal
                 ? siteData.homepage.hero.subtitle
-                : "Fixed prices, local drivers, and airport transfers. Book in seconds."}
+                : "Fixed-price Leicester taxis with licensed local drivers. Reliable transfers to East Midlands, Birmingham, Heathrow and all major UK airports."}
             </p>
 
             {/* Enhanced Features with Icons */}

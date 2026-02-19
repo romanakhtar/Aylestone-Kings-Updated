@@ -5,9 +5,9 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Cheap Taxi Leicester | Affordable Taxi Service | Best Prices | Aylestone Kings",
-  description: "Cheap Taxi Leicester - Affordable taxi service in Leicester with competitive prices. No hidden fees, transparent pricing, professional service. Book your Cheap Taxi Leicester now - call 0116 2338888.",
-  keywords: "Cheap Taxi Leicester, cheap taxi in Leicester, affordable taxi Leicester, budget taxi Leicester, low cost taxi Leicester, cheap taxi service Leicester",
+  title: "Cheap Taxi Leicester | 24 Hour Affordable Taxi | Best Prices | Aylestone Kings",
+  description: "Cheap Taxi Leicester - Affordable 24 hour taxi service in Leicester with competitive prices. No hidden fees, transparent pricing, available day and night. Book your Cheap Taxi Leicester now - call 0116 2338888.",
+  keywords: "Cheap Taxi Leicester, cheap taxi in Leicester, 24 hour taxi Leicester, affordable taxi Leicester, budget taxi Leicester, low cost taxi Leicester, cheap taxi service Leicester, 24 hour cheap taxi Leicester",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/cheap-taxi-leicester",
   },
@@ -35,7 +35,7 @@ export default function CheapTaxiLeicesterPage() {
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
                 Looking for a <strong>Cheap Taxi Leicester</strong>? Aylestone Kings offers affordable taxi services 
                 throughout Leicester with competitive prices, no hidden fees, and professional service. 
-                Quality <strong>Cheap Taxi Leicester</strong> service that doesn't compromise on safety or reliability.
+                Our <strong>cheap 24 hour taxi Leicester</strong> is available day and night – quality service that doesn't compromise on safety or reliability.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -240,10 +240,10 @@ export default function CheapTaxiLeicesterPage() {
                 <div className="flex items-start gap-3">
                   <Check className="h-6 w-6 text-[#06A0A6] flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-lg font-bold text-[#0F0D3E] mb-2">24/7 Availability</h3>
+                    <h3 className="text-lg font-bold text-[#0F0D3E] mb-2">24 Hour Taxi Leicester – Always Available</h3>
                     <p className="text-[#2E3C44]">
-                      Our <strong>Cheap Taxi Leicester</strong> service is available 24/7, including bank holidays. 
-                      Affordable transport whenever you need it.
+                      Our <strong>cheap 24 hour taxi Leicester</strong> service is available 24/7, including bank holidays. 
+                      Affordable transport whenever you need it – whether it's 3am or 3pm. Need a <Link href="/24-hour-taxi-leicester" className="text-[#06A0A6] hover:underline font-medium">24 hour taxi Leicester</Link>? We're here.
                     </p>
                   </div>
                 </div>
@@ -272,8 +272,8 @@ export default function CheapTaxiLeicesterPage() {
               Book Your Cheap Taxi Leicester Today
             </h2>
             <p className="text-xl text-[#E4E4E4] mb-8">
-              Affordable, reliable <strong>Cheap Taxi Leicester</strong> service. 
-              Competitive prices, professional service, no hidden fees.
+              Affordable, reliable <strong>Cheap Taxi Leicester</strong> service – available 24 hours. 
+              Competitive prices, professional service, no hidden fees. <strong>Cheap 24 hour taxi Leicester</strong> when you need it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
