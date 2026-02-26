@@ -1016,7 +1016,7 @@ export const siteData = {
           <h2>Ready to Book?</h2>
           <p>Book your Leicester to East Midlands Airport taxi online, call 0116 2338888, or use WhatsApp for a quick confirmation. Fixed prices, reliable drivers, and peace of mind – your journey to EMA starts here.</p>
         `,
-        date: "2025-02-19",
+        date: "2026-02-17",
         author: "Aylestone Kings Team",
         category: "Airport Transfers",
         image: "/Reliable-airport-transfers.jpg",
