@@ -5,7 +5,7 @@ export const siteData = {
     tagline: "",
     region: "Aylestone and surrounding areas",
     phone: "0116 2338888",
-    whatsapp: "+447535855786",
+    whatsapp: "+447888873795",
     email: "info@aylestone-taxis.co.uk",
     address: "753A Aylestone Rd, Aylestone, Leicester, LE2 8TG, UK",
     description:
@@ -1291,7 +1291,7 @@ export const siteData = {
           </ul>
           
           <h3>3. WhatsApp Booking - Convenient Option</h3>
-          <p>Book a taxi in Leicester via WhatsApp for a quick, convenient booking experience. Simply message us at +447535855786 with your pickup location, destination, and preferred time. We'll confirm your booking quickly and send driver details when your taxi is dispatched.</p>
+          <p>Book a taxi in Leicester via WhatsApp for a quick, convenient booking experience. Simply message us at +447888873795 with your pickup location, destination, and preferred time. We'll confirm your booking quickly and send driver details when your taxi is dispatched.</p>
           <p><strong>WhatsApp booking benefits:</strong></p>
           <ul>
             <li>Quick messaging</li>
@@ -1562,7 +1562,7 @@ export const siteData = {
             <li>Driver's contact number</li>
             <li>Booking confirmation</li>
             <li>Our main number: 0116 2338888</li>
-            <li>WhatsApp contact: +447535855786</li>
+            <li>WhatsApp contact: +447888873795</li>
           </ul>
           <p>Having these details ready ensures you can contact us if needed during your airport pickup in Leicester.</p>
           
@@ -1774,7 +1774,7 @@ export const siteData = {
           <p>Call 0116 2338888 to discuss your school run needs. We can set up regular bookings and answer any questions.</p>
           
           <h3>WhatsApp</h3>
-          <p>Message us on WhatsApp at +447535855786 for quick booking and updates.</p>
+          <p>Message us on WhatsApp at +447888873795 for quick booking and updates.</p>
           
           <h2>Areas We Cover</h2>
           <p>Our school run taxi services in Leicester cover:</p>
@@ -1976,7 +1976,7 @@ export const siteData = {
           <ul>
             <li><strong>Online:</strong> Book 24/7 through our website</li>
             <li><strong>Phone:</strong> Call 0116 2338888</li>
-            <li><strong>WhatsApp:</strong> Message +447535855786</li>
+            <li><strong>WhatsApp:</strong> Message +447888873795</li>
             <li><strong>Mobile App:</strong> Book and track your journey</li>
           </ul>
           
@@ -2228,7 +2228,7 @@ export const siteData = {
           <ul>
             <li><strong>Online:</strong> Book through our website 24/7</li>
             <li><strong>Phone:</strong> Call 0116 2338888</li>
-            <li><strong>WhatsApp:</strong> Message +447535855786</li>
+            <li><strong>WhatsApp:</strong> Message +447888873795</li>
             <li><strong>Mobile App:</strong> Book and track your journey</li>
           </ul>
           
