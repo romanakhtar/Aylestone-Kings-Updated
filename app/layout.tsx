@@ -82,147 +82,77 @@ export const metadata: Metadata = {
   },
 }
 
-const schemaData = [
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://aylestone-taxis.co.uk/#organization",
-    name: "Aylestone Kings",
-    alternateName: "Aylestone Taxis",
-    url: "https://aylestone-taxis.co.uk",
-    logo: "https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png",
-    image: "https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png",
-    telephone: "+44-116-233-8888",
-    email: "info@aylestone-taxis.co.uk",
-    priceRange: "££",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "753A Aylestone Road",
-      addressLocality: "Leicester",
-      addressRegion: "Leicestershire",
-      postalCode: "LE2 8TG",
-      addressCountry: "GB"
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: "52.6369",
-      longitude: "-1.1398"
-    },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        opens: "00:00",
-        closes: "23:59"
-      }
-    ],
-    areaServed: {
-      "@type": "City",
-      name: "Leicester"
-    },
-    sameAs: [
-      "https://www.facebook.com/share/1EzHEEqLRK/",
-      "https://www.instagram.com/aylestone_kings"
-    ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "1000",
-      bestRating: "5",
-      worstRating: "1"
-    }
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "TaxiService"],
+  name: "Aylestone Kings",
+  alternateName: "Aylestone Taxis",
+  description:
+    "Aylestone Kings — Leicester's trusted private hire taxi service since 1995. Licensed by Leicester City Council and Wolverhampton City Council. 24/7 airport transfers, local taxis, school runs, and corporate accounts.",
+  url: "https://aylestone-taxis.co.uk",
+  telephone: "+441162338888",
+  email: "info@aylestone-taxis.co.uk",
+  foundingDate: "1995",
+  priceRange: "££",
+  currenciesAccepted: "GBP",
+  paymentAccepted: "Cash, Credit Card, Debit Card, Bank Transfer",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.7",
+    reviewCount: "111",
+    bestRating: "5",
+    worstRating: "1",
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "TaxiService",
-    name: "Aylestone Kings Taxi Service",
-    provider: {
-      "@id": "https://aylestone-taxis.co.uk/#organization"
-    },
-    areaServed: {
-      "@type": "City",
-      name: "Leicester"
-    },
-    serviceType: [
-      "Taxi Leicester",
-      "Leicester Airport Taxi",
-      "Taxi Near Me Leicester",
-      "Cheap Taxi Leicester",
-      "24 Hour Taxi Leicester",
-      "Leicester Taxi Company"
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    opens: "00:00",
+    closes: "23:59",
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "753A Aylestone Road",
+    addressLocality: "Aylestone",
+    addressRegion: "Leicester",
+    postalCode: "LE2 8TG",
+    addressCountry: "GB",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "52.6003",
+    longitude: "-1.1461",
+  },
+  areaServed: [
+    "Leicester",
+    "Aylestone",
+    "Wigston",
+    "Oadby",
+    "Glen Parva",
+    "Eyres Monsell",
+    "Saffron Lane",
+    "Braunstone",
+    "South Wigston",
+    "Knighton",
+    "Clarendon Park",
+    "Beaumont Leys",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Taxi Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Local Taxi Leicester" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airport Taxi Transfer" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "School Run Taxi" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate Taxi Account" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Wheelchair Accessible Taxi" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Long Distance Taxi" } },
     ],
-    description: "Professional taxi service in Leicester offering airport transfers, local journeys, and 24/7 transportation services."
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Aylestone Kings",
-    url: "https://aylestone-taxis.co.uk",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://aylestone-taxis.co.uk/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: "Taxi Service",
-    provider: {
-      "@id": "https://aylestone-taxis.co.uk/#organization"
-    },
-    areaServed: {
-      "@type": "City",
-      name: "Leicester"
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Taxi Services",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Taxi Leicester",
-            description: "Professional taxi service throughout Leicester"
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Leicester Airport Taxi",
-            description: "Airport transfer service from Leicester to all major UK airports"
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Cheap Taxi Leicester",
-            description: "Affordable taxi service in Leicester with competitive pricing"
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "24 Hour Taxi Leicester",
-            description: "Round-the-clock taxi service in Leicester, 24/7 including bank holidays"
-          }
-        }
-      ]
-    }
-  }
-]
+  sameAs: [
+    "https://www.google.com/maps/place/Aylestone+Kings",
+    "https://www.yell.com/biz/aylestone-kings",
+  ],
+}
 
 export default function RootLayout({
   children,

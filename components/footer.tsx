@@ -127,6 +127,7 @@ export default function Footer() {
                   { name: "Airport Transfers", href: "/airport-transfers-leicester" },
                   { name: "Local Taxi Service", href: "/local-taxi-leicester" },
                   { name: "Long-Distance & Corporate", href: "/long-distance-taxi-leicester" },
+                  { name: "Corporate Taxi Account Leicester", href: "/corporate-taxi-account-leicester" },
                   { name: "Taxi Leicester", href: "/taxi-leicester" },
                   { name: "Taxi Near Me Leicester", href: "/taxi-near-me-leicester" },
                   { name: "Leicester Airport Taxi", href: "/leicester-airport-taxi" },

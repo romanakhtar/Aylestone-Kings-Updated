@@ -9,10 +9,10 @@ import {
   Moon,
   Sun,
   Calendar,
-} from "lucide-react";
-import { contactInfo } from "@/lib/data";
-import type { Metadata } from "next";
-import Link from "next/link";
+} from "lucide-react"
+import { contactInfo } from "@/lib/data"
+import type { Metadata } from "next"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title:
@@ -31,7 +31,41 @@ export const metadata: Metadata = {
       "24 hour taxi Leicester - Round-the-clock taxi service. Day or night, bank holidays included. Book now or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/24-hour-taxi-leicester",
   },
-};
+}
+
+const faqSchemaTwentyFourHour = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Are your taxis really available 24 hours a day in Leicester?",
+      acceptedAnswer: {
+        "@type": "Answer",              
+        text:
+          "Yes. Aylestone Kings operates a genuine 24 hour taxi service in Leicester, 365 days a year including nights, weekends and bank holidays.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I book a 24 hour taxi in Leicester?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "You can book a 24 hour taxi in Leicester by calling 0116 233 8888 or using our online booking system to pre-book day or night journeys.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you charge extra for late night or early morning taxis?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "No. Our 24 hour taxi Leicester service uses fair, transparent pricing with no surge charges for late night or early morning journeys.",
+      },
+    },
+  ],
+}
 
 export default function TwentyFourHourTaxiLeicesterPage() {
   return (
@@ -178,6 +212,29 @@ export default function TwentyFourHourTaxiLeicesterPage() {
                   We&apos;ve been providing a <strong>24 hour taxi Leicester</strong>{" "}
                   since 1995. Thousands of customers trust us for late-night
                   rides, early airport runs, and emergency transport.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
+                  <Shield className="h-6 w-6 text-[#06A0A6]" />
+                </div>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">
+                  School Run Taxi Leicester
+                </h3>
+                <p className="text-[#2E3C44]">
+                  Need an early-morning or afternoon{" "}
+                  <strong>school run taxi Leicester</strong>? We offer enhanced
+                  DBS-checked drivers with the option for a consistent same
+                  driver for regular school runs in areas like Aylestone,
+                  Wigston, Knighton and Clarendon Park.{" "}
+                  <Link
+                    href="/school-run-taxi-leicester"
+                    className="text-[#06A0A6] hover:underline font-medium"
+                  >
+                    Learn more about our school run taxis
+                  </Link>
+                  .
                 </p>
               </div>
             </div>
@@ -380,6 +437,10 @@ export default function TwentyFourHourTaxiLeicesterPage() {
           </div>
         </section>
       </main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaTwentyFourHour) }}
+      />
     </div>
-  );
+  )
 }

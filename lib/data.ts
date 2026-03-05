@@ -663,8 +663,20 @@ export const siteData = {
       { name: "24 Hour Taxi Leicester", href: "/24-hour-taxi-leicester" },
       { name: "Cheap Taxi Leicester", href: "/cheap-taxi-leicester" },
       {
+        name: "Meet and Greet Taxi Leicester",
+        href: "/meet-and-greet-taxi-leicester",
+      },
+      {
+        name: "School Run Taxi Leicester",
+        href: "/school-run-taxi-leicester",
+      },
+      {
         name: "Long-Distance & Corporate",
         href: "/long-distance-taxi-leicester",
+      },
+      {
+        name: "Corporate Taxi Account Leicester",
+        href: "/corporate-taxi-account-leicester",
       },
       { name: "Shopping", href: "/travel" },
       { name: "Students Transport", href: "/travel" },
