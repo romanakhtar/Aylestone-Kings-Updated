@@ -986,6 +986,51 @@ export const siteData = {
       "Discover insights, tips, and stories about transportation in Leicester",
     blogs: [
       {
+        id: "how-much-does-taxi-cost-leicester-2026-fare-guide",
+        title: "How much does a taxi cost in Leicester? 2026 Fare Guide",
+        excerpt:
+          "A complete taxi fare guide for Leicester in 2026. Example prices for Aylestone to city centre, EMA, and train station. Fixed prices vs Uber surge, and how to book. Your go-to resource for taxi prices Leicester.",
+        content: `
+          <p>Planning a journey in Leicester and wondering what you'll pay? This 2026 taxi fare guide covers typical <strong>taxi prices Leicester</strong> for popular routes, explains the difference between fixed fares and Uber surge pricing, and shows you how to book. Whether you need a <a href="/cheap-taxi-leicester">cheap taxi Leicester</a> for a short trip or a reliable transfer to the airport, we've got the numbers.</p>
+          
+          <h2>Example Taxi Prices from Aylestone</h2>
+          <p>Rough prices for common routes from Aylestone, south-west Leicester, give you a sense of what to expect. These are indicative fixed prices – always confirm at booking.</p>
+          <ul>
+            <li><strong>Aylestone to Leicester city centre</strong> – from £9 (approx. 10–15 mins)</li>
+            <li><strong>Aylestone to Leicester train station</strong> (London Road) – from £11 (approx. 12–18 mins)</li>
+            <li><strong>Aylestone to East Midlands Airport (EMA)</strong> – from £42 (approx. 35–45 mins)</li>
+          </ul>
+          <p>City centre and train station journeys are short, so they stay low cost. For longer trips like airport transfers, check our <a href="/leicester-airport-taxi">Leicester Airport Taxi</a> page for full pricing to all major UK airports.</p>
+          
+          <h2>Fixed Prices vs Uber Surge</h2>
+          <p>One of the main benefits of a local taxi service like Aylestone Kings is <strong>fixed prices</strong>. We quote a price upfront – no meter surprises and no surge pricing. Ride apps such as Uber use demand-based surge pricing, so the same journey can cost far more when it's busy, raining, or late at night.</p>
+          <ul>
+            <li><strong>Fixed price:</strong> Same fare whether it's rush hour or 3am – you know what you pay before you travel.</li>
+            <li><strong>Uber surge:</strong> Prices can double or more at peak times, during bad weather, or when demand is high.</li>
+          </ul>
+          <p>For predictable costs, especially for airport runs or regular trips, a fixed-price <strong>taxi fare guide Leicester</strong> will always favour traditional taxi services over surge-based apps.</p>
+          
+          <h2>How to Book a Leicester Taxi</h2>
+          <p>Booking is straightforward:</p>
+          <ol>
+            <li><strong>Online</strong> – Use our booking system for instant confirmation.</li>
+            <li><strong>Phone</strong> – Call 0116 2338888 for immediate or advance bookings.</li>
+            <li><strong>WhatsApp</strong> – Message us for a quick quote and booking.</li>
+          </ol>
+          <p>Pre-book for early mornings, late nights, or airport transfers. For airport journeys, we monitor flights and adjust pickup times if there are delays. Our <a href="/leicester-airport-taxi">Leicester Airport Taxi</a> service covers East Midlands, Birmingham, Heathrow, Gatwick, and other major airports with fixed prices and 24/7 availability.</p>
+          
+          <h2>When Do Prices Change?</h2>
+          <p>Unlike surge apps, our rates stay consistent. Extra cost only comes from things like a different pickup location, extra stops, or a larger vehicle (e.g. MPV or minibus). For a <a href="/cheap-taxi-leicester">cheap taxi Leicester</a> without hidden extras, we quote the full fare before you commit.</p>
+          
+          <h2>Why Use This Taxi Fare Guide?</h2>
+          <p>Having a rough idea of <strong>taxi prices Leicester</strong> helps you plan and compare. Use this fare guide for budgets, and always ask for a firm quote when booking. Aylestone Kings has been serving Leicester since 1995 with fixed prices, licensed drivers, and 24/7 service. Ready to book? Get a quote online or call 0116 2338888.</p>
+        `,
+        date: "2026-03-07",
+        author: "Aylestone Kings Team",
+        category: "Fare Guide",
+        image: "/Reliable-airport-transfers.jpg",
+      },
+      {
         id: "leicester-to-east-midlands-airport-taxi-travel-guide-prices-booking-tips",
         title:
           "Leicester to East Midlands Airport Taxi – Travel Guide, Prices & Booking Tips",
