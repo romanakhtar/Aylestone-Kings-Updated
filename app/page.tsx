@@ -2,7 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
-import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight, Car, Plane } from "lucide-react"
+import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight, Car, Plane } from "@/lib/icons"
 import { siteData, contactInfo } from "@/lib/data"
 import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"

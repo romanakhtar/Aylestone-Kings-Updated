@@ -84,6 +84,9 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   if (!area) return notFound()
 
   const areaPlain = area.name.replace(/^Taxis in\s+/i, "").replace(/^Taxi to\s+/i, "")
+  const isWigston = areaPlain.toLowerCase() === "wigston"
+  const isOadby = areaPlain.toLowerCase() === "oadby"
+  const isBeaumontLeys = slug === "beaumont-leys"
   const isDestination = (footerData as any).destinationLinks?.some((d: any) => slugFromHref(d.href) === slug) ||
     (footerData as any).priorityAreas?.opPriority?.some((d: any) => slugFromHref(d.href) === slug) ||
     (footerData as any).priorityAreas?.mediumPriority?.some((d: any) => slugFromHref(d.href) === slug) ||
@@ -93,6 +96,204 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const relatedAreas = getAllAreas()
     .filter((a) => slugFromHref(a.href) !== slug)
     .slice(0, 6)
+
+  const genericFaqEntities = [
+    {
+      '@type': 'Question',
+      name: `Where can I find an affordable taxi in ${areaPlain}?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Aylestone Kings provides an affordable taxi in ${areaPlain} with fixed fares and no hidden charges. Book online, by phone, or WhatsApp for competitive rates.`
+      }
+    },
+    {
+      '@type': 'Question',
+      name: `Do you offer airport taxi services from ${areaPlain}?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Yes. Our airport taxi service covers all major UK airports from ${areaPlain}, including Birmingham, East Midlands, Heathrow, and Gatwick with fixed pricing.`
+      }
+    },
+    {
+      '@type': 'Question',
+      name: `How much does an affordable taxi in ${areaPlain} cost?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Our affordable taxi in ${areaPlain} offers competitive rates with upfront quotes. Local journeys start from competitive prices, and airport transfers have fixed fares.`
+      }
+    },
+    {
+      '@type': 'Question',
+      name: `Is your taxi in ${areaPlain} available 24/7?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Yes. Our taxi in ${areaPlain} operates 24/7, including weekends and bank holidays. Fast pickups available throughout Leicester.`
+      }
+    },
+    {
+      '@type': 'Question',
+      name: `Can I pre-book an airport taxi from ${areaPlain}?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Absolutely. Pre-book your airport taxi from ${areaPlain} for peace of mind. We monitor flights and provide meet & greet service on request.`
+      }
+    },
+    {
+      '@type': 'Question',
+      name: `How much is a taxi from ${areaPlain} to Leicester City Centre?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Fares vary with traffic and pickup point, but we offer fixed, competitive pricing. Get an instant quote and book online.`
+      }
+    },
+    {
+      '@type': 'Question',
+      name: `Do you offer 24/7 pickups in ${areaPlain}?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Yes. Our service operates day and night, including weekends and bank holidays.`
+      }
+    },
+    {
+      '@type': 'Question',
+      name: `Can I book a return from the airport?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Absolutely. We monitor your flight and can arrange meet & greet at arrivals. Add your return during booking or contact us.`
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What vehicle types are available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Choose from saloons, estates, MPVs and minibuses for larger groups. All vehicles are clean, comfortable and licensed.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you provide child seats on request?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Yes. Add a note during booking and we'll provide appropriate child seating where available."
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I pay by card?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We accept multiple secure payment methods including card and contactless, subject to vehicle availability.'
+      }
+    }
+  ]
+
+  const wigstonFaqEntities = [
+    {
+      '@type': 'Question',
+      name: 'Do you provide taxis from Wigston town centre and Bell Street?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Our Wigston taxi service covers Wigston town centre, Bell Street and surrounding residential areas with reliable, licensed drivers available day and night.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I book a taxi from South Wigston station?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We serve South Wigston station with pre-booked and on-demand taxis. Share your train time and we will aim to have your driver ready when you arrive.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does a taxi from Wigston to Leicester city centre take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Typical journey times from Wigston to Leicester city centre are around 15–20 minutes in normal traffic. At busy times it may take a little longer, so please allow extra time.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer airport transfers from Wigston?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We provide fixed-fare airport taxis from Wigston to Birmingham, East Midlands, Heathrow, Gatwick and other major UK airports, with flight tracking and optional meet & greet.'
+      }
+    }
+  ]
+
+  const oadbyFaqEntities = [
+    {
+      '@type': 'Question',
+      name: 'Do you provide taxis to Leicester Racecourse from Oadby?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We provide reliable taxis from Oadby to Leicester Racecourse for race days, events and general travel. Pre-book for popular fixtures to guarantee your ride.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I get a taxi from Stoughton Road in Oadby?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Our Oadby taxi service covers Stoughton Road and surrounding areas. Book online or call for fast pickups to Leicester city centre, hospitals, airports and local destinations.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does a taxi from Oadby to Leicester city centre take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Typical journey times from Oadby to Leicester city centre are around 10–15 minutes in normal traffic. Times can be longer during rush hour or on busy race days.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer airport transfers from Oadby?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We provide fixed-fare airport taxis from Oadby to Birmingham, East Midlands, Heathrow, Gatwick and other major UK airports, with flight tracking and optional meet & greet.'
+      }
+    }
+  ]
+
+  const beaumontLeysFaqEntities = [
+    {
+      '@type': 'Question',
+      name: 'Do you provide taxis from Beaumont Leys Shopping Centre?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We provide reliable taxis to and from Beaumont Leys Shopping Centre. Book a pickup from the centre or your home in Beaumont Leys for shopping, work or nights out – we cover the area 24/7.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does a taxi from Beaumont Leys to Leicester city centre take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Typical journey times from Beaumont Leys to Leicester city centre are around 15–20 minutes in normal traffic. Times can be longer during rush hour.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I book an East Midlands Airport taxi from Beaumont Leys?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We offer fixed-fare East Midlands Airport (EMA) transfers from Beaumont Leys with flight tracking and meet & greet on request. Pre-book for the best price and a guaranteed ride.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Is your taxi service in Beaumont Leys available 24/7?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Our taxi service in Beaumont Leys runs 24/7, including from the shopping centre and surrounding estates. Book online or call for fast pickups any time.'
+      }
+    }
+  ]
+
+  const faqEntities = isWigston ? wigstonFaqEntities : isOadby ? oadbyFaqEntities : isBeaumontLeys ? beaumontLeysFaqEntities : genericFaqEntities
 
   return (
     <main>
@@ -265,6 +466,85 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 <p className="text-gray-700">Need an airport transfer from {areaPlain}? We operate 24/7 to Birmingham (BHX), East Midlands (EMA), Heathrow (LHR), Gatwick (LGW), Luton (LTN), Stansted (STN) and Manchester (MAN) with flight tracking and meet &amp; greet on request.</p>
               </div>
 
+              {isWigston && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Taxis in Wigston — Town Centre, Bell Street &amp; South Wigston Station</h2>
+                  <p className="text-gray-700 mb-3">
+                    Our taxis in Wigston cover the whole area – from Wigston town centre and Bell Street shopping area to residential streets and South Wigston station.
+                    Whether you are heading home after shopping, catching a train or need a late-night pickup, we provide fast, reliable, local journeys.
+                  </p>
+                  <p className="text-gray-700 mb-3">
+                    We know the key Wigston spots, including Bell Street, the town centre car parks and South Wigston station pick-up points, so your driver can meet you exactly where you need.
+                    You can pre-book or request a taxi on demand, with options for card payment in many vehicles.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Wigston</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                    <li>Wigston town centre → Leicester City Centre: around 15–20 minutes in normal traffic</li>
+                    <li>Bell Street, Wigston → South Wigston Station: around 5–10 minutes</li>
+                    <li>Wigston → Fosse Park: around 15–20 minutes</li>
+                    <li>Wigston → Leicester Royal Infirmary: around 15–20 minutes</li>
+                  </ul>
+                  <p className="mt-3 text-sm text-gray-600">
+                    Times are approximate and depend on traffic and time of day. For live journey estimates and pricing, get an instant quote through our online booking.
+                  </p>
+                  <p className="mt-4 text-gray-800 font-medium">
+                    Need a taxi in Wigston right now? Book online in seconds or call {contactInfo.phone} for fast pickup from Wigston town centre, Bell Street or South Wigston station.
+                  </p>
+                </div>
+              )}
+
+              {isOadby && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Taxis in Oadby — Racecourse, Stoughton Road &amp; Beyond</h2>
+                  <p className="text-gray-700 mb-3">
+                    Our taxis in Oadby cover the whole area – from Stoughton Road and residential streets to Leicester Racecourse and the University of Leicester campus.
+                    Whether you are heading to the races, commuting into Leicester or need a late-night pickup, we provide fast, reliable local journeys.
+                  </p>
+                  <p className="text-gray-700 mb-3">
+                    We know Oadby well, including Leicester Racecourse drop-off points and Stoughton Road, so your driver can meet you exactly where you need.
+                    Pre-book for race days and busy events, or call when you need an immediate pickup.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Oadby</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                    <li>Oadby (Stoughton Road) → Leicester City Centre: around 10–15 minutes in normal traffic</li>
+                    <li>Oadby → Leicester Racecourse: around 5–10 minutes</li>
+                    <li>Oadby → Fosse Park: around 15–20 minutes</li>
+                    <li>Oadby → Leicester Royal Infirmary: around 10–15 minutes</li>
+                  </ul>
+                  <p className="mt-3 text-sm text-gray-600">
+                    Times are approximate and depend on traffic and time of day. For live journey estimates and pricing, get an instant quote through our online booking.
+                  </p>
+                  <p className="mt-4 text-gray-800 font-medium">
+                    Need a taxi in Oadby right now? Book online in seconds or call {contactInfo.phone} for fast pickup from Stoughton Road, the Racecourse or anywhere in Oadby.
+                  </p>
+                </div>
+              )}
+
+              {isBeaumontLeys && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Taxis in Beaumont Leys — Shopping Centre, City &amp; EMA</h2>
+                  <p className="text-gray-700 mb-3">
+                    Beaumont Leys is a key area we serve every day. Whether you need a taxi from <strong>Beaumont Leys Shopping Centre</strong>, the surrounding estates or a ride into Leicester or the airport, Aylestone Kings provides reliable, fixed-fare taxis across Beaumont Leys – so you have a trusted local option alongside any other taxi service in the area.
+                  </p>
+                  <p className="text-gray-700 mb-3">
+                    We pick up and drop off at the shopping centre, residential streets and local landmarks. Pre-book for airport runs or busy times, or call when you need an immediate taxi in Beaumont Leys.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Beaumont Leys</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                    <li>Beaumont Leys → Leicester City Centre: around 15–20 minutes in normal traffic</li>
+                    <li>Beaumont Leys Shopping Centre → East Midlands Airport (EMA): around 25–35 minutes</li>
+                    <li>Beaumont Leys → Fosse Park: around 15–20 minutes</li>
+                    <li>Beaumont Leys → Leicester Royal Infirmary: around 15–20 minutes</li>
+                  </ul>
+                  <p className="mt-3 text-sm text-gray-600">
+                    Times are approximate and depend on traffic. For live estimates and fixed prices, book online or call us.
+                  </p>
+                  <p className="mt-4 text-gray-800 font-medium">
+                    Need a taxi in Beaumont Leys? Book online in seconds or call {contactInfo.phone} for fast pickup from the shopping centre or anywhere in Beaumont Leys – we’re here to get you there.
+                  </p>
+                </div>
+              )}
+
               {/* Additional SEO blocks: Local destinations and estimated times */}
               <div className="rounded-lg border border-gray-200 p-5">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-3">Local destinations around {areaPlain}</h2>
@@ -281,6 +561,72 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               <div id="faqs" className="rounded-lg border border-gray-200 p-5">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-3">FAQs about taxi in {areaPlain}</h2>
                 <div className="space-y-4">
+                  {isWigston && (
+                    <>
+                      <details className="group border border-gray-100 rounded-md p-4">
+                        <summary className="cursor-pointer text-gray-900 font-medium">Do you provide taxis from Wigston town centre and Bell Street?</summary>
+                        <p className="mt-2 text-gray-700">
+                          Yes. Our Wigston taxi service covers the town centre, Bell Street and nearby residential areas. You can book quick local trips, nights out, shopping journeys and more with fixed, competitive prices.
+                        </p>
+                      </details>
+                      <details className="group border border-gray-100 rounded-md p-4">
+                        <summary className="cursor-pointer text-gray-900 font-medium">Can I get a taxi from South Wigston station?</summary>
+                        <p className="mt-2 text-gray-700">
+                          Absolutely. We regularly pick up from South Wigston station. Pre-book your taxi with your train time, or call when you arrive and we will send the nearest available driver.
+                        </p>
+                      </details>
+                      <details className="group border border-gray-100 rounded-md p-4">
+                        <summary className="cursor-pointer text-gray-900 font-medium">How long does a taxi from Wigston to Leicester city centre usually take?</summary>
+                        <p className="mt-2 text-gray-700">
+                          Typical journey times from Wigston to Leicester city centre are around 15–20 minutes in normal traffic. During rush hour it may take a little longer, so we recommend allowing extra time.
+                        </p>
+                      </details>
+                    </>
+                  )}
+                  {isOadby && (
+                    <>
+                      <details className="group border border-gray-100 rounded-md p-4">
+                        <summary className="cursor-pointer text-gray-900 font-medium">Do you provide taxis to Leicester Racecourse from Oadby?</summary>
+                        <p className="mt-2 text-gray-700">
+                          Yes. Our Oadby taxi service takes you to Leicester Racecourse for race days and events. Pre-book ahead of popular fixtures to ensure your ride.
+                        </p>
+                      </details>
+                      <details className="group border border-gray-100 rounded-md p-4">
+                        <summary className="cursor-pointer text-gray-900 font-medium">Can I get a taxi from Stoughton Road in Oadby?</summary>
+                        <p className="mt-2 text-gray-700">
+                          Absolutely. We cover Stoughton Road and the wider Oadby area. Book online or call for pickups to Leicester, the Racecourse, hospitals and airports.
+                        </p>
+                      </details>
+                      <details className="group border border-gray-100 rounded-md p-4">
+                        <summary className="cursor-pointer text-gray-900 font-medium">How long does a taxi from Oadby to Leicester city centre usually take?</summary>
+                        <p className="mt-2 text-gray-700">
+                          Typical journey times from Oadby to Leicester city centre are around 10–15 minutes in normal traffic. Rush hour or race days may add a few minutes.
+                        </p>
+                      </details>
+                    </>
+                  )}
+                  {isBeaumontLeys && (
+                    <>
+                      <details className="group border border-gray-100 rounded-md p-4">
+                        <summary className="cursor-pointer text-gray-900 font-medium">Do you provide taxis from Beaumont Leys Shopping Centre?</summary>
+                        <p className="mt-2 text-gray-700">
+                          Yes. We pick up and drop off at Beaumont Leys Shopping Centre and the surrounding area. Book for shopping trips, work or evenings out – we cover Beaumont Leys 24/7.
+                        </p>
+                      </details>
+                      <details className="group border border-gray-100 rounded-md p-4">
+                        <summary className="cursor-pointer text-gray-900 font-medium">How long does a taxi from Beaumont Leys to Leicester city centre take?</summary>
+                        <p className="mt-2 text-gray-700">
+                          Typical journey times from Beaumont Leys to Leicester city centre are around 15–20 minutes in normal traffic. Rush hour can add a few minutes.
+                        </p>
+                      </details>
+                      <details className="group border border-gray-100 rounded-md p-4">
+                        <summary className="cursor-pointer text-gray-900 font-medium">Can I book an East Midlands Airport taxi from Beaumont Leys?</summary>
+                        <p className="mt-2 text-gray-700">
+                          Yes. We offer fixed-fare East Midlands Airport (EMA) transfers from Beaumont Leys with flight tracking and optional meet & greet. Pre-book for the best price.
+                        </p>
+                      </details>
+                    </>
+                  )}
                   <details className="group border border-gray-100 rounded-md p-4">
                     <summary className="cursor-pointer text-gray-900 font-medium">Where can I find an affordable taxi in {areaPlain}?</summary>
                     <p className="mt-2 text-gray-700">Aylestone Kings provides an affordable taxi in {areaPlain} with fixed fares and no hidden charges. Book online, by phone, or WhatsApp for competitive rates.</p>
@@ -394,96 +740,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: [
-            {
-              '@type': 'Question',
-              name: `Where can I find an affordable taxi in ${areaPlain}?`,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: `Aylestone Kings provides an affordable taxi in ${areaPlain} with fixed fares and no hidden charges. Book online, by phone, or WhatsApp for competitive rates.`
-              }
-            },
-            {
-              '@type': 'Question',
-              name: `Do you offer airport taxi services from ${areaPlain}?`,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: `Yes. Our airport taxi service covers all major UK airports from ${areaPlain}, including Birmingham, East Midlands, Heathrow, and Gatwick with fixed pricing.`
-              }
-            },
-            {
-              '@type': 'Question',
-              name: `How much does an affordable taxi in ${areaPlain} cost?`,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: `Our affordable taxi in ${areaPlain} offers competitive rates with upfront quotes. Local journeys start from competitive prices, and airport transfers have fixed fares.`
-              }
-            },
-            {
-              '@type': 'Question',
-              name: `Is your taxi in ${areaPlain} available 24/7?`,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: `Yes. Our taxi in ${areaPlain} operates 24/7, including weekends and bank holidays. Fast pickups available throughout Leicester.`
-              }
-            },
-            {
-              '@type': 'Question',
-              name: `Can I pre-book an airport taxi from ${areaPlain}?`,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: `Absolutely. Pre-book your airport taxi from ${areaPlain} for peace of mind. We monitor flights and provide meet & greet service on request.`
-              }
-            },
-            {
-              '@type': 'Question',
-              name: `How much is a taxi from ${areaPlain} to Leicester City Centre?`,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: `Fares vary with traffic and pickup point, but we offer fixed, competitive pricing. Get an instant quote and book online.`
-              }
-            },
-            {
-              '@type': 'Question',
-              name: `Do you offer 24/7 pickups in ${areaPlain}?`,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: `Yes. Our service operates day and night, including weekends and bank holidays.`
-              }
-            },
-            {
-              '@type': 'Question',
-              name: `Can I book a return from the airport?`,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: `Absolutely. We monitor your flight and can arrange meet & greet at arrivals. Add your return during booking or contact us.`
-              }
-            },
-            {
-              '@type': 'Question',
-              name: `What vehicle types are available?`,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: `Choose from saloons, estates, MPVs and minibuses for larger groups. All vehicles are clean, comfortable and licensed.`
-              }
-            },
-            {
-              '@type': 'Question',
-              name: `Do you provide child seats on request?`,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: `Yes. Add a note during booking and we'll provide appropriate child seating where available.`
-              }
-            },
-            {
-              '@type': 'Question',
-              name: `Can I pay by card?`,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: `We accept multiple secure payment methods including card and contactless, subject to vehicle availability.`
-              }
-            }
-          ]
+          mainEntity: faqEntities
         }) }}
       />
     </main>
