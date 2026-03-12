@@ -2839,16 +2839,21 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           provider: { '@type': 'LocalBusiness', name: companyInfo.name, address: `${contactInfo.address.street}, ${contactInfo.address.city} ${contactInfo.address.postcode}` }
         }) }}
       />
-      <Script id="area-breadcrumbs" type="application/ld+json" strategy="afterInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://aylestone-taxis.co.uk/' },
-            { '@type': 'ListItem', position: 2, name: 'Areas', item: 'https://aylestone-taxis.co.uk/areas' },
-            { '@type': 'ListItem', position: 3, name: `Taxis in ${areaPlain}`, item: `https://aylestone-taxis.co.uk/taxis-in/${slug}` }
-          ]
-        }) }}
+      <Script
+        id="area-breadcrumbs"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://aylestone-taxis.co.uk" },
+              { "@type": "ListItem", position: 2, name: "Taxi Areas", item: "https://aylestone-taxis.co.uk/taxis-in" },
+              { "@type": "ListItem", position: 3, name: `Taxi in ${areaPlain}`, item: `https://aylestone-taxis.co.uk/taxis-in/${slug}` },
+            ],
+          }),
+        }}
       />
       <Script id="faq-schema" type="application/ld+json" strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

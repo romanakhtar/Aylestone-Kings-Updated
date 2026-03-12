@@ -991,16 +991,16 @@ export const siteData = {
         excerpt:
           "A complete taxi fare guide for Leicester in 2026. Example prices for Aylestone to city centre, EMA, and train station. Fixed prices vs Uber surge, and how to book. Your go-to resource for taxi prices Leicester.",
         content: `
-          <p>Planning a journey in Leicester and wondering what you'll pay? This 2026 taxi fare guide covers typical <strong>taxi prices Leicester</strong> for popular routes, explains the difference between fixed fares and Uber surge pricing, and shows you how to book. Whether you need a <a href="/cheap-taxi-leicester">cheap taxi Leicester</a> for a short trip or a reliable transfer to the airport, we've got the numbers.</p>
+          <p>Planning a journey in Leicester and wondering what you'll pay? This 2026 taxi fare guide explains how <strong>taxi prices Leicester</strong> are worked out for popular routes, outlines the difference between fixed fares and Uber surge pricing, and shows you how to book. Whether you need a <a href="/cheap-taxi-leicester">cheap taxi Leicester</a> for a short trip or a reliable transfer to the airport, we've got the details.</p>
           
-          <h2>Example Taxi Prices from Aylestone</h2>
-          <p>Rough prices for common routes from Aylestone, south-west Leicester, give you a sense of what to expect. These are indicative fixed prices – always confirm at booking.</p>
+          <h2>Example Taxi Routes from Aylestone</h2>
+          <p>Common journeys from Aylestone, south-west Leicester, include trips into the city centre, to Leicester train station, and to nearby airports. While exact fares depend on the time of day, traffic, and vehicle type, these routes are typically classed as:</p>
           <ul>
-            <li><strong>Aylestone to Leicester city centre</strong> – from £9 (approx. 10–15 mins)</li>
-            <li><strong>Aylestone to Leicester train station</strong> (London Road) – from £11 (approx. 12–18 mins)</li>
-            <li><strong>Aylestone to East Midlands Airport (EMA)</strong> – from £42 (approx. 35–45 mins)</li>
+            <li><strong>Aylestone to Leicester city centre</strong> – a short city journey, usually one of the most affordable options.</li>
+            <li><strong>Aylestone to Leicester train station</strong> (London Road) – another short trip, similar in cost to travelling into the city centre.</li>
+            <li><strong>Aylestone to East Midlands Airport (EMA)</strong> – a longer airport transfer, normally priced higher than local city runs but still cost-effective when pre-booked.</li>
           </ul>
-          <p>City centre and train station journeys are short, so they stay low cost. For longer trips like airport transfers, check our <a href="/leicester-airport-taxi">Leicester Airport Taxi</a> page for full pricing to all major UK airports.</p>
+          <p>City centre and train station journeys tend to stay low cost because they cover only a few miles. For longer trips like airport transfers, check our <a href="/leicester-airport-taxi">Leicester Airport Taxi</a> page for full pricing to all major UK airports.</p>
           
           <h2>Fixed Prices vs Uber Surge</h2>
           <p>One of the main benefits of a local taxi service like Aylestone Kings is <strong>fixed prices</strong>. We quote a price upfront – no meter surprises and no surge pricing. Ride apps such as Uber use demand-based surge pricing, so the same journey can cost far more when it's busy, raining, or late at night.</p>

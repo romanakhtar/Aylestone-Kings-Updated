@@ -961,47 +961,63 @@ export default function Home() {
                 name: "How do I book a taxi in Leicester?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Book online in seconds or call our office. You can book instantly or pre-book for later.",
+                  text: "You can book a taxi with Aylestone Kings in three ways: call us on 0116 2338888, WhatsApp +447888873795, or book online at aylestone-taxis.co.uk. We accept bookings 24/7 with instant confirmation.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Are you available 24/7?",
+                name: "How much is a taxi from Leicester to East Midlands Airport?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, we operate 24/7 including weekends and bank holidays.",
+                  text: "A taxi from Leicester city centre to East Midlands Airport (EMA) starts from approximately £25-£35 depending on your exact pickup location. We offer fixed prices with no surge pricing. Get an exact quote by calling 0116 2338888.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Do you offer fixed prices?",
+                name: "How much is a taxi from Leicester to Birmingham Airport?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, you'll see the price before confirming your booking.",
+                  text: "A fixed-price taxi from Leicester to Birmingham Airport (BHX) starts from approximately £45-£55. We monitor your flight and offer meet & greet service. Call 0116 2338888 for an exact quote.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Can I pre-book a taxi in advance?",
+                name: "Are Aylestone Kings taxis available 24 hours?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, pre-booking is available and recommended during busy times.",
+                  text: "Yes, Aylestone Kings operates 24 hours a day, 7 days a week, 365 days a year including bank holidays. Call 0116 2338888 any time for immediate dispatch or to pre-book your journey.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Do you provide airport transfers?",
+                name: "Do you offer fixed price taxi fares in Leicester?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, we provide fixed-price airport transfers to all major UK airports.",
+                  text: "Yes. All our airport transfers and long-distance fares are fixed price — you know exactly what you'll pay before you travel. Local fares are metered but competitive with no hidden charges.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Do you have larger vehicles for groups or luggage?",
+                name: "Are your drivers licensed and DBS checked?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, you can choose the appropriate vehicle type during booking, subject to availability.",
+                  text: "All Aylestone Kings drivers are fully licensed by Leicester City Council or Wolverhampton City Council and hold enhanced DBS certificates. We maintain the highest standards of safety and professionalism.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you have wheelchair accessible taxis in Leicester?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we provide wheelchair accessible taxis in Leicester. Please call 0116 2338888 in advance to arrange appropriate vehicle and assistance for your journey.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I book a minibus or large taxi in Leicester?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. We have 6-seater and 8-seater minibus taxis available in Leicester for groups, airport runs, and events. Pre-booking recommended. Call 0116 2338888 for availability and pricing.",
                 },
               },
             ],

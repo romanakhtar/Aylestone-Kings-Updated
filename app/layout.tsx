@@ -85,23 +85,29 @@ export const metadata: Metadata = {
 const schemaData = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "TaxiService"],
-  name: "Aylestone Kings",
+  "@id": "https://aylestone-taxis.co.uk/#business",
+  name: "Aylestone Kings Taxi Service",
   alternateName: "Aylestone Taxis",
   description:
-    "Aylestone Kings — Leicester's trusted private hire taxi service since 1995. Licensed by Leicester City Council and Wolverhampton City Council. 24/7 airport transfers, local taxis, school runs, and corporate accounts.",
+    "Leicester's trusted taxi service since 1995. 24/7 airport transfers, local taxis, and long-distance travel across Leicester, Leicestershire and the East Midlands. Licensed by Leicester City Council.",
   url: "https://aylestone-taxis.co.uk",
+  logo: "https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png",
+  image: "https://aylestone-taxis.co.uk/white-modern-taxi-side.webp",
   telephone: "+441162338888",
   email: "info@aylestone-taxis.co.uk",
   foundingDate: "1995",
-  priceRange: "££",
-  currenciesAccepted: "GBP",
-  paymentAccepted: "Cash, Credit Card, Debit Card, Bank Transfer",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.7",
-    reviewCount: "111",
-    bestRating: "5",
-    worstRating: "1",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "753A Aylestone Road",
+    addressLocality: "Leicester",
+    addressRegion: "Leicestershire",
+    postalCode: "LE2 8TG",
+    addressCountry: "GB",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 52.602358,
+    longitude: -1.155715,
   },
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
@@ -109,49 +115,29 @@ const schemaData = {
     opens: "00:00",
     closes: "23:59",
   },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "753A Aylestone Road",
-    addressLocality: "Aylestone",
-    addressRegion: "Leicester",
-    postalCode: "LE2 8TG",
-    addressCountry: "GB",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: "52.6003",
-    longitude: "-1.1461",
-  },
   areaServed: [
-    "Leicester",
-    "Aylestone",
-    "Wigston",
-    "Oadby",
-    "Glen Parva",
-    "Eyres Monsell",
-    "Saffron Lane",
-    "Braunstone",
-    "South Wigston",
-    "Knighton",
-    "Clarendon Park",
-    "Beaumont Leys",
+    { "@type": "City", name: "Leicester" },
+    { "@type": "AdministrativeArea", name: "Leicestershire" },
+    { "@type": "AdministrativeArea", name: "East Midlands" },
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Taxi Services",
     itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airport Transfers Leicester" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Local Taxi Leicester" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airport Taxi Transfer" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "School Run Taxi" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate Taxi Account" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Wheelchair Accessible Taxi" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Long Distance Taxi" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate Taxi Accounts" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Minibus Hire Leicester" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Wheelchair Accessible Taxi" } },
     ],
   },
   sameAs: [
-    "https://www.google.com/maps/place/Aylestone+Kings",
-    "https://www.yell.com/biz/aylestone-kings",
+    "https://www.facebook.com/aylestone.taxis/",
+    "https://play.google.com/store/apps/details?id=co.uk.aylestone.taxis",
+    "https://apps.apple.com/gb/app/aylestone-kings/id1061012064",
   ],
+  priceRange: "££",
 }
 
 export default function RootLayout({
@@ -230,6 +216,11 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-NB673LK3');
           `}
         </Script>
+        {/* LocalBusiness + TaxiService Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
       </head>
       <body className="font-sans pt-5 bg-white">
         {/* Google Tag Manager (noscript) */}
@@ -259,11 +250,6 @@ export default function RootLayout({
             </ValentineThemeProvider>
           </ChristmasThemeProvider>
         </HalloweenThemeProvider>
-        {/* Schema markup - inline for faster parsing */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        />
       </body>
     </html>
   )
