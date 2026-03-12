@@ -2,7 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
-import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight, Car, Plane } from "@/lib/icons"
+import { Check, ArrowRight, Star, MapPin, Clock, Shield, ShieldCheck, BadgeCheck, Users, ChevronLeft, ChevronRight, Car, Plane } from "@/lib/icons"
 import { siteData, contactInfo } from "@/lib/data"
 import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
@@ -56,6 +56,42 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Spacer: height = fixed navbar (top-5 + h-16) so next content sits below it */}
+      <div className="w-full shrink-0" style={{ height: "4.1rem" }} aria-hidden="true" />
+      {/* Trust bar – in flow, directly below navbar; 2-col grid on mobile so icons align */}
+      <div className="bg-[#0F0D3E] text-white text-xs font-medium py-1.5 px-3 sm:py-2 sm:px-6 sm:text-center">
+        <div className="max-w-5xl mx-auto w-full grid grid-cols-2 gap-x-3 gap-y-2 sm:flex sm:justify-center sm:items-center">
+          <div className="contents sm:!inline-flex sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-0">
+          <span className="flex items-center gap-1.5 sm:inline-flex sm:justify-center sm:gap-1.5">
+            <span className="w-4 flex shrink-0 justify-center sm:w-auto">
+              <Star className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0 fill-amber-400 text-amber-400" aria-hidden />
+            </span>
+            4.7 Stars on Google
+          </span>
+          <span className="text-white/50 shrink-0 px-0.5 sm:px-1 hidden sm:inline" aria-hidden="true">·</span>
+          <span className="flex items-center gap-1.5 sm:inline-flex sm:justify-center sm:gap-1.5">
+            <span className="w-4 flex shrink-0 justify-center sm:w-auto">
+              <BadgeCheck className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" aria-hidden />
+            </span>
+            Licensed Since 1995
+          </span>
+          <span className="text-white/50 shrink-0 px-0.5 sm:px-1 hidden sm:inline" aria-hidden="true">·</span>
+          <span className="flex items-center gap-1.5 sm:inline-flex sm:justify-center sm:gap-1.5">
+            <span className="w-4 flex shrink-0 justify-center sm:w-auto">
+              <ShieldCheck className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" aria-hidden />
+            </span>
+            DBS Checked Drivers
+          </span>
+          <span className="text-white/50 shrink-0 px-0.5 sm:px-1 hidden sm:inline" aria-hidden="true">·</span>
+          <span className="flex items-center gap-1.5 sm:inline-flex sm:justify-center sm:gap-1.5">
+            <span className="w-4 flex shrink-0 justify-center sm:w-auto">
+              <Clock className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" aria-hidden />
+            </span>
+            24/7 Available
+          </span>
+          </div>
+        </div>
+      </div>
 
       {/* Hero Section */}
       <AnimatedHero />

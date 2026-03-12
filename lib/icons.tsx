@@ -5,6 +5,8 @@ export {
   MapPin,
   Clock,
   Shield,
+  ShieldCheck,
+  BadgeCheck,
   Users,
   ChevronLeft,
   ChevronRight,

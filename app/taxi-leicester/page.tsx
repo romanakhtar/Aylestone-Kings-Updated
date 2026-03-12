@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar } from "lucide-react"
+import Script from "next/script"
 import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
@@ -16,6 +17,49 @@ export const metadata: Metadata = {
     description: "Taxi Leicester - Leicester's most trusted taxi service since 1995. 24/7 service, licensed drivers, fast pick-ups.",
     url: "https://aylestone-taxis.co.uk/taxi-leicester",
   },
+}
+
+const faqSchemaTaxiLeicester = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How do I book a taxi in Leicester?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "You can book your Taxi Leicester online in seconds, call our office, or use WhatsApp. You will see your price before confirming the journey.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are your Leicester taxis available 24/7?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Yes. Our Taxi Leicester service runs 24 hours a day, 7 days a week including weekends and bank holidays, so you always have a cab when you need one.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer fixed prices for Taxi Leicester?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Most journeys are quoted upfront with fixed prices so you know the fare before you travel. We do not use surge pricing.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do your Leicester taxis go to all major airports?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Yes. We provide airport transfers from Leicester to Birmingham, East Midlands, Heathrow, Gatwick, Luton, Stansted and Manchester with fixed, competitive fares.",
+      },
+    },
+  ],
 }
 
 export default function TaxiLeicesterPage() {
@@ -193,6 +237,89 @@ export default function TaxiLeicesterPage() {
           </div>
         </section>
 
+        {/* Leicester Journey Examples & FAQs */}
+        <section className="py-20 bg-[#F9FAFB]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-4">
+                  Typical Taxi Leicester Journey Times
+                </h2>
+                <p className="text-lg text-[#2E3C44] mb-6">
+                  Journey times can vary with traffic, but these examples give a guide for common Taxi Leicester routes.
+                  Always allow a little extra time during rush hour or for big events and football matches.
+                </p>
+                <ul className="space-y-3 text-[#2E3C44]">
+                  <li className="flex gap-2">
+                    <span className="mt-1 text-[#06A0A6]">•</span>
+                    <span>Leicester City Centre → Aylestone: around 10–15 minutes in normal traffic</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="mt-1 text-[#06A0A6]">•</span>
+                    <span>Leicester → Oadby / Wigston: around 15–20 minutes</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="mt-1 text-[#06A0A6]">•</span>
+                    <span>Leicester → East Midlands Airport (EMA): around 25–35 minutes</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="mt-1 text-[#06A0A6]">•</span>
+                    <span>Leicester → Birmingham Airport (BHX): around 45–60 minutes</span>
+                  </li>
+                </ul>
+                <p className="mt-4 text-sm text-[#6B7280]">
+                  These are estimates only. For a live ETA and exact fare for your Taxi Leicester journey, get an instant
+                  quote through our online booking link.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-4">
+                  Taxi Leicester – Frequently Asked Questions
+                </h2>
+                <div className="space-y-4">
+                  <details className="group border border-gray-200 rounded-lg p-4 bg-white">
+                    <summary className="cursor-pointer text-[#0F0D3E] font-semibold">
+                      How do I book a Taxi Leicester?
+                    </summary>
+                    <p className="mt-2 text-[#2E3C44]">
+                      You can book online in seconds using our secure booking form, call our office on {contactInfo.phone},
+                      or send us a WhatsApp message. You&apos;ll see your price before you confirm.
+                    </p>
+                  </details>
+                  <details className="group border border-gray-200 rounded-lg p-4 bg-white">
+                    <summary className="cursor-pointer text-[#0F0D3E] font-semibold">
+                      Do you operate your Leicester taxis 24/7?
+                    </summary>
+                    <p className="mt-2 text-[#2E3C44]">
+                      Yes. Our Taxi Leicester service runs 24 hours a day, 7 days a week, including nights, weekends and
+                      bank holidays.
+                    </p>
+                  </details>
+                  <details className="group border border-gray-200 rounded-lg p-4 bg-white">
+                    <summary className="cursor-pointer text-[#0F0D3E] font-semibold">
+                      Can I book a Leicester taxi to the airport?
+                    </summary>
+                    <p className="mt-2 text-[#2E3C44]">
+                      Absolutely. We provide fixed-price airport transfers from Leicester to all major UK airports with
+                      flight monitoring and optional meet &amp; greet.
+                    </p>
+                  </details>
+                  <details className="group border border-gray-200 rounded-lg p-4 bg-white">
+                    <summary className="cursor-pointer text-[#0F0D3E] font-semibold">
+                      Are your Leicester taxi drivers licensed and DBS checked?
+                    </summary>
+                    <p className="mt-2 text-[#2E3C44]">
+                      Yes. All drivers are fully licensed and DBS checked, and our fleet is regularly inspected for your
+                      safety and comfort.
+                    </p>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -220,6 +347,11 @@ export default function TaxiLeicesterPage() {
           </div>
         </section>
       </main>
+      <Script
+        id="faq-schema-taxi-leicester"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaTaxiLeicester) }}
+      />
     </div>
   )
 }

@@ -309,6 +309,50 @@ export default function CheapTaxiLeicesterPage() {
           </div>
         </section>
 
+        {/* Cheap Taxi Leicester – Extra FAQs */}
+        <section className="py-20 bg-[#F9FAFB]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-4">
+                Cheap Taxi Leicester – Questions People Ask
+              </h2>
+              <p className="text-lg text-[#2E3C44]">
+                More detail on how our Cheap Taxi Leicester service keeps prices low while staying safe and professional.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <details className="group border border-gray-200 rounded-lg p-4 bg-white">
+                <summary className="cursor-pointer text-[#0F0D3E] font-semibold">
+                  How do you keep Cheap Taxi Leicester prices low?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  We optimise routes, reduce dead mileage and use modern dispatch technology so our drivers spend more time
+                  with passengers and less time driving empty. Those efficiencies help us keep Cheap Taxi Leicester prices
+                  as low as possible.
+                </p>
+              </details>
+              <details className="group border border-gray-200 rounded-lg p-4 bg-white">
+                <summary className="cursor-pointer text-[#0F0D3E] font-semibold">
+                  Is Cheap Taxi Leicester suitable for regular commuters?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  Yes. Many regular commuters use our Cheap Taxi Leicester service for work, school runs and hospital
+                  appointments. You get reliable drivers, consistent pricing and the option to pre-book.
+                </p>
+              </details>
+              <details className="group border border-gray-200 rounded-lg p-4 bg-white">
+                <summary className="cursor-pointer text-[#0F0D3E] font-semibold">
+                  Can I still expect clean vehicles and professional drivers with a cheap service?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  Absolutely. Cheap Taxi Leicester refers to our pricing, not our standards. Vehicles are clean, well
+                  maintained and fully licensed, and all drivers are vetted and DBS checked.
+                </p>
+              </details>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
