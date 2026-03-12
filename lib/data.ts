@@ -1076,7 +1076,7 @@ export const siteData = {
         date: "2026-02-17",
         author: "Aylestone Kings Team",
         category: "Airport Transfers",
-        image: "/Reliable-airport-transfers.jpg",
+        image: "/EMA Blog.webp",
       },
       {
         id: "why-leicester-locals-trust-aylestone-taxis",
