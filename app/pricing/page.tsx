@@ -407,10 +407,10 @@ export default function PricingPage() {
              {/* FAQ 8 */}
              <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                Are your drivers DBS checked?
+                Are licensed drivers DBS checked?
               </h3>
               <p className="text-gray-600">
-                Yes, all of our drivers are fully licensed and DBS checked for safety and peace of mind.
+                Yes, all licensed drivers available through Aylestone Taxis are fully licensed and DBS checked for safety and peace of mind.
               </p>
             </div>
 

@@ -1,4 +1,4 @@
-"use client"
+ "use client"
 import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
@@ -10,6 +10,7 @@ import { useState, useEffect } from "react"
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 import { useValentineTheme } from "@/components/ValentineThemeProvider"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import FareEstimator from "@/components/FareEstimator"
 
 // Dynamically import non-critical component
 const AppDownloadButtons = dynamic(() => import("@/components/AppDownloadButtons"), {
@@ -95,6 +96,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <AnimatedHero />
+
+      {/* Fare Estimator */}
+      <FareEstimator />
 
       {/* About Us Section */}
       <section className="section-padding gradient-secondary">
@@ -969,7 +973,7 @@ export default function Home() {
                 name: "How much is a taxi from Leicester to East Midlands Airport?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "A taxi from Leicester city centre to East Midlands Airport (EMA) starts from approximately £25-£35 depending on your exact pickup location. We offer fixed prices with no surge pricing. Get an exact quote by calling 0116 2338888.",
+                  text: "A taxi from Leicester city centre to East Midlands Airport (EMA) starts from approximately £25-£35 depending on your exact pickup location. We offer fixed prices with no surge pricing. Get an exact quote by calling 0116 2338888 or using our online fare estimator.",
                 },
               },
               {
@@ -977,7 +981,7 @@ export default function Home() {
                 name: "How much is a taxi from Leicester to Birmingham Airport?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "A fixed-price taxi from Leicester to Birmingham Airport (BHX) starts from approximately £45-£55. We monitor your flight and offer meet & greet service. Call 0116 2338888 for an exact quote.",
+                  text: "A fixed-price taxi from Leicester to Birmingham Airport (BHX) starts from approximately £45-£55. We monitor your flight and offer meet & greet service. Call 0116 2338888 for an exact quote or use our fare estimator for a guide price.",
                 },
               },
               {
@@ -993,7 +997,47 @@ export default function Home() {
                 name: "Do you offer fixed price taxi fares in Leicester?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes. All our airport transfers and long-distance fares are fixed price — you know exactly what you'll pay before you travel. Local fares are metered but competitive with no hidden charges.",
+                  text: "Yes. All our airport transfers and long-distance fares are fixed price — you know exactly what you'll pay before you travel. Local fares are metered but competitive with no hidden charges. Our online fare estimator gives you a guide to typical prices.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How does the Aylestone Kings fare estimator work?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Our fare estimator uses our official tariff and typical road routes around Leicester to calculate an estimated price for your journey. For local trips it uses mileage bands, for airport transfers it uses our fixed airport tariff, and for long-distance journeys it uses approximate mileage. The final price is always confirmed at the time of booking.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are the prices shown in the fare calculator fixed?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Airport transfers and long-distance trips are fixed price once booked. Local journeys shown in the fare estimator are guide prices based on our tariff and typical routing. The exact fare may vary slightly depending on traffic, route and waiting time, and will always be confirmed when you book.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Does the fare estimator include airport parking charges?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No. Airport parking and drop-off charges are not included in the fare estimator price, as these are charged directly by the airport and can change. Your driver will add any airport parking or drop-off fees at cost on the day of travel.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I get a fare estimate for a 6 or 8 seater taxi?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. Our fare estimator includes options for minibus fares on airport transfers and long-distance journeys. For local journeys or more detailed quotes for 6 and 8 seater vehicles, please call 0116 2338888 or use our online booking form.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you use surge pricing for your fares?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No. Aylestone Kings does not use surge pricing. Our fares are based on a fixed tariff and pre-agreed fixed prices for airport and long-distance journeys. The online fare estimator will always show a fair and transparent guide price.",
                 },
               },
               {

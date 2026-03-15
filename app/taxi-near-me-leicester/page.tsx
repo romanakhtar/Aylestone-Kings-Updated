@@ -293,7 +293,7 @@ export default function TaxiNearMeLeicesterPage() {
                   Are your nearby taxis licensed and insured?
                 </summary>
                 <p className="mt-2 text-[#2E3C44]">
-                  All of our drivers are fully licensed and DBS checked, and every vehicle is properly insured and
+                  All licensed drivers available through Aylestone Taxis are fully licensed and DBS checked, and every vehicle is properly insured and
                   regularly maintained for your safety.
                 </p>
               </details>

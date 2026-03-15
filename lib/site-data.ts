@@ -19,7 +19,7 @@ export const siteData = {
     phone: "0116 2338888",
     email: "info@aylestone-taxis.co.uk",
     address: {
-      street: "753A, Aylestone",
+      street: "753A Aylestone Road",
       city: "Leicester",
       postcode: "LE2 8TG",
       country: "United Kingdom"

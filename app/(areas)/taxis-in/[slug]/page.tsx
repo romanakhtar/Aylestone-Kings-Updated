@@ -293,8 +293,9 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Aylestone is the heart of our operation. Aylestone Kings has been based on Aylestone Road since 1995, which
-          means our drivers know every street, every shortcut, and every regular pickup point in the area. From Grace
-          Road to the Aylestone Meadows, from Saffron Lane to the canal walk — we cover it all.
+          means licensed drivers available through Aylestone Taxis know every street, every shortcut, and every regular
+          pickup point in the area. From Grace Road to the Aylestone Meadows, from Saffron Lane to the canal walk — we
+          cover it all.
         </p>
         <p className="text-gray-700">
           The area sits just two miles south-west of Leicester city centre, making it one of the quickest parts of
@@ -2356,7 +2357,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               <p className="mt-3 max-w-2xl text-white/85">
                 {isDestination 
                   ? `Our drivers know the best routes to ${areaPlain} and can help with luggage, accessibility needs, and special requests.`
-                  : `Whether you're heading to the airport, commuting for work, or exploring the local area, our taxis in ${areaPlain} are always ready to get you there on time. We take pride in offering reliable, comfortable, and budget-friendly travel solutions tailored to your needs.`
+                  : `Whether you're heading to the airport, commuting for work, or exploring the local area, Licensed drivers available through Aylestone Taxis ${areaPlain} are always ready to get you there on time. We take pride in offering reliable, comfortable, and budget-friendly travel solutions tailored to your needs.`
                 }
               </p>
               <p className="mt-3 max-w-2xl text-white/85">
@@ -2579,8 +2580,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
                   <h2 className="text-2xl font-semibold text-gray-900 mb-3">Taxis in Wigston — Town Centre, Bell Street &amp; South Wigston Station</h2>
                   <p className="text-gray-700 mb-3">
-                    Our taxis in Wigston cover the whole area – from Wigston town centre and Bell Street shopping area to residential streets and South Wigston station.
-                    Whether you are heading home after shopping, catching a train or need a late-night pickup, we provide fast, reliable, local journeys.
+                    Licensed drivers available through Aylestone Taxis provide journeys to and from Wigston – from Wigston town centre and Bell Street shopping area to residential streets and South Wigston station.
+                    Whether you are heading home after shopping, catching a train or need a late-night pickup, you can book fast, reliable, local journeys.
                   </p>
                   <p className="text-gray-700 mb-3">
                     We know the key Wigston spots, including Bell Street, the town centre car parks and South Wigston station pick-up points, so your driver can meet you exactly where you need.
@@ -2606,8 +2607,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
                   <h2 className="text-2xl font-semibold text-gray-900 mb-3">Taxis in Oadby — Racecourse, Stoughton Road &amp; Beyond</h2>
                   <p className="text-gray-700 mb-3">
-                    Our taxis in Oadby cover the whole area – from Stoughton Road and residential streets to Leicester Racecourse and the University of Leicester campus.
-                    Whether you are heading to the races, commuting into Leicester or need a late-night pickup, we provide fast, reliable local journeys.
+                    Licensed drivers available through Aylestone Taxis provide journeys to and from Oadby – from Stoughton Road and residential streets to Leicester Racecourse and the University of Leicester campus.
+                    Whether you are heading to the races, commuting into Leicester or need a late-night pickup, you can book fast, reliable local journeys.
                   </p>
                   <p className="text-gray-700 mb-3">
                     We know Oadby well, including Leicester Racecourse drop-off points and Stoughton Road, so your driver can meet you exactly where you need.
