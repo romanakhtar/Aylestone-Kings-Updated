@@ -96,6 +96,13 @@ const schemaData = {
   telephone: "+441162338888",
   email: "info@aylestone-taxis.co.uk",
   foundingDate: "1995",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.7,
+    reviewCount: 111,
+    bestRating: 5,
+    worstRating: 1,
+  },
   address: {
     "@type": "PostalAddress",
     streetAddress: "753A Aylestone Road",
