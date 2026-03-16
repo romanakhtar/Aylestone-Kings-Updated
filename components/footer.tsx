@@ -127,6 +127,7 @@ export default function Footer() {
                   { name: "Airport Transfers", href: "/airport-transfers-leicester" },
                   { name: "Local Taxi Service", href: "/local-taxi-leicester" },
                   { name: "Long-Distance & Corporate", href: "/long-distance-taxi-leicester" },
+                  { name: "Corporate Taxi Account Leicester", href: "/corporate-taxi-account-leicester" },
                   { name: "Taxi Leicester", href: "/taxi-leicester" },
                   { name: "Taxi Near Me Leicester", href: "/taxi-near-me-leicester" },
                   { name: "Leicester Airport Taxi", href: "/leicester-airport-taxi" },
@@ -393,13 +394,27 @@ export default function Footer() {
       {/* Bottom Footer */}
       <div className="border-t border-gray-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-gray-600 text-sm">
-              {copyrightInfo.text}
+          <div className="flex flex-col md:flex-row justify-between items-start gap-4">
+            <div className="text-gray-600 text-xs sm:text-sm space-y-1 max-w-xl">
+              <p>
+                Aylestone Taxis acts as a booking and dispatch service introducing passengers to licensed independent drivers who provide the transport service.
+              </p>
+              <p>Aylestone Kings is a trading name of Aylestone Taxis.</p>
+              <p>
+                <span className="font-semibold">Operator:</span> Aylestone Taxis<br />
+                753A Aylestone Road, Leicester LE2 8TG
+              </p>
+              <p className="pt-2">
+                {copyrightInfo.text}
+              </p>
             </div>
             <div className="flex space-x-6 text-sm">
               {footerData.legal.map((link) => (
-                <Link key={link.name} href={link.href} className="text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-600 hover:text-gray-800 transition-colors duration-200"
+                >
                   {link.name}
                 </Link>
               ))}

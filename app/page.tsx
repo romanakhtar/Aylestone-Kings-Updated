@@ -1,8 +1,8 @@
-"use client"
+ "use client"
 import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
-import { Check, ArrowRight, Star, MapPin, Clock, Shield, Users, ChevronLeft, ChevronRight, Car, Plane } from "lucide-react"
+import { Check, ArrowRight, Star, MapPin, Clock, Shield, ShieldCheck, BadgeCheck, Users, ChevronLeft, ChevronRight, Car, Plane } from "@/lib/icons"
 import { siteData, contactInfo } from "@/lib/data"
 import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
@@ -10,6 +10,7 @@ import { useState, useEffect } from "react"
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 import { useValentineTheme } from "@/components/ValentineThemeProvider"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import FareEstimator from "@/components/FareEstimator"
 
 // Dynamically import non-critical component
 const AppDownloadButtons = dynamic(() => import("@/components/AppDownloadButtons"), {
@@ -56,9 +57,48 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Spacer: height = fixed navbar (top-5 + h-16) so next content sits below it */}
+      <div className="w-full shrink-0" style={{ height: "4.1rem" }} aria-hidden="true" />
+      {/* Trust bar – in flow, directly below navbar; 2-col grid on mobile so icons align */}
+      <div className="bg-[#0F0D3E] text-white text-xs font-medium py-1.5 px-3 sm:py-2 sm:px-6 sm:text-center">
+        <div className="max-w-5xl mx-auto w-full grid grid-cols-2 gap-x-3 gap-y-2 sm:flex sm:justify-center sm:items-center">
+          <div className="contents sm:!inline-flex sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-0">
+          <span className="flex items-center gap-1.5 sm:inline-flex sm:justify-center sm:gap-1.5">
+            <span className="w-4 flex shrink-0 justify-center sm:w-auto">
+              <Star className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0 fill-amber-400 text-amber-400" aria-hidden />
+            </span>
+            4.7 Stars on Google
+          </span>
+          <span className="text-white/50 shrink-0 px-0.5 sm:px-1 hidden sm:inline" aria-hidden="true">·</span>
+          <span className="flex items-center gap-1.5 sm:inline-flex sm:justify-center sm:gap-1.5">
+            <span className="w-4 flex shrink-0 justify-center sm:w-auto">
+              <BadgeCheck className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" aria-hidden />
+            </span>
+            Licensed Since 1995
+          </span>
+          <span className="text-white/50 shrink-0 px-0.5 sm:px-1 hidden sm:inline" aria-hidden="true">·</span>
+          <span className="flex items-center gap-1.5 sm:inline-flex sm:justify-center sm:gap-1.5">
+            <span className="w-4 flex shrink-0 justify-center sm:w-auto">
+              <ShieldCheck className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" aria-hidden />
+            </span>
+            DBS Checked Drivers
+          </span>
+          <span className="text-white/50 shrink-0 px-0.5 sm:px-1 hidden sm:inline" aria-hidden="true">·</span>
+          <span className="flex items-center gap-1.5 sm:inline-flex sm:justify-center sm:gap-1.5">
+            <span className="w-4 flex shrink-0 justify-center sm:w-auto">
+              <Clock className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" aria-hidden />
+            </span>
+            24/7 Available
+          </span>
+          </div>
+        </div>
+      </div>
 
       {/* Hero Section */}
       <AnimatedHero />
+
+      {/* Fare Estimator */}
+      <FareEstimator />
 
       {/* About Us Section */}
       <section className="section-padding gradient-secondary">
@@ -925,47 +965,103 @@ export default function Home() {
                 name: "How do I book a taxi in Leicester?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Book online in seconds or call our office. You can book instantly or pre-book for later.",
+                  text: "You can book a taxi with Aylestone Kings in three ways: call us on 0116 2338888, WhatsApp +447888873795, or book online at aylestone-taxis.co.uk. We accept bookings 24/7 with instant confirmation.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Are you available 24/7?",
+                name: "How much is a taxi from Leicester to East Midlands Airport?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, we operate 24/7 including weekends and bank holidays.",
+                  text: "A taxi from Leicester city centre to East Midlands Airport (EMA) starts from approximately £25-£35 depending on your exact pickup location. We offer fixed prices with no surge pricing. Get an exact quote by calling 0116 2338888 or using our online fare estimator.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Do you offer fixed prices?",
+                name: "How much is a taxi from Leicester to Birmingham Airport?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, you'll see the price before confirming your booking.",
+                  text: "A fixed-price taxi from Leicester to Birmingham Airport (BHX) starts from approximately £45-£55. We monitor your flight and offer meet & greet service. Call 0116 2338888 for an exact quote or use our fare estimator for a guide price.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Can I pre-book a taxi in advance?",
+                name: "Are Aylestone Kings taxis available 24 hours?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, pre-booking is available and recommended during busy times.",
+                  text: "Yes, Aylestone Kings operates 24 hours a day, 7 days a week, 365 days a year including bank holidays. Call 0116 2338888 any time for immediate dispatch or to pre-book your journey.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Do you provide airport transfers?",
+                name: "Do you offer fixed price taxi fares in Leicester?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, we provide fixed-price airport transfers to all major UK airports.",
+                  text: "Yes. All our airport transfers and long-distance fares are fixed price — you know exactly what you'll pay before you travel. Local fares are metered but competitive with no hidden charges. Our online fare estimator gives you a guide to typical prices.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Do you have larger vehicles for groups or luggage?",
+                name: "How does the Aylestone Kings fare estimator work?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, you can choose the appropriate vehicle type during booking, subject to availability.",
+                  text: "Our fare estimator uses our official tariff and typical road routes around Leicester to calculate an estimated price for your journey. For local trips it uses mileage bands, for airport transfers it uses our fixed airport tariff, and for long-distance journeys it uses approximate mileage. The final price is always confirmed at the time of booking.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are the prices shown in the fare calculator fixed?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Airport transfers and long-distance trips are fixed price once booked. Local journeys shown in the fare estimator are guide prices based on our tariff and typical routing. The exact fare may vary slightly depending on traffic, route and waiting time, and will always be confirmed when you book.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Does the fare estimator include airport parking charges?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No. Airport parking and drop-off charges are not included in the fare estimator price, as these are charged directly by the airport and can change. Your driver will add any airport parking or drop-off fees at cost on the day of travel.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I get a fare estimate for a 6 or 8 seater taxi?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. Our fare estimator includes options for minibus fares on airport transfers and long-distance journeys. For local journeys or more detailed quotes for 6 and 8 seater vehicles, please call 0116 2338888 or use our online booking form.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you use surge pricing for your fares?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No. Aylestone Kings does not use surge pricing. Our fares are based on a fixed tariff and pre-agreed fixed prices for airport and long-distance journeys. The online fare estimator will always show a fair and transparent guide price.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are your drivers licensed and DBS checked?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "All Aylestone Kings drivers are fully licensed by Leicester City Council or Wolverhampton City Council and hold enhanced DBS certificates. We maintain the highest standards of safety and professionalism.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you have wheelchair accessible taxis in Leicester?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we provide wheelchair accessible taxis in Leicester. Please call 0116 2338888 in advance to arrange appropriate vehicle and assistance for your journey.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I book a minibus or large taxi in Leicester?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. We have 6-seater and 8-seater minibus taxis available in Leicester for groups, airport runs, and events. Pre-booking recommended. Call 0116 2338888 for availability and pricing.",
                 },
               },
             ],

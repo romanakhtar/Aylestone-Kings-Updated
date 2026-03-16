@@ -102,7 +102,7 @@ export default function AirportTransfersLeicesterPage() {
                   All Major UK Airports Covered
                 </h3>
                 <p className="text-[#2E3C44]">
-                  We provide airport transfers from Leicester to:
+                  Airport journeys arranged through Aylestone Taxis with licensed drivers covering all major UK airports:
                   <li> East Midlands Airport</li>
                   <li> Birmingham Airport</li>
                   <li> Heathrow Airport</li>

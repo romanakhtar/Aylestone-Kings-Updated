@@ -166,7 +166,7 @@ export default function LeicesterTaxiCompanyPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Local Knowledge</h3>
                 <p className="text-[#2E3C44]">
-                  As a <strong>Leicester Taxi Company</strong>, our drivers have extensive local knowledge, 
+                  As a <strong>Leicester Taxi Company</strong>, licensed drivers available through Aylestone Taxis have extensive local knowledge,
                   ensuring the fastest and most efficient routes.
                 </p>
               </div>

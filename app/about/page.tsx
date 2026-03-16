@@ -96,7 +96,7 @@ export default function AboutPage() {
                 A legacy of excellence since {siteData.company.founded}
               </h2>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
-                Established in 1995, we are a trusted taxi company based in Leicester, proudly serving the local community for nearly three decades. Whether you need a ride to the train station, airport, university, or a day out shopping, our reliable and professional drivers are here to help. We offer safe, comfortable, and affordable transport for individuals, families, students, and businesses — always putting your journey first. With a strong reputation for punctuality and friendly service, we’re your go-to taxi company in Leicester.
+                Aylestone Taxis is a booking and dispatch service connecting passengers with licensed independent drivers. Established in 1995, we are based in Leicester and have proudly served the local community for nearly three decades. Whether you need a ride to the train station, airport, university, or a day out shopping, licensed drivers available through Aylestone Taxis are here to help. We offer safe, comfortable, and affordable journeys for individuals, families, students, and businesses — always putting your journey first.
               </p>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
                 Over the decades, we've maintained our commitment to exceptional service while embracing modern technology and expanding our fleet. 

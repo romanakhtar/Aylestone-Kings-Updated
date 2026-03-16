@@ -84,7 +84,7 @@ export default function AnimatedHero() {
   }
 
   return (
-    <main className={`relative min-h-screen ${isChristmasActive ? 'bg-gradient-to-br from-[#0F0D3E] via-[#0F0D3E] to-[#2E3C44]' : 'bg-white'}`}>
+    <main className={`relative min-h-[70vh] ${isChristmasActive ? 'bg-gradient-to-br from-[#0F0D3E] via-[#0F0D3E] to-[#2E3C44]' : 'bg-white'}`}>
       {/* Valentine Tagline Banner - Just below fixed navbar (top-5 + h-16 = 84px), overlays hero */}
       {isValentineActive && (
         <div
@@ -193,7 +193,7 @@ export default function AnimatedHero() {
       )}
       
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 lg:pt-32 pb-16 min-h-screen flex items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-24 lg:pt-28 pb-16 flex items-center">
         <div className={`grid grid-cols-1 ${isChristmasActive ? 'lg:grid-cols-2' : 'lg:grid-cols-2'} gap-8 lg:gap-16 items-start w-full`}>
           {/* Left Content - Main Content with Enhanced Visuals */}
           <div className={`${isChristmasActive ? 'order-1 lg:order-1' : 'order-1'} max-w-xl`}>

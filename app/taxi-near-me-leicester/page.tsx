@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar, Navigation } from "lucide-react"
+import Script from "next/script"
 import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
@@ -16,6 +17,49 @@ export const metadata: Metadata = {
     description: "Taxi Near Me Leicester - Find the nearest taxi service in Leicester. Fast pick-ups, 24/7 service.",
     url: "https://aylestone-taxis.co.uk/taxi-near-me-leicester",
   },
+}
+
+const faqSchemaTaxiNearMeLeicester = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How do I find a taxi near me in Leicester?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "You can find a Taxi Near Me Leicester by booking online, calling our office or sending us a WhatsApp message. We will dispatch the nearest available driver to your location.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How fast can a Taxi Near Me Leicester arrive?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Response times vary by time of day and your exact location, but in many Leicester areas we can send a nearby taxi within minutes. We&apos;ll always give you an accurate ETA when you book.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is your Taxi Near Me Leicester service available 24/7?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Yes. Our Taxi Near Me Leicester service operates 24 hours a day, 7 days a week, including weekends and bank holidays.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I track my taxi when I book Taxi Near Me Leicester?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Yes. When you book, you receive driver details and live updates so you can see when your Taxi Near Me Leicester is on the way and when it will arrive.",
+      },
+    },
+  ],
 }
 
 export default function TaxiNearMeLeicesterPage() {
@@ -205,6 +249,58 @@ export default function TaxiNearMeLeicesterPage() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="py-20 bg-[#F9FAFB]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-4">
+                Taxi Near Me Leicester – Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-[#2E3C44]">
+                Answers to common questions about finding a Taxi Near Me Leicester quickly and safely.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <details className="group border border-gray-200 rounded-lg p-4 bg-white">
+                <summary className="cursor-pointer text-[#0F0D3E] font-semibold">
+                  How do I book a Taxi Near Me Leicester?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  You can book online, call us on {contactInfo.phone}, or send a WhatsApp message. Tell us where you are
+                  and we&apos;ll send the nearest available driver.
+                </p>
+              </details>
+              <details className="group border border-gray-200 rounded-lg p-4 bg-white">
+                <summary className="cursor-pointer text-[#0F0D3E] font-semibold">
+                  Will my taxi really be near me?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  We operate across Leicester with drivers positioned in multiple areas. When you request Taxi Near Me
+                  Leicester, our system allocates the closest suitable vehicle for the fastest possible arrival.
+                </p>
+              </details>
+              <details className="group border border-gray-200 rounded-lg p-4 bg-white">
+                <summary className="cursor-pointer text-[#0F0D3E] font-semibold">
+                  Can I use Taxi Near Me Leicester for airport trips?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  Yes. You can use our Taxi Near Me Leicester service for local trips, nights out, work commutes and
+                  airport runs. We offer fixed fares to all major UK airports.
+                </p>
+              </details>
+              <details className="group border border-gray-200 rounded-lg p-4 bg-white">
+                <summary className="cursor-pointer text-[#0F0D3E] font-semibold">
+                  Are your nearby taxis licensed and insured?
+                </summary>
+                <p className="mt-2 text-[#2E3C44]">
+                  All licensed drivers available through Aylestone Taxis are fully licensed and DBS checked, and every vehicle is properly insured and
+                  regularly maintained for your safety.
+                </p>
+              </details>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -232,6 +328,11 @@ export default function TaxiNearMeLeicesterPage() {
           </div>
         </section>
       </main>
+      <Script
+        id="faq-schema-taxi-near-me-leicester"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaTaxiNearMeLeicester) }}
+      />
     </div>
   )
 }

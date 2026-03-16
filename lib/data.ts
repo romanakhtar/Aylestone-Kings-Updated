@@ -138,7 +138,7 @@ export const siteData = {
       subtitle:
         "Available all year round day and night with immediate pick-up in most Leicester areas.",
       description:
-        "Book by landline, WhatsApp or online. Pre-bookings welcome. Instant confirmations.",
+        "Book licensed drivers through the Aylestone Taxis app.",
       features: [
         "SMS/WhatsApp confirmations",
         "Pre-bookings welcome",
@@ -163,7 +163,7 @@ export const siteData = {
     seoContent: {
       introHeading: "Leicester Taxi Service – Trusted Since 1995",
       introBody:
-        "Looking for a reliable taxi in Leicester? Aylestone Kings provides fast, professional, and affordable taxi services across Leicester, Leicestershire and the wider East Midlands. Whether you need a local journey, a safe ride home, corporate travel, or a dependable airport transfer, our licensed drivers are available 24/7.",
+        "Looking for reliable transport in Leicester? Passengers can book licensed drivers across Leicester through Aylestone Taxis. Whether you need a local journey, a safe ride home, corporate travel, or a dependable airport transfer, licensed drivers are available through the Aylestone booking platform 24/7.",
 
       mission:
         "We specialise in fixed-price airport transfers from Leicester to East Midlands Airport, Birmingham Airport, Heathrow and other major UK airports. With on-time pickups, comfortable vehicles, and experienced local drivers, we ensure every journey is smooth and stress-free.",
@@ -663,8 +663,20 @@ export const siteData = {
       { name: "24 Hour Taxi Leicester", href: "/24-hour-taxi-leicester" },
       { name: "Cheap Taxi Leicester", href: "/cheap-taxi-leicester" },
       {
+        name: "Meet and Greet Taxi Leicester",
+        href: "/meet-and-greet-taxi-leicester",
+      },
+      {
+        name: "School Run Taxi Leicester",
+        href: "/school-run-taxi-leicester",
+      },
+      {
         name: "Long-Distance & Corporate",
         href: "/long-distance-taxi-leicester",
+      },
+      {
+        name: "Corporate Taxi Account Leicester",
+        href: "/corporate-taxi-account-leicester",
       },
       { name: "Shopping", href: "/travel" },
       { name: "Students Transport", href: "/travel" },
@@ -974,16 +986,62 @@ export const siteData = {
       "Discover insights, tips, and stories about transportation in Leicester",
     blogs: [
       {
+        id: "how-much-does-taxi-cost-leicester-2026-fare-guide",
+        title: "How much does a taxi cost in Leicester? 2026 Fare Guide",
+        excerpt:
+          "A complete taxi fare guide for Leicester in 2026. Example prices for Aylestone to city centre, EMA, and train station. Fixed prices vs Uber surge, and how to book. Your go-to resource for taxi prices Leicester.",
+        content: `
+          <p>Planning a journey in Leicester and wondering what you'll pay? This 2026 taxi fare guide explains how <strong>taxi prices Leicester</strong> are worked out for popular routes, outlines the difference between fixed fares and Uber surge pricing, and shows you how to book. Whether you need a <a href="/cheap-taxi-leicester">cheap taxi Leicester</a> for a short trip or a reliable transfer to the airport, we've got the details.</p>
+          
+          <h2>Example Taxi Routes from Aylestone</h2>
+          <p>Common journeys from Aylestone, south-west Leicester, include trips into the city centre, to Leicester train station, and to nearby airports. While exact fares depend on the time of day, traffic, and vehicle type, these routes are typically classed as:</p>
+          <ul>
+            <li><strong>Aylestone to Leicester city centre</strong> – a short city journey, usually one of the most affordable options.</li>
+            <li><strong>Aylestone to Leicester train station</strong> (London Road) – another short trip, similar in cost to travelling into the city centre.</li>
+            <li><strong>Aylestone to East Midlands Airport (EMA)</strong> – a longer airport transfer, normally priced higher than local city runs but still cost-effective when pre-booked.</li>
+          </ul>
+          <p>City centre and train station journeys tend to stay low cost because they cover only a few miles. For longer trips like airport transfers, check our <a href="/leicester-airport-taxi">Leicester Airport Taxi</a> page for full pricing to all major UK airports.</p>
+          
+          <h2>Fixed Prices vs Uber Surge</h2>
+          <p>One of the main benefits of a local taxi service like Aylestone Kings is <strong>fixed prices</strong>. We quote a price upfront – no meter surprises and no surge pricing. Ride apps such as Uber use demand-based surge pricing, so the same journey can cost far more when it's busy, raining, or late at night.</p>
+          <ul>
+            <li><strong>Fixed price:</strong> Same fare whether it's rush hour or 3am – you know what you pay before you travel.</li>
+            <li><strong>Uber surge:</strong> Prices can double or more at peak times, during bad weather, or when demand is high.</li>
+          </ul>
+          <p>For predictable costs, especially for airport runs or regular trips, a fixed-price <strong>taxi fare guide Leicester</strong> will always favour traditional taxi services over surge-based apps.</p>
+          
+          <h2>How to Book a Leicester Taxi</h2>
+          <p>Booking is straightforward:</p>
+          <ol>
+            <li><strong>Online</strong> – Use our booking system for instant confirmation.</li>
+            <li><strong>Phone</strong> – Call 0116 2338888 for immediate or advance bookings.</li>
+            <li><strong>WhatsApp</strong> – Message us for a quick quote and booking.</li>
+          </ol>
+          <p>Pre-book for early mornings, late nights, or airport transfers. For airport journeys, we monitor flights and adjust pickup times if there are delays. Our <a href="/leicester-airport-taxi">Leicester Airport Taxi</a> service covers East Midlands, Birmingham, Heathrow, Gatwick, and other major airports with fixed prices and 24/7 availability.</p>
+          
+          <h2>When Do Prices Change?</h2>
+          <p>Unlike surge apps, our rates stay consistent. Extra cost only comes from things like a different pickup location, extra stops, or a larger vehicle (e.g. MPV or minibus). For a <a href="/cheap-taxi-leicester">cheap taxi Leicester</a> without hidden extras, we quote the full fare before you commit.</p>
+          
+          <h2>Why Use This Taxi Fare Guide?</h2>
+          <p>Having a rough idea of <strong>taxi prices Leicester</strong> helps you plan and compare. Use this fare guide for budgets, and always ask for a firm quote when booking. Aylestone Kings has been serving Leicester since 1995 with fixed prices, licensed drivers, and 24/7 service. Ready to book? Get a quote online or call 0116 2338888.</p>
+        `,
+        date: "2026-03-07",
+        author: "Aylestone Kings Team",
+        category: "Fare Guide",
+        image: "/Taxi-cost-in-Leicester-Blog.webp",
+      },
+      {
         id: "leicester-to-east-midlands-airport-taxi-travel-guide-prices-booking-tips",
         title:
           "Leicester to East Midlands Airport Taxi – Travel Guide, Prices & Booking Tips",
         excerpt:
-          "Your complete guide to getting from Leicester to East Midlands Airport (EMA) by taxi. Fixed prices from £40, 24/7 service, and expert booking tips for stress-free airport transfers.",
+          "Your complete guide to getting from Leicester to East Midlands Airport (EMA) by taxi. Fixed prices from £40, 24/7 service, and expert booking tips for stress-free airport transfers – including options for families, schools and business travellers.",
         content: `
           <p>Travelling from Leicester to East Midlands Airport (EMA)? A taxi is often the most convenient option for a stress-free start to your journey. This guide covers everything you need to know: travel times, prices, and how to book your Leicester to East Midlands Airport taxi with confidence.</p>
           
           <h2>Why Choose a Leicester to East Midlands Airport Taxi?</h2>
           <p>East Midlands Airport is Leicester's closest major airport, making it a popular choice for both business and leisure travellers. A dedicated taxi transfer from Leicester offers door-to-door convenience, fixed pricing, and reliable service – ideal when you need to catch a flight without worrying about parking or public transport connections.</p>
+          <p>If you are arranging regular travel for children, our dedicated <a href="/school-run-taxi-leicester">school run taxi Leicester</a> service provides DBS-checked drivers and consistent school transport. Business travellers and companies can also benefit from <a href="/corporate-taxi-account-leicester">corporate taxi accounts in Leicester</a>, with centralised billing and streamlined airport transfers for staff and clients.</p>
           
           <h2>Journey Details & Travel Time</h2>
           <p>The journey from Leicester to East Midlands Airport typically takes around 30–40 minutes, depending on traffic. The route follows the M1 and A50, with experienced drivers knowing the best times and alternatives to avoid delays. We recommend allowing extra time during peak hours and bank holidays.</p>
@@ -1014,12 +1072,12 @@ export const siteData = {
           <p>All Aylestone Kings drivers are fully licensed, DBS-checked, and experienced in airport transfers. We provide door-to-door pickup, help with luggage, and meet-and-greet options on return journeys. Our 24/7 service means you can travel at any time, whether your flight departs at dawn or arrives late at night.</p>
           
           <h2>Ready to Book?</h2>
-          <p>Book your Leicester to East Midlands Airport taxi online, call 0116 2338888, or use WhatsApp for a quick confirmation. Fixed prices, reliable drivers, and peace of mind – your journey to EMA starts here.</p>
+          <p>Book your Leicester to East Midlands Airport taxi online, call 0116 2338888, or use WhatsApp for a quick confirmation. Fixed prices from £40 for standard saloons and from £60 for MPVs, reliable drivers, and peace of mind – your journey to EMA starts here.</p>
         `,
         date: "2026-02-17",
         author: "Aylestone Kings Team",
         category: "Airport Transfers",
-        image: "/Reliable-airport-transfers.jpg",
+        image: "/EMA Blog.webp",
       },
       {
         id: "why-leicester-locals-trust-aylestone-taxis",
@@ -1036,7 +1094,7 @@ export const siteData = {
           <p>Since 1995, we've built a reputation for excellence. With over 30 years of experience, thousands of satisfied customers, and a 99.7% satisfaction rating, our track record speaks for itself. Leicester locals trust us because we've consistently delivered reliable service year after year.</p>
           
           <h2>Safety First</h2>
-          <p>All our drivers are fully licensed by Leicester City Council and undergo rigorous DBS checks. Our vehicles are regularly maintained and inspected to ensure your safety. We're fully insured and operate with the highest safety standards in the industry.</p>
+          <p>All licensed drivers available through Aylestone Taxis are fully licensed by Leicester City Council and undergo rigorous DBS checks. Vehicles used for bookings are regularly maintained and inspected to ensure your safety. We're fully insured and operate with the highest safety standards in the industry.</p>
           
           <h2>24/7 Availability</h2>
           <p>Life doesn't stop at 5pm, and neither do we. Our 24/7 service means you can count on us whenever you need us - whether it's an early morning airport transfer, a late-night journey home, or an emergency ride to the hospital.</p>
@@ -1203,7 +1261,7 @@ export const siteData = {
           <p>We track your flight status in real-time, so if your flight is delayed or arrives early, we adjust our pickup time accordingly. This means no waiting around at the airport or rushing to catch your flight. Our flight monitoring service sets us apart as the best airport taxi service in Leicester.</p>
           
           <h3>Professional Drivers</h3>
-          <p>All our drivers are fully licensed by Leicester City Council, DBS checked, and experienced in airport transfers. They know the best routes to avoid traffic and ensure you arrive at the airport with plenty of time to spare. Professional, courteous, and reliable - that's what makes us the best taxi service in Leicester.</p>
+          <p>All licensed drivers available through Aylestone Taxis are fully licensed by Leicester City Council, DBS checked, and experienced in airport transfers. They know the best routes to avoid traffic and ensure you arrive at the airport with plenty of time to spare. Professional, courteous, and reliable - that's what makes us the best taxi service in Leicester.</p>
           
           <h3>Comfortable Vehicles</h3>
           <p>Our fleet includes spacious estate vehicles perfect for luggage, executive cars for business travel, and MPVs for larger groups. All vehicles are clean, well-maintained, and equipped with modern amenities. Travel in comfort with the best taxi service in Leicester.</p>
@@ -1394,7 +1452,7 @@ export const siteData = {
           </ul>
           
           <h2>Licensed and Regulated</h2>
-          <p>Local taxi services in Leicester are licensed and regulated by Leicester City Council, ensuring high safety and service standards. All our drivers are:</p>
+          <p>Local taxi services in Leicester are licensed and regulated by Leicester City Council, ensuring high safety and service standards. All licensed drivers available through Aylestone Taxis are:</p>
           <ul>
             <li>Fully licensed by Leicester City Council</li>
             <li>DBS checked for your safety</li>
@@ -1706,7 +1764,7 @@ export const siteData = {
           <h2>What Makes Our School Run Service Safe?</h2>
           
           <h3>DBS Checked Drivers</h3>
-          <p>All our drivers undergo enhanced DBS (Disclosure and Barring Service) checks, ensuring they're safe to work with children. This is essential for school run taxi services in Leicester.</p>
+          <p>All licensed drivers available through Aylestone Taxis undergo enhanced DBS (Disclosure and Barring Service) checks, ensuring they're safe to work with children. This is essential for school run taxi services in Leicester.</p>
           
           <h3>Licensed and Regulated</h3>
           <p>We're fully licensed by Leicester City Council, which means:</p>
@@ -2061,9 +2119,9 @@ export const siteData = {
         title:
           "Areas We Cover in Leicester – Local Taxi Service You Can Rely On",
         excerpt:
-          "Discover the comprehensive coverage of Aylestone Taxis across Leicester and surrounding areas. From city centre to suburbs, we provide reliable local taxi service throughout the region.",
+          "Discover the comprehensive coverage of Aylestone Taxis across Leicester and surrounding areas. Licensed drivers available through Aylestone Taxis cover Leicester and surrounding areas.",
         content: `
-          <p>When you need a reliable local taxi service in Leicester, coverage matters. Aylestone Taxis provides comprehensive taxi services across Leicester and surrounding areas, ensuring you can get where you need to go, wherever you are in the region.</p>
+          <p>When you need a reliable local taxi service in Leicester, coverage matters. Licensed drivers available through Aylestone Taxis cover Leicester and surrounding areas, ensuring you can get where you need to go, wherever you are in the region.</p>
           
           <h2>Comprehensive Coverage Across Leicester</h2>
           <p>As a trusted local taxi service in Leicester, we cover all areas of the city and beyond. Whether you're in the city centre, suburbs, or surrounding towns, we're here to provide reliable transport.</p>

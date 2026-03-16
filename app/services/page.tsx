@@ -89,7 +89,7 @@ const services = [
   },
   {
     name: "Hotel Transfers",
-    description: "Professional transfers to and from hotels throughout Leicester and beyond. Whether you're checking in or out, our drivers provide reliable service with luggage assistance. Perfect for tourists and business travelers.",
+    description: "Professional transfers to and from hotels throughout Leicester and beyond. Whether you're checking in or out, licensed drivers available through Aylestone Taxis provide reliable service with luggage assistance. Perfect for tourists and business travelers.",
     icon: Hotel,
     schemaType: "TaxiService",
   },

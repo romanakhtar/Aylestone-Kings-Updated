@@ -1,6 +1,4 @@
 "use client";
-
- 
 import { Button } from "@/components/ui/button";
 import {
  MapPin,
@@ -36,7 +34,7 @@ export default function ContactPage() {
 
  if (state.succeeded) {
  return (
- <div className="min-h-screen bg-white">
+<div className="min-h-screen bg-white">
  <section className="relative py-20">
  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="text-center">
@@ -92,12 +90,15 @@ export default function ContactPage() {
  <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed font-light mb-4">
    Get in touch with Aylestone Kings for all your transportation needs
  </p>
- <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light">
-   Available 24/7 to serve you with reliable and professional taxi services
- </p>
- </div>
- </div>
- </section>
+<p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light">
+  Available 24/7 to serve you with reliable and professional taxi services
+</p>
+</div>
+<p className="mt-6 text-sm md:text-base text-white/90 max-w-3xl mx-auto leading-relaxed">
+ Aylestone Kings is a customer-facing brand of Aylestone Taxis. Bookings are arranged through Aylestone Taxis with licensed independent drivers.
+</p>
+</div>
+</section>
 
  {/* Prominent Contact Information Section */}
  <section className="py-16 bg-gradient-to-br from-[#06A0A6]/5 via-white to-[#0F0D3E]/5">
@@ -226,9 +227,9 @@ export default function ContactPage() {
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
  {/* Contact Form */}
  <div>
- <h2 className="text-3xl font-bold text-gray-900 mb-8">
+<h2 className="text-3xl font-bold text-gray-900 mb-8">
  Send us a Message
- </h2>
+</h2>
 <form onSubmit={handleSubmit} className="space-y-6">
 <input type="hidden" name="formType" value="contactForm" />
  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -371,6 +372,9 @@ export default function ContactPage() {
  >
  {state.submitting ? "Sending Message..." : "Send Message"}
  </Button>
+<p className="mt-3 text-xs text-gray-500">
+ Your booking or enquiry will be allocated to a licensed independent driver through the Aylestone dispatch system.
+</p>
  {state.errors && (
  <div className="text-red-500 text-sm text-center">
  There was an error sending your message. Please try again.
