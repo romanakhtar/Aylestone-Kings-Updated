@@ -1,6 +1,4 @@
 "use client";
-
- 
 import { Button } from "@/components/ui/button";
 import {
  MapPin,
@@ -92,16 +90,15 @@ export default function ContactPage() {
  <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed font-light mb-4">
    Get in touch with Aylestone Kings for all your transportation needs
  </p>
- <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light">
-   Available 24/7 to serve you with reliable and professional taxi services
- </p>
+<p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light">
+  Available 24/7 to serve you with reliable and professional taxi services
+</p>
 </div>
 <p className="mt-6 text-sm md:text-base text-white/90 max-w-3xl mx-auto leading-relaxed">
-  Aylestone Kings is a customer-facing brand of Aylestone Taxis. Bookings are arranged through Aylestone Taxis with licensed independent drivers.
+ Aylestone Kings is a customer-facing brand of Aylestone Taxis. Bookings are arranged through Aylestone Taxis with licensed independent drivers.
 </p>
- </div>
- </div>
- </section>
+</div>
+</section>
 
  {/* Prominent Contact Information Section */}
  <section className="py-16 bg-gradient-to-br from-[#06A0A6]/5 via-white to-[#0F0D3E]/5">
