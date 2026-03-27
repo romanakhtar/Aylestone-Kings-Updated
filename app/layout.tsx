@@ -84,7 +84,8 @@ export const metadata: Metadata = {
 
 const schemaData = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "TaxiService"],
+  "@type": "TaxiService",
+  additionalType: "https://schema.org/LocalBusiness",
   "@id": "https://aylestone-taxis.co.uk/#business",
   name: "Aylestone Kings Taxi Service",
   alternateName: "Aylestone Taxis",
