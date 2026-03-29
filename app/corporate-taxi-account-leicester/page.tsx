@@ -22,40 +22,6 @@ export const metadata: Metadata = {
   },
 }
 
-const faqSchemaCorporateTaxiAccount = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How do I open a corporate taxi account in Leicester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "To open a corporate taxi account in Leicester, contact Aylestone Taxis by email and we will register your business. Once your account is approved, your staff can begin booking taxis under your company account.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How does billing work for corporate taxi accounts?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "All journeys booked under your corporate taxi account are recorded and added to a single monthly invoice. This makes it easier for your accounts team to manage taxi costs and reconcile business travel.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Who can use a corporate taxi account?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Corporate taxi accounts are ideal for offices, hotels, healthcare providers, schools and other businesses across Leicester that regularly need staff or client transport and prefer centralised monthly billing.",
-      },
-    },
-  ],
-}
-
 export default function CorporateTaxiAccountLeicesterPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -253,12 +219,6 @@ export default function CorporateTaxiAccountLeicesterPage() {
           </div>
         </section>
       </main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchemaCorporateTaxiAccount),
-        }}
-      />
     </div>
   )
 }

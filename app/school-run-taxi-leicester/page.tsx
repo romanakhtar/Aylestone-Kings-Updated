@@ -29,49 +29,6 @@ export const metadata: Metadata = {
   },
 }
 
-const faqSchemaSchoolRunTaxi = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Are your school run taxi drivers DBS-checked?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Yes. All Aylestone Kings school run taxi drivers are fully licensed and enhanced DBS-checked. We only use vetted, professional drivers for school transport in Leicester.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can my child have the same driver for every school run?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Yes – where possible we offer a consistent same-driver option for regular school runs. When you set up a daily or weekly school run taxi Leicester booking, we aim to allocate the same trusted driver so your child sees a familiar face every journey.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which areas do you cover for school run taxis in Leicester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Our school run taxi Leicester service covers Aylestone, Wigston, Knighton, Clarendon Park and surrounding Leicester areas. If you are unsure whether we cover your area, call 0116 233 8888 and we will confirm.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I set up a regular school run taxi booking?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "To set up a regular school run taxi Leicester booking, call 0116 233 8888 to discuss your schedule and requirements. We will arrange daily or weekly pick-ups, agree collection and drop-off points, and allocate a regular driver where possible. You can also start your booking online and our team will follow up.",
-      },
-    },
-  ],
-}
-
 export default function SchoolRunTaxiLeicesterPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -349,10 +306,6 @@ export default function SchoolRunTaxiLeicesterPage() {
           </div>
         </section>
       </main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaSchoolRunTaxi) }}
-      />
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar } from "lucide-react"
-import Script from "next/script"
 import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
@@ -17,49 +16,6 @@ export const metadata: Metadata = {
     description: "Taxi Leicester - Leicester's most trusted taxi service since 1995. 24/7 service, licensed drivers, fast pick-ups.",
     url: "https://aylestone-taxis.co.uk/taxi-leicester",
   },
-}
-
-const faqSchemaTaxiLeicester = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How do I book a taxi in Leicester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "You can book your Taxi Leicester online in seconds, call our office, or use WhatsApp. You will see your price before confirming the journey.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are your Leicester taxis available 24/7?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Yes. Our Taxi Leicester service runs 24 hours a day, 7 days a week including weekends and bank holidays, so you always have a cab when you need one.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you offer fixed prices for Taxi Leicester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Most journeys are quoted upfront with fixed prices so you know the fare before you travel. We do not use surge pricing.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do your Leicester taxis go to all major airports?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Yes. We provide airport transfers from Leicester to Birmingham, East Midlands, Heathrow, Gatwick, Luton, Stansted and Manchester with fixed, competitive fares.",
-      },
-    },
-  ],
 }
 
 export default function TaxiLeicesterPage() {
@@ -347,11 +303,6 @@ export default function TaxiLeicesterPage() {
           </div>
         </section>
       </main>
-      <Script
-        id="faq-schema-taxi-leicester"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaTaxiLeicester) }}
-      />
     </div>
   )
 }

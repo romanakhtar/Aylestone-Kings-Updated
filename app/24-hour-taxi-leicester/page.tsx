@@ -33,40 +33,6 @@ export const metadata: Metadata = {
   },
 }
 
-const faqSchemaTwentyFourHour = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Are your taxis really available 24 hours a day in Leicester?",
-      acceptedAnswer: {
-        "@type": "Answer",              
-        text:
-          "Yes. Aylestone Kings operates a genuine 24 hour taxi service in Leicester, 365 days a year including nights, weekends and bank holidays.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I book a 24 hour taxi in Leicester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "You can book a 24 hour taxi in Leicester by calling 0116 233 8888 or using our online booking system to pre-book day or night journeys.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you charge extra for late night or early morning taxis?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "No. Our 24 hour taxi Leicester service uses fair, transparent pricing with no surge charges for late night or early morning journeys.",
-      },
-    },
-  ],
-}
-
 export default function TwentyFourHourTaxiLeicesterPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -437,10 +403,6 @@ export default function TwentyFourHourTaxiLeicesterPage() {
           </div>
         </section>
       </main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaTwentyFourHour) }}
-      />
     </div>
   )
 }
