@@ -25,9 +25,7 @@ export default function EastMidlandsPage() {
             description:
               "Fixed-price taxi transfer from Leicester and Leicestershire to East Midlands Airport (EMA). 24/7 service, flight monitoring, meet & greet available. Licensed drivers.",
             provider: {
-              "@type": "LocalBusiness",
               "@id": "https://aylestone-taxis.co.uk/#business",
-              name: "Aylestone Kings Taxi Service",
             },
             areaServed: {
               "@type": "City",
@@ -52,10 +50,10 @@ export default function EastMidlandsPage() {
               "@type": "OfferCatalog",
               name: "Airport Transfer Features",
               itemListElement: [
-                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flight Monitoring" } },
-                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Meet & Greet Available" } },
-                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fixed Price — No Surge Pricing" } },
-                { "@type": "Offer", itemOffered: { "@type": "Service", name: "24/7 Availability" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flight Monitoring", provider: { "@id": "https://aylestone-taxis.co.uk/#business" } } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Meet & Greet Available", provider: { "@id": "https://aylestone-taxis.co.uk/#business" } } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fixed Price — No Surge Pricing", provider: { "@id": "https://aylestone-taxis.co.uk/#business" } } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "24/7 Availability", provider: { "@id": "https://aylestone-taxis.co.uk/#business" } } },
               ],
             },
           }),
