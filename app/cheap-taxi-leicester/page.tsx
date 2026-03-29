@@ -28,40 +28,6 @@ export const metadata: Metadata = {
   },
 }
 
-const faqSchemaCheapTaxi = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How cheap is your taxi service in Leicester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Our Cheap Taxi Leicester service offers competitive rates across the city with fair, upfront pricing so you know the cost before you travel.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are there any hidden fees with your cheap taxi Leicester service?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "No. Our Cheap Taxi Leicester service has transparent pricing with no hidden extras or surprise charges added at the end of your journey.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is your cheap taxi service available 24 hours a day?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Yes. Our cheap taxi Leicester service runs 24 hours a day, 7 days a week, so you get affordable transport at any time, day or night.",
-      },
-    },
-  ],
-}
-
 export default function CheapTaxiLeicesterPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -380,10 +346,6 @@ export default function CheapTaxiLeicesterPage() {
           </div>
         </section>
       </main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaCheapTaxi) }}
-      />
     </div>
   )
 }

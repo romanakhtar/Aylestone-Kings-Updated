@@ -1,7 +1,6 @@
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
-import Script from "next/script"
 
 export const metadata: Metadata = {
   title: "Heathrow Airport Taxi from Leicester | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
@@ -11,53 +10,6 @@ export const metadata: Metadata = {
 export default function HeathrowPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Script
-        id="heathrow-airport-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            serviceType: "Airport Transfer",
-            name: "Leicester to Heathrow Airport Taxi",
-            description:
-              "Fixed-price taxi transfer from Leicester and Leicestershire to Heathrow Airport (LHR). 24/7 service, flight monitoring, meet & greet available. Licensed drivers.",
-            provider: {
-              "@id": "https://aylestone-taxis.co.uk/#business",
-            },
-            areaServed: {
-              "@type": "City",
-              name: "Leicester",
-            },
-            offers: {
-              "@type": "Offer",
-              description: "Fixed price taxi from Leicester to Heathrow Airport",
-              priceCurrency: "GBP",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                minPrice: "130",
-                maxPrice: "160",
-                priceCurrency: "GBP",
-              },
-              eligibleRegion: {
-                "@type": "City",
-                name: "Leicester",
-              },
-            },
-            hasOfferCatalog: {
-              "@type": "OfferCatalog",
-              name: "Airport Transfer Features",
-              itemListElement: [
-                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flight Monitoring", provider: { "@id": "https://aylestone-taxis.co.uk/#business" } } },
-                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Meet & Greet Available", provider: { "@id": "https://aylestone-taxis.co.uk/#business" } } },
-                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fixed Price — No Surge Pricing", provider: { "@id": "https://aylestone-taxis.co.uk/#business" } } },
-                { "@type": "Offer", itemOffered: { "@type": "Service", name: "24/7 Availability", provider: { "@id": "https://aylestone-taxis.co.uk/#business" } } },
-              ],
-            },
-          }),
-        }}
-      />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">

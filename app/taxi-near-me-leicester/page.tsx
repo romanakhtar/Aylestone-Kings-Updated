@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar, Navigation } from "lucide-react"
-import Script from "next/script"
-import { contactInfo, siteData } from "@/lib/data"
+import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 
@@ -17,49 +16,6 @@ export const metadata: Metadata = {
     description: "Taxi Near Me Leicester - Find the nearest taxi service in Leicester. Fast pick-ups, 24/7 service.",
     url: "https://aylestone-taxis.co.uk/taxi-near-me-leicester",
   },
-}
-
-const faqSchemaTaxiNearMeLeicester = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How do I find a taxi near me in Leicester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "You can find a Taxi Near Me Leicester by booking online, calling our office or sending us a WhatsApp message. We will dispatch the nearest available driver to your location.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How fast can a Taxi Near Me Leicester arrive?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Response times vary by time of day and your exact location, but in many Leicester areas we can send a nearby taxi within minutes. We&apos;ll always give you an accurate ETA when you book.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is your Taxi Near Me Leicester service available 24/7?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Yes. Our Taxi Near Me Leicester service operates 24 hours a day, 7 days a week, including weekends and bank holidays.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I track my taxi when I book Taxi Near Me Leicester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Yes. When you book, you receive driver details and live updates so you can see when your Taxi Near Me Leicester is on the way and when it will arrive.",
-      },
-    },
-  ],
 }
 
 export default function TaxiNearMeLeicesterPage() {
@@ -328,11 +284,6 @@ export default function TaxiNearMeLeicesterPage() {
           </div>
         </section>
       </main>
-      <Script
-        id="faq-schema-taxi-near-me-leicester"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaTaxiNearMeLeicester) }}
-      />
     </div>
   )
 }

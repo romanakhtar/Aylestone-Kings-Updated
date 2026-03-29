@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import Script from "next/script"
 import { Calendar, User, ArrowRight, BookOpen } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 
@@ -154,95 +153,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Schema Markup for SEO */}
-      <Script
-        id="blog-collection-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Blog",
-            name: "Aylestone Kings Blog",
-            description: siteData.blogPage.subtitle,
-            url: "https://aylestone-taxis.co.uk/blog",
-            publisher: {
-              "@type": "Organization",
-              name: "Aylestone Kings",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png",
-              },
-            },
-            blogPost: blogs.map((blog) => ({
-              "@type": "BlogPosting",
-              headline: blog.title,
-              description: blog.excerpt,
-              image: `https://aylestone-taxis.co.uk${blog.image}`,
-              datePublished: blog.date,
-              dateModified: blog.date,
-              author: {
-                "@type": "Organization",
-                name: blog.author,
-              },
-              url: `https://aylestone-taxis.co.uk/blog/${blog.id}`,
-              articleSection: blog.category,
-            })),
-          }),
-        }}
-      />
-      <Script
-        id="blog-breadcrumbs-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://aylestone-taxis.co.uk/",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: "Blog",
-                item: "https://aylestone-taxis.co.uk/blog",
-              },
-            ],
-          }),
-        }}
-      />
-      <Script
-        id="blog-collection-page-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name: "Aylestone Kings Blog",
-            description: siteData.blogPage.subtitle,
-            url: "https://aylestone-taxis.co.uk/blog",
-            mainEntity: {
-              "@type": "ItemList",
-              numberOfItems: blogs.length,
-              itemListElement: blogs.map((blog, index) => ({
-                "@type": "ListItem",
-                position: index + 1,
-                item: {
-                  "@type": "BlogPosting",
-                  headline: blog.title,
-                  url: `https://aylestone-taxis.co.uk/blog/${blog.id}`,
-                },
-              })),
-            },
-          }),
-        }}
-      />
     </div>
   )
 }

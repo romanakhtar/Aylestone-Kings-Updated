@@ -1,7 +1,6 @@
  "use client"
 import Image from "next/image"
 import Link from "next/link"
-import Script from "next/script"
 import { Check, ArrowRight, Star, MapPin, Clock, Shield, ShieldCheck, BadgeCheck, Users, ChevronLeft, ChevronRight, Car, Plane } from "@/lib/icons"
 import { siteData, contactInfo } from "@/lib/data"
 import dynamic from "next/dynamic"
@@ -949,125 +948,6 @@ export default function Home() {
           </Accordion>
         </div>
       </section>
-
-      {/* FAQ Schema */}
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "How do I book a taxi in Leicester?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "You can book a taxi with Aylestone Kings in three ways: call us on 0116 2338888, WhatsApp +447888873795, or book online at aylestone-taxis.co.uk. We accept bookings 24/7 with instant confirmation.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How much is a taxi from Leicester to East Midlands Airport?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "A taxi from Leicester city centre to East Midlands Airport (EMA) starts from approximately £25-£35 depending on your exact pickup location. We offer fixed prices with no surge pricing. Get an exact quote by calling 0116 2338888 or using our online fare estimator.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How much is a taxi from Leicester to Birmingham Airport?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "A fixed-price taxi from Leicester to Birmingham Airport (BHX) starts from approximately £45-£55. We monitor your flight and offer meet & greet service. Call 0116 2338888 for an exact quote or use our fare estimator for a guide price.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Are Aylestone Kings taxis available 24 hours?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes, Aylestone Kings operates 24 hours a day, 7 days a week, 365 days a year including bank holidays. Call 0116 2338888 any time for immediate dispatch or to pre-book your journey.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Do you offer fixed price taxi fares in Leicester?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. All our airport transfers and long-distance fares are fixed price — you know exactly what you'll pay before you travel. Local fares are metered but competitive with no hidden charges. Our online fare estimator gives you a guide to typical prices.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How does the Aylestone Kings fare estimator work?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Our fare estimator uses our official tariff and typical road routes around Leicester to calculate an estimated price for your journey. For local trips it uses mileage bands, for airport transfers it uses our fixed airport tariff, and for long-distance journeys it uses approximate mileage. The final price is always confirmed at the time of booking.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Are the prices shown in the fare calculator fixed?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Airport transfers and long-distance trips are fixed price once booked. Local journeys shown in the fare estimator are guide prices based on our tariff and typical routing. The exact fare may vary slightly depending on traffic, route and waiting time, and will always be confirmed when you book.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Does the fare estimator include airport parking charges?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "No. Airport parking and drop-off charges are not included in the fare estimator price, as these are charged directly by the airport and can change. Your driver will add any airport parking or drop-off fees at cost on the day of travel.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can I get a fare estimate for a 6 or 8 seater taxi?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. Our fare estimator includes options for minibus fares on airport transfers and long-distance journeys. For local journeys or more detailed quotes for 6 and 8 seater vehicles, please call 0116 2338888 or use our online booking form.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Do you use surge pricing for your fares?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "No. Aylestone Kings does not use surge pricing. Our fares are based on a fixed tariff and pre-agreed fixed prices for airport and long-distance journeys. The online fare estimator will always show a fair and transparent guide price.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Are your drivers licensed and DBS checked?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "All Aylestone Kings drivers are fully licensed by Leicester City Council or Wolverhampton City Council and hold enhanced DBS certificates. We maintain the highest standards of safety and professionalism.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Do you have wheelchair accessible taxis in Leicester?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes, we provide wheelchair accessible taxis in Leicester. Please call 0116 2338888 in advance to arrange appropriate vehicle and assistance for your journey.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can I book a minibus or large taxi in Leicester?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. We have 6-seater and 8-seater minibus taxis available in Leicester for groups, airport runs, and events. Pre-booking recommended. Call 0116 2338888 for availability and pricing.",
-                },
-              },
-            ],
-          }),
-        }}
-      />
 
       {/* Call to Action Section */}
       <section className={`py-20 ${

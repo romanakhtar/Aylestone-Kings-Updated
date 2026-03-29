@@ -22,58 +22,6 @@ export const metadata: Metadata = {
   },
 }
 
-const faqSchemaMeetAndGreetTaxi = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is a meet and greet taxi service?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "A meet and greet taxi service means your driver comes inside the airport arrivals hall with a name board, meets you after you land, helps with luggage and walks you to your taxi, rather than you trying to find the car in a busy car park.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need to pre-book a meet and greet taxi at East Midlands or Birmingham Airport?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Yes. Meet and greet taxi services at East Midlands Airport (EMA) and Birmingham Airport (BHX) must be pre-booked so we can monitor your flight, arrange the correct parking and make sure your driver is in the terminal with a name sign when you arrive.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How does your meet and greet taxi work at East Midlands Airport (EMA)?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "For EMA meet and greet, we track your flight, your driver waits in the arrivals area with a clear name board, meets you as you exit, helps load your luggage and escorts you to the car park where your taxi is parked.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Will the driver help with my luggage?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "Yes. With our meet and greet taxi Leicester service, the driver assists with your suitcases and hand luggage from the arrivals hall to the vehicle, and again when you reach your home or hotel.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which airports do you offer meet and greet taxis from Leicester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          "We most commonly provide meet and greet taxi services from Leicester to East Midlands Airport (EMA) and Birmingham Airport (BHX), but we can also arrange meet and greet at other UK airports on request when pre-booked.",
-      },
-    },
-  ],
-}
-
 export default function MeetAndGreetTaxiLeicesterPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -489,12 +437,6 @@ export default function MeetAndGreetTaxiLeicesterPage() {
           </div>
         </section>
       </main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchemaMeetAndGreetTaxi),
-        }}
-      />
     </div>
   )
 }
