@@ -2830,14 +2830,15 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       <Script id="area-schema" type="application/ld+json" strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': 'TaxiService',
+          '@id': `https://aylestone-taxis.co.uk/taxis-in/${slug}#service`,
+          '@type': 'Service',
           name: `${companyInfo.name} — Taxis in ${areaPlain}`,
           areaServed: areaPlain,
           serviceType: 'Local taxi and airport transfer',
           telephone: contactInfo.phone,
           url: `https://aylestone-taxis.co.uk/taxis-in/${slug}`,
           availableChannel: { '@type': 'ServiceChannel', serviceUrl: contactInfo.booking.online },
-          provider: { '@type': 'LocalBusiness', name: companyInfo.name, address: `${contactInfo.address.street}, ${contactInfo.address.city} ${contactInfo.address.postcode}` }
+          provider: { '@id': 'https://aylestone-taxis.co.uk/#business' }
         }) }}
       />
       <Script

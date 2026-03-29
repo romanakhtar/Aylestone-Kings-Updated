@@ -111,20 +111,11 @@ export default function ServicesPage() {
   // Generate schema data for all services
   const serviceSchema = {
     "@context": "https://schema.org",
+    "@id": "https://aylestone-taxis.co.uk/services#service-catalog",
     "@type": "Service",
     "serviceType": "Taxi Service",
     "provider": {
-      "@type": "LocalBusiness",
-      "name": "Aylestone Kings",
-      "telephone": contactInfo.phone,
-      "email": contactInfo.email,
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": contactInfo.address.street,
-        "addressLocality": contactInfo.address.city,
-        "postalCode": contactInfo.address.postcode,
-        "addressCountry": contactInfo.address.country
-      }
+      "@id": "https://aylestone-taxis.co.uk/#business"
     },
     "areaServed": {
       "@type": "City",
