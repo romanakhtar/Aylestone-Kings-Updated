@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import Script from "next/script"
 import { 
   Car, Plane, Calendar, Briefcase, GraduationCap, Users, ArrowRight, Phone, 
   Clock, Shield, Stethoscope, MapPin, Heart, Building2, ShoppingBag, 
@@ -108,34 +107,6 @@ const services = [
 ]
 
 export default function ServicesPage() {
-  // Generate schema data for all services
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@id": "https://aylestone-taxis.co.uk/services#service-catalog",
-    "@type": "Service",
-    "serviceType": "Taxi Service",
-    "provider": {
-      "@id": "https://aylestone-taxis.co.uk/#business"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Leicester"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Taxi Services",
-      "itemListElement": services.map((service, index) => ({
-        "@type": "Offer",
-        "position": index + 1,
-        "itemOffered": {
-          "@type": "Service",
-          "name": service.name,
-          "description": service.description
-        }
-      }))
-    }
-  }
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -313,15 +284,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <Script
-        id="services-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
-      />
     </div>
   )
 }
