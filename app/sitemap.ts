@@ -46,6 +46,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   urls.push(createUrl('/airport-transfers-leicester', 0.9, 'weekly'))
   urls.push(createUrl('/local-taxi-leicester', 0.9, 'weekly'))
   urls.push(createUrl('/long-distance-taxi-leicester', 0.9, 'weekly'))
+  urls.push(createUrl('/seaport-transfers-uk', 0.9, 'weekly'))
+  urls.push(createUrl('/heathrow-terminal-2-taxi-transfers', 0.9, 'weekly'))
+  urls.push(createUrl('/heathrow-terminal-3-taxi-transfers', 0.9, 'weekly'))
+  urls.push(createUrl('/heathrow-terminal-4-taxi-transfers', 0.9, 'weekly'))
+  urls.push(createUrl('/heathrow-terminal-5-taxi-transfers', 0.9, 'weekly'))
+  urls.push(createUrl('/gatwick-north-terminal-taxi-transfers', 0.9, 'weekly'))
+  urls.push(createUrl('/gatwick-south-terminal-taxi-transfers', 0.9, 'weekly'))
   urls.push(createUrl('/valentines-day-taxi-leicester', 0.9, 'weekly'))
 
   // Airport Pricing Pages
