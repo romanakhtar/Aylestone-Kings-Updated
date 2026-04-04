@@ -812,6 +812,10 @@ export const siteData = {
       { name: "Luton Airport", href: "/pricing/airports/Luton" },
       { name: "Stansted Airport", href: "/pricing/airports/Stansted" },
       { name: "Manchester Airport", href: "/pricing/airports/Manchester" },
+      {
+        name: "Seaport & cruise transfers (UK)",
+        href: "/seaport-transfers-uk",
+      },
     ],
     destinationLinks: [
       {
