@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "East Midlands Airport Taxi from Leicester | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
@@ -56,6 +57,15 @@ export default function EastMidlandsPage() {
                 Fixed rates from Leicester and surrounding areas to East Midlands Airport. 
                 No hidden fees, no surprises.
               </p>
+              <div className="mt-4">
+                <Link
+                  href="/leicester-to-east-midlands-airport-taxi"
+                  className="inline-flex items-center gap-2 text-cyan-700 hover:text-cyan-900 font-semibold"
+                >
+                  Leicester → East Midlands Airport taxi: journey time, Q&A & fixed fares
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </div>
 
             {/* Pricing Table */}

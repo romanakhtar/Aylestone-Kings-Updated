@@ -408,6 +408,15 @@ export default function AirportTransfersLeicesterPage() {
                 Leicester to East Midlands Airport Taxi – Travel Guide, Prices & Booking Tips
                 <ArrowRight className="h-5 w-5" />
               </Link>
+              <div className="mt-3">
+                <Link
+                  href="/leicester-to-east-midlands-airport-taxi"
+                  className="inline-flex items-center gap-2 text-[#06A0A6] hover:text-[#0F0D3E] font-semibold transition-colors"
+                >
+                  Leicester → East Midlands Airport (EMA) taxi (fixed fares from £40)
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
               <p className="text-[#2E3C44] text-sm mt-2 max-w-2xl mx-auto">
                 Read our full guide to Leicester to EMA transfers, including prices, journey times and booking tips.
               </p>

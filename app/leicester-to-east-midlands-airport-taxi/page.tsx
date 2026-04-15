@@ -56,6 +56,41 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
           </div>
         </section>
 
+        {/* Journey time & distance (quick answers) */}
+        <section className="py-12 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="rounded-2xl border border-gray-200 p-6 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <Clock className="h-5 w-5 text-[#06A0A6]" />
+                  <h2 className="text-lg font-semibold text-[#0F0D3E]">Typical journey time</h2>
+                </div>
+                <p className="text-[#2E3C44]">
+                  Around <strong>30–45 minutes</strong> from Leicester to East Midlands Airport (EMA), depending on traffic and pickup area.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-gray-200 p-6 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <MapPin className="h-5 w-5 text-[#06A0A6]" />
+                  <h2 className="text-lg font-semibold text-[#0F0D3E]">Distance</h2>
+                </div>
+                <p className="text-[#2E3C44]">
+                  Roughly <strong>20–25 miles</strong> (route varies). We use the best route for your pickup time.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-gray-200 p-6 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <Calendar className="h-5 w-5 text-[#06A0A6]" />
+                  <h2 className="text-lg font-semibold text-[#0F0D3E]">When to book</h2>
+                </div>
+                <p className="text-[#2E3C44]">
+                  For early flights, we recommend booking <strong>the day before</strong>. Same-day bookings are often possible.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -236,6 +271,44 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Q&A */}
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-4">Leicester to EMA taxi — quick Q&A</h2>
+              <p className="text-lg text-[#2E3C44]">
+                The most common questions people ask before booking an East Midlands Airport transfer.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                {
+                  q: "How much is a taxi from Leicester to East Midlands Airport (EMA)?",
+                  a: "Our fixed-fare Leicester to EMA transfers start from £40 (vehicle and pickup location can affect the final price). You'll see the price before confirming your booking.",
+                },
+                {
+                  q: "Do you pick up from all Leicester areas?",
+                  a: "Yes — we cover Leicester and surrounding areas. Enter your pickup address when booking online or call 0116 2338888.",
+                },
+                {
+                  q: "Can you do early-morning airport runs?",
+                  a: "Yes. We operate 24/7 and can schedule pickups for early flights. We recommend pre-booking for peak travel times.",
+                },
+                {
+                  q: "What happens if my flight is delayed on the way back?",
+                  a: "For return trips, we can use your flight details to time pickup more accurately. If anything changes, call us and we’ll adjust where possible.",
+                },
+              ].map((item) => (
+                <details key={item.q} className="border rounded-lg p-5">
+                  <summary className="font-semibold cursor-pointer text-lg text-[#0F0D3E]">{item.q}</summary>
+                  <p className="mt-2 text-[#2E3C44]">{item.a}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
