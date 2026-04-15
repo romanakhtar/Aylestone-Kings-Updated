@@ -113,6 +113,8 @@ const nextConfig = {
       { source: '/faqs.html', destination: '/pricing', permanent: true },
       { source: '/corporate.html', destination: '/company', permanent: true },
       { source: '/contact.html', destination: '/contact', permanent: true },
+      // Clean up airport pages for better SERP URLs
+      { source: '/pricing/airports/Birmingham', destination: '/taxi-to-birmingham-airport', permanent: true },
     ];
   },
 
