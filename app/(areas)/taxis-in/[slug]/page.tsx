@@ -95,13 +95,13 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 15. Syston
   syston: {
-    title: "Taxi in Syston Leicestershire | Airport Transfers & 24/7 | Aylestone Kings",
+    title: "Taxis in Syston | Fixed Fares | Book Online 24/7 | Aylestone Kings",
     description:
       "Fast taxi service in Syston, Leicestershire. Fixed airport fares, local rides, licensed drivers. Available 24/7. Call 0116 2338888 or book online.",
   },
   // 16. Birstall
   birstall: {
-    title: "Taxi in Birstall Leicester | Airport Transfers & 24/7 | Aylestone Kings",
+    title: "Taxis in Birstall | Fixed Fares | Book Online 24/7 | Aylestone Kings",
     description:
       "Reliable 24/7 taxis in Birstall, Leicestershire. Fixed airport fares, local rides, licensed drivers. Call Aylestone Kings on 0116 2338888.",
   },
@@ -143,7 +143,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 23. Coalville
   coalville: {
-    title: "Taxi in Coalville Leicestershire | Fixed Fares & 24/7 | Aylestone Kings",
+    title: "Taxis in Coalville | Fixed Fares | Book Online 24/7 | Aylestone Kings",
     description:
       "Reliable taxi service in Coalville, Leicestershire. Airport transfers to EMA & BHX, local rides, 24/7 availability. Call 0116 2338888.",
   },
