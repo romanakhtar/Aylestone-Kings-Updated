@@ -10,16 +10,16 @@ import {
   Plane,
   Calendar,
 } from "lucide-react"
-import { contactInfo, siteData } from "@/lib/data"
+import { contactInfo, footerData } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
   title:
-    "Leicester Airport Taxi Service | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
+    "Airport Transfers Leicester | Fixed Fares, 24/7 | Book Online | Aylestone Taxis",
   description:
-    "Book a taxi from Leicester to the airport. Reliable 24/7 airport transfers with Aylestone Taxis. Call or book online.",
+    "Book fixed-fare airport transfers from Leicester with 24/7 service, flight monitoring, and licensed drivers. Fast online booking or call 0116 2338888.",
   keywords:
     "airport taxi Leicester, Leicester airport transfers, airport taxi service Leicester, East Midlands airport taxi, Heathrow taxi Leicester, Gatwick taxi Leicester",
   alternates: {
@@ -73,6 +73,20 @@ const faqs = [
 ]
 
 export default function AirportTransfersLeicesterPage() {
+  const areaLinks: { name: string; href: string }[] = (() => {
+    const links: { name: string; href: string }[] = []
+    const columns = (footerData as any).footerColumns ?? []
+    for (const col of columns) {
+      for (const l of col?.links ?? []) {
+        if (typeof l?.href === "string" && l.href.startsWith("/taxis-in/")) {
+          links.push({ name: String(l.name ?? l.href), href: l.href })
+        }
+      }
+    }
+    const seen = new Set<string>()
+    return links.filter((l) => (seen.has(l.href) ? false : (seen.add(l.href), true)))
+  })()
+
   return (
     <div className="min-h-screen bg-white">
       <FAQSchema faqs={faqs} />
@@ -85,12 +99,11 @@ export default function AirportTransfersLeicesterPage() {
                 Airport Transfers Leicester
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                Book your airport transfer with Aylestone Taxi.
+                Airport transfers from Leicester — fixed fares, 24/7.
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Need a reliable taxi for your airport transfer in Leicester?
-                Book your Leicester airport transfer with Aylestone Taxi. 24/7
-                service, safe and comfortable rides, on time every time!
+                Book a Leicester airport taxi in seconds with fixed fares, flight monitoring and licensed, DBS‑checked drivers.
+                We cover every major UK airport with reliable pickups across Leicester and Leicestershire.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -115,6 +128,35 @@ export default function AirportTransfersLeicesterPage() {
                   </button>
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pickup Areas */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-4">Airport pickups across Leicester & nearby areas</h2>
+              <p className="text-lg text-[#2E3C44] max-w-3xl mx-auto">
+                Wherever you are in Leicester, we’ll pick you up on time. Choose your area to see local pickup details and book
+                your airport transfer.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-2 justify-center">
+              {areaLinks.slice(0, 30).map((a) => (
+                <Link
+                  key={a.href}
+                  href={a.href}
+                  className="px-3 py-2 rounded-full bg-[#E4E4E4] text-sm text-[#0F0D3E] hover:bg-[#06A0A6]/15 transition-colors"
+                >
+                  {String(a.name).replace(/^Taxis in\s+/i, "")}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-6 text-center text-sm text-[#2E3C44]">
+              <span className="font-medium">Tip:</span> if your area isn’t listed above, you can still book instantly — just enter your pickup address in the booking form.
             </div>
           </div>
         </section>
@@ -315,7 +357,7 @@ export default function AirportTransfersLeicesterPage() {
                 {
                   name: "Birmingham Airport Taxi from Leicester",
                   desc: "Reliable long-distance Leicester taxi service to Birmingham Airport with professional drivers and transparent pricing.",
-                  href: "/pricing/airports/Birmingham",
+                  href: "/taxi-to-birmingham-airport",
                 },
                 {
                   name: "Heathrow Airport Taxi from Leicester",

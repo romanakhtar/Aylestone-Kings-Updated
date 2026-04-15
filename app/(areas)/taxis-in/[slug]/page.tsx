@@ -11,7 +11,7 @@ type AreaItem = { name: string; href: string }
 const areaMeta: Record<string, { title: string; description: string }> = {
   // 1. Aylestone
   aylestone: {
-    title: "Taxi in Aylestone Leicester | 24/7 Local & Airport Service | Aylestone Kings",
+    title: "Taxis in Aylestone Leicester | Book Online | Aylestone Kings",
     description:
       "Need a taxi in Aylestone? Aylestone Kings has served the area since 1995. Fixed airport fares, 24/7 local rides, DBS-checked drivers. Call 0116 2338888.",
   },
@@ -2268,6 +2268,15 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                         ? `Seamless airport connections with meet & greet on request.`
                         : `Fixed-rate, 24/7 transfers with flight tracking and meet & greet on request.`}
                     </p>
+                    <div className="mb-3">
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="inline-flex items-center gap-2 text-[#06A0A6] hover:underline underline-offset-2 font-medium"
+                      >
+                        <ArrowRight className="h-4 w-4" />
+                        Airport transfers from Leicester (hub page)
+                      </Link>
+                    </div>
                     <div className="flex flex-wrap gap-2">
                       {footerData.airportLinks?.map((ap) => {
                         const base = ap.name.replace(/ Airport$/, "")
