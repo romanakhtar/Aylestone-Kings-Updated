@@ -21,9 +21,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
   }
 
+  const canonicalUrl = `https://aylestone-taxis.co.uk/blog/${blog.id}`
+
   return {
-    title: `${blog.title} | Leicester Taxi Service | Aylestone Taxis`,
-    description: `${blog.excerpt} Read more on the Aylestone Kings blog for Leicester taxi tips and travel advice.`,
+    // Keep titles concise to reduce truncation and avoid Google rewrites
+    title: `${blog.title} | Aylestone Kings`,
+    description: blog.excerpt,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: blog.title,
+      description: blog.excerpt,
+      url: canonicalUrl,
+      type: "article",
+      siteName: "Aylestone Kings",
+      images: blog.image ? [{ url: `https://aylestone-taxis.co.uk${blog.image}` }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.excerpt,
+      images: blog.image ? [`https://aylestone-taxis.co.uk${blog.image}`] : undefined,
+    },
   }
 }
 

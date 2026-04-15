@@ -1068,47 +1068,54 @@ export const siteData = {
       },
       {
         id: "leicester-to-east-midlands-airport-taxi-travel-guide-prices-booking-tips",
-        title:
-          "Leicester to East Midlands Airport Taxi – Travel Guide, Prices & Booking Tips",
+        title: "Leicester to East Midlands Airport Taxi (EMA): Prices, Journey Time & Booking Tips",
         excerpt:
-          "Your complete guide to getting from Leicester to East Midlands Airport (EMA) by taxi. Fixed prices from £40, 24/7 service, and expert booking tips for stress-free airport transfers – including options for families, schools and business travellers.",
+          "Planning an EMA trip? See typical journey times (30–45 mins), fixed fares from £40, and simple booking tips for a stress-free Leicester to East Midlands Airport taxi — plus return pickups and luggage advice.",
         content: `
-          <p>Travelling from Leicester to East Midlands Airport (EMA)? A taxi is often the most convenient option for a stress-free start to your journey. This guide covers everything you need to know: travel times, prices, and how to book your Leicester to East Midlands Airport taxi with confidence.</p>
-          
-          <h2>Why Choose a Leicester to East Midlands Airport Taxi?</h2>
-          <p>East Midlands Airport is Leicester's closest major airport, making it a popular choice for both business and leisure travellers. A dedicated taxi transfer from Leicester offers door-to-door convenience, fixed pricing, and reliable service – ideal when you need to catch a flight without worrying about parking or public transport connections.</p>
-          <p>If you are arranging regular travel for children, our dedicated <a href="/school-run-taxi-leicester">school run taxi Leicester</a> service provides DBS-checked drivers and consistent school transport. Business travellers and companies can also benefit from <a href="/corporate-taxi-account-leicester">corporate taxi accounts in Leicester</a>, with centralised billing and streamlined airport transfers for staff and clients.</p>
-          
-          <h2>Journey Details & Travel Time</h2>
-          <p>The journey from Leicester to East Midlands Airport typically takes around 30–40 minutes, depending on traffic. The route follows the M1 and A50, with experienced drivers knowing the best times and alternatives to avoid delays. We recommend allowing extra time during peak hours and bank holidays.</p>
-          
-          <h2>Prices for Leicester to East Midlands Airport Taxi</h2>
-          <p>Aylestone Kings offers fixed-price transfers – no meter running and no surprise charges. Typical rates include:</p>
+          <p>Travelling from Leicester to <strong>East Midlands Airport (EMA)</strong>? A taxi is one of the easiest ways to start (or end) your trip without worrying about parking, buses, or missed connections. This Leicester-specific guide covers <strong>journey time</strong>, <strong>fixed fares</strong> and <strong>booking tips</strong> — including early flights and return pickups.</p>
+
+          <p><strong>Quick link:</strong> for fixed fares and instant booking, see <a href="/leicester-to-east-midlands-airport-taxi">Leicester to East Midlands Airport taxi</a>.</p>
+
+          <h2>Leicester to East Midlands Airport: journey time & distance</h2>
+          <ul>
+            <li><strong>Typical journey time:</strong> around 30–45 minutes (traffic and pickup area can affect this).</li>
+            <li><strong>Distance:</strong> roughly 20–25 miles depending on route.</li>
+            <li><strong>Best practice:</strong> for early flights, book the day before so your pickup is locked in.</li>
+          </ul>
+
+          <h2>Why take a taxi to EMA from Leicester?</h2>
+          <p>EMA is the closest major airport for many Leicester travellers, but early departures and late arrivals can make public transport awkward. A dedicated taxi helps you avoid:</p>
+          <ul>
+            <li>parking costs and long walks with luggage</li>
+            <li>bus timetable gaps (especially early morning / late night)</li>
+            <li>connections that add risk during busy travel periods</li>
+          </ul>
+          <p>For transfers to all major airports, start from the hub: <a href="/airport-transfers-leicester">Airport transfers Leicester</a>.</p>
+
+          <h2>Prices: Leicester to EMA taxi</h2>
+          <p>We offer fixed-price transfers (no meter surprises). Typical starting rates include:</p>
           <ul>
             <li><strong>Standard Saloon</strong> (1–4 passengers) – from £40</li>
             <li><strong>MPV / Minibus</strong> (6–8 passengers) – from £60</li>
           </ul>
-          <p>Prices are from Leicester city centre; pickups from outlying areas may vary. Always confirm your final price at the time of booking.</p>
-          
-          <h2>Booking Tips for Your Leicester to EMA Taxi</h2>
-          
-          <h3>Book in Advance</h3>
-          <p>For early morning or late-night flights, book at least 24 hours ahead to secure availability and your preferred vehicle type.</p>
-          
-          <h3>Provide Flight Details</h3>
-          <p>Share your flight number when booking. We monitor flights for delays and adjust pickup times so you are never left waiting or rushing.</p>
-          
-          <h3>Consider Return Transfers</h3>
-          <p>Booking a return taxi at the same time can simplify your trip and often helps with planning and availability.</p>
-          
-          <h3>Check Vehicle Size</h3>
-          <p>If you have extra luggage or a larger group, choose an MPV or minibus for more space and comfort.</p>
-          
-          <h2>What to Expect from Your Transfer</h2>
-          <p>All Aylestone Kings drivers are fully licensed, DBS-checked, and experienced in airport transfers. We provide door-to-door pickup, help with luggage, and meet-and-greet options on return journeys. Our 24/7 service means you can travel at any time, whether your flight departs at dawn or arrives late at night.</p>
-          
-          <h2>Ready to Book?</h2>
-          <p>Book your Leicester to East Midlands Airport taxi online, call 0116 2338888, or use WhatsApp for a quick confirmation. Fixed prices from £40 for standard saloons and from £60 for MPVs, reliable drivers, and peace of mind – your journey to EMA starts here.</p>
+          <p>Prices are from Leicester city centre; pickups outside the centre may vary. You’ll see the price before confirming your booking.</p>
+
+          <h2>Booking tips (so you don’t miss your flight)</h2>
+          <h3>1) Choose a realistic pickup time</h3>
+          <p>Allow enough time for check-in and security. If you’re unsure, booking slightly earlier is far cheaper than missing a flight.</p>
+
+          <h3>2) Tell us luggage & passenger count</h3>
+          <p>A standard saloon is ideal for 1–3 travellers with typical luggage. For families or extra bags, an MPV gives more space and comfort.</p>
+
+          <h3>3) Consider a return pickup</h3>
+          <p>Booking your return taxi at the same time makes the journey home easier. If your arrival time changes, contact us and we’ll adjust where possible.</p>
+
+          <h3>4) Early-morning travel</h3>
+          <p>For early departures, pre-booking is key. See our guide: <a href="/blog/taxi-services-leicester-early-morning-late-night-travel">early morning taxi Leicester</a>.</p>
+
+          <h2>Ready to book your Leicester to EMA taxi?</h2>
+          <p>Book online in seconds or call <strong>0116 2338888</strong> for help with larger groups or special requests.</p>
+          <p><a href="/leicester-to-east-midlands-airport-taxi"><strong>Book Leicester → East Midlands Airport taxi</strong></a></p>
         `,
         date: "2026-02-17",
         author: "Aylestone Kings Team",
@@ -1982,168 +1989,48 @@ export const siteData = {
       {
         id: "taxi-services-leicester-early-morning-late-night-travel",
         title:
-          "Taxi Services in Leicester for Early Morning & Late Night Travel",
+          "Early Morning Taxi Leicester: 24/7 Airport Runs, Work Trips & Safe Pickups",
         excerpt:
-          "Need a reliable taxi service in Leicester for early morning or late night travel? Aylestone Taxis provides 24/7 service for airport transfers, night shifts, and early appointments.",
+          "Need a taxi at 4am? Learn how to book an early morning taxi in Leicester for airport transfers, shifts and appointments — plus safety tips, what time to book, and fixed-fare options.",
         content: `
-          <p>Whether you need an early morning airport transfer, a late-night ride home, or transport for night shift work, finding reliable taxi services in Leicester during off-peak hours can be challenging. Aylestone Taxis provides 24/7 taxi services in Leicester, ensuring you can travel safely and comfortably at any time of day or night.</p>
-          
-          <h2>Why Choose Taxi Services in Leicester for Early Morning & Late Night Travel?</h2>
-          
-          <h3>24/7 Availability</h3>
-          <p>Unlike many transport options, our taxi services in Leicester operate 24 hours a day, 7 days a week, including bank holidays. Whether you need a 4am airport transfer or a 2am ride home, we're here when you need us.</p>
-          
-          <h3>Reliability</h3>
-          <p>Early morning and late-night travel often requires punctuality - missing a flight or being late for work isn't an option. Our taxi services in Leicester guarantee reliable, on-time service, even during off-peak hours when other transport options may be unavailable.</p>
-          
-          <h3>Safety</h3>
-          <p>Traveling during early morning or late-night hours requires extra safety considerations. Our taxi services in Leicester ensure:</p>
+          <p>Searching for an <strong>early morning taxi in Leicester</strong>? The main issue at 4am isn’t price — it’s reliability. This guide shows how to book a dependable early taxi for airport runs, work shifts and appointments, with simple tips to avoid last‑minute stress.</p>
+
+          <p><strong>Quick links:</strong> <a href="/airport-transfers-leicester">Airport transfers Leicester</a> • <a href="/leicester-to-east-midlands-airport-taxi">Leicester → East Midlands Airport taxi</a></p>
+
+          <h2>How early should you book?</h2>
           <ul>
-            <li>Fully licensed, DBS-checked drivers</li>
-            <li>Regularly maintained, safe vehicles</li>
-            <li>Professional, experienced drivers</li>
-            <li>Fully insured service</li>
-            <li>GPS tracking for added security</li>
+            <li><strong>Best:</strong> the day before (especially for 4am–6am pickups)</li>
+            <li><strong>OK:</strong> same-day, as early as possible</li>
+            <li><strong>Avoid:</strong> booking 10 minutes before you need to leave</li>
           </ul>
-          
-          <h2>Early Morning Taxi Services in Leicester</h2>
-          
-          <h3>Airport Transfers</h3>
-          <p>Early morning flights require early starts. Our taxi services in Leicester specialize in early morning airport transfers to:</p>
+
+          <h2>Early morning airport runs (EMA, BHX, Heathrow and more)</h2>
+          <p>Early flights are where pre-booking matters most. We regularly do airport transfers from Leicester to:</p>
           <ul>
-            <li><strong>East Midlands Airport</strong> - 30-minute transfers</li>
-            <li><strong>Birmingham Airport</strong> - 45-minute transfers</li>
-            <li><strong>Heathrow Airport</strong> - 2-hour transfers</li>
-            <li><strong>Gatwick Airport</strong> - 2.5-hour transfers</li>
-            <li>All other major UK airports</li>
+            <li><strong>East Midlands Airport (EMA)</strong> — typically 30–45 minutes</li>
+            <li><strong>Birmingham Airport (BHX)</strong> — typically 45–70 minutes</li>
+            <li><strong>Heathrow (LHR)</strong>, <strong>Gatwick (LGW)</strong> and other major UK airports</li>
           </ul>
-          <p>We monitor flight schedules and adjust pickup times accordingly, ensuring you arrive at the airport with plenty of time to spare, even for those 6am departures.</p>
-          
-          <h3>Early Morning Appointments</h3>
-          <p>Whether you have a hospital appointment, business meeting, or early work shift, our taxi services in Leicester ensure you arrive on time. Book in advance for peace of mind, and we'll be at your door at the exact time you need.</p>
-          
-          <h3>School Runs</h3>
-          <p>Early morning school runs can be stressful. Our taxi services in Leicester provide reliable transport for children, ensuring they arrive at school safely and on time, every time.</p>
-          
-          <h2>Late Night Taxi Services in Leicester</h2>
-          
-          <h3>Night Out Transport</h3>
-          <p>Enjoying Leicester's nightlife? Our late-night taxi services in Leicester provide safe, reliable transport home after:</p>
+          <p>For Birmingham, use our clean landing page: <a href="/taxi-to-birmingham-airport">taxi to Birmingham Airport</a>.</p>
+
+          <h2>Work shifts & appointments</h2>
+          <p>If you have a fixed start time, include the <strong>time you need to arrive</strong> (not just pickup time). Add any access notes (gates, reception entrances) to avoid delays.</p>
+
+          <h2>Safety & comfort (especially at night)</h2>
           <ul>
-            <li>Evening events at Curve Theatre</li>
-            <li>Concerts at De Montfort Hall</li>
-            <li>Restaurants and bars</li>
-            <li>Sports events</li>
-            <li>Social gatherings</li>
+            <li>Licensed, insured drivers</li>
+            <li>Well-maintained vehicles</li>
+            <li>Clear pickup details and live contact if needed</li>
           </ul>
-          
-          <h3>Night Shift Workers</h3>
-          <p>If you work night shifts, our taxi services in Leicester offer reliable transport to and from work. Set up regular bookings for consistent, dependable service that works around your schedule.</p>
-          
-          <h3>Late-Night Airport Pickups</h3>
-          <p>Late-night flight arrivals can be stressful, especially if you're tired after a long journey. Our taxi services in Leicester provide comfortable, reliable airport pickups, even for flights arriving after midnight.</p>
-          
-          <h2>Benefits of Using Taxi Services in Leicester for Off-Peak Travel</h2>
-          
-          <h3>Convenience</h3>
-          <p>Public transport may be limited or unavailable during early morning or late-night hours. Our taxi services in Leicester provide door-to-door transport whenever you need it.</p>
-          
-          <h3>Comfort</h3>
-          <p>After a long flight or late night, comfort matters. Our taxi services in Leicester offer clean, comfortable vehicles with professional drivers who understand the importance of a smooth journey.</p>
-          
-          <h3>Peace of Mind</h3>
-          <p>Knowing you have reliable transport arranged gives you peace of mind. Whether it's an early morning flight or a late-night journey home, our taxi services in Leicester ensure you're never stranded.</p>
-          
-          <h2>How to Book Early Morning or Late-Night Taxi Services</h2>
-          
-          <h3>Book in Advance</h3>
-          <p>For early morning or late-night journeys, booking in advance is essential. This ensures:</p>
+
+          <h2>How to book</h2>
           <ul>
-            <li>Availability during off-peak hours</li>
-            <li>Time to provide specific requirements</li>
-            <li>Peace of mind knowing transport is arranged</li>
-            <li>Better pricing options</li>
+            <li><strong>Online:</strong> book 24/7</li>
+            <li><strong>Phone:</strong> call 0116 2338888</li>
+            <li><strong>WhatsApp:</strong> message +447888873795</li>
           </ul>
-          
-          <h3>Booking Methods</h3>
-          <p>Book our taxi services in Leicester through:</p>
-          <ul>
-            <li><strong>Online:</strong> Book 24/7 through our website</li>
-            <li><strong>Phone:</strong> Call 0116 2338888</li>
-            <li><strong>WhatsApp:</strong> Message +447888873795</li>
-            <li><strong>Mobile App:</strong> Book and track your journey</li>
-          </ul>
-          
-          <h2>What to Expect</h2>
-          
-          <h3>Punctuality</h3>
-          <p>Our taxi services in Leicester guarantee punctual service, even during off-peak hours. We understand that early morning and late-night journeys often have tight schedules, and we ensure you arrive on time.</p>
-          
-          <h3>Professional Service</h3>
-          <p>Our drivers are professional, courteous, and experienced in handling early morning and late-night journeys. They understand the importance of a smooth, comfortable ride, especially when you're tired or stressed.</p>
-          
-          <h3>Comfortable Vehicles</h3>
-          <p>Our fleet includes comfortable vehicles suitable for any journey. From spacious estate cars for luggage to executive vehicles for business travel, we have the right vehicle for your needs.</p>
-          
-          <h2>Special Considerations for Early Morning & Late-Night Travel</h2>
-          
-          <h3>Airport Transfers</h3>
-          <p>For early morning airport transfers, we recommend:</p>
-          <ul>
-            <li>Booking at least 24 hours in advance</li>
-            <li>Providing flight details for monitoring</li>
-            <li>Allowing extra time for traffic</li>
-            <li>Confirming pickup time the night before</li>
-          </ul>
-          
-          <h3>Late-Night Journeys</h3>
-          <p>For late-night travel, we ensure:</p>
-          <ul>
-            <li>Safe, reliable service</li>
-            <li>Professional drivers</li>
-            <li>GPS tracking for security</li>
-            <li>Comfortable, well-lit vehicles</li>
-          </ul>
-          
-          <h2>Areas We Cover</h2>
-          <p>Our taxi services in Leicester cover all areas for early morning and late-night travel, including:</p>
-          <ul>
-            <li>Leicester City Centre</li>
-            <li>Aylestone</li>
-            <li>Oadby</li>
-            <li>Wigston</li>
-            <li>Evington</li>
-            <li>Belgrave</li>
-            <li>Highfields</li>
-            <li>Braunstone</li>
-            <li>Beaumont Leys</li>
-            <li>And all surrounding areas</li>
-          </ul>
-          
-          <h2>Why Choose Aylestone Taxis for Early Morning & Late-Night Travel?</h2>
-          <p>Choose our taxi services in Leicester for off-peak travel because:</p>
-          <ul>
-            <li>24/7 availability</li>
-            <li>Reliable, punctual service</li>
-            <li>Professional, DBS-checked drivers</li>
-            <li>Safe, comfortable vehicles</li>
-            <li>Fixed prices with no surprises</li>
-            <li>Local knowledge of Leicester</li>
-            <li>30+ years of experience</li>
-            <li>Flight monitoring for airport transfers</li>
-          </ul>
-          
-          <h2>Tips for Early Morning & Late-Night Travel</h2>
-          <ul>
-            <li>Book in advance, especially for airport transfers</li>
-            <li>Confirm your booking the day before</li>
-            <li>Have contact details ready</li>
-            <li>Allow extra time for traffic</li>
-            <li>Keep your phone charged</li>
-            <li>Have booking confirmation ready</li>
-          </ul>
-          
-          <p>Don't let early morning or late-night travel stress you out. Our taxi services in Leicester are available 24/7 to ensure you can travel safely and comfortably at any time. Book your early morning or late-night taxi today and experience reliable transport whenever you need it.</p>
+
+          <p>For airport journeys, start here: <a href="/airport-transfers-leicester"><strong>Airport transfers Leicester</strong></a>.</p>
         `,
         date: "2025-01-15",
         author: "Aylestone Kings Team",
