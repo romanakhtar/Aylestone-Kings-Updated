@@ -14,6 +14,7 @@ import {
 } from "lucide-react"
 import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 const company = siteData.company
 
@@ -42,76 +43,48 @@ export const metadata: Metadata = {
   },
 }
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is a seaport taxi transfer?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "It is a pre-booked private hire car or people carrier from your home, hotel, or airport to a UK ferry or cruise terminal (or back again). The driver helps load cases at the kerb and drops you at the terminal or meet point your operator gives you.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you offer cruise port transfer UK-wide?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Aylestone Kings is based in Leicester and books long-distance seaport runs to Southampton, Dover, Portsmouth, Harwich, and other UK terminals on request. You get a confirmed price before travel where agreed, and we match the vehicle to your head count and bags.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much luggage can I take on a taxi to Southampton port?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Saloons and estates usually work for two to four people with normal cruise packing. If each person has a big case plus hand luggage, book an MPV or minibus so nothing blocks mirrors or seatbelts. Give us an honest case count when you quote.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Should I book my seaport taxi before embarkation day?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Summer sailings, school holidays, and bank holidays book up fast. Early booking locks in the right car size for groups and avoids scrambling for a ride the night before you sail.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you pick us up after our cruise returns?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Book the return for disembarkation day with your ship name, mobile number, and a realistic window after the ship docks. We allow time for bags and the walk to the agreed pickup point.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which UK cruise ports do you cover?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most of our cruise work is Southampton, plus Dover, Portsmouth International Port, and Harwich International Port. Ask if your berth is elsewhere — we may still be able to quote.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are your seaport transfer drivers licensed and insured?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Aylestone Kings uses council-licensed private hire drivers (Leicester and Wolverhampton licensing) with DBS checks and hire insurance for pre-booked jobs. Vehicles are kept fit for long motorway runs to the coast.",
-      },
-    },
-  ],
-}
+const faqs = [
+  {
+    question: "What is a seaport taxi transfer?",
+    answer:
+      "It is a pre-booked private hire car or people carrier from your home, hotel, or airport to a UK ferry or cruise terminal (or back again). The driver helps load cases at the kerb and drops you at the terminal or meet point your operator gives you.",
+  },
+  {
+    question: "Do you offer cruise port transfer UK-wide?",
+    answer:
+      "Yes. Aylestone Kings is based in Leicester and books long-distance seaport runs to Southampton, Dover, Portsmouth, Harwich, and other UK terminals on request. You get a confirmed price before travel where agreed, and we match the vehicle to your head count and bags.",
+  },
+  {
+    question: "How much luggage can I take on a taxi to Southampton port?",
+    answer:
+      "Saloons and estates usually work for two to four people with normal cruise packing. If each person has a big case plus hand luggage, book an MPV or minibus so nothing blocks mirrors or seatbelts. Give us an honest case count when you quote.",
+  },
+  {
+    question: "Should I book my seaport taxi before embarkation day?",
+    answer:
+      "Yes. Summer sailings, school holidays, and bank holidays book up fast. Early booking locks in the right car size for groups and avoids scrambling for a ride the night before you sail.",
+  },
+  {
+    question: "Can you pick us up after our cruise returns?",
+    answer:
+      "Yes. Book the return for disembarkation day with your ship name, mobile number, and a realistic window after the ship docks. We allow time for bags and the walk to the agreed pickup point.",
+  },
+  {
+    question: "Which UK cruise ports do you cover?",
+    answer:
+      "Most of our cruise work is Southampton, plus Dover, Portsmouth International Port, and Harwich International Port. Ask if your berth is elsewhere — we may still be able to quote.",
+  },
+  {
+    question: "Are your seaport transfer drivers licensed and insured?",
+    answer:
+      "Yes. Aylestone Kings uses council-licensed private hire drivers (Leicester and Wolverhampton licensing) with DBS checks and hire insurance for pre-booked jobs. Vehicles are kept fit for long motorway runs to the coast.",
+  },
+]
 
 export default function SeaportTransfersUkPage() {
   return (
     <div className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero */}
         <section className="py-20 md:py-24 bg-gradient-to-br from-[#06A0A6]/15 via-white to-[#0F0D3E]/10">
@@ -699,48 +672,19 @@ export default function SeaportTransfersUkPage() {
               we would rather talk it through than guess wrong on sail-away day.
             </p>
             <div className="space-y-4">
-              {[
-                {
-                  q: "What is a seaport taxi transfer?",
-                  a: "A pre-booked private hire car from your door to the ferry or cruise terminal, or back again. The car and driver are yours for the booking, with boot space planned from how many cases you said you had.",
-                },
-                {
-                  q: "Do you offer cruise port transfer UK-wide?",
-                  a: "Yes. We run from Leicester and the wider Midlands to Southampton, Dover, Portsmouth, and Harwich most weeks, and we can quote other UK berths. Fare depends on miles and vehicle size; we confirm before you pay.",
-                },
-                {
-                  q: "How much luggage fits in a taxi to Southampton port?",
-                  a: "Saloon or estate: usually fine for two to four people with normal cruise bags. If each person has a big case plus hand luggage, take an MPV or minibus so the driver can still see out the back. Count the cases when you book.",
-                },
-                {
-                  q: "When should I book?",
-                  a: "As soon as you have sailing times and addresses — summer, half term, and bank holidays go fast. Early booking gets you the right car and a sensible leave-home time.",
-                },
-                {
-                  q: "Can you collect us after the cruise?",
-                  a: "Yes. Book the return for disembarkation day with ship name and mobile. We allow time for bags and the walk to the meet point the port gives for taxis.",
-                },
-                {
-                  q: "Which UK cruise ports do you serve most?",
-                  a: "Southampton first, then Dover, Portsmouth International, and Harwich International. Elsewhere? Ask — we may still quote.",
-                },
-                {
-                  q: "Are drivers licensed for long-distance port work?",
-                  a: "Yes. Aylestone Kings uses council-licensed private hire with DBS checks and hire insurance for pre-booked jobs, including long coastal runs.",
-                },
-              ].map((item) => (
+              {faqs.map((item) => (
                 <details
-                  key={item.q}
+                  key={item.question}
                   className="group bg-white rounded-xl border border-gray-200 shadow-sm open:shadow-md transition-shadow"
                 >
                   <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-[#0F0D3E] flex justify-between items-center gap-4">
-                    {item.q}
+                    {item.question}
                     <span className="text-[#06A0A6] text-xl shrink-0 group-open:rotate-45 transition-transform">
                       +
                     </span>
                   </summary>
                   <p className="px-5 pb-4 pt-0 text-[#2E3C44] leading-relaxed border-t border-gray-100">
-                    {item.a}
+                    {item.answer}
                   </p>
                 </details>
               ))}

@@ -11,6 +11,7 @@ import {
 import Link from "next/link"
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
   title:
@@ -27,76 +28,48 @@ export const metadata: Metadata = {
   ],
 }
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How long does a taxi from Leicester to Luton Airport take?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most journeys take around 1 hour 15 minutes to 1 hour 45 minutes depending on your exact pickup point, time of day, and traffic on the M1 and M6 corridor. We build sensible buffer time into airport runs so you are not cutting check-in fine.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much is a taxi from Leicester to Luton Airport?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our advertised fixed prices start from £120 for a standard saloon from Leicester city centre and from £160 for larger MPV or minibus vehicles for groups. The final quote may vary slightly if your pickup is outside the central zone or you need extra stops.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you pick me up inside Luton Airport when I land?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. For arrivals we can arrange a meet in the terminal or a clearly agreed pickup point at Luton, with your flight details used to adjust timing if you are delayed. Share your airline, flight number, and mobile number when you book.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Should I book a Leicester to Luton taxi in advance?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Pre-booking is strongly recommended, especially for early morning departures, school holidays, and bank holidays when roads and the airport are busiest. It guarantees vehicle choice and locks in your fixed fare.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you offer return transfers from Luton to Leicester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Many customers book a return at the same time as the outbound leg. For inbound flights we monitor delays where possible and coordinate a pickup time that matches baggage reclaim and immigration.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What vehicle should I choose for a Luton Airport run?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A standard saloon suits up to four passengers with typical holiday luggage. Choose an MPV or minibus if you are travelling as a larger family or group, carrying sports equipment, or simply want more space for bags.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which areas near Leicester do you pick up from for Luton?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We collect passengers from Leicester city centre, Aylestone, Oadby, Wigston, Glenfield, Braunstone, Beaumont Leys, and many surrounding towns across Leicestershire. Tell us your postcode when booking for an accurate quote.",
-      },
-    },
-  ],
-}
+const faqs = [
+  {
+    question: "How long does a taxi from Leicester to Luton Airport take?",
+    answer:
+      "Typically between 1 hour 15 minutes and 1 hour 45 minutes, depending on traffic and your exact pickup. We help you choose a pickup time that fits check-in, not just the fastest possible run on paper.",
+  },
+  {
+    question: "How much is a taxi from Leicester to Luton Airport?",
+    answer:
+      "Fixed fares start from £120 for a standard saloon and from £160 for MPV/minibus vehicles from Leicester city centre. Tell us your full pickup address for a firm quote.",
+  },
+  {
+    question: "Can you pick me up inside Luton Airport when I land?",
+    answer:
+      "Yes. Provide your flight number and mobile number. We can arrange a terminal meet or an agreed pickup point at LTN, and adjust for delays when we have your flight details.",
+  },
+  {
+    question: "Should I book a Leicester to Luton taxi in advance?",
+    answer:
+      "Yes — especially for dawn flights, half terms, and bank holidays. Pre-booking secures the vehicle size you need and locks your fixed price.",
+  },
+  {
+    question: "Do you offer return transfers from Luton to Leicester?",
+    answer:
+      "Absolutely. Booking both directions together keeps your travel simple. Inbound pickups use your arrival flight to coordinate timing after baggage reclaim.",
+  },
+  {
+    question: "What vehicle should I choose for a Luton Airport run?",
+    answer:
+      "Saloon for up to four passengers with normal luggage. MPV or minibus for larger groups, bulky bags, or when you simply want more space.",
+  },
+  {
+    question: "Which areas near Leicester do you pick up from for Luton?",
+    answer:
+      "Leicester city centre, Aylestone, Oadby, Wigston, Glenfield, Braunstone, Beaumont Leys, and wider Leicestershire. Ask with your postcode if you are unsure.",
+  },
+]
 
 export default function LutonPage() {
   return (
     <div className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
@@ -710,48 +683,19 @@ export default function LutonPage() {
               Frequently asked questions
             </h2>
             <div className="space-y-4">
-              {[
-                {
-                  q: "How long does a taxi from Leicester to Luton Airport take?",
-                  a: "Typically between 1 hour 15 minutes and 1 hour 45 minutes, depending on traffic and your exact pickup. We help you choose a pickup time that fits check-in, not just the fastest possible run on paper.",
-                },
-                {
-                  q: "How much is a taxi from Leicester to Luton Airport?",
-                  a: "Fixed fares start from £120 for a standard saloon and from £160 for MPV/minibus vehicles from Leicester city centre. Tell us your full pickup address for a firm quote.",
-                },
-                {
-                  q: "Can you pick me up inside Luton Airport when I land?",
-                  a: "Yes. Provide your flight number and mobile number. We can arrange a terminal meet or an agreed pickup point at LTN, and adjust for delays when we have your flight details.",
-                },
-                {
-                  q: "Should I book a Leicester to Luton taxi in advance?",
-                  a: "Yes — especially for dawn flights, half terms, and bank holidays. Pre-booking secures the vehicle size you need and locks your fixed price.",
-                },
-                {
-                  q: "Do you offer return transfers from Luton to Leicester?",
-                  a: "Absolutely. Booking both directions together keeps your travel simple. Inbound pickups use your arrival flight to coordinate timing after baggage reclaim.",
-                },
-                {
-                  q: "What vehicle should I choose for a Luton Airport run?",
-                  a: "Saloon for up to four passengers with normal luggage. MPV or minibus for larger groups, bulky bags, or when you simply want more space.",
-                },
-                {
-                  q: "Which areas near Leicester do you pick up from for Luton?",
-                  a: "Leicester city centre, Aylestone, Oadby, Wigston, Glenfield, Braunstone, Beaumont Leys, and wider Leicestershire. Ask with your postcode if you are unsure.",
-                },
-              ].map((item) => (
+              {faqs.map((item) => (
                 <details
-                  key={item.q}
+                  key={item.question}
                   className="group bg-white rounded-xl border border-gray-200 shadow-sm open:shadow-md transition-shadow"
                 >
                   <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-gray-900 flex justify-between items-center gap-4">
-                    {item.q}
+                    {item.question}
                     <span className="text-cyan-600 text-xl shrink-0 group-open:rotate-45 transition-transform">
                       +
                     </span>
                   </summary>
                   <p className="px-5 pb-4 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
-                    {item.a}
+                    {item.answer}
                   </p>
                 </details>
               ))}
