@@ -115,18 +115,9 @@ const nextConfig = {
       { source: '/contact.html', destination: '/contact', permanent: true },
       // Clean up airport pages for better SERP URLs
       { source: '/pricing/airports/Birmingham', destination: '/taxi-to-birmingham-airport', permanent: true },
+      // Consolidate legacy area URL format (prevents canonical conflicts)
+      { source: '/taxis-in-:slug', destination: '/taxis-in/:slug', permanent: true },
     ];
-  },
-
-  async rewrites() {
-    return {
-      beforeFiles: [
-        {
-          source: '/taxis-in-:slug',
-          destination: '/taxis-in/:slug',
-        },
-      ],
-    };
   },
 };
 
