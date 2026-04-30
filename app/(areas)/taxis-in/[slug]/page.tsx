@@ -7,6 +7,7 @@ import type { Metadata } from "next"
 import { JSX } from "react"
 
 type AreaItem = { name: string; href: string }
+const siteUrl = "https://aylestone-taxis.co.uk"
 
 const areaMeta: Record<string, { title: string; description: string }> = {
   // 1. Aylestone
@@ -283,6 +284,359 @@ const areaMeta: Record<string, { title: string; description: string }> = {
 type AreaContent = {
   body: JSX.Element
   faqs: { question: string; answer: string }[]
+}
+
+type PriorityAreaSeoContent = {
+  bodyParagraphs: string[]
+  faqs: { question: string; answer: string }[]
+}
+
+const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
+  "melton-mowbray": {
+    bodyParagraphs: [
+      "Melton Mowbray has a distinctly rural market-town rhythm, and that pace changes how local people book taxis. School runs, rail connections, and early departures to the airport all happen around the same windows, so dependable timing matters more than anything else. Our drivers regularly collect from residential roads near the town centre and from surrounding villages that rely on Melton as their hub. Whether you are commuting, shopping, or heading out for an evening meal, we plan pickups with local traffic patterns in mind so your ride feels predictable rather than rushed.",
+      "For city travel, most trips into Leicester City Centre are around 35 to 45 minutes, usually taking the A607 through Houghton on the Hill before joining inner-city routes. We monitor peak congestion near Scraptoft and adjust where needed to keep the journey smooth. East Midlands Airport is often 35 to 45 minutes via the A607 and A6, then onward to the M1 corridor, while Birmingham Airport is typically 55 to 70 minutes via the A607 connection toward the A46 and M69/M6 network. The route choice is always discussed at booking if you prefer the fastest motorway option or the most stable route at busy times.",
+      "Local landmarks that generate frequent taxi demand include Melton Carnegie Museum and Melton Country Park, especially at weekends and during community events. We also run regular drop-offs for Melton Mowbray railway station and nearby hospitality venues, where return bookings are common after late services. If you are travelling with luggage from one of the town hotels or returning from a family event, we can pre-arrange collection points that are easier for loading than busier high-street sections.",
+      "Business users in Melton often need a practical, fixed-price approach for repeated trips. We support that with advance scheduling and clear confirmation messages so there is no uncertainty before pickup. If your journey continues beyond Leicester, we can chain the ride as one booking to avoid waiting between legs. This is especially useful for visitors arriving by rail who need onward transport to villages and business sites not well served by direct public transport.",
+      "If airport travel is your priority, our detailed Leicester hub options are available on /airport-transfers-leicester, and for transparent fare planning you can review the latest journey bands on /pricing before you confirm. That combination keeps expectations clear and helps avoid last-minute surprises. We stay focused on punctual, comfortable transport tailored to how Melton Mowbray residents and visitors actually travel day to day.",
+    ],
+    faqs: [
+      {
+        question: "How long does a taxi from Melton Mowbray to Leicester City Centre take?",
+        answer: "Most journeys are around 35 to 45 minutes via the A607, depending on time of day and city-centre traffic levels.",
+      },
+      {
+        question: "Do you provide early-morning airport taxis from Melton Mowbray?",
+        answer: "Yes, we pre-book early collections for EMA and BHX with confirmed pickup times and route planning in advance.",
+      },
+      {
+        question: "Can I book a station pickup at Melton Mowbray railway station?",
+        answer: "Yes, station pickups are available and we can schedule around your train arrival for a smoother connection.",
+      },
+    ],
+  },
+  "market-harborough": {
+    bodyParagraphs: [
+      "Market Harborough blends commuter convenience with a traditional town-centre atmosphere, so taxi demand here is split between rail-linked business travel and local family journeys. We frequently serve residential areas on both sides of the town as well as nearby villages where timing around train departures is important. Our service is structured for reliability first: confirmed bookings, practical pickup guidance, and route choices based on the current traffic profile rather than static assumptions.",
+      "Leicester City Centre is normally around 25 to 35 minutes from Market Harborough, usually via the A6 corridor. At peak times we can adjust approach roads to avoid known bottlenecks near the northern city entry points. East Midlands Airport tends to be 45 to 60 minutes, commonly using the A6 and A46 links toward the M1 network, while Birmingham Airport is often 55 to 70 minutes via A6 connections onto the A14/M6 route options. Because airport timing is sensitive, we recommend pre-booking so pickup buffers can be built in.",
+      "Frequent landmarks include Market Harborough railway station and The Square, both of which generate steady pickup activity throughout the week. We also cover Foxton Locks journeys for leisure visitors and return rides later in the day. When events are active around the town centre, drivers use agreed side-street meeting points to reduce waiting time and avoid congestion directly on busy frontage roads.",
+      "For professional passengers, we support repeat bookings with the same clear format each time: pickup window, destination notes, and fare expectations aligned at the point of booking. Families often use us for school, healthcare, and weekend shopping journeys where a dependable collection matters more than shaving a minute off travel time. We keep communication straightforward so customers know exactly when and where the vehicle will arrive.",
+      "If your journey includes a flight, compare transfer options at /airport-transfers-leicester, then check /pricing to confirm the fare range before travel. That simple planning flow helps you travel with confidence and keeps the booking process transparent. In Market Harborough, our focus stays on punctuality, clear communication, and practical route knowledge that suits real local travel patterns.",
+    ],
+    faqs: [
+      {
+        question: "Do you offer station transfers from Market Harborough?",
+        answer: "Yes, we provide taxi pickups and drop-offs to Market Harborough railway station with pre-booked timing.",
+      },
+      {
+        question: "What is the usual route to Leicester from Market Harborough?",
+        answer: "Most Leicester trips follow the A6 and usually take around 25 to 35 minutes depending on traffic.",
+      },
+      {
+        question: "Can I pre-book a return journey from Foxton Locks?",
+        answer: "Yes, return bookings can be scheduled in advance so your driver arrives at an agreed meeting point.",
+      },
+    ],
+  },
+  coalville: {
+    bodyParagraphs: [
+      "Coalville has a practical, hardworking town character with strong links to nearby industrial estates and family neighbourhoods, and taxi demand reflects that mix. We cover everyday errands, shift-change transport, and longer airport runs with equal focus on punctuality. Because local journeys often start early or finish late, a dependable 24/7 booking option makes a real difference for residents who cannot rely on fixed public transport schedules.",
+      "To Leicester City Centre, typical taxi times are around 30 to 40 minutes using the A511 and A50 approach routes before joining city roads. East Midlands Airport is usually one of the quickest major airport options from Coalville at roughly 20 to 30 minutes, commonly via the A511 and M1 links. Birmingham Airport generally runs around 40 to 55 minutes, often through the A444/A42 and M42 corridor. We confirm expected travel windows at booking so there is less uncertainty on the day.",
+      "Common local landmarks include Snibston Colliery Park and Coalville Clock Tower area, both of which are frequent pickup points for shopping, work, and social travel. We also serve Hermitage Leisure Centre and nearby business parks where pre-arranged collections help avoid delays during peak movement periods. If your pickup location is busy, we suggest a precise meeting point to speed up boarding and departure.",
+      "For households balancing school runs, appointments, and weekend plans, we keep the booking process simple and consistent. A clear confirmation with pickup details helps avoid confusion, especially for multi-stop journeys. Business passengers can also schedule repeat trips for predictable travel between Coalville, Leicester, and airport terminals without re-entering the same route notes every time.",
+      "When you need to compare airport options, see /airport-transfers-leicester for route guidance and service coverage, then visit /pricing for transparent fare information before you travel. That way, the journey is planned with realistic timing and clear costs. Our Coalville coverage is designed around real-world reliability, local route knowledge, and straightforward communication from booking through drop-off.",
+    ],
+    faqs: [
+      {
+        question: "How long is a taxi from Coalville to East Midlands Airport?",
+        answer: "Most journeys to EMA are around 20 to 30 minutes, depending on traffic and your exact pickup point.",
+      },
+      {
+        question: "Do you cover late-night pickups in Coalville?",
+        answer: "Yes, our service is available 24/7 for both local and long-distance journeys, including late evenings.",
+      },
+      {
+        question: "Can I arrange regular work transport from Coalville?",
+        answer: "Yes, repeat bookings can be set up for shift patterns and regular weekday travel.",
+      },
+    ],
+  },
+  "beaumont-leys": {
+    bodyParagraphs: [
+      "Beaumont Leys is one of Leicester's busiest residential hubs, with shopping, schools, and healthcare journeys all concentrated around the same local road network. That means taxi reliability is less about long motorway mileage and more about understanding short, high-frequency journeys at the right times. We regularly collect from estates throughout the area and coordinate pickups to reduce waiting during school and retail peaks.",
+      "Leicester City Centre is usually around 15 to 25 minutes from Beaumont Leys, often via the A563 ring road and onward city routes. East Midlands Airport commonly takes 30 to 40 minutes using A563 links to the M1 corridor, while Birmingham Airport is typically 45 to 60 minutes via A563 and M69/M6 connections. We track live conditions and advise if leaving slightly earlier will improve arrival reliability for flights or appointments.",
+      "Landmarks with steady demand include Beaumont Shopping Centre and Beaumont Park, plus onward transport from nearby hospitals and railway connections. We also cover pickups around local supermarkets and leisure sites where passengers often travel with bags or family members. For busy frontage roads, our drivers suggest practical meeting points to keep boarding safe and efficient.",
+      "Residents often book us for a combination of short local rides and occasional airport travel, so we keep service flexible. You can secure a one-off booking quickly or pre-arrange a series of trips for work, school, and healthcare visits. Our goal is consistent communication and dependable timing rather than overcomplicated booking steps.",
+      "For airport-focused travel, visit /airport-transfers-leicester to review terminal transfer coverage. If you want fare clarity before confirming, /pricing provides the latest pricing guidance for common routes. This helps Beaumont Leys customers plan ahead with confidence and avoid uncertainty on both journey time and cost.",
+    ],
+    faqs: [
+      {
+        question: "Do you pick up from Beaumont Shopping Centre?",
+        answer: "Yes, we provide pickups and drop-offs around Beaumont Shopping Centre and nearby residential streets.",
+      },
+      {
+        question: "How long does Beaumont Leys to Leicester City Centre usually take?",
+        answer: "Most trips take about 15 to 25 minutes, depending on ring-road and city-centre traffic.",
+      },
+      {
+        question: "Can I pre-book an airport transfer from Beaumont Leys?",
+        answer: "Yes, we recommend pre-booking for EMA and BHX so timing and route preferences are confirmed in advance.",
+      },
+    ],
+  },
+  syston: {
+    bodyParagraphs: [
+      "Syston combines village feel with strong commuter links, so local taxi demand ranges from station-style timing requirements to family transport for schools and shopping. We cover Syston and nearby lanes with dependable collections that reflect how residents actually travel during the week. Rather than generic routing, we plan around known pinch points and preferred access roads to keep trips predictable.",
+      "Leicester City Centre journeys from Syston are commonly 20 to 30 minutes via the A607 corridor. East Midlands Airport generally takes around 35 to 45 minutes, often using A607 connections and M1 links, while Birmingham Airport is usually 50 to 65 minutes through A46/M69/M6 route combinations. If your travel window is tight, we provide realistic departure guidance at booking so you can avoid avoidable delays.",
+      "Local landmarks with regular pickups include Central Park Syston and Syston railway station area, along with retail and hospitality destinations on and around the town centre approaches. We also serve nearby school and sports facilities where timed collections are important. For evening returns, passengers often pre-book to ensure a smooth journey home without waiting.",
+      "For business and commuter passengers, consistency is key. We support recurring bookings so repeated routes can be managed with less friction, and we keep communication clear through booking confirmations and pickup notes. Families also use our service for healthcare appointments and weekend activities where dependable timings reduce stress.",
+      "If you are planning airport travel, /airport-transfers-leicester outlines transfer options in detail, and /pricing helps you compare fare bands before confirming. This gives Syston customers clear expectations on cost and timing from the start. Our focus is practical local knowledge, punctual arrivals, and straightforward service every day of the week.",
+    ],
+    faqs: [
+      {
+        question: "How long is the taxi journey from Syston to Leicester?",
+        answer: "Most Syston to Leicester City Centre trips are around 20 to 30 minutes via the A607.",
+      },
+      {
+        question: "Do you cover airport transfers from Syston at night?",
+        answer: "Yes, we offer 24/7 airport transfer bookings from Syston, including early-morning departures.",
+      },
+      {
+        question: "Can I arrange repeat weekday bookings from Syston?",
+        answer: "Yes, regular recurring bookings can be set up for commuting, school, or appointment travel.",
+      },
+    ],
+  },
+  birstall: {
+    bodyParagraphs: [
+      "Birstall has a lively suburban profile with quick access to major roads, which makes it a strong base for both local and outbound taxi journeys. We regularly serve residential streets, retail zones, and nearby employment areas where timing can change quickly around peak traffic periods. Our service is built around confirmed pickups, practical meeting points, and route choices that match real conditions on the day.",
+      "From Birstall, Leicester City Centre is usually around 15 to 25 minutes, often using A6 approaches into the city. East Midlands Airport commonly takes 30 to 40 minutes via A6 and M1 links, while Birmingham Airport tends to be 45 to 60 minutes via A6 connectors and M69/M6. We recommend pre-booking airport travel so departure buffers can be set correctly for check-in and security windows.",
+      "Landmarks we frequently cover include Watermead Country Park and the Birstall Park and Ride area, plus local retail parks and leisure facilities. These locations generate both daytime and evening demand, especially on weekends and event dates. Where pickup zones are busy, we agree clear collection points to keep the journey start efficient and safe.",
+      "Birstall passengers often need a flexible mix of short city rides and longer intercity or airport journeys. We support that with clear fare communication and straightforward booking updates. For households and professionals alike, consistency matters: arriving when expected, handling luggage when needed, and avoiding last-minute uncertainty.",
+      "For passengers comparing flight routes, /airport-transfers-leicester provides detailed airport transfer guidance, and /pricing offers transparent fare references before booking. That planning combination helps Birstall travellers make informed decisions with less stress. We keep the service practical, punctual, and tailored to everyday travel patterns in and around the area.",
+    ],
+    faqs: [
+      {
+        question: "How quickly can I get from Birstall to Leicester City Centre by taxi?",
+        answer: "Most journeys are around 15 to 25 minutes, depending on A6 traffic and final drop-off location.",
+      },
+      {
+        question: "Do you pick up near Watermead Country Park?",
+        answer: "Yes, we cover pickups around Watermead and surrounding roads throughout the week.",
+      },
+      {
+        question: "Can I book a fixed-time transfer from Birstall to BHX?",
+        answer: "Yes, pre-booked timed transfers are available for Birmingham Airport and other major terminals.",
+      },
+    ],
+  },
+  lutterworth: {
+    bodyParagraphs: [
+      "Lutterworth has a strong logistics and commuter identity, and taxi journeys here often need precise planning rather than casual on-demand travel. We regularly serve residential streets, industrial employment areas, and onward links to Leicester and major airports. Because many journeys are shift-based or time-sensitive, we prioritise punctuality, booking clarity, and route choices that stay resilient during peak motorway traffic.",
+      "Leicester City Centre is usually around 30 to 40 minutes from Lutterworth, commonly via the A426 corridor. East Midlands Airport tends to be around 35 to 45 minutes, often using A426 links toward the motorway network, while Birmingham Airport is generally 35 to 50 minutes via the M6/M42 approaches. We confirm recommended departure times in advance so customers can travel without last-minute pressure.",
+      "Frequently requested landmarks include Stanford Hall and Lutterworth town centre, alongside regular station and business-park connections. We also handle pickups around hospitality venues and event sites where return transport is needed later in the evening. For busy zones, we provide exact meeting instructions to avoid delays at collection.",
+      "Local passengers value consistency, especially when booking repeated work or airport travel. We support recurring journeys and keep communication straightforward with clear confirmations and expected arrival windows. Families also use our service for schooling, appointments, and long-distance trips where reliability matters more than improvisation.",
+      "For airport-specific options, use /airport-transfers-leicester to see transfer coverage, then check /pricing for clear fare guidance before you confirm. That process gives Lutterworth customers transparent expectations and smoother planning. Our focus is dependable transport that matches the town's practical travel needs across local, regional, and airport routes.",
+    ],
+    faqs: [
+      {
+        question: "What is the typical taxi route from Lutterworth to Leicester?",
+        answer: "Most Leicester journeys run via the A426 and usually take around 30 to 40 minutes.",
+      },
+      {
+        question: "Do you provide airport taxis from Lutterworth to BHX?",
+        answer: "Yes, we regularly serve Birmingham Airport from Lutterworth with pre-booked timed pickups.",
+      },
+      {
+        question: "Can I schedule weekly work trips from Lutterworth?",
+        answer: "Yes, we can arrange repeat bookings for regular weekday travel and shift schedules.",
+      },
+    ],
+  },
+  "south-wigston": {
+    bodyParagraphs: [
+      "South Wigston has a busy neighbourhood feel shaped by rail access, local high streets, and steady residential movement. Taxi bookings here are often practical and time-linked, from station connections to healthcare visits and school travel. We cover the area with reliable collections and clear communication so journeys start smoothly even during busier periods around main roads.",
+      "Leicester City Centre is commonly around 15 to 25 minutes from South Wigston, usually via the A5199 and A6 approach routes. East Midlands Airport often takes 30 to 40 minutes using A563/M1 links, while Birmingham Airport is generally 40 to 55 minutes through A426 or M69/M6 corridors depending on traffic. At booking, we provide realistic journey windows so you can plan around appointments and departures.",
+      "Regular pickup landmarks include South Wigston railway station and Blaby Road shopping areas, with additional demand around local parks and schools. We also support onward journeys to hospitals and retail destinations where passengers prefer direct transport over multiple public connections. If a location is congested, we agree a nearby collection point to save time.",
+      "Many customers in South Wigston need a dependable blend of short local rides and occasional airport travel. We make that easy with straightforward booking steps and timely updates. Repeat travellers can arrange regular trips for commuting or family logistics, reducing the need to re-enter details each time.",
+      "For flight journeys, /airport-transfers-leicester provides a clear overview of transfer services, while /pricing helps you check fare guidance before confirming. This keeps travel planning transparent and efficient. Our South Wigston coverage is built around punctuality, practical local knowledge, and consistent service from first message to final drop-off.",
+    ],
+    faqs: [
+      {
+        question: "Do you provide pickups at South Wigston railway station?",
+        answer: "Yes, station pickups and drop-offs are available with pre-booked or scheduled collections.",
+      },
+      {
+        question: "How long is South Wigston to Leicester City Centre by taxi?",
+        answer: "Most journeys take around 15 to 25 minutes depending on traffic and exact destination.",
+      },
+      {
+        question: "Can I pre-book an early airport transfer from South Wigston?",
+        answer: "Yes, we offer 24/7 pre-booked airport transfers including early-morning departures.",
+      },
+    ],
+  },
+  hinckley: {
+    bodyParagraphs: [
+      "Hinckley has a strong market-town and commuter identity, with travel patterns that combine local shopping trips, work journeys, and regional airport transfers. We regularly serve Hinckley residents who need reliable transport into Leicester as well as longer-distance routes. The emphasis is on punctual arrivals and route planning that accounts for changing conditions across the motorway and A-road network.",
+      "Leicester City Centre journeys from Hinckley are commonly around 30 to 40 minutes, often via the A47 and A46 corridor connections. East Midlands Airport is usually 35 to 50 minutes using A46 and M1 routes, while Birmingham Airport can be as quick as 25 to 40 minutes through the A5/M42 approaches depending on traffic. For flights and business meetings, we recommend pre-booking so time buffers are set correctly.",
+      "Frequently requested local landmarks include Hinckley town centre and Hollycroft Park, plus retail and leisure destinations that generate steady evening returns. We also run trips to and from transport hubs where passengers need precise coordination with onward travel. Clear pickup notes are used when roadside access is limited or especially busy.",
+      "Professionals and families in Hinckley often value consistency over guesswork, so we keep bookings clear and confirmations straightforward. Regular travellers can schedule recurring routes for work or appointments, and one-off journeys are handled with the same level of timing discipline. Our drivers focus on calm, practical service rather than rushed routing choices.",
+      "For airport-specific planning, /airport-transfers-leicester sets out the transfer options in detail, and /pricing gives transparent fare guidance before your journey is confirmed. This allows Hinckley passengers to plan confidently with realistic expectations. We deliver dependable taxi service designed for the town's daily travel demands and regional connections.",
+    ],
+    faqs: [
+      {
+        question: "Is Birmingham Airport quicker than East Midlands from Hinckley?",
+        answer: "Often BHX is the quicker option from Hinckley, but traffic can shift this; we advise at booking time.",
+      },
+      {
+        question: "How long does Hinckley to Leicester City Centre usually take?",
+        answer: "Most journeys are around 30 to 40 minutes depending on route conditions and destination point.",
+      },
+      {
+        question: "Can I book a same-day return trip from Hinckley?",
+        answer: "Yes, same-day return journeys can be scheduled in advance for shopping, meetings, or appointments.",
+      },
+    ],
+  },
+  wigston: {
+    bodyParagraphs: [
+      "Wigston has a busy suburban character where school runs, commuting, and high-street errands all compete for road space at similar times. Taxi service here needs local awareness more than generic sat-nav routing. We provide dependable coverage across Wigston with clear pickup coordination, helping passengers move efficiently whether the trip is short and local or part of a longer journey.",
+      "Leicester City Centre is usually around 15 to 25 minutes from Wigston, commonly via the A5199 or A6 depending on final destination. East Midlands Airport often takes around 30 to 40 minutes through A563 and M1 links, while Birmingham Airport is generally 40 to 55 minutes using A426/M69 routes. At booking, we provide realistic travel windows and can recommend earlier departures during peak traffic.",
+      "Regular landmarks include Wigston town centre and Wigston Pool and Fitness Centre, with additional demand around nearby rail links and retail clusters. We also handle hospital and university connections for passengers who prefer direct transport over multiple bus changes. If collection points are busy, we agree practical nearby meeting locations to reduce waiting.",
+      "For daily users, consistency matters: straightforward booking, reliable arrival times, and clear updates. Families frequently rely on us for appointment travel and weekend activities, while business passengers use us for repeat routes into Leicester or onward transport to airports. We keep the process simple so each journey starts with confidence.",
+      "When planning flights, visit /airport-transfers-leicester for route and service details, and use /pricing to review fare guidance before confirming. That transparent approach supports better planning and fewer surprises. Our Wigston service is designed around punctuality, comfort, and practical local route knowledge every day of the week.",
+    ],
+    faqs: [
+      {
+        question: "Do you cover all areas of Wigston for local pickups?",
+        answer: "Yes, we provide local coverage across Wigston for shopping, appointments, stations, and airport journeys.",
+      },
+      {
+        question: "How long is a taxi from Wigston to Leicester City Centre?",
+        answer: "Most city-centre trips are around 15 to 25 minutes depending on route and traffic conditions.",
+      },
+      {
+        question: "Can I pre-book a family airport transfer from Wigston?",
+        answer: "Yes, family airport transfers can be pre-booked with timings and pickup notes confirmed in advance.",
+      },
+    ],
+  },
+  "wigston-fields": {
+    bodyParagraphs: [
+      "Wigston Fields is primarily residential and practical in its travel needs, with many journeys centred on schools, shopping, healthcare, and city access. We serve the area with reliable pickups that fit everyday routines, not just occasional trips. Because local roads can tighten at peak times, we use route choices and collection planning that keep journeys calm and efficient.",
+      "Trips to Leicester City Centre are often around 15 to 25 minutes, usually via A5199 approaches and connecting city routes. East Midlands Airport generally takes 30 to 40 minutes with A563 and M1 links, while Birmingham Airport is commonly 40 to 55 minutes through A426 and M69/M6 corridors. We set clear timing expectations at booking, especially for airport and appointment travel.",
+      "Frequent landmarks include Wigston Fields Recreation Ground and nearby South Wigston station links, plus local retail strips used for daily errands. We also provide regular journeys to hospitals and major shopping destinations where direct travel saves time compared with changing buses. For busier roadside zones, our drivers recommend practical meeting points.",
+      "Passengers in Wigston Fields often combine short notice local rides with pre-booked longer trips. Our booking flow supports both, while keeping communication straightforward and consistent. Repeat users can schedule regular collections for work or school to make weekday travel easier to manage.",
+      "For airport journeys, /airport-transfers-leicester explains service coverage and options in detail, and /pricing gives clear fare guidance before booking. That transparency helps Wigston Fields residents plan with confidence. We focus on dependable timing, friendly professional service, and local route knowledge that matches real daily travel patterns.",
+    ],
+    faqs: [
+      {
+        question: "Is Wigston Fields covered for early morning taxi bookings?",
+        answer: "Yes, early morning and late-night bookings are available across Wigston Fields seven days a week.",
+      },
+      {
+        question: "What route is usually used from Wigston Fields to Leicester?",
+        answer: "Most trips use A5199 connections and typically take around 15 to 25 minutes.",
+      },
+      {
+        question: "Can I check airport fares before booking from Wigston Fields?",
+        answer: "Yes, you can review indicative fare guidance on our pricing page before confirming your journey.",
+      },
+    ],
+  },
+  "leicester-royal-infirmary": {
+    bodyParagraphs: [
+      "Leicester Royal Infirmary is one of the city's busiest healthcare destinations, so transport here needs to be precise, patient-focused, and realistic about site access. We support visitors, staff, and patients with planned pickups that account for clinic times, shift changes, and the often complex drop-off areas around the hospital. Our drivers prioritise clear communication so collections feel straightforward during stressful days.",
+      "From surrounding Leicester districts, journey times to the city centre remain short, usually 5 to 15 minutes, while outbound travel from LRI to East Midlands Airport is commonly 30 to 40 minutes via A50/A453 or M1 links depending on traffic. Birmingham Airport is generally 45 to 60 minutes, often through the A6/A426 and M69/M6 corridors. We advise buffers for medical appointments and flights so timing remains comfortable.",
+      "Key landmarks around this page's service area include Leicester Royal Infirmary itself and nearby De Montfort Hall, with frequent onward rides to Leicester railway station and city-centre hotels. Because hospital entrances can be crowded, we help coordinate exact pickup points, including main entrance, designated bays, or quieter side-road alternatives when needed.",
+      "This location sees diverse journey purposes: discharge transport, outpatient visits, staff shift transfers, and family support travel. We handle each with practical flexibility, including one-way and return bookings where waiting times may be uncertain. If plans change after an appointment, our team can help adjust collection timing to reduce inconvenience.",
+      "For longer-distance travel after hospital visits, /airport-transfers-leicester provides transfer details to all major terminals, and /pricing allows you to review fare guidance upfront. That transparency is especially helpful when organising journeys for relatives or carers. Our LRI-focused service remains punctual, considerate, and built around real hospital travel needs.",
+    ],
+    faqs: [
+      {
+        question: "Where is the pickup point at Leicester Royal Infirmary?",
+        answer: "We can collect from agreed hospital entrance points or nearby side roads where pickup is safer and easier.",
+      },
+      {
+        question: "Do you provide return bookings for hospital appointments?",
+        answer: "Yes, return journeys can be pre-arranged and adjusted if appointment times run later than expected.",
+      },
+      {
+        question: "How long is LRI to East Midlands Airport by taxi?",
+        answer: "Most journeys are around 30 to 40 minutes depending on traffic and route choice.",
+      },
+    ],
+  },
+  "fosse-park": {
+    bodyParagraphs: [
+      "Fosse Park is Leicester's major shopping destination, so travel here is driven by retail schedules, shift finishes, and weekend peak congestion. Our taxi service for Fosse Park is organised around practical access rather than guesswork, with pickups planned for the right zones and times. Whether you are arriving for shopping, dining, or work, we help keep the journey smooth from first booking to drop-off.",
+      "Leicester City Centre to Fosse Park is typically around 15 to 20 minutes via the A594 and A5460 or A563 approaches, though weekend traffic can add variability. From Fosse Park to East Midlands Airport, journeys are commonly 25 to 35 minutes through A563 and M1/A453 links. Birmingham Airport usually takes around 35 to 50 minutes using A5460/A563 connectors toward the M69/M6/M42 network. We always account for peak retail periods when estimating departure times.",
+      "Landmarks that regularly appear in bookings include Fosse Park Shopping Centre and Vue Leicester, with many evening returns from restaurants and entertainment venues nearby. We also handle staff transport for retail workers finishing late shifts, where punctual pickup is essential. Busy frontage roads are managed with clear meeting instructions to avoid confusion.",
+      "Families and groups often travel with shopping bags or multiple stops, so we support practical journey planning that includes return legs and onward drop-offs. For visitors coming from outside Leicester, we provide dependable links from rail stations, hotels, and residential addresses. Our focus is convenience, clear communication, and reliable timing even during the busiest shopping windows.",
+      "If your plans include onward flights, /airport-transfers-leicester covers transfer options in detail, while /pricing lets you check fare guidance before confirming. This keeps budgeting and scheduling transparent. For Fosse Park travel, our service is designed for real retail traffic patterns, dependable pickups, and hassle-free returns.",
+    ],
+    faqs: [
+      {
+        question: "Which pickup point should I use at Fosse Park?",
+        answer: "We confirm a clear meeting point based on your exact store area and current traffic management around the centre.",
+      },
+      {
+        question: "How long is Fosse Park to Leicester City Centre?",
+        answer: "Most journeys are around 15 to 20 minutes, with longer times possible during weekend shopping peaks.",
+      },
+      {
+        question: "Can retail staff pre-book late evening pickups from Fosse Park?",
+        answer: "Yes, late-evening and shift-finish pickups can be scheduled in advance for reliable collection.",
+      },
+    ],
+  },
+  hamilton: {
+    bodyParagraphs: [
+      "Hamilton is a modern residential area with strong family and commuter travel needs, and taxi bookings here often involve carefully timed local journeys. We provide dependable coverage across Hamilton's estates with clear communication and practical pickup planning. The goal is to keep daily travel simple, whether you are heading to work, school, city appointments, or longer-distance destinations.",
+      "Leicester City Centre trips from Hamilton are generally around 20 to 30 minutes via the A563 ring road and connecting routes. East Midlands Airport usually takes 35 to 45 minutes through A563 and M1/A453 links, while Birmingham Airport is often 45 to 60 minutes through A563 connectors and the M69/M6 corridor. For flights and fixed-time appointments, we recommend pre-booking with an appropriate departure buffer.",
+      "Frequent local landmarks include Hamilton Park and Hamilton Library area, alongside nearby retail and healthcare connections that generate steady weekday demand. We also handle regular transfers to Leicester railway station and university zones where direct travel saves time versus multiple public transport changes.",
+      "Residents in Hamilton often prefer a mix of on-demand local rides and planned airport transport. We support both with clear booking confirmations and accurate pickup windows. Families, professionals, and older passengers all benefit from the same approach: practical route planning, dependable arrivals, and straightforward fare communication.",
+      "To compare airport options, visit /airport-transfers-leicester, and for transparent fare guidance check /pricing before confirming your trip. That gives Hamilton passengers confidence in both timing and cost. Our service is built around punctuality, professional drivers, and route knowledge suited to the area's everyday travel patterns.",
+    ],
+    faqs: [
+      {
+        question: "How long is Hamilton to Leicester City Centre by taxi?",
+        answer: "Most journeys are around 20 to 30 minutes via the A563 and inner-city approach roads.",
+      },
+      {
+        question: "Do you provide station transfers from Hamilton?",
+        answer: "Yes, we regularly provide transfers between Hamilton and Leicester railway station.",
+      },
+      {
+        question: "Can I book airport transport from Hamilton in advance?",
+        answer: "Yes, advance booking is available 24/7 for both East Midlands and Birmingham airport journeys.",
+      },
+    ],
+  },
+  "glen-parva": {
+    bodyParagraphs: [
+      "Glen Parva has a quieter, village-edge character while still being tightly connected to Leicester's southern travel network. People here often need reliable transport for work, school, healthcare, and airport routes without relying on multiple bus changes. We provide consistent taxi coverage across Glen Parva with confirmed timings and route planning built around local congestion patterns.",
+      "Leicester City Centre journeys are usually around 15 to 25 minutes, commonly using the A426 and connecting city routes. East Midlands Airport is often around 25 to 35 minutes via A563/M1 links, while Birmingham Airport generally takes 40 to 55 minutes through A426 and M69/M6 corridors. We share realistic travel windows at booking so airport and appointment journeys are less stressful.",
+      "Local landmarks that drive regular demand include Glen Parva Manor and the nearby South Leicestershire College area, along with onward journeys to Fosse Park and hospital sites. We also support family and visitor travel around parks and community spaces where reliable return pickups are especially helpful in evenings.",
+      "Glen Parva passengers often value straightforward service over complexity. That means clear booking confirmations, timely driver arrival, and practical communication if traffic changes. For repeat travellers, recurring bookings can be arranged so regular routes are easier to manage from week to week.",
+      "If you are arranging flight travel, /airport-transfers-leicester provides detailed airport transfer information, and /pricing gives clear fare guidance before confirmation. This allows you to plan budget and timing with confidence. Our Glen Parva service remains focused on punctuality, comfort, and local route expertise for everyday journeys.",
+    ],
+    faqs: [
+      {
+        question: "How long is a taxi from Glen Parva to Leicester City Centre?",
+        answer: "Most journeys are around 15 to 25 minutes, usually via the A426 and nearby connecting roads.",
+      },
+      {
+        question: "Do you cover airport transfers from Glen Parva at all hours?",
+        answer: "Yes, airport bookings from Glen Parva are available 24/7 including very early departures.",
+      },
+      {
+        question: "Can I arrange regular weekly bookings in Glen Parva?",
+        answer: "Yes, recurring bookings are available for work trips, appointments, and school-related travel.",
+      },
+    ],
+  },
 }
 
 const areaContent: Record<string, AreaContent> = {
@@ -2013,19 +2367,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     (footerData as any).priorityAreas?.optionalPriority?.some((d: any) => slugFromHref(d.href) === slug)
 
   const customMeta = areaMeta[slug]
-  const title = customMeta
-    ? customMeta.title
-    : isDestination
-    ? `Taxi to ${areaName} | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis`
-    : `Taxi in ${areaName} | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis`
+  const title = isDestination
+    ? `🚖 Taxi to ${areaName} from £12 | Aylestone Taxis`
+    : `🚖 Taxis in ${areaName} from £12 | Aylestone Taxis`
   const description = customMeta
     ? customMeta.description
     : isDestination
     ? `Book taxi to ${areaName} - local taxi service with fixed fares. Fast booking, 24/7 availability, licensed drivers. Book your taxi to ${areaName} online now or call 0116 2338888.`
     : `Taxi in ${areaName} - local taxi service available 24/7. Book online now for fast pickups, fixed fares, and professional drivers. Affordable taxi in ${areaName} with airport transfers. Call 0116 2338888 or book instantly.`
   
-  const baseUrl = 'https://aylestone-taxis.co.uk'
-  const canonicalUrl = `${baseUrl}/taxis-in/${slug}`
+  const canonicalUrl = `${siteUrl}/taxis-in/${slug}`
   
   return {
     title,
@@ -2121,6 +2472,49 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const isStadiumArea = stadiumSlugs.has(slug)
   const isBusinessParkArea = businessParkSlugs.has(slug)
   const isFaithPlaceArea = faithPlaceSlugs.has(slug)
+  const selectedAreaContent = areaContent[slug]
+  const selectedPriorityContent = priorityAreaSeoContent[slug]
+  const resolvedContent: AreaContent = selectedPriorityContent
+    ? {
+        body: (
+          <div className="space-y-4">
+            {selectedPriorityContent.bodyParagraphs.map((paragraph) => (
+              <p key={paragraph.slice(0, 48)} className="text-gray-700">
+                {paragraph}
+              </p>
+            ))}
+            <p className="text-gray-700">
+              Need a detailed airport route breakdown? Visit{" "}
+              <Link href="/airport-transfers-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                our Leicester airport transfer guide
+              </Link>{" "}
+              for terminal-specific advice. If you want to compare likely journey costs first, check{" "}
+              <Link href="/pricing" className="text-[#06A0A6] hover:underline underline-offset-2">
+                taxi pricing information
+              </Link>{" "}
+              before you book.
+            </p>
+          </div>
+        ),
+        faqs: selectedPriorityContent.faqs,
+      }
+    : selectedAreaContent
+
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "TaxiService"],
+    "@id": `${siteUrl}/taxis-in-${slug}#business`,
+    name: "Aylestone Kings Taxi Service",
+    url: `${siteUrl}/taxis-in/${slug}`,
+    areaServed: areaPlain,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: 4.7,
+      reviewCount: 111,
+      bestRating: 5,
+      worstRating: 1,
+    },
+  }
 
   const faqSeen = new Set<string>()
   const renderFaq = (question: string, answer: string) => {
@@ -2136,6 +2530,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
       {/* Hero */}
       <section className="relative text-white bg-gradient-to-br from-[#0F0D3E] via-[#0F1B5A] to-[#0A7F84] pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
@@ -2197,9 +2595,9 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           <div className="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-10">
             <div className="space-y-8">
               {/* Area-specific body content if provided, otherwise generic content */}
-              {areaContent[slug] ? (
+              {resolvedContent ? (
                 <>
-                  <div>{areaContent[slug].body}</div>
+                  <div>{resolvedContent.body}</div>
 
                   <div className="pt-2">
                     <Link
@@ -2482,7 +2880,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 <h2 className="text-2xl font-semibold text-gray-900 mb-3">FAQs about taxi in {areaPlain}</h2>
                 <div className="space-y-4">
                   {/* Custom FAQs for this area (if any) */}
-                  {areaContent[slug]?.faqs.map((faq) => renderFaq(faq.question, faq.answer))}
+                  {resolvedContent?.faqs.map((faq) => renderFaq(faq.question, faq.answer))}
 
                   {/* Area-specific extras for Wigston, Oadby, Beaumont Leys */}
                   {isWigston &&
