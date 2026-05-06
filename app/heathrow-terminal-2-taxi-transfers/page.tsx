@@ -1,6 +1,7 @@
 import { ArrowRight, Calendar, Clock, MapPin, Phone, Plane, Shield, Star, Users } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
   title: "Heathrow Terminal 2 Taxi Transfers | Reliable Taxi to Heathrow T2",
@@ -49,6 +50,7 @@ export default function HeathrowTerminal2TaxiTransfersPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs.map((item) => ({ question: item.q, answer: item.a }))} />
       <main className="pt-24">
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

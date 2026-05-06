@@ -13,6 +13,7 @@ import {
 import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
   title: "Cheap Taxi Leicester | 24 Hour Affordable Taxi | Best Prices | Aylestone Kings",
@@ -29,8 +30,27 @@ export const metadata: Metadata = {
 }
 
 export default function CheapTaxiLeicesterPage() {
+  const faqs = [
+    {
+      question: "How do you keep Cheap Taxi Leicester prices low?",
+      answer:
+        "We optimise routes, reduce dead mileage and use modern dispatch technology so our drivers spend more time with passengers and less time driving empty. Those efficiencies help us keep Cheap Taxi Leicester prices as low as possible.",
+    },
+    {
+      question: "Is Cheap Taxi Leicester suitable for regular commuters?",
+      answer:
+        "Yes. Many regular commuters use our Cheap Taxi Leicester service for work, school runs and hospital appointments. You get reliable drivers, consistent pricing and the option to pre-book.",
+    },
+    {
+      question: "Can I still expect clean vehicles and professional drivers with a cheap service?",
+      answer:
+        "Absolutely. Cheap Taxi Leicester refers to our pricing, not our standards. Vehicles are clean, well maintained and fully licensed, and all drivers are vetted and DBS checked.",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">

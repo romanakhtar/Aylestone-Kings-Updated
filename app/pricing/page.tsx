@@ -3,6 +3,7 @@ import {  ArrowRight } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import Link from "next/link"
 import type { Metadata } from "next"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
   title: "Airport Pricing | Leicester Taxi Service | Aylestone Taxis",
@@ -10,8 +11,72 @@ export const metadata: Metadata = {
 }
 
 export default function PricingPage() {
+  const faqs = [
+    {
+      question: "How are the prices calculated for different destinations?",
+      answer:
+        "Our prices are based on distance, vehicle type, and any additional services. The rates shown are starting prices, and final costs may vary based on specific pickup locations and route requirements.",
+    },
+    {
+      question: "What's the difference between 1-4 seater and 6/8 seater pricing?",
+      answer:
+        "The 1-4 seater option uses our standard saloon vehicles, while 6/8 seater uses our minibus service. Larger vehicles have higher base costs due to increased capacity and fuel consumption, but offer better value for groups.",
+    },
+    {
+      question: "Are there any hidden fees or additional charges?",
+      answer:
+        "No hidden fees! All our prices are transparent. However, car park charges at airports and additional pickup locations may affect the final price. We'll always provide a clear breakdown before booking.",
+    },
+    {
+      question: "Can I get a quote for a custom route or multiple stops?",
+      answer:
+        "Absolutely! We offer custom pricing for special routes, multiple stops, and unique requirements. Contact us directly or use our app for a personalized quote based on your specific needs.",
+    },
+    {
+      question: "Do you offer discounts for regular customers or corporate accounts?",
+      answer:
+        "Yes! We offer loyalty discounts for regular customers and special rates for corporate accounts with volume bookings. Contact our business team to discuss corporate pricing options.",
+    },
+    {
+      question: "What payment methods do you accept?",
+      answer:
+        "We accept cash, all major credit/debit cards, and digital payments through our app. Corporate accounts can be set up with monthly invoicing for convenience.",
+    },
+    {
+      question: "Do you do airport transfers?",
+      answer:
+        "Yes, we cover all UK airports including Birmingham, East Midlands, Heathrow, Manchester, and Gatwick. Fixed prices and 24/7 availability.",
+    },
+    {
+      question: "Are licensed drivers DBS checked?",
+      answer:
+        "Yes, all licensed drivers available through Aylestone Taxis are fully licensed and DBS checked for safety and peace of mind.",
+    },
+    {
+      question: "Do you do school runs?",
+      answer:
+        "Yes, we provide reliable school run services with DBS-checked drivers. Regular contracts available for parents.",
+    },
+    {
+      question: "Do you provide corporate or business accounts?",
+      answer:
+        "Yes, we offer business accounts with monthly invoicing and priority bookings for companies.",
+    },
+    {
+      question: "Can I pre-book a taxi in advance?",
+      answer:
+        "Absolutely. You can book in advance through our website, WhatsApp, or by phone.",
+    },
+    {
+      question: "Do you do school runs?",
+      answer:
+        "Yes, we provide reliable school run services with DBS-checked drivers. Regular contracts available for parents.",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">

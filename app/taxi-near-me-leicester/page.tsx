@@ -3,6 +3,7 @@ import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar, Naviga
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
   title: "Taxi Near Me Leicester | Find Taxi Near You | Aylestone Kings",
@@ -19,8 +20,32 @@ export const metadata: Metadata = {
 }
 
 export default function TaxiNearMeLeicesterPage() {
+  const faqs = [
+    {
+      question: "How do I book a Taxi Near Me Leicester?",
+      answer:
+        "You can book online, call us on 0116 2338888, or send a WhatsApp message. Tell us where you are and we'll send the nearest available driver.",
+    },
+    {
+      question: "Will my taxi really be near me?",
+      answer:
+        "We operate across Leicester with drivers positioned in multiple areas. When you request Taxi Near Me Leicester, our system allocates the closest suitable vehicle for the fastest possible arrival.",
+    },
+    {
+      question: "Can I use Taxi Near Me Leicester for airport trips?",
+      answer:
+        "Yes. You can use our Taxi Near Me Leicester service for local trips, nights out, work commutes and airport runs. We offer fixed fares to all major UK airports.",
+    },
+    {
+      question: "Are your nearby taxis licensed and insured?",
+      answer:
+        "All licensed drivers available through Aylestone Taxis are fully licensed and DBS checked, and every vehicle is properly insured and regularly maintained for your safety.",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">

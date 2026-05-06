@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Shield, FileText, Car, CreditCard, CheckCircle2, PoundSterling, Clock, Users, Award, MapPin, Phone, Mail, HelpCircle, TrendingUp, Star, Briefcase, Headphones, GraduationCap, CalendarCheck, ArrowRight } from 'lucide-react'
 import type { Metadata } from 'next'
 import { siteData } from '@/lib/data'
+import FAQSchema from "@/components/seo/FAQSchema"
 
 // Icon mapping
 const iconMap: Record<string, any> = {
@@ -485,6 +486,43 @@ export default function JoinDriverPage() {
   }
 
   const driverContent = siteData.driverPage
+  const faqs = [
+    {
+      question: "Do I need my own vehicle?",
+      answer:
+        "You can use your own licensed vehicle or inquire about company vehicle options. Both arrangements are supported.",
+    },
+    {
+      question: "What are the working hours?",
+      answer:
+        "You choose your own hours! We offer full-time and part-time positions with flexible day, night, or both shift options.",
+    },
+    {
+      question: "How much can I earn?",
+      answer:
+        "Earnings vary based on hours worked and bookings. We offer competitive rates with a fair commission structure. Weekly payments are made directly to your bank account.",
+    },
+    {
+      question: "What documents do I need?",
+      answer:
+        "You'll need: valid UK driving licence, private hire badge, DBS certificate, proof of address, right to work documentation, and if using your own vehicle - insurance, MOT, and vehicle licence documents.",
+    },
+    {
+      question: "How long does the application process take?",
+      answer:
+        "Typically 1-2 weeks from application submission to starting work, depending on document verification (normally same day).",
+    },
+    {
+      question: "What areas do you cover?",
+      answer:
+        "We primarily serve Leicester and surrounding areas including Aylestone, Leicestershire, and the wider Midlands region.",
+    },
+    {
+      question: "Is there training provided?",
+      answer:
+        "Yes! We provide comprehensive onboarding and ongoing training to help you succeed, including customer service, navigation, and company procedures.",
+    },
+  ]
 
   // Prevent hydration mismatch by not rendering conditional content until mounted
   if (!hasMounted) {
@@ -520,6 +558,7 @@ export default function JoinDriverPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F0D3E] via-[#1a1f3a] to-[#0F0D3E] overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>

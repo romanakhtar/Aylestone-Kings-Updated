@@ -5,6 +5,7 @@ import { ArrowRight, MapPin, Plane, Clock, Shield, Car } from "lucide-react"
 import { footerData, companyInfo, contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import { JSX } from "react"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 type AreaItem = { name: string; href: string }
 const siteUrl = "https://aylestone-taxis.co.uk"
@@ -2530,6 +2531,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
   return (
     <main>
+      <FAQSchema faqs={resolvedContent?.faqs ?? []} />
       {/* Hero */}
       <section className="relative text-white bg-gradient-to-br from-[#0F0D3E] via-[#0F1B5A] to-[#0A7F84] pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
@@ -2878,7 +2880,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 <h2 className="text-2xl font-semibold text-gray-900 mb-3">FAQs about taxi in {areaPlain}</h2>
                 <div className="space-y-4">
                   {/* Custom FAQs for this area (if any) */}
-                  {resolvedContent?.faqs.map((faq) => renderFaq(faq.question, faq.answer))}
+                  {resolvedContent?.faqs?.map((faq) => renderFaq(faq.question, faq.answer))}
 
                   {/* Area-specific extras for Wigston, Oadby, Beaumont Leys */}
                   {isWigston &&

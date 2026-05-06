@@ -3,6 +3,7 @@ import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar } from 
 import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
   title: "Taxi Leicester | Best Leicester Taxi Service | Aylestone Kings",
@@ -19,8 +20,32 @@ export const metadata: Metadata = {
 }
 
 export default function TaxiLeicesterPage() {
+  const faqs = [
+    {
+      question: "How do I book a Taxi Leicester?",
+      answer:
+        "You can book online in seconds using our secure booking form, call our office on 0116 2338888, or send us a WhatsApp message. You'll see your price before you confirm.",
+    },
+    {
+      question: "Do you operate your Leicester taxis 24/7?",
+      answer:
+        "Yes. Our Taxi Leicester service runs 24 hours a day, 7 days a week, including nights, weekends and bank holidays.",
+    },
+    {
+      question: "Can I book a Leicester taxi to the airport?",
+      answer:
+        "Absolutely. We provide fixed-price airport transfers from Leicester to all major UK airports with flight monitoring and optional meet & greet.",
+    },
+    {
+      question: "Are your Leicester taxi drivers licensed and DBS checked?",
+      answer:
+        "Yes. All drivers are fully licensed and DBS checked, and our fleet is regularly inspected for your safety and comfort.",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">
