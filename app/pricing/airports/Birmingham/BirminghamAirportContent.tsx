@@ -1,5 +1,6 @@
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
+import AirportRouteGuide from "@/components/seo/AirportRouteGuide"
 
 export default function BirminghamAirportContent() {
   return (
@@ -37,6 +38,14 @@ export default function BirminghamAirportContent() {
             </div>
           </div>
         </section>
+
+        <AirportRouteGuide
+          airportName="Birmingham"
+          airportCode="BHX"
+          fromPrice="£60"
+          typicalTime="around 55 minutes to 1 hour 25 minutes"
+          slug="Birmingham"
+        />
 
         {/* Pricing Section */}
         <section className="py-20 bg-white">

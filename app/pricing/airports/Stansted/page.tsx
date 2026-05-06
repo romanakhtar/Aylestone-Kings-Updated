@@ -1,15 +1,22 @@
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
-import type { Metadata } from "next"
+import FAQSchema from "@/components/seo/FAQSchema"
+import AirportRouteGuide from "@/components/seo/AirportRouteGuide"
+import { buildAirportFaqs, buildAirportMetadata } from "@/lib/seo/airportSeo"
 
-export const metadata: Metadata = {
-  title: "Stansted Airport Taxi from Leicester | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-  description: "Reliable Leicester taxi service to London Stansted Airport (STN). Fixed rates from £150. 24/7 transfers, licensed drivers, and comfortable vehicles. Book your Leicester to Stansted airport transfer today.",
-}
+export const metadata = buildAirportMetadata({
+  airportName: "Stansted",
+  airportCode: "STN",
+  slug: "Stansted",
+  fromPrice: "£150",
+})
+
+const faqs = buildAirportFaqs({ airportName: "Stansted", fromPrice: "£150" })
 
 export default function StanstedPage() {
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
@@ -43,6 +50,14 @@ export default function StanstedPage() {
             </div>
           </div>
         </section>
+
+        <AirportRouteGuide
+          airportName="Stansted"
+          airportCode="STN"
+          fromPrice="£150"
+          typicalTime="around 2h to 3h 15m"
+          slug="Stansted"
+        />
 
         {/* Pricing Section */}
         <section className="py-20 bg-white">

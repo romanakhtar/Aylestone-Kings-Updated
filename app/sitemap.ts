@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import { siteData, footerData } from '@/lib/data'
 
-const baseUrl = 'https://www.aylestone-taxis.co.uk'
+const baseUrl = 'https://aylestone-taxis.co.uk'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date().toISOString().split('T')[0]

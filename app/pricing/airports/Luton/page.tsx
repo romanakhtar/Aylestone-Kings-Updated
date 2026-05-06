@@ -10,23 +10,15 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { contactInfo } from "@/lib/data"
-import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
+import { buildAirportMetadata } from "@/lib/seo/airportSeo"
 
-export const metadata: Metadata = {
-  title:
-    "Leicester to Luton Airport Taxi | Fixed Price LTN Transfers 24/7 | Aylestone Kings",
-  description:
-    "Book a Leicester to Luton Airport taxi with fixed fares from £120. Reliable LTN transfers, flight-aware pickups, saloon & MPV options. Licensed drivers, 24/7. Compare with our Heathrow & Gatwick airport taxis.",
-  keywords: [
-    "Leicester to Luton airport taxi",
-    "Luton airport transfer Leicester",
-    "taxi to Luton from Leicester",
-    "LTN taxi Leicester",
-    "fixed price Luton airport taxi",
-    "Luton airport pickup",
-  ],
-}
+export const metadata = buildAirportMetadata({
+  airportName: "Luton",
+  airportCode: "LTN",
+  slug: "Luton",
+  fromPrice: "£120",
+})
 
 const faqs = [
   {
