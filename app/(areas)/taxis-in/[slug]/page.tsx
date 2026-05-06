@@ -2531,7 +2531,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
   return (
     <main>
-      <FAQSchema faqs={resolvedContent.faqs} />
+      <FAQSchema faqs={resolvedContent?.faqs ?? []} />
       {/* Hero */}
       <section className="relative text-white bg-gradient-to-br from-[#0F0D3E] via-[#0F1B5A] to-[#0A7F84] pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
