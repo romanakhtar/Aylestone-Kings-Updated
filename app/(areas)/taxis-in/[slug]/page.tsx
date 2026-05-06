@@ -2516,22 +2516,6 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       }
     : selectedAreaContent
 
-  const pageSchema = {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "TaxiService"],
-    "@id": `${siteUrl}/taxis-in-${slug}#business`,
-    name: "Aylestone Kings Taxi Service",
-    url: `${siteUrl}/taxis-in/${slug}`,
-    areaServed: areaPlain,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: 4.7,
-      reviewCount: 111,
-      bestRating: 5,
-      worstRating: 1,
-    },
-  }
-
   const faqSeen = new Set<string>()
   const renderFaq = (question: string, answer: string) => {
     if (faqSeen.has(question)) return null
@@ -2546,10 +2530,6 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
       {/* Hero */}
       <section className="relative text-white bg-gradient-to-br from-[#0F0D3E] via-[#0F1B5A] to-[#0A7F84] pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
