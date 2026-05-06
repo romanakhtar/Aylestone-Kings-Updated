@@ -1,15 +1,22 @@
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
-import type { Metadata } from "next"
+import FAQSchema from "@/components/seo/FAQSchema"
+import AirportRouteGuide from "@/components/seo/AirportRouteGuide"
+import { buildAirportFaqs, buildAirportMetadata } from "@/lib/seo/airportSeo"
 
-export const metadata: Metadata = {
-  title: "Manchester Airport Taxi from Leicester | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-  description: "Reliable Leicester taxi service to Manchester Airport (MAN). Fixed rates from £150. 24/7 transfers, licensed drivers, and comfortable vehicles. Book your Leicester to Manchester airport transfer today.",
-}
+export const metadata = buildAirportMetadata({
+  airportName: "Manchester",
+  airportCode: "MAN",
+  slug: "Manchester",
+  fromPrice: "£150",
+})
+
+const faqs = buildAirportFaqs({ airportName: "Manchester", fromPrice: "£150" })
 
 export default function ManchesterPage() {
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
@@ -43,6 +50,14 @@ export default function ManchesterPage() {
             </div>
           </div>
         </section>
+
+        <AirportRouteGuide
+          airportName="Manchester"
+          airportCode="MAN"
+          fromPrice="£150"
+          typicalTime="around 2h to 3h"
+          slug="Manchester"
+        />
 
         {/* Pricing Section */}
         <section className="py-20 bg-white">

@@ -1,11 +1,21 @@
-import type { Metadata } from "next"
 import BirminghamAirportContent from "./BirminghamAirportContent"
+import FAQSchema from "@/components/seo/FAQSchema"
+import { buildAirportFaqs, buildAirportMetadata } from "@/lib/seo/airportSeo"
 
-export const metadata: Metadata = {
-  title: "Birmingham Airport Taxi from Leicester | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-  description: "Professional Leicester taxi service to Birmingham Airport (BHX). Fixed rates from £60. 24/7 transfers, licensed drivers, and reliable service. Book your Leicester to Birmingham airport taxi today.",
-}
+export const metadata = buildAirportMetadata({
+  airportName: "Birmingham",
+  airportCode: "BHX",
+  slug: "Birmingham",
+  fromPrice: "£60",
+})
+
+const faqs = buildAirportFaqs({ airportName: "Birmingham", fromPrice: "£60" })
 
 export default function BirminghamPage() {
-  return <BirminghamAirportContent />
+  return (
+    <>
+      <FAQSchema faqs={faqs} />
+      <BirminghamAirportContent />
+    </>
+  )
 }

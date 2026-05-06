@@ -1,17 +1,24 @@
 import Image from "next/image"
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
-import type { Metadata } from "next"
 import Link from "next/link"
+import FAQSchema from "@/components/seo/FAQSchema"
+import AirportRouteGuide from "@/components/seo/AirportRouteGuide"
+import { buildAirportFaqs, buildAirportMetadata } from "@/lib/seo/airportSeo"
 
-export const metadata: Metadata = {
-  title: "East Midlands Airport Taxi from Leicester | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-  description: "Reliable Leicester taxi service to East Midlands Airport (EMA). Fixed rates from £40. 24/7 service, licensed drivers, and comfortable vehicles. Book your Leicester to EMA airport transfer today.",
-}
+export const metadata = buildAirportMetadata({
+  airportName: "East Midlands",
+  airportCode: "EMA",
+  slug: "East-Midlands",
+  fromPrice: "£40",
+})
+
+const faqs = buildAirportFaqs({ airportName: "East Midlands", fromPrice: "£40" })
 
 export default function EastMidlandsPage() {
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
@@ -45,6 +52,14 @@ export default function EastMidlandsPage() {
             </div>
           </div>
         </section>
+
+        <AirportRouteGuide
+          airportName="East Midlands"
+          airportCode="EMA"
+          fromPrice="£40"
+          typicalTime="around 35 to 60 minutes"
+          slug="East-Midlands"
+        />
 
         {/* Pricing Section */}
         <section className="py-20 bg-white">

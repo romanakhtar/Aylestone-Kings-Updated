@@ -1,15 +1,22 @@
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
-import type { Metadata } from "next"
+import FAQSchema from "@/components/seo/FAQSchema"
+import AirportRouteGuide from "@/components/seo/AirportRouteGuide"
+import { buildAirportFaqs, buildAirportMetadata } from "@/lib/seo/airportSeo"
 
-export const metadata: Metadata = {
-  title: "Gatwick Airport Taxi from Leicester | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-  description: "Professional Leicester taxi service to London Gatwick Airport (LGW). Fixed rates from £200. 24/7 transfers, licensed drivers, and reliable service. Book your Leicester to Gatwick airport taxi today.",
-}
+export const metadata = buildAirportMetadata({
+  airportName: "Gatwick",
+  airportCode: "LGW",
+  slug: "Gatwick",
+  fromPrice: "£200",
+})
+
+const faqs = buildAirportFaqs({ airportName: "Gatwick", fromPrice: "£200" })
 
 export default function GatwickPage() {
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
@@ -43,6 +50,14 @@ export default function GatwickPage() {
             </div>
           </div>
         </section>
+
+        <AirportRouteGuide
+          airportName="Gatwick"
+          airportCode="LGW"
+          fromPrice="£200"
+          typicalTime="around 2h 45m to 4h"
+          slug="Gatwick"
+        />
 
         {/* Pricing Section */}
         <section className="py-20 bg-white">
