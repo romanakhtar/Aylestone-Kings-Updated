@@ -2,6 +2,7 @@ import { FileText, Phone } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
   title:
@@ -23,8 +24,27 @@ export const metadata: Metadata = {
 }
 
 export default function CorporateTaxiAccountLeicesterPage() {
+  const faqs = [
+    {
+      question: "How do I open a corporate taxi account in Leicester?",
+      answer:
+        "Contact Aylestone Taxis by email and we will register your business. Once approved, your staff can begin booking taxis under your company account.",
+    },
+    {
+      question: "How does billing work for corporate taxi accounts?",
+      answer:
+        "All journeys booked under your business account are recorded and added to a single monthly invoice.",
+    },
+    {
+      question: "Who can use a corporate taxi account?",
+      answer:
+        "Corporate taxi accounts are ideal for offices, hotels, healthcare providers, schools and businesses across Leicester.",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">

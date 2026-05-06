@@ -2,6 +2,7 @@ import { Calendar, Luggage, MapPin, Phone, Shield, Users } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
   title:
@@ -23,8 +24,32 @@ export const metadata: Metadata = {
 }
 
 export default function MeetAndGreetTaxiLeicesterPage() {
+  const faqs = [
+    {
+      question: "What does meet and greet taxi mean?",
+      answer:
+        "It means your taxi driver meets you inside the airport, holding a name sign, helps with your luggage and walks you to your vehicle instead of you trying to find the car outside.",
+    },
+    {
+      question: "How does meet and greet work at EMA and BHX?",
+      answer:
+        "We pre-book your journey with flight details, track your landing, then your driver waits in EMA or BHX arrivals with a name board. After greeting you, they assist with luggage and escort you to your taxi in the car park.",
+    },
+    {
+      question: "Is pre-booking required for meet and greet?",
+      answer:
+        "Yes. Pre-booking is required so we can arrange parking, monitor your flight and ensure your driver is in the terminal with a name sign when you arrive.",
+    },
+    {
+      question: "Will the driver help with my bags?",
+      answer:
+        "Yes. Our meet and greet taxi Leicester service includes luggage assistance from arrivals to the vehicle and again at your home, hotel or business address.",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">

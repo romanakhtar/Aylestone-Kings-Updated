@@ -10,6 +10,7 @@ import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 import { useValentineTheme } from "@/components/ValentineThemeProvider"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import FareEstimator from "@/components/FareEstimator"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 // Dynamically import non-critical component
 const AppDownloadButtons = dynamic(() => import("@/components/AppDownloadButtons"), {
@@ -54,8 +55,36 @@ export default function HomePageClient() {
     setIsAutoPlaying(false)
   }
 
+  const homeFaqs = [
+    {
+      question: "How do I book a taxi in Leicester?",
+      answer: "Book online in seconds or call our office. You can book instantly or pre-book for later.",
+    },
+    {
+      question: "Are you available 24/7?",
+      answer: "Yes, we operate 24/7 including weekends and bank holidays.",
+    },
+    {
+      question: "Do you offer fixed prices?",
+      answer: "Yes, you'll see the price before confirming your booking.",
+    },
+    {
+      question: "Can I pre-book a taxi in advance?",
+      answer: "Yes, pre-booking is available and recommended during busy times.",
+    },
+    {
+      question: "Do you provide airport transfers?",
+      answer: "Yes, we provide fixed-price airport transfers to all major UK airports.",
+    },
+    {
+      question: "Do you have larger vehicles for groups or luggage?",
+      answer: "Yes, you can choose the appropriate vehicle type during booking, subject to availability.",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={homeFaqs} />
       {/* Spacer: height = fixed navbar (top-5 + h-16) so next content sits below it */}
       <div className="w-full shrink-0" style={{ height: "4.1rem" }} aria-hidden="true" />
       {/* Trust bar – in flow, directly below navbar; 2-col grid on mobile so icons align */}

@@ -3,6 +3,7 @@ import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar, Plane 
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
   title: "Leicester to East Midlands Airport Taxi | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
@@ -19,8 +20,32 @@ export const metadata: Metadata = {
 }
 
 export default function LeicesterToEastMidlandsAirportTaxiPage() {
+  const faqs = [
+    {
+      question: "How much is a taxi from Leicester to East Midlands Airport (EMA)?",
+      answer:
+        "Our fixed-fare Leicester to EMA transfers start from £40 (vehicle and pickup location can affect the final price). You'll see the price before confirming your booking.",
+    },
+    {
+      question: "Do you pick up from all Leicester areas?",
+      answer:
+        "Yes — we cover Leicester and surrounding areas. Enter your pickup address when booking online or call 0116 2338888.",
+    },
+    {
+      question: "Can you do early-morning airport runs?",
+      answer:
+        "Yes. We operate 24/7 and can schedule pickups for early flights. We recommend pre-booking for peak travel times.",
+    },
+    {
+      question: "What happens if my flight is delayed on the way back?",
+      answer:
+        "For return trips, we can use your flight details to time pickup more accurately. If anything changes, call us and we'll adjust where possible.",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">
