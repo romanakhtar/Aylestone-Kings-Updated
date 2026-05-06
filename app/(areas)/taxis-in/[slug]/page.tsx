@@ -2880,7 +2880,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 <h2 className="text-2xl font-semibold text-gray-900 mb-3">FAQs about taxi in {areaPlain}</h2>
                 <div className="space-y-4">
                   {/* Custom FAQs for this area (if any) */}
-                  {resolvedContent?.faqs.map((faq) => renderFaq(faq.question, faq.answer))}
+                  {resolvedContent?.faqs?.map((faq) => renderFaq(faq.question, faq.answer))}
 
                   {/* Area-specific extras for Wigston, Oadby, Beaumont Leys */}
                   {isWigston &&
