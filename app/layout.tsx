@@ -43,6 +43,7 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aylestone-taxis.co.uk"),
   title: "Aylestone Taxis | 24/7 Leicester Airport & Local Taxi Service",
   description: "Reliable 24/7 taxi service in Leicester. Airport transfers, school runs & local trips. Book online or call now for fast pickup.",
   keywords: "Taxi Leicester, Taxi Near Me Leicester, Leicester Airport Taxi, Leicester to East Midlands Airport Taxi, Leicester Taxi Company, Cheap Taxi Leicester, 24 Hour Taxi Leicester, taxi in Leicester, Leicester taxi service, airport taxi Leicester, taxi company Leicester, Aylestone Taxis",
@@ -71,7 +72,7 @@ export const metadata: Metadata = {
     images: ["https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png"],
   },
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk",
+    canonical: "/",
   },
   other: {
     "preconnect": "https://aylestonekings.webbooker.icabbi.com",
