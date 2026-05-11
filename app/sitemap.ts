@@ -53,7 +53,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   urls.push(createUrl('/heathrow-terminal-5-taxi-transfers', 0.9, 'weekly'))
   urls.push(createUrl('/gatwick-north-terminal-taxi-transfers', 0.9, 'weekly'))
   urls.push(createUrl('/gatwick-south-terminal-taxi-transfers', 0.9, 'weekly'))
-  urls.push(createUrl('/valentines-day-taxi-leicester', 0.9, 'weekly'))
+  urls.push(createUrl('/corporate-taxi-account-leicester', 0.85, 'monthly'))
+  urls.push(createUrl('/meet-and-greet-taxi-leicester', 0.85, 'monthly'))
+  urls.push(createUrl('/school-run-taxi-leicester', 0.85, 'monthly'))
+  urls.push(createUrl('/taxi-to-birmingham-airport', 0.9, 'weekly'))
 
   // Airport Pricing Pages
   const airports = [

@@ -2383,14 +2383,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     (footerData as any).priorityAreas?.optionalPriority?.some((d: any) => slugFromHref(d.href) === slug)
 
   const customMeta = areaMeta[slug]
-  const title = isDestination
-    ? `🚖 Taxi to ${areaName} from £12 | Aylestone Taxis`
-    : `🚖 Taxis in ${areaName} from £12 | Aylestone Taxis`
+  const title = customMeta
+    ? customMeta.title
+    : isDestination
+      ? `Taxi to ${areaName}, Leicester | Book 24/7 | 0116 2338888`
+      : `Taxi in ${areaName}, Leicester | Fixed Fares | Aylestone Taxis`
   const description = customMeta
     ? customMeta.description
     : isDestination
-    ? `Book taxi to ${areaName} - local taxi service with fixed fares. Fast booking, 24/7 availability, licensed drivers. Book your taxi to ${areaName} online now or call 0116 2338888.`
-    : `Taxi in ${areaName} - local taxi service available 24/7. Book online now for fast pickups, fixed fares, and professional drivers. Affordable taxi in ${areaName} with airport transfers. Call 0116 2338888 or book instantly.`
+      ? `Book a taxi to ${areaName} from anywhere in Leicester. Fixed fares, licensed drivers, instant online booking. Serving ${areaName} 24/7 — call 0116 2338888.`
+      : `Need a taxi in ${areaName}? Aylestone Taxis: fast local pickups, airport transfers, school runs. Book online in seconds or call 0116 2338888 — 24/7.`
   
   const canonicalUrl = `${siteUrl}/taxis-in/${slug}`
   

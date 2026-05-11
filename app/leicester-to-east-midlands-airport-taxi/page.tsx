@@ -6,15 +6,16 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Leicester to East Midlands Airport Taxi | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-  description: "Leicester to East Midlands Airport Taxi - Fixed price transfers from Leicester to EMA. From £40, 24/7 service, licensed drivers. Book your Leicester to East Midlands Airport Taxi now - call 0116 2338888.",
+  title: "Leicester to East Midlands Airport Taxi | From £40 | Book 24/7",
+  description:
+    "Leicester to East Midlands Airport (EMA) taxi: fixed fares from £40, flight-friendly timing, saloons and MPVs. Book online in seconds or call 0116 2338888 — 24/7.",
   keywords: "Leicester to East Midlands Airport Taxi, Leicester to EMA taxi, East Midlands Airport taxi from Leicester, Leicester EMA transfer",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/leicester-to-east-midlands-airport-taxi",
   },
   openGraph: {
-    title: "Leicester to East Midlands Airport Taxi | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-    description: "Leicester to East Midlands Airport Taxi - Fixed price transfers from Leicester to EMA. From £40, 24/7 service.",
+    title: "Leicester to East Midlands Airport Taxi | Aylestone Taxis",
+    description: "Fixed-price EMA transfers from Leicester. Book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/leicester-to-east-midlands-airport-taxi",
   },
 }

@@ -44,8 +44,9 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aylestone-taxis.co.uk"),
-  title: "Aylestone Taxis | 24/7 Leicester Airport & Local Taxi Service",
-  description: "Reliable 24/7 taxi service in Leicester. Airport transfers, school runs & local trips. Book online or call now for fast pickup.",
+  title: "Aylestone Taxis Leicester | 24/7 Book Online | 0116 2338888",
+  description:
+    "Leicester taxi since 1995: instant online booking, fixed airport fares, licensed drivers. See your price before you confirm — call 0116 2338888 or book 24/7.",
   keywords: "Taxi Leicester, Taxi Near Me Leicester, Leicester Airport Taxi, Leicester to East Midlands Airport Taxi, Leicester Taxi Company, Cheap Taxi Leicester, 24 Hour Taxi Leicester, taxi in Leicester, Leicester taxi service, airport taxi Leicester, taxi company Leicester, Aylestone Taxis",
   generator: "Aylestone Kings",
   authors: [{ name: "Aylestone Kings" }],

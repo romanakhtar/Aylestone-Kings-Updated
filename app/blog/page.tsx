@@ -2,10 +2,20 @@ import Image from "next/image"
 import Link from "next/link"
 import { Calendar, User, ArrowRight, BookOpen } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
+import type { Metadata } from "next"
 
-export const metadata = {
-  title: "Blog | Leicester Taxi Service | Aylestone Taxis",
-  description: "Read the latest blog posts from Aylestone Kings. Travel tips, Leicester taxi guides, airport transfer advice, and transportation insights for Leicester and Leicestershire residents.",
+export const metadata: Metadata = {
+  title: "Leicester Taxi Blog | Tips, Airports & Travel | Aylestone",
+  description:
+    "Leicester taxi blog: airport guides, travel tips, and local transport advice from Aylestone Kings. Read free guides — book a taxi anytime on 0116 2338888 or online.",
+  alternates: {
+    canonical: "https://aylestone-taxis.co.uk/blog",
+  },
+  openGraph: {
+    title: "Leicester Taxi Blog | Aylestone Kings",
+    description: "Guides and tips for Leicester travellers. Book taxis 24/7 on 0116 2338888.",
+    url: "https://aylestone-taxis.co.uk/blog",
+  },
 }
 
 export default function BlogPage() {

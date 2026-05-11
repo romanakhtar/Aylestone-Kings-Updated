@@ -4,8 +4,17 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Our Fleet | Leicester Taxi Service | Aylestone Taxis",
-  description: "Explore Aylestone Kings' premium taxi fleet serving Leicester. Saloon cars, MPVs, 6-seaters, 8-seaters, and executive vehicles. Licensed, modern, and well-maintained for your comfort throughout Leicester.",
+  title: "Taxi Fleet Leicester | Saloons, MPVs & 8-Seaters | Aylestone",
+  description:
+    "Our Leicester taxi fleet: saloons, executive cars, 6- and 8-seaters — clean, licensed, maintained in-house. Need the right vehicle? Book online or call 0116 2338888.",
+  alternates: {
+    canonical: "https://aylestone-taxis.co.uk/fleet",
+  },
+  openGraph: {
+    title: "Taxi Fleet Leicester | Aylestone Kings",
+    description: "Modern vehicles for every journey. Book on 0116 2338888 or online.",
+    url: "https://aylestone-taxis.co.uk/fleet",
+  },
 }
 
 export default function FleetPage() {

@@ -9,8 +9,17 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Our Taxi Services in Leicester | Aylestone Kings",
-  description: "Discover Aylestone Kings' comprehensive taxi services in Leicester. Local taxis, airport transfers, pre-booked journeys, corporate accounts, school runs, group travel, wheelchair accessible, hospital transfers, and more. Professional, reliable, and affordable.",
+  title: "Taxi Services Leicester | Airport, Local, School & More",
+  description:
+    "Taxi services in Leicester: local rides, all UK airports, school runs, corporate accounts, meet & greet, seaports. Licensed fleet — get a quote online or call 0116 2338888, 24/7.",
+  alternates: {
+    canonical: "https://aylestone-taxis.co.uk/services",
+  },
+  openGraph: {
+    title: "Taxi Services Leicester | Aylestone Kings",
+    description: "Airport, local, school runs, business travel — book online or call 0116 2338888.",
+    url: "https://aylestone-taxis.co.uk/services",
+  },
 }
 
 const services = [

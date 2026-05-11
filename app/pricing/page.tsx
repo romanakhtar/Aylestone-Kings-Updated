@@ -6,8 +6,17 @@ import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Airport Pricing | Leicester Taxi Service | Aylestone Taxis",
-  description: "Transparent airport taxi pricing from Leicester to all UK airports. Fixed rates to Birmingham, East Midlands, Heathrow, Gatwick, Manchester, Luton, and Stansted. Book your Leicester airport transfer today.",
+  title: "Leicester Airport Taxi Prices | Fixed Fares | All UK Airports",
+  description:
+    "See airport taxi prices from Leicester: fixed fares to EMA, Birmingham, Heathrow, Gatwick, Luton, Stansted, Manchester. Quote online in seconds or call 0116 2338888 — 24/7.",
+  alternates: {
+    canonical: "https://aylestone-taxis.co.uk/pricing",
+  },
+  openGraph: {
+    title: "Leicester Airport Taxi Prices | Aylestone Kings",
+    description: "Transparent fixed fares from Leicester to UK airports. Book online or call 0116 2338888.",
+    url: "https://aylestone-taxis.co.uk/pricing",
+  },
 }
 
 export default function PricingPage() {

@@ -4,18 +4,18 @@ import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Heathrow Terminal 5 Taxi Transfers | Reliable Taxi to Heathrow T5",
+  title: "Leicester to Heathrow Terminal 5 Taxi | Fixed Fares | Aylestone Taxis",
   description:
-    "Book dependable Heathrow Terminal 5 taxi transfers with punctual drivers, flight tracking, and meet & greet service. 24/7 private taxi to Heathrow T5 across London and beyond.",
+    "Private taxi from Leicester to Heathrow Terminal 5 (T5). Fixed fares, flight tracking, meet & greet option, licensed drivers. Book online or call 0116 2338888 — 24/7.",
   keywords:
-    "Heathrow Terminal 5 taxi, taxi to Heathrow T5, Heathrow airport transfer T5, Heathrow T5 transfer, Heathrow Terminal 5 airport taxi",
+    "Leicester to Heathrow T5 taxi, Heathrow Terminal 5 taxi Leicester, taxi to Heathrow T5 from Leicester, Heathrow T5 transfer Leicester, Heathrow Terminal 5 airport taxi",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/heathrow-terminal-5-taxi-transfers",
   },
   openGraph: {
-    title: "Heathrow Terminal 5 Taxi Transfers | Reliable Taxi to Heathrow T5",
+    title: "Leicester to Heathrow Terminal 5 Taxi | Fixed Fares | Aylestone Taxis",
     description:
-      "Professional Heathrow Terminal 5 taxi service with flight tracking, punctual drivers and meet & greet support for arrivals and departures.",
+      "Leicester to Heathrow T5 transfers: fixed pricing, flight monitoring, professional drivers. Book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/heathrow-terminal-5-taxi-transfers",
   },
 }
