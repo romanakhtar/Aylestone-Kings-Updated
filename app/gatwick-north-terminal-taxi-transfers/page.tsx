@@ -4,18 +4,18 @@ import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Gatwick North Terminal Taxi Transfers | Reliable Gatwick North Taxi",
+  title: "Leicester to Gatwick North Terminal Taxi | Fixed Fares | Aylestone",
   description:
-    "Book a trusted Gatwick North taxi with fixed fares, flight monitoring, meet & greet, and punctual drivers. 24/7 taxi to Gatwick North terminal across London and surrounding areas.",
+    "Pre-book a taxi from Leicester to Gatwick North Terminal. Fixed fares, flight monitoring, meet & greet option, saloons and MPVs. Call 0116 2338888 or book online — 24/7.",
   keywords:
-    "Gatwick North taxi, taxi to Gatwick North terminal, Gatwick airport transfer, Gatwick North terminal transfer, Gatwick pickup service",
+    "Leicester to Gatwick North taxi, Gatwick North terminal taxi Leicester, taxi to Gatwick North from Leicester, Gatwick airport transfer Leicester, Gatwick North pickup",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/gatwick-north-terminal-taxi-transfers",
   },
   openGraph: {
-    title: "Gatwick North Terminal Taxi Transfers | Reliable Gatwick North Taxi",
+    title: "Leicester to Gatwick North Terminal Taxi | Fixed Fares | Aylestone",
     description:
-      "Professional taxi to Gatwick North terminal with fixed pricing, flight monitoring and meet & greet support for departures and arrivals.",
+      "Leicester to Gatwick North: fixed pricing, flight tracking, professional drivers. Book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/gatwick-north-terminal-taxi-transfers",
   },
 }

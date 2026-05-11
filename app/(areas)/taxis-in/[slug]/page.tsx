@@ -31,9 +31,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 4. Wigston
   wigston: {
-    title: "Taxi in Wigston | 24/7 Airport Transfers & Local Rides | Aylestone Kings",
+    title: "Wigston Taxis & Taxis Wigston | South Wigston | Aylestone",
     description:
-      "Need a taxi in Wigston? Aylestone Kings provides fast 24/7 service, fixed airport fares, and licensed drivers across Wigston and South Wigston. Call 0116 2338888.",
+      "Wigston taxis across Wigston, South Wigston & Long Street: airport transfers, station pickups, 24/7. Book taxis Wigston online or call 0116 2338888.",
   },
   // 5. Evington
   evington: {
@@ -79,9 +79,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 12. Beaumont Leys
   "beaumont-leys": {
-    title: "Taxi in Beaumont Leys Leicester | 24/7 Service | Aylestone Kings",
+    title: "Beaumont Leys Taxi | 24/7 Book Online | Aylestone Kings",
     description:
-      "Fast taxi service in Beaumont Leys, Leicester. Airport transfers, local rides, school runs 24/7. Licensed drivers. Call 0116 2338888 or book online.",
+      "Beaumont Leys taxi: fast pickups, school runs, airport transfers. Beaumont taxi service across LE4 — call 0116 2338888 or book online 24/7.",
   },
   // 13. Braunstone
   braunstone: {
@@ -97,15 +97,15 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 15. Syston
   syston: {
-    title: "Taxis in Syston | Fixed Fares | Book Online 24/7 | Aylestone Kings",
+    title: "Syston Taxis | Call 0116 2338888 | Book Online 24/7",
     description:
-      "Fast taxi service in Syston, Leicestershire. Fixed airport fares, local rides, licensed drivers. Available 24/7. Call 0116 2338888 or book online.",
+      "Syston taxis from Aylestone Kings — syston taxis phone number 0116 2338888. Local & airport fares, licensed drivers. Book Syston taxis online 24/7.",
   },
   // 16. Birstall
   birstall: {
-    title: "Taxis in Birstall | Fixed Fares | Book Online 24/7 | Aylestone Kings",
+    title: "Birstall Taxis Leicester | Local & Airport | Aylestone Kings",
     description:
-      "Reliable 24/7 taxis in Birstall, Leicestershire. Fixed airport fares, local rides, licensed drivers. Call Aylestone Kings on 0116 2338888.",
+      "Birstall taxis Leicester: reliable Birstall taxis for local trips and airports, 24/7. Book Birstall taxis online or call 0116 2338888.",
   },
   // 17. Glenfield
   glenfield: {
@@ -121,15 +121,15 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 19. Narborough
   narborough: {
-    title: "Taxi in Narborough Leicestershire | Airport Transfers & 24/7 | Aylestone Kings",
+    title: "Narborough Taxis | Book 24/7 | Aylestone Kings",
     description:
-      "Fast taxi service in Narborough, Leicestershire. Fixed airport fares, local rides, 24/7 service from Aylestone Kings. Call 0116 2338888.",
+      "Narborough taxis: station & airport runs (EMA, Birmingham), local journeys across Narborough. Book narborough taxis online or call 0116 2338888 — 24/7.",
   },
   // 20. Enderby
   enderby: {
-    title: "Taxi in Enderby Leicestershire | 24/7 Fixed Fares | Aylestone Kings",
+    title: "Enderby Taxi | Meridian & Airport Runs | Aylestone Kings",
     description:
-      "Reliable 24/7 taxi service in Enderby, Leicestershire. Airport transfers, local rides, licensed drivers. Call Aylestone Kings on 0116 2338888.",
+      "Enderby taxi for residents & Meridian Business Park: airport transfers, corporate travel. Book your Enderby taxi on 0116 2338888 — 24/7.",
   },
   // 21. Loughborough
   loughborough: {
@@ -145,21 +145,21 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 23. Coalville
   coalville: {
-    title: "Taxis in Coalville | Fixed Fares | Book Online 24/7 | Aylestone Kings",
+    title: "Taxi Coalville | Coalville Taxis | Airport & Local | Aylestone",
     description:
-      "Reliable taxi service in Coalville, Leicestershire. Airport transfers to EMA & BHX, local rides, 24/7 availability. Call 0116 2338888.",
+      "Taxi Coalville & Coalville taxis: local rides and airport transfers. Getting around Coalville — book online or call 0116 2338888, 24/7.",
   },
   // 24. Melton Mowbray
   "melton-mowbray": {
-    title: "Taxi in Melton Mowbray | Airport Transfers & 24/7 | Aylestone Kings",
+    title: "Melton Taxis & Melton Mowbray Taxi | Airport | Aylestone",
     description:
-      "Reliable taxi service in Melton Mowbray. Airport transfers to EMA, BHX & Heathrow, local rides, 24/7. Call Aylestone Kings on 0116 2338888.",
+      "Melton taxis and Melton Mowbray taxi: call 0116 2338888 for airport & local trips. Melton taxi numbers for Aylestone Kings — book online 24/7.",
   },
   // 25. Market Harborough
   "market-harborough": {
-    title: "Taxi in Market Harborough | Airport Transfers & 24/7 | Aylestone Kings",
+    title: "Market Harborough Airport Taxi | Local & 24/7 | Aylestone Kings",
     description:
-      "Professional taxi service in Market Harborough. Fixed airport fares, local rides, licensed drivers, 24/7 availability. Call 0116 2338888.",
+      "Market Harborough airport taxi to EMA, Birmingham, Heathrow & UK airports. Fixed-fare airport taxis from Market Harborough — call 0116 2338888 or book online.",
   },
   // 26. Rushey Mead
   "rushey-mead": {
@@ -211,9 +211,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 34. Fosse Park
   "fosse-park": {
-    title: "Taxi to Fosse Park Leicester | Shopping & 24/7 | Aylestone Kings",
+    title: "Fosse Park Leicester Taxi | Shopping Pickups | Aylestone",
     description:
-      "Need a taxi to Fosse Park, Leicester? Aylestone Kings provides fast pickups and drop-offs at the retail park. Call 0116 2338888 or book online.",
+      "Fosse Park Leicester taxi: drop-offs & pickups at Fosse Park retail park. Fosse taxi Leicester — skip parking queues, call 0116 2338888 or book online.",
   },
   // 35. Braunstone Town
   "braunstone-town": {
@@ -2383,14 +2383,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     (footerData as any).priorityAreas?.optionalPriority?.some((d: any) => slugFromHref(d.href) === slug)
 
   const customMeta = areaMeta[slug]
-  const title = isDestination
-    ? `🚖 Taxi to ${areaName} from £12 | Aylestone Taxis`
-    : `🚖 Taxis in ${areaName} from £12 | Aylestone Taxis`
+  const title = customMeta
+    ? customMeta.title
+    : isDestination
+      ? `Taxi to ${areaName}, Leicester | Book 24/7 | 0116 2338888`
+      : `Taxi in ${areaName}, Leicester | Fixed Fares | Aylestone Taxis`
   const description = customMeta
     ? customMeta.description
     : isDestination
-    ? `Book taxi to ${areaName} - local taxi service with fixed fares. Fast booking, 24/7 availability, licensed drivers. Book your taxi to ${areaName} online now or call 0116 2338888.`
-    : `Taxi in ${areaName} - local taxi service available 24/7. Book online now for fast pickups, fixed fares, and professional drivers. Affordable taxi in ${areaName} with airport transfers. Call 0116 2338888 or book instantly.`
+      ? `Book a taxi to ${areaName} from anywhere in Leicester. Fixed fares, licensed drivers, instant online booking. Serving ${areaName} 24/7 — call 0116 2338888.`
+      : `Need a taxi in ${areaName}? Aylestone Taxis: fast local pickups, airport transfers, school runs. Book online in seconds or call 0116 2338888 — 24/7.`
   
   const canonicalUrl = `${siteUrl}/taxis-in/${slug}`
   

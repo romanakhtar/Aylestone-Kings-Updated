@@ -4,8 +4,17 @@ import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About Us | Leicester Taxi Service | Aylestone Taxis",
-  description: "Learn about Aylestone Kings - Leicester's trusted taxi company since 1995. Licensed drivers, 24/7 service, and 30+ years of experience serving Leicester and Leicestershire.",
+  title: "About Aylestone Kings Taxi Leicester | Aylestone Road Since 1995",
+  description:
+    "About us at Aylestone, Leicester: Aylestone Kings taxi company since 1995, licensed private hire, DBS-checked drivers. Based on Aylestone Road — book on 0116 2338888 or online.",
+  alternates: {
+    canonical: "https://aylestone-taxis.co.uk/about",
+  },
+  openGraph: {
+    title: "About Aylestone Kings | Aylestone Road Leicester",
+    description: "Leicester's long-established taxi firm: licensed, insured, 24/7. Call 0116 2338888 or book online.",
+    url: "https://aylestone-taxis.co.uk/about",
+  },
 }
 
 export default function AboutPage() {

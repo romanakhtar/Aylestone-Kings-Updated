@@ -4,8 +4,17 @@ import { ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Travel With Us | Leicester Taxi Service | Aylestone Taxis",
-  description: "Travel in comfort with Aylestone Kings throughout Leicester. Airport transfers, train station pickups, university taxis, shopping trips, and match day transport. Book your Leicester taxi ride today.",
+  title: "Travel by Taxi Leicester | Stations, Uni, Match Days | Book",
+  description:
+    "Travel Leicester by taxi: stations, universities, shopping, match days, nights out. Comfortable cars, local drivers, clear fares. Book online or call 0116 2338888 — 24/7.",
+  alternates: {
+    canonical: "https://aylestone-taxis.co.uk/travel",
+  },
+  openGraph: {
+    title: "Travel by Taxi Leicester | Aylestone Kings",
+    description: "Stations, airports, events — book on 0116 2338888 or online.",
+    url: "https://aylestone-taxis.co.uk/travel",
+  },
 }
 
 export default function OurTeamPage() {

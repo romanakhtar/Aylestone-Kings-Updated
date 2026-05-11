@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import HomePageClient from "./HomePageClient"
 
 export const metadata: Metadata = {
-  title: "Aylestone Taxis Leicester | 24/7 Book Online | 0116 2338888",
+  title: "Taxi Leicester | Aylestone Taxis | Book Online 0116 2338888",
   description:
-    "Leicester's trusted taxi service since 1995. Instant online booking, airport transfers, flat fares. Available 24/7. Book your taxi in seconds — no hidden charges",
+    "Taxi Leicester & Leicestershire: Aylestone Taxis (Aylestone Kings) since 1995. Leicester taxi number 0116 2338888 — instant quotes, airport transfers, local trips, flat fares 24/7.",
 }
 
 export default function Home() {

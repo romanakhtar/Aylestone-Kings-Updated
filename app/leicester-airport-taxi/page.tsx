@@ -5,15 +5,17 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Leicester Airport Taxi | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-  description: "Leicester Airport Taxi - Professional airport transfer service from Leicester to all major UK airports. Fixed prices, 24/7 service, licensed drivers. Book your Leicester Airport Taxi now - call 0116 2338888.",
-  keywords: "Leicester Airport Taxi, airport taxi Leicester, Leicester airport transfer, airport taxi from Leicester, Leicester to airport taxi",
+  title: "Leicester Airport Taxi | Airport Taxis & Transfers | 0116 2338888",
+  description:
+    "Leicester airport taxi & Leicester airport taxis: fixed fares to every major UK airport, flight tracking, return & East Midlands Airport to Leicester. See price online — call 0116 2338888, 24/7.",
+  keywords:
+    "Leicester Airport Taxi, Leicester airport taxis, airport taxi Leicester, Leicester airport transfers, Leicester airport transfer, airport taxi from Leicester, Leicester to airport taxi",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/leicester-airport-taxi",
   },
   openGraph: {
-    title: "Leicester Airport Taxi | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-    description: "Leicester Airport Taxi - Professional airport transfer service from Leicester to all major UK airports. Fixed prices, 24/7 service.",
+    title: "Leicester Airport Taxi | Transfers & Airport Taxis",
+    description: "UK-wide airport transfers from Leicester. Book online or call 0116 2338888 — 24/7.",
     url: "https://aylestone-taxis.co.uk/leicester-airport-taxi",
   },
 }

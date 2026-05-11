@@ -5,15 +5,18 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Long-Distance & Corporate Taxi Service | Leicester",
-  description: "Travel longer distances comfortably with Aylestone Taxis. Corporate and long-distance taxi service in Leicester.",
-  keywords: "long distance taxi Leicester, corporate taxi Leicester, business taxi Leicester, intercity taxi Leicester",
+  title: "Long-Distance Taxi Leicester | UK-Wide | Book 0116 2338888",
+  description:
+    "Long-distance and corporate taxi from Leicester: comfortable saloons and MPVs, agreed fares before you travel, professional drivers. Business accounts welcome. Book online or call 0116 2338888.",
+  keywords:
+    "long distance taxi Leicester, long distance taxis, taxi for long distance, corporate taxi Leicester, business taxi Leicester, intercity taxi Leicester",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/long-distance-taxi-leicester",
   },
   openGraph: {
-    title: "Long-Distance & Corporate Taxi Service | Leicester",
-    description: "Travel longer distances comfortably with Aylestone Taxis. Corporate and long-distance taxi service.",
+    title: "Long-Distance Taxi Leicester | UK-Wide | Aylestone Taxis",
+    description:
+      "Corporate and long-distance taxi from Leicester. Agreed fares, 24/7. Book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/long-distance-taxi-leicester",
   },
 }

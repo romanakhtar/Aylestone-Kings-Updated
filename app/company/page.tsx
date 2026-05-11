@@ -4,24 +4,24 @@ import { Shield, Users, Award, Clock, Check, ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Aylestone Kings Taxi Company Leicester | Licensed Since 1995 | 0116 2338888",
+  title: "Aylestone Taxis Leicester | Aylestone Kings Official | Book Online",
   description:
-    "Meet Aylestone Kings — Leicester’s trusted taxi company since 1995. Licensed & insured, DBS-checked drivers, 24/7 service. Call 0116 2338888 or book online.",
+    "Aylestone Taxis and Aylestone Kings: Leicester taxi company since 1995, based on Aylestone Road (LE2). Aylestone cabs for airport & local — book online or call 0116 2338888, 24/7.",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/company",
   },
   openGraph: {
-    title: "Aylestone Kings Taxi Company Leicester | Licensed Since 1995",
+    title: "Aylestone Taxis Leicester | Aylestone Kings",
     description:
-      "Leicester’s trusted taxi company since 1995. Licensed & insured, DBS-checked drivers, 24/7 service. Call 0116 2338888 or book online.",
+      "Official Leicester taxi firm on Aylestone Road. Licensed since 1995. Call 0116 2338888 or book online.",
     url: "https://aylestone-taxis.co.uk/company",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aylestone Kings Taxi Company Leicester | Licensed Since 1995",
+    title: "Aylestone Taxis Leicester | Aylestone Kings",
     description:
-      "Leicester’s trusted taxi company since 1995. Licensed & insured, DBS-checked drivers, 24/7 service. Call 0116 2338888 or book online.",
+      "Leicester taxi company on Aylestone Road since 1995. Call 0116 2338888 or book online.",
   },
 }
 

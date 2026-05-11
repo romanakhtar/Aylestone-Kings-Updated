@@ -6,15 +6,17 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Leicester to East Midlands Airport Taxi | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-  description: "Leicester to East Midlands Airport Taxi - Fixed price transfers from Leicester to EMA. From £40, 24/7 service, licensed drivers. Book your Leicester to East Midlands Airport Taxi now - call 0116 2338888.",
-  keywords: "Leicester to East Midlands Airport Taxi, Leicester to EMA taxi, East Midlands Airport taxi from Leicester, Leicester EMA transfer",
+  title: "Leicester to East Midlands Airport Taxi | EMA From £40 | Return",
+  description:
+    "Taxi from Leicester to East Midlands Airport (EMA) and East Midlands Airport to Leicester. Fixed fares from £40, flight-friendly timing, saloons & MPVs. Taxi to East Midlands Airport from Leicester — book online or call 0116 2338888, 24/7.",
+  keywords:
+    "Leicester to East Midlands Airport Taxi, Leicester to East Midlands Airport, taxi to East Midlands Airport from Leicester, taxi from Leicester to East Midlands Airport, East Midlands Airport to Leicester, Leicester EMA transfer",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/leicester-to-east-midlands-airport-taxi",
   },
   openGraph: {
-    title: "Leicester to East Midlands Airport Taxi | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
-    description: "Leicester to East Midlands Airport Taxi - Fixed price transfers from Leicester to EMA. From £40, 24/7 service.",
+    title: "Leicester to East Midlands Airport Taxi | EMA | Aylestone Taxis",
+    description: "Leicester ↔ EMA fixed-price taxis from £40. Book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/leicester-to-east-midlands-airport-taxi",
   },
 }

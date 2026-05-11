@@ -4,18 +4,18 @@ import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Heathrow Terminal 3 Taxi Transfers | Reliable Taxi to Heathrow T3",
+  title: "Leicester to Heathrow Terminal 3 Taxi | Fixed Fares | Aylestone Taxis",
   description:
-    "Book dependable Heathrow Terminal 3 taxi transfers with punctual drivers, flight tracking, and meet & greet service. 24/7 private taxi to Heathrow T3 across London and beyond.",
+    "Taxi to Heathrow Terminal 3 (T3) from Leicester: private hire with fixed fares, flight tracking, meet & greet option, licensed drivers. Book online or call 0116 2338888 — 24/7.",
   keywords:
-    "Heathrow Terminal 3 taxi, taxi to Heathrow T3, Heathrow airport transfer T3, Heathrow T3 transfer, Heathrow Terminal 3 airport taxi",
+    "Leicester to Heathrow T3 taxi, taxi to Heathrow Terminal 3 from Leicester, LHR Terminal 3 taxi Leicester, Heathrow Terminal 3 taxi Leicester, taxi to Heathrow T3 from Leicester, Heathrow T3 transfer Leicester, Heathrow Terminal 3 airport taxi",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/heathrow-terminal-3-taxi-transfers",
   },
   openGraph: {
-    title: "Heathrow Terminal 3 Taxi Transfers | Reliable Taxi to Heathrow T3",
+    title: "Leicester to Heathrow Terminal 3 Taxi | Fixed Fares | Aylestone Taxis",
     description:
-      "Professional Heathrow Terminal 3 taxi service with flight tracking, punctual drivers and meet & greet support for arrivals and departures.",
+      "Leicester to Heathrow T3 transfers: fixed pricing, flight monitoring, professional drivers. Book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/heathrow-terminal-3-taxi-transfers",
   },
 }

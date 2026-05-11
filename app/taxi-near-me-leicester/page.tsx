@@ -6,15 +6,17 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Taxi Near Me Leicester | Find Taxi Near You | Aylestone Kings",
-  description: "Taxi Near Me Leicester - Find the nearest taxi service in Leicester. Fast pick-ups, 24/7 service, serving all Leicester areas. Book your Taxi Near Me Leicester now - call 0116 2338888.",
-  keywords: "Taxi Near Me Leicester, taxi near me, Leicester taxi near me, find taxi Leicester, nearest taxi Leicester",
+  title: "Taxi Near Me Leicester | Taxis Near Me | Book in Seconds",
+  description:
+    "Taxi near me & taxis near me in Leicester and Leicestershire: fast dispatch, saloons and 6-seaters, see your fare before you book. Taxi near me Leicester — call 0116 2338888 or book online 24/7.",
+  keywords:
+    "taxi near me, taxis near me, Taxi Near Me Leicester, taxi near me leicester, Leicester taxi near me, find taxi Leicester, nearest taxi Leicester, 6 seater taxi near me",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/taxi-near-me-leicester",
   },
   openGraph: {
-    title: "Taxi Near Me Leicester | Find Taxi Near You | Aylestone Kings",
-    description: "Taxi Near Me Leicester - Find the nearest taxi service in Leicester. Fast pick-ups, 24/7 service.",
+    title: "Taxi Near Me Leicester | Taxis Near Me | Aylestone Taxis",
+    description: "Taxi near me Leicester: instant quotes, 6-seaters available, 24/7. Call 0116 2338888 or book online.",
     url: "https://aylestone-taxis.co.uk/taxi-near-me-leicester",
   },
 }

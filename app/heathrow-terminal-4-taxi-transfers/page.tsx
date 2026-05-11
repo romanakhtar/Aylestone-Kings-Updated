@@ -4,18 +4,18 @@ import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Heathrow Terminal 4 Taxi Transfers | Reliable Taxi to Heathrow T4",
+  title: "Leicester to Heathrow Terminal 4 Taxi | Fixed Fares | Aylestone Taxis",
   description:
-    "Book dependable Heathrow Terminal 4 taxi transfers with punctual drivers, flight tracking, and meet & greet service. 24/7 private taxi to Heathrow T4 across London and beyond.",
+    "Private taxi from Leicester to Heathrow Terminal 4 (T4). Fixed fares, flight tracking, meet & greet option, licensed drivers. Book online or call 0116 2338888 — 24/7.",
   keywords:
-    "Heathrow Terminal 4 taxi, taxi to Heathrow T4, Heathrow airport transfer T4, Heathrow T4 transfer, Heathrow Terminal 4 airport taxi",
+    "Leicester to Heathrow T4 taxi, Heathrow Terminal 4 taxi Leicester, taxi to Heathrow T4 from Leicester, Heathrow T4 transfer Leicester, Heathrow Terminal 4 airport taxi",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/heathrow-terminal-4-taxi-transfers",
   },
   openGraph: {
-    title: "Heathrow Terminal 4 Taxi Transfers | Reliable Taxi to Heathrow T4",
+    title: "Leicester to Heathrow Terminal 4 Taxi | Fixed Fares | Aylestone Taxis",
     description:
-      "Professional Heathrow Terminal 4 taxi service with flight tracking, punctual drivers and meet & greet support for arrivals and departures.",
+      "Leicester to Heathrow T4 transfers: fixed pricing, flight monitoring, professional drivers. Book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/heathrow-terminal-4-taxi-transfers",
   },
 }

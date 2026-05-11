@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     "Harwich cruise transfer",
   ],
   alternates: {
-    canonical: "https://www.aylestone-taxis.co.uk/seaport-transfers-uk",
+    canonical: "https://aylestone-taxis.co.uk/seaport-transfers-uk",
   },
   openGraph: {
     title:
       "Seaport Taxi Transfer UK | Cruise Port Taxi | Aylestone Kings Leicester",
     description:
       "Pre-booked cruise port transfers from Leicester and the Midlands. Southampton port taxis, Dover, Portsmouth, Harwich — luggage-friendly vehicles, agreed fares.",
-    url: "https://www.aylestone-taxis.co.uk/seaport-transfers-uk",
+    url: "https://aylestone-taxis.co.uk/seaport-transfers-uk",
   },
 }
 
