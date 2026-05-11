@@ -6,15 +6,15 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Taxi Leicester | Book Online in Seconds | 0116 2338888",
+  title: "Taxi Leicester | Leicester Taxis | Book 0116 2338888",
   description:
-    "Taxi Leicester since 1995: licensed drivers, instant online booking, airport & local trips, clear fares. See your price before you confirm — call 0116 2338888 or book 24/7.",
-  keywords: "Taxi Leicester, taxi in Leicester, Leicester taxi service, taxi company Leicester, Leicester taxis, taxi Leicester city centre",
+    "Taxi Leicester, taxis in Leicester & Leicester city centre: licensed drivers, instant online quotes, airport and local trips. Taxi in Leicester 24/7 — call 0116 2338888 or book online.",
+  keywords: "Taxi Leicester, taxi in Leicester, Leicester taxis, taxis in Leicester, Leicester taxi service, taxi company Leicester, taxi Leicester city centre",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/taxi-leicester",
   },
   openGraph: {
-    title: "Taxi Leicester | Book Online in Seconds | Aylestone Kings",
+    title: "Taxi Leicester | Leicester Taxis | Aylestone Kings",
     description:
       "Trusted Leicester taxis since 1995. Licensed drivers, fast pick-ups, book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/taxi-leicester",

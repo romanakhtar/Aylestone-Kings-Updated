@@ -6,9 +6,9 @@ import FAQSchema from "@/components/seo/FAQSchema"
 export const metadata: Metadata = {
   title: "Leicester to Heathrow Terminal 3 Taxi | Fixed Fares | Aylestone Taxis",
   description:
-    "Private taxi from Leicester to Heathrow Terminal 3 (T3). Fixed fares, flight tracking, meet & greet option, licensed drivers. Book online or call 0116 2338888 — 24/7.",
+    "Taxi to Heathrow Terminal 3 (T3) from Leicester: private hire with fixed fares, flight tracking, meet & greet option, licensed drivers. Book online or call 0116 2338888 — 24/7.",
   keywords:
-    "Leicester to Heathrow T3 taxi, Heathrow Terminal 3 taxi Leicester, taxi to Heathrow T3 from Leicester, Heathrow T3 transfer Leicester, Heathrow Terminal 3 airport taxi",
+    "Leicester to Heathrow T3 taxi, taxi to Heathrow Terminal 3 from Leicester, LHR Terminal 3 taxi Leicester, Heathrow Terminal 3 taxi Leicester, taxi to Heathrow T3 from Leicester, Heathrow T3 transfer Leicester, Heathrow Terminal 3 airport taxi",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/heathrow-terminal-3-taxi-transfers",
   },

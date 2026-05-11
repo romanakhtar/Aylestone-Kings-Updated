@@ -16,20 +16,18 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title:
-    "Airport Transfers Leicester | Fixed Fares, 24/7 | Book Online | Aylestone Taxis",
+  title: "Airport Transfers Leicester | Airport Taxi Leicester | Aylestone",
   description:
-    "Book fixed-fare airport transfers from Leicester with 24/7 service, flight monitoring, and licensed drivers. Fast online booking or call 0116 2338888.",
+    "Airport transfers Leicester & airport taxi Leicester: fixed fares to EMA, Birmingham, Heathrow, Gatwick, Stansted, Luton & Manchester. Airport taxis Leicester with flight monitoring. Book online or call 0116 2338888 — 24/7.",
   keywords:
-    "airport taxi Leicester, Leicester airport transfers, airport taxi service Leicester, East Midlands airport taxi, Heathrow taxi Leicester, Gatwick taxi Leicester",
+    "airport transfers Leicester, airport taxi Leicester, airport taxis Leicester, Leicester airport transfers, airport taxi service Leicester, East Midlands airport taxi, Heathrow taxi Leicester, Gatwick taxi Leicester",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/airport-transfers-leicester",
   },
   openGraph: {
-    title:
-      "Leicester Airport Taxi Service | Fixed Prices, 24/7 Service | Book Instantly | Aylestone Taxis",
+    title: "Airport Transfers & Airport Taxi Leicester | Aylestone Taxis",
     description:
-      "Book a taxi from Leicester to the airport. Reliable 24/7 airport transfers with Aylestone Taxis.",
+      "Fixed-fare airport transfers and airport taxis from Leicester. EMA, BHX, Heathrow, Gatwick & more. Call 0116 2338888 or book online.",
     url: "https://aylestone-taxis.co.uk/airport-transfers-leicester",
   },
 }

@@ -6,19 +6,19 @@ import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
   title:
-    "Corporate Taxi Accounts Leicester | Business Taxi Accounts & Centralised Billing | Aylestone Kings",
+    "Corporate Taxi Services Leicester | Business Accounts | Aylestone Kings",
   description:
-    "Corporate taxi accounts Leicester with simple booking and centralised billing. Aylestone Taxis provides reliable business taxi accounts for staff transport, client pickups and airport transfers with a single monthly invoice.",
+    "Corporate taxi services Leicester: business accounts, centralised billing, staff & client travel, airport runs. Corporate taxi accounts with one monthly invoice — call 0116 2338888 or book online.",
   keywords:
-    "corporate taxi accounts Leicester, corporate taxi account Leicester, business taxi account Leicester, taxi account Leicester, corporate taxi Leicester, centralised taxi billing Leicester, executive taxi Leicester, Meridian Business Park taxi account",
+    "corporate taxi services Leicester, corporate taxi accounts Leicester, corporate taxi account Leicester, business taxi account Leicester, taxi account Leicester, corporate taxi Leicester, centralised taxi billing Leicester, executive taxi Leicester, Meridian Business Park taxi account",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/corporate-taxi-account-leicester",
   },
   openGraph: {
     title:
-      "Corporate Taxi Accounts Leicester | Business Taxi Accounts & Centralised Billing",
+      "Corporate Taxi Services Leicester | Aylestone Kings",
     description:
-      "Corporate taxi accounts in Leicester with simple booking, centralised billing and a single monthly invoice. Ideal for staff transport, client pickups and airport transfers across Leicester including Meridian Business Park.",
+      "Corporate taxi services Leicester: business accounts, centralised billing, staff & airport travel. Call 0116 2338888 or book online.",
     url: "https://aylestone-taxis.co.uk/corporate-taxi-account-leicester",
   },
 }

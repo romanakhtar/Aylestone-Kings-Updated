@@ -5,14 +5,15 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Leicester Taxi Company | Professional Taxi Service Leicester | Aylestone Kings",
-  description: "Leicester Taxi Company - Aylestone Kings is Leicester's trusted taxi company since 1995. Professional service, licensed drivers, 24/7 availability. Book with Leicester's leading taxi company - call 0116 2338888.",
-  keywords: "Leicester Taxi Company, taxi company Leicester, Leicester taxi firm, professional taxi company Leicester, best taxi company Leicester",
+  title: "Leicester Taxi Company & Taxi Firm | Aylestone | 0116 2338888",
+  description:
+    "Leicester taxi company & taxi firm: Aylestone Kings since 1995 — taxi service Leicester, Leicester taxi numbers 0116 2338888, licensed drivers, airport & local. Book online 24/7.",
+  keywords: "Leicester Taxi Company, taxi company Leicester, taxi firm Leicester, Leicester taxi firm, taxi service Leicester, Leicester taxi numbers, professional taxi company Leicester",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/leicester-taxi-company",
   },
   openGraph: {
-    title: "Leicester Taxi Company | Professional Taxi Service Leicester | Aylestone Kings",
+    title: "Leicester Taxi Company | Aylestone Kings",
     description: "Leicester Taxi Company - Aylestone Kings is Leicester's trusted taxi company since 1995. Professional service, licensed drivers.",
     url: "https://aylestone-taxis.co.uk/leicester-taxi-company",
   },

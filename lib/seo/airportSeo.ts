@@ -16,14 +16,14 @@ export function buildAirportMetadata({
   fromPrice,
 }: AirportSeoConfig): Metadata {
   const route = `/pricing/airports/${slug}`
-  const title = `Leicester to ${airportName} Taxi | Fixed Fare from ${fromPrice} | 24/7`
+  const title = `Leicester to ${airportName} Airport Taxi | From ${fromPrice} | Book 24/7`
   const description = `Book a Leicester to ${airportName} Airport taxi (${airportCode}) from ${fromPrice}. Fixed fares, licensed drivers, flight tracking, door-to-door across Leicestershire. See your price online or call 0116 2338888 — 24/7.`
 
   return {
     title,
     description,
     keywords: [
-      `Leicester to ${airportName} taxi`,
+      `Leicester to ${airportName} Airport taxi`,
       `${airportName} airport transfer Leicester`,
       `${airportCode} taxi Leicester`,
       `${airportName} fixed fare taxi`,

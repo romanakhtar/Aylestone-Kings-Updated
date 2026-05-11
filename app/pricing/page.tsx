@@ -8,7 +8,7 @@ import FAQSchema from "@/components/seo/FAQSchema"
 export const metadata: Metadata = {
   title: "Leicester Airport Taxi Prices | Fixed Fares | All UK Airports",
   description:
-    "See airport taxi prices from Leicester: fixed fares to EMA, Birmingham, Heathrow, Gatwick, Luton, Stansted, Manchester. Quote online in seconds or call 0116 2338888 — 24/7.",
+    "Airport taxi prices Leicester: fixed fares from Leicester to EMA, Birmingham, Heathrow, Gatwick, Luton, Stansted, Manchester. See airport taxi prices online or call 0116 2338888 — 24/7.",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/pricing",
   },

@@ -16,15 +16,15 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Cheap Taxi Leicester | Clear Fares, No Surprises | 24/7",
+  title: "Cheap Taxi Leicester | Low Fare Quotes Online | 24/7",
   description:
-    "Affordable taxi Leicester: competitive prices, no hidden fees, quote before you book. 24/7 saloons and MPVs. Aylestone Kings — book online or call 0116 2338888.",
-  keywords: "Cheap Taxi Leicester, cheap taxi in Leicester, 24 hour taxi Leicester, affordable taxi Leicester, budget taxi Leicester, low cost taxi Leicester, cheap taxi service Leicester, 24 hour cheap taxi Leicester",
+    "Cheap taxi Leicester: see your fare online before you book — competitive rates for local runs, EMA and UK airports. Transparent cheap taxi Leicester pricing, no hidden charges. Call 0116 2338888 — Aylestone Taxis 24/7.",
+  keywords: "Cheap Taxi Leicester, cheapest taxi Leicester, cheap taxi in Leicester, cheapest taxi in Leicester, 24 hour taxi Leicester, affordable taxi Leicester, budget taxi Leicester, low cost taxi Leicester, cheap taxi to East Midlands Airport",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/cheap-taxi-leicester",
   },
   openGraph: {
-    title: "Cheap Taxi Leicester | Clear Fares | Aylestone Kings",
+    title: "Cheap Taxi Leicester | Online Quotes | Aylestone Kings",
     description:
       "Affordable Leicester taxis with transparent pricing. Book online or call 0116 2338888 — 24/7.",
     url: "https://aylestone-taxis.co.uk/cheap-taxi-leicester",

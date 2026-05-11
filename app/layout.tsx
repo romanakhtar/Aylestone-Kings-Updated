@@ -44,15 +44,16 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aylestone-taxis.co.uk"),
-  title: "Aylestone Taxis Leicester | 24/7 Book Online | 0116 2338888",
+  title: "Taxi Leicester | Aylestone Taxis | Book Online 0116 2338888",
   description:
-    "Leicester taxi since 1995: instant online booking, fixed airport fares, licensed drivers. See your price before you confirm — call 0116 2338888 or book 24/7.",
-  keywords: "Taxi Leicester, Taxi Near Me Leicester, Leicester Airport Taxi, Leicester to East Midlands Airport Taxi, Leicester Taxi Company, Cheap Taxi Leicester, 24 Hour Taxi Leicester, taxi in Leicester, Leicester taxi service, airport taxi Leicester, taxi company Leicester, Aylestone Taxis",
+    "Taxi Leicester & Leicestershire: Aylestone Taxis (Aylestone Kings) since 1995. Leicester taxis — instant quotes, airport transfers, local trips. Call 0116 2338888 or book 24/7.",
+  keywords: "Taxi Leicester, Leicester taxis, Aylestone Taxis, taxi near me Leicester, Taxi Near Me Leicester, Leicester Airport Taxi, Leicester to East Midlands Airport Taxi, Leicester Taxi Company, Cheap Taxi Leicester, 24 Hour Taxi Leicester, taxi in Leicester, Leicester taxi service, airport taxi Leicester, airport transfers Leicester, taxi company Leicester",
   generator: "Aylestone Kings",
   authors: [{ name: "Aylestone Kings" }],
   openGraph: {
-    title: "Taxi Leicester | Leicester Airport Taxi | Aylestone Kings",
-    description: "Leicester's trusted taxi service since 1995. Taxi Leicester, Leicester Airport Taxi, and cheap taxi services. 24/7 service, licensed drivers, fixed-price transfers.",
+    title: "Taxi Leicester | Aylestone Taxis | Aylestone Kings",
+    description:
+      "Leicester taxis & airport transfers since 1995. Taxi Leicester, taxi near me — book online or call 0116 2338888. Licensed drivers, fixed fares.",
     url: "https://aylestone-taxis.co.uk",
     siteName: "Aylestone Kings",
     locale: "en_GB",
@@ -68,8 +69,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Taxi Leicester | Leicester Airport Taxi | Aylestone Kings",
-    description: "Leicester's trusted taxi service since 1995. Taxi Leicester, Leicester Airport Taxi, and cheap taxi services.",
+    title: "Taxi Leicester | Aylestone Taxis | Aylestone Kings",
+    description:
+      "Leicester taxis & airport transfers. Book online or call 0116 2338888 — 24/7.",
     images: ["https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png"],
   },
   alternates: {

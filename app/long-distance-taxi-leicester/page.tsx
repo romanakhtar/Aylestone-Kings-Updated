@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   title: "Long-Distance Taxi Leicester | UK-Wide | Book 0116 2338888",
   description:
     "Long-distance and corporate taxi from Leicester: comfortable saloons and MPVs, agreed fares before you travel, professional drivers. Business accounts welcome. Book online or call 0116 2338888.",
-  keywords: "long distance taxi Leicester, corporate taxi Leicester, business taxi Leicester, intercity taxi Leicester",
+  keywords:
+    "long distance taxi Leicester, long distance taxis, taxi for long distance, corporate taxi Leicester, business taxi Leicester, intercity taxi Leicester",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/long-distance-taxi-leicester",
   },
