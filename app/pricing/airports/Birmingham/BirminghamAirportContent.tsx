@@ -1,24 +1,28 @@
-import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
+import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
-import AirportRouteGuide from "@/components/seo/AirportRouteGuide"
+import FAQSchema from "@/components/seo/FAQSchema"
+import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
+import { birminghamLeicesterFacts, type AirportFaqItem } from "@/lib/seo/airportLeicesterFacts"
 
-export default function BirminghamAirportContent() {
+export default function BirminghamAirportContent({ faqs }: { faqs: AirportFaqItem[] }) {
   return (
     <div className="min-h-screen bg-white">
+      <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
-                Birmingham Airport
+                Birmingham Airport (BHX)
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Reliable transfers to Birmingham Airport
+                Taxi to Birmingham Airport from Leicester — T1 & T2 zones, one terminal
               </h1>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-                Professional taxi service from Leicester and surrounding areas to Birmingham Airport. Best rates, reliable service,
-                and comfortable vehicles for your journey.
+                About 38–42 miles and typically 55 minutes to 1 hour 15 minutes from Leicester city centre via the M69,
+                M6, and M42. We drop at the departures forecourt for your airline&apos;s check-in zone (BHX uses one linked
+                building with signed Terminal 1 and Terminal 2 areas). Fixed fares from £60 for a standard saloon.
               </p>
 
               {/* Book Now Button */}
@@ -39,13 +43,8 @@ export default function BirminghamAirportContent() {
           </div>
         </section>
 
-        <AirportRouteGuide
-          airportName="Birmingham"
-          airportCode="BHX"
-          fromPrice="£60"
-          typicalTime="around 55 minutes to 1 hour 25 minutes"
-          slug="Birmingham"
-        />
+        <AirportLeicesterGuide facts={birminghamLeicesterFacts} />
+        <AirportPricingFaqSection airportName="Birmingham" airportCode="BHX" faqs={faqs} />
 
         {/* Pricing Section */}
         <section className="py-20 bg-white">
@@ -193,7 +192,7 @@ export default function BirminghamAirportContent() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Pickup</h3>
                 <p className="text-gray-600 text-center">
-                  Your driver will arrive before your scheduled pickup time. We'll send you driver details and vehicle information.
+                  Your driver will arrive before your scheduled pickup time. We&apos;ll send you driver details and vehicle information.
                 </p>
               </div>
 
@@ -203,8 +202,8 @@ export default function BirminghamAirportContent() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Journey</h3>
                 <p className="text-gray-600 text-center">
-                  Relax in comfort as we take you directly to Birmingham Airport terminal. We monitor traffic and adjust routes for
-                  optimal timing.
+                  Relax in comfort as we take you directly to Birmingham Airport. We monitor traffic and adjust routes for optimal
+                  timing.
                 </p>
               </div>
 
@@ -214,7 +213,8 @@ export default function BirminghamAirportContent() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Arrival</h3>
                 <p className="text-gray-600 text-center">
-                  Drop-off at the terminal entrance with plenty of time for check-in. Your driver will assist with luggage if needed.
+                  Drop-off at the departures forecourt for your airline zone with plenty of time for check-in. Your driver will assist
+                  with luggage if needed.
                 </p>
               </div>
 
@@ -224,7 +224,8 @@ export default function BirminghamAirportContent() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Return Journey</h3>
                 <p className="text-gray-600 text-center">
-                  For return journeys, your driver will meet you at the designated pickup point. Flight tracking ensures timely pickup.
+                  For return journeys, your driver will meet you at the agreed BHX pickup point. Flight tracking helps time collection
+                  after baggage reclaim.
                 </p>
               </div>
 
@@ -265,4 +266,3 @@ export default function BirminghamAirportContent() {
     </div>
   )
 }
-

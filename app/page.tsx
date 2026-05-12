@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import HomePageClient from "./HomePageClient"
+import JsonLd from "@/components/seo/JsonLd"
+import { getLocalBusinessJsonLd } from "@/lib/seo/siteJsonLd"
 
 export const metadata: Metadata = {
   title: "Taxi Leicester | Aylestone Taxis | Book Online 0116 2338888",
@@ -8,5 +10,10 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  return <HomePageClient />
+  return (
+    <>
+      <JsonLd data={getLocalBusinessJsonLd()} />
+      <HomePageClient />
+    </>
+  )
 }

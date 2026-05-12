@@ -1,23 +1,54 @@
-import Image from "next/image"
-import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
+import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
-import AirportRouteGuide from "@/components/seo/AirportRouteGuide"
-import { buildAirportFaqs, buildAirportMetadata } from "@/lib/seo/airportSeo"
+import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
+import { buildAirportMetadata } from "@/lib/seo/airportSeo"
+import { eastMidlandsLeicesterFacts, eastMidlandsPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
+import JsonLd from "@/components/seo/JsonLd"
+import { getTaxiServiceJsonLd } from "@/lib/seo/siteJsonLd"
 
 export const metadata = buildAirportMetadata({
   airportName: "East Midlands",
   airportCode: "EMA",
   slug: "East-Midlands",
   fromPrice: "£40",
+  title: "EMA taxi Leicester | Closest airport | From £40 | Aylestone",
+  description:
+    "Leicester to East Midlands Airport (EMA): ~22 mi, 35–45 min, forecourt drop-off. Fixed fares from £40. Beat week-long parking costs — get a quote or call 0116 2338888 24/7.",
 })
 
-const faqs = buildAirportFaqs({ airportName: "East Midlands", fromPrice: "£40" })
+const faqs = eastMidlandsPricingFaqs
+
+const EMA_PRICING_URL = "https://aylestone-taxis.co.uk/pricing/airports/East-Midlands"
 
 export default function EastMidlandsPage() {
+  const serviceJsonLd = getTaxiServiceJsonLd({
+    name: "Leicester to East Midlands Airport (EMA) taxi",
+    description:
+      "Pre-booked fixed-fare taxi transfers from Leicester and Leicestershire to East Midlands Airport (EMA), Castle Donington. " +
+      "Roughly 22–24 miles and 35–45 minutes via A46/M1; departures forecourt drop-off; saloon and MPV pricing.",
+    url: EMA_PRICING_URL,
+    serviceType: "Airport taxi transfer",
+    offers: [
+      {
+        price: "40",
+        name: "Standard saloon (1–4 passengers)",
+        description: "Leicester city centre to East Midlands Airport (EMA) — from £40",
+        url: EMA_PRICING_URL,
+      },
+      {
+        price: "60",
+        name: "MPV / minibus (6–8 passengers)",
+        description: "Leicester city centre to East Midlands Airport (EMA) — from £60",
+        url: EMA_PRICING_URL,
+      },
+    ],
+  })
+
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd data={serviceJsonLd} />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
@@ -28,11 +59,12 @@ export default function EastMidlandsPage() {
                 East Midlands Airport
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Reliable transfers to East Midlands Airport
+                Leicester to East Midlands Airport taxi — closest airport, fixed fares
               </h1>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-                Professional taxi service to East Midlands Airport. 
-                Best rates, reliable service, and comfortable vehicles for your journey.
+                Roughly 22–24 miles and 35–45 minutes from Leicester city centre via the A46 and M1. We drop at the EMA
+                departures forecourt, cover dawn Ryanair and Jet2 waves, and quote returns so you can compare against
+                official parking.
               </p>
 
               {/* Book Now Button */}
@@ -53,13 +85,8 @@ export default function EastMidlandsPage() {
           </div>
         </section>
 
-        <AirportRouteGuide
-          airportName="East Midlands"
-          airportCode="EMA"
-          fromPrice="£40"
-          typicalTime="around 35 to 60 minutes"
-          slug="East-Midlands"
-        />
+        <AirportLeicesterGuide facts={eastMidlandsLeicesterFacts} />
+        <AirportPricingFaqSection airportName="East Midlands" airportCode="EMA" faqs={faqs} />
 
         {/* Pricing Section */}
         <section className="py-20 bg-white">

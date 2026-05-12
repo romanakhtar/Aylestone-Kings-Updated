@@ -1,17 +1,21 @@
-import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
+import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
-import AirportRouteGuide from "@/components/seo/AirportRouteGuide"
-import { buildAirportFaqs, buildAirportMetadata } from "@/lib/seo/airportSeo"
+import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
+import { buildAirportMetadata } from "@/lib/seo/airportSeo"
+import { heathrowLeicesterFacts, heathrowPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
 
 export const metadata = buildAirportMetadata({
   airportName: "Heathrow",
   airportCode: "LHR",
   slug: "Heathrow",
   fromPrice: "£150",
+  title: "Heathrow taxi Leicester | ~115 mi | From £150 | Aylestone",
+  description:
+    "Leicester to Heathrow (LHR): ~105–115 miles, typically 1h45–2h30 via M1/M25. Drop-off at T2, T3, T4, or T5. Fixed fares from £150. Compare parking + fuel — book or call 0116 2338888 24/7.",
 })
 
-const faqs = buildAirportFaqs({ airportName: "Heathrow", fromPrice: "£150" })
+const faqs = heathrowPricingFaqs
 
 export default function HeathrowPage() {
   return (
@@ -26,11 +30,12 @@ export default function HeathrowPage() {
                 Heathrow Airport
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Reliable transfers to Heathrow Airport
+                Leicester to Heathrow Airport taxi — M1 & M25, all terminals
               </h1>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-                Professional taxi service from Leicester and surrounding areas to Heathrow Airport. 
-                Best rates, reliable service, and comfortable vehicles for your journey.
+                Approximately 1 hour 45 minutes to 2 hours 30 minutes from Leicester city centre in good traffic (~115
+                miles), with forecourt drop-off at Terminal 2, 3, 4, or 5. Fixed fares from £150 for long-haul and USA
+                connections without parking stress.
               </p>
 
               {/* Book Now Button */}
@@ -51,13 +56,8 @@ export default function HeathrowPage() {
           </div>
         </section>
 
-        <AirportRouteGuide
-          airportName="Heathrow"
-          airportCode="LHR"
-          fromPrice="£150"
-          typicalTime="around 2h 15m to 3h 15m"
-          slug="Heathrow"
-        />
+        <AirportLeicesterGuide facts={heathrowLeicesterFacts} />
+        <AirportPricingFaqSection airportName="Heathrow" airportCode="LHR" faqs={faqs} />
 
         {/* Pricing Section */}
         <section className="py-20 bg-white">

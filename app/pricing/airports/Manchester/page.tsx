@@ -1,17 +1,21 @@
-import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
+import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
-import AirportRouteGuide from "@/components/seo/AirportRouteGuide"
-import { buildAirportFaqs, buildAirportMetadata } from "@/lib/seo/airportSeo"
+import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
+import { buildAirportMetadata } from "@/lib/seo/airportSeo"
+import { manchesterLeicesterFacts, manchesterPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
 
 export const metadata = buildAirportMetadata({
   airportName: "Manchester",
   airportCode: "MAN",
   slug: "Manchester",
   fromPrice: "£150",
+  title: "Manchester Airport taxi Leicester | From £150 | T1–T3 | Aylestone",
+  description:
+    "Leicester to Manchester Airport (MAN): ~90–100 mi, ~2h–2h45 via M69/M6. Drop-off at T1, T2, or T3. Emirates, Qatar, USA routes. Fixed from £150 — book or call 0116 2338888 24/7.",
 })
 
-const faqs = buildAirportFaqs({ airportName: "Manchester", fromPrice: "£150" })
+const faqs = manchesterPricingFaqs
 
 export default function ManchesterPage() {
   return (
@@ -26,11 +30,12 @@ export default function ManchesterPage() {
                 Manchester Airport
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Reliable transfers to Manchester Airport
+                Leicester to Manchester Airport taxi — T1, T2, and T3 drop-offs
               </h1>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-                Professional taxi service from Leicester and surrounding areas to Manchester Airport. 
-                Best rates, reliable service, and comfortable vehicles for your journey.
+                Around 90–100 miles and typically 2 hours to 2 hours 45 minutes from Leicester via the M69 and M6. We
+                serve Emirates, Qatar Airways, Virgin Atlantic, and holiday carriers with fixed fares from £150 and
+                flight-tracked returns.
               </p>
 
               {/* Book Now Button */}
@@ -51,13 +56,8 @@ export default function ManchesterPage() {
           </div>
         </section>
 
-        <AirportRouteGuide
-          airportName="Manchester"
-          airportCode="MAN"
-          fromPrice="£150"
-          typicalTime="around 2h to 3h"
-          slug="Manchester"
-        />
+        <AirportLeicesterGuide facts={manchesterLeicesterFacts} />
+        <AirportPricingFaqSection airportName="Manchester" airportCode="MAN" faqs={faqs} />
 
         {/* Pricing Section */}
         <section className="py-20 bg-white">

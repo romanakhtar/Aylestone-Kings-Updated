@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Check, ArrowRight, Star, MapPin, Clock, Shield, ShieldCheck, BadgeCheck, Users, ChevronLeft, ChevronRight, Car, Plane } from "@/lib/icons"
+import { Briefcase } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
@@ -601,7 +602,7 @@ export default function HomePageClient() {
             <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">Professional taxi services for all your transportation needs</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Link href="/airport-transfers-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30 transition-colors">
                 <Plane className="h-8 w-8 text-[#06A0A6]" />
@@ -639,10 +640,26 @@ export default function HomePageClient() {
                 <Car className="h-8 w-8 text-[#06A0A6]" />
               </div>
               <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6] transition-colors">
-                Long-Distance & Corporate Taxi Service
+                Long-distance taxi
               </h3>
               <p className="text-[#2E3C44] mb-6">
-                Comfortable long-distance travel and corporate accounts. Professional transport for business and longer journeys.
+                UK-wide journeys with guide prices and fixed agreed fares. Comfortable saloons and MPVs for longer trips.
+              </p>
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-all">
+                Learn More
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link href="/corporate-taxi-account-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30 transition-colors">
+                <Briefcase className="h-8 w-8 text-[#06A0A6]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6] transition-colors">
+                Corporate taxi accounts
+              </h3>
+              <p className="text-[#2E3C44] mb-6">
+                Business travel and staff transport with monthly invoicing, account setup, and dedicated support.
               </p>
               <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-all">
                 Learn More
