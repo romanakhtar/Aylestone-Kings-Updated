@@ -1062,7 +1062,7 @@ export const siteData = {
 
           <p>Ready to price your journey? Compare guidance on <a href="/pricing/airports/Heathrow">Heathrow pricing</a>, then read wider transfer options on <a href="/airport-transfers-leicester">airport transfers Leicester</a>. When you are set, book online or call <strong>0116 2338888</strong> and we will confirm your <strong>Leicester to Heathrow taxi</strong> with a clear pickup time and fixed fare.</p>
         `,
-        date: "2026-05-28",
+        date: "2026-05-01",
         author: "Aylestone Kings Team",
         category: "Airport Transfers",
         image: "/Reliable-airport-transfers.jpg",
@@ -1103,7 +1103,7 @@ export const siteData = {
           <h2>Final takeaway</h2>
           <p>Choosing the <strong>best taxi Leicester</strong> option is less about a single headline price and more about trust: licensing, clarity, communication, and consistent vehicles. Use the checklist above, read our <a href="/company">company</a> background, then explore <a href="/services">services</a> to see how we can cover your next journey.</p>
         `,
-        date: "2026-05-20",
+        date: "2026-05-07",
         author: "Aylestone Kings Team",
         category: "Local Guide",
         image: "/Locals-trust.jpg",
@@ -1150,7 +1150,7 @@ export const siteData = {
 
           <p>Whether you are flying for work or heading on holiday, a well-planned <strong>Leicester to Birmingham airport taxi</strong> is the simplest way to start the trip. Use the resources above, confirm your quote, and travel knowing the basics are already handled.</p>
         `,
-        date: "2026-05-07",
+        date: "2026-04-24",
         author: "Aylestone Kings Team",
         category: "Airport Transfers",
         image: "/EMA Blog.webp",
@@ -1200,7 +1200,7 @@ export const siteData = {
           <h2>Quick recap</h2>
           <p>Use this guide as a framework, then lock in your numbers on <a href="/pricing">pricing</a> and read how we apply them across services on <a href="/local-taxi-leicester">local taxi Leicester</a>. When you are ready, book online or call <strong>0116 2338888</strong> for a confirmed quote tailored to your exact pickup.</p>
         `,
-        date: "2026-05-14",
+        date: "2026-04-29",
         author: "Aylestone Kings Team",
         category: "Fare Guide",
         image: "/Taxi-cost-in-Leicester-Blog.webp",
