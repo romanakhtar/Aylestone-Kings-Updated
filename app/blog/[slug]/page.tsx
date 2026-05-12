@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Calendar, User, ArrowLeft, ArrowRight, BookOpen } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import { notFound } from "next/navigation"
+import BlogPostingJsonLd from "@/components/seo/BlogPostingJsonLd"
 
 export async function generateStaticParams() {
   return siteData.blogPage.blogs.map((blog) => ({
@@ -36,6 +37,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: canonicalUrl,
       type: "article",
       siteName: "Aylestone Kings",
+      publishedTime: blog.date.length === 10 ? `${blog.date}T12:00:00+01:00` : blog.date,
+      modifiedTime: blog.date.length === 10 ? `${blog.date}T12:00:00+01:00` : blog.date,
       images: blog.image ? [{ url: `https://aylestone-taxis.co.uk${blog.image}` }] : undefined,
     },
     twitter: {
@@ -63,8 +66,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     ? siteData.blogPage.blogs[currentIndex - 1] 
     : null
 
+  const canonicalUrl = `https://aylestone-taxis.co.uk/blog/${blog.id}`
+  const imageAbsolute = blog.image ? `https://aylestone-taxis.co.uk${blog.image}` : undefined
+
   return (
     <div className="min-h-screen bg-white">
+      <BlogPostingJsonLd
+        headline={blog.title}
+        description={blog.excerpt}
+        url={canonicalUrl}
+        datePublished={blog.date}
+        imageUrl={imageAbsolute}
+        authorName={blog.author}
+      />
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-[#0F0D3E] via-[#2E3C44] to-[#06A0A6]/20 overflow-hidden">
         <div className="absolute inset-0 z-0">

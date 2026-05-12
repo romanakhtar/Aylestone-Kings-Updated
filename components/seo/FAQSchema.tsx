@@ -1,3 +1,5 @@
+import JsonLd from "@/components/seo/JsonLd"
+
 type FAQItem = {
   question: string
   answer: string
@@ -33,11 +35,6 @@ export default function FAQSchema({ faqs }: { faqs: FAQItem[] }) {
     })),
   }
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-    />
-  )
+  return <JsonLd data={faqJsonLd} />
 }
 

@@ -292,6 +292,85 @@ type PriorityAreaSeoContent = {
   faqs: { question: string; answer: string }[]
 }
 
+/** Optional contextual link from a taxis-in area page to a relevant blog post (SEO discovery). */
+const AREA_BLOG_CALLOUTS: Record<
+  string,
+  { href: string; title: string; teaser: string }
+> = {
+  oadby: {
+    href: "/blog/leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips",
+    title: "Leicester to Birmingham Airport: complete guide (cost, time, tips)",
+    teaser:
+      "Planning a Birmingham Airport transfer from Oadby? See typical drive times, fixed fares, and booking tips in",
+  },
+  wigston: {
+    href: "/blog/leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips",
+    title: "Leicester to Birmingham Airport: complete guide (cost, time, tips)",
+    teaser:
+      "Many Wigston passengers use Birmingham Airport — compare journey time, luggage tips, and fixed pricing before you travel in",
+  },
+  blaby: {
+    href: "/blog/leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips",
+    title: "Leicester to Birmingham Airport: complete guide (cost, time, tips)",
+    teaser:
+      "Blaby is well placed for BHX via the M69/M42 corridor. For cost, timing, and drop-off advice, read",
+  },
+  "leicester-city-centre": {
+    href: "/blog/how-much-does-taxi-cost-leicester-2026-fare-guide",
+    title: "How much does a taxi cost in Leicester? (2026 price guide)",
+    teaser:
+      "City-centre pickups vary by time and distance. For example fares, fixed quotes, and what changes the price, see",
+  },
+  aylestone: {
+    href: "/blog/how-much-does-taxi-cost-leicester-2026-fare-guide",
+    title: "How much does a taxi cost in Leicester? (2026 price guide)",
+    teaser:
+      "Budgeting for local runs or airports from Aylestone? Our plain-English overview of Leicester taxi pricing is in",
+  },
+  "clarendon-park": {
+    href: "/blog/how-much-does-taxi-cost-leicester-2026-fare-guide",
+    title: "How much does a taxi cost in Leicester? (2026 price guide)",
+    teaser:
+      "Wondering what a fair fare looks like for students and residents? Compare typical journeys and booking options in",
+  },
+  knighton: {
+    href: "/blog/best-taxi-leicester-what-to-look-for",
+    title: "Best taxi in Leicester: what to look for",
+    teaser:
+      "Late nights and airport runs need a provider you can trust. Use our checklist for licensing, pricing, and service in",
+  },
+  stoneygate: {
+    href: "/blog/best-taxi-leicester-what-to-look-for",
+    title: "Best taxi in Leicester: what to look for",
+    teaser:
+      "Need a consistent standard for work and evenings out? See what separates reliable operators from the rest in",
+  },
+  highfields: {
+    href: "/blog/best-taxi-leicester-what-to-look-for",
+    title: "Best taxi in Leicester: what to look for",
+    teaser:
+      "Hospital visits and nights out demand safety and clarity. Read",
+  },
+  evington: {
+    href: "/blog/leicester-to-heathrow-taxi-everything-you-need-to-know",
+    title: "Leicester to Heathrow taxi: everything you need to know",
+    teaser:
+      "Long-distance airport days need realistic timing and a confirmed price. Start with",
+  },
+  belgrave: {
+    href: "/blog/leicester-to-heathrow-taxi-everything-you-need-to-know",
+    title: "Leicester to Heathrow taxi: everything you need to know",
+    teaser:
+      "Heathrow is a major hub for international trips from Leicester. Route options, buffer times, and return pickups are covered in",
+  },
+  narborough: {
+    href: "/blog/leicester-to-heathrow-taxi-everything-you-need-to-know",
+    title: "Leicester to Heathrow taxi: everything you need to know",
+    teaser:
+      "Many families pre-book a fixed-fare Leicester to Heathrow taxi from south Leicestershire. Plan M1/M25 timing and luggage space in",
+  },
+}
+
 const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   "melton-mowbray": {
     bodyParagraphs: [
@@ -2598,6 +2677,21 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               {resolvedContent ? (
                 <>
                   <div>{resolvedContent.body}</div>
+
+                  {AREA_BLOG_CALLOUTS[slug] && (
+                    <div className="rounded-lg border border-gray-200 bg-gradient-to-r from-[#06A0A6]/8 to-transparent p-4">
+                      <p className="text-gray-800 text-sm sm:text-base leading-relaxed">
+                        <span className="font-semibold text-[#0F0D3E]">{AREA_BLOG_CALLOUTS[slug].teaser} </span>
+                        <Link
+                          href={AREA_BLOG_CALLOUTS[slug].href}
+                          className="text-[#06A0A6] font-semibold hover:underline underline-offset-2"
+                        >
+                          {AREA_BLOG_CALLOUTS[slug].title}
+                        </Link>
+                        .
+                      </p>
+                    </div>
+                  )}
 
                   <div className="pt-2">
                     <Link

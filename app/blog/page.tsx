@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Calendar, User, ArrowRight, BookOpen } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
+import BlogListingJsonLd from "@/components/seo/BlogListingJsonLd"
 
 export const metadata: Metadata = {
   title: "Leicester Taxi Blog | Tips, Airports & Travel | Aylestone",
@@ -23,6 +24,11 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BlogListingJsonLd
+        name={siteData.blogPage.title}
+        description={siteData.blogPage.subtitle}
+        blogs={blogs}
+      />
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-[#0F0D3E] via-[#2E3C44] to-[#06A0A6]/20 overflow-hidden">
         <div className="absolute inset-0 z-0">

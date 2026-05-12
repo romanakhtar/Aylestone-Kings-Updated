@@ -2,8 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { 
   Car, Plane, Calendar, Briefcase, GraduationCap, Users, ArrowRight, Phone, 
-  Clock, Shield, Stethoscope, MapPin, Heart, Building2, ShoppingBag, 
-  Train, Hotel, UtensilsCrossed, CircleUser, Package
+  Clock, Shield, Stethoscope, MapPin, Heart, ShoppingBag, 
+  Train, Hotel, UtensilsCrossed, CircleUser, Package, FileText
 } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
@@ -177,6 +177,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
               const IconComponent = service.icon
+              const isCorporateService = service.name.startsWith("Business")
               return (
                 <div 
                   key={index}
@@ -191,23 +192,34 @@ export default function ServicesPage() {
                   <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                     {service.description}
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <a 
-                      href={contactInfo.booking.online}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#0F0D3E] transition-colors"
-                    >
-                      Book Online
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
-                    <a 
-                      href={`tel:${contactInfo.phone}`}
-                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#06A0A6] hover:text-white transition-colors"
-                    >
-                      <Phone className="h-4 w-4" />
-                      Call
-                    </a>
+                  <div className="flex flex-col gap-3">
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <a 
+                        href={contactInfo.booking.online}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#0F0D3E] transition-colors"
+                      >
+                        Book Online
+                        <ArrowRight className="h-4 w-4" />
+                      </a>
+                      <a 
+                        href={`tel:${contactInfo.phone}`}
+                        className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#06A0A6] hover:text-white transition-colors"
+                      >
+                        <Phone className="h-4 w-4" />
+                        Call
+                      </a>
+                    </div>
+                    {isCorporateService ? (
+                      <Link
+                        href="/corporate-taxi-account-leicester"
+                        className="inline-flex items-center justify-center gap-2 border-2 border-[#0F0D3E] text-[#0F0D3E] px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#0F0D3E] hover:text-white transition-colors"
+                      >
+                        <FileText className="h-4 w-4" />
+                        Corporate accounts Leicester
+                      </Link>
+                    ) : null}
                   </div>
                 </div>
               )
@@ -228,7 +240,7 @@ export default function ServicesPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link 
               href="/fleet"
               className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg border border-gray-200 transition-all duration-300 hover:-translate-y-1"
@@ -245,6 +257,15 @@ export default function ServicesPage() {
               <Plane className="h-10 w-10 text-[#06A0A6] mb-4" />
               <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Airport Pricing</h3>
               <p className="text-gray-600 text-sm">Fixed prices for airport transfers to all major UK airports</p>
+            </Link>
+
+            <Link 
+              href="/corporate-taxi-account-leicester"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg border border-gray-200 transition-all duration-300 hover:-translate-y-1"
+            >
+              <Briefcase className="h-10 w-10 text-[#06A0A6] mb-4" />
+              <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Corporate accounts</h3>
+              <p className="text-gray-600 text-sm">Monthly invoicing, staff travel, and B2B taxi accounts in Leicester</p>
             </Link>
             
             <Link 

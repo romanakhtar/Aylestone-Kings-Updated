@@ -1,13 +1,12 @@
-import Image from "next/image"
-import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Briefcase, Route } from "lucide-react"
-import { contactInfo, siteData } from "@/lib/data"
+import { Check, ArrowRight, Clock, Shield, Star, Phone, Briefcase, Route } from "lucide-react"
+import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Long-Distance Taxi Leicester | UK-Wide | Book 0116 2338888",
   description:
-    "Long-distance and corporate taxi from Leicester: comfortable saloons and MPVs, agreed fares before you travel, professional drivers. Business accounts welcome. Book online or call 0116 2338888.",
+    "Long-distance taxi from Leicester with guide prices: London from £180, Manchester from £150, Nottingham from £45, and more. Saloon (1–4) and MPV (5–6). Corporate accounts welcome. Book online or call 0116 2338888.",
   keywords:
     "long distance taxi Leicester, long distance taxis, taxi for long distance, corporate taxi Leicester, business taxi Leicester, intercity taxi Leicester",
   alternates: {
@@ -16,10 +15,26 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Long-Distance Taxi Leicester | UK-Wide | Aylestone Taxis",
     description:
-      "Corporate and long-distance taxi from Leicester. Agreed fares, 24/7. Book online or call 0116 2338888.",
+      "Corporate and long-distance taxi from Leicester with guide prices on popular routes. Agreed fares, 24/7. Book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/long-distance-taxi-leicester",
   },
 }
+
+const LONG_DISTANCE_GUIDE_PRICES: {
+  route: string
+  saloon: string
+  mpv: string
+  notes: string
+}[] = [
+  { route: "Leicester to London", saloon: "From £180", mpv: "From £220", notes: "M1 route, approx 2hrs" },
+  { route: "Leicester to Manchester", saloon: "From £150", mpv: "From £190", notes: "M6 route, approx 2hrs" },
+  { route: "Leicester to Nottingham", saloon: "From £45", mpv: "From £65", notes: "30 mins via A453" },
+  { route: "Leicester to Sheffield", saloon: "From £90", mpv: "From £120", notes: "1hr 15mins via M1" },
+  { route: "Leicester to Derby", saloon: "From £55", mpv: "From £75", notes: "45 mins via A52" },
+  { route: "Leicester to Coventry", saloon: "From £55", mpv: "From £75", notes: "45 mins via M69" },
+  { route: "Leicester to Cambridge", saloon: "From £110", mpv: "From £140", notes: "1hr 30mins via A14" },
+  { route: "Leicester to Oxford", saloon: "From £120", mpv: "From £150", notes: "1hr 40mins via M40" },
+]
 
 export default function LongDistanceTaxiLeicesterPage() {
   return (
@@ -132,8 +147,8 @@ export default function LongDistanceTaxiLeicesterPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Transparent Pricing</h3>
                 <p className="text-[#2E3C44]">
-                  Fixed prices for long-distance journeys with no hidden charges. 
-                  Get a quote upfront before you book.
+                  Guide prices for popular routes are listed below; we confirm your fixed fare when you book. 
+                  No hidden charges.
                 </p>
               </div>
             </div>
@@ -202,36 +217,63 @@ export default function LongDistanceTaxiLeicesterPage() {
           </div>
         </section>
 
-        {/* Popular Long-Distance Routes */}
+        {/* Long-distance guide prices */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-                Popular Long-Distance Routes
+                Popular long-distance routes — guide prices
               </h2>
               <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
-                We provide comfortable long-distance transport to major UK cities
+                Fixed fares from Leicester city centre. Saloon for 1–4 passengers; MPV for 5–6. We confirm your exact
+                price when you book — other UK destinations quoted on request.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                "Leicester to London",
-                "Leicester to Manchester",
-                "Leicester to Birmingham",
-                "Leicester to Nottingham",
-                "Leicester to Sheffield",
-                "Leicester to Derby",
-                "Leicester to Coventry",
-                "Leicester to Cambridge",
-                "Leicester to Oxford",
-              ].map((route, idx) => (
-                <div key={idx} className="bg-[#E4E4E4] p-6 rounded-xl">
-                  <Route className="h-8 w-8 text-[#06A0A6] mb-3" />
-                  <p className="text-[#0F0D3E] font-semibold text-lg">{route}</p>
-                  <p className="text-[#2E3C44] text-sm mt-2">Fixed-price transfers available</p>
-                </div>
-              ))}
+            <div className="max-w-5xl mx-auto">
+              <div className="overflow-x-auto rounded-2xl shadow-xl border border-[#06A0A6]/25">
+                <table className="w-full min-w-[640px] text-left">
+                  <thead>
+                    <tr className="bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
+                      <th className="px-4 sm:px-6 py-4 font-semibold">Route</th>
+                      <th className="px-4 sm:px-6 py-4 font-semibold">Saloon (1–4 pax)</th>
+                      <th className="px-4 sm:px-6 py-4 font-semibold">MPV (5–6 pax)</th>
+                      <th className="px-4 sm:px-6 py-4 font-semibold">Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white">
+                    {LONG_DISTANCE_GUIDE_PRICES.map((row) => (
+                      <tr
+                        key={row.route}
+                        className="border-b border-gray-100 last:border-0 hover:bg-[#06A0A6]/5 transition-colors"
+                      >
+                        <td className="px-4 sm:px-6 py-4 font-medium text-[#0F0D3E]">
+                          <span className="inline-flex items-center gap-2">
+                            <Route className="h-5 w-5 text-[#06A0A6] shrink-0" aria-hidden />
+                            {row.route}
+                          </span>
+                        </td>
+                        <td className="px-4 sm:px-6 py-4 text-[#06A0A6] font-semibold">{row.saloon}</td>
+                        <td className="px-4 sm:px-6 py-4 text-[#06A0A6] font-semibold">{row.mpv}</td>
+                        <td className="px-4 sm:px-6 py-4 text-[#2E3C44] text-sm sm:text-base">{row.notes}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-6 text-center text-sm text-[#2E3C44]">
+                Times are typical in normal traffic; night or peak travel may vary. For Birmingham, Leeds, Bristol, and
+                other routes, call {contactInfo.phone} or{" "}
+                <a
+                  href={contactInfo.booking.online}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#06A0A6] font-semibold underline hover:text-[#0F0D3E]"
+                >
+                  book online
+                </a>{" "}
+                for a fixed quote.
+              </p>
             </div>
           </div>
         </section>
@@ -290,7 +332,7 @@ export default function LongDistanceTaxiLeicesterPage() {
                 Other Services You Might Need
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Link href="/airport-transfers-leicester" className="bg-[#E4E4E4] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
                 <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Airport Transfers</h3>
                 <p className="text-[#2E3C44]">Reliable airport transfers to all major UK airports</p>
@@ -298,6 +340,13 @@ export default function LongDistanceTaxiLeicesterPage() {
               <Link href="/local-taxi-leicester" className="bg-[#E4E4E4] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
                 <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Local Taxi Service</h3>
                 <p className="text-[#2E3C44]">Quick and affordable local rides around Leicester</p>
+              </Link>
+              <Link href="/corporate-taxi-account-leicester" className="bg-[#E4E4E4] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                <div className="flex items-center gap-2 mb-2">
+                  <Briefcase className="h-6 w-6 text-[#06A0A6]" aria-hidden />
+                  <h3 className="text-xl font-bold text-[#0F0D3E]">Corporate taxi accounts</h3>
+                </div>
+                <p className="text-[#2E3C44]">Business travel and staff transport with monthly invoicing in Leicester</p>
               </Link>
             </div>
           </div>

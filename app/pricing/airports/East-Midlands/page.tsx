@@ -5,6 +5,8 @@ import FAQSchema from "@/components/seo/FAQSchema"
 import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
 import { buildAirportMetadata } from "@/lib/seo/airportSeo"
 import { eastMidlandsLeicesterFacts, eastMidlandsPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
+import JsonLd from "@/components/seo/JsonLd"
+import { getTaxiServiceJsonLd } from "@/lib/seo/siteJsonLd"
 
 export const metadata = buildAirportMetadata({
   airportName: "East Midlands",
@@ -18,9 +20,35 @@ export const metadata = buildAirportMetadata({
 
 const faqs = eastMidlandsPricingFaqs
 
+const EMA_PRICING_URL = "https://aylestone-taxis.co.uk/pricing/airports/East-Midlands"
+
 export default function EastMidlandsPage() {
+  const serviceJsonLd = getTaxiServiceJsonLd({
+    name: "Leicester to East Midlands Airport (EMA) taxi",
+    description:
+      "Pre-booked fixed-fare taxi transfers from Leicester and Leicestershire to East Midlands Airport (EMA), Castle Donington. " +
+      "Roughly 22–24 miles and 35–45 minutes via A46/M1; departures forecourt drop-off; saloon and MPV pricing.",
+    url: EMA_PRICING_URL,
+    serviceType: "Airport taxi transfer",
+    offers: [
+      {
+        price: "40",
+        name: "Standard saloon (1–4 passengers)",
+        description: "Leicester city centre to East Midlands Airport (EMA) — from £40",
+        url: EMA_PRICING_URL,
+      },
+      {
+        price: "60",
+        name: "MPV / minibus (6–8 passengers)",
+        description: "Leicester city centre to East Midlands Airport (EMA) — from £60",
+        url: EMA_PRICING_URL,
+      },
+    ],
+  })
+
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd data={serviceJsonLd} />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
