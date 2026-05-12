@@ -1,17 +1,21 @@
-import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
+import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
-import AirportRouteGuide from "@/components/seo/AirportRouteGuide"
-import { buildAirportFaqs, buildAirportMetadata } from "@/lib/seo/airportSeo"
+import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
+import { buildAirportMetadata } from "@/lib/seo/airportSeo"
+import { stanstedLeicesterFacts, stanstedPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
 
 export const metadata = buildAirportMetadata({
   airportName: "Stansted",
   airportCode: "STN",
   slug: "Stansted",
   fromPrice: "£150",
+  title: "Stansted taxi Leicester | From £150 | Early flights | Aylestone",
+  description:
+    "Leicester to Stansted (STN): ~115 mi, ~2h–2h45, M1/M11 route. One-terminal drop-off for Ryanair & Jet2. Fixed from £150. 03:00 pickups available — quote online or call 0116 2338888.",
 })
 
-const faqs = buildAirportFaqs({ airportName: "Stansted", fromPrice: "£150" })
+const faqs = stanstedPricingFaqs
 
 export default function StanstedPage() {
   return (
@@ -26,11 +30,12 @@ export default function StanstedPage() {
                 Stansted Airport
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Reliable transfers to Stansted Airport
+                Leicester to Stansted Airport taxi — Ryanair & Jet2 early waves
               </h1>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-                Professional taxi service from Leicester and surrounding areas to Stansted Airport. 
-                Best rates, reliable service, and comfortable vehicles for your journey.
+                Roughly 115 miles and about 2 hours to 2 hours 45 minutes from Leicester city centre via the M1 and
+                A14/M11 approach. Single-terminal forecourt drop-off, ideal when your flight is priced from STN — we book
+                03:00–04:30 pickups regularly.
               </p>
 
               {/* Book Now Button */}
@@ -51,13 +56,8 @@ export default function StanstedPage() {
           </div>
         </section>
 
-        <AirportRouteGuide
-          airportName="Stansted"
-          airportCode="STN"
-          fromPrice="£150"
-          typicalTime="around 2h to 3h 15m"
-          slug="Stansted"
-        />
+        <AirportLeicesterGuide facts={stanstedLeicesterFacts} />
+        <AirportPricingFaqSection airportName="Stansted" airportCode="STN" faqs={faqs} />
 
         {/* Pricing Section */}
         <section className="py-20 bg-white">

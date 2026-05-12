@@ -11,16 +11,26 @@ import {
 import Link from "next/link"
 import { contactInfo } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
+import { AirportLeicesterGuide } from "@/components/seo/AirportLeicesterGuide"
 import { buildAirportMetadata } from "@/lib/seo/airportSeo"
+import {
+  lutonLeicesterFacts,
+  lutonPricingExtraFaqs,
+  type AirportFaqItem,
+} from "@/lib/seo/airportLeicesterFacts"
 
 export const metadata = buildAirportMetadata({
   airportName: "Luton",
   airportCode: "LTN",
   slug: "Luton",
   fromPrice: "£120",
+  title: "Luton taxi Leicester | From £120 | M1 route | Aylestone",
+  description:
+    "Leicester to Luton (LTN): ~85–95 mi, ~1h15–1h45 via M1. Main terminal drop-off. Wizz, easyJet, Ryanair. Fixed from £120 — beat parking + DART hassle. Book or call 0116 2338888 24/7.",
 })
 
-const faqs = [
+const faqs: AirportFaqItem[] = [
+  ...lutonPricingExtraFaqs,
   {
     question: "How long does a taxi from Leicester to Luton Airport take?",
     answer:
@@ -103,6 +113,8 @@ export default function LutonPage() {
             </div>
           </div>
         </section>
+
+        <AirportLeicesterGuide facts={lutonLeicesterFacts} />
 
         {/* SEO long-form content */}
         <section className="py-16 md:py-20 bg-white border-b border-gray-100">

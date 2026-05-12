@@ -5,6 +5,10 @@ type AirportSeoConfig = {
   airportCode: string
   slug: string
   fromPrice: string
+  /** Full title override (keep under ~60 characters for Google display where possible). */
+  title?: string
+  /** Meta description override (aim for a clear benefit + CTA, ~150–160 characters). */
+  description?: string
 }
 
 const siteUrl = "https://aylestone-taxis.co.uk"
@@ -14,10 +18,16 @@ export function buildAirportMetadata({
   airportCode,
   slug,
   fromPrice,
+  title: titleOverride,
+  description: descriptionOverride,
 }: AirportSeoConfig): Metadata {
   const route = `/pricing/airports/${slug}`
-  const title = `Leicester to ${airportName} Airport Taxi | From ${fromPrice} | Book 24/7`
-  const description = `Book a Leicester to ${airportName} Airport taxi (${airportCode}) from ${fromPrice}. Fixed fares, licensed drivers, flight tracking, door-to-door across Leicestershire. See your price online or call 0116 2338888 — 24/7.`
+  const title =
+    titleOverride ??
+    `Leicester to ${airportName} Airport Taxi | From ${fromPrice} | Book 24/7`
+  const description =
+    descriptionOverride ??
+    `Book a Leicester to ${airportName} Airport taxi (${airportCode}) from ${fromPrice}. Fixed fares, licensed drivers, flight tracking, door-to-door across Leicestershire. See your price online or call 0116 2338888 — 24/7.`
 
   return {
     title,

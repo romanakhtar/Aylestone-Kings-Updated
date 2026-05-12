@@ -1,78 +1,91 @@
-import Image from "next/image"
-import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar, Plane } from "lucide-react"
+import { Check, ArrowRight, MapPin, Clock, Shield, Phone, Calendar, Plane } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
+const CANONICAL = "https://aylestone-taxis.co.uk/leicester-to-east-midlands-airport-taxi"
+
 export const metadata: Metadata = {
   title: "Leicester to East Midlands Airport Taxi | EMA From £40 | Return",
   description:
-    "Taxi from Leicester to East Midlands Airport (EMA) and East Midlands Airport to Leicester. Fixed fares from £40, flight-friendly timing, saloons & MPVs. Taxi to East Midlands Airport from Leicester — book online or call 0116 2338888, 24/7.",
+    "Fixed-price transfers between Leicester and East Midlands Airport (EMA). Postcode DE74 2SA, A46 via Copt Oak route, terminal drop-off & return pickup points. From £40 — book or call 0116 2338888 24/7.",
   keywords:
-    "Leicester to East Midlands Airport Taxi, Leicester to East Midlands Airport, taxi to East Midlands Airport from Leicester, taxi from Leicester to East Midlands Airport, East Midlands Airport to Leicester, Leicester EMA transfer",
+    "Leicester to East Midlands Airport taxi, EMA taxi Leicester, East Midlands Airport transfer, Castle Donington airport taxi, fixed fare EMA",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/leicester-to-east-midlands-airport-taxi",
+    canonical: CANONICAL,
   },
   openGraph: {
-    title: "Leicester to East Midlands Airport Taxi | EMA | Aylestone Taxis",
-    description: "Leicester ↔ EMA fixed-price taxis from £40. Book online or call 0116 2338888.",
-    url: "https://aylestone-taxis.co.uk/leicester-to-east-midlands-airport-taxi",
+    title: "Leicester ↔ East Midlands Airport (EMA) | Aylestone Taxis",
+    description: "Fixed fares from £40, route guidance for Leicester, Oadby & Wigston. Book online or call 0116 2338888.",
+    url: CANONICAL,
+    siteName: "Aylestone Kings",
+    locale: "en_GB",
+    type: "website",
   },
 }
 
-export default function LeicesterToEastMidlandsAirportTaxiPage() {
-  const faqs = [
-    {
-      question: "How much is a taxi from Leicester to East Midlands Airport (EMA)?",
-      answer:
-        "Our fixed-fare Leicester to EMA transfers start from £40 (vehicle and pickup location can affect the final price). You'll see the price before confirming your booking.",
-    },
-    {
-      question: "Do you pick up from all Leicester areas?",
-      answer:
-        "Yes — we cover Leicester and surrounding areas. Enter your pickup address when booking online or call 0116 2338888.",
-    },
-    {
-      question: "Can you do early-morning airport runs?",
-      answer:
-        "Yes. We operate 24/7 and can schedule pickups for early flights. We recommend pre-booking for peak travel times.",
-    },
-    {
-      question: "What happens if my flight is delayed on the way back?",
-      answer:
-        "For return trips, we can use your flight details to time pickup more accurately. If anything changes, call us and we'll adjust where possible.",
-    },
-  ]
+const faqs = [
+  {
+    question: "What is the postcode for East Midlands Airport passenger pickup?",
+    answer:
+      "The main airport site is Castle Donington, Derby DE74 2SA. Use this for sat-nav; your driver confirms the exact meeting pin for returns (pickup lobby or express area) on the day.",
+  },
+  {
+    question: "How long does it take from Oadby or Wigston to EMA by taxi?",
+    answer:
+      "From Oadby it is often about 25 minutes off-peak; from Wigston roughly 28 minutes, because both connect quickly to the A46 north. From Leicester city centre allow closer to 35–45 minutes depending on traffic and time of day.",
+  },
+  {
+    question: "Where does my driver drop me at East Midlands Airport?",
+    answer:
+      "For departures we use the signed forecourt express drop-off in front of the single EMA terminal, aligned with your airline’s check-in row. Airport staff direct short-stay traffic; we follow current airport rules for private hire set-down.",
+  },
+  {
+    question: "Where do I meet my driver when I fly back into EMA?",
+    answer:
+      "Usually in the main arrivals pickup area after baggage reclaim — often the multi-storey car park pickup lobby or the signed express pickup lane, depending on what the airport is operating. We text you the driver’s mobile and vehicle registration when your flight lands.",
+  },
+  {
+    question: "Is a return taxi cheaper than two one-way trips to East Midlands Airport?",
+    answer:
+      "We price each leg fairly; booking outbound and return together still saves you coordination hassle and locks both pickups in one plan. Ask when you book if a return package suits your dates.",
+  },
+  {
+    question: "Can I get a taxi for a 04:00 pickup in Leicester for an early flight?",
+    answer:
+      "Yes. We operate 24/7 and regularly cover first-wave departures. Pre-book so we can assign a driver and confirm your fixed fare before travel day.",
+  },
+]
 
+export default function LeicesterToEastMidlandsAirportTaxiPage() {
   return (
     <div className="min-h-screen bg-white">
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
-        {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
-                Leicester to East Midlands Airport Taxi
+                East Midlands Airport (EMA)
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                Leicester to East Midlands Airport Taxi - Fixed Price Transfers
+                Leicester to East Midlands Airport taxi — fixed fares from £40
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Need a <strong>Leicester to East Midlands Airport Taxi</strong>? Aylestone Kings offers reliable, 
-                fixed-price transfers from Leicester to East Midlands Airport (EMA). Professional service, competitive rates, 
-                and 24/7 availability.
+                If you are booking a <strong>Leicester to East Midlands Airport taxi</strong>, Aylestone Kings offers
+                pre-booked saloon and MPV transfers with a fixed price before you travel. Drivers know the A46 and M1
+                approach into Castle Donington, and we coordinate simple return pickups after you land.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg">
                     <Calendar className="h-6 w-6" />
-                    Book Leicester to EMA Taxi
+                    Book your EMA transfer
                   </button>
                 </a>
-                <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="w-full sm:w-auto">
+                <a href={`tel:${contactInfo.phone.replace(/\s/g, "")}`} className="w-full sm:w-auto">
                   <button className="w-full sm:w-auto border-2 border-[#06A0A6] text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-all duration-200 text-lg flex items-center justify-center gap-3">
                     <Phone className="h-6 w-6" />
                     Call {contactInfo.phone}
@@ -83,50 +96,111 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
           </div>
         </section>
 
-        {/* Journey time & distance (quick answers) */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-white border-b border-gray-100">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-2xl border border-gray-200 p-6 shadow-sm">
                 <div className="flex items-center gap-3 mb-2">
-                  <Clock className="h-5 w-5 text-[#06A0A6]" />
-                  <h2 className="text-lg font-semibold text-[#0F0D3E]">Typical journey time</h2>
+                  <MapPin className="h-5 w-5 text-[#06A0A6]" />
+                  <h2 className="text-lg font-semibold text-[#0F0D3E]">Airport postcode</h2>
                 </div>
                 <p className="text-[#2E3C44]">
-                  Around <strong>30–45 minutes</strong> from Leicester to East Midlands Airport (EMA), depending on traffic and pickup area.
+                  Passenger terminal: <strong>DE74 2SA</strong> (Castle Donington). Use this for navigation; we fine-tune
+                  the kerb or pickup lobby when you return.
                 </p>
               </div>
               <div className="rounded-2xl border border-gray-200 p-6 shadow-sm">
                 <div className="flex items-center gap-3 mb-2">
-                  <MapPin className="h-5 w-5 text-[#06A0A6]" />
+                  <Clock className="h-5 w-5 text-[#06A0A6]" />
+                  <h2 className="text-lg font-semibold text-[#0F0D3E]">Typical times by area</h2>
+                </div>
+                <ul className="text-[#2E3C44] list-disc pl-5 space-y-1">
+                  <li>
+                    <strong>Oadby:</strong> ~25 minutes off-peak
+                  </li>
+                  <li>
+                    <strong>Wigston:</strong> ~28 minutes off-peak
+                  </li>
+                  <li>
+                    <strong>Leicester city centre:</strong> ~35–45 minutes (traffic dependent)
+                  </li>
+                </ul>
+              </div>
+              <div className="rounded-2xl border border-gray-200 p-6 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <Plane className="h-5 w-5 text-[#06A0A6]" />
                   <h2 className="text-lg font-semibold text-[#0F0D3E]">Distance</h2>
                 </div>
                 <p className="text-[#2E3C44]">
-                  Roughly <strong>20–25 miles</strong> (route varies). We use the best route for your pickup time.
-                </p>
-              </div>
-              <div className="rounded-2xl border border-gray-200 p-6 shadow-sm">
-                <div className="flex items-center gap-3 mb-2">
-                  <Calendar className="h-5 w-5 text-[#06A0A6]" />
-                  <h2 className="text-lg font-semibold text-[#0F0D3E]">When to book</h2>
-                </div>
-                <p className="text-[#2E3C44]">
-                  For early flights, we recommend booking <strong>the day before</strong>. Same-day bookings are often possible.
+                  Roughly <strong>22–24 miles</strong> from central Leicester to the terminal forecourt, depending on your
+                  start postcode.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pricing Section */}
+        <section className="py-16 md:py-20 bg-[#E4E4E4]/40">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-[#2E3C44] leading-relaxed space-y-5 text-base md:text-lg">
+            <h2 className="text-3xl font-bold text-[#0F0D3E]">Best route from Leicester: A46 via Copt Oak</h2>
+            <p>
+              Most <strong>Leicester to East Midlands Airport taxi</strong> journeys follow the A46 north-west from the
+              city, join the M1 near Copt Oak (junction 21A/22 area), then use the A453 into Castle Donington. From the
+              south and east we often use the A563 ring to reach the A46 faster at peak times.
+            </p>
+            <p>
+              That corridor is the quickest reliable link for Leicestershire passengers; we adjust if the M1 has closures
+              or heavy queues.
+            </p>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-20 bg-white border-b border-gray-100">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-[#2E3C44] leading-relaxed space-y-5 text-base md:text-lg">
+            <h2 className="text-3xl font-bold text-[#0F0D3E]">EMA terminal layout and where we drop you off</h2>
+            <p>
+              East Midlands Airport uses <strong>one main passenger terminal</strong> with a single security hall after
+              check-in. Airlines share the same building; Ryanair, Jet2, easyJet, and TUI desks are all inside that hall.
+            </p>
+            <p>
+              On departure, your driver sets down at the <strong>signed express / forecourt drop-off</strong> in front of the
+              terminal, following airport marshals. We aim for the kerb closest to your carrier’s check-in zone to shorten
+              the walk with heavy bags.
+            </p>
+            <p>
+              Short-stay and multi-storey car parks sit beside the terminal; if you ever need to swap a pickup plan, call
+              us and we adapt within airport rules.
+            </p>
+          </div>
+        </section>
+
+        <section className="py-16 md:py-20 bg-[#E4E4E4]/40">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-[#2E3C44] leading-relaxed space-y-5 text-base md:text-lg">
+            <h2 className="text-3xl font-bold text-[#0F0D3E]">Return journeys from EMA — where to meet your driver</h2>
+            <p>
+              After you land, collect bags, and pass customs if needed, we normally meet in the <strong>main Pick Up</strong>{" "}
+              area — often the <strong>multi-storey car park pickup lobby</strong> or the signed express pickup lane, depending
+              on what the airport is operating that month.
+            </p>
+            <p>
+              When you book the inbound leg, give us your <strong>flight number</strong> and UK mobile. We monitor arrival
+              time, send the driver&apos;s name and registration by SMS, and adjust if baggage reclaim runs long.
+            </p>
+            <p>
+              If you cannot find the meeting point, call the driver or our office on <strong>{contactInfo.phone}</strong> — we
+              talk you to the correct door.
+            </p>
+          </div>
+        </section>
+
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-                Leicester to East Midlands Airport Taxi - Pricing
-              </h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">Pricing</h2>
               <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
-                Fixed prices for our <strong>Leicester to East Midlands Airport Taxi</strong> service. No hidden fees.
+                Every <strong>Leicester to East Midlands Airport taxi</strong> quote is built from your pickup postcode
+                and vehicle choice — you see the price before you confirm online. The table below shows typical starting
+                points from Leicester city centre.
               </p>
             </div>
 
@@ -167,20 +241,18 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
 
               <div className="mt-6 text-center">
                 <p className="text-sm text-[#2E3C44] italic">
-                  Prices shown are starting rates from Leicester city centre. Additional pickup locations may affect final price.
+                  Prices shown are starting rates from Leicester city centre. Additional pickup locations may affect final
+                  price.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Why Choose Our Service */}
         <section className="py-20 bg-[#E4E4E4]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-                Why Choose Our Leicester to East Midlands Airport Taxi?
-              </h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">Why book with Aylestone Kings?</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -188,10 +260,10 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
                 <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
                   <Clock className="h-6 w-6 text-[#06A0A6]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Fast Journey</h3>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Early and late cover</h3>
                 <p className="text-[#2E3C44]">
-                  Our <strong>Leicester to East Midlands Airport Taxi</strong> service takes approximately 30 minutes. 
-                  We know the best routes to get you there on time.
+                  We schedule <strong>03:30–04:30</strong> Leicester pickups for dawn flights and collect inbound aircraft
+                  after <strong>midnight</strong> when pre-booked.
                 </p>
               </div>
 
@@ -199,167 +271,56 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
                 <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
                   <Check className="h-6 w-6 text-[#06A0A6]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Fixed Prices</h3>
-                <p className="text-[#2E3C44]">
-                  No meter running, no surprises. Our <strong>Leicester to East Midlands Airport Taxi</strong> 
-                  service offers fixed prices from £40.
-                </p>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Fixed prices</h3>
+                <p className="text-[#2E3C44]">Agreed in advance for each leg — no meter anxiety on the day of travel.</p>
               </div>
 
               <div className="bg-white p-6 rounded-2xl shadow-lg">
                 <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
                   <Shield className="h-6 w-6 text-[#06A0A6]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Licensed Drivers</h3>
-                <p className="text-[#2E3C44]">
-                  All our <strong>Leicester to East Midlands Airport Taxi</strong> drivers are fully licensed 
-                  and DBS checked for your safety.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
-                  <Plane className="h-6 w-6 text-[#06A0A6]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Flight Monitoring</h3>
-                <p className="text-[#2E3C44]">
-                  We monitor your flight for delays, ensuring your <strong>Leicester to East Midlands Airport Taxi</strong> 
-                  arrives at the right time.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
-                  <MapPin className="h-6 w-6 text-[#06A0A6]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Door-to-Door</h3>
-                <p className="text-[#2E3C44]">
-                  Pickup from your exact location in Leicester and drop-off at East Midlands Airport terminal. 
-                  Our <strong>Leicester to East Midlands Airport Taxi</strong> service is convenient and reliable.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
-                  <Star className="h-6 w-6 text-[#06A0A6]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">24/7 Service</h3>
-                <p className="text-[#2E3C44]">
-                  Our <strong>Leicester to East Midlands Airport Taxi</strong> service operates 24/7, 
-                  perfect for early morning flights and late night arrivals.
-                </p>
+                <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">Licensed & DBS-checked</h3>
+                <p className="text-[#2E3C44]">Private-hire licensed drivers and insured vehicles for airport work.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Journey Information */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-                Leicester to East Midlands Airport Taxi - Journey Details
-              </h2>
-            </div>
-
-            <div className="max-w-4xl mx-auto bg-[#E4E4E4] p-8 rounded-2xl">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <MapPin className="h-6 w-6 text-[#06A0A6] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Distance & Time</h3>
-                    <p className="text-[#2E3C44]">
-                      The journey from Leicester to East Midlands Airport is approximately 30-40 minutes, 
-                      depending on traffic. Our <strong>Leicester to East Midlands Airport Taxi</strong> service 
-                      uses the most efficient routes.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <Clock className="h-6 w-6 text-[#06A0A6] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">When to Book</h3>
-                    <p className="text-[#2E3C44]">
-                      We recommend booking your <strong>Leicester to East Midlands Airport Taxi</strong> at least 24 hours 
-                      in advance, especially for early morning flights. However, we also accept same-day bookings.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <Plane className="h-6 w-6 text-[#06A0A6] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Return Journeys</h3>
-                    <p className="text-[#2E3C44]">
-                      We also provide return <strong>Leicester to East Midlands Airport Taxi</strong> service. 
-                      Simply provide your flight details and we'll track your flight and adjust pickup times if needed.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Q&A */}
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-4">Leicester to EMA taxi — quick Q&A</h2>
-              <p className="text-lg text-[#2E3C44]">
-                The most common questions people ask before booking an East Midlands Airport transfer.
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-4">Questions about EMA transfers</h2>
+              <p className="text-lg text-[#2E3C44]">Straight answers before you book.</p>
             </div>
 
             <div className="space-y-4">
-              {[
-                {
-                  q: "How much is a taxi from Leicester to East Midlands Airport (EMA)?",
-                  a: "Our fixed-fare Leicester to EMA transfers start from £40 (vehicle and pickup location can affect the final price). You'll see the price before confirming your booking.",
-                },
-                {
-                  q: "Do you pick up from all Leicester areas?",
-                  a: "Yes — we cover Leicester and surrounding areas. Enter your pickup address when booking online or call 0116 2338888.",
-                },
-                {
-                  q: "Can you do early-morning airport runs?",
-                  a: "Yes. We operate 24/7 and can schedule pickups for early flights. We recommend pre-booking for peak travel times.",
-                },
-                {
-                  q: "What happens if my flight is delayed on the way back?",
-                  a: "For return trips, we can use your flight details to time pickup more accurately. If anything changes, call us and we’ll adjust where possible.",
-                },
-              ].map((item) => (
-                <details key={item.q} className="border rounded-lg p-5">
-                  <summary className="font-semibold cursor-pointer text-lg text-[#0F0D3E]">{item.q}</summary>
-                  <p className="mt-2 text-[#2E3C44]">{item.a}</p>
+              {faqs.map((item) => (
+                <details key={item.question} className="border rounded-lg p-5 border-gray-200 bg-gray-50/50">
+                  <summary className="font-semibold cursor-pointer text-lg text-[#0F0D3E]">{item.question}</summary>
+                  <p className="mt-2 text-[#2E3C44] leading-relaxed">{item.answer}</p>
                 </details>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">
-              Book Your Leicester to East Midlands Airport Taxi
-            </h2>
+            <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">Book your EMA transfer</h2>
             <p className="text-xl text-[#E4E4E4] mb-8">
-              Reliable, fixed-price <strong>Leicester to East Midlands Airport Taxi</strong> service. 
-              From £40, professional drivers, 24/7 availability.
+              Book your <strong>Leicester to East Midlands Airport taxi</strong> online for fixed fares from £40, local
+              drivers, and flight-friendly timing — or call the office on {contactInfo.phone}.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center justify-center gap-3">
-                  Book Now
+                  Book now
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
               <Link href="/pricing/airports/East-Midlands" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200">
-                  View Full Pricing
+                  View full EMA pricing page
                 </button>
               </Link>
             </div>
@@ -369,4 +330,3 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
     </div>
   )
 }
-

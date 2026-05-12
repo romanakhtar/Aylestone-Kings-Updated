@@ -1,17 +1,21 @@
-import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Star, Calendar } from "lucide-react"
+import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
-import AirportRouteGuide from "@/components/seo/AirportRouteGuide"
-import { buildAirportFaqs, buildAirportMetadata } from "@/lib/seo/airportSeo"
+import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
+import { buildAirportMetadata } from "@/lib/seo/airportSeo"
+import { gatwickLeicesterFacts, gatwickPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
 
 export const metadata = buildAirportMetadata({
   airportName: "Gatwick",
   airportCode: "LGW",
   slug: "Gatwick",
   fromPrice: "£200",
+  title: "Gatwick taxi Leicester | From £200 | ~150 mi | Book 24/7",
+  description:
+    "Leicester to Gatwick (LGW): ~150 mi, ~2h45–3h30 via M1/M25/M23. North & South terminal drop-off. Fixed from £200 — see price vs week parking + fuel. Call 0116 2338888 or book online.",
 })
 
-const faqs = buildAirportFaqs({ airportName: "Gatwick", fromPrice: "£200" })
+const faqs = gatwickPricingFaqs
 
 export default function GatwickPage() {
   return (
@@ -26,11 +30,12 @@ export default function GatwickPage() {
                 Gatwick Airport
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Reliable transfers to Gatwick Airport
+                Leicester to Gatwick Airport taxi — North & South terminals
               </h1>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-                Professional taxi service from Leicester and surrounding areas to Gatwick Airport. 
-                Best rates, reliable service, and comfortable vehicles for your journey.
+                About 150 miles and typically 2 hours 45 minutes to 3 hours 30 minutes from Leicester via the M1, M25,
+                and M23. We drop at the correct North or South departures forecourt for easyJet, BA, or TUI — fixed
+                fares from £200 with room for holiday luggage.
               </p>
 
               {/* Book Now Button */}
@@ -51,13 +56,8 @@ export default function GatwickPage() {
           </div>
         </section>
 
-        <AirportRouteGuide
-          airportName="Gatwick"
-          airportCode="LGW"
-          fromPrice="£200"
-          typicalTime="around 2h 45m to 4h"
-          slug="Gatwick"
-        />
+        <AirportLeicesterGuide facts={gatwickLeicesterFacts} />
+        <AirportPricingFaqSection airportName="Gatwick" airportCode="LGW" faqs={faqs} />
 
         {/* Pricing Section */}
         <section className="py-20 bg-white">
