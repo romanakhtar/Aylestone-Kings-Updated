@@ -723,6 +723,7 @@ export const siteData = {
           { name: "Taxis in Humberstone", href: "/taxis-in/humberstone" },
           { name: "Taxis in Belgrave", href: "/taxis-in/belgrave" },
           { name: "Taxis in Highfields", href: "/taxis-in/highfields" },
+          { name: "Taxis in Spinney Hills", href: "/taxis-in/spinney-hills" },
           { name: "Taxis in Westcotes", href: "/taxis-in/westcotes" },
           { name: "Taxis in Thurnby Lodge", href: "/taxis-in/thurnby-lodge" },
           { name: "Taxis in Rushey Mead", href: "/taxis-in/rushey-mead" },
@@ -765,6 +766,7 @@ export const siteData = {
           },
           { name: "Taxis in Cosby", href: "/taxis-in/cosby" },
           { name: "Taxis in Kibworth", href: "/taxis-in/kibworth" },
+          { name: "Taxis in Loughborough", href: "/taxis-in/loughborough" },
           {
             name: "Taxis in Market Harborough",
             href: "/taxis-in/market-harborough",
@@ -1065,7 +1067,7 @@ export const siteData = {
         date: "2026-05-01",
         author: "Aylestone Kings Team",
         category: "Airport Transfers",
-        image: "/Reliable-airport-transfers.jpg",
+        image: "/Blog leicester-to-heathrow-taxi-everything-you-need-to-know.webp",
       },
       {
         id: "best-taxi-leicester-what-to-look-for",
@@ -1106,7 +1108,7 @@ export const siteData = {
         date: "2026-05-07",
         author: "Aylestone Kings Team",
         category: "Local Guide",
-        image: "/Locals-trust.jpg",
+        image: "/Blog best-taxi-leicester-what-to-look-for.webp",
       },
       {
         id: "leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips",
@@ -1153,7 +1155,7 @@ export const siteData = {
         date: "2026-04-24",
         author: "Aylestone Kings Team",
         category: "Airport Transfers",
-        image: "/EMA Blog.webp",
+        image: "/Blog leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips.webp",
       },
       {
         id: "how-much-does-taxi-cost-leicester-2026-fare-guide",
@@ -1203,7 +1205,7 @@ export const siteData = {
         date: "2026-04-29",
         author: "Aylestone Kings Team",
         category: "Fare Guide",
-        image: "/Taxi-cost-in-Leicester-Blog.webp",
+        image: "/Blog how-much-does-taxi-cost-leicester-2026-fare-guide.webp",
       },
       {
         id: "leicester-to-east-midlands-airport-taxi-travel-guide-prices-booking-tips",
