@@ -2,6 +2,7 @@ import { ArrowRight, Calendar, Clock, MapPin, Phone, Plane, Shield, Star, Users 
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
+import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 
 export const metadata: Metadata = {
   title: "Leicester to Heathrow Terminal 2 Taxi | Fixed Fares | Aylestone Taxis",
@@ -331,6 +332,8 @@ export default function HeathrowTerminal2TaxiTransfersPage() {
             </div>
           </div>
         </section>
+
+        <AirportRelatedLinks airportName="Heathrow Terminal 2" />
 
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -1,6 +1,8 @@
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
+import AirportRelatedLinks from "@/components/AirportRelatedLinks"
+import AirportPricingBreadcrumbs from "@/components/seo/AirportPricingBreadcrumbs"
 import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
 import { buildAirportMetadata } from "@/lib/seo/airportSeo"
 import { stanstedLeicesterFacts, stanstedPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
@@ -22,6 +24,7 @@ export default function StanstedPage() {
     <div className="min-h-screen bg-white">
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
+        <AirportPricingBreadcrumbs pageName="Stansted Airport" path="/pricing/airports/Stansted" />
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -277,6 +280,8 @@ export default function StanstedPage() {
             </div>
           </div>
         </section>
+
+        <AirportRelatedLinks airportName="Stansted Airport" />
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
