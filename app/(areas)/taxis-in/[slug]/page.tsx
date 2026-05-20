@@ -2,7 +2,7 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, MapPin, Plane, Clock, Shield, Car } from "lucide-react"
-import { footerData, companyInfo, contactInfo } from "@/lib/data"
+import { footerData, companyInfo, contactInfo, nearbyAreasBySlug } from "@/lib/data"
 import type { Metadata } from "next"
 import { JSX } from "react"
 import FAQSchema from "@/components/seo/FAQSchema"
@@ -11,6 +11,16 @@ import { areaPageBreadcrumbs } from "@/lib/seo/breadcrumbs"
 
 type AreaItem = { name: string; href: string }
 const siteUrl = "https://aylestone-taxis.co.uk"
+
+const POPULAR_JOURNEY_AIRPORTS = [
+  { label: "East Midlands Airport", href: "/pricing/airports/East-Midlands", code: "EMA" },
+  { label: "Birmingham Airport", href: "/pricing/airports/Birmingham", code: "BHX" },
+  { label: "Heathrow Airport", href: "/pricing/airports/Heathrow", code: "LHR" },
+  { label: "Gatwick Airport", href: "/pricing/airports/Gatwick", code: "LGW" },
+  { label: "Stansted Airport", href: "/pricing/airports/Stansted", code: "STN" },
+  { label: "Luton Airport", href: "/pricing/airports/Luton", code: "LTN" },
+  { label: "Manchester Airport", href: "/pricing/airports/Manchester", code: "MAN" },
+] as const
 
 const areaMeta: Record<string, { title: string; description: string }> = {
   // 1. Aylestone
@@ -2450,6 +2460,14 @@ function getAreaBySlug(slug: string): AreaItem | undefined {
   return getAllAreas().find((a) => slugFromHref(a.href) === slug)
 }
 
+/** Neighbour slugs not in areaGroups are omitted (no broken sidebar links). */
+function resolveNearbyAreaLinks(slugs: string[]): AreaItem[] {
+  return slugs.flatMap((nearbySlug) => {
+    const item = getAreaBySlug(nearbySlug)
+    return item?.href && item?.name ? [item] : []
+  })
+}
+
 export function generateStaticParams() {
   return getAllAreas().map((a) => ({ slug: slugFromHref(a.href) }))
 }
@@ -2560,9 +2578,12 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     (footerData as any).priorityAreas?.optionalPriority?.some((d: any) => slugFromHref(d.href) === slug)
   const details = (footerData as any).areaDetails?.[slug] as { landmarks?: string[] } | undefined
   const landmarks = details?.landmarks ?? []
-  const relatedAreas = getAllAreas()
-    .filter((a) => slugFromHref(a.href) !== slug)
-    .slice(0, 6)
+  const nearbySlugs = nearbyAreasBySlug[slug]
+  const relatedAreas = nearbySlugs
+    ? resolveNearbyAreaLinks(nearbySlugs)
+    : getAllAreas()
+        .filter((a) => slugFromHref(a.href) !== slug)
+        .slice(0, 6)
 
   const isSupermarketDestination = supermarketDestinationSlugs.has(slug)
   const isHospitalArea = hospitalSlugs.has(slug)
@@ -2756,9 +2777,17 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       ) : (
                         <>
                           <li>{areaPlain} → Leicester City Centre</li>
-                          <li>{areaPlain} → Birmingham Airport (BHX)</li>
-                          <li>{areaPlain} → East Midlands Airport (EMA)</li>
-                          <li>{areaPlain} → London Heathrow (LHR)</li>
+                          {POPULAR_JOURNEY_AIRPORTS.map((airport) => (
+                            <li key={airport.href}>
+                              {areaPlain} →{" "}
+                              <Link
+                                href={airport.href}
+                                className="text-[#06A0A6] hover:underline underline-offset-2"
+                              >
+                                {airport.label} ({airport.code})
+                              </Link>
+                            </li>
+                          ))}
                           <li>{areaPlain} → Fosse Park / Train Station / Hospitals</li>
                         </>
                       )}
