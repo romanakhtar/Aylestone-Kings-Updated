@@ -6,6 +6,8 @@ import { footerData, companyInfo, contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import { JSX } from "react"
 import FAQSchema from "@/components/seo/FAQSchema"
+import PageBreadcrumbs from "@/components/PageBreadcrumbs"
+import { areaPageBreadcrumbs } from "@/lib/seo/breadcrumbs"
 
 type AreaItem = { name: string; href: string }
 const siteUrl = "https://aylestone-taxis.co.uk"
@@ -2610,11 +2612,24 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     )
   }
 
+  const breadcrumbLabel = isDestination
+    ? `Taxi to ${areaPlain}`
+    : `Taxis in ${areaPlain}`
+  const { items: breadcrumbItems, pageUrl: breadcrumbPageUrl } = areaPageBreadcrumbs(
+    breadcrumbLabel,
+    slug
+  )
+
   return (
     <main>
       <FAQSchema faqs={resolvedContent?.faqs ?? []} />
+      <div className="pt-24 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <PageBreadcrumbs items={breadcrumbItems} pageUrl={breadcrumbPageUrl} />
+        </div>
+      </div>
       {/* Hero */}
-      <section className="relative text-white bg-gradient-to-br from-[#0F0D3E] via-[#0F1B5A] to-[#0A7F84] pt-20">
+      <section className="relative text-white bg-gradient-to-br from-[#0F0D3E] via-[#0F1B5A] to-[#0A7F84] pt-14 sm:pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
