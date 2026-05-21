@@ -108,6 +108,13 @@ const nextConfig = {
   // Redirects for old sitelinks
   async redirects() {
     return [
+      // www → canonical non-www (http/https www → https://aylestone-taxis.co.uk)
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.aylestone-taxis.co.uk' }],
+        destination: 'https://aylestone-taxis.co.uk/:path*',
+        statusCode: 301,
+      },
       { source: '/index.html', destination: '/', permanent: true },
       { source: '/services.html', destination: '/travel', permanent: true },
       { source: '/faqs.html', destination: '/pricing', permanent: true },
