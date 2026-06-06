@@ -16,12 +16,19 @@ type PageBreadcrumbsProps = {
   items: CrumbItem[]
   pageUrl: string
   className?: string
+  /** When false, omit BreadcrumbList JSON-LD (e.g. when rendered separately in page structured data). */
+  includeJsonLd?: boolean
 }
 
-export default function PageBreadcrumbs({ items, pageUrl, className }: PageBreadcrumbsProps) {
+export default function PageBreadcrumbs({
+  items,
+  pageUrl,
+  className,
+  includeJsonLd = true,
+}: PageBreadcrumbsProps) {
   return (
     <>
-      <JsonLd data={buildBreadcrumbJsonLd(items, pageUrl)} />
+      {includeJsonLd ? <JsonLd data={buildBreadcrumbJsonLd(items, pageUrl)} /> : null}
       <Breadcrumb className={cn(className)}>
         <BreadcrumbList className="text-sm text-[#2E3C44]">
           {items.map((item, index) => (

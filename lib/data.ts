@@ -2598,8 +2598,8 @@ export const colorScheme = {
   },
 };
 export const copyrightInfo = {
-  year: 2025,
-  text: "© 2025 Aylestone Kings. All rights reserved.",
+  year: 2026,
+  text: "© 2026 Aylestone Kings. All rights reserved.",
 };
 
 export default siteData;
