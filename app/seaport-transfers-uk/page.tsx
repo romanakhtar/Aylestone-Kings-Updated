@@ -129,7 +129,7 @@ export default function SeaportTransfersUkPage() {
               >
                 <button
                   type="button"
-                  className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg"
+                  className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-xl font-semibold transition-[transform,opacity] duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg"
                 >
                   <Calendar className="h-6 w-6" />
                   Book online — fixed quote
@@ -141,7 +141,7 @@ export default function SeaportTransfersUkPage() {
               >
                 <button
                   type="button"
-                  className="w-full sm:w-auto border-2 border-[#06A0A6] text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-all duration-200 text-lg flex items-center justify-center gap-3"
+                  className="w-full sm:w-auto border-2 border-[#06A0A6] text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-[transform,opacity] duration-200 text-lg flex items-center justify-center gap-3"
                 >
                   <Phone className="h-6 w-6" />
                   Call {contactInfo.phone}
@@ -337,7 +337,7 @@ export default function SeaportTransfersUkPage() {
                 >
                   <button
                     type="button"
-                    className="bg-[#0F0D3E] hover:bg-[#06A0A6] text-white px-6 py-3 rounded-xl font-semibold transition-colors flex items-center gap-2"
+                    className="bg-[#0F0D3E] hover:bg-[#06A0A6] text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2"
                   >
                     Get a quote online
                     <ArrowRight className="h-5 w-5" />
@@ -346,7 +346,7 @@ export default function SeaportTransfersUkPage() {
                 <Link href="/contact">
                   <button
                     type="button"
-                    className="border-2 border-[#0F0D3E] text-[#0F0D3E] px-6 py-3 rounded-xl font-semibold hover:bg-[#0F0D3E] hover:text-white transition-colors"
+                    className="border-2 border-[#0F0D3E] text-[#0F0D3E] px-6 py-3 rounded-xl font-semibold hover:bg-[#0F0D3E] hover:text-white"
                   >
                     Message us with your dates
                   </button>
@@ -539,7 +539,7 @@ export default function SeaportTransfersUkPage() {
               >
                 <button
                   type="button"
-                  className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg transition-colors inline-flex items-center gap-2"
+                  className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg inline-flex items-center gap-2"
                 >
                   Book your cruise transfer
                   <ArrowRight className="h-5 w-5" />
@@ -632,7 +632,7 @@ export default function SeaportTransfersUkPage() {
               <a href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}>
                 <button
                   type="button"
-                  className="w-full sm:w-auto border-2 border-[#06A0A6] text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-colors flex items-center justify-center gap-2 text-lg"
+                  className="w-full sm:w-auto border-2 border-[#06A0A6] text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white flex items-center justify-center gap-2 text-lg"
                 >
                   <Phone className="h-5 w-5" />
                   Speak to us: {contactInfo.phone}
@@ -645,7 +645,7 @@ export default function SeaportTransfersUkPage() {
               >
                 <button
                   type="button"
-                  className="w-full sm:w-auto bg-[#0F0D3E] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] transition-colors text-lg"
+                  className="w-full sm:w-auto bg-[#0F0D3E] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] text-lg"
                 >
                   Open the booker
                 </button>
@@ -675,7 +675,7 @@ export default function SeaportTransfersUkPage() {
               {faqs.map((item) => (
                 <details
                   key={item.question}
-                  className="group bg-white rounded-xl border border-gray-200 shadow-sm open:shadow-md transition-shadow"
+                  className="group bg-white rounded-xl border border-gray-200 shadow-sm open:shadow-md transition-[transform,opacity]"
                 >
                   <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-[#0F0D3E] flex justify-between items-center gap-4">
                     {item.question}
@@ -712,7 +712,7 @@ export default function SeaportTransfersUkPage() {
               >
                 <button
                   type="button"
-                  className="w-full sm:w-auto bg-white text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2 text-lg"
+                  className="w-full sm:w-auto bg-white text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 flex items-center justify-center gap-2 text-lg"
                 >
                   Book now
                   <ArrowRight className="h-5 w-5" />
@@ -721,7 +721,7 @@ export default function SeaportTransfersUkPage() {
               <Link href="/pricing">
                 <button
                   type="button"
-                  className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#06A0A6] transition-colors text-lg"
+                  className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#06A0A6] text-lg"
                 >
                   View airport pricing
                 </button>

@@ -35,19 +35,18 @@ body.christmas-theme::before {
   animation: snow-fall 50s linear infinite;
   z-index: 999;
   display: block;
+  will-change: transform;
 }
 
-/* Snowfall Animation */
 @keyframes snow-fall {
   from {
-    background-position: 0 0;
+    transform: translateY(-600px);
   }
   to {
-    background-position: 0 600px;
+    transform: translateY(0);
   }
 }
 
-/* Alternative snow layer for depth (optional - using snow2.png) - Only on Homepage */
 body.christmas-theme::after {
   content: "";
   position: fixed;
@@ -59,15 +58,15 @@ body.christmas-theme::after {
   animation: snow-fall-slow 70s linear infinite;
   z-index: 998;
   display: block;
+  will-change: transform;
 }
 
-/* Slower snowfall animation for depth effect */
 @keyframes snow-fall-slow {
   from {
-    background-position: 0 0;
+    transform: translateY(-800px);
   }
   to {
-    background-position: 0 800px;
+    transform: translateY(0);
   }
 }
 

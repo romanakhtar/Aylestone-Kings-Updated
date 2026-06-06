@@ -55,7 +55,7 @@ export default function HomeReviewsSection() {
               {reviews.map((review, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
                   <div className="max-w-2xl mx-auto">
-                    <div className="bg-cyan-500/20 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-cyan-500/30 transform transition-all duration-300 hover:scale-105">
+                    <div className="bg-cyan-500/20 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-cyan-500/30 transform transition-transform duration-300 hover:scale-105">
                       <div className="flex justify-center mb-4">
                         <div className="w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-full flex items-center justify-center">
                           <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -95,7 +95,7 @@ export default function HomeReviewsSection() {
 
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 z-10"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-transform duration-200 hover:scale-110 z-10"
             aria-label="Previous review"
           >
             <ChevronLeft className="w-6 h-6 text-[#0F0D3E]" />
@@ -103,7 +103,7 @@ export default function HomeReviewsSection() {
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 z-10"
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-[transform,opacity] duration-200 hover:scale-110 z-10"
             aria-label="Next review"
           >
             <ChevronRight className="w-6 h-6 text-[#0F0D3E]" />
@@ -114,8 +114,8 @@ export default function HomeReviewsSection() {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                  index === currentSlide ? "bg-[#06A0A6] w-8" : "bg-gray-300 hover:bg-gray-400"
+                className={`w-3 h-3 rounded-full origin-center transition-transform duration-200 ${
+                  index === currentSlide ? "bg-[#06A0A6] scale-x-[2.67]" : "bg-gray-300 scale-x-100 hover:opacity-80"
                 }`}
                 aria-label={`Go to review ${index + 1}`}
               />
@@ -125,8 +125,8 @@ export default function HomeReviewsSection() {
           <div className="flex justify-center mt-4">
             <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                isAutoPlaying ? "bg-[#06A0A6] text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              className={`px-4 py-2 rounded-full text-sm font-medium ${
+                isAutoPlaying ? "bg-[#06A0A6] text-white" : "bg-gray-200 text-gray-700 hover:opacity-90"
               }`}
             >
               {isAutoPlaying ? "Pause" : "Play"} Auto-scroll

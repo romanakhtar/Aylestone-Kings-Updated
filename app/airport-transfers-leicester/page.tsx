@@ -1,4 +1,3 @@
-import Image from "next/image"
 import {
   Check,
   ArrowRight,
@@ -111,7 +110,7 @@ export default function AirportTransfersLeicesterPage() {
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto"
                 >
-                  <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg">
+                  <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-xl font-semibold transition-[transform,opacity] duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg">
                     <Plane className="h-6 w-6" />
                     Book Airport Transfer
                   </button>
@@ -120,7 +119,7 @@ export default function AirportTransfersLeicesterPage() {
                   href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
                   className="w-full sm:w-auto"
                 >
-                  <button className="w-full sm:w-auto border-2 border-[#06A0A6] text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-all duration-200 text-lg flex items-center justify-center gap-3">
+                  <button className="w-full sm:w-auto border-2 border-[#06A0A6] text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-[transform,opacity] duration-200 text-lg flex items-center justify-center gap-3">
                     <Phone className="h-6 w-6" />
                     Call {contactInfo.phone}
                   </button>
@@ -146,7 +145,7 @@ export default function AirportTransfersLeicesterPage() {
                 <Link
                   key={a.href}
                   href={a.href}
-                  className="px-3 py-2 rounded-full bg-[#E4E4E4] text-sm text-[#0F0D3E] hover:bg-[#06A0A6]/15 transition-colors"
+                  className="px-3 py-2 rounded-full bg-[#E4E4E4] text-sm text-[#0F0D3E] hover:bg-[#06A0A6]/15"
                 >
                   {String(a.name).replace(/^Taxis in\s+/i, "")}
                 </Link>
@@ -386,7 +385,7 @@ export default function AirportTransfersLeicesterPage() {
                 <Link
                   key={idx}
                   href={airport.href}
-                  className="bg-[#E4E4E4] p-6 rounded-xl hover:bg-[#06A0A6]/10 transition-colors"
+                  className="bg-[#E4E4E4] p-6 rounded-xl hover:bg-[#06A0A6]/10"
                 >
                   <Plane className="h-8 w-8 text-[#06A0A6] mb-3" />
                   <h3 className="text-[#0F0D3E] font-semibold text-lg">
@@ -401,7 +400,7 @@ export default function AirportTransfersLeicesterPage() {
             <div className="mt-12 text-center">
               <Link
                 href="/blog/leicester-to-east-midlands-airport-taxi-travel-guide-prices-booking-tips"
-                className="inline-flex items-center gap-2 text-[#06A0A6] hover:text-[#0F0D3E] font-semibold text-lg transition-colors"
+                className="inline-flex items-center gap-2 text-[#06A0A6] hover:text-[#0F0D3E] font-semibold text-lg"
               >
                 Leicester to East Midlands Airport Taxi – Travel Guide, Prices & Booking Tips
                 <ArrowRight className="h-5 w-5" />
@@ -409,7 +408,7 @@ export default function AirportTransfersLeicesterPage() {
               <div className="mt-3">
                 <Link
                   href="/leicester-to-east-midlands-airport-taxi"
-                  className="inline-flex items-center gap-2 text-[#06A0A6] hover:text-[#0F0D3E] font-semibold transition-colors"
+                  className="inline-flex items-center gap-2 text-[#06A0A6] hover:text-[#0F0D3E] font-semibold"
                 >
                   Leicester → East Midlands Airport (EMA) taxi (fixed fares from £40)
                   <ArrowRight className="h-4 w-4" />
@@ -439,7 +438,7 @@ export default function AirportTransfersLeicesterPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Link
                 href="/local-taxi-leicester"
-                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all"
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-[transform,opacity]"
               >
                 <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">
                   Local Taxi Service in Leicester
@@ -453,7 +452,7 @@ export default function AirportTransfersLeicesterPage() {
 
               <Link
                 href="/long-distance-taxi-leicester"
-                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all"
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-[transform,opacity]"
               >
                 <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">
                   Long-Distance & Corporate Taxi Service
@@ -508,7 +507,7 @@ export default function AirportTransfersLeicesterPage() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
               >
-                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center justify-center gap-3">
+                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] flex items-center justify-center gap-3">
                   Book Leicester Airport Taxi
                   <ArrowRight className="h-5 w-5" />
                 </button>
@@ -518,7 +517,7 @@ export default function AirportTransfersLeicesterPage() {
                 href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
                 className="w-full sm:w-auto"
               >
-                <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 flex items-center justify-center gap-3">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-[transform,opacity] duration-200 flex items-center justify-center gap-3">
                   <Phone className="h-5 w-5" />
                   Call {contactInfo.phone}
                 </button>

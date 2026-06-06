@@ -173,18 +173,18 @@ export default function CorporateTaxiAccountLeicesterPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="#corporate-enquiry" className="w-full sm:w-auto">
-                  <span className="flex w-full sm:w-auto cursor-pointer items-center justify-center gap-3 rounded-xl bg-[#06A0A6] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-200 hover:bg-[#0F0D3E] hover:shadow-xl">
+                  <span className="flex w-full sm:w-auto cursor-pointer items-center justify-center gap-3 rounded-xl bg-[#06A0A6] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-[transform,opacity] duration-200 hover:bg-[#0F0D3E] hover:shadow-xl">
                     <FileText className="h-6 w-6" aria-hidden />
                     Enquire for an account
                   </span>
                 </a>
                 <a href={`mailto:${contactInfo.email}`} className="w-full sm:w-auto">
-                  <span className="flex w-full sm:w-auto cursor-pointer items-center justify-center gap-3 rounded-xl border-2 border-[#06A0A6] px-8 py-4 text-lg font-semibold text-[#06A0A6] transition-all duration-200 hover:bg-[#06A0A6] hover:text-white">
+                  <span className="flex w-full sm:w-auto cursor-pointer items-center justify-center gap-3 rounded-xl border-2 border-[#06A0A6] px-8 py-4 text-lg font-semibold text-[#06A0A6] transition-[transform,opacity] duration-200 hover:bg-[#06A0A6] hover:text-white">
                     Email {contactInfo.email}
                   </span>
                 </a>
                 <a href={`tel:${contactInfo.phone.replace(/\s/g, "")}`} className="w-full sm:w-auto">
-                  <span className="flex w-full sm:w-auto cursor-pointer items-center justify-center gap-3 rounded-xl border-2 border-[#0F0D3E] px-8 py-4 text-lg font-semibold text-[#0F0D3E] transition-all duration-200 hover:bg-[#0F0D3E] hover:text-white">
+                  <span className="flex w-full sm:w-auto cursor-pointer items-center justify-center gap-3 rounded-xl border-2 border-[#0F0D3E] px-8 py-4 text-lg font-semibold text-[#0F0D3E] transition-[transform,opacity] duration-200 hover:bg-[#0F0D3E] hover:text-white">
                     <Phone className="h-6 w-6" aria-hidden />
                     Call {contactInfo.phone}
                   </span>
@@ -211,7 +211,7 @@ export default function CorporateTaxiAccountLeicesterPage() {
                 return (
                   <div
                     key={item.name}
-                    className="rounded-2xl border border-gray-100 bg-white p-6 shadow-lg transition-shadow hover:shadow-xl"
+                    className="rounded-2xl border border-gray-100 bg-white p-6 shadow-lg transition-[transform,opacity] hover:shadow-xl"
                   >
                     <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#06A0A6]/15">
                       <Icon className="h-6 w-6 text-[#06A0A6]" aria-hidden />
@@ -357,18 +357,18 @@ export default function CorporateTaxiAccountLeicesterPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="#corporate-enquiry" className="w-full sm:w-auto">
-                <span className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-[#06A0A6] transition-colors hover:bg-[#E4E4E4]">
+                <span className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-[#06A0A6] hover:bg-[#E4E4E4]">
                   <FileText className="h-5 w-5" aria-hidden />
                   Enquiry form
                 </span>
               </a>
               <a href={`mailto:${contactInfo.email}`} className="w-full sm:w-auto">
-                <span className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-semibold text-white transition-all hover:bg-white hover:text-[#06A0A6]">
+                <span className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-semibold text-white transition-[transform,opacity] hover:bg-white hover:text-[#06A0A6]">
                   Email {contactInfo.email}
                 </span>
               </a>
               <a href={`tel:${contactInfo.phone.replace(/\s/g, "")}`} className="w-full sm:w-auto">
-                <span className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-semibold text-white transition-all hover:bg-white hover:text-[#06A0A6]">
+                <span className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-semibold text-white transition-[transform,opacity] hover:bg-white hover:text-[#06A0A6]">
                   <Phone className="h-5 w-5" aria-hidden />
                   {contactInfo.phone}
                 </span>

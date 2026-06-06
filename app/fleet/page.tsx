@@ -110,7 +110,7 @@ export default function FleetPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
               {/* Estate Vehicle */}
-              <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+              <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-[transform,opacity] duration-300 group">
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
                   <Image 
                     src="/Estate vehicle.png" 
@@ -145,7 +145,7 @@ export default function FleetPage() {
               </div>
 
               {/* Executive */}
-              <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+              <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-[transform,opacity] duration-300 group">
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
                   <Image 
                     src="/Executive.jpg" 
@@ -180,7 +180,7 @@ export default function FleetPage() {
               </div>
 
               {/* 6 Seater */}
-              <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+              <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-[transform,opacity] duration-300 group">
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
                   <Image 
                     src="/6 seater.jpg" 
@@ -215,7 +215,7 @@ export default function FleetPage() {
               </div>
 
               {/* 8 Seater */}
-              <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+              <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-[transform,opacity] duration-300 group">
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
                   <Image 
                     src="/8 seater.jpg" 
@@ -450,13 +450,13 @@ export default function FleetPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base">
+                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base">
                   Book Now
                   <ArrowRight className="h-3 w-3 sm:h-5 sm:w-5" />
                 </button>
               </a>
               <a href="/pricing" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 text-sm sm:text-base">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-[transform,opacity] duration-200 text-sm sm:text-base">
                   View Airport Pricing
                 </button>
               </a>

@@ -44,13 +44,13 @@ export default function GatwickPage() {
               {/* Book Now Button */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto bg-gradient-to-r from-cyan-600 to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-700 hover:to-cyan-800 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg">
+                  <button className="w-full sm:w-auto bg-gradient-to-r from-cyan-600 to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-700 hover:to-cyan-800 transition-[transform,opacity] duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg">
                     <Calendar className="h-6 w-6" />
                     Book Now
                   </button>
                 </a>
                 <a href="/contact" className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto border-2 border-cyan-600 text-cyan-600 px-8 py-4 rounded-xl font-semibold hover:bg-cyan-600 hover:text-white transition-all duration-200 text-lg">
+                  <button className="w-full sm:w-auto border-2 border-cyan-600 text-cyan-600 px-8 py-4 rounded-xl font-semibold hover:bg-cyan-600 hover:text-white transition-[transform,opacity] duration-200 text-lg">
                     Contact Us
                   </button>
                 </a>
@@ -87,7 +87,7 @@ export default function GatwickPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900">
                         <div className="flex items-center space-x-3">
                           <Car className="h-6 w-6 text-cyan-600" />
@@ -97,7 +97,7 @@ export default function GatwickPage() {
                       <td className="px-6 py-4 text-center text-gray-700">1-4 passengers</td>
                       <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £200</td>
                     </tr>
-                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900">
                         <div className="flex items-center space-x-3">
                           <Users className="h-6 w-6 text-cyan-600" />
@@ -213,7 +213,7 @@ export default function GatwickPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {/* Journey Step 1 */}
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-[transform,opacity] duration-300">
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
                   <span className="text-blue-600 font-bold text-lg">1</span>
                 </div>
@@ -224,7 +224,7 @@ export default function GatwickPage() {
               </div>
 
               {/* Journey Step 2 */}
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-[transform,opacity] duration-300">
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
                   <span className="text-green-600 font-bold text-lg">2</span>
                 </div>
@@ -235,7 +235,7 @@ export default function GatwickPage() {
               </div>
 
               {/* Journey Step 3 */}
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-[transform,opacity] duration-300">
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
                   <span className="text-purple-600 font-bold text-lg">3</span>
                 </div>
@@ -246,7 +246,7 @@ export default function GatwickPage() {
               </div>
 
               {/* Journey Step 4 */}
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-[transform,opacity] duration-300">
                 <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
                   <span className="text-orange-600 font-bold text-lg">4</span>
                 </div>
@@ -257,7 +257,7 @@ export default function GatwickPage() {
               </div>
 
               {/* Journey Step 5 */}
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-[transform,opacity] duration-300">
                 <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
                   <span className="text-red-600 font-bold text-lg">5</span>
                 </div>
@@ -268,7 +268,7 @@ export default function GatwickPage() {
               </div>
 
               {/* Journey Step 6 */}
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-[transform,opacity] duration-300">
                 <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
                   <span className="text-indigo-600 font-bold text-lg">6</span>
                 </div>
@@ -294,13 +294,13 @@ export default function GatwickPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base">
+                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base">
                   Book Now
                   <ArrowRight className="h-3 w-3 sm:h-5 sm:w-5" />
                 </button>
               </a>
               <a href="/pricing" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 text-sm sm:text-base">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-[transform,opacity] duration-200 text-sm sm:text-base">
                   View All Airport Pricing
                 </button>
               </a>

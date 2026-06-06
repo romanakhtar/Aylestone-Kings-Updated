@@ -181,7 +181,7 @@ export default function ServicesPage() {
               return (
                 <div 
                   key={index}
-                  className="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-[transform,opacity] duration-300 hover:-translate-y-1"
                 >
                   <div className="w-16 h-16 bg-[#06A0A6]/10 rounded-xl flex items-center justify-center mb-6">
                     <IconComponent className="h-8 w-8 text-[#06A0A6]" />
@@ -198,14 +198,14 @@ export default function ServicesPage() {
                         href={contactInfo.booking.online}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#0F0D3E] transition-colors"
+                        className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#0F0D3E]"
                       >
                         Book Online
                         <ArrowRight className="h-4 w-4" />
                       </a>
                       <a 
                         href={`tel:${contactInfo.phone}`}
-                        className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#06A0A6] hover:text-white transition-colors"
+                        className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#06A0A6] hover:text-white"
                       >
                         <Phone className="h-4 w-4" />
                         Call
@@ -214,7 +214,7 @@ export default function ServicesPage() {
                     {isCorporateService ? (
                       <Link
                         href="/corporate-taxi-account-leicester"
-                        className="inline-flex items-center justify-center gap-2 border-2 border-[#0F0D3E] text-[#0F0D3E] px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#0F0D3E] hover:text-white transition-colors"
+                        className="inline-flex items-center justify-center gap-2 border-2 border-[#0F0D3E] text-[#0F0D3E] px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#0F0D3E] hover:text-white"
                       >
                         <FileText className="h-4 w-4" />
                         Corporate accounts Leicester
@@ -243,7 +243,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link 
               href="/fleet"
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg border border-gray-200 transition-all duration-300 hover:-translate-y-1"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg border border-gray-200 transition-[transform,opacity] duration-300 hover:-translate-y-1"
             >
               <Car className="h-10 w-10 text-[#06A0A6] mb-4" />
               <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Our Fleet</h3>
@@ -252,7 +252,7 @@ export default function ServicesPage() {
             
             <Link 
               href="/pricing"
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg border border-gray-200 transition-all duration-300 hover:-translate-y-1"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg border border-gray-200 transition-[transform,opacity] duration-300 hover:-translate-y-1"
             >
               <Plane className="h-10 w-10 text-[#06A0A6] mb-4" />
               <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Airport Pricing</h3>
@@ -261,7 +261,7 @@ export default function ServicesPage() {
 
             <Link 
               href="/corporate-taxi-account-leicester"
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg border border-gray-200 transition-all duration-300 hover:-translate-y-1"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg border border-gray-200 transition-[transform,opacity] duration-300 hover:-translate-y-1"
             >
               <Briefcase className="h-10 w-10 text-[#06A0A6] mb-4" />
               <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Corporate accounts</h3>
@@ -270,7 +270,7 @@ export default function ServicesPage() {
             
             <Link 
               href="/contact"
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg border border-gray-200 transition-all duration-300 hover:-translate-y-1"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg border border-gray-200 transition-[transform,opacity] duration-300 hover:-translate-y-1"
             >
               <Phone className="h-10 w-10 text-[#06A0A6] mb-4" />
               <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Contact Us</h3>
@@ -296,7 +296,7 @@ export default function ServicesPage() {
               rel="noopener noreferrer"
               className="inline-block"
             >
-              <button className="bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl">
+              <button className="bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 flex items-center gap-3 shadow-lg hover:shadow-xl">
                 Book Online Now
                 <ArrowRight className="h-5 w-5" />
               </button>
@@ -305,7 +305,7 @@ export default function ServicesPage() {
               href={`tel:${contactInfo.phone}`}
               className="inline-block"
             >
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-3">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-[transform,opacity] duration-200 shadow-lg hover:shadow-xl flex items-center gap-3">
                 <Phone className="h-5 w-5" />
                 Call {contactInfo.phone}
               </button>

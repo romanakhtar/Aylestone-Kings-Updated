@@ -39,7 +39,7 @@ export default function CompanyPage() {
           <div className="text-center fade-in">
             {/* Enhanced Badge */}
             <p>,</p>
-            <div className=" inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium mb-8 shadow-professional-lg">
+            <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium mb-8 shadow-professional-lg">
               <Shield className="h-4 w-4 text-[#06A0A6] mr-3" />
               Our Company
             </div>
@@ -254,7 +254,7 @@ export default function CompanyPage() {
               
               {/* CTA Button */}
               <a href="/contact" className="inline-block">
-                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
+                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
                   Contact Us
                   <ArrowRight className="h-5 w-5 transition-smooth group-hover:translate-x-1" />
                 </button>

@@ -60,7 +60,7 @@
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, 
@@ -68,12 +68,13 @@
     rgba(255, 255, 255, 0.2) 50%, 
     transparent 100%
   );
+  transform: translateX(-100%);
   animation: banner-shimmer 3s infinite;
 }
 
 @keyframes banner-shimmer {
-  0% { left: -100%; }
-  100% { left: 100%; }
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 /* Halloween CTA Button Glow Effect */
@@ -83,33 +84,28 @@
   color: white !important;
   box-shadow: 
     0 0 20px var(--halloween-glow),
-    0 0 40px var(--halloween-glow),
     0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.halloween-cta-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 40px var(--halloween-glow);
+  opacity: 0.5;
   animation: halloween-glow 2s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
 .halloween-cta-glow:hover {
   background: var(--halloween-off-black) !important;
-  box-shadow: 
-    0 0 25px var(--halloween-glow),
-    0 0 50px var(--halloween-glow),
-    0 6px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
 
 @keyframes halloween-glow {
-  0% {
-    box-shadow: 
-      0 0 20px var(--halloween-glow),
-      0 0 40px var(--halloween-glow),
-      0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  100% {
-    box-shadow: 
-      0 0 25px var(--halloween-glow),
-      0 0 50px var(--halloween-glow),
-      0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+  0% { opacity: 0.35; transform: scale(1); }
+  100% { opacity: 0.75; transform: scale(1.02); }
 }
 
 /* Floating Halloween Elements */

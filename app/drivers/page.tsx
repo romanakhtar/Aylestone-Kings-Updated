@@ -582,7 +582,7 @@ export default function JoinDriverPage() {
               {driverContent.hero.body}
             </p>
             <div className="flex justify-center">
-              <Button asChild className="bg-[#06A0A6] hover:bg-[#05858a] text-white px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+              <Button asChild className="bg-[#06A0A6] hover:bg-[#05858a] text-white px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-[transform,opacity] duration-300">
                 <a href="#driver-application-form">{driverContent.hero.primaryCta.label}</a>
               </Button>
             </div>
@@ -1516,7 +1516,7 @@ export default function JoinDriverPage() {
                   if (typeof item === 'string') return null
                   const IconComponent = iconMap[item.icon] || Car
                   return (
-                    <div key={index} className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-all duration-300 hover:-translate-y-1">
+                    <div key={index} className="group bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:border-[#06A0A6]/30 transition-[transform,opacity] duration-300 hover:-translate-y-1">
                       <div className="w-14 h-14 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                         <IconComponent className="h-7 w-7 text-white" />
                       </div>
@@ -1552,7 +1552,7 @@ export default function JoinDriverPage() {
                     const isLastOdd = index === whyChooseSection.items!.length - 1 && whyChooseSection.items!.length % 2 !== 0
                     const itemText = typeof item === 'string' ? item : String(item)
                     return (
-                      <div key={index} className={`flex items-start gap-4 p-6 bg-white rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-300 ${isLastOdd ? 'md:col-span-2 md:max-w-md md:mx-auto' : ''}`}>
+                      <div key={index} className={`flex items-start gap-4 p-6 bg-white rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300 ${isLastOdd ? 'md:col-span-2 md:max-w-md md:mx-auto' : ''}`}>
                         <CheckCircle2 className="h-6 w-6 text-[#06A0A6] mt-0.5 flex-shrink-0" />
                         <span className="text-slate-700 leading-relaxed">{itemText}</span>
                       </div>
@@ -1617,7 +1617,7 @@ export default function JoinDriverPage() {
 
           <div className="max-w-5xl mx-auto">
             <div className="space-y-5">
-              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <Star className="h-6 w-6 text-white" />
                 </div>
@@ -1629,7 +1629,7 @@ export default function JoinDriverPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <Phone className="h-6 w-6 text-white" />
                 </div>
@@ -1641,7 +1641,7 @@ export default function JoinDriverPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <Briefcase className="h-6 w-6 text-white" />
                 </div>
@@ -1653,7 +1653,7 @@ export default function JoinDriverPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <Shield className="h-6 w-6 text-white" />
                 </div>
@@ -1665,7 +1665,7 @@ export default function JoinDriverPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <Users className="h-6 w-6 text-white" />
                 </div>
@@ -1677,7 +1677,7 @@ export default function JoinDriverPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex items-start gap-5 p-6 bg-gradient-to-r from-slate-50 to-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <PoundSterling className="h-6 w-6 text-white" />
                 </div>
@@ -1711,7 +1711,7 @@ export default function JoinDriverPage() {
                 <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
                   1
                 </div>
-                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-[transform,opacity] duration-300">
                   <h3 className="font-bold text-[#0F0D3E] mb-3 text-xl">Complete Application Form</h3>
                   <p className="text-slate-600 leading-relaxed">
                     Fill out the application form below with all required information. Make sure all documents are ready for upload.
@@ -1723,7 +1723,7 @@ export default function JoinDriverPage() {
                 <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
                   2
                 </div>
-                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-[transform,opacity] duration-300">
                   <h3 className="font-bold text-[#0F0D3E] mb-3 text-xl">Document Review</h3>
                   <p className="text-slate-600 leading-relaxed">
                     Our team will review your application and verify all submitted documents. This typically takes 2-3 business days.
@@ -1735,7 +1735,7 @@ export default function JoinDriverPage() {
                 <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
                   3
                 </div>
-                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-[transform,opacity] duration-300">
                   <h3 className="font-bold text-[#0F0D3E] mb-3 text-xl">Onboarding & Training</h3>
                   <p className="text-slate-600 leading-relaxed">
                   Once accepted, you'll complete onboarding and training to familiarize yourself with our systems and procedures.       
@@ -1747,7 +1747,7 @@ export default function JoinDriverPage() {
                 <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
                   4
                 </div>
-                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-shadow duration-300">
+                <div className="flex-1 bg-white p-8 rounded-2xl shadow-md border border-slate-200/80 hover:shadow-lg transition-[transform,opacity] duration-300">
                   <h3 className="font-bold text-[#0F0D3E] mb-3 text-xl">Start Driving</h3>
                   <p className="text-slate-600 leading-relaxed">
                     Begin taking bookings and start earning! Our team will be available to support you as you get started.
@@ -1773,7 +1773,7 @@ export default function JoinDriverPage() {
           </div>
 
           <div className="space-y-5">
-            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
               <div className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <HelpCircle className="h-6 w-6 text-white" />
@@ -1787,7 +1787,7 @@ export default function JoinDriverPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
               <div className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <HelpCircle className="h-6 w-6 text-white" />
@@ -1801,7 +1801,7 @@ export default function JoinDriverPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
               <div className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <HelpCircle className="h-6 w-6 text-white" />
@@ -1815,7 +1815,7 @@ export default function JoinDriverPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
               <div className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <HelpCircle className="h-6 w-6 text-white" />
@@ -1829,7 +1829,7 @@ export default function JoinDriverPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
               <div className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <HelpCircle className="h-6 w-6 text-white" />
@@ -1843,7 +1843,7 @@ export default function JoinDriverPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
               <div className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <HelpCircle className="h-6 w-6 text-white" />
@@ -1857,7 +1857,7 @@ export default function JoinDriverPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="bg-gradient-to-r from-slate-50 to-white p-7 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-[transform,opacity] duration-300">
               <div className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-xl flex items-center justify-center shadow-sm">
                   <HelpCircle className="h-6 w-6 text-white" />
@@ -1890,7 +1890,7 @@ export default function JoinDriverPage() {
                   {finalCtaSection.body}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                  <Button asChild className="bg-[#06A0A6] hover:bg-[#05858a] text-white px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3">
+                  <Button asChild className="bg-[#06A0A6] hover:bg-[#05858a] text-white px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-[transform,opacity] duration-300 flex items-center gap-3">
                     <a href="#driver-application-form">
                       {primaryCta.label}
                       <ArrowRight className="h-5 w-5" />

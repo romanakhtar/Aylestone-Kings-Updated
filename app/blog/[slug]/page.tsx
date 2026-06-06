@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {/* Back Link */}
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors duration-200"
+            className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6"
           >
             <ArrowLeft className="h-4 w-4" />
             <span>Back to Blog</span>
@@ -167,13 +167,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {prevBlog ? (
               <Link
                 href={`/blog/${prevBlog.id}`}
-                className="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-200 border border-[#E4E4E4]"
+                className="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-[transform,opacity] duration-200 border border-[#E4E4E4]"
               >
                 <div className="flex items-center gap-2 text-[#06A0A6] text-sm font-semibold mb-3">
                   <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform duration-200" />
                   <span>Previous Post</span>
                 </div>
-                <h3 className="text-lg font-bold text-[#0F0D3E] group-hover:text-[#06A0A6] transition-colors duration-200">
+                <h3 className="text-lg font-bold text-[#0F0D3E] group-hover:text-[#06A0A6]">
                   {prevBlog.title}
                 </h3>
               </Link>
@@ -191,13 +191,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {nextBlog ? (
               <Link
                 href={`/blog/${nextBlog.id}`}
-                className="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-200 border border-[#E4E4E4] text-right md:text-left"
+                className="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-[transform,opacity] duration-200 border border-[#E4E4E4] text-right md:text-left"
               >
                 <div className="flex items-center justify-end md:justify-start gap-2 text-[#06A0A6] text-sm font-semibold mb-3">
                   <span>Next Post</span>
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                 </div>
-                <h3 className="text-lg font-bold text-[#0F0D3E] group-hover:text-[#06A0A6] transition-colors duration-200">
+                <h3 className="text-lg font-bold text-[#0F0D3E] group-hover:text-[#06A0A6]">
                   {nextBlog.title}
                 </h3>
               </Link>
@@ -231,13 +231,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
               >
-                <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl">
+                <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl">
                   Book Online Now
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
               <a href={`tel:${contactInfo.phone}`} className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:bg-white hover:text-[#06A0A6]">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 hover:bg-white hover:text-[#06A0A6]">
                   Call {contactInfo.phone}
                 </button>
               </a>
