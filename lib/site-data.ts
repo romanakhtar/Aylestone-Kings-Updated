@@ -93,8 +93,8 @@ export const siteData = {
 
   // Copyright Information
   copyright: {
-    year: 2025,
-    text: "© 2025 Aylestone Kings. All rights reserved."
+    year: 2026,
+    text: "© 2026 Aylestone Kings. All rights reserved."
   }
 }
 

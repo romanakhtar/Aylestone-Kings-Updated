@@ -1,60 +1,23 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { Check, ArrowRight, Star, MapPin, Clock, Shield, ShieldCheck, BadgeCheck, Users, ChevronLeft, ChevronRight, Car, Plane } from "@/lib/icons"
+import { Check, ArrowRight, Star, MapPin, Clock, Shield, ShieldCheck, BadgeCheck, Users, Car, Plane } from "@/lib/icons"
 import { Briefcase } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
-import { useState, useEffect } from "react"
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 import { useValentineTheme } from "@/components/ValentineThemeProvider"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import FareEstimator from "@/components/FareEstimator"
-import FAQSchema from "@/components/seo/FAQSchema"
 
-// Dynamically import non-critical component
-const AppDownloadButtons = dynamic(() => import("@/components/AppDownloadButtons"), {
-  ssr: true,
-})
+const FareEstimator = dynamic(() => import("@/components/FareEstimator"), { ssr: false })
+const FAQSchema = dynamic(() => import("@/components/seo/FAQSchema"), { ssr: false })
+const AppDownloadButtons = dynamic(() => import("@/components/AppDownloadButtons"), { ssr: false })
+const HomeReviewsSection = dynamic(() => import("@/components/home/HomeReviewsSection"), { ssr: false })
+const HomeFAQSection = dynamic(() => import("@/components/home/HomeFAQSection"), { ssr: false })
 
 export default function HomePageClient() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const { isHalloweenActive } = useHalloweenTheme()
   const { isValentineActive } = useValentineTheme()
-
-  const reviews = siteData.homepage.customerReviews.reviews
-  const totalSlides = reviews.length
-
-  useEffect(() => {
-    if (!isAutoPlaying) return
-
-    // Check if mobile and use longer interval for better performance
-    const isMobile = window.innerWidth <= 768
-    const intervalTime = isMobile ? 8000 : 5000 // 8s on mobile, 5s on desktop
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % totalSlides)
-    }, intervalTime)
-
-    return () => clearInterval(interval)
-  }, [isAutoPlaying, totalSlides])
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides)
-    setIsAutoPlaying(false)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
-    setIsAutoPlaying(false)
-  }
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index)
-    setIsAutoPlaying(false)
-  }
 
   const homeFaqs = [
     {
@@ -806,175 +769,9 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Customer Reviews Section */}
-      <section className="py-20 bg-[#E4E4E4]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">{siteData.homepage.customerReviews.title}</h2>
-          </div>
+      <HomeReviewsSection />
 
-          {/* Carousel Container */}
-          <div className="relative">
-            {/* Carousel Track */}
-            <div className="overflow-hidden">
-              <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` } as React.CSSProperties}
-              >
-                {reviews.map((review, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className="max-w-2xl mx-auto">
-                      <div className="bg-cyan-500/20 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-cyan-500/30 transform transition-all duration-300 hover:scale-105">
-                        {/* Quote Icon */}
-                        <div className="flex justify-center mb-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-full flex items-center justify-center">
-                            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                            </svg>
-                          </div>
-                        </div>
-
-                        {/* Stars */}
-                        <div className="flex justify-center gap-1 mb-4">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-5 w-5 fill-[#06A0A6] text-[#06A0A6]" />
-                          ))}
-                        </div>
-
-                        {/* Review Text */}
-                        <p className="text-[#0F0D3E] text-base md:text-lg mb-6 leading-relaxed italic text-center font-medium">
-                          "{review.text}"
-                        </p>
-
-                        {/* Author Info */}
-                        <div className="flex flex-col items-center text-center">
-                          <div className="w-12 h-12 bg-gradient-to-br from-[#06A0A6]/20 to-[#0F0D3E]/20 rounded-full flex items-center justify-center mb-3">
-                            <span className="text-[#06A0A6] font-bold text-lg">
-                              {review.author
-                                .split(" ")
-                                .map((n) => n[0])
-                                .join("")}
-                            </span>
-                          </div>
-                          <h4 className="font-bold text-[#0F0D3E] text-base">{review.author}</h4>
-                          <p className="text-xs text-[#0F0D3E] bg-[#06A0A6]/20 px-3 py-1 rounded-full">{review.type}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Navigation Arrows */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 z-10"
-              aria-label="Previous review"
-            >
-              <ChevronLeft className="w-6 h-6 text-[#0F0D3E]" />
-            </button>
-
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 z-10"
-              aria-label="Next review"
-            >
-              <ChevronRight className="w-6 h-6 text-[#0F0D3E]" />
-            </button>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center mt-8 gap-3">
-              {reviews.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                    index === currentSlide ? "bg-[#06A0A6] w-8" : "bg-gray-300 hover:bg-gray-400"
-                  }`}
-                  aria-label={`Go to review ${index + 1}`}
-                />
-              ))}
-            </div>
-
-            {/* Auto-play Toggle */}
-            <div className="flex justify-center mt-4">
-              <button
-                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  isAutoPlaying ? "bg-[#06A0A6] text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-              >
-                {isAutoPlaying ? "Pause" : "Play"} Auto-scroll
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-6">Frequently Asked Questions</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Common questions about booking a taxi in Leicester</p>
-          </div>
-
-          <Accordion type="single" collapsible className="w-full space-y-4">
-            <AccordionItem value="item-1" className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm">
-              <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
-                How do I book a taxi in Leicester?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                Book online in seconds or call our office. You can book instantly or pre-book for later.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-2" className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm">
-              <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
-                Are you available 24/7?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                Yes, we operate 24/7 including weekends and bank holidays.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3" className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm">
-              <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
-                Do you offer fixed prices?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">Yes, you&apos;ll see the price before confirming your booking.</AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-4" className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm">
-              <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
-                Can I pre-book a taxi in advance?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                Yes, pre-booking is available and recommended during busy times.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-5" className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm">
-              <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
-                Do you provide airport transfers?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                Yes, we provide fixed-price airport transfers to all major UK airports.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-6" className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm">
-              <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
-                Do you have larger vehicles for groups or luggage?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 leading-relaxed">
-                Yes, you can choose the appropriate vehicle type during booking, subject to availability.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      </section>
+      <HomeFAQSection />
 
       {/* Call to Action Section */}
       <section

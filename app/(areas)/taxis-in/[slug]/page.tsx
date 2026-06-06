@@ -5,9 +5,11 @@ import { ArrowRight, MapPin, Plane, Clock, Shield, Car } from "lucide-react"
 import { footerData, companyInfo, contactInfo, nearbyAreasBySlug } from "@/lib/data"
 import type { Metadata } from "next"
 import { JSX } from "react"
-import FAQSchema from "@/components/seo/FAQSchema"
 import PageBreadcrumbs from "@/components/PageBreadcrumbs"
+import AreaPageStructuredData from "@/components/areas/AreaPageStructuredData"
+import AreaPageDeferredFAQ from "@/components/areas/AreaPageDeferredFAQ"
 import { areaPageBreadcrumbs } from "@/lib/seo/breadcrumbs"
+import { collectAreaPageFaqs } from "@/lib/seo/areaPageFaqs"
 
 type AreaItem = { name: string; href: string }
 const siteUrl = "https://aylestone-taxis.co.uk"
@@ -2621,18 +2623,6 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       }
     : selectedAreaContent
 
-  const faqSeen = new Set<string>()
-  const renderFaq = (question: string, answer: string) => {
-    if (faqSeen.has(question)) return null
-    faqSeen.add(question)
-    return (
-      <details key={question} className="group border border-gray-100 rounded-md p-4">
-        <summary className="cursor-pointer text-gray-900 font-medium">{question}</summary>
-        <p className="mt-2 text-gray-700">{answer}</p>
-      </details>
-    )
-  }
-
   const breadcrumbLabel = isDestination
     ? `Taxi to ${areaPlain}`
     : `Taxis in ${areaPlain}`
@@ -2641,12 +2631,25 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     slug
   )
 
+  const areaFaqs = collectAreaPageFaqs({
+    resolvedFaqs: resolvedContent?.faqs,
+    areaPlain,
+    isWigston,
+    isOadby,
+    isBeaumontLeys,
+    isPrioritySeoArea,
+  })
+
   return (
     <main>
-      <FAQSchema faqs={resolvedContent?.faqs ?? []} />
+      <AreaPageStructuredData
+        breadcrumbItems={breadcrumbItems}
+        breadcrumbPageUrl={breadcrumbPageUrl}
+        faqs={areaFaqs}
+      />
       <div className="pt-24 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <PageBreadcrumbs items={breadcrumbItems} pageUrl={breadcrumbPageUrl} />
+          <PageBreadcrumbs items={breadcrumbItems} pageUrl={breadcrumbPageUrl} includeJsonLd={false} />
         </div>
       </div>
       {/* Hero */}
@@ -3015,122 +3018,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 </div>
               )}
 
-              {/* FAQs - combined: custom plus generic, with no duplicates */}
-              <div id="faqs" className="rounded-lg border border-gray-200 p-5">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-3">FAQs about taxi in {areaPlain}</h2>
-                <div className="space-y-4">
-                  {/* Custom FAQs for this area (if any) */}
-                  {resolvedContent?.faqs?.map((faq) => renderFaq(faq.question, faq.answer))}
-
-                  {/* Area-specific extras for Wigston, Oadby, Beaumont Leys */}
-                  {isWigston &&
-                    [
-                      {
-                        question: "Do you provide taxis from Wigston town centre and Bell Street?",
-                        answer:
-                          "Yes. Our Wigston taxi service covers the town centre, Bell Street and nearby residential areas. You can book quick local trips, nights out, shopping journeys and more with fixed, competitive prices.",
-                      },
-                      {
-                        question: "Can I get a taxi from South Wigston station?",
-                        answer:
-                          "Absolutely. We regularly pick up from South Wigston station. Pre-book your taxi with your train time, or call when you arrive and we will send the nearest available driver.",
-                      },
-                      {
-                        question: "How long does a taxi from Wigston to Leicester city centre usually take?",
-                        answer:
-                          "Typical journey times from Wigston to Leicester city centre are around 15–20 minutes in normal traffic. During rush hour it may take a little longer, so we recommend allowing extra time.",
-                      },
-                    ].map((f) => renderFaq(f.question, f.answer))}
-
-                  {isOadby &&
-                    [
-                      {
-                        question: "Do you provide taxis to Leicester Racecourse from Oadby?",
-                        answer:
-                          "Yes. Our Oadby taxi service takes you to Leicester Racecourse for race days and events. Pre-book ahead of popular fixtures to ensure your ride.",
-                      },
-                      {
-                        question: "Can I get a taxi from Stoughton Road in Oadby?",
-                        answer:
-                          "Absolutely. We cover Stoughton Road and the wider Oadby area. Book online or call for pickups to Leicester, the Racecourse, hospitals and airports.",
-                      },
-                      {
-                        question: "How long does a taxi from Oadby to Leicester city centre usually take?",
-                        answer:
-                          "Typical journey times from Oadby to Leicester city centre are around 10–15 minutes in normal traffic. Rush hour or race days may add a few minutes.",
-                      },
-                    ].map((f) => renderFaq(f.question, f.answer))}
-
-                  {isBeaumontLeys &&
-                    [
-                      {
-                        question: "Do you provide taxis from Beaumont Leys Shopping Centre?",
-                        answer:
-                          "Yes. We pick up and drop off at Beaumont Leys Shopping Centre and the surrounding area. Book for shopping trips, work or evenings out – we cover Beaumont Leys 24/7.",
-                      },
-                      {
-                        question: "How long does a taxi from Beaumont Leys to Leicester city centre take?",
-                        answer:
-                          "Typical journey times from Beaumont Leys to Leicester city centre are around 15–20 minutes in normal traffic. Rush hour can add a few minutes.",
-                      },
-                      {
-                        question: "Can I book an East Midlands Airport taxi from Beaumont Leys?",
-                        answer:
-                          "Yes. We offer fixed-fare East Midlands Airport (EMA) transfers from Beaumont Leys with flight tracking and optional meet & greet. Pre-book for the best price.",
-                      },
-                    ].map((f) => renderFaq(f.question, f.answer))}
-
-                  {/* Generic FAQs are hidden on priority pages to keep those pages uniquely local */}
-                  {!isPrioritySeoArea &&
-                    [
-                      {
-                        question: `Where can I find an affordable taxi in ${areaPlain}?`,
-                        answer:
-                          `Aylestone Kings provides an affordable taxi in ${areaPlain} with fixed fares and no hidden charges. Book online, by phone, or WhatsApp for competitive rates.`,
-                      },
-                      {
-                        question: `Do you offer airport taxi services from ${areaPlain}?`,
-                        answer:
-                          `Yes. Our airport taxi service covers all major UK airports from ${areaPlain}, including Birmingham, East Midlands, Heathrow, and Gatwick with fixed pricing.`,
-                      },
-                      {
-                        question: `How much does an affordable taxi in ${areaPlain} cost?`,
-                        answer:
-                          `Our affordable taxi in ${areaPlain} offers competitive rates with upfront quotes. Local journeys start from competitive prices, and airport transfers have fixed fares.`,
-                      },
-                      {
-                        question: `Is your taxi in ${areaPlain} available 24/7?`,
-                        answer:
-                          `Yes. Our taxi in ${areaPlain} operates 24/7, including weekends and bank holidays. Fast pickups available throughout Leicester.`,
-                      },
-                      {
-                        question: `Can I pre-book an airport taxi from ${areaPlain}?`,
-                        answer:
-                          `Absolutely. Pre-book your airport taxi from ${areaPlain} for peace of mind. We monitor flights and provide meet & greet service on request.`,
-                      },
-                      {
-                        question: `How much is a taxi from ${areaPlain} to Leicester City Centre?`,
-                        answer:
-                          "Fares vary with traffic and pickup point, but we offer fixed, competitive pricing. Get an instant quote and book online.",
-                      },
-                      {
-                        question: "What vehicle types are available?",
-                        answer:
-                          "Choose from saloons, estates, MPVs and minibuses for larger groups. All vehicles are clean, comfortable and licensed.",
-                      },
-                      {
-                        question: "Do you provide child seats on request?",
-                        answer:
-                          "Yes. Add a note during booking and we'll provide appropriate child seating where available.",
-                      },
-                      {
-                        question: "Can I pay by card?",
-                        answer:
-                          "We accept multiple secure payment methods including card and contactless, subject to vehicle availability.",
-                      },
-                    ].map((f) => renderFaq(f.question, f.answer))}
-                </div>
-              </div>
+              <AreaPageDeferredFAQ areaPlain={areaPlain} faqs={areaFaqs} />
 
             </div>
             <aside className="space-y-2 lg:sticky lg:top-28 h-fit lg:max-h-[calc(100vh-7rem)]">

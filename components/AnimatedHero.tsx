@@ -2,9 +2,11 @@
 
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
+import dynamic from "next/dynamic"
 import { ArrowRight, MapPin, Clock, Shield } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
-import ContactModeCards from "@/components/ContactModeCards"
+
+const ContactModeCards = dynamic(() => import("@/components/ContactModeCards"), { ssr: false })
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 import { useChristmasTheme } from "@/components/ChristmasThemeProvider"
 import { useValentineTheme } from "@/components/ValentineThemeProvider"

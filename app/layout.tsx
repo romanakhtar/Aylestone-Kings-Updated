@@ -5,26 +5,13 @@ import "./globals.css"
 import "../styles/halloween.css"
 import "../styles/christmas.css"
 import "../styles/valentine.css"
-import dynamic from "next/dynamic"
 import ContactInfoBar from "@/components/contact-info-bar"
 import { Navigation } from "@/components/navigation"
 import { HalloweenThemeProvider } from "@/components/HalloweenThemeProvider"
 import { ChristmasThemeProvider } from "@/components/ChristmasThemeProvider"
 import { ValentineThemeProvider } from "@/components/ValentineThemeProvider"
+import { DeferredLayoutChrome, DeferredHalloweenFloating } from "@/components/layout/DeferredLayoutChrome"
 import Script from "next/script"
-
-// Dynamically import non-critical components
-const Footer = dynamic(() => import("@/components/footer"))
-
-const FloatingContactButton = dynamic(() => import("@/components/FloatingContactButton"))
-
-const AnalyticsTracker = dynamic(() => import("@/components/AnalyticsTracker"))
-
-const HalloweenTopBanner = dynamic(() => import("@/components/HalloweenTopBanner"))
-
-const HalloweenFloatingElements = dynamic(() => import("@/components/HalloweenFloatingElements"))
-
-const HalloweenSpiderWeb = dynamic(() => import("@/components/HalloweenSpiderWeb"))
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -230,17 +217,13 @@ export default function RootLayout({
         <HalloweenThemeProvider>
           <ChristmasThemeProvider>
             <ValentineThemeProvider>
-              <HalloweenTopBanner />
               <ContactInfoBar />
               <Navigation />
-              <HalloweenSpiderWeb />
               <main className="relative">
-                <HalloweenFloatingElements />
+                <DeferredHalloweenFloating />
                 {children}
               </main>
-              <Footer />
-              <FloatingContactButton />
-              <AnalyticsTracker />
+              <DeferredLayoutChrome />
             </ValentineThemeProvider>
           </ChristmasThemeProvider>
         </HalloweenThemeProvider>
