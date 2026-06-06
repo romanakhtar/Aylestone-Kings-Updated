@@ -34,7 +34,7 @@ export default function CorporateAccountEnquiryForm() {
         <button
           type="button"
           onClick={() => window.location.reload()}
-          className="mt-6 rounded-lg bg-[#06A0A6] px-6 py-3 font-semibold text-white hover:bg-[#0F0D3E] transition-colors"
+          className="mt-6 rounded-lg bg-[#06A0A6] px-6 py-3 font-semibold text-white hover:bg-[#0F0D3E]"
         >
           Send another enquiry
         </button>
@@ -146,7 +146,7 @@ export default function CorporateAccountEnquiryForm() {
       <button
         type="submit"
         disabled={state.submitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#06A0A6] px-8 py-4 font-semibold text-white shadow-lg transition-all hover:bg-[#0F0D3E] disabled:opacity-60 sm:w-auto"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#06A0A6] px-8 py-4 font-semibold text-white shadow-lg transition-[transform,opacity] hover:bg-[#0F0D3E] disabled:opacity-60 sm:w-auto"
       >
         <Send className="h-5 w-5" aria-hidden />
         {state.submitting ? "Sending…" : "Submit enquiry"}

@@ -115,7 +115,7 @@ export default function HomePageClient() {
                 <button
                   className={`${
                     isHalloweenActive ? "halloween-cta-glow" : "bg-[#06A0A6] hover:bg-[#0F0D3E]"
-                  } text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3`}
+                  } text-white px-8 py-4 rounded-lg font-semibold  flex items-center gap-3`}
                 >
                   Learn More About Us
                   <ArrowRight className="h-5 w-5" />
@@ -132,7 +132,7 @@ export default function HomePageClient() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
                 style={{ width: "auto", height: "auto" }}
-                priority
+                loading="lazy"
               />
             </div>
           </div>
@@ -208,7 +208,7 @@ export default function HomePageClient() {
                 ))}
               </div>
               <a href="#app-download" className="inline-block">
-                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3">
+                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-3">
                   Download Our App
                   <ArrowRight className="h-5 w-5" />
                 </button>
@@ -399,7 +399,7 @@ export default function HomePageClient() {
                 <button
                   className={`${
                     isHalloweenActive ? "halloween-cta-glow" : "bg-[#06A0A6] hover:bg-[#0F0D3E]"
-                  } text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3 mx-auto`}
+                  } text-white px-8 py-4 rounded-lg font-semibold  flex items-center gap-3 mx-auto`}
                 >
                   Join as a driver now
                   <ArrowRight className="h-5 w-5" />
@@ -441,7 +441,7 @@ export default function HomePageClient() {
                 ))}
               </div>
               <a href="/contact" className="inline-block">
-                <button className="bg-[#2E3C44] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3">
+                <button className="bg-[#2E3C44] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-3">
                   Business Solutions
                   <ArrowRight className="h-5 w-5" />
                 </button>
@@ -497,15 +497,14 @@ export default function HomePageClient() {
       </section>
 
       {/* Executive Fleet Section */}
-      <section className="relative py-20 text-white overflow-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-no-repeat"
-          style={{
-            backgroundImage: "url('/black-car.webp')",
-            backgroundPosition: "right center",
-          }}
-          aria-label="Luxury black executive taxi vehicle from Aylestone Kings premium fleet"
+      <section className="relative py-20 text-white overflow-hidden min-h-[280px]">
+        <Image
+          src="/black-car.webp"
+          alt="Luxury black executive taxi vehicle from Aylestone Kings premium fleet"
+          fill
+          sizes="100vw"
+          className="object-cover object-right"
+          loading="lazy"
         />
         {/* Gradient Mask - Fades from transparent on right to solid on left */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#06A0A6] via-[#06A0A6]/80 to-transparent"></div>
@@ -519,7 +518,7 @@ export default function HomePageClient() {
               </h2>
               <p className="text-xl text-white mb-8 leading-relaxed">{siteData.homepage.executiveFleet.subtitle}</p>
               <a href="/fleet" className="inline-block">
-                <button className="bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold transition-all duration-200 flex items-center gap-3 hover:bg-[#06A0A6] hover:text-white shadow-lg">
+                <button className="bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold transition-[transform,opacity] duration-200 flex items-center gap-3 hover:bg-[#06A0A6] hover:text-white shadow-lg">
                   View Executive Fleet
                   <ArrowRight className="h-5 w-5" />
                 </button>
@@ -566,65 +565,65 @@ export default function HomePageClient() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Link href="/airport-transfers-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
-              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30 transition-colors">
+            <Link href="/airport-transfers-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Plane className="h-8 w-8 text-[#06A0A6]" />
               </div>
-              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6] transition-colors">
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6]">
                 24/7 Airport Transfers in Leicester
               </h3>
               <p className="text-[#2E3C44] mb-6">
                 Reliable airport transfers to all major UK airports. Fixed prices, flight monitoring, and professional service.
               </p>
-              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-all">
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
                 Learn More
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
 
-            <Link href="/local-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
-              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30 transition-colors">
+            <Link href="/local-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <MapPin className="h-8 w-8 text-[#06A0A6]" />
               </div>
-              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6] transition-colors">
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6]">
                 Local Taxi Services Around Aylestone
               </h3>
               <p className="text-[#2E3C44] mb-6">
                 Fast, affordable local rides throughout Leicester. Immediate pick-up, competitive prices, and reliable service.
               </p>
-              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-all">
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
                 Learn More
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
 
-            <Link href="/long-distance-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
-              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30 transition-colors">
+            <Link href="/long-distance-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Car className="h-8 w-8 text-[#06A0A6]" />
               </div>
-              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6] transition-colors">
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6]">
                 Long-distance taxi
               </h3>
               <p className="text-[#2E3C44] mb-6">
                 UK-wide journeys with guide prices and fixed agreed fares. Comfortable saloons and MPVs for longer trips.
               </p>
-              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-all">
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
                 Learn More
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
 
-            <Link href="/corporate-taxi-account-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
-              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30 transition-colors">
+            <Link href="/corporate-taxi-account-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Briefcase className="h-8 w-8 text-[#06A0A6]" />
               </div>
-              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6] transition-colors">
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6]">
                 Corporate taxi accounts
               </h3>
               <p className="text-[#2E3C44] mb-6">
                 Business travel and staff transport with monthly invoicing, account setup, and dedicated support.
               </p>
-              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-all">
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
                 Learn More
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
@@ -732,7 +731,7 @@ export default function HomePageClient() {
               <ul className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-4">
                 {siteData.homepage.seoContent.areas.links.map((loc: { name: string; href: string }, idx: number) => (
                   <li key={idx}>
-                    <a href={loc.href} className="text-[#06A0A6] hover:text-[#0F0D3E] transition-colors flex items-center gap-1.5">
+                    <a href={loc.href} className="text-[#06A0A6] hover:text-[#0F0D3E] flex items-center gap-1.5">
                       <ArrowRight className="h-3 w-3 flex-shrink-0" />
                       <span>{loc.name}</span>
                     </a>
@@ -803,7 +802,7 @@ export default function HomePageClient() {
                     : isValentineActive
                       ? "bg-white text-[#EF5B6A] hover:bg-[#E4E4E4]"
                       : "bg-white text-[#06A0A6] hover:bg-[#E4E4E4]"
-                } px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center gap-3 shadow-lg hover:shadow-xl`}
+                } px-8 py-4 rounded-lg font-semibold  flex items-center gap-3 shadow-lg hover:shadow-xl`}
               >
                 {isHalloweenActive ? "Book Your Ride 🎃" : "Get in touch"}
                 <ArrowRight className="h-5 w-5" />
@@ -811,7 +810,7 @@ export default function HomePageClient() {
             </a>
             <a href="#app-download" className="inline-block">
               <button
-                className={`border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white transition-all duration-200 shadow-lg hover:shadow-xl ${
+                className={`border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white transition-[transform,opacity] duration-200 shadow-lg hover:shadow-xl ${
                   isValentineActive ? "hover:text-[#EF5B6A]" : "hover:text-[#06A0A6]"
                 }`}
               >

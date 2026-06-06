@@ -116,7 +116,7 @@ export default function ContactPage() {
  {/* Phone Card */}
  <a
  href={`tel:${contactInfo.phone}`}
- className="group bg-white p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-[#06A0A6] transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
+ className="group bg-white p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-[#06A0A6] transition-[transform,opacity] duration-300 hover:shadow-xl transform hover:-translate-y-1"
  onClick={(e) => {
    if (typeof window !== 'undefined' && window.dataLayer) {
      window.dataLayer.push({
@@ -126,13 +126,13 @@ export default function ContactPage() {
    }
  }}
  >
- <div className="w-16 h-16 bg-[#06A0A6]/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#06A0A6]/20 transition-colors">
+ <div className="w-16 h-16 bg-[#06A0A6]/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#06A0A6]/20">
    <Phone className="h-8 w-8 text-[#06A0A6] group-hover:scale-110 transition-transform" />
  </div>
  <h3 className="text-lg font-bold text-[#0F0D3E] mb-2 text-center">
    Phone
  </h3>
- <p className="text-xl font-semibold text-[#06A0A6] text-center mb-1 group-hover:text-[#0F0D3E] transition-colors">
+ <p className="text-xl font-semibold text-[#06A0A6] text-center mb-1 group-hover:text-[#0F0D3E]">
    {contactInfo.phone}
  </p>
  <p className="text-sm text-gray-500 text-center">
@@ -145,15 +145,15 @@ export default function ContactPage() {
  href={`https://wa.me/${contactInfo.whatsapp.replace(/[^0-9]/g, '')}`}
  target="_blank"
  rel="noopener noreferrer"
- className="group bg-white p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-[#06A0A6] transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
+ className="group bg-white p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-[#06A0A6] transition-[transform,opacity] duration-300 hover:shadow-xl transform hover:-translate-y-1"
  >
- <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
+ <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200">
    <MessageCircle className="h-8 w-8 text-green-600 group-hover:scale-110 transition-transform" />
  </div>
  <h3 className="text-lg font-bold text-[#0F0D3E] mb-2 text-center">
    WhatsApp
  </h3>
- <p className="text-xl font-semibold text-green-600 text-center mb-1 group-hover:text-green-700 transition-colors">
+ <p className="text-xl font-semibold text-green-600 text-center mb-1 group-hover:text-green-700">
    {contactInfo.whatsapp}
  </p>
  <p className="text-sm text-gray-500 text-center">
@@ -164,15 +164,15 @@ export default function ContactPage() {
  {/* Email Card */}
  <a
  href={`mailto:${contactInfo.email}`}
- className="group bg-white p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-[#06A0A6] transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
+ className="group bg-white p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-[#06A0A6] transition-[transform,opacity] duration-300 hover:shadow-xl transform hover:-translate-y-1"
  >
- <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
+ <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200">
    <Mail className="h-8 w-8 text-blue-600 group-hover:scale-110 transition-transform" />
  </div>
  <h3 className="text-lg font-bold text-[#0F0D3E] mb-2 text-center">
    Email
  </h3>
- <p className="text-base font-semibold text-blue-600 text-center mb-1 group-hover:text-blue-700 transition-colors break-words">
+ <p className="text-base font-semibold text-blue-600 text-center mb-1 group-hover:text-blue-700 break-words">
    {contactInfo.email}
  </p>
  <p className="text-sm text-gray-500 text-center">
@@ -213,7 +213,7 @@ export default function ContactPage() {
    href={contactInfo.booking.online}
    target="_blank"
    rel="noopener noreferrer"
-   className="inline-block bg-white text-[#06A0A6] font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
+   className="inline-block bg-white text-[#06A0A6] font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 shadow-lg"
  >
    Book Now →
  </a>

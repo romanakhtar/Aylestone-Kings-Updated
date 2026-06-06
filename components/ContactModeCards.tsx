@@ -93,7 +93,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
               transform: 'rotate(-10deg)',
               filter: 'drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4))'
             }}
-            unoptimized={true}
+            loading="lazy"
           />
         </div>
       )}
@@ -110,6 +110,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
               transform: 'rotate(-10deg)',
               filter: 'drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4))'
             }}
+            loading="lazy"
           />
         </div>
       )}
@@ -153,7 +154,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
               onClick={handleClick}
               target={mode.name === 'Book Online' || mode.name === 'Email' || mode.name === 'Become a Driver' ? '_self' : '_blank'}
               rel={mode.name === 'Book Online' || mode.name === 'Email' || mode.name === 'Become a Driver' ? '' : 'noopener noreferrer'}
-              className={`${mode.bgColor} ${mode.hoverBgColor} text-white px-3 sm:px-4 lg:px-3 py-3 lg:py-2.5 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 lg:gap-2 shadow-lg hover:shadow-2xl transform hover:scale-105 group hover:-translate-y-1 border border-white/20 relative overflow-hidden w-full`}
+              className={`${mode.bgColor} ${mode.hoverBgColor} text-white px-3 sm:px-4 lg:px-3 py-3 lg:py-2.5 rounded-xl font-medium transition-transform duration-300 flex items-center gap-2 lg:gap-2 shadow-lg hover:shadow-2xl transform hover:scale-105 group hover:-translate-y-1 border border-white/20 relative overflow-hidden w-full`}
               style={{
                 animationDelay: `${index * 100}ms`,
               } as React.CSSProperties}

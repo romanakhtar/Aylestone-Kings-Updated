@@ -50,7 +50,7 @@ export default function OurTeamPage() {
               </p>  
               <div className="mt-12">
                 <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="inline-block">
-                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
+                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
                 Book Your Ride Now
                 <ArrowRight className="h-5 w-5" />
                 </button>
@@ -110,7 +110,7 @@ export default function OurTeamPage() {
               </div>
               <div className="mt-12">
                 <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="inline-block">
-                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
+                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
                 Book Now
                 <ArrowRight className="h-5 w-5" />
                 </button>
@@ -138,7 +138,7 @@ export default function OurTeamPage() {
               </p>  
               <div className="mt-12">
                 <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="inline-block">
-                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
+                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
                 Book Now
                 <ArrowRight className="h-5 w-5" />
                 </button>
@@ -185,7 +185,7 @@ export default function OurTeamPage() {
               </p>
               <div className="mt-12">
                 <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="inline-block">
-                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
+                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
                 Book Your Ride Now
                 <ArrowRight className="h-5 w-5" />
                 </button>
@@ -212,13 +212,13 @@ export default function OurTeamPage() {
               </p>   
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
+                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
                   Book Now
                   <ArrowRight className="h-3 w-3 sm:h-5 sm:w-5" />
                 </button>
               </a>
               <a href="/pricing" className="w-full sm:w-auto">
-                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
+                <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-2 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
                   View Pricing
                 </button>
               </a>

@@ -28,6 +28,7 @@ export default function AppDownloadButtons({ className = '', size = 'md' }: AppD
           alt="Download Aylestone Kings taxi app from the Apple App Store"
           width={150}
           height={50}
+          loading="lazy"
           className={sizeClasses[size]}
         />
       </a>
@@ -43,6 +44,7 @@ export default function AppDownloadButtons({ className = '', size = 'md' }: AppD
           alt="Download Aylestone Kings taxi app from Google Play Store"
           width={150}
           height={50}
+          loading="lazy"
           className={sizeClasses[size]}
         />
       </a>

@@ -75,7 +75,7 @@ export default function BlogPage() {
             {blogs.map((blog) => (
               <article
                 key={blog.id}
-                className="bg-white rounded-2xl shadow-lg border border-[#E4E4E4] overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+                className="bg-white rounded-2xl shadow-lg border border-[#E4E4E4] overflow-hidden hover:shadow-2xl transition-[transform,opacity] duration-300 group"
               >
                 {/* Blog Image */}
                 <div className="relative h-64 overflow-hidden">
@@ -113,7 +113,7 @@ export default function BlogPage() {
                   </div>
 
                   {/* Title */}
-                  <h2 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6] transition-colors duration-200">
+                  <h2 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6]">
                     {blog.title}
                   </h2>
 
@@ -125,7 +125,7 @@ export default function BlogPage() {
                   {/* Read More Link */}
                   <Link
                     href={`/blog/${blog.id}`}
-                    className="inline-flex items-center gap-2 text-[#06A0A6] font-semibold hover:text-[#0F0D3E] transition-colors duration-200 group/link"
+                    className="inline-flex items-center gap-2 text-[#06A0A6] font-semibold hover:text-[#0F0D3E] group/link"
                   >
                     Read More
                     <ArrowRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-200" />
@@ -154,13 +154,13 @@ export default function BlogPage() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
               >
-                <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl">
+                <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl">
                   Book Online Now
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
               <a href={`tel:${contactInfo.phone}`} className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:bg-white hover:text-[#06A0A6]">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 hover:bg-white hover:text-[#06A0A6]">
                   Call {contactInfo.phone}
                 </button>
               </a>

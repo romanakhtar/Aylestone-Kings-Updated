@@ -106,30 +106,30 @@ export default function AnimatedHero() {
 
       {/* Halloween Background Image - Extended */}
       {isHalloweenActive && (
-        <div 
-          className="absolute inset-0 opacity-50 z-0 h-screen"
-          style={{
-            backgroundImage: "url('/Halloweenbg.png')",
-            backgroundPosition: "left center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "auto",
-          }}
-          aria-label="Halloween themed background for Aylestone Kings taxi service"
-        />
+        <div className="absolute inset-0 opacity-50 z-0 h-screen pointer-events-none" aria-hidden>
+          <Image
+            src="/Halloweenbg.png"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-contain object-left"
+            loading="lazy"
+          />
+        </div>
       )}
       
       {/* Spider Web Background Image */}
       {isHalloweenActive && (
-        <div 
-          className="absolute inset-0 opacity-50 z-0"
-          style={{
-            backgroundImage: "url('/Spider-web2.png')",
-            backgroundPosition: "right top",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "25.67% auto",
-          }}
-          aria-label="Spider web Halloween decoration for Aylestone Kings taxi service"
-        />
+        <div className="absolute right-0 top-0 opacity-50 z-0 w-[26%] min-w-[120px] max-w-[320px] aspect-square pointer-events-none" aria-hidden>
+          <Image
+            src="/Spider-web2.png"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 120px, 320px"
+            className="object-contain object-right-top"
+            loading="lazy"
+          />
+        </div>
       )}
       
       {/* Halloween Overlay */}
@@ -166,6 +166,7 @@ export default function AnimatedHero() {
                 opacity: position.opacity,
               }}
               aria-hidden
+              loading="lazy"
             />
           ))}
         </div>
@@ -188,7 +189,7 @@ export default function AnimatedHero() {
                 transform: `rotate(${position.rotation}deg)`,
                 opacity: position.opacity,
               }}
-              unoptimized={true}
+              loading="lazy"
             />
           ))}
         </div>
@@ -294,7 +295,7 @@ export default function AnimatedHero() {
             <div className="mb-8 flex flex-col sm:flex-row sm:items-center gap-3">
               <a
                 href={`tel:${contactInfo.phone}`}
-                className={`w-full sm:w-auto inline-flex items-center justify-center rounded-lg px-8 py-4 text-sm font-semibold shadow-md hover:shadow-lg transition-all whitespace-nowrap ${
+                className={`w-full sm:w-auto inline-flex items-center justify-center rounded-lg px-8 py-4 text-sm font-semibold shadow-md hover:shadow-lg transition-[transform,opacity] whitespace-nowrap ${
                   isValentineActive
                     ? 'bg-white text-[#0F0D3E] hover:bg-gray-100'
                     : isChristmasActive

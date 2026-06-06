@@ -54,14 +54,14 @@ function Navigation() {
 
   return (
     <header 
-      className={`fixed top-5 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60 shadow-professional transition-all duration-500 ease-out ${
+      className={`fixed top-5 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60 shadow-professional transition-[transform,opacity] duration-500 ease-out ${
         isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
       }`}
     >
       <div className="max-w-7xl mx-auto container-padding">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="pt-1 transition-smooth hover:scale-105">
+          <div className="pt-1 transition-transform duration-300 hover:scale-105">
             <Logo />
           </div>
 
@@ -73,12 +73,12 @@ function Navigation() {
                   <button className="text-slate-700 hover:text-[#06A0A6] font-medium flex items-center transition-smooth relative group py-2">
                     {item.name}
                     <ChevronDown
-                      className={`ml-1 h-3.5 w-3.5 transition-smooth ${isMoreOpen ? "rotate-180" : ""}`}
+                      className={`ml-1 h-3.5 w-3.5 transition-transform duration-300 ${isMoreOpen ? "rotate-180" : ""}`}
                     />
-                    <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] transition-smooth group-hover:w-full"></span>
+                    <span className="absolute -bottom-0.5 left-0 h-0.5 w-full origin-left scale-x-0 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] transition-transform duration-300 group-hover:scale-x-100"></span>
                   </button>
                   <div
-                    className={`absolute top-full left-0 pt-2 transition-all duration-300 ease-out ${
+                    className={`absolute top-full left-0 pt-2 transition-[transform,opacity] duration-300 ease-out ${
                       isMoreOpen 
                         ? "opacity-100 visible translate-y-0 scale-100" 
                         : "opacity-0 invisible -translate-y-2 scale-95"
@@ -104,8 +104,8 @@ function Navigation() {
                     : 'text-slate-700 hover:text-[#06A0A6]'
                 }`}>
                   {item.name}
-                  <span className={`absolute -bottom-0.5 left-0 h-0.5 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] transition-smooth ${
-                    pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                  <span className={`absolute -bottom-0.5 left-0 h-0.5 w-full origin-left bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] transition-transform duration-300 ${
+                    pathname === item.href ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                   }`}></span>
                 </Link>
               )
@@ -141,7 +141,7 @@ function Navigation() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 ease-out ${
+        <div className={`md:hidden transition-[transform,opacity] duration-300 ease-out ${
           isMenuOpen ? 'max-h-[85vh] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <div className="border-t border-slate-200/60 bg-white/98 backdrop-blur-xl overflow-y-auto max-h-[85vh]">
@@ -156,7 +156,7 @@ function Navigation() {
                       {item.name}
                       <ChevronDown className={`h-4 w-4 transition-smooth ${isMoreOpen ? "rotate-180" : ""}`} />
                     </button>
-                    <div className={`transition-all duration-300 ease-out overflow-hidden ${
+                    <div className={`transition-[transform,opacity] duration-300 ease-out overflow-hidden ${
                       isMoreOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                     }`}>
                       <div className="pl-6 space-y-1">

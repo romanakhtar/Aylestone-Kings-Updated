@@ -42,7 +42,7 @@ function AreaSection({
           <li key={item.name} className="min-w-0">
             <Link 
               href={item.href} 
-              className="text-[#2E3C44] hover:text-[#06A0A6] text-xs sm:text-sm transition-colors duration-200 leading-relaxed block py-0.5"
+              className="text-[#2E3C44] hover:text-[#06A0A6] text-xs sm:text-sm leading-relaxed block py-0.5"
             >
               {item.name}
             </Link>
@@ -60,7 +60,7 @@ export default function Footer() {
   const isHomepage = pathname === '/'
   
   return (
-    <footer className="bg-gray-100 text-gray-800 ">
+    <footer className="bg-gray-100 text-gray-800">
       {/* Valentine Footer Ribbon - Only on Homepage, Feb 1–14 */}
       {isValentineActive && isHomepage && (
         <div
@@ -88,7 +88,6 @@ export default function Footer() {
             }}
             priority={false}
             loading="lazy"
-            unoptimized={true}
           />
         </div>
       )}
@@ -207,15 +206,15 @@ export default function Footer() {
                   const IconComponent = getIconComponent(area.icon)
                   return (
                     <Link key={area.name} href={area.href} className="group">
-                      <div className="bg-gradient-to-br from-[#06A0A6]/5 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-[#06A0A6]/30 transition-all duration-300 hover:scale-105">
+                      <div className="bg-gradient-to-br from-[#06A0A6]/5 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-[#06A0A6]/30 transition-[transform,opacity] duration-300 hover:scale-105">
                         <div className="flex items-start space-x-4">
                           <div className="flex-shrink-0">
-                            <div className="w-12 h-12 bg-[#06A0A6]/10 rounded-lg flex items-center justify-center group-hover:bg-[#06A0A6]/20 transition-colors">
+                            <div className="w-12 h-12 bg-[#06A0A6]/10 rounded-lg flex items-center justify-center group-hover:bg-[#06A0A6]/20">
                               <IconComponent className="h-6 w-6 text-[#06A0A6]" />
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h5 className="font-semibold text-gray-800 text-lg mb-2 group-hover:text-[#06A0A6] transition-colors">
+                            <h5 className="font-semibold text-gray-800 text-lg mb-2 group-hover:text-[#06A0A6]">
                               {area.name}
                             </h5>
                             <p className="text-gray-600 text-sm leading-relaxed">
@@ -243,15 +242,15 @@ export default function Footer() {
                   const IconComponent = getIconComponent(area.icon)
                   return (
                     <Link key={area.name} href={area.href} className="group">
-                      <div className="bg-gradient-to-br from-blue-50 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-300 transition-all duration-300 hover:scale-105">
+                      <div className="bg-gradient-to-br from-blue-50 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-300 transition-[transform,opacity] duration-300 hover:scale-105">
                         <div className="flex items-start space-x-4">
                           <div className="flex-shrink-0">
-                            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200">
                               <IconComponent className="h-6 w-6 text-blue-600" />
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h5 className="font-semibold text-gray-800 text-lg mb-2 group-hover:text-blue-600 transition-colors">
+                            <h5 className="font-semibold text-gray-800 text-lg mb-2 group-hover:text-blue-600">
                               {area.name}
                             </h5>
                             <p className="text-gray-600 text-sm leading-relaxed">
@@ -279,15 +278,15 @@ export default function Footer() {
                   const IconComponent = getIconComponent(area.icon)
                   return (
                     <Link key={area.name} href={area.href} className="group">
-                      <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-gray-300 transition-all duration-300 hover:scale-105">
+                      <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-gray-300 transition-[transform,opacity] duration-300 hover:scale-105">
                         <div className="flex items-start space-x-4">
                           <div className="flex-shrink-0">
-                            <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-200 transition-colors">
+                            <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-200">
                               <IconComponent className="h-6 w-6 text-gray-600" />
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h5 className="font-semibold text-gray-800 text-lg mb-2 group-hover:text-gray-600 transition-colors">
+                            <h5 className="font-semibold text-gray-800 text-lg mb-2 group-hover:text-gray-600">
                               {area.name}
                             </h5>
                             <p className="text-gray-600 text-sm leading-relaxed">
@@ -413,7 +412,7 @@ export default function Footer() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-gray-600 hover:text-gray-800 transition-colors duration-200"
+                  className="text-gray-600 hover:text-gray-800"
                 >
                   {link.name}
                 </Link>

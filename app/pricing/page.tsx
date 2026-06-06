@@ -190,7 +190,7 @@ export default function PricingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Airport Pricing & Vehicle Information 
             </h2>
-            <h3 className="text-xl text-gray-500 mb-4 text-center ">
+            <h3 className="text-xl text-gray-500 mb-4 text-center">
                 From Aylestone to Leicester and Leicestershire
               </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -215,63 +215,63 @@ export default function PricingPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
-                        <Link href="/pricing/airports/East-Midlands" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                        <Link href="/pricing/airports/East-Midlands" className="hover:text-cyan-600 cursor-pointer">
                           East Midlands
                         </Link>
                       </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£40</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£60</td>
                     </tr>
-                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
-                        <Link href="/pricing/airports/Birmingham" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                        <Link href="/pricing/airports/Birmingham" className="hover:text-cyan-600 cursor-pointer">
                           Birmingham
                         </Link>
                       </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£60</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£80</td>
                     </tr>
-                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
-                        <Link href="/pricing/airports/Manchester" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                        <Link href="/pricing/airports/Manchester" className="hover:text-cyan-600 cursor-pointer">
                           Manchester
                         </Link>
                       </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£150</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£200</td>
                     </tr>
-                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
-                        <Link href="/pricing/airports/Luton" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                        <Link href="/pricing/airports/Luton" className="hover:text-cyan-600 cursor-pointer">
                           Luton
                         </Link>
                       </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£120</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£160</td>
                     </tr>
-                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
-                        <Link href="/pricing/airports/Heathrow" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                        <Link href="/pricing/airports/Heathrow" className="hover:text-cyan-600 cursor-pointer">
                           Heathrow
                         </Link>
                       </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£150</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£200</td>
                     </tr>
-                    <tr className="border-b border-cyan-100 hover:bg-cyan-50 transition-colors duration-200">
+                    <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
-                        <Link href="/pricing/airports/Gatwick" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                        <Link href="/pricing/airports/Gatwick" className="hover:text-cyan-600 cursor-pointer">
                           Gatwick
                         </Link>
                       </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£200</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£275</td>
                     </tr>
-                    <tr className="hover:bg-cyan-50 transition-colors duration-200">
+                    <tr className="hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
-                        <Link href="/pricing/airports/Stansted" className="hover:text-cyan-600 transition-colors duration-200 cursor-pointer">
+                        <Link href="/pricing/airports/Stansted" className="hover:text-cyan-600 cursor-pointer">
                           Stansted
                         </Link>
                       </td>
@@ -295,7 +295,7 @@ export default function PricingPage() {
                     href={contactInfo.booking.online} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-cyan-800 transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-2xl"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-cyan-800 transition-[transform,opacity] duration-200 shadow-lg hover:shadow-xl hover:shadow-2xl"
                   >                   
                     Book Now
                   </a>
@@ -386,7 +386,7 @@ export default function PricingPage() {
                   </div>
                 </div>
                 <a href="/fleet" className="w-full sm:w-auto">
-                <button className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-cyan-800 transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-2xl">
+                <button className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-cyan-800 transition-[transform,opacity] duration-200 shadow-lg hover:shadow-xl hover:shadow-2xl">
                   View Fleet
                 </button>
               </a>
@@ -578,7 +578,7 @@ export default function PricingPage() {
 
 
       {/* Call to Action */}
-      <section className="py-20  bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
+      <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Experience Affordable Luxury?
@@ -588,13 +588,13 @@ export default function PricingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-[E4E4E4] transition-colors duration-200 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base">
+                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-[E4E4E4] flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base">
                   Book Online
                   <ArrowRight className="h-3 w-3 sm:h-5 sm:w-5" />
                 </button>
               </a>
               <a href="/contact" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 text-sm sm:text-base">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-[transform,opacity] duration-200 text-sm sm:text-base">
                   Contact Us
                 </button>
               </a>

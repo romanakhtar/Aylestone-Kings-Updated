@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar, Plane } from "lucide-react"
 import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
@@ -41,13 +40,13 @@ export default function LeicesterAirportTaxiPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg">
+                  <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-xl font-semibold transition-[transform,opacity] duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg">
                     <Plane className="h-6 w-6" />
                     Book Leicester Airport Taxi
                   </button>
                 </a>
                 <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto border-2 border-[#06A0A6] text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-all duration-200 text-lg flex items-center justify-center gap-3">
+                  <button className="w-full sm:w-auto border-2 border-[#06A0A6] text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-[transform,opacity] duration-200 text-lg flex items-center justify-center gap-3">
                     <Phone className="h-6 w-6" />
                     Call {contactInfo.phone}
                   </button>
@@ -71,7 +70,7 @@ export default function LeicesterAirportTaxiPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {siteData.homepage.seoContent.airports.airportsList.map((airport, idx) => (
-                <Link key={idx} href={airport.href} className="bg-[#E4E4E4] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:bg-[#06A0A6]/5 group">
+                <Link key={idx} href={airport.href} className="bg-[#E4E4E4] p-6 rounded-xl shadow-md hover:shadow-lg transition-[transform,opacity] duration-200 hover:bg-[#06A0A6]/5 group">
                   <div className="flex flex-col items-center text-center">
                     <Plane className="h-8 w-8 text-[#06A0A6] mb-3 group-hover:scale-110 transition-transform" />
                     <h3 className="text-lg font-bold text-[#0F0D3E] mb-2">{airport.name}</h3>
@@ -202,13 +201,13 @@ export default function LeicesterAirportTaxiPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center justify-center gap-3">
+                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] flex items-center justify-center gap-3">
                   Book Airport Taxi Now
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
               <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200 flex items-center justify-center gap-3">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-[transform,opacity] duration-200 flex items-center justify-center gap-3">
                   <Phone className="h-5 w-5" />
                   Call {contactInfo.phone}
                 </button>

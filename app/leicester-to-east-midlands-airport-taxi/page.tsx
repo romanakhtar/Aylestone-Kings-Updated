@@ -80,13 +80,13 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg">
+                  <button className="w-full sm:w-auto bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-xl font-semibold transition-[transform,opacity] duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg">
                     <Calendar className="h-6 w-6" />
                     Book your EMA transfer
                   </button>
                 </a>
                 <a href={`tel:${contactInfo.phone.replace(/\s/g, "")}`} className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto border-2 border-[#06A0A6] text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-all duration-200 text-lg flex items-center justify-center gap-3">
+                  <button className="w-full sm:w-auto border-2 border-[#06A0A6] text-[#06A0A6] px-8 py-4 rounded-xl font-semibold hover:bg-[#06A0A6] hover:text-white transition-[transform,opacity] duration-200 text-lg flex items-center justify-center gap-3">
                     <Phone className="h-6 w-6" />
                     Call {contactInfo.phone}
                   </button>
@@ -215,7 +215,7 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-gray-100 hover:bg-[#06A0A6]/5 transition-colors duration-200">
+                    <tr className="border-b border-gray-100 hover:bg-[#06A0A6]/5">
                       <td className="px-6 py-4 font-medium text-[#0F0D3E]">
                         <div className="flex items-center space-x-3">
                           <Plane className="h-6 w-6 text-[#06A0A6]" />
@@ -225,7 +225,7 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
                       <td className="px-6 py-4 text-center text-[#2E3C44]">1-4 passengers</td>
                       <td className="px-6 py-4 text-right text-[#06A0A6] font-semibold text-lg">from £40</td>
                     </tr>
-                    <tr className="border-b border-gray-100 hover:bg-[#06A0A6]/5 transition-colors duration-200">
+                    <tr className="border-b border-gray-100 hover:bg-[#06A0A6]/5">
                       <td className="px-6 py-4 font-medium text-[#0F0D3E]">
                         <div className="flex items-center space-x-3">
                           <Plane className="h-6 w-6 text-[#06A0A6]" />
@@ -313,13 +313,13 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] transition-colors duration-200 flex items-center justify-center gap-3">
+                <button className="w-full sm:w-auto bg-white text-[#06A0A6] px-8 py-4 rounded-lg font-semibold hover:bg-[#E4E4E4] flex items-center justify-center gap-3">
                   Book now
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
               <Link href="/pricing/airports/East-Midlands" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-all duration-200">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-[transform,opacity] duration-200">
                   View full EMA pricing page
                 </button>
               </Link>

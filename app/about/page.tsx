@@ -62,13 +62,13 @@ export default function AboutPage() {
             {/* Enhanced CTA Section */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/pricing" className="inline-block">
-                <button className="border-2 border-white bg-white hover:bg-[#E4E4E4] text-[#06A0A6] px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center gap-3 shadow-xl hover:shadow-2xl hover:scale-105">
+                <button className="border-2 border-white bg-white hover:bg-[#E4E4E4] text-[#06A0A6] px-8 py-4 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-300 flex items-center gap-3 shadow-xl hover:shadow-2xl hover:scale-105">
                   View Airport Pricing
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
               <a href="/travel" className="inline-block">
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white hover:text-[#06A0A6] backdrop-blur-sm">
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-300 hover:bg-white hover:text-[#06A0A6] backdrop-blur-sm">
                   Travel With Us
                 </button>
               </a>
@@ -174,7 +174,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Safety */}
             <div className="text-center group">
-              <div className="bg-[#06A0A6]/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#06A0A6]/30 transition-colors duration-200">
+              <div className="bg-[#06A0A6]/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#06A0A6]/30">
                 <Shield className="h-10 w-10 text-[#06A0A6]" />
               </div>
               <h3 className="text-xl font-bold text-[#0F0D3E] mb-4">Safety First</h3>
@@ -185,7 +185,7 @@ export default function AboutPage() {
 
             {/* Reliability */}
             <div className="text-center group">
-              <div className="bg-[#2E3C44]/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#2E3C44]/30 transition-colors duration-200">
+              <div className="bg-[#2E3C44]/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#2E3C44]/30">
                 <Clock className="h-10 w-10 text-[#2E3C44]" />
               </div>
               <h3 className="text-xl font-bold text-[#0F0D3E] mb-4">Reliability</h3>
@@ -195,7 +195,7 @@ export default function AboutPage() {
             </div>
             {/* Customer Service */}
             <div className="text-center group">
-              <div className="bg-[#E4E4E4] w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#E4E4E4] transition-colors duration-200">
+              <div className="bg-[#E4E4E4] w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#E4E4E4]">
                 <Users className="h-10 w-10 text-[#0F0D3E]" />
               </div>
               <h3 className="text-xl font-bold text-[#0F0D3E] mb-4">Customer Service</h3>
@@ -205,7 +205,7 @@ export default function AboutPage() {
             </div>
             {/* Excellence */}
             <div className="text-center group">
-              <div className="bg-[#EF5B6A]/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#EF5B6A]/30 transition-colors duration-200">
+              <div className="bg-[#EF5B6A]/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-[#EF5B6A]/30">
                 <Award className="h-10 w-10 text-[#EF5B6A]" />
               </div>
               <h3 className="text-xl font-bold text-[#0F0D3E] mb-4">Excellence</h3>
@@ -406,7 +406,7 @@ export default function AboutPage() {
           {/* CTA Button */}
           <div className="text-center mt-12">
             <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="inline-block">
-              <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
+              <button className="bg-[#06A0A6] hover:bg-[#0F0D3E] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 flex items-center gap-3 mx-auto shadow-lg hover:shadow-xl">
                 Book Your Ride Now
                 <ArrowRight className="h-5 w-5" />
               </button>
