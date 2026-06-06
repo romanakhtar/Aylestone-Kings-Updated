@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar, Navigation } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"

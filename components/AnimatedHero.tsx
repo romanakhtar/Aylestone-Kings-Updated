@@ -120,7 +120,7 @@ export default function AnimatedHero() {
       
       {/* Spider Web Background Image */}
       {isHalloweenActive && (
-        <div className="absolute right-0 top-0 relative opacity-50 z-0 w-[26%] min-w-[120px] max-w-[320px] aspect-square pointer-events-none" aria-hidden>
+        <div className="absolute right-0 top-0 opacity-50 z-0 w-[26%] min-w-[120px] max-w-[320px] aspect-square pointer-events-none" aria-hidden>
           <Image
             src="/Spider-web2.png"
             alt=""
