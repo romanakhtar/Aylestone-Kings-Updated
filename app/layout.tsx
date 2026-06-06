@@ -11,7 +11,7 @@ import { HalloweenThemeProvider } from "@/components/HalloweenThemeProvider"
 import { ChristmasThemeProvider } from "@/components/ChristmasThemeProvider"
 import { ValentineThemeProvider } from "@/components/ValentineThemeProvider"
 import { DeferredLayoutChrome, DeferredHalloweenFloating } from "@/components/layout/DeferredLayoutChrome"
-import Script from "next/script"
+import ThirdPartyScripts from "@/components/analytics/ThirdPartyScripts"
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -132,7 +132,6 @@ export default function RootLayout({
         {/* Resource Hints */}
         <link rel="preconnect" href="https://aylestonekings.webbooker.icabbi.com" />
         <link rel="dns-prefetch" href="https://aylestonekings.webbooker.icabbi.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
         {/* Preconnect to Google Fonts for faster font loading */}
@@ -157,46 +156,6 @@ export default function RootLayout({
           fetchPriority="high"
         />
         
-        {/* Google tag (gtag.js) - Load after page is interactive */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-997662518"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-tag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-997662518', {
-              page_path: typeof window !== 'undefined' ? window.location.pathname : '/',
-            });
-          `}
-        </Script>
-        
-        {/* Google Analytics 4 (GA4) - Load with lower priority to not block rendering */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-EN43EPXGHR"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics-tag" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-EN43EPXGHR');
-          `}
-        </Script>
-        
-        {/* Google Tag Manager */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-NB673LK3');
-          `}
-        </Script>
         {/* LocalBusiness + TaxiService Schema */}
         <script
           type="application/ld+json"
@@ -227,6 +186,7 @@ export default function RootLayout({
             </ValentineThemeProvider>
           </ChristmasThemeProvider>
         </HalloweenThemeProvider>
+        <ThirdPartyScripts />
       </body>
     </html>
   )
