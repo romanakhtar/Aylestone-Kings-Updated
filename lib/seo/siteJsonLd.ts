@@ -29,6 +29,18 @@ function postalAddress(): Record<string, unknown> {
   }
 }
 
+/** Shared Google review aggregate (LocalBusiness, TaxiService, etc.). */
+export function getAggregateRatingJsonLd(): Record<string, unknown> {
+  return {
+    "@type": "AggregateRating",
+    ratingValue: 4.7,
+    ratingCount: 107,
+    reviewCount: 107,
+    bestRating: 5,
+    worstRating: 1,
+  }
+}
+
 /**
  * LocalBusiness JSON-LD for the Leicester office (homepage, corporate, etc.).
  * Includes address, phone, email, 24/7 opening hours, and geo coordinates.
@@ -73,6 +85,7 @@ export function getLocalBusinessJsonLd(): Record<string, unknown> {
       { "@type": "City", name: "Leicester" },
       { "@type": "AdministrativeArea", name: "Leicestershire" },
     ],
+    aggregateRating: getAggregateRatingJsonLd(),
   }
 }
 
@@ -104,6 +117,7 @@ export function getTaxiServiceJsonLd(opts: {
     telephone: toUkE164(siteData.company.phone),
     email: siteData.company.email,
     address: postalAddress(),
+    aggregateRating: getAggregateRatingJsonLd(),
   }
 
   return {
