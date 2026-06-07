@@ -51,9 +51,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 5. Evington
   evington: {
-    title: "Taxi in Evington Leicester | Fast 24/7 Service | Aylestone Kings",
+    title: "Taxis in Evington Leicester — Fixed Fares, Hospital Runs | Book 24/7",
     description:
-      "Professional taxi service in Evington, Leicester. Local rides, airport transfers, and 24/7 availability. Licensed, DBS-checked drivers. Call 0116 2338888.",
+      "Need a taxi in Evington, Leicester? Aylestone Kings provides fixed price taxis from Evington 24/7. Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 6. Belgrave
   belgrave: {
@@ -123,9 +123,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 17. Glenfield
   glenfield: {
-    title: "Taxi in Glenfield Leicester | Glenfield Hospital & 24/7 | Aylestone Kings",
+    title: "Taxis in Glenfield Leicester — Hospital Runs, Fixed Fares | Book 24/7",
     description:
-      "Taxi service in Glenfield, Leicestershire. Hospital transport, airport transfers, local rides. 24/7 availability. Call 0116 2338888.",
+      "Need a taxi in Glenfield, Leicester? Aylestone Kings offers fixed price taxis from Glenfield 24/7. Glenfield Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 18. Blaby
   blaby: {
@@ -147,9 +147,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 21. Loughborough
   loughborough: {
-    title: "Taxi in Loughborough | Airport Transfers & 24/7 | Aylestone Kings",
+    title: "Taxis in Loughborough — Fixed Fares, Airport Transfers | Book 24/7",
     description:
-      "Professional taxi service in Loughborough. Airport transfers to EMA, BHX & Heathrow, student travel, local rides. Fixed fares. Call 0116 2338888.",
+      "Need a taxi in Loughborough? Aylestone Kings provides fixed price taxis from Loughborough 24/7. East Midlands Airport transfers, Leicester runs and train station pickups. Call 0116 233 8888.",
   },
   // 22. Hinckley
   hinckley: {
@@ -312,6 +312,9 @@ const AREA_CUSTOM_H1: Record<string, string> = {
   "clarendon-park": "Taxis in Clarendon Park, Leicester",
   highfields: "Taxis in Highfields, Leicester",
   braunstone: "Taxis in Braunstone, Leicester",
+  evington: "Taxis in Evington, Leicester",
+  glenfield: "Taxis in Glenfield, Leicester",
+  loughborough: "Taxis in Loughborough, Leicestershire",
 }
 
 /** Optional contextual link from a taxis-in area page to a relevant blog post (SEO discovery). */
@@ -499,6 +502,87 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
         question: "Can I book a school run taxi from Braunstone?",
         answer:
           "Yes. We set up regular school runs from Braunstone with consistent pickup times and, where possible, the same DBS-checked driver each morning. Call 0116 233 8888 or book online to arrange a standing school-run booking.",
+      },
+    ],
+  },
+  evington: {
+    bodyParagraphs: [
+      "Evington is a quiet, established suburb on Leicester's eastern edge — a neighbourhood where village character meets practical city access. Evington Village sits at the historic heart of the ward, Evington Park provides green space for families and dog walkers, Evington Road runs north connecting the area to the wider city, and Leicester General Hospital lies just minutes away in nearby Evington parish. Aylestone Kings has served Evington since 1995, and our bookings here reflect the area's residents: families needing school runs and shopping trips, elderly passengers who value patient, assisted travel, and NHS workers travelling to and from Leicester General on every shift pattern.",
+      "Families in Evington rely on taxis for the journeys that buses and walking cannot always cover comfortably — the school run on a rainy morning, a Saturday outing, or a trip to visit relatives across Leicester. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean and comfortable for family travel.",
+      "Elderly residents in Evington are a significant part of our daily work. Many passengers need a little extra time getting in and out of the vehicle, help with shopping bags, or a driver who will wait at the door rather than driving off the moment you step outside. We offer assisted taxi rides with patient, DBS-checked drivers who are used to supporting older passengers on hospital visits, GP appointments, and social outings. Mention any mobility or assistance needs when you book and we will note them on your job.",
+      "NHS workers at Leicester General Hospital book us for shift changes at all hours — early-morning starts, late finishes, and rotating night patterns that do not align with bus timetables. A typical run from Evington to Leicester General Hospital takes around five minutes, and we know the main entrances, outpatient clinics, and staff collection points. The same drivers who cover hospital staff also serve patients and visitors attending appointments, so you are travelling with people who understand the layout and timing pressures of a busy NHS site.",
+      "Typical journey times from Evington: Leicester city centre around 10–12 minutes in normal traffic via Evington Road or the A47, Leicester General Hospital around five minutes, East Midlands Airport roughly 25 minutes, and Birmingham Airport around 50 minutes on a clear run. Example fares include Evington to Leicester city centre from £6 and Evington to East Midlands Airport from £28 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Evington sits close to Oadby, Highfields, and Spinney Hills, and we cover the whole east Leicester area without boundary surcharges. Core services include 24/7 local taxis, hospital runs to Leicester General and other medical sites, elderly assistance, school-run standing bookings, and airport transfers to all major UK airports. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are an elderly resident heading to a GP appointment, an NHS worker finishing a night shift, or a family on the school run, Aylestone Kings gives Evington a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+    ],
+    faqs: [
+      {
+        question: "Do you offer assisted taxi rides for elderly passengers in Evington?",
+        answer:
+          "Yes. Our drivers are patient and experienced with elderly passengers, including help with bags, extra time boarding, and door-to-door assistance. Mention any mobility needs when you book and we will note them on your job. All drivers are DBS checked and licensed by Leicester City Council.",
+      },
+      {
+        question: "Can I book a taxi from Evington to Leicester General Hospital?",
+        answer:
+          "Yes. We provide hospital runs from Evington to Leicester General Hospital 24/7 for appointments, visiting, staff shift changes, and discharge pickups. Journey time is around five minutes. Mention the entrance or department when you book.",
+      },
+      {
+        question: "How much is a taxi from Evington to Leicester city centre?",
+        answer:
+          "A taxi from Evington to Leicester city centre typically starts from £6 depending on your exact pickup and drop-off points. Journey time is around 10–12 minutes in normal traffic via Evington Road. You will receive a fixed quote before you confirm.",
+      },
+    ],
+  },
+  glenfield: {
+    bodyParagraphs: [
+      "Glenfield is a residential village on Leicester's western edge — a neighbourhood where Glenfield Village preserves a quiet suburban character while Glenfield Hospital, one of the UK's leading specialist NHS centres, draws patients, visitors, and staff from across the Midlands every day. Dominion Road and Groby Road form the main arteries through the area, connecting local streets to the A50 corridor and onward routes into the city. Aylestone Kings has served Glenfield since 1995, and our bookings here reflect what the village actually needs: dependable hospital transport at all hours, fixed-price airport runs for families leaving early, and everyday local taxis for residents along Groby Road and the village lanes.",
+      "NHS workers make up a substantial share of our Glenfield bookings. Glenfield Hospital operates around the clock as a major cardiac centre and specialist unit, and staff on early starts, late finishes, and rotating night shifts need a taxi service that does not stop answering after midnight. Patients travelling to outpatient appointments, families visiting relatives on the wards, and visitors unsure of parking all book us for direct, stress-free journeys. Our drivers are DBS checked, licensed by Leicester City Council, and experienced with hospital pickups — they know the main entrances, outpatient clinics, and staff collection points so you are not left searching for the right drop-off on arrival.",
+      "Hospital journeys often carry extra pressure — an early appointment slot, a discharge after a long stay, or a family member travelling with you who needs a little more time boarding. We build that into how we handle Glenfield Hospital runs. Mention the department or entrance when you book and we will note it on the job. A typical taxi from anywhere in Glenfield to Glenfield Hospital takes around five minutes, making us a practical choice for residents on Dominion Road or along Groby Road who want a reliable door-to-hospital service rather than relying on infrequent bus connections.",
+      "Beyond hospital runs, Glenfield sits in one of Leicester's best-connected positions for airport travel. The village is close to junction 21A of the M1, which makes East Midlands Airport one of the quickest airport runs from west Leicester. Typical journey times from Glenfield are: Leicester city centre around 12–15 minutes via the A50 or B5380, East Midlands Airport roughly 25 minutes, and Birmingham Airport around 50 minutes on a clear run. Example fares include Glenfield to Leicester city centre from £7 and Glenfield to East Midlands Airport from £28 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Core services from Glenfield include 24/7 availability with no night surcharge, fixed prices confirmed before the car arrives, DBS-checked licensed drivers, hospital runs to Glenfield Hospital and other medical sites, early morning rides for flight departures, and airport transfers to all major UK airports. Whether you need a 4am pickup for an EMA flight, a lunchtime run into Leicester city centre, or a standing booking for recurring shift work at the hospital, the process is the same — quote upfront, arrive on time, travel comfortably.",
+      "Glenfield borders Beaumont Leys to the east and sits close to Kirby Muxloe, Ratby, and Braunstone, and we cover the whole west Leicester area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Neighbouring Beaumont Leys residents often use the same hospital and airport routes, and we serve both areas with the same fixed-fare standard. Whether you are an NHS worker finishing a night shift, a patient heading to a cardiac appointment, or a family catching an early flight, Aylestone Kings gives Glenfield a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+    ],
+    faqs: [
+      {
+        question: "Do you cover taxi rides to Glenfield Hospital?",
+        answer:
+          "Yes. We provide taxi rides to and from Glenfield Hospital 24/7 for patients, visitors, NHS staff, and discharge pickups. Our drivers know the main entrances, outpatient clinics, and staff collection points. Journey time from anywhere in Glenfield is around five minutes. Mention the department or entrance when you book.",
+      },
+      {
+        question: "Can I book an early morning taxi from Glenfield for a flight?",
+        answer:
+          "Yes. We regularly run early morning taxis from Glenfield for East Midlands Airport and Birmingham Airport departures — including 3am, 4am, and 5am pickups. Pre-book the night before and we will confirm your driver and fixed fare. Glenfield to EMA is around 25 minutes and fares start from £28.",
+      },
+      {
+        question: "How much is a taxi from Glenfield to Leicester city centre?",
+        answer:
+          "A taxi from Glenfield to Leicester city centre typically starts from £7 depending on your exact pickup and drop-off points. Journey time is around 12–15 minutes in normal traffic via the A50 or B5380. You will receive a fixed quote before you confirm.",
+      },
+    ],
+  },
+  loughborough: {
+    bodyParagraphs: [
+      "Loughborough is one of the East Midlands' most active towns — a Charnwood Borough centre where Loughborough University draws students from around the world, Loughborough Town Centre provides everyday shopping and dining, and Loughborough Train Station connects commuters to Leicester, Nottingham, and London. The A6 and M1 corridor run through the area, making Loughborough a natural hub for people who need reliable transport beyond what buses and trains alone can offer. Aylestone Kings has served Loughborough since 1995, and our bookings here reflect three main groups: university students heading to campus, the airport, or nights out; commuters travelling to Leicester or Nottingham for work; and families needing school runs, station connections, and weekend trips across Leicestershire.",
+      "University students make up a large share of our Loughborough work. Term starts, reading weeks, and end-of-term travel generate steady demand for airport runs to East Midlands Airport — one of the shortest airport journeys from anywhere in the region — as well as longer transfers to Birmingham, Heathrow, and other UK hubs. We also cover late-night pickups from the town centre, campus-area collections, and group minibus bookings when housemates share the cost of a fixed-fare airport transfer. All drivers are DBS checked and licensed, and we confirm the price before the car arrives so there are no meter surprises on the way to your flight.",
+      "Commuters rely on us for the journeys that need to run to a schedule. Loughborough Train Station is a busy interchange, and many passengers book a taxi to meet a specific train departure or collect them on arrival when public transport does not align with their shift. The A6 link to Leicester city centre is one of our most frequent routes, and we also run regularly to Nottingham for work, appointments, and evenings out. Standing weekday bookings are available for passengers who want the same pickup time each morning without rebooking every day.",
+      "Families in Loughborough use taxis for the practical trips that matter — the school run on a wet morning, a Saturday outing from the town centre, or a lift to relatives across Charnwood Borough and beyond. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day. Long-distance journeys are also common from Loughborough: whether you are visiting family in another county, heading to a hospital appointment outside the area, or travelling to an event, we quote fixed fares upfront so the cost is clear before you confirm.",
+      "Typical journey times from Loughborough reflect the town's strong road position: Leicester city centre around 20–25 minutes via the A6, East Midlands Airport roughly 15 minutes, Birmingham Airport around 60 minutes on a clear run, and Nottingham around 30 minutes. Example fares include Loughborough to Leicester city centre from £18 and Loughborough to East Midlands Airport from £20 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Core services from Loughborough include 24/7 availability with no night surcharge, fixed prices confirmed before the car arrives, DBS-checked licensed drivers, airport transfers to all major UK airports, university student runs, train station pickups at Loughborough Train Station, and long-distance journeys across the Midlands and beyond. Loughborough sits close to Syston, Shepshed, and Coalville, and we cover the whole Charnwood area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a student catching an early EMA flight, a commuter heading to Leicester for work, or a family planning a long-distance trip, Aylestone Kings gives Loughborough a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+    ],
+    faqs: [
+      {
+        question: "Do you offer taxis from Loughborough to East Midlands Airport?",
+        answer:
+          "Yes. We provide fixed-price taxis from Loughborough to East Midlands Airport (EMA) 24/7. Journey time is around 15 minutes — one of the shortest airport runs in the region. Fares start from £20 and your price is confirmed before you travel. Pre-book for early-morning flights for the best availability.",
+      },
+      {
+        question: "Can I get a taxi from Loughborough to Leicester city centre?",
+        answer:
+          "Yes. We run taxis from Loughborough to Leicester city centre throughout the day and night. Journey time is around 20–25 minutes via the A6 in normal traffic. Fares start from £18 depending on your exact pickup and drop-off points. You will receive a fixed quote before you confirm.",
+      },
+      {
+        question: "Do you pick up from Loughborough train station?",
+        answer:
+          "Yes. We provide pickups and drop-offs at Loughborough Train Station for onward connections to Leicester, Nottingham, and London services. Pre-book with your train arrival time and we will meet you at the station, or call when you arrive and we will dispatch the nearest available driver.",
       },
     ],
   },
@@ -792,25 +876,28 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "fosse-park": {
     bodyParagraphs: [
-      "Fosse Park is Leicester's flagship retail and leisure destination, known for heavy weekend traffic, major-brand stores, and constant movement between shopping, dining, and entertainment zones. Taxi demand here is highly time-sensitive because access roads and pickup points can change quickly during peak periods. Aylestone Kings provides structured Fosse Park coverage with clear meeting instructions, helping customers avoid confusion when car parks and frontages are busy.",
-      "From Fosse Park to Leicester city centre, a typical taxi takes around 18 minutes via A5460 and city approaches, though Saturday peaks can add time. East Midlands Airport is generally the nearest major terminal from Fosse Park, usually around 30 to 35 minutes through A563 and M1/A453 links. Most fares to EMA are roughly GBP 40 to GBP 52 for standard vehicles, with expected pricing confirmed before travel.",
-      "Key local landmarks include Fosse Park Shopping Centre and Vue Leicester, both frequent pickup and drop-off points across weekdays and weekends. We also complete many journeys to nearby dining venues and onward transport to Leicester Railway Station. For shoppers carrying bags or families travelling with children, we provide practical collection guidance so boarding is safer and quicker than waiting in congested frontage lanes.",
-      "Retail staff also rely on us for shift-finish pickups, especially in late evening windows when bus frequency drops. We support pre-booked timed collections and return journeys for staff and visitors who need dependable transport after closing hours. Multi-stop bookings are available for groups heading to different local addresses, keeping travel organised without the hassle of multiple separate bookings.",
-      "Aylestone Kings serves Fosse Park especially well because our drivers are used to the area's changing traffic flow, event surges, and pickup restrictions. We know where delays build, where collections are easier, and how to keep ETAs realistic even during high-demand periods. That local operational detail makes a real difference for passengers who want reliable service rather than guesswork.",
-      "For terminal transfer planning beyond local journeys, visit /airport-transfers-leicester. To review likely fare bands before booking, see /pricing. This gives Fosse Park customers clear timing and cost expectations before they travel.",
+      "Fosse Shopping Park is one of the East Midlands' busiest retail destinations — a sprawling out-of-town centre on Leicester's western edge where major brands, dining, and leisure draw thousands of visitors every week. Fosse Park Avenue provides the main access route into the site, Braunstone Lane connects the area to surrounding residential neighbourhoods, and Meridian Business Park sits close by with offices and corporate tenants that generate steady weekday taxi demand. Aylestone Kings has served the Fosse Park corridor since 1995, and our bookings here fall into three clear groups: shoppers who want a comfortable ride with their bags, retail workers needing reliable transport at shift start and finish, and business park employees travelling to meetings, the city centre, or the airport.",
+      "Shoppers use us for the journeys that make a retail trip easier — a Saturday run to Fosse Shopping Park without hunting for a parking space, a return pickup when you are loaded with bags, or a lift from Oadby, Wigston, or Narborough with a fixed fare confirmed upfront. Our drivers know the retail park layout, the main entrance and exit points along Fosse Park Avenue, and where collections work best when car parks and frontages are busy. We agree a clear meeting point when you book so you are not standing in a congested lane wondering where the car is.",
+      "Retail workers make up a significant share of our Fosse Park work. Stores across the shopping park operate extended hours, and staff finishing late shifts — often after 9pm or 10pm when bus frequency drops — need a taxi service that is genuinely available around the clock. We run early morning pickups for staff opening stores before public transport starts, late-night collections after closing, and pre-booked standing bookings for employees who want the same driver at the same time each week. All drivers are DBS checked and licensed, and fixed prices are confirmed before the car arrives.",
+      "Corporate runs to Meridian Business Park are another regular booking type. Professionals heading to client meetings, commuting between the business park and Leicester city centre, or connecting to East Midlands Airport for business travel rely on us for punctual, fixed-fare journeys. The A563 ring road and M1 junction 21 give Fosse Park one of Leicester's strongest positions for airport access — East Midlands Airport is one of the quickest runs from anywhere in the city. We also cover multi-stop corporate bookings when a team needs collecting from different addresses before heading to a shared destination.",
+      "Typical journey times from Fosse Park reflect the area's favourable west-side position: Leicester city centre around 10–12 minutes via the A563 and inner-city approaches, East Midlands Airport roughly 20 minutes via the M1, and Birmingham Airport around 45 minutes on a clear run. Example fares include Fosse Park to Leicester city centre from £6 and Fosse Park to East Midlands Airport from £25 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Core services from Fosse Park include 24/7 availability with no night surcharge, fixed prices confirmed before the car arrives, DBS-checked licensed drivers, airport transfers to all major UK airports, early morning and late-night rides for retail workers, and corporate runs to Meridian Business Park and other business sites. Fosse Park sits alongside Braunstone and Glen Parva, and we cover the whole west Leicester area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a shopper heading home with bags, a retail worker finishing a late shift, or a business traveller catching an early flight, Aylestone Kings gives Fosse Park a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
       {
-        question: "Which pickup point should I use at Fosse Park?",
-        answer: "We confirm a clear meeting point based on your exact store area and current traffic management around the centre.",
+        question: "Can I get a taxi from Fosse Park to Leicester city centre?",
+        answer:
+          "Yes. We run taxis from Fosse Park to Leicester city centre throughout the day and night. Journey time is around 10–12 minutes in normal traffic via the A563. Fares start from £6 depending on your exact pickup and drop-off points. You will receive a fixed quote before you confirm.",
       },
       {
-        question: "How long is Fosse Park to Leicester City Centre?",
-        answer: "Most journeys are around 15 to 20 minutes, with longer times possible during weekend shopping peaks.",
+        question: "Do you cover early morning and late night rides for retail workers at Fosse Park?",
+        answer:
+          "Yes. We provide early morning and late-night taxi rides for retail workers at Fosse Park — including shift-start pickups before buses run and collections after stores close. Pre-book standing bookings for consistent weekly times, or call 0116 233 8888 when you finish your shift.",
       },
       {
-        question: "Can retail staff pre-book late evening pickups from Fosse Park?",
-        answer: "Yes, late-evening and shift-finish pickups can be scheduled in advance for reliable collection.",
+        question: "How much is a taxi from Fosse Park to East Midlands Airport?",
+        answer:
+          "A taxi from Fosse Park to East Midlands Airport (EMA) typically starts from £25 depending on your exact pickup point and vehicle size. Journey time is around 20 minutes — one of the shortest airport runs from Leicester. Your fixed fare is confirmed before you travel.",
       },
     ],
   },
@@ -977,44 +1064,6 @@ const areaContent: Record<string, AreaContent> = {
         question: "How far is Glen Parva from Leicester city centre?",
         answer:
           "Glen Parva is approximately 5 miles south of Leicester city centre — usually a 15–20 minute taxi journey via the A426 or Saffron Lane.",
-      },
-    ],
-  },
-  // 34. Fosse Park
-  "fosse-park": {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Fosse Park is one of the East Midlands&apos; busiest out-of-town retail parks, home to dozens of major stores
-          including Next, M&S, Boots, Currys, and many more. It&apos;s located on the western side of Leicester, just
-          off the A563 ring road, and Aylestone Kings provides regular taxi pickups and drop-offs at Fosse Park from
-          all areas of Leicester and Leicestershire.
-        </p>
-        <p className="text-gray-700">
-          Whether you&apos;re heading out for a big shopping trip and want a comfortable ride there and back with your
-          bags, or you&apos;ve finished a shift working at one of the stores and need a lift home, we&apos;re just a
-          call away. Our drivers are familiar with the retail park layout and all the entrance and exit points.
-        </p>
-        <p className="text-gray-700">
-          For visitors from further afield — Oadby, Wigston, Narborough, Hinckley, and beyond — we offer fixed-price
-          fares to and from Fosse Park. No meter running, no estimate — just a straightforward price when you book.
-        </p>
-        <p className="text-gray-700">
-          Group bookings are available too. Our 6 and 8-seater vehicles are great for friends heading to Fosse Park
-          together. Call 0116 2338888 or book online anytime.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How much is a taxi from Leicester city centre to Fosse Park?",
-        answer:
-          "A taxi from Leicester city centre to Fosse Park typically costs £8–£12. The journey takes approximately 15 minutes via the A563.",
-      },
-      {
-        question: "Do you pick up from inside Fosse Park?",
-        answer:
-          "Yes — we collect from Fosse Park at a specified meeting point. Call when you're ready and your driver will be there within minutes.",
       },
     ],
   },
@@ -1830,47 +1879,6 @@ const areaContent: Record<string, AreaContent> = {
       },
     ],
   },
-  // 21. Loughborough
-  loughborough: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Loughborough is one of the East Midlands&apos; most dynamic towns — home to Loughborough University
-          (consistently ranked among the UK&apos;s top ten), a thriving town centre, and excellent road links via the
-          A6 and M1. Aylestone Kings covers Loughborough and surrounding villages with professional taxi services 24
-          hours a day.
-        </p>
-        <p className="text-gray-700">
-          We serve a wide range of Loughborough passengers: university students and staff, professionals commuting to
-          Leicester or Nottingham, families visiting the town&apos;s parks and leisure facilities, and business
-          travellers heading to and from East Midlands Airport. Our drivers travel the A6 corridor regularly and know
-          the best routes in and out at every time of day.
-        </p>
-        <p className="text-gray-700">
-          Loughborough&apos;s proximity to East Midlands Airport — just 8 miles away — makes us a popular choice for
-          airport transfers. We offer fixed fares with no surprises, flight tracking, and meet-and-greet for arriving
-          passengers. For students flying home at the end of term, our 6 and 8-seater minibuses are ideal for groups
-          sharing the cost.
-        </p>
-        <p className="text-gray-700">
-          We also run to Birmingham, Heathrow, Gatwick, Luton, Stansted, and Manchester airports — all fully fixed, all
-          fully reliable. Call 0116 2338888 or book online anytime.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How much is a taxi from Loughborough to East Midlands Airport?",
-        answer:
-          "Fixed-price taxis from Loughborough to East Midlands Airport start from approximately £18–£25 — one of the shortest airport runs in the region at around 15 minutes.",
-      },
-      {
-        question: "Do you provide student taxi services in Loughborough?",
-        answer:
-          "Yes — we're popular with Loughborough University students for airport runs, city connections, and end-of-term travel. Group minibus bookings are available.",
-      },
-    ],
-  },
   // 22. Hinckley
   hinckley: {
     body: (
@@ -2022,44 +2030,6 @@ const areaContent: Record<string, AreaContent> = {
         question: "Do you do early morning pickups from Birstall?",
         answer:
           "Yes — we regularly do 3am, 4am, and 5am airport runs from Birstall. Pre-book the night before and we'll confirm your driver that evening.",
-      },
-    ],
-  },
-  // 17. Glenfield
-  glenfield: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Glenfield is a residential village on the western edge of Leicester, best known for Glenfield Hospital — one
-          of the region&apos;s most important cardiac centres and one of the UK&apos;s leading specialist hospitals.
-          Aylestone Kings covers Glenfield and the surrounding area with professional, 24/7 taxi service, and we
-          regularly transport patients and visitors to and from the hospital at all hours.
-        </p>
-        <p className="text-gray-700">
-          We understand that hospital journeys are often stressful, so our drivers are trained to be patient, helpful,
-          and supportive. Whether you&apos;re visiting a relative, attending an outpatient appointment, or being
-          discharged after a stay, we&apos;ll make the journey as comfortable as possible.
-        </p>
-        <p className="text-gray-700">
-          Beyond hospital transport, Glenfield is a well-established residential area with strong demand for airport
-          transfers. The village sits close to junction 21A of the M1, making East Midlands Airport one of the quickest
-          runs from anywhere in west Leicester — typically 20–25 minutes. All fares fixed, all airports covered.
-        </p>
-        <p className="text-gray-700">
-          Call 0116 2338888 anytime — we&apos;re here 24 hours a day, seven days a week.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "Do you provide taxis to Glenfield Hospital?",
-        answer:
-          "Yes — we transport patients, visitors, and staff to and from Glenfield Hospital around the clock. Our drivers are patient and experienced with medical transport.",
-      },
-      {
-        question: "How far is Glenfield from Leicester city centre?",
-        answer:
-          "Glenfield is approximately 4 miles west of Leicester city centre — usually a 12–18 minute taxi journey via the A50 or B5380.",
       },
     ],
   },
@@ -2278,45 +2248,6 @@ const areaContent: Record<string, AreaContent> = {
       },
     ],
   },
-  // 5. Evington
-  evington: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Evington is a quiet, established residential suburb on the eastern edge of Leicester, popular with families
-          and professionals who want green space without losing easy access to the city. Aylestone Kings covers
-          Evington and the surrounding area — including Evington Lane, Stoughton Road, and the Evington Valley — with
-          reliable pickups 24 hours a day.
-        </p>
-        <p className="text-gray-700">
-          The area is well positioned for journeys into Leicester city centre (typically 10–15 minutes), and our
-          drivers are familiar with the back roads that avoid traffic on the main A6 and Evington Road routes. We pick
-          up regularly from Evington&apos;s residential streets, local schools, and the GP surgery area.
-        </p>
-        <p className="text-gray-700">
-          For airport runs, Evington is conveniently placed for East Midlands Airport via the A47 eastbound — one of
-          the cleaner routes out of Leicester. All our airport fares are fixed, and we track your flight so there are
-          never any timing issues on return trips.
-        </p>
-        <p className="text-gray-700">
-          Whether it&apos;s a hospital appointment at Leicester General, a night out in the city, or a 4am airport
-          transfer, we&apos;re here whenever you need us. Call 0116 2338888 or book online.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How far is Evington from Leicester city centre?",
-        answer:
-          "Evington is approximately 3 miles east of Leicester city centre — usually around 10–15 minutes by taxi depending on traffic on Evington Road.",
-      },
-      {
-        question: "Do you cover the Stoughton Road area in Evington?",
-        answer:
-          "Yes — we cover all of Evington including Stoughton Road, Evington Lane, Evington Valley Road, and the surrounding residential streets.",
-      },
-    ],
-  },
   // 6. Belgrave
   belgrave: {
     body: (
@@ -2493,6 +2424,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const isClarendonPark = slug === "clarendon-park"
   const isHighfields = slug === "highfields"
   const isBraunstone = slug === "braunstone"
+  const isEvington = slug === "evington"
+  const isGlenfield = slug === "glenfield"
+  const isLoughborough = slug === "loughborough"
+  const isFossePark = slug === "fosse-park"
   const supermarketDestinationSlugs = new Set<string>([
     "asda-fosse-park",
     "sainsburys-grove-triangle",
@@ -2943,6 +2878,270 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   <p className="mt-4 text-gray-800 font-medium">
                     Need a taxi in Oadby right now? Book online in seconds or call {contactInfo.phone} for fast pickup from Stoughton Road, the Racecourse or anywhere in Oadby.
                   </p>
+                </div>
+              )}
+
+              {isFossePark && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Fosse Park — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Fosse Shopping Park, Fosse Park Avenue, Meridian Business Park, and Braunstone Lane are all within
+                    easy reach — making Fosse Park popular with shoppers, retail workers, and business park employees.
+                    We also cover neighbouring{" "}
+                    <Link href="/taxis-in/braunstone" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Braunstone
+                    </Link>{" "}
+                    and the wider west Leicester area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Fosse Park</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Fosse Park → Leicester city centre: around 10–12 minutes in normal traffic</li>
+                    <li>Fosse Park → East Midlands Airport (EMA): around 20 minutes</li>
+                    <li>Fosse Park → Birmingham Airport (BHX): around 45 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Fosse Park</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Fosse Park → Leicester city centre: from £6</li>
+                    <li>Fosse Park → East Midlands Airport: from £25</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Fosse Park</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including early-morning shift starts and late-night retail finishes</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>Early morning and late-night rides for retail workers at Fosse Shopping Park</li>
+                    <li>Corporate runs to Meridian Business Park and other business sites</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {isLoughborough && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Loughborough — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Loughborough University, Loughborough Town Centre, Charnwood Borough, and Loughborough Train
+                    Station are all within easy reach — making Loughborough popular with students, commuters, and
+                    families. We also cover neighbouring{" "}
+                    <Link href="/taxis-in/syston" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Syston
+                    </Link>{" "}
+                    and the wider north Leicestershire area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Loughborough</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Loughborough → Leicester city centre: around 20–25 minutes in normal traffic</li>
+                    <li>Loughborough → East Midlands Airport (EMA): around 15 minutes</li>
+                    <li>Loughborough → Birmingham Airport (BHX): around 60 minutes</li>
+                    <li>Loughborough → Nottingham: around 30 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Loughborough</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Loughborough → Leicester city centre: from £18</li>
+                    <li>Loughborough → East Midlands Airport: from £20</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Loughborough</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including early-morning airport runs and late-night student pickups</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>University student runs — campus, town centre, and end-of-term travel</li>
+                    <li>Train station pickups at Loughborough Train Station</li>
+                    <li>Long-distance journeys across the Midlands and beyond</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {isGlenfield && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Glenfield — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Glenfield Hospital, Glenfield Village, Dominion Road, and Groby Road are all within easy reach —
+                    making Glenfield a key area for NHS workers, patients, and families visiting the hospital. We also
+                    cover neighbouring{" "}
+                    <Link
+                      href="/taxis-in/beaumont-leys"
+                      className="text-[#06A0A6] hover:underline underline-offset-2"
+                    >
+                      Beaumont Leys
+                    </Link>{" "}
+                    and the wider west Leicester area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Glenfield</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Glenfield → Leicester city centre: around 12–15 minutes in normal traffic</li>
+                    <li>Glenfield → Glenfield Hospital: around 5 minutes</li>
+                    <li>Glenfield → East Midlands Airport (EMA): around 25 minutes</li>
+                    <li>Glenfield → Birmingham Airport (BHX): around 50 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Glenfield</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Glenfield → Leicester city centre: from £7</li>
+                    <li>Glenfield → East Midlands Airport: from £28</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Glenfield</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including night shifts and early-morning hospital runs</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>Hospital runs to Glenfield Hospital and other medical sites</li>
+                    <li>Early morning rides for flight departures</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {isEvington && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Evington — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Evington Village, Evington Park, Evington Road, and Leicester General Hospital are all within easy
+                    reach — making Evington popular with families, elderly residents, and NHS workers. We also cover
+                    neighbouring{" "}
+                    <Link href="/taxis-in/oadby" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Oadby
+                    </Link>{" "}
+                    and the wider east Leicester area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Evington</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Evington → Leicester city centre: around 10–12 minutes in normal traffic</li>
+                    <li>Evington → Leicester General Hospital: around 5 minutes</li>
+                    <li>Evington → East Midlands Airport (EMA): around 25 minutes</li>
+                    <li>Evington → Birmingham Airport (BHX): around 50 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Evington</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Evington → Leicester city centre: from £6</li>
+                    <li>Evington → East Midlands Airport: from £28</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Evington</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including night shifts and early-morning hospital runs</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>Hospital runs to Leicester General Hospital and other medical sites</li>
+                    <li>Elderly assistance with patient, door-to-door support</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>Regular school runs with standing bookings</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
                 </div>
               )}
 
