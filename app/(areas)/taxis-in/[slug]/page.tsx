@@ -69,21 +69,21 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 8. Highfields
   highfields: {
-    title: "Taxi in Highfields Leicester | 24/7 Fast Pickups | Aylestone Kings",
+    title: "Taxis in Highfields Leicester — Hospital Runs & Airport Transfers | 24/7",
     description:
-      "Taxi service in Highfields, Leicester. Fast local pickups, airport transfers, and 24/7 availability from Aylestone Kings. Call 0116 2338888 or book online.",
+      "Need a taxi in Highfields, Leicester? Aylestone Kings offers fixed price taxis from Highfields 24/7. Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 9. Clarendon Park
   "clarendon-park": {
-    title: "Taxi in Clarendon Park Leicester | 24/7 Service | Aylestone Kings",
+    title: "Taxis in Clarendon Park Leicester — Fixed Price, DBS Drivers | Book 24/7",
     description:
-      "Need a taxi in Clarendon Park? Aylestone Kings offers fast pickups, airport transfers, and 24/7 service. Licensed drivers. Call 0116 2338888.",
+      "Need a taxi in Clarendon Park, Leicester? Aylestone Kings provides fixed price taxis 24/7 from Clarendon Park. Airport transfers and late night rides. Call 0116 233 8888.",
   },
   // 10. Knighton
   knighton: {
-    title: "Taxi in Knighton Leicester | Fixed Fares, 24/7 | Aylestone Kings",
+    title: "Taxis in Knighton Leicester — Fixed Fares, No Surge Pricing | Book 24/7",
     description:
-      "Taxi service in Knighton, Leicester. Airport transfers, local rides, school runs — 24/7. Licensed DBS-checked drivers. Call 0116 2338888.",
+      "Looking for a taxi in Knighton, Leicester? Aylestone Kings offers fixed price taxis from Knighton 24/7. Airport transfers, school runs and local journeys. Call 0116 233 8888.",
   },
   // 11. Hamilton
   hamilton: {
@@ -99,9 +99,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 13. Braunstone
   braunstone: {
-    title: "Taxi in Braunstone Leicester | Fast & Affordable | Aylestone Kings",
+    title: "Taxis in Braunstone Leicester — Fixed Fares, No Hidden Charges | 24/7",
     description:
-      "Dependable taxi service in Braunstone, Leicester. Local rides, airport transfers, 24/7 availability. Call Aylestone Kings on 0116 2338888.",
+      "Need a taxi in Braunstone, Leicester? Aylestone Kings provides fixed price taxis from Braunstone 24/7. Airport transfers, school runs and local journeys. Call 0116 233 8888.",
   },
   // 14. Thurmaston
   thurmaston: {
@@ -306,6 +306,14 @@ type PriorityAreaSeoContent = {
   faqs: { question: string; answer: string }[]
 }
 
+/** Optional per-area H1 override (default: Taxi Service in {area} – Aylestone Taxis). */
+const AREA_CUSTOM_H1: Record<string, string> = {
+  knighton: "Taxis in Knighton, Leicester",
+  "clarendon-park": "Taxis in Clarendon Park, Leicester",
+  highfields: "Taxis in Highfields, Leicester",
+  braunstone: "Taxis in Braunstone, Leicester",
+}
+
 /** Optional contextual link from a taxis-in area page to a relevant blog post (SEO discovery). */
 const AREA_BLOG_CALLOUTS: Record<
   string,
@@ -386,6 +394,114 @@ const AREA_BLOG_CALLOUTS: Record<
 }
 
 const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
+  knighton: {
+    bodyParagraphs: [
+      "Knighton is one of south Leicester's most established residential neighbourhoods — a mix of Victorian terraces, Edwardian villas, and family homes between Clarendon Park and the Welford Road corridor. Walk a few minutes in any direction and you are never far from green space: Knighton Park borders the western edge of the ward, Victoria Park stretches east towards the city, and De Montfort University sits on the London Road boundary, drawing thousands of students and staff through Knighton every term. Aylestone Kings has served this area since 1995, and our Knighton passengers tend to fall into two groups — university commuters who need reliable early-morning and late-night runs, and professionals heading into the city centre, hospitals, or business parks on a fixed daily schedule.",
+      "For students, Knighton is a practical base. Shared houses on Knighton Fields Road, Church Road, and the streets around DMU generate steady demand for campus runs, library sessions, city-centre evenings, and Leicester Railway Station at the start and end of term. We operate 24/7, so a late society event or an early exam does not leave you stranded — a licensed, DBS-checked driver from our Leicester fleet can be with you quickly. Many students pre-book airport transfers for half-term and summer travel, with fixed fares confirmed before pickup so there are no meter surprises on the way to East Midlands or Birmingham.",
+      "Professional commuters book us just as regularly. Knighton's position south of the city centre gives quick access to the inner ring road and the A563, which makes morning runs into Leicester offices, Leicester Royal Infirmary, and business parks predictable when you set a standing pickup time. Parents in Knighton's school catchments arrange regular school runs with a consistent driver where possible, giving children a familiar face each morning. Every driver is licensed by Leicester City Council and DBS checked as standard.",
+      "We quote fixed prices on agreed routes, so you know the fare before the car arrives — whether that is a five-minute hop or a pre-booked airport day. Core services from Knighton include 24/7 local taxis, airport transfers to all major UK airports, school-run contracts, hospital appointments, and longer-distance business travel. Vehicles range from standard saloons for solo commuters to estates and MPVs for families and luggage-heavy airport trips.",
+      "Typical journey times reflect Knighton's favourable position: Leicester city centre is around 10–12 minutes in normal traffic via London Road or Clarence Road, East Midlands Airport is roughly 25 minutes via the A563 and M1, and Birmingham Airport is around 50 minutes on a clear run. Example fares include Knighton to Leicester city centre from £6 and Knighton to East Midlands Airport from £28 — final pricing is confirmed at booking based on your exact pickup point, vehicle size, and time of travel.",
+      "Knighton sits alongside neighbouring Oadby and Clarendon Park, and we cover the whole south Leicester area without boundary surcharges. For full airport route guidance including terminal drop-offs and flight-timing advice, see our airport transfers service. Whether you are a DMU student catching an early lecture, a parent on the school run, or a professional commuting into the city, Aylestone Kings gives Knighton a taxi service built around fixed fares, licensed drivers, and round-the-clock availability.",
+    ],
+    faqs: [
+      {
+        question: "Can I book a regular school run from Knighton?",
+        answer:
+          "Yes. We set up regular school runs from Knighton with consistent pickup times and, where possible, the same DBS-checked driver each morning. Contact us by phone or online to arrange a standing booking.",
+      },
+      {
+        question: "Can I get a taxi from Knighton late at night?",
+        answer:
+          "Yes. We operate 24/7 in Knighton, including late-night pickups after city-centre events, DMU society evenings, and early-morning airport runs. Call 0116 233 8888 or book online at any hour.",
+      },
+      {
+        question: "What is the fare from Knighton to Leicester city centre?",
+        answer:
+          "A taxi from Knighton to Leicester city centre typically starts from £6 depending on your exact pickup and drop-off points. Journey time is around 10–12 minutes in normal traffic. You will receive a fixed quote before you confirm.",
+      },
+    ],
+  },
+  "clarendon-park": {
+    bodyParagraphs: [
+      "Clarendon Park is one of Leicester's most distinctive south-city neighbourhoods — a leafy Victorian suburb where independent cafes along Queens Road meet quiet residential streets and a strong sense of community. Clarendon Park Road runs through the heart of the area, Victoria Park opens directly to the east, the University of Leicester campus sits a short ride north, and London Road provides the main artery connecting Clarendon Park to the city centre and beyond. Aylestone Kings has served this ward since 1995, and most of our Clarendon Park bookings come from two groups: university students who need dependable transport between campus, halls, and nights out, and young professionals commuting into the city or catching early airport flights.",
+      "Students make up a large share of Clarendon Park's daily taxi demand. Shared houses on Clarendon Park Road, Knighton Road, and the streets between Victoria Park and the university generate regular bookings for lecture runs, library sessions, supermarket trips, and Leicester Railway Station at the start and end of term. Because we operate 24/7, a late-night pickup after a city-centre event or a society evening on campus is never a problem — call us and a licensed, DBS-checked driver will be dispatched from our Leicester fleet. Many students pre-book airport transfers for reading week and summer travel, with the fare confirmed upfront so there are no meter surprises.",
+      "Young professionals living in Clarendon Park value the same reliability. The area's position — close enough to walk to Victoria Park on a lunch break, but well connected to the inner ring road — makes it a popular base for people working in Leicester's offices, hospitals, and creative industries. Standing morning pickups to the city centre, regular school-run contracts for families in the catchment, and evening returns after restaurants on London Road are all common requests. Every driver is licensed by Leicester City Council and DBS checked before they carry passengers.",
+      "We quote fixed prices on agreed routes, so you always know the fare before the car arrives. Services from Clarendon Park include 24/7 local taxis, late-night rides home from the city centre or campus, airport transfers to all major UK airports, school-run standing bookings, and hospital appointments. Vehicles range from standard saloons for a solo commuter to estates and MPVs when you are travelling with luggage or a group.",
+      "Journey times from Clarendon Park reflect how close the area sits to Leicester's core: the city centre is around 8–10 minutes in normal traffic via London Road or Welford Road, East Midlands Airport is roughly 25 minutes via the A563 and M1, and Birmingham Airport is around 50 minutes on a clear run. Example fares include Clarendon Park to Leicester city centre from £5 and Clarendon Park to East Midlands Airport from £28 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Clarendon Park borders Knighton and sits between the University of Leicester and De Montfort University's London Road campus, and we cover the whole south Leicester triangle without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a student heading to a 9am lecture, a professional commuting to the office, or a resident catching a late-night ride home, Aylestone Kings gives Clarendon Park a taxi service built on fixed fares, licensed drivers, and round-the-clock availability.",
+    ],
+    faqs: [
+      {
+        question: "Do you cover late night pickups in Clarendon Park?",
+        answer:
+          "Yes. We operate 24/7 in Clarendon Park, including late-night pickups after city-centre events, university society evenings, and restaurant trips along London Road. Call 0116 233 8888 or book online at any hour — no late-night surcharge.",
+      },
+      {
+        question: "Can I get a fixed price taxi from Clarendon Park to the airport?",
+        answer:
+          "Yes. We quote fixed fares for airport transfers from Clarendon Park to East Midlands, Birmingham, Heathrow, and all major UK airports. Your price is confirmed before you travel — typically from £28 to East Midlands Airport depending on vehicle size and pickup point.",
+      },
+      {
+        question: "How long does a taxi from Clarendon Park to Leicester city centre take?",
+        answer:
+          "Most journeys from Clarendon Park to Leicester city centre take around 8–10 minutes in normal traffic via London Road or Welford Road. Rush-hour traffic can add a few minutes, so allow extra time during peak periods.",
+      },
+    ],
+  },
+  highfields: {
+    bodyParagraphs: [
+      "Highfields sits at the heart of inner Leicester — a diverse, busy neighbourhood where residential streets meet major routes and some of the city's most important destinations. Highfields Park stretches along the southern edge of the ward, Spinney Hill Park lies to the north-east, Evington Road runs through the centre connecting the area to the wider city, and Leicester Royal Infirmary is just minutes away on Infirmary Square. Aylestone Kings has served Highfields since 1995, and our bookings here reflect the area's character: families needing school runs and shopping trips, NHS workers travelling to and from LRI on every shift pattern, and commuters heading into Leicester city centre for work.",
+      "Families in Highfields rely on taxis for the journeys that buses and walking cannot always cover comfortably — the school run on a rainy morning, a Saturday trip to Fosse Park, or a hospital visit with children in tow. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean, comfortable, and suitable for family travel.",
+      "NHS workers make up a significant share of our Highfields demand. Leicester Royal Infirmary is one of the region's busiest hospitals, and staff on early starts, late finishes, and rotating night shifts need a taxi service that is genuinely available around the clock — not one that stops answering after midnight. We run hospital transfers to LRI from anywhere in Highfields throughout the day and night, with drivers who know the main entrances, A&E drop-off points, and staff car park collection areas. A typical run from Highfields to LRI takes around five minutes, and fares start from £4.",
+      "Commuters heading into Leicester city centre from Highfields benefit from the area's central position. Evington Road and London Road both provide quick routes into town, and a standing morning pickup means you are not relying on bus timetables or searching for parking. We quote fixed prices on agreed routes, so your daily commute cost is predictable week to week. The same applies to airport days — pre-book a fixed-fare transfer to East Midlands or Birmingham and travel with luggage without the stress of surge pricing.",
+      "Typical journey times from Highfields: Leicester city centre around 8–10 minutes in normal traffic, Leicester Royal Infirmary around five minutes, East Midlands Airport roughly 25 minutes via the A563 and M1, and Birmingham Airport around 50 minutes on a clear run. Example fares include Highfields to Leicester city centre from £5, Highfields to East Midlands Airport from £28, and Highfields to LRI from £4 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Highfields borders Spinney Hills and sits close to Evington, Clarendon Park, and the city centre, and we cover the whole inner Leicester area without boundary surcharges. Core services include 24/7 local taxis, hospital runs, airport transfers to all major UK airports, school-run standing bookings, and shift-change pickups for NHS and other night workers. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a nurse finishing a night shift, a parent on the school run, or a commuter heading to the office, Aylestone Kings gives Highfields a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+    ],
+    faqs: [
+      {
+        question: "Do you cover hospital runs from Highfields to Leicester Royal Infirmary?",
+        answer:
+          "Yes. We provide hospital runs from Highfields to Leicester Royal Infirmary (LRI) 24/7, including early-morning appointments, visiting hours, and staff shift changes. Journey time is around five minutes and fares start from £4. Mention the entrance or department when you book.",
+      },
+      {
+        question: "Can I book a regular taxi from Highfields for night shifts?",
+        answer:
+          "Yes. Many NHS workers and shift workers in Highfields set up regular standing bookings for night-shift pickups and drop-offs. Call 0116 233 8888 to arrange a recurring booking with consistent times and, where possible, the same driver.",
+      },
+      {
+        question: "What is the fare from Highfields to Leicester city centre?",
+        answer:
+          "A taxi from Highfields to Leicester city centre typically starts from £5 depending on your exact pickup and drop-off points. Journey time is around 8–10 minutes in normal traffic. You will receive a fixed quote before you confirm.",
+      },
+    ],
+  },
+  braunstone: {
+    bodyParagraphs: [
+      "Braunstone is a west Leicester neighbourhood with a strong community identity and practical road links that make getting around straightforward. Braunstone Park sits at the heart of the ward, Braunstone Town extends the residential catchment just beyond the city boundary, Fosse Shopping Park is a few minutes away for retail and leisure trips, and Braunstone Gate provides a direct route into the city centre. Aylestone Kings has served Braunstone since 1995, and most of our bookings here come from two groups: families who need dependable school runs, shopping trips, and weekend outings, and working commuters who rely on a fixed-price taxi to get to shifts, warehouses, and city-centre jobs without the cost or hassle of parking.",
+      "Families in Braunstone use taxis for the everyday journeys that matter — the school run on a wet morning, a Saturday trip to Fosse Shopping Park with bags of shopping, or a lift to a relative's house across Leicester. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day so children and parents know who to expect. All drivers are licensed by Leicester City Council, and our vehicles are clean and comfortable for family travel. Pre-booking a return pickup from Fosse Park after a long shop means you are not wrestling with bags on a bus.",
+      "Working commuters in Braunstone value straightforward pricing above everything else. Many residents travel into Leicester city centre for retail, hospitality, and warehouse shifts, or head south-west towards Narborough and the M69 corridor for logistics and manufacturing work. A standing morning pickup to the city centre or a regular night-shift collection means you are not gambling on bus timetables or paying for city-centre parking. We quote fixed prices on agreed routes, so your weekly commute cost is predictable — no surge pricing, no meter ticking up in traffic once the job is booked.",
+      "Braunstone's west-side position also makes it one of Leicester's better-connected areas for airport travel. East Midlands Airport is typically around 20 minutes via the M1, and Birmingham Airport is around 45 minutes on a clear run — shorter than many other Leicester suburbs because of quick ring-road and motorway access. Pre-book a fixed-fare airport transfer and travel with family and luggage without worrying about the final bill. We cover all major UK airports from Braunstone with flight monitoring available on request.",
+      "Typical journey times from Braunstone: Leicester city centre around 10–12 minutes in normal traffic via Narborough Road or the ring road, East Midlands Airport roughly 20 minutes, and Birmingham Airport around 45 minutes. Example fares include Braunstone to Leicester city centre from £6 and Braunstone to East Midlands Airport from £25 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Braunstone sits close to Narborough, Glen Parva, and Aylestone, and we cover the whole west Leicester area without boundary surcharges. Core services include 24/7 local taxis, school-run standing bookings, shopping trips to Fosse Shopping Park and other retail destinations, airport transfers to all major UK airports, and hospital appointments. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a parent on the school run, a commuter heading to a shift, or a family catching an early flight, Aylestone Kings gives Braunstone a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+    ],
+    faqs: [
+      {
+        question: "How much is a taxi from Braunstone to Leicester city centre?",
+        answer:
+          "A taxi from Braunstone to Leicester city centre typically starts from £6 depending on your exact pickup and drop-off points. Journey time is around 10–12 minutes in normal traffic via Narborough Road or the ring road. You will receive a fixed quote before you confirm.",
+      },
+      {
+        question: "Do you offer airport transfers from Braunstone?",
+        answer:
+          "Yes. We provide fixed-price airport transfers from Braunstone to East Midlands, Birmingham, Heathrow, and all major UK airports. East Midlands Airport is around 20 minutes and fares start from £25. Pre-book for the best availability, especially for early-morning flights.",
+      },
+      {
+        question: "Can I book a school run taxi from Braunstone?",
+        answer:
+          "Yes. We set up regular school runs from Braunstone with consistent pickup times and, where possible, the same DBS-checked driver each morning. Call 0116 233 8888 or book online to arrange a standing school-run booking.",
+      },
+    ],
+  },
   "melton-mowbray": {
     bodyParagraphs: [
       "Melton Mowbray is famous for pork pies, Stilton links, and its long-running market-town character, but day-to-day travel here is more about practical connections than tourism. Residents move between villages, the town centre, schools, and rail services, often on tight timing windows. That creates demand for a taxi company that understands both central Melton roads and the outlying lanes where sat-nav-only routing can lose time. Aylestone Kings is regularly booked for school-day routines, evening hospitality pickups, and early starts when public transport options are limited.",
@@ -1947,43 +2063,6 @@ const areaContent: Record<string, AreaContent> = {
       },
     ],
   },
-  // 10. Knighton
-  knighton: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Knighton is a desirable south Leicester suburb known for its large Victorian and Edwardian houses, tree-lined
-          roads, and excellent school catchments. Aylestone Kings has served Knighton passengers for over 30 years,
-          covering Knighton Park Road, Welford Road, Knighton Lane, and the quieter residential streets that run
-          between Oadby and Clarendon Park.
-        </p>
-        <p className="text-gray-700">
-          The area has a steady demand for professional taxi services — hospital appointments at Leicester Royal
-          Infirmary, commutes into the city centre, school runs to local academies, and university connections for
-          staff and students. Our drivers are in this part of Leicester constantly and can typically be with you within
-          5–10 minutes.
-        </p>
-        <p className="text-gray-700">
-          Airport transfers are a particular strength for Knighton passengers. The area&apos;s position gives quick
-          access to the M1 via the A563, making for efficient runs to East Midlands Airport (roughly 25–30 minutes),
-          Birmingham Airport (50 minutes), and beyond. All fares are fixed — no meters, no surprises.
-        </p>
-        <p className="text-gray-700">Book anytime via phone, WhatsApp, or our online booking system.</p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How much is a taxi from Knighton to Leicester Royal Infirmary?",
-        answer:
-          "A taxi from Knighton to Leicester Royal Infirmary is typically £6–£10 depending on exact pickup and drop-off points. The journey takes around 10–15 minutes.",
-      },
-      {
-        question: "Do you offer regular taxi bookings from Knighton?",
-        answer:
-          "Yes — we can set up regular bookings for commutes, school runs, or medical appointments. Contact us to arrange a standing order.",
-      },
-    ],
-  },
   // 11. Hamilton
   hamilton: {
     body: (
@@ -2059,44 +2138,6 @@ const areaContent: Record<string, AreaContent> = {
         question: "How much is a taxi from Beaumont Leys to East Midlands Airport?",
         answer:
           "Fixed-price taxis from Beaumont Leys to East Midlands Airport start from approximately £25–£32. One of the shorter airport runs from Leicester due to quick M1 access.",
-      },
-    ],
-  },
-  // 13. Braunstone
-  braunstone: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Braunstone is a west Leicester neighbourhood with a strong community spirit and close proximity to the city&apos;s
-          retail parks and business areas. Aylestone Kings covers all of Braunstone — Braunstone Lane, Kingsway,
-          Linkway, and the surrounding residential areas — with fast, reliable taxi service round the clock.
-        </p>
-        <p className="text-gray-700">
-          The area has good road connections to the city centre via Narborough Road and the ring road, and our drivers
-          know the quickest routes at every time of day. For residents without a car, we&apos;re a practical and
-          affordable option for shopping runs, medical appointments, and commutes into the city.
-        </p>
-        <p className="text-gray-700">
-          Braunstone&apos;s position west of Leicester also makes it a strong location for airport transfers. East
-          Midlands Airport is typically 25–30 minutes away and our fixed fares mean no meter anxiety when you&apos;re
-          travelling with family and luggage. We cover all major UK airports from Braunstone.
-        </p>
-        <p className="text-gray-700">
-          For group travel, our 6 and 8-seater vehicles are popular among families and friends heading to the airport
-          together. Pre-book to guarantee availability.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How far is Braunstone from Leicester city centre?",
-        answer:
-          "Braunstone is approximately 3 miles west of Leicester city centre — usually a 10–15 minute taxi journey via Narborough Road or the ring road.",
-      },
-      {
-        question: "Do you cover the Braunstone Lane area?",
-        answer:
-          "Yes — we cover all of Braunstone including Braunstone Lane, Linkway, Kingsway, and the surrounding streets.",
       },
     ],
   },
@@ -2354,85 +2395,6 @@ const areaContent: Record<string, AreaContent> = {
       },
     ],
   },
-  // 8. Highfields
-  highfields: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Highfields is one of Leicester&apos;s most culturally diverse and vibrant inner-city neighbourhoods, located
-          just a mile from the city centre. Known for its fantastic range of restaurants along Narborough Road and
-          London Road, its busy community life, and its proximity to both De Montfort University and the University of
-          Leicester, Highfields generates a constant demand for taxi services — and Aylestone Kings is always here to
-          meet it.
-        </p>
-        <p className="text-gray-700">
-          We cover all of Highfields including Mere Road, St Peter&apos;s Road, Tichborne Street, and the London Road
-          corridor. Our drivers navigate this part of Leicester daily and know the quickest routes in and out at any
-          time of day.
-        </p>
-        <p className="text-gray-700">
-          Highfields is a popular area for students, and we offer competitive regular rides to and from DMU, the
-          University of Leicester, and Leicester College. Early-morning airport runs from Highfields to East Midlands
-          Airport are another regular booking — approximately 30 minutes with a fixed fare agreed upfront.
-        </p>
-        <p className="text-gray-700">
-          For late nights out in Highfields or the adjacent city centre, our 24/7 service means there&apos;s always a
-          safe, professional ride home when you need it.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How far is Highfields from De Montfort University?",
-        answer:
-          "Highfields borders the DMU campus — it's often a 5-minute walk, but for luggage, late nights, or bad weather, a taxi is 2–3 minutes and a few pounds.",
-      },
-      {
-        question: "Do you pick up from Highfields at night?",
-        answer:
-          "Yes — 24/7, every night of the week including weekends and bank holidays. No surcharge for late-night journeys from Highfields.",
-      },
-    ],
-  },
-  // 9. Clarendon Park
-  "clarendon-park": {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Clarendon Park is one of Leicester&apos;s most sought-after residential neighbourhoods — a leafy Victorian
-          suburb popular with university staff, young professionals, and families drawn to its independent cafes,
-          boutique shops, and community atmosphere along Queens Road. Aylestone Kings covers Clarendon Park and the
-          surrounding streets with fast, professional taxi service 24 hours a day.
-        </p>
-        <p className="text-gray-700">
-          We regularly pick up from Queens Road, Clarendon Park Road, Welford Road, and the residential streets around
-          Victoria Park. Our drivers are familiar with this part of south Leicester and typically reach Clarendon Park
-          within 5–10 minutes of booking.
-        </p>
-        <p className="text-gray-700">
-          For university connections, Clarendon Park sits between the University of Leicester campus and the city
-          centre — both a short ride away. Airport transfers are popular in the area too, particularly early-morning
-          runs to East Midlands and Birmingham airports with fixed fares and flight tracking included.
-        </p>
-        <p className="text-gray-700">
-          We also cover Victoria Park events — concerts, Leicester Marathon, and community events — when the area gets
-          busy. Pre-booking is advised on event days. Call 0116 2338888 or book online anytime.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How far is Clarendon Park from Leicester city centre?",
-        answer:
-          "Clarendon Park is about 1.5 miles south of the city centre — usually a 5–10 minute taxi ride via Welford Road or London Road.",
-      },
-      {
-        question: "Do you cover Victoria Park events from Clarendon Park?",
-        answer:
-          "Yes — we cover Victoria Park pickups and drop-offs for events, marathons, and markets. Pre-book for busy event days.",
-      },
-    ],
-  },
 }
 
 function getAllAreas(): AreaItem[] {
@@ -2527,6 +2489,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const isWigston = areaPlain.toLowerCase() === "wigston"
   const isOadby = areaPlain.toLowerCase() === "oadby"
   const isBeaumontLeys = slug === "beaumont-leys"
+  const isKnighton = slug === "knighton"
+  const isClarendonPark = slug === "clarendon-park"
+  const isHighfields = slug === "highfields"
+  const isBraunstone = slug === "braunstone"
   const supermarketDestinationSlugs = new Set<string>([
     "asda-fosse-park",
     "sainsburys-grove-triangle",
@@ -2659,7 +2625,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             <div>
               <p className="text-xs sm:text-sm uppercase tracking-widest text-white/80">{companyInfo.name}</p>
               <h1 className="mt-2 text-3xl text-white sm:text-4xl md:text-5xl font-extrabold leading-tight">
-                {isDestination ? `Taxi to ${areaPlain}` : `Taxi Service in ${areaPlain}`} – Aylestone Taxis
+                {AREA_CUSTOM_H1[slug] ??
+                  (isDestination ? `Taxi to ${areaPlain}` : `Taxi Service in ${areaPlain} – Aylestone Taxis`)}
               </h1>
               <p className="mt-3 max-w-2xl text-white/85">
                 {isDestination 
@@ -2976,6 +2943,261 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   <p className="mt-4 text-gray-800 font-medium">
                     Need a taxi in Oadby right now? Book online in seconds or call {contactInfo.phone} for fast pickup from Stoughton Road, the Racecourse or anywhere in Oadby.
                   </p>
+                </div>
+              )}
+
+              {isBraunstone && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Braunstone — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Braunstone Park, Braunstone Town, Fosse Shopping Park, and Braunstone Gate are all within easy
+                    reach — making Braunstone popular with families and working commuters. We also cover neighbouring{" "}
+                    <Link href="/taxis-in/narborough" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Narborough
+                    </Link>{" "}
+                    and the wider west Leicester area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Braunstone</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Braunstone → Leicester city centre: around 10–12 minutes in normal traffic</li>
+                    <li>Braunstone → East Midlands Airport (EMA): around 20 minutes</li>
+                    <li>Braunstone → Birmingham Airport (BHX): around 45 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Braunstone</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Braunstone → Leicester city centre: from £6</li>
+                    <li>Braunstone → East Midlands Airport: from £25</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Braunstone</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including early shifts and late-night pickups</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>Regular school runs with standing bookings</li>
+                    <li>Shopping trips to Fosse Shopping Park and other retail destinations</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {isHighfields && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Highfields — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Highfields Park, Spinney Hill Park, Evington Road, and Leicester Royal Infirmary are all within
+                    easy reach — making Highfields popular with families, NHS workers, and commuters. We also cover
+                    neighbouring{" "}
+                    <Link href="/taxis-in/spinney-hills" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Spinney Hills
+                    </Link>{" "}
+                    and the wider inner Leicester area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Highfields</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Highfields → Leicester city centre: around 8–10 minutes in normal traffic</li>
+                    <li>Highfields → Leicester Royal Infirmary (LRI): around 5 minutes</li>
+                    <li>Highfields → East Midlands Airport (EMA): around 25 minutes</li>
+                    <li>Highfields → Birmingham Airport (BHX): around 50 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Highfields</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Highfields → Leicester city centre: from £5</li>
+                    <li>Highfields → Leicester Royal Infirmary: from £4</li>
+                    <li>Highfields → East Midlands Airport: from £28</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Highfields</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including night shifts and early-morning hospital runs</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>Hospital runs to LRI and other Leicester medical sites</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>Regular school runs with standing bookings</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {isClarendonPark && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Clarendon Park — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Clarendon Park Road, Victoria Park, the University of Leicester, and London Road are all on your
+                    doorstep — making Clarendon Park a favourite with students and young professionals. We also cover
+                    neighbouring{" "}
+                    <Link href="/taxis-in/knighton" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Knighton
+                    </Link>{" "}
+                    and the wider south Leicester area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Clarendon Park</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Clarendon Park → Leicester city centre: around 8–10 minutes in normal traffic</li>
+                    <li>Clarendon Park → East Midlands Airport (EMA): around 25 minutes</li>
+                    <li>Clarendon Park → Birmingham Airport (BHX): around 50 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Clarendon Park</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Clarendon Park → Leicester city centre: from £5</li>
+                    <li>Clarendon Park → East Midlands Airport: from £28</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Clarendon Park</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including late nights and early mornings</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>Regular school runs with standing bookings</li>
+                    <li>Late-night rides home from the city centre and campus</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {isKnighton && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Knighton — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Knighton Park, Victoria Park, and De Montfort University are all within easy reach — making
+                    Knighton popular with students and professional commuters alike. We also cover neighbouring{" "}
+                    <Link href="/taxis-in/oadby" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Oadby
+                    </Link>{" "}
+                    and the wider south Leicester area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Knighton</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Knighton → Leicester city centre: around 10–12 minutes in normal traffic</li>
+                    <li>Knighton → East Midlands Airport (EMA): around 25 minutes</li>
+                    <li>Knighton → Birmingham Airport (BHX): around 50 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Knighton</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Knighton → Leicester city centre: from £6</li>
+                    <li>Knighton → East Midlands Airport: from £28</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Knighton</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including late nights and early mornings</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>Regular school runs with standing bookings</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
                 </div>
               )}
 
