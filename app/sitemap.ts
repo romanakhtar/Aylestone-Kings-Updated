@@ -56,6 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   urls.push(createUrl('/corporate-taxi-account-leicester', 0.85, 'monthly'))
   urls.push(createUrl('/meet-and-greet-taxi-leicester', 0.85, 'monthly'))
   urls.push(createUrl('/school-run-taxi-leicester', 0.85, 'monthly'))
+  urls.push(createUrl('/wheelchair-accessible-taxi-leicester', 0.85, 'monthly'))
   urls.push(createUrl('/taxi-to-birmingham-airport', 0.9, 'weekly'))
 
   // Airport Pricing Pages

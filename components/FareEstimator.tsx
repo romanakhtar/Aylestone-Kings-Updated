@@ -165,7 +165,7 @@ const FareEstimator: React.FC = () => {
   }
 
   return (
-    <section className="py-16 bg-[#f0f4f8]">
+    <section id="fare-estimator" className="py-16 bg-[#f0f4f8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div>

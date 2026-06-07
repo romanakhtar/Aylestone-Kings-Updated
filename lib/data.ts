@@ -660,6 +660,10 @@ export const siteData = {
     services: [
       { name: "Airport Transfers", href: "/airport-transfers-leicester" },
       { name: "Local Taxi Service", href: "/local-taxi-leicester" },
+      {
+        name: "Wheelchair Accessible Taxi Leicester",
+        href: "/wheelchair-accessible-taxi-leicester",
+      },
       { name: "24 Hour Taxi Leicester", href: "/24-hour-taxi-leicester" },
       { name: "Cheap Taxi Leicester", href: "/cheap-taxi-leicester" },
       {

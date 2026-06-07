@@ -12,6 +12,7 @@ import { ChristmasThemeProvider } from "@/components/ChristmasThemeProvider"
 import { ValentineThemeProvider } from "@/components/ValentineThemeProvider"
 import { DeferredLayoutChrome, DeferredHalloweenFloating } from "@/components/layout/DeferredLayoutChrome"
 import ThirdPartyScripts from "@/components/analytics/ThirdPartyScripts"
+import { getAggregateRatingJsonLd } from "@/lib/seo/siteJsonLd"
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -119,6 +120,7 @@ const schemaData = {
     "https://apps.apple.com/gb/app/aylestone-kings/id1061012064",
   ],
   priceRange: "££",
+  aggregateRating: getAggregateRatingJsonLd(),
 }
 
 export default function RootLayout({
