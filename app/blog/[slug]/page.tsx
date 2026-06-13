@@ -24,16 +24,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const canonicalUrl = `https://aylestone-taxis.co.uk/blog/${blog.id}`
 
+  const metaTitle = "metaTitle" in blog && blog.metaTitle ? blog.metaTitle : `${blog.title} | Aylestone Kings`
+  const metaDescription = "metaDescription" in blog && blog.metaDescription ? blog.metaDescription : blog.excerpt
+
   return {
     // Keep titles concise to reduce truncation and avoid Google rewrites
-    title: `${blog.title} | Aylestone Kings`,
-    description: blog.excerpt,
+    title: metaTitle,
+    description: metaDescription,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: blog.title,
-      description: blog.excerpt,
+      title: metaTitle,
+      description: metaDescription,
       url: canonicalUrl,
       type: "article",
       siteName: "Aylestone Kings",
@@ -43,8 +46,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: "summary_large_image",
-      title: blog.title,
-      description: blog.excerpt,
+      title: metaTitle,
+      description: metaDescription,
       images: blog.image ? [`https://aylestone-taxis.co.uk${blog.image}`] : undefined,
     },
   }
