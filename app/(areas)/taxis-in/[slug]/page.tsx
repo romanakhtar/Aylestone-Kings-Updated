@@ -129,21 +129,21 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 18. Blaby
   blaby: {
-    title: "Taxi in Blaby Leicestershire | Fixed Fares & 24/7 | Aylestone Kings",
+    title: "Taxis in Blaby Leicester — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Reliable taxi service in Blaby, Leicestershire. Local rides, airport transfers, 24/7 availability. Call Aylestone Kings on 0116 2338888.",
+      "Need a taxi in Blaby, Leicester? Fixed fares from £7 to the city centre, EMA from £25, 24/7 school runs and retail park trips. DBS-checked drivers — call 0116 233 8888.",
   },
   // 19. Narborough
   narborough: {
-    title: "Narborough Taxis | Book 24/7 | Aylestone Kings",
+    title: "Taxis in Narborough Leicester — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Narborough taxis: station & airport runs (EMA, Birmingham), local journeys across Narborough. Book narborough taxis online or call 0116 2338888 — 24/7.",
+      "Need a taxi in Narborough, Leicester? Fixed fares from £8 to the city centre, EMA from £22, train station pickups and school runs 24/7. DBS-checked drivers — call 0116 233 8888.",
   },
   // 20. Enderby
   enderby: {
-    title: "Enderby Taxi | Meridian & Airport Runs | Aylestone Kings",
+    title: "Taxis in Enderby Leicester — Corporate Travel, Fixed Fares | 24/7",
     description:
-      "Enderby taxi for residents & Meridian Business Park: airport transfers, corporate travel. Book your Enderby taxi on 0116 2338888 — 24/7.",
+      "Need a taxi in Enderby or Meridian Business Park? Fixed fares from £8 to Leicester, EMA from £22, corporate accounts and 24/7 business park runs. Call 0116 233 8888.",
   },
   // 21. Loughborough
   loughborough: {
@@ -315,6 +315,9 @@ const AREA_CUSTOM_H1: Record<string, string> = {
   evington: "Taxis in Evington, Leicester",
   glenfield: "Taxis in Glenfield, Leicester",
   loughborough: "Taxis in Loughborough, Leicestershire",
+  blaby: "Taxis in Blaby, Leicestershire",
+  narborough: "Taxis in Narborough, Leicestershire",
+  enderby: "Taxis in Enderby, Leicestershire",
 }
 
 /** Optional contextual link from a taxis-in area page to a relevant blog post (SEO discovery). */
@@ -502,6 +505,87 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
         question: "Can I book a school run taxi from Braunstone?",
         answer:
           "Yes. We set up regular school runs from Braunstone with consistent pickup times and, where possible, the same DBS-checked driver each morning. Call 0116 233 8888 or book online to arrange a standing school-run booking.",
+      },
+    ],
+  },
+  blaby: {
+    bodyParagraphs: [
+      "Blaby is a thriving market town on Leicester's southern fringe — a place where village character meets practical everyday travel. Blaby Road runs through the heart of the area connecting residential streets to the A426 corridor, Grove Farm Triangle draws shoppers and families to its retail cluster, Blaby Retail Park hosts major high-street names and click-and-collect collections, and neighbouring Whetstone is just minutes away for passengers who straddle both communities. Aylestone Kings has served south Leicestershire since 1995, and our Blaby passengers typically fall into three groups: families needing school runs and weekend outings, commuters heading into Leicester city centre for work, and shoppers who want a straightforward ride to the retail park without hunting for parking.",
+      "Families in Blaby book us for the journeys that matter on a school day — the wet-morning run when the bus is not appealing, a lift to after-school clubs in Leicester, or a Saturday trip into town with children and bags. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each morning so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean and comfortable for family travel. Pre-booking a return pickup from Blaby Retail Park after a big shop means you are not wrestling with trolley loads onto a bus.",
+      "Commuters treat Blaby as a practical base south of the city. Morning runs into Leicester offices, Leicester Railway Station, and business parks along the A426 are among our most frequent bookings. Blaby's position close to the M69 junction also makes it one of south Leicestershire's better-connected areas for airport days — but the everyday commute is where fixed pricing matters most. We quote agreed fares before the car arrives, so your weekly travel cost is predictable with no surge multipliers on rainy Tuesdays or match-day evenings.",
+      "Shoppers use our Blaby taxi service for Grove Farm Triangle, Blaby Retail Park, and trips onward to Fosse Park or Leicester city centre. Retail park forecourts can be busy on weekends, so tell us your preferred pickup point — store entrance, car park aisle, or a nearby side road — and we will note it on the job. Whether you are collecting a large click-and-collect order, visiting the weekly market in Blaby town centre, or meeting friends for lunch before an afternoon in the city, a pre-booked taxi keeps the day simple.",
+      "Typical journey times from Blaby reflect the town's favourable road position: Leicester city centre is around 12–15 minutes in normal traffic via Blaby Road and the A426, East Midlands Airport is roughly 15 minutes via the M1 corridor, and Birmingham Airport is around 50 minutes on a clear run via the M69 and M42. Example fares include Blaby to Leicester city centre from £7 and Blaby to East Midlands Airport from £25 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Core services from Blaby include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, school-run standing bookings, and retail park trips to Blaby Retail Park and Grove Farm Triangle. Blaby sits close to Narborough, Wigston, and Glen Parva, and we cover the whole south Leicestershire area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a parent on the school run, a commuter heading to the city, or a family catching an early EMA flight, Aylestone Kings gives Blaby a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+    ],
+    faqs: [
+      {
+        question: "How much is a taxi from Blaby to Leicester city centre?",
+        answer:
+          "A taxi from Blaby to Leicester city centre typically starts from £7 depending on your exact pickup and drop-off points. Journey time is around 12–15 minutes in normal traffic via Blaby Road and the A426. You will receive a fixed quote before you confirm.",
+      },
+      {
+        question: "Do you offer fixed price airport transfers from Blaby?",
+        answer:
+          "Yes. We provide fixed-price airport transfers from Blaby to East Midlands Airport, Birmingham, Heathrow, and all major UK airports. East Midlands Airport is around 15 minutes and fares start from £25. Your price is confirmed before you travel, with flight monitoring available on request.",
+      },
+      {
+        question: "Can I book a school run taxi from Blaby?",
+        answer:
+          "Yes. We set up regular school runs from Blaby with consistent pickup times and, where possible, the same DBS-checked driver each morning. Call 0116 233 8888 or book online to arrange a standing school-run booking.",
+      },
+    ],
+  },
+  narborough: {
+    bodyParagraphs: [
+      "Narborough is one of south-west Leicestershire's busiest commuter villages — a growing community where new housing, village character, and strong transport links meet everyday travel needs. Narborough Road runs through the heart of the area connecting residential streets to Leicester and the M69 corridor, Narborough Train Station provides direct rail services to Leicester and Nuneaton, Narborough Park offers green space for families and dog walkers, and Leicester Forest East sits just minutes away for passengers who live or work across the wider south-west fringe. Aylestone Kings has served this corridor since 1995, and our Narborough passengers are typically commuters who need reliable station connections and families who want dependable school runs and airport days without surge pricing.",
+      "Commuters book us for the journeys that train timetables cannot always cover. Early-morning starts before the first service, late finishes when connections are thin, and door-to-door runs with luggage to Leicester city centre or Leicester Railway Station are all common requests from Narborough. Pre-book with your train arrival time and we will meet you at Narborough Train Station, or call when you step off the platform and we will dispatch the nearest available driver. We quote fixed prices on agreed routes, so your weekly commute cost stays predictable — no app surge on rainy evenings or match days.",
+      "Families in Narborough rely on taxis for school runs, weekend outings, and the practical trips that buses make awkward — the wet-morning dash to school, a lift to after-school clubs in Leicester, or a Saturday visit to Narborough Park followed by shopping in town. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each morning so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean and comfortable for family travel.",
+      "Narborough's position close to the M1 and M69 junctions makes it one of the quickest Leicester-area starting points for airport travel. East Midlands Airport is especially convenient — many Narborough passengers reach the terminal in around ten minutes on a clear run, making a pre-booked fixed-fare transfer far simpler than long-stay parking or multiple bus connections. Birmingham Airport is also popular from Narborough, with a typical drive of around 45 minutes via the M69 and M42 when traffic is light.",
+      "Typical journey times from Narborough: Leicester city centre around 15 minutes in normal traffic via Narborough Road and the A5460, East Midlands Airport roughly 10 minutes via the M1 corridor, and Birmingham Airport around 45 minutes on a clear run. Example fares include Narborough to Leicester city centre from £8 and Narborough to East Midlands Airport from £22 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Core services from Narborough include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, train station pickups at Narborough Train Station, and school-run standing bookings. Narborough sits close to Blaby, Enderby, and Braunstone, and we cover the whole south Leicestershire area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a commuter catching the first train, a parent on the school run, or a family heading to an early EMA flight, Aylestone Kings gives Narborough a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+    ],
+    faqs: [
+      {
+        question: "How much is a taxi from Narborough to East Midlands Airport?",
+        answer:
+          "A taxi from Narborough to East Midlands Airport (EMA) typically starts from £22 depending on your exact pickup point and vehicle type. Journey time is around 10 minutes in normal traffic — one of the shortest airport runs from the Leicester area. You will receive a fixed quote before you confirm, with flight monitoring available on request.",
+      },
+      {
+        question: "Do you pick up from Narborough train station?",
+        answer:
+          "Yes. We provide pickups and drop-offs at Narborough Train Station throughout the day and night — especially for early-morning services, late-night arrivals, and connections that do not fit the timetable. Pre-book with your train time or call when you arrive and we will dispatch the nearest available driver.",
+      },
+      {
+        question: "Can I book a regular school run from Narborough?",
+        answer:
+          "Yes. We set up regular school runs from Narborough with consistent pickup times and, where possible, the same DBS-checked driver each morning. Call 0116 233 8888 or book online to arrange a standing school-run booking.",
+      },
+    ],
+  },
+  enderby: {
+    bodyParagraphs: [
+      "Enderby sits at the crossroads of south-west Leicestershire's busiest commercial corridor — a village where residential streets meet one of the East Midlands' largest employment hubs. Meridian Business Park dominates the local economy with major employers across logistics, manufacturing, and professional services, Enderby Leisure Centre draws residents and visitors for sport and events, Mill Lane connects village homes to the A5460 corridor, and Foxhunter Roundabout is the junction most commuters know by heart when heading toward Leicester or the motorway network. Aylestone Kings has served this area since 1995, and our Enderby passengers are overwhelmingly corporate commuters and business park employees who need reliable, fixed-price transport at hours that buses and trains do not always cover.",
+      "Meridian Business Park runs are among our most frequent bookings. Early-morning shift starts, late-evening finishes, and client meetings in Leicester city centre all generate steady demand from staff who want a door-to-door service without hunting for parking at the business park or waiting on infrequent public transport. We know the main Meridian entrances, staff car parks, and collection points along the A5460, so your driver can meet you at the right gate rather than circling the estate. Corporate accounts are available for businesses with regular travel requirements — invoicing, reference fields, and standing weekday bookings keep finance teams and office managers in control.",
+      "Corporate commuters value fixed pricing above almost everything else. A standing 7am pickup from Mill Lane to Leicester offices, or a regular evening return after a late shift, should cost the same every week — not surge on a rainy Tuesday because every app in Leicestershire is busy. We quote agreed fares before the car arrives, and recurring commuters can set up standing bookings so dispatch already knows your route, vehicle preference, and pickup point. Every driver is licensed by Leicester City Council and DBS checked as standard.",
+      "Enderby's position close to junction 21 of the M1 makes it one of the quickest Leicester-area starting points for airport travel. East Midlands Airport is typically around ten minutes on a clear run — ideal for early-morning departures when you need certainty rather than a meter ticking in traffic. Birmingham Airport is around 45 minutes via the M69 and M42, and we provide fixed-fare transfers to all major UK airports with flight monitoring available on request. Business travellers heading to client sites, conferences, or international flights benefit from the same upfront quoting whether the journey is local or cross-country.",
+      "Typical journey times from Enderby: Leicester city centre around 15 minutes in normal traffic via the A5460 and Narborough Road corridor, East Midlands Airport roughly 10 minutes via the M1, and Birmingham Airport around 45 minutes on a clear run. Example fares include Enderby to Leicester city centre from £8 and Enderby to East Midlands Airport from £22 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Core services from Enderby include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, corporate accounts for Meridian Business Park employers, and regular Meridian Business Park runs for shift workers and office staff. Enderby sits close to Narborough, Blaby, and the M1/M69 motorway junctions, and we cover the whole south-west Leicestershire corridor without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a shift worker starting at 5am, a manager heading to a city-centre meeting, or a team organising corporate travel accounts, Aylestone Kings gives Enderby a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+    ],
+    faqs: [
+      {
+        question: "Do you offer corporate taxi accounts for Meridian Business Park?",
+        answer:
+          "Yes. We provide corporate taxi accounts for businesses at Meridian Business Park and across Enderby, including invoicing, reference fields on bookings, and standing weekday pickups for staff. Contact us on 0116 233 8888 or visit our corporate taxi account page to set up an account.",
+      },
+      {
+        question: "How much is a taxi from Enderby to East Midlands Airport?",
+        answer:
+          "A taxi from Enderby to East Midlands Airport (EMA) typically starts from £22 depending on your exact pickup point and vehicle type. Journey time is around 10 minutes in normal traffic — one of the shortest airport runs from the Leicester area. You will receive a fixed quote before you confirm, with flight monitoring available on request.",
+      },
+      {
+        question: "Can I book a regular taxi for commuting from Enderby?",
+        answer:
+          "Yes. Many Enderby and Meridian Business Park commuters set up regular standing bookings for weekday travel to Leicester city centre, stations, and other workplaces. Call 0116 233 8888 to arrange a recurring pickup with consistent times and, where possible, the same DBS-checked driver.",
       },
     ],
   },
@@ -1765,120 +1849,7 @@ const areaContent: Record<string, AreaContent> = {
       },
     ],
   },
-  // 18. Blaby
-  blaby: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Blaby is a market town in south Leicestershire, approximately 5 miles south of Leicester city centre. Known
-          for its weekly market, good local amenities, and family-friendly atmosphere, Blaby has a steady demand for
-          taxi services — and Aylestone Kings covers the whole area with 24/7 professional transport.
-        </p>
-        <p className="text-gray-700">
-          We serve all of Blaby including Lutterworth Road, the town centre, Countesthorpe Road, and the residential
-          streets spreading south towards Glen Parva. Whether it&apos;s a trip into Leicester for shopping or work, a
-          late-night pickup after an evening out, or a hospital appointment, our drivers are on hand whenever you need
-          us.
-        </p>
-        <p className="text-gray-700">
-          Blaby&apos;s position close to the M69 junction gives excellent access for airport transfers — particularly
-          Birmingham Airport (around 35–40 minutes) and East Midlands Airport (approximately 25–30 minutes). All our
-          airport fares are fixed, agreed before you travel, and include flight monitoring for arrivals.
-        </p>
-        <p className="text-gray-700">
-          Call 0116 2338888 or WhatsApp +447888873795 to book anytime.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How much is a taxi from Blaby to Leicester city centre?",
-        answer:
-          "A taxi from Blaby to Leicester city centre typically costs £10–£14. The journey takes around 15–20 minutes via Narborough Road or the A426.",
-      },
-      {
-        question: "Do you cover the Blaby Retail Park area?",
-        answer:
-          "Yes — we cover the Blaby area including retail parks and business addresses. Call or book online for a quick pickup.",
-      },
-    ],
-  },
-  // 19. Narborough
-  narborough: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Narborough is a popular commuter village south-west of Leicester, with its own railway station providing
-          direct services to Leicester and Nuneaton. The village has grown significantly in recent years with new
-          housing developments attracting families who want a quieter setting while still being close to the city.
-          Aylestone Kings provides full taxi coverage across Narborough and the surrounding area around the clock.
-        </p>
-        <p className="text-gray-700">
-          We cover Narborough Village, the new housing developments off Coventry Road, and the areas around Narborough
-          station. For passengers arriving on early trains or needing a connection that doesn&apos;t fit the timetable,
-          we&apos;re the ideal solution.
-        </p>
-        <p className="text-gray-700">
-          Airport transfers are one of our most common bookings from Narborough. The village sits close to the M69,
-          giving excellent access to Birmingham Airport (around 35–40 minutes) — and East Midlands Airport via the M1
-          is typically 25–30 minutes. Fixed fares, no meters, and flight monitoring included on all airport bookings.
-        </p>
-        <p className="text-gray-700">
-          Book via call, WhatsApp, or online. We run 24 hours a day every day of the year.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "Do you collect from Narborough railway station?",
-        answer:
-          "Yes — we collect from Narborough station regularly, especially for early morning or late-night services when other transport options are limited.",
-      },
-      {
-        question: "How much is a taxi from Narborough to Birmingham Airport?",
-        answer:
-          "Fixed-price taxis from Narborough to Birmingham Airport (BHX) start from approximately £40–£50 via the M69. Price is confirmed at booking.",
-      },
-    ],
-  },
   // 20. Enderby
-  enderby: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Enderby is a village in south-west Leicestershire, sitting between Narborough and the Meridian Business Park
-          — one of the East Midlands&apos; largest commercial areas. Aylestone Kings covers Enderby and the Meridian
-          Business Park corridor with professional taxi service 24 hours a day, serving both residents and the many
-          businesses and employees based in the area.
-        </p>
-        <p className="text-gray-700">
-          The Meridian Business Park is a major employer in the region and we regularly transport staff to and from the
-          business park — early morning and late evening runs are particularly common. Corporate accounts are available
-          for businesses in the area with regular travel requirements.
-        </p>
-        <p className="text-gray-700">
-          For residents, Enderby&apos;s location close to junction 21 of the M1 makes it an excellent starting point
-          for airport transfers. East Midlands Airport is approximately 20 minutes from Enderby, and Birmingham Airport
-          is around 30–35 minutes via the M69. All airport fares are fixed, all flights monitored.
-        </p>
-        <p className="text-gray-700">
-          Call 0116 2338888 or book online anytime.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "Do you cover the Meridian Business Park in Enderby?",
-        answer:
-          "Yes — we cover the Meridian Business Park and surrounding business addresses in Enderby. Corporate accounts available for regular bookings.",
-      },
-      {
-        question: "How far is Enderby from East Midlands Airport?",
-        answer:
-          "Enderby is one of the closest Leicester area towns to East Midlands Airport — approximately 15–20 minutes via the M1 junction 24.",
-      },
-    ],
-  },
   // 22. Hinckley
   hinckley: {
     body: (
@@ -2426,6 +2397,9 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const isBraunstone = slug === "braunstone"
   const isEvington = slug === "evington"
   const isGlenfield = slug === "glenfield"
+  const isBlaby = slug === "blaby"
+  const isNarborough = slug === "narborough"
+  const isEnderby = slug === "enderby"
   const isLoughborough = slug === "loughborough"
   const isFossePark = slug === "fosse-park"
   const supermarketDestinationSlugs = new Set<string>([
@@ -3319,6 +3293,207 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     </li>
                     <li>Regular school runs with standing bookings</li>
                     <li>Late-night rides home from the city centre and campus</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {isEnderby && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Enderby — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Meridian Business Park, Enderby Leisure Centre, Mill Lane, and Foxhunter Roundabout are all within
+                    easy reach — making Enderby a hub for corporate commuters and business park employees. We also
+                    support{" "}
+                    <Link
+                      href="/corporate-taxi-account-leicester"
+                      className="text-[#06A0A6] hover:underline underline-offset-2"
+                    >
+                      corporate taxi accounts
+                    </Link>{" "}
+                    for regular business travel across Leicestershire.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Enderby</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Enderby → Leicester city centre: around 15 minutes in normal traffic</li>
+                    <li>Enderby → East Midlands Airport (EMA): around 10 minutes</li>
+                    <li>Enderby → Birmingham Airport (BHX): around 45 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Enderby</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Enderby → Leicester city centre: from £8</li>
+                    <li>Enderby → East Midlands Airport: from £22</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Enderby</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including early-morning shift starts and late-evening business park pickups</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>
+                      <Link
+                        href="/corporate-taxi-account-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Corporate accounts
+                      </Link>{" "}
+                      for Meridian Business Park employers
+                    </li>
+                    <li>Regular Meridian Business Park runs for shift workers and office staff</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {isNarborough && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Narborough — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Narborough Road, Narborough Train Station, Narborough Park, and neighbouring Leicester Forest East
+                    are all within easy reach — making Narborough popular with commuters and families. We also cover{" "}
+                    <Link href="/taxis-in/blaby" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Blaby
+                    </Link>{" "}
+                    and the wider south-west Leicestershire area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Narborough</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Narborough → Leicester city centre: around 15 minutes in normal traffic</li>
+                    <li>Narborough → East Midlands Airport (EMA): around 10 minutes</li>
+                    <li>Narborough → Birmingham Airport (BHX): around 45 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Narborough</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Narborough → Leicester city centre: from £8</li>
+                    <li>Narborough → East Midlands Airport: from £22</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Narborough</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including early-morning station pickups and airport runs</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>Train station pickups at Narborough Train Station</li>
+                    <li>Regular school runs with standing bookings</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {isBlaby && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Blaby — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Blaby Road, Grove Farm Triangle, Blaby Retail Park, and neighbouring Whetstone are all within easy
+                    reach — making Blaby popular with families, commuters, and shoppers. We also cover{" "}
+                    <Link href="/taxis-in/narborough" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Narborough
+                    </Link>{" "}
+                    and the wider south Leicestershire area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Blaby</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Blaby → Leicester city centre: around 12–15 minutes in normal traffic</li>
+                    <li>Blaby → East Midlands Airport (EMA): around 15 minutes</li>
+                    <li>Blaby → Birmingham Airport (BHX): around 50 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Blaby</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Blaby → Leicester city centre: from £7</li>
+                    <li>Blaby → East Midlands Airport: from £25</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Blaby</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including early-morning airport runs and evening retail park pickups</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>Regular school runs with standing bookings</li>
+                    <li>Retail park trips to Blaby Retail Park and Grove Farm Triangle</li>
                   </ul>
                   <div className="flex flex-col sm:flex-row gap-3 mt-4">
                     <Link
