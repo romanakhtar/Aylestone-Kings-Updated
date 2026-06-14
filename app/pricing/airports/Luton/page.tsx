@@ -12,6 +12,7 @@ import Link from "next/link"
 import { contactInfo } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
+import GoogleReviewsWidget from "@/components/GoogleReviewsWidget"
 import AirportPricingBreadcrumbs from "@/components/seo/AirportPricingBreadcrumbs"
 import { AirportLeicesterGuide } from "@/components/seo/AirportLeicesterGuide"
 import { buildAirportMetadata } from "@/lib/seo/airportSeo"
@@ -711,6 +712,8 @@ export default function LutonPage() {
         </section>
 
         <AirportRelatedLinks airportName="Luton Airport" />
+
+        <GoogleReviewsWidget />
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">

@@ -26,6 +26,9 @@ export default function ThirdPartyScripts() {
         `}
       </Script>
 
+      {/* Elfsight Google Reviews — loaded once for all pages using GoogleReviewsWidget */}
+      <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
+
       {/* Google Tag Manager (gtm.js is injected with async=true by the bootstrap snippet) */}
       <Script id="google-tag-manager" strategy="lazyOnload">
         {`
