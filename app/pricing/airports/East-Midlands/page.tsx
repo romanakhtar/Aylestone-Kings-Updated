@@ -3,6 +3,7 @@ import { contactInfo } from "@/lib/data"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
+import GoogleReviewsWidget from "@/components/GoogleReviewsWidget"
 import AirportPricingBreadcrumbs from "@/components/seo/AirportPricingBreadcrumbs"
 import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
 import { buildAirportMetadata } from "@/lib/seo/airportSeo"
@@ -319,6 +320,8 @@ export default function EastMidlandsPage() {
         </section>
 
         <AirportRelatedLinks airportName="East Midlands Airport" />
+
+        <GoogleReviewsWidget />
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">

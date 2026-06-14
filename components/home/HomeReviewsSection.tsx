@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Star, ChevronLeft, ChevronRight } from "@/lib/icons"
 import { siteData } from "@/lib/data"
+import { GoogleReviewsEmbed } from "@/components/GoogleReviewsWidget"
 
 export default function HomeReviewsSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -132,6 +133,10 @@ export default function HomeReviewsSection() {
               {isAutoPlaying ? "Pause" : "Play"} Auto-scroll
             </button>
           </div>
+        </div>
+
+        <div className="mt-16">
+          <GoogleReviewsEmbed />
         </div>
       </div>
     </section>

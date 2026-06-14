@@ -1143,7 +1143,7 @@ export const siteData = {
         date: "2026-06-15",
         author: "Aylestone Kings Team",
         category: "Fare Guide",
-        image: "/Blog how-much-does-taxi-cost-leicester-2026-fare-guide.webp",
+        image: "/Blog_Taxi_vs_Uber.webp",
       },
       {
         id: "leicester-to-manchester-taxi-cost-time-guide-2026",
@@ -1248,7 +1248,7 @@ export const siteData = {
         date: "2026-06-14",
         author: "Aylestone Kings Team",
         category: "Fare Guide",
-        image: "/Blog leicester-to-heathrow-taxi-everything-you-need-to-know.webp",
+        image: "/Blog_Leicester_to_Manchester_airport_taxi.webp",
       },
       {
         id: "summer-holidays-airport-taxi-guide-leicester-2026",
@@ -1339,7 +1339,7 @@ export const siteData = {
         date: "2026-06-13",
         author: "Aylestone Kings Team",
         category: "Airport Transfers",
-        image: "/Blog leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips.webp",
+        image: "/Blog_Summer_holidays_airport_taxi.webp",
       },
       {
         id: "leicester-to-heathrow-taxi-everything-you-need-to-know",
