@@ -13,7 +13,7 @@ export const metadata = buildAirportMetadata({
   airportCode: "MAN",
   slug: "Manchester",
   fromPrice: "£150",
-  title: "Manchester Airport taxi Leicester | From £150 | T1–T3 | Aylestone",
+  title: "Manchester Airport Taxi Leicester | From £150",
   description:
     "Leicester to Manchester Airport (MAN): ~90–100 mi, ~2h–2h45 via M69/M6. Drop-off at T1, T2, or T3. Emirates, Qatar, USA routes. Fixed from £150 — book or call 0116 2338888 24/7.",
 })

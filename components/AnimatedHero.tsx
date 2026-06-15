@@ -196,7 +196,11 @@ export default function AnimatedHero() {
       )}
       
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-24 lg:pt-28 pb-16 flex items-center">
+      <div
+        className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 flex items-start ${
+          isValentineActive ? "pt-8 sm:pt-10" : "pt-4 sm:pt-6 lg:pt-8"
+        }`}
+      >
         <div className={`grid grid-cols-1 ${isChristmasActive ? 'lg:grid-cols-2' : 'lg:grid-cols-2'} gap-8 lg:gap-16 items-start w-full`}>
           {/* Left Content - Main Content with Enhanced Visuals */}
           <div className={`${isChristmasActive ? 'order-1 lg:order-1' : 'order-1'} max-w-xl`}>
@@ -226,7 +230,7 @@ export default function AnimatedHero() {
                 ? "Pre-book with confidence. Licensed, safe and on time — every time."
                 : isSeasonal
                 ? siteData.homepage.hero.subtitle
-                : "Fixed-price Leicester taxis with licensed local drivers. Reliable transfers to East Midlands, Birmingham, Heathrow and all major UK airports."}
+                : "Aylestone Kings provides fixed-price Leicester taxis with licensed local drivers. Whether you need Leicester cabs for a local trip, Leicester city taxis for an evening out, or a reliable airport transfer to East Midlands, Birmingham, Heathrow and all major UK airports — we're available 24/7."}
             </p>
 
             {/* Enhanced Features with Icons */}
@@ -318,7 +322,7 @@ export default function AnimatedHero() {
                 >
                   <Image
                     src={siteData.images.heroTaxi}
-                    alt="Modern white taxi vehicle from Aylestone Kings professional fleet serving Leicester and Midlands since 1995"
+                    alt="Modern white taxi Leicester from Aylestone Kings — professional fleet serving Leicester and the Midlands since 1995"
                     width={280}
                     height={224}
                     priority
@@ -333,7 +337,7 @@ export default function AnimatedHero() {
           </div>
           
           {/* Right Content - Contact Mode Cards (Desktop Only) */}
-          <div className="hidden lg:flex max-w-md order-2 justify-center lg:justify-end mb-8 lg:mb-0">
+          <div className="hidden lg:flex max-w-md order-2 justify-center lg:justify-end mb-8 lg:mb-0 lg:self-stretch lg:items-center">
             <ContactModeCards />
           </div>
         </div>

@@ -5,8 +5,7 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title:
-    "Meet and Greet Taxi Leicester | Airport Meet & Greet at EMA & BHX | Aylestone Kings",
+  title: "Meet and Greet Taxi Leicester | EMA & BHX | Aylestone",
   description:
     "Book a meet and greet taxi Leicester for East Midlands Airport (EMA) and Birmingham Airport (BHX). Your driver meets you in arrivals with a name board, helps with luggage and escorts you to your taxi. Pre-booking required.",
   keywords:
@@ -15,8 +14,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/meet-and-greet-taxi-leicester",
   },
   openGraph: {
-    title:
-      "Meet and Greet Taxi Leicester | Airport Meet & Greet at EMA & BHX | Aylestone Kings",
+    title: "Meet and Greet Taxi Leicester | EMA & BHX | Aylestone",
     description:
       "Pre-book a meet and greet taxi Leicester for EMA and BHX. Your driver meets you in arrivals with a name sign, assists with luggage and walks you to your taxi.",
     url: "https://aylestone-taxis.co.uk/meet-and-greet-taxi-leicester",

@@ -5,7 +5,7 @@ import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 
 export const metadata: Metadata = {
-  title: "Leicester to Heathrow Terminal 3 Taxi | Fixed Fares | Aylestone Taxis",
+  title: "Leicester to Heathrow T3 Taxi | Fixed Fares | Aylestone",
   description:
     "Taxi to Heathrow Terminal 3 (T3) from Leicester: private hire with fixed fares, flight tracking, meet & greet option, licensed drivers. Book online or call 0116 2338888 — 24/7.",
   keywords:
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/heathrow-terminal-3-taxi-transfers",
   },
   openGraph: {
-    title: "Leicester to Heathrow Terminal 3 Taxi | Fixed Fares | Aylestone Taxis",
+    title: "Leicester to Heathrow T3 Taxi | Fixed Fares | Aylestone",
     description:
       "Leicester to Heathrow T3 transfers: fixed pricing, flight monitoring, professional drivers. Book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/heathrow-terminal-3-taxi-transfers",

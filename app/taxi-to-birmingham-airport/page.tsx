@@ -7,14 +7,14 @@ import { getTaxiServiceJsonLd } from "@/lib/seo/siteJsonLd"
 const CANONICAL_URL = "https://aylestone-taxis.co.uk/taxi-to-birmingham-airport"
 
 export const metadata: Metadata = {
-  title: "Taxi to Birmingham Airport from £60 | Leicester to BHX | Book",
+  title: "Taxi to Birmingham Airport from £60 | Leicester",
   description:
     "Taxi to Birmingham Airport (BHX) from Leicester: fixed from £60, ~38 miles, ~1 hour via M69/M6. All airlines, T1/T2 drop-off zones, 24/7. Instant quote online — or call 0116 2338888 (no surge pricing).",
   alternates: {
     canonical: CANONICAL_URL,
   },
   openGraph: {
-    title: "Taxi to Birmingham Airport from £60 | Leicester | Aylestone Taxis",
+    title: "Birmingham Airport Taxi from Leicester | From £60",
     description:
       "Fixed-price Leicester to BHX transfers from £60. Licensed drivers, terminal forecourt drop-off, flight-tracked returns.",
     url: CANONICAL_URL,

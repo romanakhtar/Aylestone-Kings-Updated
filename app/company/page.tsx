@@ -4,7 +4,7 @@ import { Shield, Users, Award, Clock, Check, ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Aylestone Taxis Leicester | Aylestone Kings Official | Book Online",
+  title: "Aylestone Taxis Leicester | Official Site | Book Online",
   description:
     "Aylestone Taxis and Aylestone Kings: Leicester taxi company since 1995, based on Aylestone Road (LE2). Aylestone cabs for airport & local — book online or call 0116 2338888, 24/7.",
   alternates: {
