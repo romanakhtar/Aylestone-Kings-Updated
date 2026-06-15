@@ -23,7 +23,7 @@ import { getCorporateServiceGraphJsonLd } from "@/lib/seo/siteJsonLd"
 const CORPORATE_CANONICAL = "https://aylestone-taxis.co.uk/corporate-taxi-account-leicester"
 
 export const metadata: Metadata = {
-  title: "Corporate Taxi Accounts Leicester | Business Travel & Staff Transport | Aylestone Kings",
+  title: "Corporate Taxi Accounts Leicester | Business Travel",
   description:
     "Corporate taxi accounts in Leicester: monthly invoicing, staff and client travel, airport runs, and dedicated account support. We serve healthcare, logistics, retail, education, legal, and finance sectors. Enquire at " +
     contactInfo.email +
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     canonical: CORPORATE_CANONICAL,
   },
   openGraph: {
-    title: "Corporate Taxi Accounts Leicester | Business Travel & Staff Transport | Aylestone Kings",
+    title: "Corporate Taxi Accounts Leicester | Business Travel",
     description:
       "Business taxi accounts with monthly invoicing, staff booking, and account management. Serving Leicester and the wider East Midlands. Enquire today.",
     url: CORPORATE_CANONICAL,

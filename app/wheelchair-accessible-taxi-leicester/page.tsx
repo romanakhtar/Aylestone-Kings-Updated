@@ -17,7 +17,7 @@ const PAGE_PHONE = "0116 233 8888"
 const CANONICAL = "https://aylestone-taxis.co.uk/wheelchair-accessible-taxi-leicester"
 
 export const metadata: Metadata = {
-  title: "Wheelchair Accessible Taxi Leicester — DBS Drivers, Ramp Access | Aylestone Kings",
+  title: "Wheelchair Accessible Taxi Leicester | Aylestone Kings",
   description:
     "Need a wheelchair accessible taxi in Leicester? Aylestone Kings provides safe, comfortable wheelchair accessible vehicles across Leicester. Pre-book online or call 0116 233 8888",
   alternates: {

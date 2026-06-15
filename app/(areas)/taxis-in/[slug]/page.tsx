@@ -33,13 +33,13 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 2. Leicester City Centre
   "leicester-city-centre": {
-    title: "Taxi Leicester City Centre | Instant Pickup 24/7 | Aylestone Kings",
+    title: "Leicester City Centre Taxi | 24/7 | Aylestone Kings",
     description:
       "Fast taxi service in Leicester city centre. Highcross, railway station, restaurants, hotels — instant pickups day and night. Book online or call 0116 2338888.",
   },
   // 3. Oadby
   oadby: {
-    title: "Taxi in Oadby | Fixed Fares, 24/7 Service | Aylestone Kings",
+    title: "Oadby Taxi Leicester | Fixed Fares 24/7 | Aylestone Kings",
     description:
       "Reliable taxi service in Oadby, Leicester. Fixed airport fares, local rides, and 24/7 availability. Licensed drivers. Call 0116 2338888 or book online.",
   },
@@ -51,45 +51,45 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 5. Evington
   evington: {
-    title: "Taxis in Evington Leicester — Fixed Fares, Hospital Runs | Book 24/7",
+    title: "Taxis in Evington Leicester | Fixed Fares 24/7",
     description:
       "Need a taxi in Evington, Leicester? Aylestone Kings provides fixed price taxis from Evington 24/7. Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 6. Belgrave
   belgrave: {
-    title: "Taxi in Belgrave Leicester | 24/7 Local & Airport Taxi | Aylestone Kings",
+    title: "Belgrave Taxi Leicester | 24/7 Fixed Fares | Aylestone",
     description:
       "Fast, reliable taxis in Belgrave, Leicester. Airport transfers, local rides, and 24/7 service from Aylestone Kings. Licensed drivers. Call 0116 2338888.",
   },
   // 7. Spinney Hills
   "spinney-hills": {
-    title: "Taxi in Spinney Hills Leicester | Fast, Licensed & 24/7 | Aylestone Kings",
+    title: "Spinney Hills Taxi Leicester | 24/7 | Aylestone Kings",
     description:
       "Reliable taxi service in Spinney Hills, Leicester. Local journeys, airport transfers, school runs. Licensed drivers available 24/7. Call 0116 2338888.",
   },
   // 8. Highfields
   highfields: {
-    title: "Taxis in Highfields Leicester — Hospital Runs & Airport Transfers | 24/7",
+    title: "Taxis in Highfields Leicester | Hospital & Airports",
     description:
       "Need a taxi in Highfields, Leicester? Aylestone Kings offers fixed price taxis from Highfields 24/7. Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 9. Clarendon Park
   "clarendon-park": {
-    title: "Taxis in Clarendon Park Leicester — Fixed Price, DBS Drivers | Book 24/7",
+    title: "Taxis in Clarendon Park Leicester | Fixed Fares 24/7",
     description:
       "Need a taxi in Clarendon Park, Leicester? Aylestone Kings provides fixed price taxis 24/7 from Clarendon Park. Airport transfers and late night rides. Call 0116 233 8888.",
   },
   // 10. Knighton
   knighton: {
-    title: "Taxis in Knighton Leicester — Fixed Fares, No Surge Pricing | Book 24/7",
+    title: "Taxis in Knighton Leicester | Fixed Fares 24/7",
     description:
       "Looking for a taxi in Knighton, Leicester? Aylestone Kings offers fixed price taxis from Knighton 24/7. Airport transfers, school runs and local journeys. Call 0116 233 8888.",
   },
   // 11. Hamilton
   hamilton: {
-    title: "Taxi in Hamilton Leicester | 24/7 Fixed Fares | Aylestone Kings",
+    title: "Taxis in Hamilton Leicester | Fixed Fares 24/7",
     description:
-      "Reliable 24/7 taxi service in Hamilton, Leicester. Local rides, airport transfers, and school runs from Aylestone Kings. Call 0116 2338888.",
+      "Taxis in Hamilton Leicester: fixed fares from £8 to the city centre, EMA from £28, 24/7 school runs, shopping trips and airport transfers. DBS-checked drivers — call 0116 233 8888 or book online.",
   },
   // 12. Beaumont Leys
   "beaumont-leys": {
@@ -99,13 +99,13 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 13. Braunstone
   braunstone: {
-    title: "Taxis in Braunstone Leicester — Fixed Fares, No Hidden Charges | 24/7",
+    title: "Taxis in Braunstone Leicester | Fixed Fares 24/7",
     description:
       "Need a taxi in Braunstone, Leicester? Aylestone Kings provides fixed price taxis from Braunstone 24/7. Airport transfers, school runs and local journeys. Call 0116 233 8888.",
   },
   // 14. Thurmaston
   thurmaston: {
-    title: "Taxi in Thurmaston Leicester | 24/7 Fixed Fares | Aylestone Kings",
+    title: "Thurmaston Taxi Leicester | 24/7 Fixed Fares",
     description:
       "Reliable taxi service in Thurmaston, Leicestershire. Airport transfers, local rides, 24/7 availability. Licensed drivers. Call 0116 2338888.",
   },
@@ -123,43 +123,43 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 17. Glenfield
   glenfield: {
-    title: "Taxis in Glenfield Leicester — Hospital Runs, Fixed Fares | Book 24/7",
+    title: "Taxis in Glenfield Leicester | Fixed Fares 24/7",
     description:
       "Need a taxi in Glenfield, Leicester? Aylestone Kings offers fixed price taxis from Glenfield 24/7. Glenfield Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 18. Blaby
   blaby: {
-    title: "Taxis in Blaby Leicester — Fixed Fares, Airport Transfers | 24/7",
+    title: "Taxis in Blaby Leicester | Fixed Fares 24/7",
     description:
       "Need a taxi in Blaby, Leicester? Fixed fares from £7 to the city centre, EMA from £25, 24/7 school runs and retail park trips. DBS-checked drivers — call 0116 233 8888.",
   },
   // 19. Narborough
   narborough: {
-    title: "Taxis in Narborough Leicester — Fixed Fares, Airport Transfers | 24/7",
+    title: "Taxis in Narborough Leicester | Fixed Fares 24/7",
     description:
       "Need a taxi in Narborough, Leicester? Fixed fares from £8 to the city centre, EMA from £22, train station pickups and school runs 24/7. DBS-checked drivers — call 0116 233 8888.",
   },
   // 20. Enderby
   enderby: {
-    title: "Taxis in Enderby Leicester — Corporate Travel, Fixed Fares | 24/7",
+    title: "Taxis in Enderby Leicester | Fixed Fares 24/7",
     description:
       "Need a taxi in Enderby or Meridian Business Park? Fixed fares from £8 to Leicester, EMA from £22, corporate accounts and 24/7 business park runs. Call 0116 233 8888.",
   },
   // 21. Loughborough
   loughborough: {
-    title: "Taxis in Loughborough — Fixed Fares, Airport Transfers | Book 24/7",
+    title: "Taxis in Loughborough | Fixed Fares & Airports",
     description:
       "Need a taxi in Loughborough? Aylestone Kings provides fixed price taxis from Loughborough 24/7. East Midlands Airport transfers, Leicester runs and train station pickups. Call 0116 233 8888.",
   },
   // 22. Hinckley
   hinckley: {
-    title: "Taxi in Hinckley | Fixed Prices, Airport Transfers | Aylestone Kings",
+    title: "Hinckley Taxi | Fixed Fares 24/7 | Aylestone Kings",
     description:
       "Need a taxi in Hinckley? Aylestone Kings offers fixed-price journeys, airport transfers, and 24/7 service. Licensed drivers. Call 0116 2338888.",
   },
   // 23. Coalville
   coalville: {
-    title: "Taxi Coalville | Coalville Taxis | Airport & Local | Aylestone",
+    title: "Taxi Coalville | Airport & Local 24/7 | Aylestone",
     description:
       "Taxi Coalville & Coalville taxis: local rides and airport transfers. Getting around Coalville — book online or call 0116 2338888, 24/7.",
   },
@@ -171,55 +171,55 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 25. Market Harborough
   "market-harborough": {
-    title: "Market Harborough Airport Taxi | Local & 24/7 | Aylestone Kings",
+    title: "Market Harborough Taxi | Airport & Local 24/7",
     description:
       "Market Harborough airport taxi to EMA, Birmingham, Heathrow & UK airports. Fixed-fare airport taxis from Market Harborough — call 0116 2338888 or book online.",
   },
   // 26. Rushey Mead
   "rushey-mead": {
-    title: "Taxi in Rushey Mead Leicester | 24/7 Fast Pickups | Aylestone Kings",
+    title: "Rushey Mead Taxi Leicester | 24/7 Pickups",
     description:
       "Reliable taxi service in Rushey Mead, Leicester. Local rides, airport transfers, school runs. 24/7 availability. Call 0116 2338888.",
   },
   // 27. Stoneygate
   stoneygate: {
-    title: "Taxi in Stoneygate Leicester | Professional 24/7 Service | Aylestone Kings",
+    title: "Stoneygate Taxi Leicester | 24/7 Service",
     description:
       "Premium taxi service in Stoneygate, Leicester. Airport transfers, local rides, 24/7 availability. Licensed drivers. Call 0116 2338888.",
   },
   // 28. South Wigston
   "south-wigston": {
-    title: "Taxi in South Wigston Leicester | 24/7 & Fixed Fares | Aylestone Kings",
+    title: "South Wigston Taxi Leicester | 24/7 Fixed Fares",
     description:
       "Taxi service in South Wigston, Leicestershire. Airport transfers, local rides, station pickups. 24/7 from Aylestone Kings. Call 0116 2338888.",
   },
   // 29. Humberstone
   humberstone: {
-    title: "Taxi in Humberstone Leicester | Fast 24/7 Service | Aylestone Kings",
+    title: "Humberstone Taxi Leicester | 24/7 Service",
     description:
       "Reliable taxi service in Humberstone, Leicester. Local rides, airport transfers, 24/7 availability. Call Aylestone Kings on 0116 2338888.",
   },
   // 30. Thurnby Lodge
   "thurnby-lodge": {
-    title: "Taxi in Thurnby Lodge Leicester | 24/7 Service | Aylestone Kings",
+    title: "Thurnby Lodge Taxi Leicester | 24/7",
     description:
       "Fast taxi service in Thurnby Lodge, Leicester. Local rides, airport transfers, 24/7 availability from Aylestone Kings. Call 0116 2338888.",
   },
   // 31. Westcotes
   westcotes: {
-    title: "Taxi in Westcotes Leicester | Fast & 24/7 | Aylestone Kings",
+    title: "Westcotes Taxi Leicester | 24/7 | Aylestone Kings",
     description:
       "Reliable taxi service in Westcotes, Leicester. Local rides, airport transfers, 24/7 service from Aylestone Kings. Call 0116 2338888.",
   },
   // 32. Eyres Monsell
   "eyres-monsell": {
-    title: "Taxi in Eyres Monsell Leicester | 24/7 Service | Aylestone Kings",
+    title: "Eyres Monsell Taxi Leicester | 24/7",
     description:
       "Fast, affordable taxi service in Eyres Monsell, Leicester. Local rides, airport transfers, 24/7 availability. Call 0116 2338888.",
   },
   // 33. Glen Parva
   "glen-parva": {
-    title: "Taxi in Glen Parva Leicester | Fixed Fares & 24/7 | Aylestone Kings",
+    title: "Glen Parva Taxi Leicester | Fixed Fares 24/7",
     description:
       "Reliable taxi service in Glen Parva, Leicestershire. Airport transfers, local rides, 24/7 from Aylestone Kings. Call 0116 2338888.",
   },
@@ -231,66 +231,66 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 35. Braunstone Town
   "braunstone-town": {
-    title: "Taxi in Braunstone Town Leicestershire | 24/7 | Aylestone Kings",
+    title: "Braunstone Town Taxi | 24/7 | Aylestone Kings",
     description:
       "Taxi service in Braunstone Town, Leicestershire. Local rides, airport transfers, 24/7 availability. Call Aylestone Kings on 0116 2338888.",
   },
   // 36. Groby
   groby: {
-    title: "Taxi in Groby Leicestershire | Airport Transfers & 24/7 | Aylestone Kings",
+    title: "Groby Taxi Leicestershire | Airport 24/7",
     description:
       "Reliable taxi service in Groby, Leicestershire. Airport transfers to EMA and BHX, local rides, 24/7 availability. Call 0116 2338888.",
   },
   // 37. Wigston Fields
   "wigston-fields": {
-    title: "Taxi in Wigston Fields Leicester | 24/7 Fixed Fares | Aylestone Kings",
+    title: "Wigston Fields Taxi Leicester | 24/7 Fixed",
     description:
       "Fast taxi service in Wigston Fields, Leicestershire. Airport transfers, local rides, 24/7 availability. Call Aylestone Kings on 0116 2338888.",
   },
   // 38. Broughton Astley
   "broughton-astley": {
-    title: "Taxi in Broughton Astley Leicestershire | 24/7 | Aylestone Kings",
+    title: "Broughton Astley Taxi | 24/7 | Aylestone Kings",
     description:
       "Reliable taxi service in Broughton Astley. Airport transfers, local rides, 24/7 availability from Aylestone Kings. Call 0116 2338888.",
   },
   // 39. Cosby
   cosby: {
-    title: "Taxi in Cosby Leicestershire | Fixed Fares & 24/7 | Aylestone Kings",
+    title: "Cosby Taxi Leicestershire | Fixed Fares 24/7",
     description:
       "Reliable 24/7 taxi service in Cosby, Leicestershire. Airport transfers, local rides, licensed drivers. Call Aylestone Kings on 0116 2338888.",
   },
   // 40. Countesthorpe
   countesthorpe: {
-    title: "Taxi in Countesthorpe Leicestershire | 24/7 Service | Aylestone Kings",
+    title: "Countesthorpe Taxi | 24/7 Service | Aylestone",
     description:
       "Fast taxi service in Countesthorpe, Leicestershire. Airport transfers, local rides, 24/7. Licensed drivers. Call 0116 2338888.",
   },
   // 41. Kibworth
   kibworth: {
-    title: "Taxi in Kibworth Leicestershire | Airport Transfers & 24/7 | Aylestone Kings",
+    title: "Kibworth Taxi Leicestershire | Airport 24/7",
     description:
       "Reliable taxi service in Kibworth, Leicestershire. Fixed airport fares, local rides, 24/7 availability. Call Aylestone Kings on 0116 2338888.",
   },
   // 42. Lutterworth
   lutterworth: {
-    title: "Taxi in Lutterworth Leicestershire | Fixed Fares & 24/7 | Aylestone Kings",
+    title: "Lutterworth Taxi | Fixed Fares 24/7 | Aylestone",
     description:
       "Professional taxi service in Lutterworth, Leicestershire. Airport transfers to BHX & EMA, local rides, 24/7. Call 0116 2338888.",
   },
   // 43. Whetstone
   whetstone: {
-    title: "Taxi in Whetstone Leicestershire | 24/7 Fixed Fares | Aylestone Kings",
+    title: "Whetstone Taxi Leicestershire | 24/7 Fixed",
     description:
       "Fast, reliable taxi service in Whetstone, Leicestershire. Airport transfers, local rides, 24/7 availability. Call Aylestone Kings on 0116 2338888.",
   },
   // 44. University & College Areas – De Montfort University & University of Leicester
   "de-montfort-university": {
-    title: "Taxi to De Montfort University Leicester | Fast Student Service | Aylestone Kings",
+    title: "Taxi to De Montfort University Leicester | 24/7",
     description:
       "Need a taxi to De Montfort University? Aylestone Kings provides fast, affordable rides to DMU 24/7. Airport transfers, city rides, student-friendly. Call 0116 2338888.",
   },
   "university-of-leicester": {
-    title: "Taxi to University of Leicester | 24/7 Student Rides | Aylestone Kings",
+    title: "Taxi to University of Leicester | 24/7 Rides",
     description:
       "Need a taxi to the University of Leicester? Aylestone Kings provides reliable 24/7 student-friendly rides, airport transfers, and local journeys. Call 0116 2338888.",
   },
@@ -327,19 +327,19 @@ const AREA_BLOG_CALLOUTS: Record<
 > = {
   oadby: {
     href: "/blog/leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips",
-    title: "Leicester to Birmingham Airport: complete guide (cost, time, tips)",
+    title: "Leicester to Birmingham Airport: Cost, Time & Tips",
     teaser:
       "Planning a Birmingham Airport transfer from Oadby? See typical drive times, fixed fares, and booking tips in",
   },
   wigston: {
     href: "/blog/leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips",
-    title: "Leicester to Birmingham Airport: complete guide (cost, time, tips)",
+    title: "Leicester to Birmingham Airport: Cost, Time & Tips",
     teaser:
       "Many Wigston passengers use Birmingham Airport — compare journey time, luggage tips, and fixed pricing before you travel in",
   },
   blaby: {
     href: "/blog/leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips",
-    title: "Leicester to Birmingham Airport: complete guide (cost, time, tips)",
+    title: "Leicester to Birmingham Airport: Cost, Time & Tips",
     teaser:
       "Blaby is well placed for BHX via the M69/M42 corridor. For cost, timing, and drop-off advice, read",
   },
@@ -716,6 +716,16 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
         question: "Can I pre-book a return journey from Foxton Locks?",
         answer: "Yes, return bookings can be scheduled in advance so your driver arrives at an agreed meeting point.",
       },
+      {
+        question: "What is the best taxi number for Market Harborough?",
+        answer:
+          "For reliable bookings across Market Harborough, call Aylestone Kings on 0116 233 8888. Our line is open 24/7 for local trips, station pickups, and airport transfers, with fixed fares confirmed before you travel.",
+      },
+      {
+        question: "Are there 24 hour taxi firms in Market Harborough?",
+        answer:
+          "Yes. Aylestone Kings operates as a 24-hour taxi firm serving Market Harborough and surrounding villages. You can call 0116 233 8888 at any time or book online for immediate or pre-scheduled journeys.",
+      },
     ],
   },
   coalville: {
@@ -987,25 +997,28 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   hamilton: {
     bodyParagraphs: [
-      "Hamilton is a large east Leicester residential neighbourhood with growing family demand, commuter movement, and regular school-time travel. Journeys here are often short but tightly timed, from morning drop-offs to evening returns from work, shopping, and leisure. Aylestone Kings serves Hamilton with practical local coverage that focuses on reliable collection windows and clear communication, helping residents move smoothly without relying on uncertain public transport connections.",
-      "Most Hamilton to Leicester city centre taxi journeys are around 25 minutes via the A563 ring road and city approach routes. East Midlands Airport is typically the nearest major airport from Hamilton, at roughly 40 to 45 minutes using A563 and M1 links. Typical fares to EMA are about GBP 54 to GBP 66 depending on pickup point and traffic timing, and we provide fare guidance upfront before confirmation.",
-      "Common local landmarks include Hamilton Park and Hamilton Library, plus frequent pickups around local schools and nearby retail locations such as Hamilton Tesco. We also complete many direct journeys to Leicester Railway Station and Leicester Royal Infirmary where timing reliability matters. If a requested pickup spot is congested, we coordinate a nearby meeting point to keep journeys safe and efficient.",
-      "Hamilton passengers often need flexibility across different trip types: school schedules, healthcare appointments, family visits, and longer airport transfers. We support one-off rides and recurring bookings, with clear confirmations that reduce last-minute calls or uncertainty. Our drivers plan routes based on current conditions and local knowledge, which is especially useful when ring-road traffic shifts at peak periods.",
-      "Aylestone Kings is a strong fit for Hamilton because we run regular dispatch coverage across east Leicester and can respond quickly across estate roads and arterial routes. Customers benefit from licensed professional drivers, dependable ETAs, and a service style focused on practical reliability. That consistency makes it easier for households and commuters to plan travel with confidence.",
-      "For airport transfer information by route and terminal, visit /airport-transfers-leicester. To compare likely journey costs before you book, check /pricing. This gives Hamilton residents clear visibility on both timing and fares before travel day.",
+      "Hamilton is one of Leicester's largest residential areas in the north-east of the city, and local taxi demand is driven by everyday needs rather than occasional tourism. Families rely on school-run collections, commuters need dependable routes into the city centre and business parks, and shoppers want straightforward trips home after a heavy day at the shops. Aylestone Kings provides 24/7 Hamilton coverage built around those real patterns — punctual pickups, fixed fares agreed before travel, and drivers who know the estate roads rather than relying on generic sat-nav routes alone.",
+      "Typical journey times from Hamilton reflect how well connected the area is to wider Leicestershire: Leicester city centre is around 15 minutes via the A563 and inner-city approaches in normal traffic, East Midlands Airport (EMA) is roughly 25 minutes using ring-road and M1 links, and Birmingham Airport (BHX) is around 50 minutes on a clear run via the M69 and M6 corridor. Example fixed fares start from £8 for city-centre journeys and from £28 to EMA — your exact price is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "We collect and drop off across Hamilton every day, including Hamilton Shopping Centre, Hamilton Park, Thurmaston Lane, and the Hamilton Park and Ride site where commuters often start or finish a journey. School-time traffic around estate entrances and busy periods near the shopping centre can slow buses, which is why many residents prefer a pre-booked taxi with a confirmed ETA. Whether you need a morning commute, an afternoon trip with children, or an evening return after shopping, we agree a practical pickup point so boarding stays quick and safe.",
+      "Among taxi companies in Hamilton, Aylestone Kings is known for transparent fixed pricing — no meter surprises and no surge multipliers on early airport mornings. Our core services include 24/7 availability, fixed prices confirmed at booking, DBS-checked licensed drivers, airport transfers to all major UK airports, standing school-run contracts, and shopping trips with room for bags. We also handle hospital appointments, station connections, and late-night returns when public transport options are limited.",
+      "Hamilton sits close to neighbouring Thurmaston and Syston, and we cover that wider north Leicester corridor without boundary surcharges. Our dispatch team manages high volumes on the A563 and A6 approaches, so ETAs stay realistic when ring-road traffic builds at peak times. Passengers benefit from professional communication, comfortable saloons and MPVs when needed, and a service standard focused on repeat reliability for households that book week after week.",
+      "For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — visit /airport-transfers-leicester. Neighbouring Syston passengers use the same fleet and pricing standards; if you are comparing north Leicester coverage, see /taxis-in/syston for that area too. To review fare bands before you confirm, check /pricing so your Hamilton journey plan is clear from the first enquiry.",
     ],
     faqs: [
       {
-        question: "How long is Hamilton to Leicester City Centre by taxi?",
-        answer: "Most journeys are around 20 to 30 minutes via the A563 and inner-city approach roads.",
+        question: "What taxi companies in Hamilton offer fixed prices?",
+        answer:
+          "Aylestone Kings offers fixed prices on agreed Hamilton routes — you receive your fare before the car arrives, with no meter running on airport or city-centre journeys. Call 0116 233 8888 or book online for an upfront quote.",
       },
       {
-        question: "Do you provide station transfers from Hamilton?",
-        answer: "Yes, we regularly provide transfers between Hamilton and Leicester railway station.",
+        question: "How much is a taxi from Hamilton to Leicester city centre?",
+        answer:
+          "A taxi from Hamilton to Leicester city centre starts from £8 and typically takes around 15 minutes in normal traffic. Rush-hour ring-road delays can add a few minutes; your fixed fare is confirmed at booking.",
       },
       {
-        question: "Can I book airport transport from Hamilton in advance?",
-        answer: "Yes, advance booking is available 24/7 for both East Midlands and Birmingham airport journeys.",
+        question: "Do you offer airport transfers from Hamilton Leicester?",
+        answer:
+          "Yes — we provide airport transfers from Hamilton Leicester to East Midlands, Birmingham, Heathrow, and all major UK airports, 24/7. Pre-booking is recommended for early-morning flights; see our airport transfers guide for route and terminal details.",
       },
     ],
   },
@@ -2402,6 +2415,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const isEnderby = slug === "enderby"
   const isLoughborough = slug === "loughborough"
   const isFossePark = slug === "fosse-park"
+  const isHamilton = slug === "hamilton"
+  const isMarketHarborough = slug === "market-harborough"
   const supermarketDestinationSlugs = new Set<string>([
     "asda-fosse-park",
     "sainsburys-grove-triangle",
@@ -2617,6 +2632,70 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
+
+                  {isMarketHarborough && (
+                    <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                      <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                        Taxi Numbers in Market Harborough
+                      </h2>
+                      <p className="text-gray-700 mb-4">
+                        If you are searching for taxi numbers in Market Harborough, Aylestone Kings provides reliable
+                        coverage across the town centre, surrounding villages, and popular routes to Leicester and East
+                        Midlands Airport. Our booking line is open around the clock — call{" "}
+                        <Link
+                          href="tel:01162338888"
+                          className="text-[#06A0A6] font-bold text-lg hover:underline underline-offset-2"
+                        >
+                          0116 233 8888
+                        </Link>{" "}
+                        to arrange a local pickup, station transfer, or airport journey at any time of day or night.
+                      </p>
+                      <p className="text-gray-700 mb-4">
+                        Among Market Harborough taxi companies, Aylestone Kings is known for fixed, upfront pricing,
+                        licensed drivers, and regular service to key local points including the railway station, The
+                        Square, and routes to Foxton Locks. Whether you need a same-day taxi or want to pre-book for a
+                        morning train, our team responds quickly with clear fare confirmation before your journey
+                        begins.
+                      </p>
+                      <p className="text-gray-700 mb-4">
+                        Many passengers compare taxi firms in Market Harborough before choosing who to call, and we are
+                        proud to be a trusted option for both one-off bookings and repeat travel. From school runs and
+                        healthcare appointments to corporate commutes and late-evening returns, our drivers know the
+                        local roads and typical journey times, which helps keep your collection prompt and your fare
+                        predictable.
+                      </p>
+                      <p className="text-gray-700 mb-4">
+                        As an established Leicester operator with decades of experience serving south Leicestershire, we
+                        bring reliable dispatch, DBS-checked drivers, and comfortable vehicles to every booking —
+                        whether it is a short town-centre trip or a long-distance airport transfer.
+                      </p>
+                      <p className="text-gray-800 font-medium mb-4">
+                        Save our number for whenever you need a ride:{" "}
+                        <Link
+                          href="tel:01162338888"
+                          className="text-[#06A0A6] font-bold text-xl hover:underline underline-offset-2"
+                        >
+                          0116 233 8888
+                        </Link>
+                        . Available 24 hours a day, seven days a week, including bank holidays.
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Link
+                          href={contactInfo.booking.online}
+                          className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                        >
+                          Book Online
+                          <ArrowRight className="h-4 w-4" aria-hidden />
+                        </Link>
+                        <Link
+                          href="tel:01162338888"
+                          className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                        >
+                          0116 233 8888
+                        </Link>
+                      </div>
+                    </div>
+                  )}
                 </>
               ) : (
                 <>
@@ -2799,6 +2878,70 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     </p>
                   </div>
                 </>
+              )}
+
+              {isHamilton && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Hamilton — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Hamilton Shopping Centre, Hamilton Park, Thurmaston Lane, and Hamilton Park and Ride are all within
+                    easy reach — making Hamilton popular with families, commuters, and shoppers. We also cover
+                    neighbouring{" "}
+                    <Link href="/taxis-in/syston" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Syston
+                    </Link>{" "}
+                    and the wider north-east Leicester area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Hamilton</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Hamilton → Leicester city centre: around 15 minutes in normal traffic</li>
+                    <li>Hamilton → East Midlands Airport (EMA): around 25 minutes</li>
+                    <li>Hamilton → Birmingham Airport (BHX): around 50 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Hamilton</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Hamilton → Leicester city centre: from £8</li>
+                    <li>Hamilton → East Midlands Airport: from £28</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Hamilton</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including early-morning airport runs and evening shopping-centre pickups</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>Regular school runs with standing bookings</li>
+                    <li>Shopping trips to Hamilton Shopping Centre and Park and Ride connections</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
+                </div>
               )}
 
               {isWigston && (

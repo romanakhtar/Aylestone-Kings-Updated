@@ -368,4 +368,14 @@ export const birminghamPricingFaqs: AirportFaqItem[] = [
     answer:
       "Yes — both are major carriers at BHX for long-haul (Emirates to Dubai) and European connections (KLM to Amsterdam Schiphol). We regularly transfer passengers for those check-in desks.",
   },
+  {
+    question: "What is the cheapest taxi from Leicester to Birmingham Airport?",
+    answer:
+      "For most passengers, a fixed-price standard saloon from Leicester city centre starts from £60 — often the cheapest option when you factor in no meter surges or peak-time app multipliers on the M69/M6 route. Estate and MPV prices are confirmed at booking if you need extra luggage space or seats.",
+  },
+  {
+    question: "How much do Birmingham Airport taxis cost from Leicester?",
+    answer:
+      "Birmingham Airport taxis prices from Leicester typically start from £60 for a saloon, £70 for an estate, and £80 for an MPV/minibus, all as fixed fares agreed before travel. Pickups outside the city centre may vary slightly; call 0116 233 8888 or book online for an exact quote.",
+  },
 ]

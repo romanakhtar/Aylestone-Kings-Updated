@@ -15,7 +15,7 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Airport Transfers Leicester | Airport Taxi Leicester | Aylestone",
+  title: "Airport Transfers Leicester | Fixed Fares | Aylestone",
   description:
     "Airport transfers Leicester & airport taxi Leicester: fixed fares to EMA, Birmingham, Heathrow, Gatwick, Stansted, Luton & Manchester. Airport taxis Leicester with flight monitoring. Book online or call 0116 2338888 — 24/7.",
   keywords:
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/airport-transfers-leicester",
   },
   openGraph: {
-    title: "Airport Transfers & Airport Taxi Leicester | Aylestone Taxis",
+    title: "Airport Transfers Leicester | Aylestone Taxis",
     description:
       "Fixed-fare airport transfers and airport taxis from Leicester. EMA, BHX, Heathrow, Gatwick & more. Call 0116 2338888 or book online.",
     url: "https://aylestone-taxis.co.uk/airport-transfers-leicester",

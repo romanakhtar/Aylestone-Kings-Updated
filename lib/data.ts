@@ -1147,7 +1147,7 @@ export const siteData = {
       },
       {
         id: "leicester-to-manchester-taxi-cost-time-guide-2026",
-        title: "Leicester to Manchester Taxi — Cost, Time & Booking Guide 2026",
+        title: "Leicester to Manchester Taxi — Cost & Time 2026",
         metaTitle: "Leicester to Manchester Taxi — Fixed Price Guide 2026",
         metaDescription:
           "Need a taxi from Leicester to Manchester? Fixed prices from £150, approx 2 hour journey. Compare costs vs train for groups. Call Aylestone Kings on 0116 233 8888.",
@@ -1253,7 +1253,7 @@ export const siteData = {
       {
         id: "summer-holidays-airport-taxi-guide-leicester-2026",
         title: "Summer Holidays Airport Taxi Guide — Leicester Families 2026",
-        metaTitle: "Summer Airport Taxi Guide Leicester 2026 — Family Travel Tips",
+        metaTitle: "Summer Airport Taxi Guide Leicester 2026 | Tips",
         metaDescription:
           "Planning summer holidays from Leicester? Our guide covers family airport taxis, fixed prices, large vehicles and flight tracking. Book with Aylestone Kings — call 0116 233 8888.",
         excerpt:
@@ -1344,6 +1344,7 @@ export const siteData = {
       {
         id: "leicester-to-heathrow-taxi-everything-you-need-to-know",
         title: "Taxi from Leicester to Heathrow: Everything You Need to Know",
+        metaTitle: "Leicester to Heathrow Taxi Guide | Aylestone Kings",
         excerpt:
           "Planning a Leicester to Heathrow taxi? Typical M1/M25 drive times, when to leave for LHR, fixed fares vs metered rides, luggage and meet-and-greet tips — plus links to Heathrow pricing and our full airport transfer hub.",
         content: `
@@ -1390,6 +1391,7 @@ export const siteData = {
       {
         id: "best-taxi-leicester-what-to-look-for",
         title: "Best Taxi Service in Leicester: What to Look For",
+        metaTitle: "Best Taxi Service in Leicester | Aylestone Kings",
         excerpt:
           "Searching for the best taxi Leicester has to offer? Here is a practical checklist: licensing, transparent pricing, vehicle standards, complaints handling, and how to spot operators that invest in training — with links to our company story and full service list.",
         content: `
@@ -1430,7 +1432,8 @@ export const siteData = {
       },
       {
         id: "leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips",
-        title: "Leicester to Birmingham Airport: Complete Guide (Cost, Time, Tips)",
+        title: "Leicester to Birmingham Airport: Cost, Time & Tips",
+        metaTitle: "Leicester to Birmingham Airport Taxi | Aylestone Kings",
         excerpt:
           "Everything you need for a Leicester to Birmingham Airport taxi: typical drive time via M69/M42, when to book, BHX terminals, fixed fares, luggage — with links to our dedicated BHX page and full pricing tables.",
         content: `
@@ -1478,6 +1481,7 @@ export const siteData = {
       {
         id: "how-much-does-taxi-cost-leicester-2026-fare-guide",
         title: "How Much Does a Taxi Cost in Leicester? (2026 Price Guide)",
+        metaTitle: "Taxi Prices in Leicester 2026 | Aylestone Kings",
         excerpt:
           "Updated 2026 guide to taxi prices Leicester passengers actually pay: local hops vs airport runs, fixed quotes vs surge apps, how vehicle type affects cost, and where to compare official tables before you book.",
         content: `
@@ -1527,7 +1531,8 @@ export const siteData = {
       },
       {
         id: "leicester-to-east-midlands-airport-taxi-travel-guide-prices-booking-tips",
-        title: "Leicester to East Midlands Airport Taxi (EMA): Prices, Journey Time & Booking Tips",
+        title: "Leicester to EMA Taxi: Prices, Time & Booking Tips",
+        metaTitle: "Leicester to EMA Taxi Guide | Aylestone Kings",
         excerpt:
           "Planning an EMA trip? See typical journey times (30–45 mins), fixed fares from £40, and simple booking tips for a stress-free Leicester to East Midlands Airport taxi — plus return pickups and luggage advice.",
         content: `
@@ -1584,6 +1589,7 @@ export const siteData = {
       {
         id: "why-leicester-locals-trust-aylestone-taxis",
         title: "Why Leicester Locals Trust Aylestone Taxis",
+        metaTitle: "Why Locals Trust Aylestone Taxis | Leicester",
         excerpt:
           "For over 30 years, Aylestone Kings has been the trusted choice for transportation in Leicester. Discover what makes us the preferred taxi service for thousands of local residents.",
         content: `
@@ -1746,6 +1752,7 @@ export const siteData = {
       {
         id: "best-taxi-service-leicester-airport-transfers",
         title: "Best Taxi Service in Leicester for Airport Transfers",
+        metaTitle: "Best Airport Taxi Service Leicester | Aylestone Kings",
         excerpt:
           "Discover why Aylestone Taxis is the best taxi service in Leicester for airport transfers. Fast, reliable, and affordable airport taxi service with fixed prices and flight monitoring.",
         content: `
@@ -1936,8 +1943,8 @@ export const siteData = {
       },
       {
         id: "local-taxi-service-vs-ride-sharing-apps-leicester",
-        title:
-          "Why Choose a Local Taxi Service Over Ride-Sharing Apps in Leicester",
+        title: "Local Taxi vs Ride-Sharing Apps in Leicester",
+        metaTitle: "Local Taxi vs Uber Leicester | Aylestone Kings",
         excerpt:
           "Discover why choosing a local taxi service in Leicester beats ride-sharing apps. Fixed prices, licensed drivers, local knowledge, and reliable service with Aylestone Taxis.",
         content: `
@@ -2223,6 +2230,7 @@ export const siteData = {
       {
         id: "affordable-school-run-taxi-services-leicester",
         title: "Affordable School Run Taxi Services in Leicester",
+        metaTitle: "School Run Taxi Services Leicester | Aylestone Kings",
         excerpt:
           "Safe, reliable, and affordable school run taxi services in Leicester. Professional drivers, DBS checked, and child-friendly vehicles for school transport.",
         content: `
@@ -2447,8 +2455,8 @@ export const siteData = {
       },
       {
         id: "taxi-services-leicester-early-morning-late-night-travel",
-        title:
-          "Early Morning Taxi Leicester: 24/7 Airport Runs, Work Trips & Safe Pickups",
+        title: "Early Morning Taxi Leicester | 24/7 Airport Runs",
+        metaTitle: "Early Morning Taxi Leicester | Aylestone Kings",
         excerpt:
           "Need a taxi at 4am? Learn how to book an early morning taxi in Leicester for airport transfers, shifts and appointments — plus safety tips, what time to book, and fixed-fare options.",
         content: `
@@ -2498,8 +2506,8 @@ export const siteData = {
       },
       {
         id: "areas-we-cover-leicester-local-taxi-service",
-        title:
-          "Areas We Cover in Leicester – Local Taxi Service You Can Rely On",
+        title: "Areas We Cover in Leicester | Local Taxi Service",
+        metaTitle: "Areas We Cover in Leicester | Aylestone Kings",
         excerpt:
           "Discover the comprehensive coverage of Aylestone Taxis across Leicester and surrounding areas. Licensed drivers available through Aylestone Taxis cover Leicester and surrounding areas.",
         content: `

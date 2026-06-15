@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   
   if (!blog) {
     return {
-      title: "Blog Post Not Found | Leicester Taxi Service | Aylestone Taxis",
+      title: "Blog Post Not Found | Aylestone Taxis",
       description: "The requested blog post could not be found. Browse our blog for travel tips and Leicester taxi guides.",
     }
   }

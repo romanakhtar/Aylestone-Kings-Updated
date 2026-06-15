@@ -19,8 +19,7 @@ import FAQSchema from "@/components/seo/FAQSchema"
 const company = siteData.company
 
 export const metadata: Metadata = {
-  title:
-    "Seaport Taxi Transfer UK | Cruise Port Taxi from Leicester | Southampton Port | Aylestone Kings",
+  title: "Seaport Taxi UK | Cruise Port from Leicester | Aylestone",
   description:
     "Seaport taxi transfer and cruise port taxi from Leicester to Southampton, Dover, Portsmouth & Harwich. Fixed quotes before you travel, room for cruise luggage, saloons and MPVs. Licensed drivers, 24/7. Call 0116 2338888 or book online.",
   keywords: [
@@ -35,8 +34,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/seaport-transfers-uk",
   },
   openGraph: {
-    title:
-      "Seaport Taxi Transfer UK | Cruise Port Taxi | Aylestone Kings Leicester",
+    title: "Seaport Taxi UK | Cruise Port from Leicester | Aylestone",
     description:
       "Pre-booked cruise port transfers from Leicester and the Midlands. Southampton port taxis, Dover, Portsmouth, Harwich — luggage-friendly vehicles, agreed fares.",
     url: "https://aylestone-taxis.co.uk/seaport-transfers-uk",

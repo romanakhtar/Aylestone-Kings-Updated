@@ -13,7 +13,7 @@ export const metadata = buildAirportMetadata({
   airportCode: "STN",
   slug: "Stansted",
   fromPrice: "£150",
-  title: "Stansted taxi Leicester | From £150 | Early flights | Aylestone",
+  title: "Stansted Airport Taxi Leicester | From £150",
   description:
     "Leicester to Stansted (STN): ~115 mi, ~2h–2h45, M1/M11 route. One-terminal drop-off for Ryanair & Jet2. Fixed from £150. 03:00 pickups available — quote online or call 0116 2338888.",
 })

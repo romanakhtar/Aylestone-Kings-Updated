@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Leicester Airport Taxi | Airport Taxis & Transfers | 0116 2338888",
+  title: "Leicester Airport Taxi | Transfers 24/7 | 0116 2338888",
   description:
     "Leicester airport taxi & Leicester airport taxis: fixed fares to every major UK airport, flight tracking, return & East Midlands Airport to Leicester. See price online — call 0116 2338888, 24/7.",
   keywords:

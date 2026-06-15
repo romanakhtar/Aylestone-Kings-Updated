@@ -7,7 +7,7 @@ import FAQSchema from "@/components/seo/FAQSchema"
 const CANONICAL = "https://aylestone-taxis.co.uk/leicester-to-east-midlands-airport-taxi"
 
 export const metadata: Metadata = {
-  title: "Leicester to East Midlands Airport Taxi | EMA From £40 | Return",
+  title: "Leicester to EMA Taxi | From £40 | Return",
   description:
     "Fixed-price transfers between Leicester and East Midlands Airport (EMA). Postcode DE74 2SA, A46 via Copt Oak route, terminal drop-off & return pickup points. From £40 — book or call 0116 2338888 24/7.",
   keywords:

@@ -6,7 +6,7 @@ import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Leicester Airport Taxi Prices | Fixed Fares | All UK Airports",
+  title: "Leicester Airport Taxi Prices | Fixed Fares UK",
   description:
     "Airport taxi prices Leicester: fixed fares from Leicester to EMA, Birmingham, Heathrow, Gatwick, Luton, Stansted, Manchester. See airport taxi prices online or call 0116 2338888 — 24/7.",
   alternates: {

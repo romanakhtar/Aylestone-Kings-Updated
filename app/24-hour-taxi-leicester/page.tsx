@@ -15,8 +15,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title:
-    "24 Hour Taxi Leicester | All Night Taxi Service | 24/7 | Aylestone Kings",
+  title: "24 Hour Taxi Leicester — All Night Service | Book 24/7",
   description:
     "Need a 24 hour taxi in Leicester? Aylestone Kings provides round-the-clock taxi service. Day or night, 365 days a year. Book your 24 hour taxi Leicester now - call 0116 2338888.",
   keywords:
@@ -25,8 +24,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/24-hour-taxi-leicester",
   },
   openGraph: {
-    title:
-      "24 Hour Taxi Leicester | All Night Taxi Service | 24/7 | Aylestone Kings",
+    title: "24 Hour Taxi Leicester — All Night Service | Book 24/7",
     description:
       "24 hour taxi Leicester - Round-the-clock taxi service. Day or night, bank holidays included. Book now or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/24-hour-taxi-leicester",

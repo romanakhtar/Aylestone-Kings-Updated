@@ -106,6 +106,136 @@ export default function BirminghamAirportContent({ faqs }: { faqs: AirportFaqIte
           </div>
         </section>
 
+        {/* Cheapest taxi SEO section */}
+        <section className="py-20 bg-gray-50 border-t border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Cheapest Taxi to Birmingham Airport from Leicester
+            </h2>
+
+            <div className="space-y-4 text-gray-700 leading-relaxed mb-8">
+              <p>
+                Searching for the <strong>cheapest taxi to Birmingham Airport</strong> from Leicester does not mean
+                choosing whoever quotes the lowest headline figure on a comparison site. Metered taxis charge by time and
+                distance as you travel, so a delay on the M69, M6, or M42 can push your final bill higher than the
+                estimate you were given. Aylestone Kings quotes a <strong>fixed price before you set off</strong> — the
+                fare is agreed at booking and does not climb because of traffic queues or waiting time on the motorway.
+              </p>
+              <p>
+                When you compare <strong>Birmingham Airport taxis prices</strong> from Leicester, look at what is
+                included: licensed drivers, luggage space, flight monitoring on returns, and whether peak-time surges
+                apply. Many metered operators and ride-hailing apps add busy-period multipliers on Friday evenings,
+                bank holidays, and early-morning airport runs — exactly when most BHX passengers travel. Our fixed
+                Leicester-to-BHX rates stay transparent, so you can budget accurately whether you are catching a
+                6am Emirates departure or a late-evening KLM connection.
+              </p>
+              <p>
+                For families and business travellers, knowing the full cost upfront often makes a fixed-fare private
+                hire cheaper than rivals once parking charges, fuel, and unpredictable meter totals are taken into
+                account. The table below shows typical starting prices from Leicester city centre; your exact quote is
+                confirmed when you book based on pickup postcode and vehicle choice.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              Leicester to Birmingham Airport — fixed prices by vehicle
+            </h3>
+            <div className="bg-white rounded-2xl shadow-lg border border-cyan-200 overflow-hidden mb-8">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white">
+                    <th className="px-6 py-4 text-left font-semibold">Vehicle</th>
+                    <th className="px-6 py-4 text-center font-semibold">Passengers</th>
+                    <th className="px-6 py-4 text-right font-semibold">Fixed price from</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-cyan-100">
+                    <td className="px-6 py-4 font-medium text-gray-900">Standard saloon</td>
+                    <td className="px-6 py-4 text-center text-gray-700">1–4 + luggage</td>
+                    <td className="px-6 py-4 text-right text-cyan-700 font-semibold">£60</td>
+                  </tr>
+                  <tr className="border-b border-cyan-100">
+                    <td className="px-6 py-4 font-medium text-gray-900">Estate</td>
+                    <td className="px-6 py-4 text-center text-gray-700">1–4 + extra bags</td>
+                    <td className="px-6 py-4 text-right text-cyan-700 font-semibold">£70</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 font-medium text-gray-900">MPV / minibus</td>
+                    <td className="px-6 py-4 text-center text-gray-700">5–8 + luggage</td>
+                    <td className="px-6 py-4 text-right text-cyan-700 font-semibold">£80</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="px-6 py-3 text-sm text-gray-600 italic border-t border-cyan-100">
+                Prices from Leicester city centre. Pickups in Oadby, Wigston, Loughborough, or wider Leicestershire may
+                vary slightly — your quote is confirmed before travel.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Off-peak vs peak — what affects the price?</h3>
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden mb-8">
+              <table className="w-full text-sm sm:text-base">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="px-4 sm:px-6 py-3 text-left font-semibold text-gray-900">Period</th>
+                    <th className="px-4 sm:px-6 py-3 text-left font-semibold text-gray-900">Typical traffic</th>
+                    <th className="px-4 sm:px-6 py-3 text-right font-semibold text-gray-900">Aylestone fixed saloon</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-700">
+                  <tr className="border-b border-gray-100">
+                    <td className="px-4 sm:px-6 py-3 font-medium">Off-peak (mid-morning, early afternoon)</td>
+                    <td className="px-4 sm:px-6 py-3">M69/M6 often clear — ~55–65 min</td>
+                    <td className="px-4 sm:px-6 py-3 text-right font-semibold text-cyan-700">from £60</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="px-4 sm:px-6 py-3 font-medium">Peak (weekday rush, Friday PM)</td>
+                    <td className="px-4 sm:px-6 py-3">Birmingham approaches slower — up to ~75 min</td>
+                    <td className="px-4 sm:px-6 py-3 text-right font-semibold text-cyan-700">from £60 (no meter surge)</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 sm:px-6 py-3 font-medium">Early flight (4am–6am pickup)</td>
+                    <td className="px-4 sm:px-6 py-3">Quieter roads, pre-book recommended</td>
+                    <td className="px-4 sm:px-6 py-3 text-right font-semibold text-cyan-700">from £60 (same fixed rate)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="space-y-4 text-gray-700 leading-relaxed mb-8">
+              <p>
+                <strong>Why fixed pricing is often cheaper than rivals on this route:</strong> metered and app-based
+                taxis can look inexpensive at first glance, but the Leicester–Birmingham corridor is prone to variable
+                journey times. A meter keeps running in congestion, and surge pricing on apps routinely adds 20–50% during
+                peak airport hours. Rivals quoting hourly waits or parking charges at BHX can also inflate the true cost.
+                With Aylestone Kings, one confirmed fare covers the transfer — no ticking meter, no surprise add-ons for
+                normal motorway delays, and no surge multiplier because it is a busy Friday night.
+              </p>
+              <p>
+                Pre-booking also helps you secure the <strong>cheapest taxi to Birmingham Airport</strong> for your
+                dates: you lock in the price, receive driver details in advance, and avoid last-minute availability
+                premiums. For returns, share your flight number and we adjust collection for delays at no extra worry
+                about meter clocks.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
+              <a href={contactInfo.booking.online} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto bg-gradient-to-r from-cyan-600 to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-700 hover:to-cyan-800 transition-[transform,opacity] duration-200 shadow-lg flex items-center justify-center gap-3">
+                  Book Online
+                  <ArrowRight className="h-5 w-5" />
+                </button>
+              </a>
+              <a href="tel:01162338888" className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto border-2 border-cyan-600 text-cyan-600 px-8 py-4 rounded-xl font-semibold hover:bg-cyan-600 hover:text-white transition-[transform,opacity] duration-200">
+                  0116 233 8888
+                </button>
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Service Features */}
         <section className="py-20 bg-gray-50 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

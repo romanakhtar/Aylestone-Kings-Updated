@@ -5,7 +5,7 @@ import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 
 export const metadata: Metadata = {
-  title: "Leicester to Gatwick South Terminal Taxi | Fixed Fares | Aylestone",
+  title: "Leicester to Gatwick South Taxi | Fixed Fares | Aylestone",
   description:
     "Pre-book a taxi from Leicester to Gatwick South Terminal. Fixed fares, flight monitoring, meet & greet option, saloons and MPVs. Call 0116 2338888 or book online — 24/7.",
   keywords:
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/gatwick-south-terminal-taxi-transfers",
   },
   openGraph: {
-    title: "Leicester to Gatwick South Terminal Taxi | Fixed Fares | Aylestone",
+    title: "Leicester to Gatwick South Taxi | Fixed Fares | Aylestone",
     description:
       "Leicester to Gatwick South: fixed pricing, flight tracking, professional drivers. Book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/gatwick-south-terminal-taxi-transfers",

@@ -11,8 +11,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title:
-    "School Run Taxi Leicester | DBS Checked Drivers | Regular School Transport | Aylestone Kings",
+  title: "School Run Taxi Leicester | DBS Drivers | Aylestone Kings",
   description:
     "School run taxi Leicester with enhanced DBS-checked drivers and the option for a consistent same driver. Regular school transport covering Aylestone, Wigston, Knighton and Clarendon Park. Set up daily or weekly school run bookings today.",
   keywords:
@@ -21,8 +20,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/school-run-taxi-leicester",
   },
   openGraph: {
-    title:
-      "School Run Taxi Leicester | DBS Checked Drivers & Regular School Transport",
+    title: "School Run Taxi Leicester | DBS Drivers | Aylestone Kings",
     description:
       "Safe, reliable school run taxi Leicester service with enhanced DBS-checked drivers and an option for the same regular driver. Covering Aylestone, Wigston, Knighton and Clarendon Park.",
     url: "https://aylestone-taxis.co.uk/school-run-taxi-leicester",

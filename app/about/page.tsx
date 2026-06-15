@@ -4,7 +4,7 @@ import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About Aylestone Kings Taxi Leicester | Aylestone Road Since 1995",
+  title: "About Aylestone Kings Taxi Leicester | Since 1995",
   description:
     "About us at Aylestone, Leicester: Aylestone Kings taxi company since 1995, licensed private hire, DBS-checked drivers. Based on Aylestone Road — book on 0116 2338888 or online.",
   alternates: {
