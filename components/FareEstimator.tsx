@@ -1,6 +1,12 @@
 "use client"
 
 import React, { useState } from "react"
+import {
+  trackFareEstimateUsed,
+  onBookNowClick,
+  onPhoneClick,
+  onWhatsAppClick,
+} from "@/lib/analytics"
 
 type Airport = {
   code: string
@@ -218,6 +224,7 @@ const FareEstimator: React.FC = () => {
                     id="tab-local"
                     onSubmit={(e) => {
                       e.preventDefault()
+                      trackFareEstimateUsed()
                       handleCalcLocal(e.currentTarget)
                     }}
                   >
@@ -227,6 +234,7 @@ const FareEstimator: React.FC = () => {
                         href="https://aylestonekings.webbooker.icabbi.com/"
                         target="_blank"
                         rel="noreferrer"
+                        onClick={onBookNowClick}
                         style={{ color: "#0F0D3E", fontWeight: 700 }}
                       >
                         Use our booking form
@@ -315,10 +323,11 @@ const FareEstimator: React.FC = () => {
                           className="btn-book"
                           target="_blank"
                           rel="noreferrer"
+                          onClick={onBookNowClick}
                         >
                           Book Online Now
                         </a>
-                        <a href="tel:01162338888" className="btn-call">
+                        <a href="tel:01162338888" className="btn-call" onClick={onPhoneClick}>
                           📞 Call
                         </a>
                       </div>
@@ -331,6 +340,7 @@ const FareEstimator: React.FC = () => {
                     id="tab-airport"
                     onSubmit={(e) => {
                       e.preventDefault()
+                      trackFareEstimateUsed()
                       handleCalcAirport(e.currentTarget)
                     }}
                   >
@@ -531,10 +541,11 @@ const FareEstimator: React.FC = () => {
                           className="btn-book"
                           target="_blank"
                           rel="noreferrer"
+                          onClick={onBookNowClick}
                         >
                           Book Airport Transfer
                         </a>
-                        <a href="tel:01162338888" className="btn-call">
+                        <a href="tel:01162338888" className="btn-call" onClick={onPhoneClick}>
                           📞 Call
                         </a>
                       </div>
@@ -547,6 +558,7 @@ const FareEstimator: React.FC = () => {
                     id="tab-longdist"
                     onSubmit={(e) => {
                       e.preventDefault()
+                      trackFareEstimateUsed()
                       handleCalcLongDist(e.currentTarget)
                     }}
                   >
@@ -556,6 +568,7 @@ const FareEstimator: React.FC = () => {
                         href="https://aylestonekings.webbooker.icabbi.com/"
                         target="_blank"
                         rel="noreferrer"
+                        onClick={onBookNowClick}
                         style={{ color: "#0F0D3E", fontWeight: 700 }}
                       >
                         Use our booking form
@@ -620,10 +633,10 @@ const FareEstimator: React.FC = () => {
                         ))}
                       </div>
                       <div className="result-btns">
-                        <a href="tel:01162338888" className="btn-book">
+                        <a href="tel:01162338888" className="btn-book" onClick={onPhoneClick}>
                           📞 Call for Exact Quote
                         </a>
-                        <a href="https://wa.me/447888873795" className="btn-call" target="_blank" rel="noreferrer">
+                        <a href="https://wa.me/447888873795" className="btn-call" target="_blank" rel="noreferrer" onClick={onWhatsAppClick}>
                           WhatsApp
                         </a>
                       </div>

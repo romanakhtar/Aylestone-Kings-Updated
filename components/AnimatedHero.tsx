@@ -5,6 +5,7 @@ import Image from "next/image"
 import dynamic from "next/dynamic"
 import { ArrowRight, MapPin, Clock, Shield } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
+import { trackBookNowClick, onPhoneClick } from "@/lib/analytics"
 
 const ContactModeCards = dynamic(() => import("@/components/ContactModeCards"), { ssr: false })
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
@@ -74,14 +75,7 @@ export default function AnimatedHero() {
   }, [])
 
   const handleBookNow = () => {
-    // Track booking click event
-    if (typeof window !== 'undefined' && window.dataLayer) {
-      window.dataLayer.push({
-        event: 'lead_booking_click',
-        lead_type: 'booking',
-        platform: 'icabbi'
-      })
-    }
+    trackBookNowClick()
     window.open(contactInfo.booking.online, "_blank")
   }
 
@@ -299,6 +293,7 @@ export default function AnimatedHero() {
             <div className="mb-8 flex flex-col sm:flex-row sm:items-center gap-3">
               <a
                 href={`tel:${contactInfo.phone}`}
+                onClick={onPhoneClick}
                 className={`w-full sm:w-auto inline-flex items-center justify-center rounded-lg px-8 py-4 text-sm font-semibold shadow-md hover:shadow-lg transition-[transform,opacity] whitespace-nowrap ${
                   isValentineActive
                     ? 'bg-white text-[#0F0D3E] hover:bg-gray-100'

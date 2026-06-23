@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown, Phone } from "lucide-react"
 import Logo from "@/components/logo"
 import { contactInfo, navigationItems } from "@/lib/data"
+import { trackBookNowClick, trackPhoneClick } from "@/lib/analytics"
 import { useNavbarScroll } from "@/hooks/use-navbar-scroll"
 
 function Navigation() {
@@ -30,25 +31,12 @@ function Navigation() {
   }
 
   const handleBookOnline = () => {
-    // Track booking click event
-    if (typeof window !== 'undefined' && window.dataLayer) {
-      window.dataLayer.push({
-        event: 'lead_booking_click',
-        lead_type: 'booking',
-        platform: 'icabbi'
-      })
-    }
+    trackBookNowClick()
     window.open(contactInfo.booking.online, "_blank")
   }
 
   const handleCallToBook = () => {
-    // Track call click event
-    if (typeof window !== 'undefined' && window.dataLayer) {
-      window.dataLayer.push({
-        event: 'lead_call_click',
-        lead_type: 'call'
-      })
-    }
+    trackPhoneClick()
     window.open(`tel:${contactInfo.booking.phone}`, "_self")
   }
 

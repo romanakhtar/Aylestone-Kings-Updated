@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { MessageCircle, Phone, Globe, Star, Car } from 'lucide-react'
 import AppDownloadButtons from '@/components/AppDownloadButtons'
 import { contactInfo } from '@/lib/data'
+import { onBookNowClick, onPhoneClick, onWhatsAppClick } from '@/lib/analytics'
 
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 import { useChristmasTheme } from "@/components/ChristmasThemeProvider"
@@ -128,23 +129,12 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
         {contactModes.map((mode, index) => {
           const IconComponent = mode.icon
           const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-            // Mark element as tracked to prevent double tracking
-            const target = e.currentTarget
-            target.setAttribute('data-gtm-tracked', 'true')
-            
-            // Track WhatsApp clicks
-            if (mode.name === 'WhatsApp' && typeof window !== 'undefined' && window.dataLayer) {
-              window.dataLayer.push({
-                event: 'lead_whatsapp_click',
-                lead_type: 'whatsapp'
-              })
-            }
-            // Track tel: (Landline) clicks
-            if (mode.name === 'Landline' && typeof window !== 'undefined' && window.dataLayer) {
-              window.dataLayer.push({
-                event: 'lead_call_click',
-                lead_type: 'call'
-              })
+            if (mode.name === 'WhatsApp') {
+              onWhatsAppClick(e)
+            } else if (mode.name === 'Landline') {
+              onPhoneClick(e)
+            } else if (mode.name === 'Book Online') {
+              onBookNowClick(e)
             }
           }
           return (

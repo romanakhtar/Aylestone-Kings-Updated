@@ -1,143 +1,71 @@
 'use client'
 
 import { useEffect } from 'react'
-import { trackButtonClick, trackFormSubmission, getCurrentPagePath } from '@/lib/analytics'
+import {
+  trackBookNowClick,
+  trackPhoneClick,
+  trackWhatsAppClick,
+  trackAppDownloadClick,
+} from '@/lib/analytics'
+
+const BOOK_NOW_TEXT = /book\s+(taxi\s+)?online/i
+const ICABBI_HOST = 'webbooker.icabbi.com'
+
+function isBookNowElement(el: HTMLElement): boolean {
+  const text = (el.textContent || '').trim()
+  if (BOOK_NOW_TEXT.test(text)) return true
+  const href = el.getAttribute('href') || ''
+  return href.includes(ICABBI_HOST)
+}
 
 /**
- * AnalyticsTracker Component
- * 
- * Sets up event delegation to automatically track:
- * - All button clicks (including "Book Now", "Get Quote", "Call Now", "WhatsApp", etc.)
- * - All form submissions (booking forms, contact forms, lead forms)
- * 
- * Uses event delegation so no individual handlers need to be added to buttons or forms.
+ * Delegates GA4 conversion events for server-rendered links and buttons
+ * that do not have explicit onClick handlers in client components.
  */
 export default function AnalyticsTracker() {
   useEffect(() => {
-    // Wait for gtag to be available
-    const checkGtag = setInterval(() => {
-      if (typeof window !== 'undefined' && window.gtag) {
-        clearInterval(checkGtag)
-        setupEventTracking()
+    const handleClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
+      if (!target) return
+
+      const anchor = target.closest('a')
+      if (anchor instanceof HTMLElement && !anchor.getAttribute('data-gtm-tracked')) {
+        const href = anchor.getAttribute('href') || ''
+
+        if (href.includes('apps.apple.com')) {
+          anchor.setAttribute('data-gtm-tracked', 'true')
+          trackAppDownloadClick('ios')
+          return
+        }
+
+        if (href.includes('play.google.com')) {
+          anchor.setAttribute('data-gtm-tracked', 'true')
+          trackAppDownloadClick('android')
+          return
+        }
+
+        if (href.startsWith('tel:')) {
+          anchor.setAttribute('data-gtm-tracked', 'true')
+          trackPhoneClick()
+          return
+        }
+
+        if (href.includes('wa.me') || href.includes('whatsapp.com')) {
+          anchor.setAttribute('data-gtm-tracked', 'true')
+          trackWhatsAppClick()
+          return
+        }
+
+        if (isBookNowElement(anchor)) {
+          anchor.setAttribute('data-gtm-tracked', 'true')
+          trackBookNowClick()
+        }
       }
-    }, 100)
-
-    // Cleanup interval after 10 seconds if gtag never loads
-    const timeout = setTimeout(() => {
-      clearInterval(checkGtag)
-    }, 10000)
-
-    return () => {
-      clearInterval(checkGtag)
-      clearTimeout(timeout)
     }
+
+    document.addEventListener('click', handleClick, false)
+    return () => document.removeEventListener('click', handleClick, false)
   }, [])
 
-  const setupEventTracking = () => {
-    // Ensure we're on the client side
-    if (typeof window === 'undefined' || typeof document === 'undefined') {
-      return
-    }
-
-    // Set to track elements that have been processed in the current event cycle
-    const trackedInCycle = new WeakSet<HTMLElement>()
-
-    // Track button clicks using event delegation
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement
-      
-      // Find the closest button or anchor element (handles nested elements like icons inside buttons)
-      let button: HTMLElement | null = null
-      let anchor: HTMLElement | null = null
-      
-      // Check for button elements
-      if (target.tagName === 'BUTTON' || target.closest('button')) {
-        button = target.closest('button') || (target.tagName === 'BUTTON' ? target : null)
-      }
-      // Check for anchor tags that act as buttons (call links, WhatsApp links, etc.)
-      else if (target.tagName === 'A' || target.closest('a')) {
-        anchor = target.closest('a') || (target.tagName === 'A' ? target : null)
-        if (anchor) {
-          const href = anchor.getAttribute('href') || ''
-          // Track anchor tags that are buttons or have common button-like hrefs
-          if (
-            anchor.getAttribute('role') === 'button' ||
-            href.startsWith('tel:') ||
-            href.startsWith('mailto:') ||
-            href.includes('wa.me') ||
-            href.includes('whatsapp.com') ||
-            anchor.classList.contains('button') ||
-            anchor.classList.contains('btn')
-          ) {
-            button = anchor
-          }
-        }
-      }
-
-      // Track WhatsApp and tel: links with dataLayer (only if not already tracked by onClick handler)
-      // Skip if element has been marked as tracked (by onClick handlers) or already tracked in this cycle
-      if (anchor && !trackedInCycle.has(anchor) && !anchor.getAttribute('data-gtm-tracked')) {
-        const href = anchor.getAttribute('href') || ''
-        
-        // Track WhatsApp clicks
-        if (href.includes('wa.me') || href.includes('whatsapp.com')) {
-          if (typeof window !== 'undefined' && window.dataLayer) {
-            trackedInCycle.add(anchor)
-            anchor.setAttribute('data-gtm-tracked', 'true')
-            window.dataLayer.push({
-              event: 'lead_whatsapp_click',
-              lead_type: 'whatsapp'
-            })
-          }
-        }
-        
-        // Track tel: clicks
-        if (href.startsWith('tel:')) {
-          if (typeof window !== 'undefined' && window.dataLayer) {
-            trackedInCycle.add(anchor)
-            anchor.setAttribute('data-gtm-tracked', 'true')
-            window.dataLayer.push({
-              event: 'lead_call_click',
-              lead_type: 'call'
-            })
-          }
-        }
-      }
-
-      if (button) {
-        // Get button text - prioritize aria-label, then text content
-        const buttonText = 
-          button.getAttribute('aria-label') ||
-          button.getAttribute('title') ||
-          button.textContent?.trim() ||
-          button.getAttribute('data-button-text') ||
-          'Unknown Button'
-
-        // Track the button click
-        trackButtonClick(buttonText, getCurrentPagePath())
-      }
-    }, true) // Use capture phase to catch events early
-
-    // Track form submissions using event delegation
-    document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement
-
-      if (form && form.tagName === 'FORM') {
-        // Get form ID - prioritize id, then name, then a generated identifier
-        const formId = 
-          form.id ||
-          form.getAttribute('name') ||
-          form.getAttribute('data-form-id') ||
-          form.getAttribute('aria-label') ||
-          form.className?.split(' ')[0] || // Use first class name as fallback
-          'unknown_form'
-
-        // Track the form submission
-        trackFormSubmission(formId, getCurrentPagePath())
-      }
-    }, true) // Use capture phase to catch events early
-  }
-
-  // This component doesn't render anything
   return null
 }

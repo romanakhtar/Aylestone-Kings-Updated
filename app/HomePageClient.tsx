@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Check, ArrowRight, Star, MapPin, Clock, Shield, ShieldCheck, BadgeCheck, Users, Car, Plane } from "@/lib/icons"
 import { Briefcase } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
+import { onBookNowClick } from "@/lib/analytics"
 import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
@@ -660,7 +661,7 @@ export default function HomePageClient() {
                 <div>WhatsApp: {siteData.company.whatsapp}</div>
                 <div>
                   Book online:{" "}
-                  <a href={contactInfo.booking.online} className="underline text-[#06A0A6]">
+                  <a href={contactInfo.booking.online} className="underline text-[#06A0A6]" onClick={onBookNowClick}>
                     Online Booking
                   </a>
                 </div>
