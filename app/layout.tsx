@@ -150,14 +150,6 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
         
-        {/* Preload LCP hero image for faster initial render */}
-        <link
-          rel="preload"
-          as="image"
-          href="/white-modern-taxi-side.webp"
-          fetchPriority="high"
-        />
-        
         {/* LocalBusiness + TaxiService Schema */}
         <script
           type="application/ld+json"

@@ -320,7 +320,6 @@ export default function AnimatedHero() {
                     alt="Modern white taxi Leicester from Aylestone Kings — professional fleet serving Leicester and the Midlands since 1995"
                     width={280}
                     height={224}
-                    priority
                     sizes="(max-width: 768px) 80px, 280px"
                     className="relative z-10 w-38 lg:w-[280px] h-auto drop-shadow-2xl"
                     style={{ width: "auto", height: "auto" }}
