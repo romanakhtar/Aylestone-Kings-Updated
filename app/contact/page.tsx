@@ -11,6 +11,7 @@ import {
  Users,
 } from "lucide-react";
 import { contactInfo } from "@/lib/data";
+import { onBookNowClick, onPhoneClick, onWhatsAppClick } from "@/lib/analytics";
 import { useForm, ValidationError } from "@formspree/react";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
@@ -117,14 +118,7 @@ export default function ContactPage() {
  <a
  href={`tel:${contactInfo.phone}`}
  className="group bg-white p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-[#06A0A6] transition-[transform,opacity] duration-300 hover:shadow-xl transform hover:-translate-y-1"
- onClick={(e) => {
-   if (typeof window !== 'undefined' && window.dataLayer) {
-     window.dataLayer.push({
-       event: 'lead_call_click',
-       lead_type: 'call'
-     })
-   }
- }}
+ onClick={onPhoneClick}
  >
  <div className="w-16 h-16 bg-[#06A0A6]/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#06A0A6]/20">
    <Phone className="h-8 w-8 text-[#06A0A6] group-hover:scale-110 transition-transform" />
@@ -145,6 +139,7 @@ export default function ContactPage() {
  href={`https://wa.me/${contactInfo.whatsapp.replace(/[^0-9]/g, '')}`}
  target="_blank"
  rel="noopener noreferrer"
+ onClick={onWhatsAppClick}
  className="group bg-white p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-[#06A0A6] transition-[transform,opacity] duration-300 hover:shadow-xl transform hover:-translate-y-1"
  >
  <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200">
@@ -213,6 +208,7 @@ export default function ContactPage() {
    href={contactInfo.booking.online}
    target="_blank"
    rel="noopener noreferrer"
+   onClick={onBookNowClick}
    className="inline-block bg-white text-[#06A0A6] font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 shadow-lg"
  >
    Book Now →

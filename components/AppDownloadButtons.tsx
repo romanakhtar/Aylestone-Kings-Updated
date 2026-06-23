@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { siteData } from '@/lib/data'
+import { onAppDownloadClick } from '@/lib/analytics'
 
 interface AppDownloadButtonsProps {
   className?: string
@@ -20,6 +21,7 @@ export default function AppDownloadButtons({ className = '', size = 'md' }: AppD
         href="https://apps.apple.com/gb/app/aylestone-kings/id1061012064" 
         target="_blank"
         rel="noopener noreferrer"
+        onClick={onAppDownloadClick('ios')}
         className="inline-block transform hover:scale-105 transition-transform duration-200"
         aria-label="Download on the App Store"
       >
@@ -36,6 +38,7 @@ export default function AppDownloadButtons({ className = '', size = 'md' }: AppD
         href="https://play.google.com/store/apps/details?id=co.uk.aylestone.taxis&hl=en&pli=1" 
         target="_blank"
         rel="noopener noreferrer"
+        onClick={onAppDownloadClick('android')}
         className="inline-block transform hover:scale-105 transition-transform duration-200"
         aria-label="Get it on Google Play"
       >

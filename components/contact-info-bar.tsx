@@ -2,6 +2,7 @@
 
 import { Phone, Mail, PhoneCall } from "lucide-react"
 import { contactInfo } from "@/lib/data"
+import { onPhoneClick, onWhatsAppClick } from "@/lib/analytics"
 
 export default function ContactInfoBar() {
   return (
@@ -13,15 +14,7 @@ export default function ContactInfoBar() {
             {/* Phone */}
             <a
               href={`tel:${contactInfo.phone}`}
-              onClick={(e) => {
-                e.currentTarget.setAttribute('data-gtm-tracked', 'true')
-                if (typeof window !== 'undefined' && window.dataLayer) {
-                  window.dataLayer.push({
-                    event: 'lead_call_click',
-                    lead_type: 'call'
-                  })
-                }
-              }}
+              onClick={onPhoneClick}
               className="flex items-center gap-2 hover:text-[#E4E4E4] transition-smooth group"
             >
               <PhoneCall className="h-3 w-3 sm:h-4 sm:w-4 group-hover:scale-110 transition-transform duration-200" />
@@ -33,15 +26,7 @@ export default function ContactInfoBar() {
               href={`https://wa.me/${contactInfo.whatsapp.replace('+', '')}`}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={(e) => {
-                e.currentTarget.setAttribute('data-gtm-tracked', 'true')
-                if (typeof window !== 'undefined' && window.dataLayer) {
-                  window.dataLayer.push({
-                    event: 'lead_whatsapp_click',
-                    lead_type: 'whatsapp'
-                  })
-                }
-              }}
+              onClick={onWhatsAppClick}
               className="flex items-center gap-2 hover:text-[#E4E4E4] transition-smooth group"
             >
               <svg 
