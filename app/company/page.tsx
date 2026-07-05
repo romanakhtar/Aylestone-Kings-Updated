@@ -4,24 +4,17 @@ import { Shield, Users, Award, Clock, Check, ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Aylestone Taxis Leicester | Official Site | Book Online",
+  title: "About Aylestone Kings | Leicester Taxi Company Since 1995",
   description:
-    "Aylestone Taxis and Aylestone Kings: Leicester taxi company since 1995, based on Aylestone Road (LE2). Aylestone cabs for airport & local — book online or call 0116 2338888, 24/7.",
+    "Aylestone Kings — Leicester taxi company with 30+ years experience. 10,000 passengers per year, 99.7% satisfaction rating. Licensed DBS-checked drivers available 24/7.",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/company",
   },
   openGraph: {
-    title: "Aylestone Taxis Leicester | Aylestone Kings",
+    title: "Aylestone Kings — Leicester Taxi Company",
     description:
-      "Official Leicester taxi firm on Aylestone Road. Licensed since 1995. Call 0116 2338888 or book online.",
+      "Aylestone Kings — Leicester taxi company with 30+ years experience. 10,000 passengers per year, 99.7% satisfaction rating. Licensed DBS-checked drivers available 24/7.",
     url: "https://aylestone-taxis.co.uk/company",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Aylestone Taxis Leicester | Aylestone Kings",
-    description:
-      "Leicester taxi company on Aylestone Road since 1995. Call 0116 2338888 or book online.",
   },
 }
 
@@ -51,9 +44,7 @@ export default function CompanyPage() {
             
             {/* Enhanced Description */}
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10 font-light">
-              We are committed to making your journey comfortable, convenient, and stress-free,
-              <span className="text-[#06A0A6] font-semibold"> backed by over 30 years of excellence </span>
-               in professional transport services. 
+              <span className="text-[#06A0A6] font-semibold">10,000 passengers per year</span>, 99.7% satisfaction rating, licensed by Leicester City Council, operating since 1995 — the verified credentials behind Leicester&apos;s established private hire operator.
             </p>
             
             {/* Trust Indicators */}
