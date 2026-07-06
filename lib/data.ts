@@ -675,6 +675,18 @@ export const siteData = {
         href: "/school-run-taxi-leicester",
       },
       {
+        name: "Prom Taxi Leicester",
+        href: "/prom-taxi-leicester",
+      },
+      {
+        name: "Student Taxi Leicester",
+        href: "/student-taxi-leicester",
+      },
+      {
+        name: "Match Day Taxi Leicester",
+        href: "/match-day-taxi-leicester",
+      },
+      {
         name: "Long-Distance & Corporate",
         href: "/long-distance-taxi-leicester",
       },
