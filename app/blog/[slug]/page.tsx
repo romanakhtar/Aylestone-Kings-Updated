@@ -4,6 +4,7 @@ import { Calendar, User, ArrowLeft, ArrowRight, BookOpen } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import { notFound } from "next/navigation"
 import BlogPostingJsonLd from "@/components/seo/BlogPostingJsonLd"
+import FAQSchema from "@/components/seo/FAQSchema"
 
 export async function generateStaticParams() {
   return siteData.blogPage.blogs.map((blog) => ({
@@ -71,9 +72,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const canonicalUrl = `https://aylestone-taxis.co.uk/blog/${blog.id}`
   const imageAbsolute = blog.image ? `https://aylestone-taxis.co.uk${blog.image}` : undefined
+  const faqs =
+    "faqs" in blog && Array.isArray(blog.faqs) && blog.faqs.length > 0
+      ? blog.faqs
+      : null
 
   return (
     <div className="min-h-screen bg-white">
+      {faqs ? <FAQSchema faqs={faqs} /> : null}
       <BlogPostingJsonLd
         headline={blog.title}
         description={blog.excerpt}

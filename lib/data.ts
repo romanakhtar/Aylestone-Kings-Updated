@@ -1048,6 +1048,233 @@ export const siteData = {
       "Discover insights, tips, and stories about transportation in Leicester",
     blogs: [
       {
+        id: "leicester-city-matchday-travel-taxi-guide-2026",
+        title: "Leicester City Matchday Travel — Taxi Guide 2026",
+        metaTitle: "Leicester City Matchday Taxi Guide 2026 — Fixed Prices, No Surge",
+        metaDescription:
+          "Getting to King Power Stadium or Mattioli Woods Welford Road? Our matchday taxi guide covers pre-booking, group travel and fixed prices with no surge pricing. Call 0116 233 8888.",
+        excerpt:
+          "Matchday travel made simple for Leicester City FC and Leicester Tigers supporters: parking restrictions, road closures, pre-booked taxis, group bookings, fixed prices (no surge), and calmer post-match pickup points away from the crowds.",
+        faqs: [
+          {
+            question: "Can I book a taxi for after the match at King Power Stadium?",
+            answer:
+              "Yes — the best option is to pre-book before kick-off with a planned collection time and an agreed meeting point a short walk from Filbert Way. Pre-booking avoids post-match availability problems and keeps your fare fixed even when demand spikes.",
+          },
+          {
+            question: "Do you offer fixed prices on Leicester City match days?",
+            answer:
+              "Yes. We quote fixed prices on match days with no surge pricing. Your price is agreed when you book, so you are not watching an app price jump when the stadium empties.",
+          },
+          {
+            question: "Can we book a group taxi for a Leicester Tigers match?",
+            answer:
+              "Yes. Supporters travelling together can book a single vehicle for your group (subject to passenger numbers and vehicle availability). Group bookings are ideal for Mattioli Woods Welford Road on busy weekends and allow you to split one fixed fare per vehicle.",
+          },
+        ],
+        content: `
+          <p>Home fixtures at <strong>King Power Stadium</strong> and <strong>Mattioli Woods Welford Road</strong> are some of the busiest travel nights in Leicester. If you are a Leicester City FC or Leicester Tigers supporter, you already know the pattern: heavier traffic before kick-off, tight <strong>parking restrictions</strong> close to the ground, and a wave of people all trying to leave at once. This 2026 guide is built around the searches we see most often — <strong>leicester city taxi</strong>, <strong>king power stadium taxi</strong>, and <strong>matchday taxi leicester</strong> — and explains how to get in and out with less stress.</p>
+
+          <h2>Why driving near the stadium is difficult on matchdays</h2>
+          <p>On matchdays, the roads around both venues can feel like a bottleneck. Around <strong>King Power Stadium (Filbert Way, LE2)</strong>, nearby approaches often become congested as supporters arrive, and <strong>temporary road closures</strong> and stewarded traffic management can make the last mile unpredictable. Add in <strong>resident parking schemes</strong>, controlled bays, and event-day restrictions and it is easy to spend more time circling than enjoying the build-up.</p>
+          <p><strong>Mattioli Woods Welford Road</strong> can be similar on big Leicester Tigers fixtures: the closer you try to park, the more you compete with crowds, restricted streets, and limited space. For many supporters, the simplest plan is to avoid driving right to the stadium perimeter and instead use a pre-booked local taxi.</p>
+
+          <h2>Pre-booking before kick-off avoids post-match chaos</h2>
+          <p>The biggest matchday mistake is waiting until the final whistle to think about your ride home. When thousands of supporters step outside at the same time, demand spikes instantly. If you try to book on the spot, you can face long waits, missed connections, and prices that fluctuate as availability changes.</p>
+          <p>A <strong>pre-booked matchday taxi Leicester</strong> collection means your journey is planned before the game starts. You agree the pickup time, the meeting point, and the vehicle size. That is why we recommend booking your return <strong>before kick-off</strong> — especially for evening matches, derbies, and weekends with multiple events in the city.</p>
+
+          <h2>Group bookings for supporters travelling together</h2>
+          <p>Going with friends or family? Group travel is one of the most cost-effective ways to book a <strong>leicester city taxi</strong> or a Tigers match taxi. Instead of multiple cars (and multiple parking problems), you can book one vehicle for your group and split a single fare.</p>
+          <p>If you are travelling from the same area, aim for <strong>one pickup address</strong> to keep timings tight. If you are meeting from different parts of Leicester, choose a simple rendezvous point first (for example, one person&apos;s house or a nearby landmark) and then travel together from there.</p>
+
+          <h2>Fixed matchday prices — no surge pricing like Uber</h2>
+          <p>Many supporters use ride-hailing apps, but matchdays are exactly when those apps can become expensive. When demand outstrips supply at full time, <strong>surge pricing</strong> can push the fare up and up while you are standing in a crowd refreshing your screen.</p>
+          <p>With Aylestone Kings, you receive a <strong>fixed price</strong> when you book — with <strong>no surge pricing</strong> on matchdays. That makes budgeting easier and avoids the uncertainty of post-match demand spikes. If you want more detail on the difference between a local operator and app pricing, our dedicated <a href="/match-day-taxi-leicester">match day taxi Leicester</a> page explains how matchday travel works.</p>
+
+          <h2>Post-match collection advice (and calmer meeting points)</h2>
+          <p>The best collections usually happen <strong>a short walk away from the busiest exits</strong>. The goal is simple: move away from the tightest crowd and get to a road where a driver can stop safely and legally.</p>
+          <ul>
+            <li><strong>King Power Stadium (Filbert Way)</strong>: consider meeting on a main road a few minutes&apos; walk away, such as <strong>Aylestone Road</strong> or <strong>Upperton Road</strong>, rather than directly on Filbert Way. This helps drivers reach you more reliably and reduces pickup delays caused by congestion.</li>
+            <li><strong>Mattioli Woods Welford Road</strong>: a pickup arranged slightly away from the stadium frontage — for example toward <strong>London Road</strong> or the edge of <strong>Victoria Park</strong> — is often faster than trying to stop right outside the ground.</li>
+          </ul>
+          <p>When you book, tell us whether you want a collection <strong>immediately after the match</strong> or <strong>15–25 minutes later</strong> once crowds thin out. If your group includes children or anyone with reduced mobility, we can advise a practical meeting point with a shorter walk.</p>
+
+          <h2>Coverage for Leicester City FC and Leicester Tigers</h2>
+          <p>Whether you are heading to Leicester City at <strong>King Power Stadium</strong> on Filbert Way or Leicester Tigers at <strong>Mattioli Woods Welford Road</strong>, we provide matchday collections and drop-offs across Leicester and surrounding areas. If you are comparing local providers, you can also view our main service overview on <a href="/leicester-taxi-company">Leicester taxi company</a>.</p>
+
+          <h2>Frequently asked questions</h2>
+
+          <h3>Can I book a taxi for after the match at King Power Stadium?</h3>
+          <p>Yes — the best option is to pre-book before kick-off with a planned collection time and an agreed meeting point a short walk from Filbert Way. Pre-booking avoids post-match availability problems and keeps your fare fixed even when demand spikes.</p>
+
+          <h3>Do you offer fixed prices on Leicester City match days?</h3>
+          <p>Yes. We quote fixed prices on match days with no surge pricing. Your price is agreed when you book, so you are not watching an app price jump when the stadium empties.</p>
+
+          <h3>Can we book a group taxi for a Leicester Tigers match?</h3>
+          <p>Yes. Supporters travelling together can book a single vehicle for your group (subject to passenger numbers and vehicle availability). Group bookings are ideal for Mattioli Woods Welford Road on busy weekends and allow you to split one fixed fare per vehicle.</p>
+
+          <p style="text-align:center; margin-top:2rem;">
+            <a href="https://aylestonekings.webbooker.icabbi.com/" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#06A0A6; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">Book Online</a>
+            <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
+          </p>
+        `,
+        date: "2026-07-07",
+        author: "Aylestone Kings Team",
+        category: "Matchday Guide",
+        image: "/Blog-Leicester City Matchday Travel — Taxi Guide 2026.webp",
+      },
+      {
+        id: "prom-night-taxi-guide-leicester-parents-2026",
+        title: "Prom Night Taxi Guide — Leicester Parents 2026",
+        metaTitle: "Prom Night Taxi Guide Leicester 2026 — Tips for Parents",
+        metaDescription:
+          "Planning your child's prom transport in Leicester? Our guide covers fixed prices, group bookings, photo stops and safe licensed drivers. Call 0116 233 8888.",
+        excerpt:
+          "A parent&apos;s guide to prom taxi Leicester bookings in 2026: why to book early in June and July, fixed pricing, group sharing, photo stops at De Montfort Hall and Athena, smart vehicles, and licensed DBS-checked drivers.",
+        faqs: [
+          {
+            question: "How early should I book a prom taxi in Leicester?",
+            answer:
+              "Book as soon as your child&apos;s prom date is confirmed — ideally four to six weeks ahead for June and July fixtures. Prom season is one of the busiest periods for Leicester private hire, and popular time slots near De Montfort Hall and Athena Leicester fill quickly. Early booking secures your vehicle, fixes your price, and avoids last-minute availability problems.",
+          },
+          {
+            question: "Can a group of friends share one prom taxi?",
+            answer:
+              "Yes. Group bookings are one of the most popular options for school prom transport in Leicester. Friends travelling from the same area can share one saloon or MPV and split a single fixed fare per vehicle — not per person. MPVs accommodate up to eight passengers, making shared prom taxis an affordable option for larger groups.",
+          },
+          {
+            question: "How much does a prom taxi cost in Leicester?",
+            answer:
+              "Prom taxi prices depend on pickup location, venue, and vehicle size. Indicative fixed fares include city centre pickups from around £15 and journeys from Oadby or Wigston from around £20. You receive a confirmed quote when you book — with no surge charges on prom night. Call 0116 233 8888 or book online for an exact price for your route.",
+          },
+        ],
+        content: `
+          <p>Prom night is a milestone — and for Leicester parents, sorting transport is often the detail that causes the most last-minute stress. Searches for <strong>prom taxi leicester</strong>, <strong>school prom taxi</strong>, and <strong>leicester prom transport</strong> spike every spring as Year 11 and sixth-form students prepare for June and July events. This guide explains what to book, when to book it, and why a licensed local operator beats unregulated alternatives on the night itself.</p>
+
+          <h2>Why booking early is essential for prom season</h2>
+          <p>Leicester prom season concentrates demand into a few intense weeks in <strong>June and July</strong>. Dozens of schools book on the same weekends, and venues such as <strong>De Montfort Hall</strong> and <strong>Athena Leicester</strong> create predictable traffic peaks around arrival times. If you leave booking until the week of prom, you risk limited vehicle availability, tighter pickup windows, and the stress of competing with every other parent calling at once.</p>
+          <p>We recommend confirming your <strong>school prom taxi</strong> as soon as you know the date — ideally four to six weeks ahead. Early booking lets you choose the right vehicle size, agree a pickup time that allows for photographs at home, and lock in a fixed price before prom season demand peaks. Popular Saturday slots in LE2, Oadby, and Wigston fill first.</p>
+
+          <h2>Fixed pricing: budget with no surprises on the night</h2>
+          <p>One of the biggest advantages of booking a <strong>prom taxi Leicester</strong> through a licensed private hire firm is <strong>fixed pricing</strong>. The fare you are quoted when you book is the fare you pay — there are no surge multipliers, no meter ticking up in traffic, and no awkward fare disputes when your child steps out of the car in their finery.</p>
+          <p>For parents managing household budgets, that certainty matters. You know the outbound cost, you can add return collection to the same booking, and you can split the fare in advance if friends are sharing the vehicle. Unlike ride-hailing apps that often spike prices on busy Saturday evenings, a pre-booked prom taxi gives you a number you can plan around weeks in advance.</p>
+
+          <h2>Group bookings: friends sharing one vehicle</h2>
+          <p>Prom is a social occasion, and many students want to arrive with their friendship group. <strong>Group booking options</strong> let several friends share one saloon or MPV at a <strong>fixed price per vehicle, not per person</strong>. An MPV carrying up to eight passengers often works out significantly cheaper per head than individual bookings — and it keeps the group together from pickup to venue.</p>
+          <p>When organising a shared <strong>leicester prom transport</strong> booking, nominate one parent to coordinate addresses, passenger count, and payment split. Confirm everyone&apos;s pickup point and agree a single meeting location if friends live on the same street or estate. One booking, one driver, one fixed fare.</p>
+
+          <h2>Photo stops: drivers who wait at home and at the venue</h2>
+          <p>Photographs are part of the prom ritual — and rushing straight into the car defeats the point. Aylestone Kings drivers are <strong>happy to wait while photos are taken</strong> at your home before departure, and can allow time for quick shots outside the venue on arrival. Mention photo time when you book so it is built into your schedule rather than squeezed in as an afterthought.</p>
+          <p>Popular Leicester prom venues include <strong>De Montfort Hall</strong> on Granville Road and <strong>Athena Leicester</strong> on Queen Street. Both attract large numbers of guests arriving within the same hour. Allow extra time for venue approach roads and drop-off queues — your driver can advise on a realistic departure time from home based on where you are travelling from.</p>
+
+          <h2>Smart, presentable vehicle options</h2>
+          <p>Prom night calls for transport that matches the occasion. <strong>Smart and presentable vehicle options</strong> are available on request — clean saloons for couples or smaller groups, and MPVs for larger parties. Decorated vehicles can also be arranged where available; ask when you book if your child has something specific in mind.</p>
+          <p>All vehicles are maintained to private hire standards and presented professionally. If your group includes multiple passengers in formal wear, an MPV provides more space for dresses, suits, and accessories without creasing everything on a cramped rear seat.</p>
+
+          <h2>Safety: licensed DBS-checked drivers vs unregulated options</h2>
+          <p>Prom night transport is not the moment to cut corners on safety. Aylestone Kings drivers are <strong>licensed by Leicester City Council</strong> and <strong>DBS-checked</strong> — the same standards that apply to all our private hire work. Vehicles are insured for passenger carriage, regularly inspected, and dispatched through a named local company with a physical presence on Aylestone Road.</p>
+          <p>Unregulated options — informal lifts from unlicensed operators, social media recommendations without verification, or strangers offering &quot;prom taxis&quot; in local groups — carry real risk. You may not know who is driving, whether the vehicle is insured, or what happens if something goes wrong. For a night that matters this much, a licensed <strong>school prom taxi</strong> from an established Leicester firm gives parents accountability and peace of mind.</p>
+
+          <h2>Book your Leicester prom taxi</h2>
+          <p>Whether you need a single saloon, a shared MPV for eight, or a return collection after midnight, our <a href="/prom-taxi-leicester">prom taxi Leicester</a> service covers the full evening with fixed prices and professional drivers. View full service details on our dedicated prom page, or book directly below.</p>
+
+          <h2>Frequently asked questions</h2>
+
+          <h3>How early should I book a prom taxi in Leicester?</h3>
+          <p>Book as soon as your child&apos;s prom date is confirmed — ideally four to six weeks ahead for June and July fixtures. Prom season is one of the busiest periods for Leicester private hire, and popular time slots near De Montfort Hall and Athena Leicester fill quickly. Early booking secures your vehicle, fixes your price, and avoids last-minute availability problems.</p>
+
+          <h3>Can a group of friends share one prom taxi?</h3>
+          <p>Yes. Group bookings are one of the most popular options for school prom transport in Leicester. Friends travelling from the same area can share one saloon or MPV and split a single fixed fare per vehicle — not per person. MPVs accommodate up to eight passengers, making shared prom taxis an affordable option for larger groups.</p>
+
+          <h3>How much does a prom taxi cost in Leicester?</h3>
+          <p>Prom taxi prices depend on pickup location, venue, and vehicle size. Indicative fixed fares include city centre pickups from around £15 and journeys from Oadby or Wigston from around £20. You receive a confirmed quote when you book — with no surge charges on prom night. Call 0116 233 8888 or book online for an exact price for your route.</p>
+
+          <p style="text-align:center; margin-top:2rem;">
+            <a href="https://aylestonekings.webbooker.icabbi.com/" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#06A0A6; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">Book Online</a>
+            <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
+          </p>
+        `,
+        date: "2026-07-01",
+        author: "Aylestone Kings Team",
+        category: "Parent Guide",
+        image: "/Blog-Prom Night Taxi Guide — Leicester Parents 2026.webp",
+      },
+      {
+        id: "moving-out-university-halls-leicester-transport-guide",
+        title: "Moving Out of University Halls in Leicester — Transport Guide",
+        metaTitle: "Moving Out of University in Leicester — Student Transport Guide",
+        metaDescription:
+          "End of term in Leicester? Our student transport guide covers luggage taxis, house moves, airport transfers and group bookings for University of Leicester and DMU students. Call 0116 233 8888.",
+        excerpt:
+          "End-of-term student transport in Leicester: why a taxi beats buses with boxes, estate and MPV options, group bookings for shared houses, and fixed-price trips to the station or airport — plus peak May–June booking advice.",
+        faqs: [
+          {
+            question: "Can you help move luggage from university halls in Leicester?",
+            answer:
+              "Yes. We regularly collect from University of Leicester and DMU halls and take students to new addresses, storage, the train station, or the airport. Tell us how much luggage and how many boxes you have and we will recommend an estate or MPV if you need extra space. We can also allow a sensible loading window so you are not rushing at reception.",
+          },
+          {
+            question: "What vehicle options are available for a student house move?",
+            answer:
+              "For smaller moves we can send a standard saloon, but most end-of-term moves are best in an estate car for extra boot space. For larger loads (multiple suitcases, boxes, duvets, and kitchen bits), an MPV is ideal and can also carry friends if you are moving together. We will match vehicle size to your load when you book.",
+          },
+          {
+            question: "How much does a student taxi cost from Leicester to the airport?",
+            answer:
+              "Airport prices depend on pickup area and vehicle size, but you will always receive a fixed quote before you travel. For many students, a city-centre to East Midlands Airport run is an affordable alternative to multiple buses with luggage. Book early for May–June move-out weekends and call 0116 233 8888 or book online for an exact fixed price for your route.",
+          },
+        ],
+        content: `
+          <p>End of term comes fast. One minute you are finishing coursework, the next you are trying to get suitcases, boxes, and kitchen bits out of halls before your move-out slot ends. That is why searches for <strong>student taxi leicester</strong>, <strong>university move out leicester</strong>, and <strong>leicester student transport</strong> climb sharply in late spring. This guide is written for <strong>University of Leicester</strong> and <strong>De Montfort University (DMU)</strong> students moving out in May and June — with practical advice on the easiest way to move your things and get home without the stress.</p>
+
+          <h2>Why a taxi beats public transport when you have luggage and boxes</h2>
+          <p>Public transport is fine for everyday commuting, but it becomes awkward when you are moving out. Buses and trains are not designed for multiple suitcases, boxes, bedding, and bags of food — especially at the exact times everyone else is travelling. You also end up making compromises: carrying heavy loads across town, waiting in the rain, and trying to keep track of everything while the bus is crowded.</p>
+          <p>A pre-booked taxi gives you something public transport cannot: <strong>door-to-door transport</strong> for all your belongings in one go. You load once at halls, you unload once at your next address (or storage), and you are done. If you have a tight checkout window, a taxi is also the most reliable way to hit a specific time without juggling connections.</p>
+
+          <h2>Estate and MPV options for larger loads</h2>
+          <p>Most student move-outs are bigger than they look on paper. Two large suitcases become four; a couple of boxes become ten; and suddenly you are trying to fit a duvet, desk lamp, air fryer, and three carrier bags of books into a small boot. That is why we offer <strong>estate car</strong> and <strong>MPV</strong> options for move-out day.</p>
+          <ul>
+            <li><strong>Estate</strong>: best for one student with multiple suitcases and boxes, with extra boot space for bulky items.</li>
+            <li><strong>MPV</strong>: best when you have a larger load or when a couple of housemates are travelling together with multiple bags.</li>
+          </ul>
+          <p>When you book, tell us roughly what you are moving (suitcases, boxes, bedding) and how many passengers there will be. We will allocate the right vehicle so you are not trying to compress a term&apos;s worth of life into a small back seat.</p>
+
+          <h2>Group bookings for shared houses moving on the same day</h2>
+          <p>Many students live in shared houses and move out on the same weekend. Instead of booking separately, consider a <strong>group booking</strong> so you can share one vehicle (or coordinate multiple vehicles) and split the cost. This is especially useful if you live close to each other in popular student areas like <a href="/taxis-in/clarendon-park">Clarendon Park</a>, <strong>Knighton</strong>, or <strong>Highfields</strong> and you are all heading to the same place — such as the train station, an airport, or a parent pickup point.</p>
+          <p>Group bookings also reduce hassle: one agreed meeting time, one pickup location, and a straightforward plan for loading. If your house has a lot of luggage, an MPV can be the simplest solution for moving multiple people and their bags together.</p>
+
+          <h2>Airport and train station transfers after term</h2>
+          <p>Move-out day often comes with travel the same evening. Some students head straight to <strong>Leicester train station</strong>, while others travel to <strong>East Midlands Airport</strong> for flights home. If you are doing both — moving out and travelling — a taxi makes the day dramatically easier because you can go from halls or your house directly to your departure point without dragging luggage across town.</p>
+          <p>If you are flying, our <a href="/airport-transfers-leicester">airport transfers Leicester</a> service covers early-morning and late-night departures, with fixed pricing agreed at booking so you can budget for the end-of-term rush. For train journeys, a taxi avoids missing your platform because a bus was full or delayed.</p>
+
+          <h2>Booking early during peak end-of-term (May–June)</h2>
+          <p>May and June are peak periods for <strong>university move out Leicester</strong> journeys. Multiple halls and house-share areas operate on similar move-out windows, and demand for estate cars and MPVs increases quickly. The best advice is simple: <strong>book as soon as you know your move-out date</strong>. Early booking gives you the right vehicle size, the time slot you need, and a fixed price confirmed in advance.</p>
+
+          <h2>Book your move-out taxi</h2>
+          <p>If you want a dedicated service designed around student move-outs, our <a href="/student-taxi-leicester">student taxi Leicester</a> page explains how we help with end-of-term moves, group bookings, and fixed-price trips to the station or airport. Book online or call us and tell us your halls/area, how much you are moving, and where you need to go next.</p>
+
+          <h2>Frequently asked questions</h2>
+
+          <h3>Can you help move luggage from university halls in Leicester?</h3>
+          <p>Yes. We regularly collect from University of Leicester and DMU halls and take students to new addresses, storage, the train station, or the airport. Tell us how much luggage and how many boxes you have and we will recommend an estate or MPV if you need extra space. We can also allow a sensible loading window so you are not rushing at reception.</p>
+
+          <h3>What vehicle options are available for a student house move?</h3>
+          <p>For smaller moves we can send a standard saloon, but most end-of-term moves are best in an estate car for extra boot space. For larger loads (multiple suitcases, boxes, duvets, and kitchen bits), an MPV is ideal and can also carry friends if you are moving together. We will match vehicle size to your load when you book.</p>
+
+          <h3>How much does a student taxi cost from Leicester to the airport?</h3>
+          <p>Airport prices depend on pickup area and vehicle size, but you will always receive a fixed quote before you travel. For many students, a city-centre to East Midlands Airport run is an affordable alternative to multiple buses with luggage. Book early for May–June move-out weekends and call 0116 233 8888 or book online for an exact fixed price for your route.</p>
+
+          <p style="text-align:center; margin-top:2rem;">
+            <a href="https://aylestonekings.webbooker.icabbi.com/" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#06A0A6; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">Book Online</a>
+            <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
+          </p>
+        `,
+        date: "2026-07-12",
+        author: "Aylestone Kings Team",
+        category: "Student Guide",
+        image: "/Blog-Moving Out of University Halls in Leicester — Transport Guide.webp",
+      },
+      {
         id: "taxi-vs-uber-leicester-cheaper-2026",
         title: "Taxi vs Uber in Leicester — Which is Cheaper in 2026?",
         metaTitle: "Taxi vs Uber Leicester — Price Comparison 2026",
