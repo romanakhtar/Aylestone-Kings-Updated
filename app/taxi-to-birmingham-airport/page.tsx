@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
       "Fixed-price Leicester to BHX transfers from £60. Licensed drivers, terminal forecourt drop-off, flight-tracked returns.",
     url: CANONICAL_URL,
-    siteName: "Aylestone Kings",
+    siteName: "Aylestone Taxis",
     locale: "en_GB",
     type: "website",
   },

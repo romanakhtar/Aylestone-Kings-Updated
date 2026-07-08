@@ -50,7 +50,7 @@ const faqs = [
   {
     question: "Do you offer cruise port transfer UK-wide?",
     answer:
-      "Yes. Aylestone Kings is based in Leicester and books long-distance seaport runs to Southampton, Dover, Portsmouth, Harwich, and other UK terminals on request. You get a confirmed price before travel where agreed, and we match the vehicle to your head count and bags.",
+      "Yes. Aylestone Taxis is based in Leicester and books long-distance seaport runs to Southampton, Dover, Portsmouth, Harwich, and other UK terminals on request. You get a confirmed price before travel where agreed, and we match the vehicle to your head count and bags.",
   },
   {
     question: "How much luggage can I take on a taxi to Southampton port?",
@@ -75,7 +75,7 @@ const faqs = [
   {
     question: "Are your seaport transfer drivers licensed and insured?",
     answer:
-      "Yes. Aylestone Kings uses council-licensed private hire drivers (Leicester and Wolverhampton licensing) with DBS checks and hire insurance for pre-booked jobs. Vehicles are kept fit for long motorway runs to the coast.",
+      "Yes. Aylestone Taxis uses council-licensed private hire drivers (Leicester and Wolverhampton licensing) with DBS checks and hire insurance for pre-booked jobs. Vehicles are kept fit for long motorway runs to the coast.",
   },
 ]
 

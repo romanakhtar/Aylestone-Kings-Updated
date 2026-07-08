@@ -118,7 +118,7 @@ export default function BirminghamAirportContent({ faqs }: { faqs: AirportFaqIte
                 Searching for the <strong>cheapest taxi to Birmingham Airport</strong> from Leicester does not mean
                 choosing whoever quotes the lowest headline figure on a comparison site. Metered taxis charge by time and
                 distance as you travel, so a delay on the M69, M6, or M42 can push your final bill higher than the
-                estimate you were given. Aylestone Kings quotes a <strong>fixed price before you set off</strong> — the
+                estimate you were given. Aylestone Taxis quotes a <strong>fixed price before you set off</strong> — the
                 fare is agreed at booking and does not climb because of traffic queues or waiting time on the motorway.
               </p>
               <p>
@@ -209,7 +209,7 @@ export default function BirminghamAirportContent({ faqs }: { faqs: AirportFaqIte
                 taxis can look inexpensive at first glance, but the Leicester–Birmingham corridor is prone to variable
                 journey times. A meter keeps running in congestion, and surge pricing on apps routinely adds 20–50% during
                 peak airport hours. Rivals quoting hourly waits or parking charges at BHX can also inflate the true cost.
-                With Aylestone Kings, one confirmed fare covers the transfer — no ticking meter, no surprise add-ons for
+                With Aylestone Taxis, one confirmed fare covers the transfer — no ticking meter, no surprise add-ons for
                 normal motorway delays, and no surge multiplier because it is a busy Friday night.
               </p>
               <p>

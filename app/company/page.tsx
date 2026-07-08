@@ -4,16 +4,16 @@ import { Shield, Users, Award, Clock, Check, ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About Aylestone Kings | Leicester Taxi Company Since 1995",
+  title: "About Aylestone Taxis | Leicester Taxi Company Since 1995",
   description:
-    "Aylestone Kings — Leicester taxi company with 30+ years experience. 10,000 passengers per year, 99.7% satisfaction rating. Licensed DBS-checked drivers available 24/7.",
+    "Aylestone Taxis — Leicester taxi company with 30+ years experience. 10,000 passengers per year, 99.7% satisfaction rating. Licensed DBS-checked drivers available 24/7.",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/company",
   },
   openGraph: {
-    title: "Aylestone Kings — Leicester Taxi Company",
+    title: "Aylestone Taxis — Leicester Taxi Company",
     description:
-      "Aylestone Kings — Leicester taxi company with 30+ years experience. 10,000 passengers per year, 99.7% satisfaction rating. Licensed DBS-checked drivers available 24/7.",
+      "Aylestone Taxis — Leicester taxi company with 30+ years experience. 10,000 passengers per year, 99.7% satisfaction rating. Licensed DBS-checked drivers available 24/7.",
     url: "https://aylestone-taxis.co.uk/company",
   },
 }
@@ -39,7 +39,7 @@ export default function CompanyPage() {
             
             {/* Enhanced Title */}
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              At <span className="text-[#06A0A6] drop-shadow-lg">Aylestone Kings</span>
+              At <span className="text-[#06A0A6] drop-shadow-lg">Aylestone Taxis</span>
             </h1>
             
             {/* Enhanced Description */}
@@ -75,7 +75,7 @@ export default function CompanyPage() {
                 About Us
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-               Aylestone Kings started a mission
+               Aylestone Taxis started a mission
               </h2>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
                 {siteData.companyPage.about.description}
@@ -104,7 +104,7 @@ export default function CompanyPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-2 hover-lift">
               <Image 
                 src="/company-history.jpg" 
-                alt="Aylestone Kings company history - Leicester taxi service established in 1995, serving the community with reliable transport for over 30 years" 
+                alt="Aylestone Taxis company history - Leicester taxi service established in 1995, serving the community with reliable transport for over 30 years" 
                 fill 
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
@@ -122,7 +122,7 @@ export default function CompanyPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-1 hover-lift">
               <Image
                 src="/serving-many.jpg"
-                alt="Aylestone Kings serving thousands of passengers - trusted Leicester taxi service with professional drivers and modern fleet"
+                alt="Aylestone Taxis serving thousands of passengers - trusted Leicester taxi service with professional drivers and modern fleet"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
@@ -175,7 +175,7 @@ export default function CompanyPage() {
             <div className="order-1 lg:order-1 slide-up">
               <h3 className="text-3xl font-bold text-[#0F0D3E] mb-6">Inclusivity and Accessibility</h3>
               <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
-                Aylestone Kings is more than just a transportation service; we're deeply ingrained in our community. 
+                Aylestone Taxis is more than just a transportation service; we're deeply ingrained in our community. 
                 We proudly support local charities and collaborate with local charities and organisations 
                 to make a positive impact.
               </p>
@@ -199,7 +199,7 @@ export default function CompanyPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-2 hover-lift">
               <Image 
                 src="/community-support.png" 
-                alt="Aylestone Kings community support and local charity partnerships - Leicester taxi company supporting local organisations and community initiatives" 
+                alt="Aylestone Taxis community support and local charity partnerships - Leicester taxi company supporting local organisations and community initiatives" 
                 fill 
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
@@ -217,7 +217,7 @@ export default function CompanyPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-1 hover-lift">
               <Image 
                 src="/innovation-tech.png" 
-                alt="Aylestone Kings innovation and technology - modern taxi service in Leicester with GPS tracking, mobile app booking, and advanced fleet management" 
+                alt="Aylestone Taxis innovation and technology - modern taxi service in Leicester with GPS tracking, mobile app booking, and advanced fleet management" 
                 fill 
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
@@ -235,11 +235,11 @@ export default function CompanyPage() {
                 Innovating Urban Mobility Together
               </h3>
               <p className="text-lg text-[#2E3C44] mb-8 leading-relaxed">
-                At Aylestone Kings, we champion both local spirit and global tech innovation. Join us as we continue 
+                At Aylestone Taxis, we champion both local spirit and global tech innovation. Join us as we continue 
                 to shape the future of urban mobility, ensuring that innovation meets reliability in every journey.
               </p>
               <p className="text-lg text-[#2E3C44] mb-8 leading-relaxed">
-                Experience the difference with Aylestone Kings, where providing exceptional service is not just a goal 
+                Experience the difference with Aylestone Taxis, where providing exceptional service is not just a goal 
                 - it's our commitment.
               </p>
               

@@ -1,7 +1,7 @@
 export const siteData = {
   // Company Information
   company: {
-    name: "Aylestone Kings",
+    name: "Aylestone Taxis",
     tagline: "",
     region: "Aylestone and surrounding areas",
     phone: "0116 2338888",
@@ -9,7 +9,7 @@ export const siteData = {
     email: "info@aylestone-taxis.co.uk",
     address: "753A Aylestone Rd, Aylestone, Leicester, LE2 8TG, UK",
     description:
-      "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
+      "Founded in 1995, Aylestone Taxis started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
     founded: "1995",
     passengersServed: "10,000",
     satisfactionRating: "99.7%",
@@ -86,7 +86,7 @@ export const siteData = {
     hero: {
       title: "Aylestone Taxis – Your Trusted Taxi Service in Leicester",
       subtitle:
-        "Welcome to Aylestone Kings, Leicester's dependable and friendly taxi service. We provide fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide.",
+        "Welcome to Aylestone Taxis, Leicester's dependable and friendly taxi service. We provide fast, professional and affordable transport across Leicester, Leicestershire, the East Midlands, and nationwide.",
       ctaText: "Book Your Ride Now",
       features: ["Available 24/7", "Immediate Pick-Up", "Professional Drivers"],
     },
@@ -95,7 +95,7 @@ export const siteData = {
       title: "Over 30 Years' Experience",
       subtitle: "Reliable Transport Since 1995",
       description:
-        "Established in 1995, Aylestone Kings set out with one mission: to deliver the safest, most comfortable, and most reliable taxi service in Leicester at prices everyone can afford. We provide transport across Leicester, Leicestershire, the East Midlands and nationwide — from airport transfers and commutes to appointments and safe rides home. All drivers are fully licensed and DBS-checked.",
+        "Established in 1995, Aylestone Taxis set out with one mission: to deliver the safest, most comfortable, and most reliable taxi service in Leicester at prices everyone can afford. We provide transport across Leicester, Leicestershire, the East Midlands and nationwide — from airport transfers and commutes to appointments and safe rides home. All drivers are fully licensed and DBS-checked.",
     },
 
     whyChooseUs: {
@@ -339,7 +339,7 @@ export const siteData = {
           type: "Airport Transfer",
         },
         {
-          text: "Had an emergency hospital appointment and needed transport quickly. Aylestone Kings had a car with me within 15 minutes. Driver was so caring and made sure I got in safely. ",
+          text: "Had an emergency hospital appointment and needed transport quickly. Aylestone Taxis had a car with me within 15 minutes. Driver was so caring and made sure I got in safely. ",
           author: "Robert Mitchell",
           type: "Emergency Transport",
         },
@@ -354,7 +354,7 @@ export const siteData = {
     safeTravel: {
       title: "Trusted Transportation Service Since 1995",
       description:
-        "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
+        "Founded in 1995, Aylestone Taxis started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
     },
 
     appBenefits: {
@@ -550,7 +550,7 @@ export const siteData = {
     overview: {
       title: "Vehicle Categories",
       subtitle:
-        "At Aylestone Kings, we offer a comprehensive range of vehicles to meet all your transportation needs. Whether you're travelling solo or with a group, our fleet guarantees comfort, reliability, and style.",
+        "At Aylestone Taxis, we offer a comprehensive range of vehicles to meet all your transportation needs. Whether you're travelling solo or with a group, our fleet guarantees comfort, reliability, and style.",
     },
 
     vehicles: [
@@ -619,14 +619,14 @@ export const siteData = {
   // Company Page Content
   companyPage: {
     hero: {
-      title: "About Aylestone Kings",
+      title: "About Aylestone Taxis",
     },
     about: {
       title: "About Us",
       subtitle:
-        "Founded in 1995, Aylestone Kings started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
+        "Founded in 1995, Aylestone Taxis started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
       description:
-        "With over 30 years in the industry, Aylestone Kings has grown into a trusted business for its dedication to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Kings has consistently led the way in industry innovation, working closely with local authorities and representing every local authority across the Midlands. The company seamlessly blends local heritage and values with global technological innovation..",
+        "With over 30 years in the industry, Aylestone Taxis has grown into a trusted business for its dedication to the Private Hire and Taxi industry. Championing safety regulations and legislative reform, Aylestone Taxis has consistently led the way in industry innovation, working closely with local authorities and representing every local authority across the Midlands. The company seamlessly blends local heritage and values with global technological innovation..",
     },
     trusted: {
       title: "Our Reputation",
@@ -1043,7 +1043,7 @@ export const siteData = {
 
   // Blog Page Content
   blogPage: {
-    title: "Aylestone Kings Blog",
+    title: "Aylestone Taxis Blog",
     subtitle:
       "Discover insights, tips, and stories about transportation in Leicester",
     blogs: [
@@ -1089,7 +1089,7 @@ export const siteData = {
 
           <h2>Fixed matchday prices — no surge pricing like Uber</h2>
           <p>Many supporters use ride-hailing apps, but matchdays are exactly when those apps can become expensive. When demand outstrips supply at full time, <strong>surge pricing</strong> can push the fare up and up while you are standing in a crowd refreshing your screen.</p>
-          <p>With Aylestone Kings, you receive a <strong>fixed price</strong> when you book — with <strong>no surge pricing</strong> on matchdays. That makes budgeting easier and avoids the uncertainty of post-match demand spikes. If you want more detail on the difference between a local operator and app pricing, our dedicated <a href="/match-day-taxi-leicester">match day taxi Leicester</a> page explains how matchday travel works.</p>
+          <p>With Aylestone Taxis, you receive a <strong>fixed price</strong> when you book — with <strong>no surge pricing</strong> on matchdays. That makes budgeting easier and avoids the uncertainty of post-match demand spikes. If you want more detail on the difference between a local operator and app pricing, our dedicated <a href="/match-day-taxi-leicester">match day taxi Leicester</a> page explains how matchday travel works.</p>
 
           <h2>Post-match collection advice (and calmer meeting points)</h2>
           <p>The best collections usually happen <strong>a short walk away from the busiest exits</strong>. The goal is simple: move away from the tightest crowd and get to a road where a driver can stop safely and legally.</p>
@@ -1119,7 +1119,7 @@ export const siteData = {
           </p>
         `,
         date: "2026-07-07",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Matchday Guide",
         image: "/Blog-Leicester City Matchday Travel — Taxi Guide 2026.webp",
       },
@@ -1164,7 +1164,7 @@ export const siteData = {
           <p>When organising a shared <strong>leicester prom transport</strong> booking, nominate one parent to coordinate addresses, passenger count, and payment split. Confirm everyone&apos;s pickup point and agree a single meeting location if friends live on the same street or estate. One booking, one driver, one fixed fare.</p>
 
           <h2>Photo stops: drivers who wait at home and at the venue</h2>
-          <p>Photographs are part of the prom ritual — and rushing straight into the car defeats the point. Aylestone Kings drivers are <strong>happy to wait while photos are taken</strong> at your home before departure, and can allow time for quick shots outside the venue on arrival. Mention photo time when you book so it is built into your schedule rather than squeezed in as an afterthought.</p>
+          <p>Photographs are part of the prom ritual — and rushing straight into the car defeats the point. Aylestone Taxis drivers are <strong>happy to wait while photos are taken</strong> at your home before departure, and can allow time for quick shots outside the venue on arrival. Mention photo time when you book so it is built into your schedule rather than squeezed in as an afterthought.</p>
           <p>Popular Leicester prom venues include <strong>De Montfort Hall</strong> on Granville Road and <strong>Athena Leicester</strong> on Queen Street. Both attract large numbers of guests arriving within the same hour. Allow extra time for venue approach roads and drop-off queues — your driver can advise on a realistic departure time from home based on where you are travelling from.</p>
 
           <h2>Smart, presentable vehicle options</h2>
@@ -1172,7 +1172,7 @@ export const siteData = {
           <p>All vehicles are maintained to private hire standards and presented professionally. If your group includes multiple passengers in formal wear, an MPV provides more space for dresses, suits, and accessories without creasing everything on a cramped rear seat.</p>
 
           <h2>Safety: licensed DBS-checked drivers vs unregulated options</h2>
-          <p>Prom night transport is not the moment to cut corners on safety. Aylestone Kings drivers are <strong>licensed by Leicester City Council</strong> and <strong>DBS-checked</strong> — the same standards that apply to all our private hire work. Vehicles are insured for passenger carriage, regularly inspected, and dispatched through a named local company with a physical presence on Aylestone Road.</p>
+          <p>Prom night transport is not the moment to cut corners on safety. Aylestone Taxis drivers are <strong>licensed by Leicester City Council</strong> and <strong>DBS-checked</strong> — the same standards that apply to all our private hire work. Vehicles are insured for passenger carriage, regularly inspected, and dispatched through a named local company with a physical presence on Aylestone Road.</p>
           <p>Unregulated options — informal lifts from unlicensed operators, social media recommendations without verification, or strangers offering &quot;prom taxis&quot; in local groups — carry real risk. You may not know who is driving, whether the vehicle is insured, or what happens if something goes wrong. For a night that matters this much, a licensed <strong>school prom taxi</strong> from an established Leicester firm gives parents accountability and peace of mind.</p>
 
           <h2>Book your Leicester prom taxi</h2>
@@ -1195,7 +1195,7 @@ export const siteData = {
           </p>
         `,
         date: "2026-07-01",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Parent Guide",
         image: "/Blog-Prom Night Taxi Guide — Leicester Parents 2026.webp",
       },
@@ -1270,7 +1270,7 @@ export const siteData = {
           </p>
         `,
         date: "2026-07-12",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Student Guide",
         image: "/Blog-Moving Out of University Halls in Leicester — Transport Guide.webp",
       },
@@ -1286,13 +1286,13 @@ export const siteData = {
           <p>If you have ever opened a ride-hailing app on a rainy Friday night outside King Power Stadium, you have probably seen the price jump before you tap confirm. That moment is exactly why so many Leicester passengers search <strong>taxi vs uber leicester</strong> before they travel. Apps can be convenient — but are they cheaper? This 2026 comparison uses realistic route estimates to show where a fixed-price local taxi saves money, and where surge pricing makes Uber the pricier option.</p>
 
           <h2>Three real routes compared: fixed taxi vs Uber estimates</h2>
-          <p>The figures below are guide estimates for 2026 based on typical Aylestone Kings fixed fares and common Uber pricing bands observed in Leicester. Uber prices fluctuate by demand, driver availability, and time of day — the ranges reflect off-peak and surge scenarios. Our taxi prices are quoted upfront when you book.</p>
+          <p>The figures below are guide estimates for 2026 based on typical Aylestone Taxis fixed fares and common Uber pricing bands observed in Leicester. Uber prices fluctuate by demand, driver availability, and time of day — the ranges reflect off-peak and surge scenarios. Our taxi prices are quoted upfront when you book.</p>
 
           <table style="width:100%; border-collapse:collapse; margin-bottom:1.5rem; font-size:1rem;">
             <thead>
               <tr style="background:#0F0D3E; color:#fff;">
                 <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Route</th>
-                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Aylestone Kings (fixed)</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Aylestone Taxis (fixed)</th>
                 <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Uber (typical off-peak)</th>
                 <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Uber (surge / peak)</th>
               </tr>
@@ -1322,7 +1322,7 @@ export const siteData = {
           <p>On the airport run alone, a £40 fixed fare can undercut a surging Uber by £25 or more — before you factor in the uncertainty of whether a car will even be available at 4am. For short suburban hops like Aylestone to the station, the difference looks small in pounds but adds up across regular commutes. And on a Friday night from Wigston into town, surge multipliers are exactly when the <strong>taxi vs uber leicester</strong> debate stops being theoretical.</p>
 
           <h2>Route 1: Leicester city centre to East Midlands Airport</h2>
-          <p>EMA is Leicester&apos;s most-booked airport transfer. The distance is roughly 22 miles and the journey takes 35–45 minutes depending on traffic. Aylestone Kings quotes a <strong>fixed £40</strong> for a standard saloon from Leicester city centre — the same price whether you book a week ahead or on the morning of travel.</p>
+          <p>EMA is Leicester&apos;s most-booked airport transfer. The distance is roughly 22 miles and the journey takes 35–45 minutes depending on traffic. Aylestone Taxis quotes a <strong>fixed £40</strong> for a standard saloon from Leicester city centre — the same price whether you book a week ahead or on the morning of travel.</p>
           <p>Uber can match or slightly exceed that figure on a quiet Tuesday afternoon. The problem is timing. Early-morning holiday flights, school-holiday Saturdays, and evenings when East Midlands departures cluster all coincide with higher app demand. A route that quotes £46 at midday can display £72 or more when surge kicks in — and you only discover that after you have already committed mentally to the app.</p>
           <p>For airport work, the winning formula is knowing your cost before you pack the suitcases. That is why fixed airport tariffs exist: passengers budgeting a family holiday need a number they can trust.</p>
 
@@ -1336,7 +1336,7 @@ export const siteData = {
 
           <h2>Fixed fares vs Uber surge pricing: what drives the difference?</h2>
           <p>Uber uses dynamic pricing. When demand exceeds supply — rain, events, pub closing time, football match days, New Year&apos;s Eve — the app multiplies fares to attract more drivers. That is rational economics for the platform, but painful if you are the passenger staring at a 2.1x notification on London Road.</p>
-          <p>Aylestone Kings works differently for agreed routes. Airport transfers are fixed at booking. Local journeys follow published tariff bands, with a modest night uplift built in transparently — not a surprise multiplier applied at the worst possible moment.</p>
+          <p>Aylestone Taxis works differently for agreed routes. Airport transfers are fixed at booking. Local journeys follow published tariff bands, with a modest night uplift built in transparently — not a surprise multiplier applied at the worst possible moment.</p>
           <p>Peak surge triggers in Leicester include:</p>
           <ul>
             <li><strong>Football and rugby match days</strong> — King Power Stadium and Welford Road emptying at the same time</li>
@@ -1353,7 +1353,7 @@ export const siteData = {
           <p>No surprise charges. No surge during Leicester City home games. No watching the fare tick upward in standstill traffic on the A426. That predictability is why many Leicester passengers keep a local taxi number on speed dial even with apps installed.</p>
 
           <h2>Local accountability: Leicester-based and council licensed</h2>
-          <p>Price is only half the story. Aylestone Kings is <strong>based in Leicester on Aylestone Road</strong> and has served the city since 1995. Our drivers and vehicles operate under <strong>Leicester City Council</strong> licensing — the same authority that regulates hackney and private hire standards locally.</p>
+          <p>Price is only half the story. Aylestone Taxis is <strong>based in Leicester on Aylestone Road</strong> and has served the city since 1995. Our drivers and vehicles operate under <strong>Leicester City Council</strong> licensing — the same authority that regulates hackney and private hire standards locally.</p>
           <p>App-based platforms draw drivers from a wide catchment. A car can arrive from outside the city with a driver less familiar with Leicester&apos;s one-way systems, bus lanes, and event road closures. When something goes wrong — a lost bag, a complaint, a refund query — a local firm with a physical office and named dispatch staff offers accountability that a faceless app ticket queue cannot match.</p>
           <p>You are not just choosing a vehicle. You are choosing who is responsible when the journey matters.</p>
 
@@ -1380,7 +1380,7 @@ export const siteData = {
           </p>
         `,
         date: "2026-06-15",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Fare Guide",
         image: "/Blog_Taxi_vs_Uber.webp",
       },
@@ -1389,7 +1389,7 @@ export const siteData = {
         title: "Leicester to Manchester Taxi — Cost & Time 2026",
         metaTitle: "Leicester to Manchester Taxi — Fixed Price Guide 2026",
         metaDescription:
-          "Need a taxi from Leicester to Manchester? Fixed prices from £150, approx 2 hour journey. Compare costs vs train for groups. Call Aylestone Kings on 0116 233 8888.",
+          "Need a taxi from Leicester to Manchester? Fixed prices from £150, approx 2 hour journey. Compare costs vs train for groups. Call Aylestone Taxis on 0116 233 8888.",
         excerpt:
           "Planning a Leicester to Manchester taxi? Typical M6 journey times around 2 hours, fixed fares from £150, when a cab beats the train, vehicle options for groups, and how to book long-distance transfers in advance.",
         content: `
@@ -1485,7 +1485,7 @@ export const siteData = {
           </p>
         `,
         date: "2026-06-14",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Fare Guide",
         image: "/Blog_Leicester_to_Manchester_airport_taxi.webp",
       },
@@ -1494,7 +1494,7 @@ export const siteData = {
         title: "Summer Holidays Airport Taxi Guide — Leicester Families 2026",
         metaTitle: "Summer Airport Taxi Guide Leicester 2026 | Tips",
         metaDescription:
-          "Planning summer holidays from Leicester? Our guide covers family airport taxis, fixed prices, large vehicles and flight tracking. Book with Aylestone Kings — call 0116 233 8888.",
+          "Planning summer holidays from Leicester? Our guide covers family airport taxis, fixed prices, large vehicles and flight tracking. Book with Aylestone Taxis — call 0116 233 8888.",
         excerpt:
           "Planning summer holidays from Leicester with children? This family airport taxi guide covers advance booking, MPVs, early flights, meet-and-greet, fixed fares, child seats, and journey times to EMA, Birmingham, and Manchester.",
         content: `
@@ -1510,7 +1510,7 @@ export const siteData = {
 
           <h2>Early morning flights: pickup times and flight tracking</h2>
           <p>Some of the most popular summer flights leave before public transport is a realistic option. Pre-booking an early-morning airport taxi means a confirmed pickup at your door — not a stressed drive to a park-and-ride in the dark with tired children.</p>
-          <p>On return journeys, plans change. Delays, early landings, and gate switches are normal in peak season. Aylestone Kings tracks flight times where possible, so your homebound pickup adjusts rather than leaving you waiting on the forecourt with overtired youngsters. Share your flight number when booking and keep us updated if anything shifts significantly in the air.</p>
+          <p>On return journeys, plans change. Delays, early landings, and gate switches are normal in peak season. Aylestone Taxis tracks flight times where possible, so your homebound pickup adjusts rather than leaving you waiting on the forecourt with overtired youngsters. Share your flight number when booking and keep us updated if anything shifts significantly in the air.</p>
 
           <h2>Meet and greet: what it means for families</h2>
           <p>After a long flight, navigating arrivals with bags and small children can be the hardest part of the day. <strong>Meet and greet</strong> means your driver meets you inside the terminal — usually near arrivals or a agreed meeting point — and helps with luggage back to the car.</p>
@@ -1576,14 +1576,14 @@ export const siteData = {
           </p>
         `,
         date: "2026-06-13",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Airport Transfers",
         image: "/Blog_Summer_holidays_airport_taxi.webp",
       },
       {
         id: "leicester-to-heathrow-taxi-everything-you-need-to-know",
         title: "Taxi from Leicester to Heathrow: Everything You Need to Know",
-        metaTitle: "Leicester to Heathrow Taxi Guide | Aylestone Kings",
+        metaTitle: "Leicester to Heathrow Taxi Guide | Aylestone Taxis",
         excerpt:
           "Planning a Leicester to Heathrow taxi? Typical M1/M25 drive times, when to leave for LHR, fixed fares vs metered rides, luggage and meet-and-greet tips — plus links to Heathrow pricing and our full airport transfer hub.",
         content: `
@@ -1597,7 +1597,7 @@ export const siteData = {
           <p>Trains can work for some travellers, but they usually involve changes, walking between platforms, and carrying bags through busy stations. A direct <strong>Leicester to Heathrow taxi</strong> keeps you door-to-door, avoids dragging suitcases up staircases, and gives you a single contact if plans change. For families, older passengers, or anyone with tight connections, that simplicity is often worth the drive.</p>
 
           <h2>Fixed pricing vs on-the-day uncertainty</h2>
-          <p>Long motorway journeys are where surprise pricing hurts most. With Aylestone Kings you can confirm a fixed route price in advance, so you are not watching a meter tick up in unexpected traffic. For indicative Heathrow numbers and vehicle options, start with our <a href="/pricing/airports/Heathrow">Heathrow taxi pricing</a> page, then complete your booking online or by phone for a firm quote tailored to your pickup point and passenger count.</p>
+          <p>Long motorway journeys are where surprise pricing hurts most. With Aylestone Taxis you can confirm a fixed route price in advance, so you are not watching a meter tick up in unexpected traffic. For indicative Heathrow numbers and vehicle options, start with our <a href="/pricing/airports/Heathrow">Heathrow taxi pricing</a> page, then complete your booking online or by phone for a firm quote tailored to your pickup point and passenger count.</p>
 
           <h2>Terminals, drop-offs, and pickups</h2>
           <p>Heathrow has multiple terminals and the roads around the airport change frequently with signage updates. Your driver will aim for the correct forecourt drop-off for departures, and for arrivals we can arrange a meet inside the terminal if you want help with bags. If you are new to Heathrow, read the terminal layout notes on our <a href="/airport-transfers-leicester">airport transfers Leicester</a> hub, which also lists other UK airports we serve from Leicestershire.</p>
@@ -1623,14 +1623,14 @@ export const siteData = {
           <p>Ready to price your journey? Compare guidance on <a href="/pricing/airports/Heathrow">Heathrow pricing</a>, then read wider transfer options on <a href="/airport-transfers-leicester">airport transfers Leicester</a>. When you are set, book online or call <strong>0116 2338888</strong> and we will confirm your <strong>Leicester to Heathrow taxi</strong> with a clear pickup time and fixed fare.</p>
         `,
         date: "2026-05-01",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Airport Transfers",
         image: "/Blog leicester-to-heathrow-taxi-everything-you-need-to-know.webp",
       },
       {
         id: "best-taxi-leicester-what-to-look-for",
         title: "Best Taxi Service in Leicester: What to Look For",
-        metaTitle: "Best Taxi Service in Leicester | Aylestone Kings",
+        metaTitle: "Best Taxi Service in Leicester | Aylestone Taxis",
         excerpt:
           "Searching for the best taxi Leicester has to offer? Here is a practical checklist: licensing, transparent pricing, vehicle standards, complaints handling, and how to spot operators that invest in training — with links to our company story and full service list.",
         content: `
@@ -1651,7 +1651,7 @@ export const siteData = {
           <h2>5. Communication and accountability</h2>
           <p>Can you reach someone 24/7? Do you get booking confirmation by SMS or WhatsApp? Is there a clear process if something goes wrong? Strong operators invest in dispatch and customer service, not just advertising.</p>
 
-          <h2>Why passengers choose Aylestone Kings</h2>
+          <h2>Why passengers choose Aylestone Taxis</h2>
           <p>We have served Leicester since 1995 with a focus on fixed fares for airports, transparent local pricing, and round-the-clock cover. If you want to understand how we are structured, our story, values, and team ethos are summarised on the <a href="/company">company</a> page. For a full breakdown of what we offer day to day — from school runs to corporate accounts — browse our <a href="/services">services</a> page.</p>
 
           <h2>Quick comparison: app vs established taxi company</h2>
@@ -1665,14 +1665,14 @@ export const siteData = {
           <p>Choosing the <strong>best taxi Leicester</strong> option is less about a single headline price and more about trust: licensing, clarity, communication, and consistent vehicles. Use the checklist above, read our <a href="/company">company</a> background, then explore <a href="/services">services</a> to see how we can cover your next journey.</p>
         `,
         date: "2026-05-07",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Local Guide",
         image: "/Blog best-taxi-leicester-what-to-look-for.webp",
       },
       {
         id: "leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips",
         title: "Leicester to Birmingham Airport: Cost, Time & Tips",
-        metaTitle: "Leicester to Birmingham Airport Taxi | Aylestone Kings",
+        metaTitle: "Leicester to Birmingham Airport Taxi | Aylestone Taxis",
         excerpt:
           "Everything you need for a Leicester to Birmingham Airport taxi: typical drive time via M69/M42, when to book, BHX terminals, fixed fares, luggage — with links to our dedicated BHX page and full pricing tables.",
         content: `
@@ -1713,14 +1713,14 @@ export const siteData = {
           <p>Whether you are flying for work or heading on holiday, a well-planned <strong>Leicester to Birmingham airport taxi</strong> is the simplest way to start the trip. Use the resources above, confirm your quote, and travel knowing the basics are already handled.</p>
         `,
         date: "2026-04-24",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Airport Transfers",
         image: "/Blog leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips.webp",
       },
       {
         id: "how-much-does-taxi-cost-leicester-2026-fare-guide",
         title: "How Much Does a Taxi Cost in Leicester? (2026 Price Guide)",
-        metaTitle: "Taxi Prices in Leicester 2026 | Aylestone Kings",
+        metaTitle: "Taxi Prices in Leicester 2026 | Aylestone Taxis",
         excerpt:
           "Updated 2026 guide to taxi prices Leicester passengers actually pay: local hops vs airport runs, fixed quotes vs surge apps, how vehicle type affects cost, and where to compare official tables before you book.",
         content: `
@@ -1764,14 +1764,14 @@ export const siteData = {
           <p>Use this guide as a framework, then lock in your numbers on <a href="/pricing">pricing</a> and read how we apply them across services on <a href="/local-taxi-leicester">local taxi Leicester</a>. When you are ready, book online or call <strong>0116 2338888</strong> for a confirmed quote tailored to your exact pickup.</p>
         `,
         date: "2026-04-29",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Fare Guide",
         image: "/Blog how-much-does-taxi-cost-leicester-2026-fare-guide.webp",
       },
       {
         id: "leicester-to-east-midlands-airport-taxi-travel-guide-prices-booking-tips",
         title: "Leicester to EMA Taxi: Prices, Time & Booking Tips",
-        metaTitle: "Leicester to EMA Taxi Guide | Aylestone Kings",
+        metaTitle: "Leicester to EMA Taxi Guide | Aylestone Taxis",
         excerpt:
           "Planning an EMA trip? See typical journey times (30–45 mins), fixed fares from £40, and simple booking tips for a stress-free Leicester to East Midlands Airport taxi — plus return pickups and luggage advice.",
         content: `
@@ -1821,7 +1821,7 @@ export const siteData = {
           <p><a href="/leicester-to-east-midlands-airport-taxi"><strong>Book Leicester → East Midlands Airport taxi</strong></a></p>
         `,
         date: "2026-02-17",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Airport Transfers",
         image: "/EMA Blog.webp",
       },
@@ -1830,9 +1830,9 @@ export const siteData = {
         title: "Why Leicester Locals Trust Aylestone Taxis",
         metaTitle: "Why Locals Trust Aylestone Taxis | Leicester",
         excerpt:
-          "For over 30 years, Aylestone Kings has been the trusted choice for transportation in Leicester. Discover what makes us the preferred taxi service for thousands of local residents.",
+          "For over 30 years, Aylestone Taxis has been the trusted choice for transportation in Leicester. Discover what makes us the preferred taxi service for thousands of local residents.",
         content: `
-          <p>When it comes to choosing a taxi service in Leicester, trust is everything. For over 30 years, Aylestone Kings has been serving the local community with reliable, professional, and affordable transportation. But what exactly makes Leicester locals trust us with their journeys?</p>
+          <p>When it comes to choosing a taxi service in Leicester, trust is everything. For over 30 years, Aylestone Taxis has been serving the local community with reliable, professional, and affordable transportation. But what exactly makes Leicester locals trust us with their journeys?</p>
           
           <h2>Deep Local Knowledge</h2>
           <p>Our drivers know Leicester like the back of their hand. From navigating the busy streets of the city centre to finding the quickest routes during peak hours, our local expertise ensures you arrive at your destination on time, every time. Whether you're heading to the National Space Centre, Highcross Leicester, or any location across the city, we know the best routes.</p>
@@ -1850,12 +1850,12 @@ export const siteData = {
           <p>No hidden fees, no surprises. We believe in transparent, fair pricing. Leicester locals appreciate knowing exactly what they'll pay upfront, with competitive rates that won't break the bank.</p>
           
           <h2>Community Commitment</h2>
-          <p>We're not just a taxi service - we're part of the Leicester community. We support local events, understand local needs, and are committed to serving our community for years to come. When you choose Aylestone Kings, you're supporting a local business that cares about Leicester.</p>
+          <p>We're not just a taxi service - we're part of the Leicester community. We support local events, understand local needs, and are committed to serving our community for years to come. When you choose Aylestone Taxis, you're supporting a local business that cares about Leicester.</p>
           
-          <p>Join thousands of Leicester locals who trust Aylestone Kings for their transportation needs. Book your ride today and experience the difference that 30 years of excellence makes.</p>
+          <p>Join thousands of Leicester locals who trust Aylestone Taxis for their transportation needs. Book your ride today and experience the difference that 30 years of excellence makes.</p>
         `,
         date: "2025-11-04",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Community",
         image: "/Locals-trust.jpg",
       },
@@ -1863,11 +1863,11 @@ export const siteData = {
         id: "reliable-airport-transfers-from-leicester",
         title: "Reliable Airport Transfers from Leicester",
         excerpt:
-          "Planning your next trip? Discover why Aylestone Kings is the preferred choice for stress-free airport transfers from Leicester to all major UK airports.",
+          "Planning your next trip? Discover why Aylestone Taxis is the preferred choice for stress-free airport transfers from Leicester to all major UK airports.",
         content: `
-          <p>Planning a trip abroad? Whether you're heading to Birmingham, East Midlands, Heathrow, Gatwick, or any other major UK airport, reliable airport transfers are essential for a stress-free start to your journey. Aylestone Kings has been providing dependable airport transfer services from Leicester for over 30 years.</p>
+          <p>Planning a trip abroad? Whether you're heading to Birmingham, East Midlands, Heathrow, Gatwick, or any other major UK airport, reliable airport transfers are essential for a stress-free start to your journey. Aylestone Taxis has been providing dependable airport transfer services from Leicester for over 30 years.</p>
           
-          <h2>Why Choose Aylestone Kings for Airport Transfers?</h2>
+          <h2>Why Choose Aylestone Taxis for Airport Transfers?</h2>
           
           <h3>Punctuality Guaranteed</h3>
           <p>Missing a flight can be costly and stressful. That's why we guarantee punctuality for all airport transfers. We monitor flight schedules and adjust pickup times accordingly, ensuring you arrive at the airport with plenty of time to spare. Our drivers understand the importance of being on time and plan accordingly.</p>
@@ -1908,10 +1908,10 @@ export const siteData = {
             <li>Have your booking confirmation ready</li>
           </ul>
           
-          <p>Don't let airport transfers stress you out. Trust Aylestone Kings for reliable, punctual, and comfortable airport transfers from Leicester. Book your transfer today and travel with confidence.</p>
+          <p>Don't let airport transfers stress you out. Trust Aylestone Taxis for reliable, punctual, and comfortable airport transfers from Leicester. Book your transfer today and travel with confidence.</p>
         `,
         date: "2025-11-03",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Airport Transfers",
         image: "/Reliable-airport-transfers.jpg",
       },
@@ -1919,9 +1919,9 @@ export const siteData = {
         id: "explore-leicester-with-aylestone-taxis",
         title: "Explore Leicester with Aylestone Taxis",
         excerpt:
-          "Discover Leicester's hidden gems and popular attractions with Aylestone Kings. From historic sites to modern entertainment, we'll get you there in comfort and style.",
+          "Discover Leicester's hidden gems and popular attractions with Aylestone Taxis. From historic sites to modern entertainment, we'll get you there in comfort and style.",
         content: `
-          <p>Leicester is a city rich in history, culture, and entertainment. From the historic King Richard III Visitor Centre to the modern Highcross shopping centre, there's something for everyone to explore. Aylestone Kings makes it easy to discover all that Leicester has to offer with reliable, comfortable taxi services throughout the city.</p>
+          <p>Leicester is a city rich in history, culture, and entertainment. From the historic King Richard III Visitor Centre to the modern Highcross shopping centre, there's something for everyone to explore. Aylestone Taxis makes it easy to discover all that Leicester has to offer with reliable, comfortable taxi services throughout the city.</p>
           
           <h2>Historic Attractions</h2>
           
@@ -1964,7 +1964,7 @@ export const siteData = {
           <h3>Golden Mile</h3>
           <p>Explore Leicester's famous Golden Mile, known for its Indian restaurants, shops, and cultural attractions. Experience authentic cuisine and vibrant culture in this unique part of the city.</p>
           
-          <h2>Why Choose Aylestone Kings for Exploring Leicester?</h2>
+          <h2>Why Choose Aylestone Taxis for Exploring Leicester?</h2>
           
           <h3>Local Knowledge</h3>
           <p>Our drivers know Leicester inside and out. We can recommend the best routes, avoid traffic, and even suggest local attractions you might not know about.</p>
@@ -1979,19 +1979,19 @@ export const siteData = {
           <p>Exploring with friends or family? Our MPV vehicles can accommodate larger groups, making it easy to travel together to Leicester's attractions.</p>
           
           <h2>Planning Your Leicester Adventure</h2>
-          <p>Whether you're a local resident looking to rediscover your city or a visitor exploring Leicester for the first time, Aylestone Kings is here to help you get around. Our reliable taxi service makes it easy to visit multiple attractions in one day, without worrying about parking or navigation.</p>
+          <p>Whether you're a local resident looking to rediscover your city or a visitor exploring Leicester for the first time, Aylestone Taxis is here to help you get around. Our reliable taxi service makes it easy to visit multiple attractions in one day, without worrying about parking or navigation.</p>
           
           <p>Book your taxi today and start exploring everything Leicester has to offer. From historic sites to modern entertainment, we'll get you there safely and comfortably.</p>
         `,
         date: "2025-11-05",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Local Guide",
         image: "/Explore Leicester.jpg",
       },
       {
         id: "best-taxi-service-leicester-airport-transfers",
         title: "Best Taxi Service in Leicester for Airport Transfers",
-        metaTitle: "Best Airport Taxi Service Leicester | Aylestone Kings",
+        metaTitle: "Best Airport Taxi Service Leicester | Aylestone Taxis",
         excerpt:
           "Discover why Aylestone Taxis is the best taxi service in Leicester for airport transfers. Fast, reliable, and affordable airport taxi service with fixed prices and flight monitoring.",
         content: `
@@ -2061,7 +2061,7 @@ export const siteData = {
           <p>Experience the best taxi service in Leicester for airport transfers. Book with Aylestone Taxis today and travel with confidence. Fast, reliable, and affordable - that's what makes us Leicester's best airport taxi service.</p>
         `,
         date: "2025-12-10",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Airport Transfers",
         image: "/BestAirportService-blog.webp",
       },
@@ -2176,14 +2176,14 @@ export const siteData = {
           <p>Ready to book a taxi in Leicester quickly? Choose your preferred booking method and get started. Whether you need immediate pickup or want to book in advance, Aylestone Taxis makes it fast and easy. Book online, call 0116 2338888, or message us on WhatsApp - we're here 24/7 to help you get where you need to go.</p>
         `,
         date: "2025-12-11",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Booking Guide",
         image: "/HowTo-blog.png",
       },
       {
         id: "local-taxi-service-vs-ride-sharing-apps-leicester",
         title: "Local Taxi vs Ride-Sharing Apps in Leicester",
-        metaTitle: "Local Taxi vs Uber Leicester | Aylestone Kings",
+        metaTitle: "Local Taxi vs Uber Leicester | Aylestone Taxis",
         excerpt:
           "Discover why choosing a local taxi service in Leicester beats ride-sharing apps. Fixed prices, licensed drivers, local knowledge, and reliable service with Aylestone Taxis.",
         content: `
@@ -2298,7 +2298,7 @@ export const siteData = {
           <p>Experience the difference of choosing a local taxi service in Leicester. Book with Aylestone Taxis today and enjoy fixed prices, local knowledge, professional service, and reliable transport. We've been serving Leicester since 1995, and we're here to serve you.</p>
         `,
         date: "2025-12-12",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Travel Tips",
         image: "/WhyUs-blog.webp",
       },
@@ -2462,14 +2462,14 @@ export const siteData = {
           <p>Follow these tips for a smooth airport pickup in Leicester, and you'll enjoy stress-free airport transfers every time. Book your airport pickup with Aylestone Taxis today and experience the difference that professional service makes.</p>
         `,
         date: "2025-12-13",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Airport Transfers",
         image: "/Tips-blog.webp",
       },
       {
         id: "affordable-school-run-taxi-services-leicester",
         title: "Affordable School Run Taxi Services in Leicester",
-        metaTitle: "School Run Taxi Services Leicester | Aylestone Kings",
+        metaTitle: "School Run Taxi Services Leicester | Aylestone Taxis",
         excerpt:
           "Safe, reliable, and affordable school run taxi services in Leicester. Professional drivers, DBS checked, and child-friendly vehicles for school transport.",
         content: `
@@ -2688,14 +2688,14 @@ export const siteData = {
           <p>Ensure your children have safe, reliable, and affordable transport to school. Book school run taxi services in Leicester with Aylestone Taxis today. Safe, professional, and affordable - that's what makes us the best choice for school transport in Leicester.</p>
         `,
         date: "2025-12-14",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "School Transport",
         image: "/Scgool-blog.webp",
       },
       {
         id: "taxi-services-leicester-early-morning-late-night-travel",
         title: "Early Morning Taxi Leicester | 24/7 Airport Runs",
-        metaTitle: "Early Morning Taxi Leicester | Aylestone Kings",
+        metaTitle: "Early Morning Taxi Leicester | Aylestone Taxis",
         excerpt:
           "Need a taxi at 4am? Learn how to book an early morning taxi in Leicester for airport transfers, shifts and appointments — plus safety tips, what time to book, and fixed-fare options.",
         content: `
@@ -2739,14 +2739,14 @@ export const siteData = {
           <p>For airport journeys, start here: <a href="/airport-transfers-leicester"><strong>Airport transfers Leicester</strong></a>.</p>
         `,
         date: "2025-01-15",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Travel Tips",
         image: "/Early morning and late night travel.webp",
       },
       {
         id: "areas-we-cover-leicester-local-taxi-service",
         title: "Areas We Cover in Leicester | Local Taxi Service",
-        metaTitle: "Areas We Cover in Leicester | Aylestone Kings",
+        metaTitle: "Areas We Cover in Leicester | Aylestone Taxis",
         excerpt:
           "Discover the comprehensive coverage of Aylestone Taxis across Leicester and surrounding areas. Licensed drivers available through Aylestone Taxis cover Leicester and surrounding areas.",
         content: `
@@ -2944,7 +2944,7 @@ export const siteData = {
           <p>Experience comprehensive coverage and reliable service with Aylestone Taxis. Our local taxi service in Leicester covers all areas, ensuring you can get where you need to go, whenever you need to get there. Book your journey today and discover why Leicester residents trust us for their transport needs.</p>
         `,
         date: "2025-01-16",
-        author: "Aylestone Kings Team",
+        author: "Aylestone Taxis Team",
         category: "Local Guide",
         image: "/Reliable taxi service in leicester-You can rely on.webp",
       },
@@ -3156,7 +3156,7 @@ export const colorScheme = {
 };
 export const copyrightInfo = {
   year: 2026,
-  text: "© 2026 Aylestone Kings. All rights reserved.",
+  text: "© 2026 Aylestone Taxis. All rights reserved.",
 };
 
 export default siteData;

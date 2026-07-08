@@ -9,16 +9,16 @@ const PAGE_PHONE = "0116 233 8888"
 const CANONICAL = "https://aylestone-taxis.co.uk/leicester-taxi-company"
 
 export const metadata: Metadata = {
-  title: "Leicester Taxi Company | Aylestone Kings | Book 24/7",
+  title: "Leicester Taxi Company | Aylestone Taxis | Book 24/7",
   description:
-    "Aylestone Kings — Leicester's trusted taxi company since 1995. Fixed prices, DBS-checked drivers, available 24/7. Airport transfers, school runs & corporate accounts. Call 0116 233 8888.",
+    "Aylestone Taxis — Leicester's trusted taxi company since 1995. Fixed prices, DBS-checked drivers, available 24/7. Airport transfers, school runs & corporate accounts. Call 0116 233 8888.",
   alternates: {
     canonical: CANONICAL,
   },
   openGraph: {
-    title: "Leicester Taxi Company | Aylestone Kings | Book 24/7",
+    title: "Leicester Taxi Company | Aylestone Taxis | Book 24/7",
     description:
-      "Aylestone Kings — Leicester's trusted taxi company since 1995. Fixed prices, DBS-checked drivers, available 24/7.",
+      "Aylestone Taxis — Leicester's trusted taxi company since 1995. Fixed prices, DBS-checked drivers, available 24/7.",
     url: CANONICAL,
   },
 }
@@ -102,10 +102,10 @@ export default function LeicesterTaxiCompanyPage() {
                 Locally owned · Leicester since 1995
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight max-w-5xl mx-auto">
-                Leicester Taxi Company — Aylestone Kings
+                Leicester Taxi Company — Aylestone Taxis
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto leading-relaxed">
-                Aylestone Kings is a locally owned Leicester taxi company built on fixed fares, licensed drivers,
+                Aylestone Taxis is a locally owned Leicester taxi company built on fixed fares, licensed drivers,
                 and round-the-clock cover for the journeys Leicester relies on every day.
               </p>
             </div>
@@ -120,7 +120,7 @@ export default function LeicesterTaxiCompanyPage() {
             </h2>
             <div className="space-y-6 text-[#2E3C44] text-lg leading-relaxed">
               <p>
-                When Aylestone Kings started in 1995, Leicester already had plenty of ways to get from A to B. What the
+                When Aylestone Taxis started in 1995, Leicester already had plenty of ways to get from A to B. What the
                 city needed was a Leicester taxi company that combined local accountability with the kind of reliability
                 families, shift workers, and businesses could depend on year after year. We set out to build exactly that
                 — not a distant franchise, but a locally owned and operated service rooted in Aylestone and serving the

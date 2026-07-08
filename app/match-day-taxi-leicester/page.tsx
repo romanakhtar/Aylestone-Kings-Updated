@@ -19,14 +19,14 @@ const MATCH_DAY_PHONE = "0116 233 8888"
 export const metadata: Metadata = {
   title: "Match Day Taxi Leicester — Fixed Prices, No Surge | Book 24/7",
   description:
-    "Need a match day taxi in Leicester? Aylestone Kings offers fixed price taxis to King Power Stadium and Mattioli Woods Welford Road. No surge pricing. Call 0116 233 8888.",
+    "Need a match day taxi in Leicester? Aylestone Taxis offers fixed price taxis to King Power Stadium and Mattioli Woods Welford Road. No surge pricing. Call 0116 233 8888.",
   alternates: {
     canonical: CANONICAL,
   },
   openGraph: {
     title: "Match Day Taxi Leicester — Fixed Prices, No Surge | Book 24/7",
     description:
-      "Need a match day taxi in Leicester? Aylestone Kings offers fixed price taxis to King Power Stadium and Mattioli Woods Welford Road. No surge pricing. Call 0116 233 8888.",
+      "Need a match day taxi in Leicester? Aylestone Taxis offers fixed price taxis to King Power Stadium and Mattioli Woods Welford Road. No surge pricing. Call 0116 233 8888.",
     url: CANONICAL,
   },
 }
@@ -181,7 +181,7 @@ export default function MatchDayTaxiLeicesterPage() {
               </p>
               <p>
                 <strong>Fixed pricing — no surge on match days.</strong> Unlike ride-hailing apps
-                that often apply surge pricing when demand peaks after a match, Aylestone Kings
+                that often apply surge pricing when demand peaks after a match, Aylestone Taxis
                 quotes a <strong>fixed price</strong> when you book. You know the fare before you
                 travel, whether it is a Saturday three o&apos;clock kick-off or a Friday night
                 fixture under the lights.
@@ -258,7 +258,7 @@ export default function MatchDayTaxiLeicesterPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-                Why Supporters Choose Aylestone Kings
+                Why Supporters Choose Aylestone Taxis
               </h2>
             </div>
 
@@ -289,7 +289,7 @@ export default function MatchDayTaxiLeicesterPage() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-              More from Aylestone Kings
+              More from Aylestone Taxis
             </h2>
             <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto mb-10">
               Match day is not the only time you need a reliable Leicester taxi.

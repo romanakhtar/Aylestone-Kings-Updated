@@ -17,7 +17,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "24 Hour Taxi Leicester — All Night Service | Book 24/7",
   description:
-    "Need a 24 hour taxi in Leicester? Aylestone Kings provides round-the-clock taxi service. Day or night, 365 days a year. Book your 24 hour taxi Leicester now - call 0116 2338888.",
+    "Need a 24 hour taxi in Leicester? Aylestone Taxis provides round-the-clock taxi service. Day or night, 365 days a year. Book your 24 hour taxi Leicester now - call 0116 2338888.",
   keywords:
     "24 hour taxi Leicester, 24 hour taxi in Leicester, all night taxi Leicester, 24/7 taxi Leicester, late night taxi Leicester, taxi Leicester 24 hours, overnight taxi Leicester",
   alternates: {
@@ -317,7 +317,7 @@ export default function TwentyFourHourTaxiLeicesterPage() {
                     </h3>
                     <p className="text-[#2E3C44]">
                       Every <strong>24 hour taxi in Leicester</strong> from
-                      Aylestone Kings is fully licensed by Leicester City
+                      Aylestone Taxis is fully licensed by Leicester City
                       Council. DBS-checked drivers, insured vehicles.
                     </p>
                   </div>

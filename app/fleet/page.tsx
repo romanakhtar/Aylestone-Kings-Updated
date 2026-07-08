@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/fleet",
   },
   openGraph: {
-    title: "Taxi Fleet Leicester | Aylestone Kings",
+    title: "Taxi Fleet Leicester | Aylestone Taxis",
     description: "Modern vehicles for every journey. Book on 0116 2338888 or online.",
     url: "https://aylestone-taxis.co.uk/fleet",
   },
@@ -41,7 +41,7 @@ export default function FleetPage() {
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
                   src="/premium-comfort.webp" 
-                  alt="Premium luxury taxi vehicle from Aylestone Kings fleet - modern, comfortable transport service in Leicester" 
+                  alt="Premium luxury taxi vehicle from Aylestone Taxis fleet - modern, comfortable transport service in Leicester" 
                   fill 
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                   className="object-cover"
@@ -104,7 +104,7 @@ export default function FleetPage() {
                 Diverse fleet for every need
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                At Aylestone Kings, we offer a comprehensive range of vehicles to meet all your transportation needs. 
+                At Aylestone Taxis, we offer a comprehensive range of vehicles to meet all your transportation needs. 
                 Whether you're travelling solo or with a group, our fleet guarantees comfort, reliability, and style.
               </p>
             </div>
@@ -114,7 +114,7 @@ export default function FleetPage() {
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
                   <Image 
                     src="/Estate vehicle.png" 
-                    alt="Estate saloon taxi vehicle from Aylestone Kings fleet - spacious luggage area, perfect for airport transfers in Leicester" 
+                    alt="Estate saloon taxi vehicle from Aylestone Taxis fleet - spacious luggage area, perfect for airport transfers in Leicester" 
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
@@ -149,7 +149,7 @@ export default function FleetPage() {
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
                   <Image 
                     src="/Executive.jpg" 
-                    alt="Executive luxury taxi from Aylestone Kings - premium leather interiors, perfect for business travel and corporate events in Leicester" 
+                    alt="Executive luxury taxi from Aylestone Taxis - premium leather interiors, perfect for business travel and corporate events in Leicester" 
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
@@ -184,7 +184,7 @@ export default function FleetPage() {
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
                   <Image 
                     src="/6 seater.jpg" 
-                    alt="6 seater MPV taxi from Aylestone Kings - comfortable group transport for medium-sized groups in Leicester" 
+                    alt="6 seater MPV taxi from Aylestone Taxis - comfortable group transport for medium-sized groups in Leicester" 
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
@@ -219,7 +219,7 @@ export default function FleetPage() {
                 <div className="w-20 h-18 md:w-24 md:h-22 rounded-xl overflow-hidden mb-3 md:mb-4 mx-auto">
                   <Image 
                     src="/8 seater.jpg" 
-                    alt="8 seater minibus taxi from Aylestone Kings - spacious vehicle perfect for large groups, corporate events, and family travel in Leicester" 
+                    alt="8 seater minibus taxi from Aylestone Taxis - spacious vehicle perfect for large groups, corporate events, and family travel in Leicester" 
                     width={96}
                     height={88}
                     className="w-full h-full object-contain"
@@ -308,7 +308,7 @@ export default function FleetPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-2xl"></div>
                 <Image 
                   src="/verstile-spacious.webp" 
-                  alt="Versatile and spacious MPV taxi vehicle from Aylestone Kings - perfect for airport transfers, business meetings, and family outings in Leicester" 
+                  alt="Versatile and spacious MPV taxi vehicle from Aylestone Taxis - perfect for airport transfers, business meetings, and family outings in Leicester" 
                   width={600}
                   height={400}
                   className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
@@ -327,7 +327,7 @@ export default function FleetPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 to-blue-400/10 rounded-2xl"></div>
                 <Image 
                   src="/business-leisure.webp" 
-                  alt="Executive luxury taxi service from Aylestone Kings - premium business and leisure transport in Leicester with advanced technology and comfort" 
+                  alt="Executive luxury taxi service from Aylestone Taxis - premium business and leisure transport in Leicester with advanced technology and comfort" 
                   width={600}
                   height={400}
                   className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
@@ -392,7 +392,7 @@ export default function FleetPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Aylestone Kings?
+                Why Choose Aylestone Taxis?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Beyond our premium fleet, we offer the peace of mind that comes with fully licensed and regulated service.

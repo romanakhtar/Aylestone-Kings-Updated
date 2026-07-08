@@ -56,7 +56,7 @@ export default function BlogListingJsonLd({ name, description, blogs }: Props) {
         inLanguage: "en-GB",
         publisher: {
           "@type": "Organization",
-          name: "Aylestone Kings",
+          name: "Aylestone Taxis",
           logo: { "@type": "ImageObject", url: LOGO },
         },
         blogPost,

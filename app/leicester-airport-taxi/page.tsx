@@ -34,7 +34,7 @@ export default function LeicesterAirportTaxiPage() {
                 Leicester Airport Taxi - Professional Airport Transfers
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Looking for a reliable <strong>Leicester Airport Taxi</strong>? Aylestone Kings provides professional airport transfer 
+                Looking for a reliable <strong>Leicester Airport Taxi</strong>? Aylestone Taxis provides professional airport transfer 
                 services from Leicester to all major UK airports. Fixed prices, flight monitoring, and 24/7 service.
               </p>
 

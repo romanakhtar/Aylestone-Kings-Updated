@@ -155,7 +155,7 @@ export default function CorporateTaxiAccountLeicesterPage() {
                 Corporate taxi accounts in Leicester for business travel &amp; staff transport
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-8 leading-relaxed">
-                Aylestone Kings (via Aylestone Taxis) provides <strong>corporate taxi accounts</strong> with centralised
+                Aylestone Taxis (via Aylestone Taxis) provides <strong>corporate taxi accounts</strong> with centralised
                 billing, predictable pricing on agreed routes, and reliable drivers for staff movements, client visits,
                 and airport transfers across Leicester and beyond.
               </p>

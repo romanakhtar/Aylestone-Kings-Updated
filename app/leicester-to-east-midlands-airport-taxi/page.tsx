@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Leicester ↔ East Midlands Airport (EMA) | Aylestone Taxis",
     description: "Fixed fares from £40, route guidance for Leicester, Oadby & Wigston. Book online or call 0116 2338888.",
     url: CANONICAL,
-    siteName: "Aylestone Kings",
+    siteName: "Aylestone Taxis",
     locale: "en_GB",
     type: "website",
   },
@@ -73,7 +73,7 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
                 Leicester to East Midlands Airport taxi — fixed fares from £40
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                If you are booking a <strong>Leicester to East Midlands Airport taxi</strong>, Aylestone Kings offers
+                If you are booking a <strong>Leicester to East Midlands Airport taxi</strong>, Aylestone Taxis offers
                 pre-booked saloon and MPV transfers with a fixed price before you travel. Drivers know the A46 and M1
                 approach into Castle Donington, and we coordinate simple return pickups after you land.
               </p>
@@ -252,7 +252,7 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
         <section className="py-20 bg-[#E4E4E4]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">Why book with Aylestone Kings?</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">Why book with Aylestone Taxis?</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

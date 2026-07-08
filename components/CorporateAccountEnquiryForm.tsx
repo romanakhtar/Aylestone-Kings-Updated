@@ -45,7 +45,7 @@ export default function CorporateAccountEnquiryForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6 text-left">
       <input type="hidden" name="formType" value="corporateAccountEnquiry" />
-      <input type="hidden" name="_subject" value="Corporate taxi account enquiry — Aylestone Kings" />
+      <input type="hidden" name="_subject" value="Corporate taxi account enquiry — Aylestone Taxis" />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div>
           <label htmlFor="corp-company" className="mb-2 block text-sm font-medium text-[#0F0D3E]">

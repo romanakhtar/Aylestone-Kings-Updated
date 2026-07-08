@@ -29,7 +29,7 @@ export default function ContactModeCards({ className = '' }: ContactModeCardsPro
       color: '#25D366', // WhatsApp green
       bgColor: 'bg-[#25D366]',
       hoverBgColor: 'hover:bg-[#128C7E]',
-      href: `https://wa.me/${contactInfo.whatsapp.replace('+', '')}?text=Hi! I need a taxi from Aylestone Kings`
+      href: `https://wa.me/${contactInfo.whatsapp.replace('+', '')}?text=Hi! I need a taxi from Aylestone Taxis`
     },
     {
       name: 'Landline',

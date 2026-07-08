@@ -27,19 +27,19 @@ const POPULAR_JOURNEY_AIRPORTS = [
 const areaMeta: Record<string, { title: string; description: string }> = {
   // 1. Aylestone
   aylestone: {
-    title: "Taxis in Aylestone Leicester | Book Online | Aylestone Kings",
+    title: "Taxis in Aylestone Leicester | Book Online | Aylestone Taxis",
     description:
-      "Need a taxi in Aylestone? Aylestone Kings has served the area since 1995. Fixed airport fares, 24/7 local rides, DBS-checked drivers. Call 0116 2338888.",
+      "Need a taxi in Aylestone? Aylestone Taxis has served the area since 1995. Fixed airport fares, 24/7 local rides, DBS-checked drivers. Call 0116 2338888.",
   },
   // 2. Leicester City Centre
   "leicester-city-centre": {
-    title: "Leicester City Centre Taxi | 24/7 | Aylestone Kings",
+    title: "Leicester City Centre Taxi | 24/7 | Aylestone Taxis",
     description:
       "Fast taxi service in Leicester city centre. Highcross, railway station, restaurants, hotels — instant pickups day and night. Book online or call 0116 2338888.",
   },
   // 3. Oadby
   oadby: {
-    title: "Oadby Taxi Leicester | Fixed Fares 24/7 | Aylestone Kings",
+    title: "Oadby Taxi Leicester | Fixed Fares 24/7 | Aylestone Taxis",
     description:
       "Reliable taxi service in Oadby, Leicester. Fixed airport fares, local rides, and 24/7 availability. Licensed drivers. Call 0116 2338888 or book online.",
   },
@@ -53,17 +53,17 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   evington: {
     title: "Taxis in Evington Leicester | Fixed Fares 24/7",
     description:
-      "Need a taxi in Evington, Leicester? Aylestone Kings provides fixed price taxis from Evington 24/7. Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
+      "Need a taxi in Evington, Leicester? Aylestone Taxis provides fixed price taxis from Evington 24/7. Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 6. Belgrave
   belgrave: {
     title: "Belgrave Taxi Leicester | 24/7 Fixed Fares | Aylestone",
     description:
-      "Fast, reliable taxis in Belgrave, Leicester. Airport transfers, local rides, and 24/7 service from Aylestone Kings. Licensed drivers. Call 0116 2338888.",
+      "Fast, reliable taxis in Belgrave, Leicester. Airport transfers, local rides, and 24/7 service from Aylestone Taxis. Licensed drivers. Call 0116 2338888.",
   },
   // 7. Spinney Hills
   "spinney-hills": {
-    title: "Spinney Hills Taxi Leicester | 24/7 | Aylestone Kings",
+    title: "Spinney Hills Taxi Leicester | 24/7 | Aylestone Taxis",
     description:
       "Reliable taxi service in Spinney Hills, Leicester. Local journeys, airport transfers, school runs. Licensed drivers available 24/7. Call 0116 2338888.",
   },
@@ -71,19 +71,19 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   highfields: {
     title: "Taxis in Highfields Leicester | Hospital & Airports",
     description:
-      "Need a taxi in Highfields, Leicester? Aylestone Kings offers fixed price taxis from Highfields 24/7. Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
+      "Need a taxi in Highfields, Leicester? Aylestone Taxis offers fixed price taxis from Highfields 24/7. Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 9. Clarendon Park
   "clarendon-park": {
     title: "Taxis in Clarendon Park Leicester | Fixed Fares 24/7",
     description:
-      "Need a taxi in Clarendon Park, Leicester? Aylestone Kings provides fixed price taxis 24/7 from Clarendon Park. Airport transfers and late night rides. Call 0116 233 8888.",
+      "Need a taxi in Clarendon Park, Leicester? Aylestone Taxis provides fixed price taxis 24/7 from Clarendon Park. Airport transfers and late night rides. Call 0116 233 8888.",
   },
   // 10. Knighton
   knighton: {
     title: "Taxis in Knighton Leicester | Fixed Fares 24/7",
     description:
-      "Looking for a taxi in Knighton, Leicester? Aylestone Kings offers fixed price taxis from Knighton 24/7. Airport transfers, school runs and local journeys. Call 0116 233 8888.",
+      "Looking for a taxi in Knighton, Leicester? Aylestone Taxis offers fixed price taxis from Knighton 24/7. Airport transfers, school runs and local journeys. Call 0116 233 8888.",
   },
   // 11. Hamilton
   hamilton: {
@@ -93,7 +93,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 12. Beaumont Leys
   "beaumont-leys": {
-    title: "Beaumont Leys Taxi | 24/7 Book Online | Aylestone Kings",
+    title: "Beaumont Leys Taxi | 24/7 Book Online | Aylestone Taxis",
     description:
       "Beaumont Leys taxi: fast pickups, school runs, airport transfers. Beaumont taxi service across LE4 — call 0116 2338888 or book online 24/7.",
   },
@@ -101,7 +101,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   braunstone: {
     title: "Taxis in Braunstone Leicester | Fixed Fares 24/7",
     description:
-      "Need a taxi in Braunstone, Leicester? Aylestone Kings provides fixed price taxis from Braunstone 24/7. Airport transfers, school runs and local journeys. Call 0116 233 8888.",
+      "Need a taxi in Braunstone, Leicester? Aylestone Taxis provides fixed price taxis from Braunstone 24/7. Airport transfers, school runs and local journeys. Call 0116 233 8888.",
   },
   // 14. Thurmaston
   thurmaston: {
@@ -113,11 +113,11 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   syston: {
     title: "Syston Taxis | Call 0116 2338888 | Book Online 24/7",
     description:
-      "Syston taxis from Aylestone Kings — syston taxis phone number 0116 2338888. Local & airport fares, licensed drivers. Book Syston taxis online 24/7.",
+      "Syston taxis from Aylestone Taxis — syston taxis phone number 0116 2338888. Local & airport fares, licensed drivers. Book Syston taxis online 24/7.",
   },
   // 16. Birstall
   birstall: {
-    title: "Birstall Taxis Leicester | Local & Airport | Aylestone Kings",
+    title: "Birstall Taxis Leicester | Local & Airport | Aylestone Taxis",
     description:
       "Birstall taxis Leicester: reliable Birstall taxis for local trips and airports, 24/7. Book Birstall taxis online or call 0116 2338888.",
   },
@@ -125,7 +125,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   glenfield: {
     title: "Taxis in Glenfield Leicester | Fixed Fares 24/7",
     description:
-      "Need a taxi in Glenfield, Leicester? Aylestone Kings offers fixed price taxis from Glenfield 24/7. Glenfield Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
+      "Need a taxi in Glenfield, Leicester? Aylestone Taxis offers fixed price taxis from Glenfield 24/7. Glenfield Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 18. Blaby
   blaby: {
@@ -149,13 +149,13 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   loughborough: {
     title: "Taxis in Loughborough | Fixed Fares & Airports",
     description:
-      "Need a taxi in Loughborough? Aylestone Kings provides fixed price taxis from Loughborough 24/7. East Midlands Airport transfers, Leicester runs and train station pickups. Call 0116 233 8888.",
+      "Need a taxi in Loughborough? Aylestone Taxis provides fixed price taxis from Loughborough 24/7. East Midlands Airport transfers, Leicester runs and train station pickups. Call 0116 233 8888.",
   },
   // 22. Hinckley
   hinckley: {
-    title: "Hinckley Taxi | Fixed Fares 24/7 | Aylestone Kings",
+    title: "Hinckley Taxi | Fixed Fares 24/7 | Aylestone Taxis",
     description:
-      "Need a taxi in Hinckley? Aylestone Kings offers fixed-price journeys, airport transfers, and 24/7 service. Licensed drivers. Call 0116 2338888.",
+      "Need a taxi in Hinckley? Aylestone Taxis offers fixed-price journeys, airport transfers, and 24/7 service. Licensed drivers. Call 0116 2338888.",
   },
   // 23. Coalville
   coalville: {
@@ -167,7 +167,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   "melton-mowbray": {
     title: "Melton Taxis & Melton Mowbray Taxi | Airport | Aylestone",
     description:
-      "Melton taxis and Melton Mowbray taxi: call 0116 2338888 for airport & local trips. Melton taxi numbers for Aylestone Kings — book online 24/7.",
+      "Melton taxis and Melton Mowbray taxi: call 0116 2338888 for airport & local trips. Melton taxi numbers for Aylestone Taxis — book online 24/7.",
   },
   // 25. Market Harborough
   "market-harborough": {
@@ -191,25 +191,25 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   "south-wigston": {
     title: "South Wigston Taxi Leicester | 24/7 Fixed Fares",
     description:
-      "Taxi service in South Wigston, Leicestershire. Airport transfers, local rides, station pickups. 24/7 from Aylestone Kings. Call 0116 2338888.",
+      "Taxi service in South Wigston, Leicestershire. Airport transfers, local rides, station pickups. 24/7 from Aylestone Taxis. Call 0116 2338888.",
   },
   // 29. Humberstone
   humberstone: {
     title: "Humberstone Taxi Leicester | 24/7 Service",
     description:
-      "Reliable taxi service in Humberstone, Leicester. Local rides, airport transfers, 24/7 availability. Call Aylestone Kings on 0116 2338888.",
+      "Reliable taxi service in Humberstone, Leicester. Local rides, airport transfers, 24/7 availability. Call Aylestone Taxis on 0116 2338888.",
   },
   // 30. Thurnby Lodge
   "thurnby-lodge": {
     title: "Thurnby Lodge Taxi Leicester | 24/7",
     description:
-      "Fast taxi service in Thurnby Lodge, Leicester. Local rides, airport transfers, 24/7 availability from Aylestone Kings. Call 0116 2338888.",
+      "Fast taxi service in Thurnby Lodge, Leicester. Local rides, airport transfers, 24/7 availability from Aylestone Taxis. Call 0116 2338888.",
   },
   // 31. Westcotes
   westcotes: {
-    title: "Westcotes Taxi Leicester | 24/7 | Aylestone Kings",
+    title: "Westcotes Taxi Leicester | 24/7 | Aylestone Taxis",
     description:
-      "Reliable taxi service in Westcotes, Leicester. Local rides, airport transfers, 24/7 service from Aylestone Kings. Call 0116 2338888.",
+      "Reliable taxi service in Westcotes, Leicester. Local rides, airport transfers, 24/7 service from Aylestone Taxis. Call 0116 2338888.",
   },
   // 32. Eyres Monsell
   "eyres-monsell": {
@@ -221,7 +221,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   "glen-parva": {
     title: "Glen Parva Taxi Leicester | Fixed Fares 24/7",
     description:
-      "Reliable taxi service in Glen Parva, Leicestershire. Airport transfers, local rides, 24/7 from Aylestone Kings. Call 0116 2338888.",
+      "Reliable taxi service in Glen Parva, Leicestershire. Airport transfers, local rides, 24/7 from Aylestone Taxis. Call 0116 2338888.",
   },
   // 34. Fosse Park
   "fosse-park": {
@@ -231,9 +231,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 35. Braunstone Town
   "braunstone-town": {
-    title: "Braunstone Town Taxi | 24/7 | Aylestone Kings",
+    title: "Braunstone Town Taxi | 24/7 | Aylestone Taxis",
     description:
-      "Taxi service in Braunstone Town, Leicestershire. Local rides, airport transfers, 24/7 availability. Call Aylestone Kings on 0116 2338888.",
+      "Taxi service in Braunstone Town, Leicestershire. Local rides, airport transfers, 24/7 availability. Call Aylestone Taxis on 0116 2338888.",
   },
   // 36. Groby
   groby: {
@@ -245,19 +245,19 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   "wigston-fields": {
     title: "Wigston Fields Taxi Leicester | 24/7 Fixed",
     description:
-      "Fast taxi service in Wigston Fields, Leicestershire. Airport transfers, local rides, 24/7 availability. Call Aylestone Kings on 0116 2338888.",
+      "Fast taxi service in Wigston Fields, Leicestershire. Airport transfers, local rides, 24/7 availability. Call Aylestone Taxis on 0116 2338888.",
   },
   // 38. Broughton Astley
   "broughton-astley": {
-    title: "Broughton Astley Taxi | 24/7 | Aylestone Kings",
+    title: "Broughton Astley Taxi | 24/7 | Aylestone Taxis",
     description:
-      "Reliable taxi service in Broughton Astley. Airport transfers, local rides, 24/7 availability from Aylestone Kings. Call 0116 2338888.",
+      "Reliable taxi service in Broughton Astley. Airport transfers, local rides, 24/7 availability from Aylestone Taxis. Call 0116 2338888.",
   },
   // 39. Cosby
   cosby: {
     title: "Cosby Taxi Leicestershire | Fixed Fares 24/7",
     description:
-      "Reliable 24/7 taxi service in Cosby, Leicestershire. Airport transfers, local rides, licensed drivers. Call Aylestone Kings on 0116 2338888.",
+      "Reliable 24/7 taxi service in Cosby, Leicestershire. Airport transfers, local rides, licensed drivers. Call Aylestone Taxis on 0116 2338888.",
   },
   // 40. Countesthorpe
   countesthorpe: {
@@ -269,7 +269,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   kibworth: {
     title: "Kibworth Taxi Leicestershire | Airport 24/7",
     description:
-      "Reliable taxi service in Kibworth, Leicestershire. Fixed airport fares, local rides, 24/7 availability. Call Aylestone Kings on 0116 2338888.",
+      "Reliable taxi service in Kibworth, Leicestershire. Fixed airport fares, local rides, 24/7 availability. Call Aylestone Taxis on 0116 2338888.",
   },
   // 42. Lutterworth
   lutterworth: {
@@ -281,18 +281,18 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   whetstone: {
     title: "Whetstone Taxi Leicestershire | 24/7 Fixed",
     description:
-      "Fast, reliable taxi service in Whetstone, Leicestershire. Airport transfers, local rides, 24/7 availability. Call Aylestone Kings on 0116 2338888.",
+      "Fast, reliable taxi service in Whetstone, Leicestershire. Airport transfers, local rides, 24/7 availability. Call Aylestone Taxis on 0116 2338888.",
   },
   // 44. University & College Areas – De Montfort University & University of Leicester
   "de-montfort-university": {
     title: "Taxi to De Montfort University Leicester | 24/7",
     description:
-      "Need a taxi to De Montfort University? Aylestone Kings provides fast, affordable rides to DMU 24/7. Airport transfers, city rides, student-friendly. Call 0116 2338888.",
+      "Need a taxi to De Montfort University? Aylestone Taxis provides fast, affordable rides to DMU 24/7. Airport transfers, city rides, student-friendly. Call 0116 2338888.",
   },
   "university-of-leicester": {
     title: "Taxi to University of Leicester | 24/7 Rides",
     description:
-      "Need a taxi to the University of Leicester? Aylestone Kings provides reliable 24/7 student-friendly rides, airport transfers, and local journeys. Call 0116 2338888.",
+      "Need a taxi to the University of Leicester? Aylestone Taxis provides reliable 24/7 student-friendly rides, airport transfers, and local journeys. Call 0116 2338888.",
   },
 }
 
@@ -402,12 +402,12 @@ const AREA_BLOG_CALLOUTS: Record<
 const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   knighton: {
     bodyParagraphs: [
-      "Knighton is one of south Leicester's most established residential neighbourhoods — a mix of Victorian terraces, Edwardian villas, and family homes between Clarendon Park and the Welford Road corridor. Walk a few minutes in any direction and you are never far from green space: Knighton Park borders the western edge of the ward, Victoria Park stretches east towards the city, and De Montfort University sits on the London Road boundary, drawing thousands of students and staff through Knighton every term. Aylestone Kings has served this area since 1995, and our Knighton passengers tend to fall into two groups — university commuters who need reliable early-morning and late-night runs, and professionals heading into the city centre, hospitals, or business parks on a fixed daily schedule.",
+      "Knighton is one of south Leicester's most established residential neighbourhoods — a mix of Victorian terraces, Edwardian villas, and family homes between Clarendon Park and the Welford Road corridor. Walk a few minutes in any direction and you are never far from green space: Knighton Park borders the western edge of the ward, Victoria Park stretches east towards the city, and De Montfort University sits on the London Road boundary, drawing thousands of students and staff through Knighton every term. Aylestone Taxis has served this area since 1995, and our Knighton passengers tend to fall into two groups — university commuters who need reliable early-morning and late-night runs, and professionals heading into the city centre, hospitals, or business parks on a fixed daily schedule.",
       "For students, Knighton is a practical base. Shared houses on Knighton Fields Road, Church Road, and the streets around DMU generate steady demand for campus runs, library sessions, city-centre evenings, and Leicester Railway Station at the start and end of term. We operate 24/7, so a late society event or an early exam does not leave you stranded — a licensed, DBS-checked driver from our Leicester fleet can be with you quickly. Many students pre-book airport transfers for half-term and summer travel, with fixed fares confirmed before pickup so there are no meter surprises on the way to East Midlands or Birmingham.",
       "Professional commuters book us just as regularly. Knighton's position south of the city centre gives quick access to the inner ring road and the A563, which makes morning runs into Leicester offices, Leicester Royal Infirmary, and business parks predictable when you set a standing pickup time. Parents in Knighton's school catchments arrange regular school runs with a consistent driver where possible, giving children a familiar face each morning. Every driver is licensed by Leicester City Council and DBS checked as standard.",
       "We quote fixed prices on agreed routes, so you know the fare before the car arrives — whether that is a five-minute hop or a pre-booked airport day. Core services from Knighton include 24/7 local taxis, airport transfers to all major UK airports, school-run contracts, hospital appointments, and longer-distance business travel. Vehicles range from standard saloons for solo commuters to estates and MPVs for families and luggage-heavy airport trips.",
       "Typical journey times reflect Knighton's favourable position: Leicester city centre is around 10–12 minutes in normal traffic via London Road or Clarence Road, East Midlands Airport is roughly 25 minutes via the A563 and M1, and Birmingham Airport is around 50 minutes on a clear run. Example fares include Knighton to Leicester city centre from £6 and Knighton to East Midlands Airport from £28 — final pricing is confirmed at booking based on your exact pickup point, vehicle size, and time of travel.",
-      "Knighton sits alongside neighbouring Oadby and Clarendon Park, and we cover the whole south Leicester area without boundary surcharges. For full airport route guidance including terminal drop-offs and flight-timing advice, see our airport transfers service. Whether you are a DMU student catching an early lecture, a parent on the school run, or a professional commuting into the city, Aylestone Kings gives Knighton a taxi service built around fixed fares, licensed drivers, and round-the-clock availability.",
+      "Knighton sits alongside neighbouring Oadby and Clarendon Park, and we cover the whole south Leicester area without boundary surcharges. For full airport route guidance including terminal drop-offs and flight-timing advice, see our airport transfers service. Whether you are a DMU student catching an early lecture, a parent on the school run, or a professional commuting into the city, Aylestone Taxis gives Knighton a taxi service built around fixed fares, licensed drivers, and round-the-clock availability.",
     ],
     faqs: [
       {
@@ -429,12 +429,12 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "clarendon-park": {
     bodyParagraphs: [
-      "Clarendon Park is one of Leicester's most distinctive south-city neighbourhoods — a leafy Victorian suburb where independent cafes along Queens Road meet quiet residential streets and a strong sense of community. Clarendon Park Road runs through the heart of the area, Victoria Park opens directly to the east, the University of Leicester campus sits a short ride north, and London Road provides the main artery connecting Clarendon Park to the city centre and beyond. Aylestone Kings has served this ward since 1995, and most of our Clarendon Park bookings come from two groups: university students who need dependable transport between campus, halls, and nights out, and young professionals commuting into the city or catching early airport flights.",
+      "Clarendon Park is one of Leicester's most distinctive south-city neighbourhoods — a leafy Victorian suburb where independent cafes along Queens Road meet quiet residential streets and a strong sense of community. Clarendon Park Road runs through the heart of the area, Victoria Park opens directly to the east, the University of Leicester campus sits a short ride north, and London Road provides the main artery connecting Clarendon Park to the city centre and beyond. Aylestone Taxis has served this ward since 1995, and most of our Clarendon Park bookings come from two groups: university students who need dependable transport between campus, halls, and nights out, and young professionals commuting into the city or catching early airport flights.",
       "Students make up a large share of Clarendon Park's daily taxi demand. Shared houses on Clarendon Park Road, Knighton Road, and the streets between Victoria Park and the university generate regular bookings for lecture runs, library sessions, supermarket trips, and Leicester Railway Station at the start and end of term. Because we operate 24/7, a late-night pickup after a city-centre event or a society evening on campus is never a problem — call us and a licensed, DBS-checked driver will be dispatched from our Leicester fleet. Many students pre-book airport transfers for reading week and summer travel, with the fare confirmed upfront so there are no meter surprises.",
       "Young professionals living in Clarendon Park value the same reliability. The area's position — close enough to walk to Victoria Park on a lunch break, but well connected to the inner ring road — makes it a popular base for people working in Leicester's offices, hospitals, and creative industries. Standing morning pickups to the city centre, regular school-run contracts for families in the catchment, and evening returns after restaurants on London Road are all common requests. Every driver is licensed by Leicester City Council and DBS checked before they carry passengers.",
       "We quote fixed prices on agreed routes, so you always know the fare before the car arrives. Services from Clarendon Park include 24/7 local taxis, late-night rides home from the city centre or campus, airport transfers to all major UK airports, school-run standing bookings, and hospital appointments. Vehicles range from standard saloons for a solo commuter to estates and MPVs when you are travelling with luggage or a group.",
       "Journey times from Clarendon Park reflect how close the area sits to Leicester's core: the city centre is around 8–10 minutes in normal traffic via London Road or Welford Road, East Midlands Airport is roughly 25 minutes via the A563 and M1, and Birmingham Airport is around 50 minutes on a clear run. Example fares include Clarendon Park to Leicester city centre from £5 and Clarendon Park to East Midlands Airport from £28 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
-      "Clarendon Park borders Knighton and sits between the University of Leicester and De Montfort University's London Road campus, and we cover the whole south Leicester triangle without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a student heading to a 9am lecture, a professional commuting to the office, or a resident catching a late-night ride home, Aylestone Kings gives Clarendon Park a taxi service built on fixed fares, licensed drivers, and round-the-clock availability.",
+      "Clarendon Park borders Knighton and sits between the University of Leicester and De Montfort University's London Road campus, and we cover the whole south Leicester triangle without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a student heading to a 9am lecture, a professional commuting to the office, or a resident catching a late-night ride home, Aylestone Taxis gives Clarendon Park a taxi service built on fixed fares, licensed drivers, and round-the-clock availability.",
     ],
     faqs: [
       {
@@ -456,12 +456,12 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   highfields: {
     bodyParagraphs: [
-      "Highfields sits at the heart of inner Leicester — a diverse, busy neighbourhood where residential streets meet major routes and some of the city's most important destinations. Highfields Park stretches along the southern edge of the ward, Spinney Hill Park lies to the north-east, Evington Road runs through the centre connecting the area to the wider city, and Leicester Royal Infirmary is just minutes away on Infirmary Square. Aylestone Kings has served Highfields since 1995, and our bookings here reflect the area's character: families needing school runs and shopping trips, NHS workers travelling to and from LRI on every shift pattern, and commuters heading into Leicester city centre for work.",
+      "Highfields sits at the heart of inner Leicester — a diverse, busy neighbourhood where residential streets meet major routes and some of the city's most important destinations. Highfields Park stretches along the southern edge of the ward, Spinney Hill Park lies to the north-east, Evington Road runs through the centre connecting the area to the wider city, and Leicester Royal Infirmary is just minutes away on Infirmary Square. Aylestone Taxis has served Highfields since 1995, and our bookings here reflect the area's character: families needing school runs and shopping trips, NHS workers travelling to and from LRI on every shift pattern, and commuters heading into Leicester city centre for work.",
       "Families in Highfields rely on taxis for the journeys that buses and walking cannot always cover comfortably — the school run on a rainy morning, a Saturday trip to Fosse Park, or a hospital visit with children in tow. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean, comfortable, and suitable for family travel.",
       "NHS workers make up a significant share of our Highfields demand. Leicester Royal Infirmary is one of the region's busiest hospitals, and staff on early starts, late finishes, and rotating night shifts need a taxi service that is genuinely available around the clock — not one that stops answering after midnight. We run hospital transfers to LRI from anywhere in Highfields throughout the day and night, with drivers who know the main entrances, A&E drop-off points, and staff car park collection areas. A typical run from Highfields to LRI takes around five minutes, and fares start from £4.",
       "Commuters heading into Leicester city centre from Highfields benefit from the area's central position. Evington Road and London Road both provide quick routes into town, and a standing morning pickup means you are not relying on bus timetables or searching for parking. We quote fixed prices on agreed routes, so your daily commute cost is predictable week to week. The same applies to airport days — pre-book a fixed-fare transfer to East Midlands or Birmingham and travel with luggage without the stress of surge pricing.",
       "Typical journey times from Highfields: Leicester city centre around 8–10 minutes in normal traffic, Leicester Royal Infirmary around five minutes, East Midlands Airport roughly 25 minutes via the A563 and M1, and Birmingham Airport around 50 minutes on a clear run. Example fares include Highfields to Leicester city centre from £5, Highfields to East Midlands Airport from £28, and Highfields to LRI from £4 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
-      "Highfields borders Spinney Hills and sits close to Evington, Clarendon Park, and the city centre, and we cover the whole inner Leicester area without boundary surcharges. Core services include 24/7 local taxis, hospital runs, airport transfers to all major UK airports, school-run standing bookings, and shift-change pickups for NHS and other night workers. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a nurse finishing a night shift, a parent on the school run, or a commuter heading to the office, Aylestone Kings gives Highfields a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+      "Highfields borders Spinney Hills and sits close to Evington, Clarendon Park, and the city centre, and we cover the whole inner Leicester area without boundary surcharges. Core services include 24/7 local taxis, hospital runs, airport transfers to all major UK airports, school-run standing bookings, and shift-change pickups for NHS and other night workers. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a nurse finishing a night shift, a parent on the school run, or a commuter heading to the office, Aylestone Taxis gives Highfields a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
       {
@@ -483,12 +483,12 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   braunstone: {
     bodyParagraphs: [
-      "Braunstone is a west Leicester neighbourhood with a strong community identity and practical road links that make getting around straightforward. Braunstone Park sits at the heart of the ward, Braunstone Town extends the residential catchment just beyond the city boundary, Fosse Shopping Park is a few minutes away for retail and leisure trips, and Braunstone Gate provides a direct route into the city centre. Aylestone Kings has served Braunstone since 1995, and most of our bookings here come from two groups: families who need dependable school runs, shopping trips, and weekend outings, and working commuters who rely on a fixed-price taxi to get to shifts, warehouses, and city-centre jobs without the cost or hassle of parking.",
+      "Braunstone is a west Leicester neighbourhood with a strong community identity and practical road links that make getting around straightforward. Braunstone Park sits at the heart of the ward, Braunstone Town extends the residential catchment just beyond the city boundary, Fosse Shopping Park is a few minutes away for retail and leisure trips, and Braunstone Gate provides a direct route into the city centre. Aylestone Taxis has served Braunstone since 1995, and most of our bookings here come from two groups: families who need dependable school runs, shopping trips, and weekend outings, and working commuters who rely on a fixed-price taxi to get to shifts, warehouses, and city-centre jobs without the cost or hassle of parking.",
       "Families in Braunstone use taxis for the everyday journeys that matter — the school run on a wet morning, a Saturday trip to Fosse Shopping Park with bags of shopping, or a lift to a relative's house across Leicester. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day so children and parents know who to expect. All drivers are licensed by Leicester City Council, and our vehicles are clean and comfortable for family travel. Pre-booking a return pickup from Fosse Park after a long shop means you are not wrestling with bags on a bus.",
       "Working commuters in Braunstone value straightforward pricing above everything else. Many residents travel into Leicester city centre for retail, hospitality, and warehouse shifts, or head south-west towards Narborough and the M69 corridor for logistics and manufacturing work. A standing morning pickup to the city centre or a regular night-shift collection means you are not gambling on bus timetables or paying for city-centre parking. We quote fixed prices on agreed routes, so your weekly commute cost is predictable — no surge pricing, no meter ticking up in traffic once the job is booked.",
       "Braunstone's west-side position also makes it one of Leicester's better-connected areas for airport travel. East Midlands Airport is typically around 20 minutes via the M1, and Birmingham Airport is around 45 minutes on a clear run — shorter than many other Leicester suburbs because of quick ring-road and motorway access. Pre-book a fixed-fare airport transfer and travel with family and luggage without worrying about the final bill. We cover all major UK airports from Braunstone with flight monitoring available on request.",
       "Typical journey times from Braunstone: Leicester city centre around 10–12 minutes in normal traffic via Narborough Road or the ring road, East Midlands Airport roughly 20 minutes, and Birmingham Airport around 45 minutes. Example fares include Braunstone to Leicester city centre from £6 and Braunstone to East Midlands Airport from £25 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
-      "Braunstone sits close to Narborough, Glen Parva, and Aylestone, and we cover the whole west Leicester area without boundary surcharges. Core services include 24/7 local taxis, school-run standing bookings, shopping trips to Fosse Shopping Park and other retail destinations, airport transfers to all major UK airports, and hospital appointments. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a parent on the school run, a commuter heading to a shift, or a family catching an early flight, Aylestone Kings gives Braunstone a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+      "Braunstone sits close to Narborough, Glen Parva, and Aylestone, and we cover the whole west Leicester area without boundary surcharges. Core services include 24/7 local taxis, school-run standing bookings, shopping trips to Fosse Shopping Park and other retail destinations, airport transfers to all major UK airports, and hospital appointments. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a parent on the school run, a commuter heading to a shift, or a family catching an early flight, Aylestone Taxis gives Braunstone a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
       {
@@ -510,12 +510,12 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   blaby: {
     bodyParagraphs: [
-      "Blaby is a thriving market town on Leicester's southern fringe — a place where village character meets practical everyday travel. Blaby Road runs through the heart of the area connecting residential streets to the A426 corridor, Grove Farm Triangle draws shoppers and families to its retail cluster, Blaby Retail Park hosts major high-street names and click-and-collect collections, and neighbouring Whetstone is just minutes away for passengers who straddle both communities. Aylestone Kings has served south Leicestershire since 1995, and our Blaby passengers typically fall into three groups: families needing school runs and weekend outings, commuters heading into Leicester city centre for work, and shoppers who want a straightforward ride to the retail park without hunting for parking.",
+      "Blaby is a thriving market town on Leicester's southern fringe — a place where village character meets practical everyday travel. Blaby Road runs through the heart of the area connecting residential streets to the A426 corridor, Grove Farm Triangle draws shoppers and families to its retail cluster, Blaby Retail Park hosts major high-street names and click-and-collect collections, and neighbouring Whetstone is just minutes away for passengers who straddle both communities. Aylestone Taxis has served south Leicestershire since 1995, and our Blaby passengers typically fall into three groups: families needing school runs and weekend outings, commuters heading into Leicester city centre for work, and shoppers who want a straightforward ride to the retail park without hunting for parking.",
       "Families in Blaby book us for the journeys that matter on a school day — the wet-morning run when the bus is not appealing, a lift to after-school clubs in Leicester, or a Saturday trip into town with children and bags. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each morning so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean and comfortable for family travel. Pre-booking a return pickup from Blaby Retail Park after a big shop means you are not wrestling with trolley loads onto a bus.",
       "Commuters treat Blaby as a practical base south of the city. Morning runs into Leicester offices, Leicester Railway Station, and business parks along the A426 are among our most frequent bookings. Blaby's position close to the M69 junction also makes it one of south Leicestershire's better-connected areas for airport days — but the everyday commute is where fixed pricing matters most. We quote agreed fares before the car arrives, so your weekly travel cost is predictable with no surge multipliers on rainy Tuesdays or match-day evenings.",
       "Shoppers use our Blaby taxi service for Grove Farm Triangle, Blaby Retail Park, and trips onward to Fosse Park or Leicester city centre. Retail park forecourts can be busy on weekends, so tell us your preferred pickup point — store entrance, car park aisle, or a nearby side road — and we will note it on the job. Whether you are collecting a large click-and-collect order, visiting the weekly market in Blaby town centre, or meeting friends for lunch before an afternoon in the city, a pre-booked taxi keeps the day simple.",
       "Typical journey times from Blaby reflect the town's favourable road position: Leicester city centre is around 12–15 minutes in normal traffic via Blaby Road and the A426, East Midlands Airport is roughly 15 minutes via the M1 corridor, and Birmingham Airport is around 50 minutes on a clear run via the M69 and M42. Example fares include Blaby to Leicester city centre from £7 and Blaby to East Midlands Airport from £25 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
-      "Core services from Blaby include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, school-run standing bookings, and retail park trips to Blaby Retail Park and Grove Farm Triangle. Blaby sits close to Narborough, Wigston, and Glen Parva, and we cover the whole south Leicestershire area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a parent on the school run, a commuter heading to the city, or a family catching an early EMA flight, Aylestone Kings gives Blaby a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+      "Core services from Blaby include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, school-run standing bookings, and retail park trips to Blaby Retail Park and Grove Farm Triangle. Blaby sits close to Narborough, Wigston, and Glen Parva, and we cover the whole south Leicestershire area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a parent on the school run, a commuter heading to the city, or a family catching an early EMA flight, Aylestone Taxis gives Blaby a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
       {
@@ -537,12 +537,12 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   narborough: {
     bodyParagraphs: [
-      "Narborough is one of south-west Leicestershire's busiest commuter villages — a growing community where new housing, village character, and strong transport links meet everyday travel needs. Narborough Road runs through the heart of the area connecting residential streets to Leicester and the M69 corridor, Narborough Train Station provides direct rail services to Leicester and Nuneaton, Narborough Park offers green space for families and dog walkers, and Leicester Forest East sits just minutes away for passengers who live or work across the wider south-west fringe. Aylestone Kings has served this corridor since 1995, and our Narborough passengers are typically commuters who need reliable station connections and families who want dependable school runs and airport days without surge pricing.",
+      "Narborough is one of south-west Leicestershire's busiest commuter villages — a growing community where new housing, village character, and strong transport links meet everyday travel needs. Narborough Road runs through the heart of the area connecting residential streets to Leicester and the M69 corridor, Narborough Train Station provides direct rail services to Leicester and Nuneaton, Narborough Park offers green space for families and dog walkers, and Leicester Forest East sits just minutes away for passengers who live or work across the wider south-west fringe. Aylestone Taxis has served this corridor since 1995, and our Narborough passengers are typically commuters who need reliable station connections and families who want dependable school runs and airport days without surge pricing.",
       "Commuters book us for the journeys that train timetables cannot always cover. Early-morning starts before the first service, late finishes when connections are thin, and door-to-door runs with luggage to Leicester city centre or Leicester Railway Station are all common requests from Narborough. Pre-book with your train arrival time and we will meet you at Narborough Train Station, or call when you step off the platform and we will dispatch the nearest available driver. We quote fixed prices on agreed routes, so your weekly commute cost stays predictable — no app surge on rainy evenings or match days.",
       "Families in Narborough rely on taxis for school runs, weekend outings, and the practical trips that buses make awkward — the wet-morning dash to school, a lift to after-school clubs in Leicester, or a Saturday visit to Narborough Park followed by shopping in town. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each morning so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean and comfortable for family travel.",
       "Narborough's position close to the M1 and M69 junctions makes it one of the quickest Leicester-area starting points for airport travel. East Midlands Airport is especially convenient — many Narborough passengers reach the terminal in around ten minutes on a clear run, making a pre-booked fixed-fare transfer far simpler than long-stay parking or multiple bus connections. Birmingham Airport is also popular from Narborough, with a typical drive of around 45 minutes via the M69 and M42 when traffic is light.",
       "Typical journey times from Narborough: Leicester city centre around 15 minutes in normal traffic via Narborough Road and the A5460, East Midlands Airport roughly 10 minutes via the M1 corridor, and Birmingham Airport around 45 minutes on a clear run. Example fares include Narborough to Leicester city centre from £8 and Narborough to East Midlands Airport from £22 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
-      "Core services from Narborough include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, train station pickups at Narborough Train Station, and school-run standing bookings. Narborough sits close to Blaby, Enderby, and Braunstone, and we cover the whole south Leicestershire area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a commuter catching the first train, a parent on the school run, or a family heading to an early EMA flight, Aylestone Kings gives Narborough a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+      "Core services from Narborough include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, train station pickups at Narborough Train Station, and school-run standing bookings. Narborough sits close to Blaby, Enderby, and Braunstone, and we cover the whole south Leicestershire area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a commuter catching the first train, a parent on the school run, or a family heading to an early EMA flight, Aylestone Taxis gives Narborough a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
       {
@@ -564,12 +564,12 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   enderby: {
     bodyParagraphs: [
-      "Enderby sits at the crossroads of south-west Leicestershire's busiest commercial corridor — a village where residential streets meet one of the East Midlands' largest employment hubs. Meridian Business Park dominates the local economy with major employers across logistics, manufacturing, and professional services, Enderby Leisure Centre draws residents and visitors for sport and events, Mill Lane connects village homes to the A5460 corridor, and Foxhunter Roundabout is the junction most commuters know by heart when heading toward Leicester or the motorway network. Aylestone Kings has served this area since 1995, and our Enderby passengers are overwhelmingly corporate commuters and business park employees who need reliable, fixed-price transport at hours that buses and trains do not always cover.",
+      "Enderby sits at the crossroads of south-west Leicestershire's busiest commercial corridor — a village where residential streets meet one of the East Midlands' largest employment hubs. Meridian Business Park dominates the local economy with major employers across logistics, manufacturing, and professional services, Enderby Leisure Centre draws residents and visitors for sport and events, Mill Lane connects village homes to the A5460 corridor, and Foxhunter Roundabout is the junction most commuters know by heart when heading toward Leicester or the motorway network. Aylestone Taxis has served this area since 1995, and our Enderby passengers are overwhelmingly corporate commuters and business park employees who need reliable, fixed-price transport at hours that buses and trains do not always cover.",
       "Meridian Business Park runs are among our most frequent bookings. Early-morning shift starts, late-evening finishes, and client meetings in Leicester city centre all generate steady demand from staff who want a door-to-door service without hunting for parking at the business park or waiting on infrequent public transport. We know the main Meridian entrances, staff car parks, and collection points along the A5460, so your driver can meet you at the right gate rather than circling the estate. Corporate accounts are available for businesses with regular travel requirements — invoicing, reference fields, and standing weekday bookings keep finance teams and office managers in control.",
       "Corporate commuters value fixed pricing above almost everything else. A standing 7am pickup from Mill Lane to Leicester offices, or a regular evening return after a late shift, should cost the same every week — not surge on a rainy Tuesday because every app in Leicestershire is busy. We quote agreed fares before the car arrives, and recurring commuters can set up standing bookings so dispatch already knows your route, vehicle preference, and pickup point. Every driver is licensed by Leicester City Council and DBS checked as standard.",
       "Enderby's position close to junction 21 of the M1 makes it one of the quickest Leicester-area starting points for airport travel. East Midlands Airport is typically around ten minutes on a clear run — ideal for early-morning departures when you need certainty rather than a meter ticking in traffic. Birmingham Airport is around 45 minutes via the M69 and M42, and we provide fixed-fare transfers to all major UK airports with flight monitoring available on request. Business travellers heading to client sites, conferences, or international flights benefit from the same upfront quoting whether the journey is local or cross-country.",
       "Typical journey times from Enderby: Leicester city centre around 15 minutes in normal traffic via the A5460 and Narborough Road corridor, East Midlands Airport roughly 10 minutes via the M1, and Birmingham Airport around 45 minutes on a clear run. Example fares include Enderby to Leicester city centre from £8 and Enderby to East Midlands Airport from £22 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
-      "Core services from Enderby include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, corporate accounts for Meridian Business Park employers, and regular Meridian Business Park runs for shift workers and office staff. Enderby sits close to Narborough, Blaby, and the M1/M69 motorway junctions, and we cover the whole south-west Leicestershire corridor without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a shift worker starting at 5am, a manager heading to a city-centre meeting, or a team organising corporate travel accounts, Aylestone Kings gives Enderby a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+      "Core services from Enderby include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, corporate accounts for Meridian Business Park employers, and regular Meridian Business Park runs for shift workers and office staff. Enderby sits close to Narborough, Blaby, and the M1/M69 motorway junctions, and we cover the whole south-west Leicestershire corridor without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a shift worker starting at 5am, a manager heading to a city-centre meeting, or a team organising corporate travel accounts, Aylestone Taxis gives Enderby a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
       {
@@ -591,12 +591,12 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   evington: {
     bodyParagraphs: [
-      "Evington is a quiet, established suburb on Leicester's eastern edge — a neighbourhood where village character meets practical city access. Evington Village sits at the historic heart of the ward, Evington Park provides green space for families and dog walkers, Evington Road runs north connecting the area to the wider city, and Leicester General Hospital lies just minutes away in nearby Evington parish. Aylestone Kings has served Evington since 1995, and our bookings here reflect the area's residents: families needing school runs and shopping trips, elderly passengers who value patient, assisted travel, and NHS workers travelling to and from Leicester General on every shift pattern.",
+      "Evington is a quiet, established suburb on Leicester's eastern edge — a neighbourhood where village character meets practical city access. Evington Village sits at the historic heart of the ward, Evington Park provides green space for families and dog walkers, Evington Road runs north connecting the area to the wider city, and Leicester General Hospital lies just minutes away in nearby Evington parish. Aylestone Taxis has served Evington since 1995, and our bookings here reflect the area's residents: families needing school runs and shopping trips, elderly passengers who value patient, assisted travel, and NHS workers travelling to and from Leicester General on every shift pattern.",
       "Families in Evington rely on taxis for the journeys that buses and walking cannot always cover comfortably — the school run on a rainy morning, a Saturday outing, or a trip to visit relatives across Leicester. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean and comfortable for family travel.",
       "Elderly residents in Evington are a significant part of our daily work. Many passengers need a little extra time getting in and out of the vehicle, help with shopping bags, or a driver who will wait at the door rather than driving off the moment you step outside. We offer assisted taxi rides with patient, DBS-checked drivers who are used to supporting older passengers on hospital visits, GP appointments, and social outings. Mention any mobility or assistance needs when you book and we will note them on your job.",
       "NHS workers at Leicester General Hospital book us for shift changes at all hours — early-morning starts, late finishes, and rotating night patterns that do not align with bus timetables. A typical run from Evington to Leicester General Hospital takes around five minutes, and we know the main entrances, outpatient clinics, and staff collection points. The same drivers who cover hospital staff also serve patients and visitors attending appointments, so you are travelling with people who understand the layout and timing pressures of a busy NHS site.",
       "Typical journey times from Evington: Leicester city centre around 10–12 minutes in normal traffic via Evington Road or the A47, Leicester General Hospital around five minutes, East Midlands Airport roughly 25 minutes, and Birmingham Airport around 50 minutes on a clear run. Example fares include Evington to Leicester city centre from £6 and Evington to East Midlands Airport from £28 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
-      "Evington sits close to Oadby, Highfields, and Spinney Hills, and we cover the whole east Leicester area without boundary surcharges. Core services include 24/7 local taxis, hospital runs to Leicester General and other medical sites, elderly assistance, school-run standing bookings, and airport transfers to all major UK airports. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are an elderly resident heading to a GP appointment, an NHS worker finishing a night shift, or a family on the school run, Aylestone Kings gives Evington a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+      "Evington sits close to Oadby, Highfields, and Spinney Hills, and we cover the whole east Leicester area without boundary surcharges. Core services include 24/7 local taxis, hospital runs to Leicester General and other medical sites, elderly assistance, school-run standing bookings, and airport transfers to all major UK airports. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are an elderly resident heading to a GP appointment, an NHS worker finishing a night shift, or a family on the school run, Aylestone Taxis gives Evington a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
       {
@@ -618,12 +618,12 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   glenfield: {
     bodyParagraphs: [
-      "Glenfield is a residential village on Leicester's western edge — a neighbourhood where Glenfield Village preserves a quiet suburban character while Glenfield Hospital, one of the UK's leading specialist NHS centres, draws patients, visitors, and staff from across the Midlands every day. Dominion Road and Groby Road form the main arteries through the area, connecting local streets to the A50 corridor and onward routes into the city. Aylestone Kings has served Glenfield since 1995, and our bookings here reflect what the village actually needs: dependable hospital transport at all hours, fixed-price airport runs for families leaving early, and everyday local taxis for residents along Groby Road and the village lanes.",
+      "Glenfield is a residential village on Leicester's western edge — a neighbourhood where Glenfield Village preserves a quiet suburban character while Glenfield Hospital, one of the UK's leading specialist NHS centres, draws patients, visitors, and staff from across the Midlands every day. Dominion Road and Groby Road form the main arteries through the area, connecting local streets to the A50 corridor and onward routes into the city. Aylestone Taxis has served Glenfield since 1995, and our bookings here reflect what the village actually needs: dependable hospital transport at all hours, fixed-price airport runs for families leaving early, and everyday local taxis for residents along Groby Road and the village lanes.",
       "NHS workers make up a substantial share of our Glenfield bookings. Glenfield Hospital operates around the clock as a major cardiac centre and specialist unit, and staff on early starts, late finishes, and rotating night shifts need a taxi service that does not stop answering after midnight. Patients travelling to outpatient appointments, families visiting relatives on the wards, and visitors unsure of parking all book us for direct, stress-free journeys. Our drivers are DBS checked, licensed by Leicester City Council, and experienced with hospital pickups — they know the main entrances, outpatient clinics, and staff collection points so you are not left searching for the right drop-off on arrival.",
       "Hospital journeys often carry extra pressure — an early appointment slot, a discharge after a long stay, or a family member travelling with you who needs a little more time boarding. We build that into how we handle Glenfield Hospital runs. Mention the department or entrance when you book and we will note it on the job. A typical taxi from anywhere in Glenfield to Glenfield Hospital takes around five minutes, making us a practical choice for residents on Dominion Road or along Groby Road who want a reliable door-to-hospital service rather than relying on infrequent bus connections.",
       "Beyond hospital runs, Glenfield sits in one of Leicester's best-connected positions for airport travel. The village is close to junction 21A of the M1, which makes East Midlands Airport one of the quickest airport runs from west Leicester. Typical journey times from Glenfield are: Leicester city centre around 12–15 minutes via the A50 or B5380, East Midlands Airport roughly 25 minutes, and Birmingham Airport around 50 minutes on a clear run. Example fares include Glenfield to Leicester city centre from £7 and Glenfield to East Midlands Airport from £28 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Core services from Glenfield include 24/7 availability with no night surcharge, fixed prices confirmed before the car arrives, DBS-checked licensed drivers, hospital runs to Glenfield Hospital and other medical sites, early morning rides for flight departures, and airport transfers to all major UK airports. Whether you need a 4am pickup for an EMA flight, a lunchtime run into Leicester city centre, or a standing booking for recurring shift work at the hospital, the process is the same — quote upfront, arrive on time, travel comfortably.",
-      "Glenfield borders Beaumont Leys to the east and sits close to Kirby Muxloe, Ratby, and Braunstone, and we cover the whole west Leicester area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Neighbouring Beaumont Leys residents often use the same hospital and airport routes, and we serve both areas with the same fixed-fare standard. Whether you are an NHS worker finishing a night shift, a patient heading to a cardiac appointment, or a family catching an early flight, Aylestone Kings gives Glenfield a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+      "Glenfield borders Beaumont Leys to the east and sits close to Kirby Muxloe, Ratby, and Braunstone, and we cover the whole west Leicester area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Neighbouring Beaumont Leys residents often use the same hospital and airport routes, and we serve both areas with the same fixed-fare standard. Whether you are an NHS worker finishing a night shift, a patient heading to a cardiac appointment, or a family catching an early flight, Aylestone Taxis gives Glenfield a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
       {
@@ -645,12 +645,12 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   loughborough: {
     bodyParagraphs: [
-      "Loughborough is one of the East Midlands' most active towns — a Charnwood Borough centre where Loughborough University draws students from around the world, Loughborough Town Centre provides everyday shopping and dining, and Loughborough Train Station connects commuters to Leicester, Nottingham, and London. The A6 and M1 corridor run through the area, making Loughborough a natural hub for people who need reliable transport beyond what buses and trains alone can offer. Aylestone Kings has served Loughborough since 1995, and our bookings here reflect three main groups: university students heading to campus, the airport, or nights out; commuters travelling to Leicester or Nottingham for work; and families needing school runs, station connections, and weekend trips across Leicestershire.",
+      "Loughborough is one of the East Midlands' most active towns — a Charnwood Borough centre where Loughborough University draws students from around the world, Loughborough Town Centre provides everyday shopping and dining, and Loughborough Train Station connects commuters to Leicester, Nottingham, and London. The A6 and M1 corridor run through the area, making Loughborough a natural hub for people who need reliable transport beyond what buses and trains alone can offer. Aylestone Taxis has served Loughborough since 1995, and our bookings here reflect three main groups: university students heading to campus, the airport, or nights out; commuters travelling to Leicester or Nottingham for work; and families needing school runs, station connections, and weekend trips across Leicestershire.",
       "University students make up a large share of our Loughborough work. Term starts, reading weeks, and end-of-term travel generate steady demand for airport runs to East Midlands Airport — one of the shortest airport journeys from anywhere in the region — as well as longer transfers to Birmingham, Heathrow, and other UK hubs. We also cover late-night pickups from the town centre, campus-area collections, and group minibus bookings when housemates share the cost of a fixed-fare airport transfer. All drivers are DBS checked and licensed, and we confirm the price before the car arrives so there are no meter surprises on the way to your flight.",
       "Commuters rely on us for the journeys that need to run to a schedule. Loughborough Train Station is a busy interchange, and many passengers book a taxi to meet a specific train departure or collect them on arrival when public transport does not align with their shift. The A6 link to Leicester city centre is one of our most frequent routes, and we also run regularly to Nottingham for work, appointments, and evenings out. Standing weekday bookings are available for passengers who want the same pickup time each morning without rebooking every day.",
       "Families in Loughborough use taxis for the practical trips that matter — the school run on a wet morning, a Saturday outing from the town centre, or a lift to relatives across Charnwood Borough and beyond. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day. Long-distance journeys are also common from Loughborough: whether you are visiting family in another county, heading to a hospital appointment outside the area, or travelling to an event, we quote fixed fares upfront so the cost is clear before you confirm.",
       "Typical journey times from Loughborough reflect the town's strong road position: Leicester city centre around 20–25 minutes via the A6, East Midlands Airport roughly 15 minutes, Birmingham Airport around 60 minutes on a clear run, and Nottingham around 30 minutes. Example fares include Loughborough to Leicester city centre from £18 and Loughborough to East Midlands Airport from £20 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
-      "Core services from Loughborough include 24/7 availability with no night surcharge, fixed prices confirmed before the car arrives, DBS-checked licensed drivers, airport transfers to all major UK airports, university student runs, train station pickups at Loughborough Train Station, and long-distance journeys across the Midlands and beyond. Loughborough sits close to Syston, Shepshed, and Coalville, and we cover the whole Charnwood area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a student catching an early EMA flight, a commuter heading to Leicester for work, or a family planning a long-distance trip, Aylestone Kings gives Loughborough a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+      "Core services from Loughborough include 24/7 availability with no night surcharge, fixed prices confirmed before the car arrives, DBS-checked licensed drivers, airport transfers to all major UK airports, university student runs, train station pickups at Loughborough Train Station, and long-distance journeys across the Midlands and beyond. Loughborough sits close to Syston, Shepshed, and Coalville, and we cover the whole Charnwood area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a student catching an early EMA flight, a commuter heading to Leicester for work, or a family planning a long-distance trip, Aylestone Taxis gives Loughborough a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
       {
@@ -672,11 +672,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "melton-mowbray": {
     bodyParagraphs: [
-      "Melton Mowbray is famous for pork pies, Stilton links, and its long-running market-town character, but day-to-day travel here is more about practical connections than tourism. Residents move between villages, the town centre, schools, and rail services, often on tight timing windows. That creates demand for a taxi company that understands both central Melton roads and the outlying lanes where sat-nav-only routing can lose time. Aylestone Kings is regularly booked for school-day routines, evening hospitality pickups, and early starts when public transport options are limited.",
+      "Melton Mowbray is famous for pork pies, Stilton links, and its long-running market-town character, but day-to-day travel here is more about practical connections than tourism. Residents move between villages, the town centre, schools, and rail services, often on tight timing windows. That creates demand for a taxi company that understands both central Melton roads and the outlying lanes where sat-nav-only routing can lose time. Aylestone Taxis is regularly booked for school-day routines, evening hospitality pickups, and early starts when public transport options are limited.",
       "A typical taxi from Melton Mowbray to Leicester city centre takes around 40 minutes via the A607, with morning traffic sometimes pushing this closer to 45 minutes. For airport travel, East Midlands Airport is usually the nearest major option, at roughly 38 to 45 minutes depending on pickup point and M1 conditions. Most Melton to EMA fares land around GBP 58 to GBP 70 for a standard car, with the final figure confirmed at booking so customers are not guessing on the day.",
       "Two of the most requested landmarks are Melton Country Park and Melton Carnegie Museum, especially during weekend family plans and local events. We also complete frequent station runs to Melton Mowbray railway station for onward travel to Leicester, Nottingham, and London connections. During busier periods near Sherrard Street and the market area, drivers can arrange a clear side-road collection point to speed up boarding and avoid delays caused by short-stay frontage traffic.",
       "Business and contractor travel is another strong pattern in Melton Mowbray. Many clients need recurring weekday journeys to Leicester offices, hospitals, and logistics sites, and they prefer a reliable process over constant re-booking. We support this with pre-scheduled pickups, precise driver notes, and consistent communication if traffic patterns change. Families also use our service for healthcare appointments, shopping runs, and evening returns from local venues where dependable timing matters more than finding the absolute shortest route.",
-      "Aylestone Kings serves Melton Mowbray well because we combine local route awareness with city-scale dispatch coverage. Our team can handle both short-notice local bookings and planned longer runs without changing service quality. Customers regularly mention the value of clear confirmations, polite licensed drivers, and straightforward pricing language rather than vague estimates. That is especially important for airport and rail journeys where missed timing has a real cost.",
+      "Aylestone Taxis serves Melton Mowbray well because we combine local route awareness with city-scale dispatch coverage. Our team can handle both short-notice local bookings and planned longer runs without changing service quality. Customers regularly mention the value of clear confirmations, polite licensed drivers, and straightforward pricing language rather than vague estimates. That is especially important for airport and rail journeys where missed timing has a real cost.",
       "If your journey includes a terminal transfer, visit /airport-transfers-leicester for route-by-route airport guidance before you travel. You can also review expected fare bands on /pricing to plan with confidence before confirming the booking. That transparent approach keeps Melton Mowbray travel practical, predictable, and easier to manage for both residents and visitors.",
     ],
     faqs: [
@@ -696,11 +696,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "market-harborough": {
     bodyParagraphs: [
-      "Market Harborough is known for its independent town centre, strong commuter rail links, and nearby attractions like Foxton Locks, so taxi demand here is highly mixed. One hour you may need a station connection for a business train, and the next you need a family pickup from a leisure destination. That variety is exactly why local route understanding matters. Aylestone Kings covers central streets, housing estates, and surrounding villages with practical dispatch planning built around real journey patterns.",
+      "Market Harborough is known for its independent town centre, strong commuter rail links, and nearby attractions like Foxton Locks, so taxi demand here is highly mixed. One hour you may need a station connection for a business train, and the next you need a family pickup from a leisure destination. That variety is exactly why local route understanding matters. Aylestone Taxis covers central streets, housing estates, and surrounding villages with practical dispatch planning built around real journey patterns.",
       "Most journeys from Market Harborough to Leicester city centre are around 30 minutes via the A6, although peak inbound traffic can push this to 35 minutes. For airport travel, East Midlands Airport is typically the nearest major terminal from Market Harborough at around 50 to 60 minutes using A6 and M1 links. A standard fare is usually in the GBP 72 to GBP 88 range depending on pickup location and time slot, with pricing confirmed before travel.",
       "We regularly serve Market Harborough railway station and The Square, both of which have frequent pickup activity throughout the week. Foxton Locks is another common booking destination, especially in spring and summer when visitor traffic rises and parking pressure increases. For busy periods in the town centre, we can agree exact meeting points near side roads so collections are smooth and customers avoid waiting on congested frontages.",
       "Families in Market Harborough often rely on taxis for school logistics, healthcare appointments, and evening returns when bus timetables are less convenient. Professional users typically want a dependable repeat service for rail and office travel, so we support recurring bookings with consistent booking notes and reliable timing. Instead of treating every request as a one-off, we build journeys around known routines and communicate clearly if traffic conditions require route adjustments.",
-      "Aylestone Kings is a strong fit for Market Harborough because we already run high-frequency journeys between Harborough, Leicester, and major transport hubs. Our team is used to blending station timing precision with flexible local pickups, which is crucial in an area that combines commuter traffic and village demand. Customers benefit from licensed drivers, responsive booking support, and service standards built around punctuality rather than guesswork.",
+      "Aylestone Taxis is a strong fit for Market Harborough because we already run high-frequency journeys between Harborough, Leicester, and major transport hubs. Our team is used to blending station timing precision with flexible local pickups, which is crucial in an area that combines commuter traffic and village demand. Customers benefit from licensed drivers, responsive booking support, and service standards built around punctuality rather than guesswork.",
       "For detailed flight options, review /airport-transfers-leicester before you book. To check expected costs in advance, use /pricing so your plan is clear before the journey day. This helps Market Harborough passengers make informed decisions and avoid last-minute uncertainty on both timing and fare.",
     ],
     faqs: [
@@ -719,22 +719,22 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "What is the best taxi number for Market Harborough?",
         answer:
-          "For reliable bookings across Market Harborough, call Aylestone Kings on 0116 233 8888. Our line is open 24/7 for local trips, station pickups, and airport transfers, with fixed fares confirmed before you travel.",
+          "For reliable bookings across Market Harborough, call Aylestone Taxis on 0116 233 8888. Our line is open 24/7 for local trips, station pickups, and airport transfers, with fixed fares confirmed before you travel.",
       },
       {
         question: "Are there 24 hour taxi firms in Market Harborough?",
         answer:
-          "Yes. Aylestone Kings operates as a 24-hour taxi firm serving Market Harborough and surrounding villages. You can call 0116 233 8888 at any time or book online for immediate or pre-scheduled journeys.",
+          "Yes. Aylestone Taxis operates as a 24-hour taxi firm serving Market Harborough and surrounding villages. You can call 0116 233 8888 at any time or book online for immediate or pre-scheduled journeys.",
       },
     ],
   },
   coalville: {
     bodyParagraphs: [
-      "Coalville sits at the centre of North West Leicestershire commuting, with strong links to industrial estates, retail zones, and residential neighbourhoods that rely on dependable road travel. People book taxis here for shift changes, school schedules, late returns, and airport departures that cannot slip. Aylestone Kings serves Coalville with this practical reality in mind: clear pickup windows, sensible routing, and service that works as well at 5am as it does during evening demand peaks.",
+      "Coalville sits at the centre of North West Leicestershire commuting, with strong links to industrial estates, retail zones, and residential neighbourhoods that rely on dependable road travel. People book taxis here for shift changes, school schedules, late returns, and airport departures that cannot slip. Aylestone Taxis serves Coalville with this practical reality in mind: clear pickup windows, sensible routing, and service that works as well at 5am as it does during evening demand peaks.",
       "From Coalville to Leicester city centre, a typical taxi journey is around 35 minutes via the A511 and city approach roads, with rush-hour traffic occasionally extending the run. East Midlands Airport is the nearest major airport for most Coalville passengers, usually around 25 minutes depending on the A511 and M1 flow. Typical fares to EMA are approximately GBP 38 to GBP 50 for standard vehicles, and we confirm the expected fare before dispatch.",
       "Frequent local destinations include Snibston Colliery Park and the Clock Tower area, both regular points for shopping and social journeys. We also complete many pickups around Hermitage Leisure Centre and nearby business locations where shift-based timings are critical. When a main-road pickup is busy, drivers can coordinate a safer side-street meeting point so boarding is quicker and the onward route starts without unnecessary waiting.",
       "Coalville customers often need a blend of short local runs and planned long-distance travel. Families use us for school and healthcare schedules, while workers rely on punctual collections for industrial and logistics sites where lateness creates immediate problems. Our booking flow supports one-off requests and recurring rides, so regular users can keep travel predictable without entering the same details every day.",
-      "Aylestone Kings performs strongly in Coalville because we already understand the local demand profile: early starts, practical journeys, and airport transfers where accurate timing matters. Our dispatch team gives realistic ETAs, our licensed drivers communicate clearly, and our service standards stay consistent across local and longer routes. That combination is why many Coalville passengers use us repeatedly instead of relying on ad-hoc ride options.",
+      "Aylestone Taxis performs strongly in Coalville because we already understand the local demand profile: early starts, practical journeys, and airport transfers where accurate timing matters. Our dispatch team gives realistic ETAs, our licensed drivers communicate clearly, and our service standards stay consistent across local and longer routes. That combination is why many Coalville passengers use us repeatedly instead of relying on ad-hoc ride options.",
       "If you want airport route detail before booking, visit /airport-transfers-leicester. For upfront fare planning, check /pricing so your cost expectations are clear in advance. This keeps Coalville travel transparent and dependable from first enquiry to final drop-off.",
     ],
     faqs: [
@@ -754,11 +754,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "beaumont-leys": {
     bodyParagraphs: [
-      "Beaumont Leys is a busy north Leicester suburb where local journeys happen all day between estates, schools, shopping areas, and healthcare appointments. It is known for Beaumont Shopping Centre and large residential catchments, so taxi demand is frequent and practical rather than occasional. Aylestone Kings provides fast-response coverage in this area with booking processes designed for everyday travel - school runs, errands, family visits, and evening pickups when bus links become less convenient.",
+      "Beaumont Leys is a busy north Leicester suburb where local journeys happen all day between estates, schools, shopping areas, and healthcare appointments. It is known for Beaumont Shopping Centre and large residential catchments, so taxi demand is frequent and practical rather than occasional. Aylestone Taxis provides fast-response coverage in this area with booking processes designed for everyday travel - school runs, errands, family visits, and evening pickups when bus links become less convenient.",
       "A normal journey from Beaumont Leys to Leicester city centre takes around 18 minutes via the A563 and inner-city routes, with longer times during rush-hour inflow. East Midlands Airport is the closest major airport from this area, usually around 35 to 40 minutes via ring-road links and the M1 corridor. Typical fares from Beaumont Leys to EMA are about GBP 46 to GBP 58, and we confirm expected costs before travel so passengers can budget clearly.",
       "Two of the most common pickup landmarks are Beaumont Shopping Centre and Beaumont Park, both generating regular weekday and weekend demand. We also run many journeys to Leicester Royal Infirmary and Leicester Railway Station for onward travel. Where frontage roads are crowded, we provide clear alternative meeting points nearby to keep boarding safe for families, older passengers, and customers travelling with shopping or luggage.",
       "Because Beaumont Leys journeys are often short but time-sensitive, consistency matters more than novelty. We focus on arriving when promised, keeping communication straightforward, and adjusting route choices around known traffic pinch points. Customers can book one-off rides quickly, but we also support repeat schedules for work shifts, school transport, and appointment routines where missing a pickup can disrupt the whole day.",
-      "Aylestone Kings serves Beaumont Leys especially well thanks to our city-wide dispatch footprint and experience with high-frequency local requests. Our drivers know the ring-road approach options, understand peak retail patterns, and can switch routes intelligently when congestion builds. That local practicality, combined with licensed professional service, gives Beaumont Leys passengers a dependable taxi option they can use again and again.",
+      "Aylestone Taxis serves Beaumont Leys especially well thanks to our city-wide dispatch footprint and experience with high-frequency local requests. Our drivers know the ring-road approach options, understand peak retail patterns, and can switch routes intelligently when congestion builds. That local practicality, combined with licensed professional service, gives Beaumont Leys passengers a dependable taxi option they can use again and again.",
       "Planning a flight? See /airport-transfers-leicester for transfer guidance by airport and route. To check likely costs first, review /pricing before confirming. This simple planning step helps Beaumont Leys customers travel with confidence and avoid last-minute surprises.",
     ],
     faqs: [
@@ -778,11 +778,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   syston: {
     bodyParagraphs: [
-      "Syston offers a village-town mix with strong commuting links into Leicester, and local taxi demand reflects that rhythm. Residents often need reliable transport for rail connections, school runs, and shopping trips around a compact but busy road network. Aylestone Kings serves Syston with routes built around actual movement patterns, including quieter residential pickups and timed collections where missing a connection can quickly turn into a long delay.",
+      "Syston offers a village-town mix with strong commuting links into Leicester, and local taxi demand reflects that rhythm. Residents often need reliable transport for rail connections, school runs, and shopping trips around a compact but busy road network. Aylestone Taxis serves Syston with routes built around actual movement patterns, including quieter residential pickups and timed collections where missing a connection can quickly turn into a long delay.",
       "Most Syston to Leicester city centre journeys take about 25 minutes via the A607, though peak-hour flow can increase that by several minutes. For airport travel, East Midlands Airport is generally the nearest major terminal from Syston at around 38 to 45 minutes depending on traffic through ring-road connectors and M1 links. A typical EMA fare from Syston is roughly GBP 52 to GBP 64 for a standard car, confirmed at booking.",
       "Frequent pickup points include Syston railway station and Central Park, along with local retail stretches where evening return travel is common. We also complete regular journeys to Leicester hospitals and the city stations for onward travel. During busier periods near station approaches or school times, we can suggest an easier collection location nearby so boarding remains quick and safe.",
       "Syston passengers often value repeatability: same pickup process, clear ETA updates, and dependable timing week after week. We support recurring bookings for commuters and families, while keeping one-off bookings straightforward for visitors or occasional users. Our drivers take a practical approach to route planning rather than relying on one fixed path, which helps maintain punctuality when road conditions change unexpectedly.",
-      "Aylestone Kings is well suited to Syston because we combine local-area awareness with full Leicester coverage, making it easy to handle both short local runs and longer intercity or airport journeys. Customers benefit from polite licensed drivers, responsive support, and honest timing advice before the car is dispatched. That consistency is what keeps repeat bookings strong in Syston.",
+      "Aylestone Taxis is well suited to Syston because we combine local-area awareness with full Leicester coverage, making it easy to handle both short local runs and longer intercity or airport journeys. Customers benefit from polite licensed drivers, responsive support, and honest timing advice before the car is dispatched. That consistency is what keeps repeat bookings strong in Syston.",
       "If you want airport transfer details before confirming, visit /airport-transfers-leicester. For clear fare guidance in advance, check /pricing so your budget and journey plan are aligned from the start. This keeps Syston travel practical and transparent.",
     ],
     faqs: [
@@ -802,11 +802,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   birstall: {
     bodyParagraphs: [
-      "Birstall is one of the strongest commuter suburbs north of Leicester, known for Watermead, shopping access, and convenient routes onto the A6 corridor. Taxi demand here is constant across local family trips, city commuting, and outbound airport travel. Aylestone Kings serves Birstall with practical coverage that prioritises reliable pickup times and clear communication, especially during school traffic and peak shopping periods when short delays can quickly multiply.",
+      "Birstall is one of the strongest commuter suburbs north of Leicester, known for Watermead, shopping access, and convenient routes onto the A6 corridor. Taxi demand here is constant across local family trips, city commuting, and outbound airport travel. Aylestone Taxis serves Birstall with practical coverage that prioritises reliable pickup times and clear communication, especially during school traffic and peak shopping periods when short delays can quickly multiply.",
       "A taxi from Birstall to Leicester city centre normally takes about 20 minutes via the A6, with traffic around key junctions occasionally extending this. East Midlands Airport is usually the nearest major airport from Birstall, at around 35 to 40 minutes using A6 and M1 links. Typical fares from Birstall to EMA are approximately GBP 48 to GBP 60, and we confirm pricing before dispatch so there is no confusion at the end of the trip.",
       "Common destination landmarks include Watermead Country Park and Birstall Park and Ride, both of which generate regular daytime and evening bookings. We also handle frequent pickups around local retail parks and onward journeys to Leicester stations and hospital sites. If a pickup point is busy or unclear, we agree a precise meeting location in advance to keep boarding efficient and reduce waiting time.",
       "Many Birstall customers combine quick local rides with occasional long-distance journeys, so flexibility is essential. We handle one-way and return bookings, multi-stop family trips, and scheduled weekly runs for work or education. Rather than a generic one-size process, we tailor route and timing guidance to the purpose of your journey, whether that is a routine commute or a time-critical airport departure.",
-      "Aylestone Kings works well in Birstall because our drivers and dispatch team already manage high volumes on north Leicester approaches. We know where delays tend to build, where pickups are easiest, and how to keep service consistent when traffic conditions shift. Passengers benefit from licensed professionals, straightforward booking support, and a service standard focused on reliability over marketing noise.",
+      "Aylestone Taxis works well in Birstall because our drivers and dispatch team already manage high volumes on north Leicester approaches. We know where delays tend to build, where pickups are easiest, and how to keep service consistent when traffic conditions shift. Passengers benefit from licensed professionals, straightforward booking support, and a service standard focused on reliability over marketing noise.",
       "For airport-specific planning, use /airport-transfers-leicester to compare routes and options. To review fare expectations before booking, visit /pricing. This gives Birstall travellers clearer cost and timing visibility before they travel.",
     ],
     faqs: [
@@ -826,11 +826,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   lutterworth: {
     bodyParagraphs: [
-      "Lutterworth is known for its logistics activity and strategic motorway access, so local taxi demand is built around precision and reliability. Residents and workers frequently travel on strict schedules, whether for warehouse shifts, meetings, or onward transport links. Aylestone Kings supports Lutterworth with dependable timed pickups and practical route planning, helping passengers avoid avoidable delays on days when a late arrival has immediate knock-on effects.",
+      "Lutterworth is known for its logistics activity and strategic motorway access, so local taxi demand is built around precision and reliability. Residents and workers frequently travel on strict schedules, whether for warehouse shifts, meetings, or onward transport links. Aylestone Taxis supports Lutterworth with dependable timed pickups and practical route planning, helping passengers avoid avoidable delays on days when a late arrival has immediate knock-on effects.",
       "A standard taxi journey from Lutterworth to Leicester city centre is around 35 minutes via the A426, with peak traffic sometimes extending that to 40 minutes. For airport travel, Birmingham Airport is often the nearest major option from Lutterworth at roughly 35 to 45 minutes via M6 and M42 links. Typical fares to BHX are around GBP 60 to GBP 75 depending on pickup point and time, and we confirm expected pricing in advance.",
       "Two regular local landmarks in bookings are Lutterworth town centre and Stanford Hall, with additional demand around Magna Park-related routes and evening hospitality travel. We also run frequent trips to rail stations and healthcare destinations where passengers prefer direct travel over complex public transport changes. For busy pickup zones, we provide clear meeting instructions so journeys start without confusion.",
       "Lutterworth clients often need a blend of recurring and one-off bookings. We support weekly work transport, same-day returns, and pre-booked airport runs with clear confirmation messages and realistic timing guidance. Families use us for school and appointment logistics, while business users rely on consistent service standards that keep planning simple across repeated journeys.",
-      "Aylestone Kings serves Lutterworth well because we understand motorway-sensitive route planning and the importance of accurate ETA communication. Our licensed drivers and dispatch support focus on punctuality first, not generic estimates. That practical approach is why local passengers trust us for both short local travel and longer regional journeys that require stronger planning discipline.",
+      "Aylestone Taxis serves Lutterworth well because we understand motorway-sensitive route planning and the importance of accurate ETA communication. Our licensed drivers and dispatch support focus on punctuality first, not generic estimates. That practical approach is why local passengers trust us for both short local travel and longer regional journeys that require stronger planning discipline.",
       "If you are comparing airport transfer options, review /airport-transfers-leicester before you confirm. To check likely fare bands, see /pricing and plan your journey with confidence. This keeps Lutterworth bookings transparent from first enquiry to drop-off.",
     ],
     faqs: [
@@ -850,11 +850,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "south-wigston": {
     bodyParagraphs: [
-      "South Wigston is a high-movement area with rail users, high-street activity, and dense residential travel all happening within a compact footprint. That means taxi service needs to be responsive and well-coordinated, not generic. Aylestone Kings regularly handles station links, school-time runs, shopping trips, and healthcare journeys here, with reliable timing and practical pickup instructions that reduce waiting around busy corridors like Blaby Road.",
+      "South Wigston is a high-movement area with rail users, high-street activity, and dense residential travel all happening within a compact footprint. That means taxi service needs to be responsive and well-coordinated, not generic. Aylestone Taxis regularly handles station links, school-time runs, shopping trips, and healthcare journeys here, with reliable timing and practical pickup instructions that reduce waiting around busy corridors like Blaby Road.",
       "A typical South Wigston to Leicester city centre taxi takes around 20 minutes via A5199 and city approaches, though peak periods can increase this slightly. East Midlands Airport is usually the nearest airport from South Wigston at around 33 to 40 minutes via A563 and M1 links. Typical fares to EMA are about GBP 45 to GBP 56, with confirmation given in advance so passengers can plan costs without uncertainty.",
       "Frequent local pickup points include South Wigston railway station and Blaby Road shopping areas, plus onward journeys to Leicester Royal Infirmary and city-centre workplaces. We also serve regular evening returns from retail and hospitality destinations when public transport options are less convenient. If station or frontage traffic is heavy, we provide a nearby alternative meeting point to keep pickups smooth and safe.",
       "South Wigston customers often combine quick local rides with occasional longer bookings, so flexibility is a major priority. We support one-off travel, return bookings, and recurring journeys for commuters and families. Our process stays simple: clear confirmation, realistic ETA updates, and drivers who understand local road behaviour rather than relying on a single fixed route through congestion.",
-      "Aylestone Kings serves South Wigston particularly well because we are already active across the wider south Leicester travel network. That local coverage helps us reach pickups quickly and keep journey planning realistic across different times of day. Passengers benefit from licensed drivers, consistent standards, and service that is built around reliability rather than last-minute improvisation.",
+      "Aylestone Taxis serves South Wigston particularly well because we are already active across the wider south Leicester travel network. That local coverage helps us reach pickups quickly and keep journey planning realistic across different times of day. Passengers benefit from licensed drivers, consistent standards, and service that is built around reliability rather than last-minute improvisation.",
       "For airport route details and transfer options, visit /airport-transfers-leicester. To check expected journey costs before booking, use /pricing. This gives South Wigston passengers better visibility on both timing and fares before they travel.",
     ],
     faqs: [
@@ -874,11 +874,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   hinckley: {
     bodyParagraphs: [
-      "Hinckley is a major Leicestershire town with a strong commuter base, busy local retail, and regular cross-county travel toward Leicester, Nuneaton, and Birmingham links. Taxi demand here ranges from short high-street trips to time-critical airport transfers, so service quality depends on route judgment and consistent communication. Aylestone Kings serves Hinckley with practical booking support and dependable pickup timing suited to both local routines and longer-distance travel days.",
+      "Hinckley is a major Leicestershire town with a strong commuter base, busy local retail, and regular cross-county travel toward Leicester, Nuneaton, and Birmingham links. Taxi demand here ranges from short high-street trips to time-critical airport transfers, so service quality depends on route judgment and consistent communication. Aylestone Taxis serves Hinckley with practical booking support and dependable pickup timing suited to both local routines and longer-distance travel days.",
       "Most Hinckley to Leicester city centre journeys are around 35 minutes via A47 and connecting city routes. For airports, Birmingham Airport is usually the nearest major terminal from Hinckley, often around 30 to 40 minutes via A5 and M42 links depending on traffic flow. Typical fares to BHX generally sit between GBP 58 and GBP 72 for a standard vehicle, with expected cost confirmed in advance at the time of booking.",
       "Regular landmarks in demand include Hinckley town centre and Hollycroft Park, and we also complete frequent runs to The Crescent retail and leisure area. Many customers request station or hospital connections where missed timing can disrupt onward plans. To reduce uncertainty, we provide exact pickup instructions and can suggest alternative collection points when frontage traffic or temporary restrictions make direct access slower.",
       "Travel patterns in Hinckley are diverse: weekday work runs, school logistics, weekend social plans, and late-evening returns. We support this with one-off rides and recurring schedules, so repeat customers do not need to recreate the same journey details every time. Our approach is simple and consistent - punctual arrivals, straightforward updates, and route decisions based on current road conditions rather than assumptions.",
-      "Aylestone Kings is a strong option for Hinckley because we already operate across the wider Leicester corridor and understand how motorway incidents or city traffic changes can affect planned ETAs. That wider network awareness helps us provide realistic timing advice before dispatch, not after a delay has happened. Customers get licensed drivers, reliable service standards, and booking support focused on practical outcomes.",
+      "Aylestone Taxis is a strong option for Hinckley because we already operate across the wider Leicester corridor and understand how motorway incidents or city traffic changes can affect planned ETAs. That wider network awareness helps us provide realistic timing advice before dispatch, not after a delay has happened. Customers get licensed drivers, reliable service standards, and booking support focused on practical outcomes.",
       "If you are planning a terminal journey, compare options at /airport-transfers-leicester. Before confirming, use /pricing to review likely fare ranges and budget confidently. This keeps Hinckley travel planning clear on both cost and timing.",
     ],
     faqs: [
@@ -898,11 +898,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   wigston: {
     bodyParagraphs: [
-      "Wigston is one of south Leicester's busiest suburban centres, known for everyday high-street activity, residential travel, and regular commuting into the city. Taxi demand here is constant and highly practical - school runs, appointments, station links, and evening returns. Aylestone Kings serves Wigston with reliable local coverage built around real traffic patterns and clear pickup coordination, helping passengers avoid unnecessary stress on journeys that are often time-sensitive.",
+      "Wigston is one of south Leicester's busiest suburban centres, known for everyday high-street activity, residential travel, and regular commuting into the city. Taxi demand here is constant and highly practical - school runs, appointments, station links, and evening returns. Aylestone Taxis serves Wigston with reliable local coverage built around real traffic patterns and clear pickup coordination, helping passengers avoid unnecessary stress on journeys that are often time-sensitive.",
       "A normal taxi from Wigston to Leicester city centre is around 20 minutes via A5199 or A6 approaches, with peak-time congestion occasionally increasing journey time. East Midlands Airport is generally the nearest major airport for Wigston passengers, typically around 32 to 40 minutes via A563 and M1 links. Standard fares to EMA are usually in the GBP 45 to GBP 57 range, and we confirm expected pricing before travel.",
       "Frequent local destinations include Wigston town centre and Wigston Pool and Fitness Centre, with additional demand around Leicester Road shopping areas and nearby station connections. We also complete many direct trips to Leicester Royal Infirmary and university zones for customers who prefer one reliable vehicle over multiple bus changes. If traffic is heavy at the requested pickup point, we provide an alternative location close by.",
       "Wigston residents often need both flexible short-notice rides and planned longer bookings. We support one-way and return journeys, recurring weekday transport, and airport runs that need precise departure timing. Our focus stays on practical service fundamentals: punctual arrival, easy communication, and route choices adapted to live road conditions rather than fixed assumptions that can fail during busy periods.",
-      "Aylestone Kings is especially well positioned for Wigston because our operating base and south Leicester coverage allow quick response across this corridor. Drivers know the local approach roads, common bottlenecks, and the best alternatives at different times of day. This combination of local insight and professional standards gives Wigston customers a service they can trust repeatedly.",
+      "Aylestone Taxis is especially well positioned for Wigston because our operating base and south Leicester coverage allow quick response across this corridor. Drivers know the local approach roads, common bottlenecks, and the best alternatives at different times of day. This combination of local insight and professional standards gives Wigston customers a service they can trust repeatedly.",
       "For airport route breakdowns and transfer options, visit /airport-transfers-leicester before you book. To see likely costs in advance, check /pricing and plan with full fare visibility. That keeps Wigston journeys clear, predictable, and easier to organise.",
     ],
     faqs: [
@@ -922,11 +922,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "wigston-fields": {
     bodyParagraphs: [
-      "Wigston Fields is a residential area where most taxi journeys are about daily practicality - schools, shopping, healthcare, and reliable city links. It is not a place for occasional travel only; many residents need repeat transport that works around routine commitments. Aylestone Kings serves Wigston Fields with consistent local coverage and clear booking communication, making short regular trips as dependable as longer airport and out-of-town journeys.",
+      "Wigston Fields is a residential area where most taxi journeys are about daily practicality - schools, shopping, healthcare, and reliable city links. It is not a place for occasional travel only; many residents need repeat transport that works around routine commitments. Aylestone Taxis serves Wigston Fields with consistent local coverage and clear booking communication, making short regular trips as dependable as longer airport and out-of-town journeys.",
       "A typical ride from Wigston Fields to Leicester city centre takes around 20 minutes via A5199 routes. For airport transfers, East Midlands Airport is usually the nearest major terminal, commonly around 33 to 40 minutes through A563 and M1 connections. Standard fares to EMA are generally between GBP 46 and GBP 58, and we provide an upfront fare expectation during booking so there are no surprise costs.",
       "Popular local landmarks in this area include Wigston Fields Recreation Ground and nearby South Wigston station approaches, with frequent onward journeys to Fosse Park and Leicester hospitals. We also cover regular pickups from local retail stretches where short-stay parking can be difficult. When needed, our drivers suggest practical collection points a short walk away so departures are faster and safer.",
       "Travel needs in Wigston Fields are often mixed - a quick daytime local run one day, then an early-morning airport journey the next. We support both with flexible booking options, return-trip scheduling, and recurring weekly journeys for work and family routines. The service model stays simple: arrive on time, communicate clearly, and adapt routes to real-time traffic rather than rigid assumptions.",
-      "Aylestone Kings is a good fit for Wigston Fields because we regularly operate across south Leicester neighbourhoods and understand the local flow at school, shopping, and commuter peaks. That local familiarity reduces missed pickups and improves journey reliability. Customers also benefit from licensed drivers and a professional approach that keeps every booking straightforward from start to finish.",
+      "Aylestone Taxis is a good fit for Wigston Fields because we regularly operate across south Leicester neighbourhoods and understand the local flow at school, shopping, and commuter peaks. That local familiarity reduces missed pickups and improves journey reliability. Customers also benefit from licensed drivers and a professional approach that keeps every booking straightforward from start to finish.",
       "To compare airport transfer routes and options, see /airport-transfers-leicester. For current fare guidance before confirming, review /pricing. This helps Wigston Fields residents plan costs and timings confidently before they travel.",
     ],
     faqs: [
@@ -946,11 +946,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "leicester-royal-infirmary": {
     bodyParagraphs: [
-      "Leicester Royal Infirmary is one of the region's busiest medical sites, and transport needs here are very different from a standard local taxi booking. Patients, carers, and hospital staff often need precise timing, considerate assistance, and clear pickup instructions around complex access roads. Aylestone Kings provides dedicated support for LRI journeys with a calm, practical approach suited to appointments, ward discharges, and shift-change collections where reliability is essential.",
+      "Leicester Royal Infirmary is one of the region's busiest medical sites, and transport needs here are very different from a standard local taxi booking. Patients, carers, and hospital staff often need precise timing, considerate assistance, and clear pickup instructions around complex access roads. Aylestone Taxis provides dedicated support for LRI journeys with a calm, practical approach suited to appointments, ward discharges, and shift-change collections where reliability is essential.",
       "From Leicester Royal Infirmary to Leicester city centre, most journeys are around 8 to 12 minutes depending on exact drop-off. For airport travel, East Midlands Airport is usually the nearest major terminal from LRI, generally around 35 minutes via A50 and M1 links when traffic is normal. Typical fares to EMA are about GBP 42 to GBP 54 for a standard car, and we confirm expected cost before dispatch to reduce stress for families planning onward travel.",
       "The most common landmarks around this page are Leicester Royal Infirmary itself and the nearby Windsor Building and multi-storey parking areas, where meeting-point clarity is critical. We also handle frequent onward trips to Leicester Railway Station and De Montfort Hall. If the main entrance is crowded or restricted at pickup time, we can coordinate collections from quieter side roads to make boarding easier and safer.",
       "Hospital travel often involves uncertainty around appointment overrun, discharge timing, or waiting for prescriptions. Our booking team and drivers are used to this pattern and provide flexible updates without overcomplicating the process. We support one-way and return journeys, plus pre-arranged collections for relatives visiting different wards. The priority is always a smooth pickup experience during what can already be a demanding day.",
-      "Aylestone Kings serves LRI especially well because we run high-frequency journeys across central Leicester and understand hospital access realities, including traffic, parking pressure, and short-notice changes. That local operational experience allows us to provide realistic ETAs and dependable communication. Customers receive licensed drivers who are patient, professional, and focused on reducing avoidable stress at each stage of the trip.",
+      "Aylestone Taxis serves LRI especially well because we run high-frequency journeys across central Leicester and understand hospital access realities, including traffic, parking pressure, and short-notice changes. That local operational experience allows us to provide realistic ETAs and dependable communication. Customers receive licensed drivers who are patient, professional, and focused on reducing avoidable stress at each stage of the trip.",
       "For patients or families arranging longer onward journeys, /airport-transfers-leicester provides transfer details by terminal. To review likely fares first, check /pricing before confirming. This creates clearer planning around both time and budget for Leicester Royal Infirmary travel.",
     ],
     faqs: [
@@ -970,12 +970,12 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "fosse-park": {
     bodyParagraphs: [
-      "Fosse Shopping Park is one of the East Midlands' busiest retail destinations — a sprawling out-of-town centre on Leicester's western edge where major brands, dining, and leisure draw thousands of visitors every week. Fosse Park Avenue provides the main access route into the site, Braunstone Lane connects the area to surrounding residential neighbourhoods, and Meridian Business Park sits close by with offices and corporate tenants that generate steady weekday taxi demand. Aylestone Kings has served the Fosse Park corridor since 1995, and our bookings here fall into three clear groups: shoppers who want a comfortable ride with their bags, retail workers needing reliable transport at shift start and finish, and business park employees travelling to meetings, the city centre, or the airport.",
+      "Fosse Shopping Park is one of the East Midlands' busiest retail destinations — a sprawling out-of-town centre on Leicester's western edge where major brands, dining, and leisure draw thousands of visitors every week. Fosse Park Avenue provides the main access route into the site, Braunstone Lane connects the area to surrounding residential neighbourhoods, and Meridian Business Park sits close by with offices and corporate tenants that generate steady weekday taxi demand. Aylestone Taxis has served the Fosse Park corridor since 1995, and our bookings here fall into three clear groups: shoppers who want a comfortable ride with their bags, retail workers needing reliable transport at shift start and finish, and business park employees travelling to meetings, the city centre, or the airport.",
       "Shoppers use us for the journeys that make a retail trip easier — a Saturday run to Fosse Shopping Park without hunting for a parking space, a return pickup when you are loaded with bags, or a lift from Oadby, Wigston, or Narborough with a fixed fare confirmed upfront. Our drivers know the retail park layout, the main entrance and exit points along Fosse Park Avenue, and where collections work best when car parks and frontages are busy. We agree a clear meeting point when you book so you are not standing in a congested lane wondering where the car is.",
       "Retail workers make up a significant share of our Fosse Park work. Stores across the shopping park operate extended hours, and staff finishing late shifts — often after 9pm or 10pm when bus frequency drops — need a taxi service that is genuinely available around the clock. We run early morning pickups for staff opening stores before public transport starts, late-night collections after closing, and pre-booked standing bookings for employees who want the same driver at the same time each week. All drivers are DBS checked and licensed, and fixed prices are confirmed before the car arrives.",
       "Corporate runs to Meridian Business Park are another regular booking type. Professionals heading to client meetings, commuting between the business park and Leicester city centre, or connecting to East Midlands Airport for business travel rely on us for punctual, fixed-fare journeys. The A563 ring road and M1 junction 21 give Fosse Park one of Leicester's strongest positions for airport access — East Midlands Airport is one of the quickest runs from anywhere in the city. We also cover multi-stop corporate bookings when a team needs collecting from different addresses before heading to a shared destination.",
       "Typical journey times from Fosse Park reflect the area's favourable west-side position: Leicester city centre around 10–12 minutes via the A563 and inner-city approaches, East Midlands Airport roughly 20 minutes via the M1, and Birmingham Airport around 45 minutes on a clear run. Example fares include Fosse Park to Leicester city centre from £6 and Fosse Park to East Midlands Airport from £25 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
-      "Core services from Fosse Park include 24/7 availability with no night surcharge, fixed prices confirmed before the car arrives, DBS-checked licensed drivers, airport transfers to all major UK airports, early morning and late-night rides for retail workers, and corporate runs to Meridian Business Park and other business sites. Fosse Park sits alongside Braunstone and Glen Parva, and we cover the whole west Leicester area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a shopper heading home with bags, a retail worker finishing a late shift, or a business traveller catching an early flight, Aylestone Kings gives Fosse Park a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+      "Core services from Fosse Park include 24/7 availability with no night surcharge, fixed prices confirmed before the car arrives, DBS-checked licensed drivers, airport transfers to all major UK airports, early morning and late-night rides for retail workers, and corporate runs to Meridian Business Park and other business sites. Fosse Park sits alongside Braunstone and Glen Parva, and we cover the whole west Leicester area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a shopper heading home with bags, a retail worker finishing a late shift, or a business traveller catching an early flight, Aylestone Taxis gives Fosse Park a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
       {
@@ -997,10 +997,10 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   hamilton: {
     bodyParagraphs: [
-      "Hamilton is one of Leicester's largest residential areas in the north-east of the city, and local taxi demand is driven by everyday needs rather than occasional tourism. Families rely on school-run collections, commuters need dependable routes into the city centre and business parks, and shoppers want straightforward trips home after a heavy day at the shops. Aylestone Kings provides 24/7 Hamilton coverage built around those real patterns — punctual pickups, fixed fares agreed before travel, and drivers who know the estate roads rather than relying on generic sat-nav routes alone.",
+      "Hamilton is one of Leicester's largest residential areas in the north-east of the city, and local taxi demand is driven by everyday needs rather than occasional tourism. Families rely on school-run collections, commuters need dependable routes into the city centre and business parks, and shoppers want straightforward trips home after a heavy day at the shops. Aylestone Taxis provides 24/7 Hamilton coverage built around those real patterns — punctual pickups, fixed fares agreed before travel, and drivers who know the estate roads rather than relying on generic sat-nav routes alone.",
       "Typical journey times from Hamilton reflect how well connected the area is to wider Leicestershire: Leicester city centre is around 15 minutes via the A563 and inner-city approaches in normal traffic, East Midlands Airport (EMA) is roughly 25 minutes using ring-road and M1 links, and Birmingham Airport (BHX) is around 50 minutes on a clear run via the M69 and M6 corridor. Example fixed fares start from £8 for city-centre journeys and from £28 to EMA — your exact price is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "We collect and drop off across Hamilton every day, including Hamilton Shopping Centre, Hamilton Park, Thurmaston Lane, and the Hamilton Park and Ride site where commuters often start or finish a journey. School-time traffic around estate entrances and busy periods near the shopping centre can slow buses, which is why many residents prefer a pre-booked taxi with a confirmed ETA. Whether you need a morning commute, an afternoon trip with children, or an evening return after shopping, we agree a practical pickup point so boarding stays quick and safe.",
-      "Among taxi companies in Hamilton, Aylestone Kings is known for transparent fixed pricing — no meter surprises and no surge multipliers on early airport mornings. Our core services include 24/7 availability, fixed prices confirmed at booking, DBS-checked licensed drivers, airport transfers to all major UK airports, standing school-run contracts, and shopping trips with room for bags. We also handle hospital appointments, station connections, and late-night returns when public transport options are limited.",
+      "Among taxi companies in Hamilton, Aylestone Taxis is known for transparent fixed pricing — no meter surprises and no surge multipliers on early airport mornings. Our core services include 24/7 availability, fixed prices confirmed at booking, DBS-checked licensed drivers, airport transfers to all major UK airports, standing school-run contracts, and shopping trips with room for bags. We also handle hospital appointments, station connections, and late-night returns when public transport options are limited.",
       "Hamilton sits close to neighbouring Thurmaston and Syston, and we cover that wider north Leicester corridor without boundary surcharges. Our dispatch team manages high volumes on the A563 and A6 approaches, so ETAs stay realistic when ring-road traffic builds at peak times. Passengers benefit from professional communication, comfortable saloons and MPVs when needed, and a service standard focused on repeat reliability for households that book week after week.",
       "For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — visit /airport-transfers-leicester. Neighbouring Syston passengers use the same fleet and pricing standards; if you are comparing north Leicester coverage, see /taxis-in/syston for that area too. To review fare bands before you confirm, check /pricing so your Hamilton journey plan is clear from the first enquiry.",
     ],
@@ -1008,7 +1008,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "What taxi companies in Hamilton offer fixed prices?",
         answer:
-          "Aylestone Kings offers fixed prices on agreed Hamilton routes — you receive your fare before the car arrives, with no meter running on airport or city-centre journeys. Call 0116 233 8888 or book online for an upfront quote.",
+          "Aylestone Taxis offers fixed prices on agreed Hamilton routes — you receive your fare before the car arrives, with no meter running on airport or city-centre journeys. Call 0116 233 8888 or book online for an upfront quote.",
       },
       {
         question: "How much is a taxi from Hamilton to Leicester city centre?",
@@ -1024,11 +1024,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "glen-parva": {
     bodyParagraphs: [
-      "Glen Parva combines village-edge character with direct links into Leicester's southern corridor, and travel needs here are often practical and repeat-based. Residents frequently book taxis for work, education, healthcare, and family logistics where consistent timing is more important than occasional convenience. Aylestone Kings serves Glen Parva with reliable local coverage and straightforward booking support, including journeys that start early, finish late, or require clear return scheduling.",
+      "Glen Parva combines village-edge character with direct links into Leicester's southern corridor, and travel needs here are often practical and repeat-based. Residents frequently book taxis for work, education, healthcare, and family logistics where consistent timing is more important than occasional convenience. Aylestone Taxis serves Glen Parva with reliable local coverage and straightforward booking support, including journeys that start early, finish late, or require clear return scheduling.",
       "A typical taxi from Glen Parva to Leicester city centre takes around 20 minutes via the A426 and city approaches. For airport travel, East Midlands Airport is usually the nearest major terminal, commonly around 30 to 35 minutes through A563 and M1 links. Standard fares from Glen Parva to EMA are generally in the GBP 40 to GBP 52 range, and we provide a clear fare expectation before you confirm the booking.",
       "Two landmarks that regularly appear in bookings are Glen Parva Manor and HMP Leicester visitors' routes via the Glen Parva area, alongside frequent trips toward South Leicestershire College and local community facilities. We also complete regular transfers to Fosse Park and Leicester hospitals. If access is restricted at the requested pickup location, drivers can suggest a practical nearby collection point to keep the trip efficient.",
       "Many Glen Parva journeys are repeat patterns, such as weekday appointments, school schedules, or recurring work travel. We support those patterns with pre-booked slots and clear confirmation messages that reduce uncertainty. For one-off requests, the process remains simple and responsive, with realistic ETA guidance and route planning based on live road conditions rather than assumptions.",
-      "Aylestone Kings is particularly effective in Glen Parva because we are already active throughout south Leicester and understand the local access roads, traffic rhythms, and common destination patterns. That local knowledge helps maintain punctuality across both short local runs and longer airport trips. Customers benefit from licensed drivers, professional communication, and dependable service standards every day of the week.",
+      "Aylestone Taxis is particularly effective in Glen Parva because we are already active throughout south Leicester and understand the local access roads, traffic rhythms, and common destination patterns. That local knowledge helps maintain punctuality across both short local runs and longer airport trips. Customers benefit from licensed drivers, professional communication, and dependable service standards every day of the week.",
       "If you are planning flight travel, review /airport-transfers-leicester for transfer details first. For transparent fare guidance, check /pricing before finalising your booking. This keeps Glen Parva passengers informed on both time and cost before they travel.",
     ],
     faqs: [
@@ -1054,7 +1054,7 @@ const areaContent: Record<string, AreaContent> = {
     body: (
       <div className="space-y-4">
         <p className="text-gray-700">
-          Aylestone is the heart of our operation. Aylestone Kings has been based on Aylestone Road since 1995, which
+          Aylestone is the heart of our operation. Aylestone Taxis has been based on Aylestone Road since 1995, which
           means licensed drivers available through Aylestone Taxis know every street, every shortcut, and every regular
           pickup point in the area. From Grace Road to the Aylestone Meadows, from Saffron Lane to the canal walk — we
           cover it all.
@@ -1104,7 +1104,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Eyres Monsell is a residential estate in south Leicester, sitting between Aylestone and Glen Parva. It&apos;s
-          a close-knit community and Aylestone Kings — based just a short distance away on Aylestone Road — has been
+          a close-knit community and Aylestone Taxis — based just a short distance away on Aylestone Road — has been
           the go-to taxi service for Eyres Monsell residents for many years. We&apos;re one of the closest taxi
           companies to the estate and can typically be there within 5–10 minutes.
         </p>
@@ -1137,7 +1137,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Glen Parva is a quiet residential village on the southern edge of Leicester, bordering Wigston and Blaby.
-          Popular with families for its green spaces and community feel, Glen Parva is an area Aylestone Kings has
+          Popular with families for its green spaces and community feel, Glen Parva is an area Aylestone Taxis has
           served for decades, providing reliable taxi service for local journeys and longer trips alike.
         </p>
         <p className="text-gray-700">
@@ -1170,7 +1170,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Braunstone Town is a civil parish in Blaby district, just west of the city of Leicester, covering a larger
-          area than the Braunstone ward within Leicester itself. Aylestone Kings covers both Braunstone and Braunstone
+          area than the Braunstone ward within Leicester itself. Aylestone Taxis covers both Braunstone and Braunstone
           Town with full 24/7 taxi service — from Braunstone Lane East and Kingsway to the residential streets
           spreading towards Enderby and Narborough.
         </p>
@@ -1205,7 +1205,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Groby is a pleasant village in Hinckley and Bosworth district, sitting north-west of Leicester on the edge of
           Charnwood Forest. With its village feel, good schools, and rural setting, Groby attracts families who want
-          space without being too far from the city. Aylestone Kings provides professional 24/7 taxi service throughout
+          space without being too far from the city. Aylestone Taxis provides professional 24/7 taxi service throughout
           Groby and the surrounding area.
         </p>
         <p className="text-gray-700">
@@ -1238,7 +1238,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Wigston Fields is a leafy residential area on the eastern side of Wigston, known for its mature housing stock
           and quiet streets. It borders Oadby to the east and Wigston Magna to the west, and sits in a pleasant part of
-          south Leicestershire that&apos;s popular with families and retirees. Aylestone Kings covers Wigston Fields
+          south Leicestershire that&apos;s popular with families and retirees. Aylestone Taxis covers Wigston Fields
           with reliable, professional 24/7 taxi service.
         </p>
         <p className="text-gray-700">
@@ -1270,7 +1270,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Broughton Astley is one of south Leicestershire&apos;s largest villages — a rapidly growing community with a
-          strong local identity, good schools, and excellent road links via the B4114 and A426. Aylestone Kings covers
+          strong local identity, good schools, and excellent road links via the B4114 and A426. Aylestone Taxis covers
           Broughton Astley with professional, 24/7 taxi service for all journey types.
         </p>
         <p className="text-gray-700">
@@ -1303,7 +1303,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Cosby is a traditional Leicestershire village south of Leicester, sitting between Blaby and Broughton Astley
-          along the B4114. It&apos;s a peaceful, well-regarded community and Aylestone Kings covers Cosby and the
+          along the B4114. It&apos;s a peaceful, well-regarded community and Aylestone Taxis covers Cosby and the
           surrounding area with professional 24/7 taxi service for both local journeys and longer trips.
         </p>
         <p className="text-gray-700">
@@ -1336,7 +1336,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Countesthorpe is a busy village in south Leicestershire, one of the larger villages in the Blaby district and
           growing steadily with new housing. With a secondary school, local shops, and a good community infrastructure,
-          it&apos;s a popular place to live — and Aylestone Kings provides reliable 24/7 taxi coverage for
+          it&apos;s a popular place to live — and Aylestone Taxis provides reliable 24/7 taxi coverage for
           Countesthorpe residents.
         </p>
         <p className="text-gray-700">
@@ -1370,7 +1370,7 @@ const areaContent: Record<string, AreaContent> = {
           Kibworth is a charming pair of villages — Kibworth Beauchamp and Kibworth Harcourt — sitting on the A6 about
           10 miles south of Leicester. Known for their period architecture, independent shops, and strong community
           spirit, the Kibworths are popular with families and those who want a more rural setting without sacrificing
-          convenient access to Leicester. Aylestone Kings provides professional 24/7 taxi coverage throughout both
+          convenient access to Leicester. Aylestone Taxis provides professional 24/7 taxi coverage throughout both
           villages and the surrounding area.
         </p>
         <p className="text-gray-700">
@@ -1404,7 +1404,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Lutterworth is a small market town in south Leicestershire, historically significant as the home of John
           Wycliffe and today a thriving community close to the M1 and M6. It&apos;s a popular base for logistics and
-          distribution businesses, and Aylestone Kings covers Lutterworth and the surrounding area with professional
+          distribution businesses, and Aylestone Taxis covers Lutterworth and the surrounding area with professional
           24/7 taxi service.
         </p>
         <p className="text-gray-700">
@@ -1442,7 +1442,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Whetstone is a village in Blaby district, south of Leicester, sitting between Blaby and Countesthorpe along
-          the B4114. It&apos;s a quiet residential community and Aylestone Kings covers Whetstone with reliable 24/7
+          the B4114. It&apos;s a quiet residential community and Aylestone Taxis covers Whetstone with reliable 24/7
           taxi service for all journey types — from quick local rides to long-distance airport transfers.
         </p>
         <p className="text-gray-700">
@@ -1473,7 +1473,7 @@ const areaContent: Record<string, AreaContent> = {
     body: (
       <div className="space-y-4">
         <p className="text-gray-700">
-          De Montfort University sits right in the heart of Leicester, and Aylestone Kings is one of the most popular
+          De Montfort University sits right in the heart of Leicester, and Aylestone Taxis is one of the most popular
           taxi services for DMU students and staff. Whether you&apos;re moving into halls at the start of term,
           catching an early flight home at the end of the semester, heading to a night out in the city, or making a
           late-night journey back to your accommodation, we&apos;re here 24 hours a day.
@@ -1506,7 +1506,7 @@ const areaContent: Record<string, AreaContent> = {
     body: (
       <div className="space-y-4">
         <p className="text-gray-700">
-          The University of Leicester campus on University Road is one of Aylestone Kings&apos; busiest pickup
+          The University of Leicester campus on University Road is one of Aylestone Taxis&apos; busiest pickup
           locations. Students, academic staff, and visitors use us regularly for everything from late-night pickups
           after library sessions to airport transfers at the start and end of term.
         </p>
@@ -1540,7 +1540,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Stoneygate is one of Leicester&apos;s most affluent and attractive suburbs — a Victorian conservation area of
           wide tree-lined avenues, large detached houses, and independent shops and restaurants along Francis Road and
-          London Road. Aylestone Kings covers Stoneygate with professional, discreet taxi service 24 hours a day.
+          London Road. Aylestone Taxis covers Stoneygate with professional, discreet taxi service 24 hours a day.
         </p>
         <p className="text-gray-700">
           The area is popular with Leicester&apos;s medical community — many consultants and senior staff at Leicester
@@ -1578,7 +1578,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           South Wigston is a working-class residential community immediately south of Wigston, with its own railway
-          station providing regular services into Leicester and onwards to Nuneaton. Aylestone Kings covers South
+          station providing regular services into Leicester and onwards to Nuneaton. Aylestone Taxis covers South
           Wigston with fast, affordable 24/7 taxi service — including pickups from the railway station at any hour.
         </p>
         <p className="text-gray-700">
@@ -1616,7 +1616,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Humberstone is an east Leicester suburb sitting between the city and the Hamilton estate, along the A47
-          corridor. Aylestone Kings covers Humberstone and the surrounding area — including Humberstone Road,
+          corridor. Aylestone Taxis covers Humberstone and the surrounding area — including Humberstone Road,
           Humberstone Gate, and the residential streets around Netherhall — with fast, professional taxi service around
           the clock.
         </p>
@@ -1649,7 +1649,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Thurnby Lodge is a residential estate on the eastern edge of Leicester, bordering the villages of Thurnby and
-          Scraptoft. It&apos;s a quiet, community-focused area and Aylestone Kings covers Thurnby Lodge and the nearby
+          Scraptoft. It&apos;s a quiet, community-focused area and Aylestone Taxis covers Thurnby Lodge and the nearby
           villages with reliable 24/7 taxi service for all journey types.
         </p>
         <p className="text-gray-700">
@@ -1681,7 +1681,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Westcotes is an inner-city residential area in west Leicester, just a short distance from the city centre and
           the vibrant Narborough Road — one of the most diverse and foodie-friendly streets in the East Midlands.
-          Aylestone Kings covers Westcotes and the Narborough Road corridor with fast, 24/7 taxi service.
+          Aylestone Taxis covers Westcotes and the Narborough Road corridor with fast, 24/7 taxi service.
         </p>
         <p className="text-gray-700">
           The area is well connected to the city centre, with Narborough Road providing a direct route in and out. Our
@@ -1713,7 +1713,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Coalville is a large town in north-west Leicestershire, the main commercial centre for the National Forest
           area. Situated around 13 miles from Leicester city centre, Coalville has strong transport links via the A511
-          and A50, and Aylestone Kings provides professional 24/7 taxi service throughout the town and surrounding
+          and A50, and Aylestone Taxis provides professional 24/7 taxi service throughout the town and surrounding
           villages.
         </p>
         <p className="text-gray-700">
@@ -1742,7 +1742,7 @@ const areaContent: Record<string, AreaContent> = {
       {
         question: "Is there a 24-hour taxi service in Coalville?",
         answer:
-          "Yes — Aylestone Kings operates 24/7 in Coalville. Pre-booking is recommended for very early or late-night journeys.",
+          "Yes — Aylestone Taxis operates 24/7 in Coalville. Pre-booking is recommended for very early or late-night journeys.",
       },
     ],
   },
@@ -1752,7 +1752,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Melton Mowbray is a historic market town in north-east Leicestershire — famous for its pork pies and Stilton
-          cheese, its thriving Tuesday market, and its strong rural community. Aylestone Kings covers Melton Mowbray
+          cheese, its thriving Tuesday market, and its strong rural community. Aylestone Taxis covers Melton Mowbray
           and the surrounding villages with professional taxi service 24 hours a day, 365 days a year.
         </p>
         <p className="text-gray-700">
@@ -1791,7 +1791,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Market Harborough is a prosperous market town in south Leicestershire, popular with families and
           professionals drawn to its excellent schools, beautiful town centre, and strong rail connections to London St
-          Pancras and Leicester. Aylestone Kings provides professional 24/7 taxi coverage across Market Harborough and
+          Pancras and Leicester. Aylestone Taxis provides professional 24/7 taxi coverage across Market Harborough and
           the surrounding villages.
         </p>
         <p className="text-gray-700">
@@ -1830,7 +1830,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Rushey Mead is a diverse residential area in north Leicester, known for its strong community life and its
-          position along the A607 Melton Road corridor. Aylestone Kings covers all of Rushey Mead — from Melton Road
+          position along the A607 Melton Road corridor. Aylestone Taxis covers all of Rushey Mead — from Melton Road
           and Red Hill Circle to the residential streets around Rushey Mead Academy and beyond — with professional 24/7
           taxi service.
         </p>
@@ -1869,7 +1869,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Hinckley is a busy market town in south-west Leicestershire, around 13 miles from Leicester city centre.
-          It&apos;s a hub for manufacturing, logistics, and retail — and Aylestone Kings provides a dependable taxi
+          It&apos;s a hub for manufacturing, logistics, and retail — and Aylestone Taxis provides a dependable taxi
           service for Hinckley residents and businesses who need professional, reliable transport at any hour.
         </p>
         <p className="text-gray-700">
@@ -1909,7 +1909,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Thurmaston is a busy village on the north-eastern edge of Leicester, sandwiched between the city and the
           Syston area. It&apos;s well known for Thurmaston Shopping Centre — one of the larger retail parks in the
-          area — and has a growing residential population along the A6 corridor. Aylestone Kings covers all of
+          area — and has a growing residential population along the A6 corridor. Aylestone Taxis covers all of
           Thurmaston with professional taxi service 24 hours a day.
         </p>
         <p className="text-gray-700">
@@ -1948,7 +1948,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Syston is a growing market town north of Leicester with a strong local identity and excellent transport links.
           With its own railway station offering direct services to Leicester and Nottingham, Syston is well connected —
-          but for airport runs, hospital trips, and late-night journeys, Aylestone Kings provides the comfortable,
+          but for airport runs, hospital trips, and late-night journeys, Aylestone Taxis provides the comfortable,
           on-demand service that rail simply can&apos;t match.
         </p>
         <p className="text-gray-700">
@@ -1986,7 +1986,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Birstall is a thriving village north of Leicester, anchored by major retail parks and strong local amenities.
-          Aylestone Kings covers all of Birstall with fast, professional taxi service every hour of the day.
+          Aylestone Taxis covers all of Birstall with fast, professional taxi service every hour of the day.
         </p>
         <p className="text-gray-700">
           We pick up from Birstall&apos;s residential streets, local shops, and routes towards the A6. For shoppers with
@@ -2024,7 +2024,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Hamilton is a large modern housing estate in north-east Leicester — one of the city&apos;s biggest
           residential developments, built around the A6 corridor and growing steadily with new homes and facilities.
-          Aylestone Kings covers all of Hamilton, including the newer streets around Netherhall and Thurncourt, with
+          Aylestone Taxis covers all of Hamilton, including the newer streets around Netherhall and Thurncourt, with
           24/7 taxi service for residents at all hours.
         </p>
         <p className="text-gray-700">
@@ -2062,7 +2062,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Beaumont Leys is one of Leicester&apos;s largest housing areas, sitting north-west of the city with its own
-          shopping centre, schools, and community facilities. Aylestone Kings provides full taxi coverage across
+          shopping centre, schools, and community facilities. Aylestone Taxis provides full taxi coverage across
           Beaumont Leys — from the shopping centre to Mossdale Meadows, Strasbourg Drive, and the surrounding
           residential streets — 24 hours a day.
         </p>
@@ -2102,7 +2102,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Leicester city centre is our busiest area — and for good reason. From the Highcross shopping centre to
           Leicester Market, from the Curve Theatre to the Golden Mile, the city centre generates thousands of taxi
-          journeys every week, and Aylestone Kings is there for all of them.
+          journeys every week, and Aylestone Taxis is there for all of them.
         </p>
         <p className="text-gray-700">
           We cover every corner of the city centre: Granby Street, Gallowtree Gate, Charles Street, New Walk, Waterloo
@@ -2149,7 +2149,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Oadby is one of Leicester&apos;s most desirable residential areas, sitting just four miles south-east of the
-          city centre along the A6 corridor. Aylestone Kings has been serving Oadby passengers since 1995 — whether you
+          city centre along the A6 corridor. Aylestone Taxis has been serving Oadby passengers since 1995 — whether you
           need a ride into town, a school run, or an early-morning airport transfer, our drivers know every road in the
           area.
         </p>
@@ -2239,7 +2239,7 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Belgrave is one of Leicester&apos;s most vibrant northern suburbs, famous for its Golden Mile — the stretch of
           Belgrave Road packed with jewellery shops, sari stores, and some of Leicester&apos;s best South Asian
-          restaurants. It&apos;s a busy, lively area and Aylestone Kings has been serving Belgrave residents and
+          restaurants. It&apos;s a busy, lively area and Aylestone Taxis has been serving Belgrave residents and
           visitors for over 30 years.
         </p>
         <p className="text-gray-700">
@@ -2278,7 +2278,7 @@ const areaContent: Record<string, AreaContent> = {
       <div className="space-y-4">
         <p className="text-gray-700">
           Spinney Hills is a densely populated, diverse residential area in east Leicester, sitting between the city
-          centre and the Evington and Highfields districts. Aylestone Kings provides a fast, dependable taxi service
+          centre and the Evington and Highfields districts. Aylestone Taxis provides a fast, dependable taxi service
           throughout Spinney Hills — from East Park Road and Gwendolen Road through to Melbourne Road and the
           surrounding streets.
         </p>
@@ -2491,10 +2491,46 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     ? {
         body: (
           <div className="space-y-4">
-            {selectedPriorityContent.bodyParagraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 48)} className="text-gray-700">
-                {paragraph}
-              </p>
+            {selectedPriorityContent.bodyParagraphs.map((paragraph, index) => (
+              <div key={paragraph.slice(0, 48)}>
+                <p className="text-gray-700">{paragraph}</p>
+                {slug === "clarendon-park" && index === 1 ? (
+                  <p className="text-gray-700">
+                    Our{" "}
+                    <Link href="/student-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      student taxi Leicester
+                    </Link>{" "}
+                    service covers lecture runs, late nights, and end-of-term airport transfers from Clarendon Park.
+                  </p>
+                ) : null}
+                {slug === "knighton" && index === 1 ? (
+                  <p className="text-gray-700">
+                    Our{" "}
+                    <Link href="/student-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      student taxi Leicester
+                    </Link>{" "}
+                    service covers DMU campus runs, late nights, and end-of-term travel from Knighton.
+                  </p>
+                ) : null}
+                {slug === "knighton" && index === 0 ? (
+                  <p className="text-gray-700">
+                    With De Montfort Hall close by, Knighton is also a practical pickup area for our{" "}
+                    <Link href="/prom-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      prom taxi Leicester
+                    </Link>{" "}
+                    service on prom night.
+                  </p>
+                ) : null}
+                {slug === "highfields" && index === 5 ? (
+                  <p className="text-gray-700">
+                    With both universities nearby, many students in Highfields rely on our{" "}
+                    <Link href="/student-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      student taxi Leicester
+                    </Link>{" "}
+                    service for campus trips and end-of-term moves.
+                  </p>
+                ) : null}
+              </div>
             ))}
             <p className="text-gray-700">
               Need a detailed airport route breakdown? Visit{" "}
@@ -2639,7 +2675,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                         Taxi Numbers in Market Harborough
                       </h2>
                       <p className="text-gray-700 mb-4">
-                        If you are searching for taxi numbers in Market Harborough, Aylestone Kings provides reliable
+                        If you are searching for taxi numbers in Market Harborough, Aylestone Taxis provides reliable
                         coverage across the town centre, surrounding villages, and popular routes to Leicester and East
                         Midlands Airport. Our booking line is open around the clock — call{" "}
                         <Link
@@ -2651,7 +2687,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                         to arrange a local pickup, station transfer, or airport journey at any time of day or night.
                       </p>
                       <p className="text-gray-700 mb-4">
-                        Among Market Harborough taxi companies, Aylestone Kings is known for fixed, upfront pricing,
+                        Among Market Harborough taxi companies, Aylestone Taxis is known for fixed, upfront pricing,
                         licensed drivers, and regular service to key local points including the railway station, The
                         Square, and routes to Foxton Locks. Whether you need a same-day taxi or want to pre-book for a
                         morning train, our team responds quickly with clear fare confirmation before your journey
@@ -3722,7 +3758,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
                   <h2 className="text-2xl font-semibold text-gray-900 mb-3">Taxis in Beaumont Leys — Shopping Centre, City &amp; EMA</h2>
                   <p className="text-gray-700 mb-3">
-                    Beaumont Leys is a key area we serve every day. Whether you need a taxi from <strong>Beaumont Leys Shopping Centre</strong>, the surrounding estates or a ride into Leicester or the airport, Aylestone Kings provides reliable, fixed-fare taxis across Beaumont Leys – so you have a trusted local option alongside any other taxi service in the area.
+                    Beaumont Leys is a key area we serve every day. Whether you need a taxi from <strong>Beaumont Leys Shopping Centre</strong>, the surrounding estates or a ride into Leicester or the airport, Aylestone Taxis provides reliable, fixed-fare taxis across Beaumont Leys – so you have a trusted local option alongside any other taxi service in the area.
                   </p>
                   <p className="text-gray-700 mb-3">
                     We pick up and drop off at the shopping centre, residential streets and local landmarks. Pre-book for airport runs or busy times, or call when you need an immediate taxi in Beaumont Leys.

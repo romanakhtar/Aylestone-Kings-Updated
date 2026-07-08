@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const canonicalUrl = `https://aylestone-taxis.co.uk/blog/${blog.id}`
 
-  const metaTitle = "metaTitle" in blog && blog.metaTitle ? blog.metaTitle : `${blog.title} | Aylestone Kings`
+  const metaTitle = "metaTitle" in blog && blog.metaTitle ? blog.metaTitle : `${blog.title} | Aylestone Taxis`
   const metaDescription = "metaDescription" in blog && blog.metaDescription ? blog.metaDescription : blog.excerpt
 
   return {
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: metaDescription,
       url: canonicalUrl,
       type: "article",
-      siteName: "Aylestone Kings",
+      siteName: "Aylestone Taxis",
       publishedTime: blog.date.length === 10 ? `${blog.date}T12:00:00+01:00` : blog.date,
       modifiedTime: blog.date.length === 10 ? `${blog.date}T12:00:00+01:00` : blog.date,
       images: blog.image ? [{ url: `https://aylestone-taxis.co.uk${blog.image}` }] : undefined,
@@ -93,7 +93,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="absolute inset-0 z-0">
           <Image
             src={blog.image}
-            alt={`${blog.title} - Aylestone Kings Leicester taxi service blog post background image`}
+            alt={`${blog.title} - Aylestone Taxis Leicester taxi service blog post background image`}
             fill
             sizes="100vw"
             className="object-cover opacity-20"
@@ -150,7 +150,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="relative h-96 mb-12 rounded-2xl overflow-hidden shadow-xl">
             <Image
               src={blog.image}
-              alt={`${blog.title} - Featured image for Aylestone Kings Leicester taxi service blog post about ${blog.category.toLowerCase()}`}
+              alt={`${blog.title} - Featured image for Aylestone Taxis Leicester taxi service blog post about ${blog.category.toLowerCase()}`}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               className="object-cover"
@@ -228,7 +228,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-[#0F0D3E] to-[#2E3C44] rounded-2xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Experience Aylestone Kings?
+              Ready to Experience Aylestone Taxis?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Book your ride today and experience the reliable, professional taxi service that Leicester locals trust.

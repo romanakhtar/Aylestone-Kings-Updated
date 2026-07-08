@@ -1611,7 +1611,7 @@ export default function JoinDriverPage() {
               What We Offer
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
-              As part of the Aylestone Kings team, you&apos;ll receive:
+              As part of the Aylestone Taxis team, you&apos;ll receive:
             </p>
           </div>
 
@@ -1768,7 +1768,7 @@ export default function JoinDriverPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-slate-600 font-light">
-              Common questions about joining Aylestone Kings
+              Common questions about joining Aylestone Taxis
             </p>
           </div>
 

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/cheap-taxi-leicester",
   },
   openGraph: {
-    title: "Cheap Taxi Leicester | Online Quotes | Aylestone Kings",
+    title: "Cheap Taxi Leicester | Online Quotes | Aylestone Taxis",
     description:
       "Affordable Leicester taxis with transparent pricing. Book online or call 0116 2338888 — 24/7.",
     url: "https://aylestone-taxis.co.uk/cheap-taxi-leicester",
@@ -64,7 +64,7 @@ export default function CheapTaxiLeicesterPage() {
                 Cheap Taxi Leicester - Affordable & Reliable
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Looking for a <strong>Cheap Taxi Leicester</strong>? Aylestone Kings offers affordable taxi services 
+                Looking for a <strong>Cheap Taxi Leicester</strong>? Aylestone Taxis offers affordable taxi services 
                 throughout Leicester with competitive prices, no hidden fees, and professional service. 
                 Our <strong>cheap 24 hour taxi Leicester</strong> is available day and night – quality service that doesn't compromise on safety or reliability.
               </p>

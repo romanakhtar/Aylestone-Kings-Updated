@@ -4,14 +4,14 @@ import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About Aylestone Kings Taxi Leicester | Since 1995",
+  title: "About Aylestone Taxis Taxi Leicester | Since 1995",
   description:
-    "About us at Aylestone, Leicester: Aylestone Kings taxi company since 1995, licensed private hire, DBS-checked drivers. Based on Aylestone Road — book on 0116 2338888 or online.",
+    "About us at Aylestone, Leicester: Aylestone Taxis taxi company since 1995, licensed private hire, DBS-checked drivers. Based on Aylestone Road — book on 0116 2338888 or online.",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/about",
   },
   openGraph: {
-    title: "About Aylestone Kings | Aylestone Road Leicester",
+    title: "About Aylestone Taxis | Aylestone Road Leicester",
     description: "Leicester's long-established taxi firm: licensed, insured, 24/7. Call 0116 2338888 or book online.",
     url: "https://aylestone-taxis.co.uk/about",
   },
@@ -26,7 +26,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/taxi-bridge-background.jpg"
-            alt="Leicester taxi service background showing Aylestone Kings professional transport vehicles and Leicester landmarks"
+            alt="Leicester taxi service background showing Aylestone Taxis professional transport vehicles and Leicester landmarks"
             fill
             sizes="100vw"
             className="object-cover opacity-20"
@@ -44,12 +44,12 @@ export default function AboutPage() {
             {/* Enhanced Badge */}
             <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium mb-8 shadow-lg">
               <Shield className="h-4 w-4 text-[#06A0A6] mr-3 animate-pulse" />
-              About Aylestone Kings
+              About Aylestone Taxis
             </div>
             
             {/* Enhanced Title */}
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              About <span className="text-[#06A0A6] drop-shadow-lg">Aylestone Kings</span>
+              About <span className="text-[#06A0A6] drop-shadow-lg">Aylestone Taxis</span>
             </h1>
             
             {/* Enhanced Description */}
@@ -119,7 +119,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-2xl"></div>
               <Image
                 src="/company-history.jpg"
-                alt="Aylestone Kings taxi company history - Leicester-based taxi service established in 1995, serving the community for over 30 years"
+                alt="Aylestone Taxis taxi company history - Leicester-based taxi service established in 1995, serving the community for over 30 years"
                 width={600}
                 height={400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
@@ -243,7 +243,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-                Why choose Aylestone Kings?
+                Why choose Aylestone Taxis?
               </h2>
             <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
               Discover what makes us the preferred choice for transportation in Leicester and the surrounding areas.              .

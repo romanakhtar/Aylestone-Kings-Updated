@@ -138,7 +138,7 @@ export default function AnimatedHero() {
           style={{
             backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(217, 179, 90, 0.1) 35px, rgba(217, 179, 90, 0.1) 70px)",
           }}
-          aria-label="Christmas themed background pattern overlay for Aylestone Kings taxi service"
+          aria-label="Christmas themed background pattern overlay for Aylestone Taxis taxi service"
         />
       )}
       
@@ -224,7 +224,7 @@ export default function AnimatedHero() {
                 ? "Pre-book with confidence. Licensed, safe and on time — every time."
                 : isSeasonal
                 ? siteData.homepage.hero.subtitle
-                : "Aylestone Kings provides fixed-price Leicester taxis with licensed local drivers. Whether you need Leicester cabs for a local trip, Leicester city taxis for an evening out, or a reliable airport transfer to East Midlands, Birmingham, Heathrow and all major UK airports — we're available 24/7."}
+                : "Aylestone Taxis provides fixed-price Leicester taxis with licensed local drivers. Whether you need Leicester cabs for a local trip, Leicester city taxis for an evening out, or a reliable airport transfer to East Midlands, Birmingham, Heathrow and all major UK airports — we're available 24/7."}
             </p>
 
             {/* Enhanced Features with Icons */}
@@ -317,7 +317,7 @@ export default function AnimatedHero() {
                 >
                   <Image
                     src={siteData.images.heroTaxi}
-                    alt="Modern white taxi Leicester from Aylestone Kings — professional fleet serving Leicester and the Midlands since 1995"
+                    alt="Modern white taxi Leicester from Aylestone Taxis — professional fleet serving Leicester and the Midlands since 1995"
                     width={280}
                     height={224}
                     sizes="(max-width: 768px) 80px, 280px"

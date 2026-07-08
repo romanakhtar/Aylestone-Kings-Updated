@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/services",
   },
   openGraph: {
-    title: "Taxi Services Leicester | Aylestone Kings",
+    title: "Taxi Services Leicester | Aylestone Taxis",
     description: "Airport, local, school runs, business travel — book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/services",
   },
@@ -123,7 +123,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/taxi-bridge-background.jpg"
-            alt="Aylestone Kings taxi services in Leicester"
+            alt="Aylestone Taxis taxi services in Leicester"
             fill
             sizes="100vw"
             className="object-cover opacity-20"

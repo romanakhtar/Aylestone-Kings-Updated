@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/travel",
   },
   openGraph: {
-    title: "Travel by Taxi Leicester | Aylestone Kings",
+    title: "Travel by Taxi Leicester | Aylestone Taxis",
     description: "Stations, airports, events — book on 0116 2338888 or online.",
     url: "https://aylestone-taxis.co.uk/travel",
   },
@@ -60,7 +60,7 @@ export default function OurTeamPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-2 hover-lift">
               <Image 
                 src="/leicester-train-station.webp" 
-                alt="Leicester train station taxi pickup service - Aylestone Kings reliable taxi transfers from Leicester Station to destinations across Leicester" 
+                alt="Leicester train station taxi pickup service - Aylestone Taxis reliable taxi transfers from Leicester Station to destinations across Leicester" 
                 fill 
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
@@ -78,7 +78,7 @@ export default function OurTeamPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-1 hover-lift">
               <Image
                 src="/de-montfort-university.webp"
-                alt="De Montfort University taxi service - Aylestone Kings reliable student transport to and from DMU campus in Leicester"
+                alt="De Montfort University taxi service - Aylestone Taxis reliable student transport to and from DMU campus in Leicester"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
@@ -148,7 +148,7 @@ export default function OurTeamPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-2 hover-lift">
               <Image 
                 src="/fosse-park.webp" 
-                alt="Fosse Park shopping centre taxi service - Aylestone Kings reliable transport to Fosse Park shopping destination in Leicester" 
+                alt="Fosse Park shopping centre taxi service - Aylestone Taxis reliable transport to Fosse Park shopping destination in Leicester" 
                 fill 
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
@@ -166,7 +166,7 @@ export default function OurTeamPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-1 hover-lift">
               <Image
                 src="/king-power-stadium.webp"
-                alt="King Power Stadium taxi service - Aylestone Kings reliable matchday transport to Leicester City FC stadium and events"
+                alt="King Power Stadium taxi service - Aylestone Taxis reliable matchday transport to Leicester City FC stadium and events"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
@@ -227,7 +227,7 @@ export default function OurTeamPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-professional-xl order-2 lg:order-2 hover-lift">
               <Image 
                 src="/airport-passage.jpg" 
-                alt="Airport transfer service from Leicester - Aylestone Kings professional taxi service to all major UK airports including Birmingham, East Midlands, Heathrow, Gatwick, Manchester, Luton, and Stansted" 
+                alt="Airport transfer service from Leicester - Aylestone Taxis professional taxi service to all major UK airports including Birmingham, East Midlands, Heathrow, Gatwick, Manchester, Luton, and Stansted" 
                 fill 
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="object-cover transition-smooth hover:scale-105"
@@ -252,7 +252,7 @@ export default function OurTeamPage() {
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-700 leading-relaxed">
-                 At Aylestone Kings, our mission is to deliver safe, reliable, and affordable transport services to our local community. Since 1995, we’ve been committed to making every journey smooth and stress-free.
+                 At Aylestone Taxis, our mission is to deliver safe, reliable, and affordable transport services to our local community. Since 1995, we’ve been committed to making every journey smooth and stress-free.
                  We aim to set the standard for local taxi services by combining experienced drivers, a well-maintained fleet, and exceptional customer care. Our goal is simple: to get you where you need to be, comfortably and on time — every time.
               </p>
             </div>
@@ -260,7 +260,7 @@ export default function OurTeamPage() {
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Our Vision</h3>
               <p className="text-gray-700 leading-relaxed">
                 Our vision is to become Leicester’s most trusted and forward-thinking taxi service — recognised for our commitment to reliability, customer satisfaction, and continuous improvement.  
-                We strive to grow alongside our community by embracing technology, enhancing accessibility, and reducing our environmental impact. We see a future where every journey with Aylestone Kings represents quality, care, and confidence.
+                We strive to grow alongside our community by embracing technology, enhancing accessibility, and reducing our environmental impact. We see a future where every journey with Aylestone Taxis represents quality, care, and confidence.
               </p>
             </div>
           </div>
