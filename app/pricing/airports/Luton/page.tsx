@@ -133,7 +133,7 @@ export default function LutonPage() {
               London&apos;s major low-cost hub. Luton sits north of London with
               quick access for European and domestic flights, and a pre-booked
               private transfer removes the stress of rail connections, parking
-              charges, and hauling cases across stations. Aylestone Kings
+              charges, and hauling cases across stations. Aylestone Taxis
               specialises in{" "}
               <strong>fixed-price Luton airport transfers</strong> for
               families, business travellers, and groups who want a single,
@@ -446,7 +446,7 @@ export default function LutonPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Why book your Luton transfer with Aylestone Kings?
+                Why book your Luton transfer with Aylestone Taxis?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Professional, reliable Leicester–LTN transfers with real people

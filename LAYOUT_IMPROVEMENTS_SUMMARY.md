@@ -1,7 +1,7 @@
 # Website Layout and Flow Improvements Summary
 
 ## Overview
-This document outlines the comprehensive improvements made to enhance the Aylestone Kings website's layout, flow, and professional appearance.
+This document outlines the comprehensive improvements made to enhance the Aylestone Taxis website's layout, flow, and professional appearance.
 
 ## Key Improvements Made
 
@@ -135,4 +135,4 @@ This document outlines the comprehensive improvements made to enhance the Aylest
 
 ## Conclusion
 
-These improvements significantly enhance the website's professional appearance and user experience while maintaining excellent performance and accessibility. The consistent design system and smooth animations create a cohesive, engaging experience that reflects the quality of Aylestone Kings' services.
+These improvements significantly enhance the website's professional appearance and user experience while maintaining excellent performance and accessibility. The consistent design system and smooth animations create a cohesive, engaging experience that reflects the quality of Aylestone Taxis' services.

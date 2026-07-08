@@ -8,12 +8,12 @@ import BlogListingJsonLd from "@/components/seo/BlogListingJsonLd"
 export const metadata: Metadata = {
   title: "Leicester Taxi Blog | Tips, Airports & Travel | Aylestone",
   description:
-    "Leicester taxi blog: airport guides, travel tips, and local transport advice from Aylestone Kings. Read free guides — book a taxi anytime on 0116 2338888 or online.",
+    "Leicester taxi blog: airport guides, travel tips, and local transport advice from Aylestone Taxis. Read free guides — book a taxi anytime on 0116 2338888 or online.",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/blog",
   },
   openGraph: {
-    title: "Leicester Taxi Blog | Aylestone Kings",
+    title: "Leicester Taxi Blog | Aylestone Taxis",
     description: "Guides and tips for Leicester travellers. Book taxis 24/7 on 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/blog",
   },
@@ -34,7 +34,7 @@ export default function BlogPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/taxi-bridge-background.jpg"
-            alt="Aylestone Kings blog background - Leicester taxi service blog featuring travel tips and transportation guides"
+            alt="Aylestone Taxis blog background - Leicester taxi service blog featuring travel tips and transportation guides"
             fill
             sizes="100vw"
             className="object-cover opacity-20"
@@ -57,7 +57,7 @@ export default function BlogPage() {
             
             {/* Title */}
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Aylestone Kings <span className="text-[#06A0A6] drop-shadow-lg">Blog</span>
+              Aylestone Taxis <span className="text-[#06A0A6] drop-shadow-lg">Blog</span>
             </h1>
             
             {/* Description */}
@@ -81,7 +81,7 @@ export default function BlogPage() {
                 <div className="relative h-64 overflow-hidden">
                   <Image
                     src={blog.image}
-                    alt={`${blog.title} - Aylestone Kings Leicester taxi service blog post about ${blog.category.toLowerCase()}`}
+                    alt={`${blog.title} - Aylestone Taxis Leicester taxi service blog post about ${blog.category.toLowerCase()}`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                     className="object-cover group-hover:scale-110 transition-transform duration-300"

@@ -2,7 +2,7 @@
 
 ## What Was Accomplished
 
-The Aylestone Kings website has been successfully refactored to use centralized data management instead of hardcoded content scattered across multiple files.
+The Aylestone Taxis website has been successfully refactored to use centralized data management instead of hardcoded content scattered across multiple files.
 
 ## Before vs After
 
@@ -63,7 +63,7 @@ The Aylestone Kings website has been successfully refactored to use centralized 
 ### Company Information
 ```typescript
 company: {
-  name: "Aylestone Kings",
+  name: "Aylestone Taxis",
   tagline: "Moving Aylestone forward",
   founded: "1995",
   founders: "Colin and Audrey Shanks",

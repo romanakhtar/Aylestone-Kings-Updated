@@ -61,7 +61,7 @@ function genericAreaFaqs(areaPlain: string): AreaFaq[] {
   return [
     {
       question: `Where can I find an affordable taxi in ${areaPlain}?`,
-      answer: `Aylestone Kings provides an affordable taxi in ${areaPlain} with fixed fares and no hidden charges. Book online, by phone, or WhatsApp for competitive rates.`,
+      answer: `Aylestone Taxis provides an affordable taxi in ${areaPlain} with fixed fares and no hidden charges. Book online, by phone, or WhatsApp for competitive rates.`,
     },
     {
       question: `Do you offer airport taxi services from ${areaPlain}?`,

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/taxi-leicester",
   },
   openGraph: {
-    title: "Taxi Leicester | Leicester Taxis | Aylestone Kings",
+    title: "Taxi Leicester | Leicester Taxis | Aylestone Taxis",
     description:
       "Trusted Leicester taxis since 1995. Licensed drivers, fast pick-ups, book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/taxi-leicester",
@@ -59,7 +59,7 @@ export default function TaxiLeicesterPage() {
                 Taxi Leicester - Your Trusted Local Taxi Service
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Looking for a reliable <strong>Taxi Leicester</strong>? Aylestone Kings has been Leicester's most trusted taxi service since 1995. 
+                Looking for a reliable <strong>Taxi Leicester</strong>? Aylestone Taxis has been Leicester's most trusted taxi service since 1995. 
                 Fast pick-ups, professional drivers, and competitive prices throughout Leicester and Leicestershire.
               </p>
 

@@ -59,7 +59,7 @@ export default function TaxiNearMeLeicesterPage() {
                 Taxi Near Me Leicester - Fast Local Pick-Ups
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Looking for a <strong>Taxi Near Me Leicester</strong>? Aylestone Kings provides fast, reliable taxi service 
+                Looking for a <strong>Taxi Near Me Leicester</strong>? Aylestone Taxis provides fast, reliable taxi service 
                 throughout Leicester with immediate pick-up in most areas. Find your nearest <strong>Taxi Near Me Leicester</strong> service now.
               </p>
 

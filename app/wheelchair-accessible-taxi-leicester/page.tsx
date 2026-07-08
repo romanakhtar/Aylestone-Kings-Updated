@@ -17,14 +17,14 @@ const PAGE_PHONE = "0116 233 8888"
 const CANONICAL = "https://aylestone-taxis.co.uk/wheelchair-accessible-taxi-leicester"
 
 export const metadata: Metadata = {
-  title: "Wheelchair Accessible Taxi Leicester | Aylestone Kings",
+  title: "Wheelchair Accessible Taxi Leicester | Aylestone Taxis",
   description:
-    "Need a wheelchair accessible taxi in Leicester? Aylestone Kings provides safe, comfortable wheelchair accessible vehicles across Leicester. Pre-book online or call 0116 233 8888",
+    "Need a wheelchair accessible taxi in Leicester? Aylestone Taxis provides safe, comfortable wheelchair accessible vehicles across Leicester. Pre-book online or call 0116 233 8888",
   alternates: {
     canonical: CANONICAL,
   },
   openGraph: {
-    title: "Wheelchair Accessible Taxi Leicester | Aylestone Kings",
+    title: "Wheelchair Accessible Taxi Leicester | Aylestone Taxis",
     description:
       "Safe, comfortable wheelchair accessible taxis across Leicester. Pre-book online or call 0116 233 8888.",
     url: CANONICAL,
@@ -57,7 +57,7 @@ export default function WheelchairAccessibleTaxiLeicesterPage() {
     {
       question: "Do you have wheelchair accessible taxis in Leicester?",
       answer:
-        "Yes. Aylestone Kings operates wheelchair accessible vehicles across Leicester and Leicestershire. Because availability is limited compared with standard saloons, we ask passengers to pre-book so we can assign the right vehicle for your journey.",
+        "Yes. Aylestone Taxis operates wheelchair accessible vehicles across Leicester and Leicestershire. Because availability is limited compared with standard saloons, we ask passengers to pre-book so we can assign the right vehicle for your journey.",
     },
     {
       question: "How do I book a wheelchair accessible taxi?",
@@ -88,7 +88,7 @@ export default function WheelchairAccessibleTaxiLeicesterPage() {
                 Wheelchair Accessible Taxi Leicester
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto leading-relaxed">
-                Aylestone Kings provides safe, comfortable wheelchair accessible taxis for hospital visits, local
+                Aylestone Taxis provides safe, comfortable wheelchair accessible taxis for hospital visits, local
                 appointments, and longer journeys across Leicester — with licensed drivers and advance booking to
                 guarantee the right vehicle.
               </p>
@@ -105,7 +105,7 @@ export default function WheelchairAccessibleTaxiLeicesterPage() {
             <div className="space-y-6 text-[#2E3C44] text-lg leading-relaxed">
               <p>
                 Getting around Leicester when you use a wheelchair should not mean compromising on comfort, dignity, or
-                punctuality. Aylestone Kings has provided taxi services across the city since 1995, and our wheelchair
+                punctuality. Aylestone Taxis has provided taxi services across the city since 1995, and our wheelchair
                 accessible vehicles are part of that long-standing commitment to passengers who need a little extra
                 space and the right equipment on board.
               </p>

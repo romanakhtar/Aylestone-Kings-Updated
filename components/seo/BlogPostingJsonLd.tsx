@@ -23,7 +23,7 @@ export default function BlogPostingJsonLd({
   datePublished,
   imageUrl,
   authorName,
-  publisherName = "Aylestone Kings",
+  publisherName = "Aylestone Taxis",
 }: Props) {
   const published =
     datePublished.length === 10 ? `${datePublished}T12:00:00+01:00` : datePublished
@@ -40,7 +40,7 @@ export default function BlogPostingJsonLd({
     isPartOf: {
       "@type": "Blog",
       "@id": `${SITE}/blog#blog`,
-      name: "Aylestone Kings Blog",
+      name: "Aylestone Taxis Blog",
       url: `${SITE}/blog`,
     },
     mainEntityOfPage: {

@@ -2,7 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Check, ArrowRight, Star, MapPin, Clock, Shield, ShieldCheck, BadgeCheck, Users, Car, Plane } from "@/lib/icons"
-import { Briefcase } from "lucide-react"
+import { Briefcase, Calendar, Sparkles } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import { onBookNowClick } from "@/lib/analytics"
 import dynamic from "next/dynamic"
@@ -127,7 +127,7 @@ export default function HomePageClient() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-2xl"></div>
               <Image
                 src={siteData.images.trustedTransport}
-                alt="Professional taxi drivers and vehicles representing Aylestone Kings trusted transport service in Leicester and Midlands"
+                alt="Professional taxi drivers and vehicles representing Aylestone Taxis trusted transport service in Leicester and Midlands"
                 width={600}
                 height={400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
@@ -219,7 +219,7 @@ export default function HomePageClient() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-2xl"></div>
               <Image
                 src="/Professional-in-car.jpg"
-                alt="Passengers enjoying comfortable and professional taxi service with Aylestone Kings in Leicester"
+                alt="Passengers enjoying comfortable and professional taxi service with Aylestone Taxis in Leicester"
                 width={600}
                 height={400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
@@ -247,7 +247,7 @@ export default function HomePageClient() {
                 to join our established team.
               </p>
               <p className="text-lg text-[#2E3C44] leading-relaxed max-w-3xl mx-auto">
-                With over 30 years of experience serving the Leicester community, Aylestone Kings offers a supportive,
+                With over 30 years of experience serving the Leicester community, Aylestone Taxis offers a supportive,
                 professional environment where drivers can thrive. Whether you&apos;re looking for full-time work or part-time
                 flexibility, we have opportunities that fit your lifestyle.
               </p>
@@ -324,7 +324,7 @@ export default function HomePageClient() {
 
             {/* Additional Benefits List */}
             <div className="bg-gradient-to-r from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-xl p-8 mb-12">
-              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-6 text-center">Why Choose Aylestone Kings?</h3>
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-6 text-center">Why Choose Aylestone Taxis?</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
@@ -394,7 +394,7 @@ export default function HomePageClient() {
             {/* CTA */}
             <div className="text-center">
               <p className="text-lg text-[#2E3C44] mb-6">
-                Ready to start your journey with Aylestone Kings? Apply today and join Leicester&apos;s most trusted taxi service.
+                Ready to start your journey with Aylestone Taxis? Apply today and join Leicester&apos;s most trusted taxi service.
               </p>
               <a href="/drivers" className="inline-block">
                 <button
@@ -419,7 +419,7 @@ export default function HomePageClient() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-2xl"></div>
               <Image
                 src="/business-leisure.webp"
-                alt="Professional business travel solutions and corporate taxi services by Aylestone Kings for Leicester businesses"
+                alt="Professional business travel solutions and corporate taxi services by Aylestone Taxis for Leicester businesses"
                 width={600}
                 height={400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
@@ -461,7 +461,7 @@ export default function HomePageClient() {
               <div className="absolute inset-0 rounded-2xl"></div>
               <Image
                 src="/app-screen-tracking.webp"
-                alt="Aylestone Kings mobile app screenshot showing real-time taxi tracking and booking features for Leicester customers"
+                alt="Aylestone Taxis mobile app screenshot showing real-time taxi tracking and booking features for Leicester customers"
                 width={600}
                 height={400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
@@ -501,7 +501,7 @@ export default function HomePageClient() {
       <section className="relative py-20 text-white overflow-hidden min-h-[280px]">
         <Image
           src="/black-car.webp"
-          alt="Luxury black executive taxi vehicle from Aylestone Kings premium fleet"
+          alt="Luxury black executive taxi vehicle from Aylestone Taxis premium fleet"
           fill
           sizes="100vw"
           className="object-cover object-right"
@@ -544,7 +544,7 @@ export default function HomePageClient() {
               <div className="absolute inset-0 rounded-2xl blur-xl"></div>
               <Image
                 src="/eco-friendly-taxi-side.webp"
-                alt="Eco-friendly and sustainable taxi vehicle from Aylestone Kings green fleet in Leicester"
+                alt="Eco-friendly and sustainable taxi vehicle from Aylestone Taxis green fleet in Leicester"
                 width={600}
                 height={300}
                 sizes="(max-width: 768px) 100vw, 600px"
@@ -623,6 +623,54 @@ export default function HomePageClient() {
               </h3>
               <p className="text-[#2E3C44] mb-6">
                 Business travel and staff transport with monthly invoicing, account setup, and dedicated support.
+              </p>
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
+                Learn More
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link href="/prom-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
+                <Sparkles className="h-8 w-8 text-[#06A0A6]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6]">
+                Prom taxi Leicester
+              </h3>
+              <p className="text-[#2E3C44] mb-6">
+                Fixed-price prom night transport with group bookings, photo-stop flexibility, and smart vehicles.
+              </p>
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
+                Learn More
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link href="/student-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
+                <Users className="h-8 w-8 text-[#06A0A6]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6]">
+                Student taxi Leicester
+              </h3>
+              <p className="text-[#2E3C44] mb-6">
+                House moves, airport transfers, and group bookings for University of Leicester and DMU students.
+              </p>
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
+                Learn More
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link href="/match-day-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
+                <Calendar className="h-8 w-8 text-[#06A0A6]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6]">
+                Match day taxi Leicester
+              </h3>
+              <p className="text-[#2E3C44] mb-6">
+                Fixed-price taxis to King Power Stadium and Welford Road with no surge pricing on match days.
               </p>
               <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
                 Learn More

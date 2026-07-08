@@ -66,7 +66,7 @@ export default function ContactPage() {
  <div className="absolute inset-0 z-0">
  <Image
    src="/taxi-bridge-background.jpg"
-   alt="Aylestone Kings contact page background - Leicester taxi service contact information"
+   alt="Aylestone Taxis contact page background - Leicester taxi service contact information"
    fill
    sizes="100vw"
    className="object-cover opacity-20"
@@ -89,14 +89,14 @@ export default function ContactPage() {
    Contact Us
  </h1>
  <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed font-light mb-4">
-   Get in touch with Aylestone Kings for all your transportation needs
+   Get in touch with Aylestone Taxis for all your transportation needs
  </p>
 <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light">
   Available 24/7 to serve you with reliable and professional taxi services
 </p>
 </div>
 <p className="mt-6 text-sm md:text-base text-white/90 max-w-3xl mx-auto leading-relaxed">
- Aylestone Kings is a customer-facing brand of Aylestone Taxis. Bookings are arranged through Aylestone Taxis with licensed independent drivers.
+ Aylestone Taxis is a customer-facing brand of Aylestone Taxis. Bookings are arranged through Aylestone Taxis with licensed independent drivers.
 </p>
 </div>
 </section>

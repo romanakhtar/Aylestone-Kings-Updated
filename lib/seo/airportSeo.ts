@@ -46,7 +46,7 @@ export function buildAirportMetadata({
       title,
       description,
       url: `${siteUrl}${route}`,
-      siteName: "Aylestone Kings",
+      siteName: "Aylestone Taxis",
       locale: "en_GB",
       type: "website",
     },

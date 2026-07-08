@@ -69,7 +69,7 @@ export default function Footer() {
             
           }}
           role="img"
-          aria-label="Valentine's Day taxi service - Aylestone Kings Leicester"
+          aria-label="Valentine's Day taxi service - Aylestone Taxis Leicester"
         />
       )}
       {/* Christmas Footer Banner - Only on Homepage */}
@@ -77,7 +77,7 @@ export default function Footer() {
         <div className="w-full relative">
           <Image 
             src="/christmas-banner.jpg"
-            alt="Christmas banner decoration for Aylestone Kings taxi service"
+            alt="Christmas banner decoration for Aylestone Taxis taxi service"
             width={1920}
             height={200}
             className="w-full h-auto object-cover"
@@ -398,7 +398,7 @@ export default function Footer() {
               <p>
                 Aylestone Taxis acts as a booking and dispatch service introducing passengers to licensed independent drivers who provide the transport service.
               </p>
-              <p>Aylestone Kings is a trading name of Aylestone Taxis.</p>
+              <p>Aylestone Taxis is a trading name of Aylestone Taxis.</p>
               <p>
                 <span className="font-semibold">Operator:</span> Aylestone Taxis<br />
                 753A Aylestone Road, Leicester LE2 8TG

@@ -72,7 +72,7 @@ export default function StudentTaxiLeicesterPage() {
                 <strong>De Montfort University (DMU)</strong> students. Whether you need an{" "}
                 <strong>end-of-term house move</strong> with luggage space, an{" "}
                 <strong>airport or train station transfer</strong> home for the holidays, or a{" "}
-                <strong>group booking</strong> for your shared house, Aylestone Kings offers{" "}
+                <strong>group booking</strong> for your shared house, Aylestone Taxis offers{" "}
                 <strong>affordable fixed pricing</strong> with no surprise charges.
               </p>
 
@@ -297,7 +297,7 @@ export default function StudentTaxiLeicesterPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-                Why Leicester Students Choose Aylestone Kings
+                Why Leicester Students Choose Aylestone Taxis
               </h2>
             </div>
 

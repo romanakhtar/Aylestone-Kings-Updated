@@ -1,6 +1,6 @@
 # Data Structure Documentation
 
-This document explains how to use the centralized data structure for the Aylestone Kings website.
+This document explains how to use the centralized data structure for the Aylestone Taxis website.
 
 ## Overview
 
@@ -18,7 +18,7 @@ import { siteData } from "@/lib/data"
 
 ```tsx
 // Company information
-siteData.company.name                    // "Aylestone Kings"
+siteData.company.name                    // "Aylestone Taxis"
 siteData.company.tagline                 // "Moving Aylestone forward"
 siteData.company.founded                 // "1995"
 // Founders information removed
@@ -35,7 +35,7 @@ siteData.images.companyHistory           // "/company-history.jpg"
 // Page-specific content
 siteData.homepage.hero.title             // "Moving Aylestone forward"
 siteData.fleetPage.hero.title            // "Premium comfort, every ride, every time"
-siteData.companyPage.about.subtitle      // "Founded in 1995, Aylestone Kings started a mission..."
+siteData.companyPage.about.subtitle      // "Founded in 1995, Aylestone Taxis started a mission..."
 ```
 
 ## Data Structure

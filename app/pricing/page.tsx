@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     canonical: "https://aylestone-taxis.co.uk/pricing",
   },
   openGraph: {
-    title: "Leicester Airport Taxi Prices | Aylestone Kings",
+    title: "Leicester Airport Taxi Prices | Aylestone Taxis",
     description: "Transparent fixed fares from Leicester to UK airports. Book online or call 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/pricing",
   },

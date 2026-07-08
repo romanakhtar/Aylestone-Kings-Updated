@@ -20,14 +20,14 @@ const PROM_PHONE = "0116 233 8888"
 export const metadata: Metadata = {
   title: "Prom Taxi Leicester — Smart Vehicles, Fixed Prices | Book 24/7",
   description:
-    "Looking for a prom taxi in Leicester? Aylestone Kings offers smart, fixed-price prom taxis with group bookings and patient drivers. Call 0116 233 8888 to book your prom night taxi.",
+    "Looking for a prom taxi in Leicester? Aylestone Taxis offers smart, fixed-price prom taxis with group bookings and patient drivers. Call 0116 233 8888 to book your prom night taxi.",
   alternates: {
     canonical: CANONICAL,
   },
   openGraph: {
     title: "Prom Taxi Leicester — Smart Vehicles, Fixed Prices | Book 24/7",
     description:
-      "Looking for a prom taxi in Leicester? Aylestone Kings offers smart, fixed-price prom taxis with group bookings and patient drivers. Call 0116 233 8888 to book your prom night taxi.",
+      "Looking for a prom taxi in Leicester? Aylestone Taxis offers smart, fixed-price prom taxis with group bookings and patient drivers. Call 0116 233 8888 to book your prom night taxi.",
     url: CANONICAL,
   },
 }
@@ -67,7 +67,7 @@ export default function PromTaxiLeicesterPage() {
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
                 Make prom night memorable with a <strong>prom taxi Leicester</strong> from
-                Aylestone Kings. We offer <strong>decorated and smart vehicle options</strong> on
+                Aylestone Taxis. We offer <strong>decorated and smart vehicle options</strong> on
                 request, <strong>group bookings</strong> for friends sharing one car at a{" "}
                 <strong>fixed price per vehicle — not per person</strong>, and{" "}
                 <strong>fixed pricing</strong> so parents can budget in advance with no surprise
@@ -313,7 +313,7 @@ export default function PromTaxiLeicesterPage() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-              More Transport from Aylestone Kings
+              More Transport from Aylestone Taxis
             </h2>
             <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto mb-10">
               Planning travel beyond prom night? We also provide airport runs and local taxis across
