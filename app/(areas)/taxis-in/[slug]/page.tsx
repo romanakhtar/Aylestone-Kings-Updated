@@ -183,9 +183,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 27. Stoneygate
   stoneygate: {
-    title: "Stoneygate Taxi Leicester | 24/7 Service",
+    title: "Taxis in Stoneygate Leicester — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Premium taxi service in Stoneygate, Leicester. Airport transfers, local rides, 24/7 availability. Licensed drivers. Call 0116 2338888.",
+      "Need a taxi in Stoneygate, Leicester? Aylestone Taxis offers fixed price taxis from Stoneygate 24/7. Airport transfers, corporate travel and local journeys. Call 0116 233 8888.",
   },
   // 28. South Wigston
   "south-wigston": {
@@ -310,6 +310,7 @@ type PriorityAreaSeoContent = {
 const AREA_CUSTOM_H1: Record<string, string> = {
   knighton: "Taxis in Knighton, Leicester",
   "clarendon-park": "Taxis in Clarendon Park, Leicester",
+  stoneygate: "Taxis in Stoneygate, Leicester",
   highfields: "Taxis in Highfields, Leicester",
   braunstone: "Taxis in Braunstone, Leicester",
   evington: "Taxis in Evington, Leicester",
@@ -451,6 +452,33 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
         question: "How long does a taxi from Clarendon Park to Leicester city centre take?",
         answer:
           "Most journeys from Clarendon Park to Leicester city centre take around 8–10 minutes in normal traffic via London Road or Welford Road. Rush-hour traffic can add a few minutes, so allow extra time during peak periods.",
+      },
+    ],
+  },
+  stoneygate: {
+    bodyParagraphs: [
+      "Stoneygate is one of Leicester's most sought-after residential addresses — a leafy Victorian and Edwardian suburb where wide tree-lined avenues, detached family homes, and the character of the Stoneygate Conservation Area set it apart from anywhere else in the city. Queens Road brings independent shops, delis, and cafes to your doorstep, London Road carries you north towards the University of Leicester and the city centre in minutes, and Victoria Park opens directly to the west for morning walks, weekend sport, and summer events. Aylestone Taxis has served south Leicester since 1995, and our Stoneygate passengers reflect the area's mix: affluent professionals commuting to offices and hospitals, families managing school runs and after-school clubs, and University of Leicester students in shared houses who want a dependable ride when the bus timetable does not fit.",
+      "Professionals living in Stoneygate value punctuality and discretion. Standing morning pickups to Leicester city centre, the Royal Infirmary, or business parks along the ring road mean you are not hunting for parking or waiting on an unreliable bus. Families in the conservation-area streets arrange regular school runs with consistent DBS-checked drivers where possible, and weekend trips to Victoria Park, Highcross, or relatives across Leicestershire are booked with a fixed fare confirmed upfront. Students from the University of Leicester — many in houses near London Road and the park — use us for lecture runs, library sessions, nights out, and term-start journeys to Leicester Railway Station with luggage.",
+      "Corporate travel is a regular request from Stoneygate. Account holders pre-book airport days, client meetings, and conference runs with a single point of contact and itemised billing. We cover executive saloons and larger vehicles for groups, and every driver is licensed by Leicester City Council and DBS checked before they carry passengers. Whether you need a same-day collection or a standing weekly schedule, our dispatch team confirms your price before the car is sent.",
+      "We quote fixed prices on agreed routes, so you know the fare before the vehicle arrives. Core services from Stoneygate include 24/7 local taxis, airport transfers to all major UK airports, corporate accounts, school-run standing bookings, and hospital appointments. Vehicles range from standard saloons for a solo commuter to estates and MPVs when you are travelling with luggage, children, or colleagues.",
+      "Typical journey times reflect Stoneygate's excellent position south of the city core: Leicester city centre is around 8–10 minutes in normal traffic via London Road, Leicester Railway Station is roughly 10 minutes, East Midlands Airport is around 25 minutes via the A563 and M1, and Birmingham Airport is about 50 minutes on a clear run. Example fares include Stoneygate to Leicester city centre from £5, Stoneygate to Leicester train station from £6, and Stoneygate to East Midlands Airport from £28 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Stoneygate sits alongside neighbouring Clarendon Park and borders Oadby and Knighton, and we cover the whole south Leicester area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a professional heading to an early meeting, a parent on the school run, or a student catching a late flight, Aylestone Taxis gives Stoneygate a taxi service built on fixed fares, licensed drivers, and round-the-clock availability.",
+    ],
+    faqs: [
+      {
+        question: "How much is a taxi from Stoneygate to Leicester city centre?",
+        answer:
+          "A taxi from Stoneygate to Leicester city centre typically starts from £5 depending on your exact pickup and drop-off points. Journey time is around 8–10 minutes in normal traffic via London Road. You will receive a fixed quote before you confirm.",
+      },
+      {
+        question: "Do you offer airport transfers from Stoneygate?",
+        answer:
+          "Yes. We provide fixed-fare airport transfers from Stoneygate to East Midlands, Birmingham, Heathrow, and all major UK airports. East Midlands Airport is around 25 minutes and fares typically start from £28. Your price is confirmed before you travel.",
+      },
+      {
+        question: "Can I book a corporate taxi from Stoneygate?",
+        answer:
+          "Yes. We offer corporate taxi accounts for Stoneygate businesses and regular commuters, including standing airport runs, client meetings, and itemised billing. Call 0116 233 8888 or book online to set up an account or pre-book a journey.",
       },
     ],
   },
@@ -1533,45 +1561,6 @@ const areaContent: Record<string, AreaContent> = {
       },
     ],
   },
-  // 27. Stoneygate
-  stoneygate: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Stoneygate is one of Leicester&apos;s most affluent and attractive suburbs — a Victorian conservation area of
-          wide tree-lined avenues, large detached houses, and independent shops and restaurants along Francis Road and
-          London Road. Aylestone Taxis covers Stoneygate with professional, discreet taxi service 24 hours a day.
-        </p>
-        <p className="text-gray-700">
-          The area is popular with Leicester&apos;s medical community — many consultants and senior staff at Leicester
-          Royal Infirmary and other hospitals live in Stoneygate — as well as professionals, families, and those who
-          simply appreciate a quality residential area close to the city. Our executive vehicles are particularly
-          popular in Stoneygate for business travel and airport runs.
-        </p>
-        <p className="text-gray-700">
-          Airport transfers from Stoneygate are efficient due to the area&apos;s easy access to the A6 and M1. East
-          Midlands Airport is approximately 30 minutes, and Birmingham Airport around 55 minutes — all with fixed,
-          pre-agreed fares and flight monitoring included.
-        </p>
-        <p className="text-gray-700">
-          For corporate travel, special occasions, or whenever you simply want a higher-spec vehicle and driver, our
-          executive taxi service is available on request. Call 0116 2338888 or book online.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "Do you offer executive taxis in Stoneygate?",
-        answer:
-          "Yes — our executive vehicle service is available in Stoneygate for airport runs, business travel, and special occasions. Please request when booking.",
-      },
-      {
-        question: "How far is Stoneygate from Leicester city centre?",
-        answer:
-          "Stoneygate is about 2 miles south of Leicester city centre — typically a 7–12 minute taxi journey via London Road.",
-      },
-    ],
-  },
   // 28. South Wigston
   "south-wigston": {
     body: (
@@ -2406,6 +2395,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const isBeaumontLeys = slug === "beaumont-leys"
   const isKnighton = slug === "knighton"
   const isClarendonPark = slug === "clarendon-park"
+  const isStoneygate = slug === "stoneygate"
   const isHighfields = slug === "highfields"
   const isBraunstone = slug === "braunstone"
   const isEvington = slug === "evington"
@@ -2519,6 +2509,15 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       prom taxi Leicester
                     </Link>{" "}
                     service on prom night.
+                  </p>
+                ) : null}
+                {slug === "stoneygate" && index === 1 ? (
+                  <p className="text-gray-700">
+                    Our{" "}
+                    <Link href="/student-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      student taxi Leicester
+                    </Link>{" "}
+                    service covers lecture runs, late nights, and end-of-term airport transfers from Stoneygate.
                   </p>
                 ) : null}
                 {slug === "highfields" && index === 5 ? (
@@ -3673,6 +3672,83 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     </li>
                     <li>Regular school runs with standing bookings</li>
                     <li>Retail park trips to Blaby Retail Park and Grove Farm Triangle</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {isStoneygate && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Stoneygate — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Queens Road, London Road, Victoria Park, and the Stoneygate Conservation Area are all within easy
+                    reach — making Stoneygate popular with professionals, families, and University of Leicester
+                    students. We also cover neighbouring{" "}
+                    <Link
+                      href="/taxis-in/clarendon-park"
+                      className="text-[#06A0A6] hover:underline underline-offset-2"
+                    >
+                      Clarendon Park
+                    </Link>{" "}
+                    and the wider south Leicester area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Stoneygate</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Stoneygate → Leicester city centre: around 8–10 minutes in normal traffic</li>
+                    <li>Stoneygate → Leicester Railway Station: around 10 minutes</li>
+                    <li>Stoneygate → East Midlands Airport (EMA): around 25 minutes</li>
+                    <li>Stoneygate → Birmingham Airport (BHX): around 50 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Stoneygate</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Stoneygate → Leicester city centre: from £5</li>
+                    <li>Stoneygate → Leicester Railway Station: from £6</li>
+                    <li>Stoneygate → East Midlands Airport: from £28</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Stoneygate</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including early mornings and late evenings</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>
+                      <Link
+                        href="/corporate-taxi-account-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Corporate travel
+                      </Link>{" "}
+                      with account billing and standing bookings
+                    </li>
+                    <li>Regular school runs with standing bookings</li>
                   </ul>
                   <div className="flex flex-col sm:flex-row gap-3 mt-4">
                     <Link
