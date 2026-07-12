@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /_next/
 
 Sitemap: https://aylestone-taxis.co.uk/sitemap.xml
