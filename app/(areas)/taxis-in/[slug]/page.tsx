@@ -105,9 +105,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 14. Thurmaston
   thurmaston: {
-    title: "Thurmaston Taxi Leicester | 24/7 Fixed Fares",
+    title: "Taxis in Thurmaston Leicester — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Reliable taxi service in Thurmaston, Leicestershire. Airport transfers, local rides, 24/7 availability. Licensed drivers. Call 0116 2338888.",
+      "Need a taxi in Thurmaston, Leicester? Aylestone Taxis offers fixed price taxis from Thurmaston 24/7. Airport transfers, shopping trips and local journeys. Call 0116 233 8888.",
   },
   // 15. Syston
   syston: {
@@ -311,6 +311,7 @@ const AREA_CUSTOM_H1: Record<string, string> = {
   knighton: "Taxis in Knighton, Leicester",
   "clarendon-park": "Taxis in Clarendon Park, Leicester",
   stoneygate: "Taxis in Stoneygate, Leicester",
+  thurmaston: "Taxis in Thurmaston, Leicester",
   highfields: "Taxis in Highfields, Leicester",
   braunstone: "Taxis in Braunstone, Leicester",
   evington: "Taxis in Evington, Leicester",
@@ -825,6 +826,33 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I arrange repeat weekday bookings from Syston?",
         answer: "Yes, regular recurring bookings can be set up for commuting, school, or appointment travel.",
+      },
+    ],
+  },
+  thurmaston: {
+    bodyParagraphs: [
+      "Thurmaston sits on the north-eastern edge of Leicester — a busy village where retail, residential streets, and commuter routes converge along the A607 and Melton Road corridor. Thurmaston Shopping Centre draws shoppers from across north Leicester, Barkby Road connects local estates to everyday amenities, Watermead Park offers lakeside walks and weekend family outings just minutes away, and Thurmaston Lane carries steady traffic between the village centre and the wider city. Aylestone Taxis has served Leicestershire since 1995, and our Thurmaston passengers reflect the area's day-to-day rhythm: families managing school runs and shopping trips, shoppers heading home from the retail park with bags to carry, and commuters relying on fixed-price taxis to reach Leicester city centre, the train station, or East Midlands Airport without hunting for parking.",
+      "Shoppers use us most around Thurmaston Shopping Centre and the surrounding retail stretches — pre-booking a return pickup after a long shop, or calling when bus times do not suit an evening trip home. Families in the streets off Barkby Road and Thurmaston Lane arrange standing school-run bookings with consistent DBS-checked drivers where possible, and weekend outings to Watermead Park or relatives across Leicestershire are booked with a fixed fare confirmed upfront. Every driver is licensed by Leicester City Council, and vehicles range from standard saloons for a quick local hop to estates when you are travelling with children, shopping, or luggage.",
+      "Commuters in Thurmaston value punctuality above almost everything else. Standing morning pickups into Leicester city centre, Leicester Railway Station, or business parks along the ring road mean you are not gambling on an unreliable bus or paying for city-centre parking every day. We quote fixed prices on agreed routes, so your weekly commute cost stays predictable — no surge pricing once the booking is confirmed. The same applies to airport days: pre-book a fixed-fare transfer to East Midlands or Birmingham and travel with luggage without a meter ticking up in traffic.",
+      "We operate 24/7 across Thurmaston with fixed prices confirmed before dispatch, DBS-checked licensed drivers, airport transfers to all major UK airports, shopping trips to Thurmaston Shopping Centre and other retail destinations, and school-run standing bookings. Whether you need a same-day collection from Barkby Road, a timed airport run before an early flight, or a regular weekday schedule, our dispatch team confirms your price before the car is sent.",
+      "Typical journey times reflect Thurmaston's strong position north of the city: Leicester city centre is around 15 minutes in normal traffic via the A607 or A563, Syston is roughly 10 minutes along Melton Road, East Midlands Airport is around 20 minutes via the M1, and Birmingham Airport is about 55 minutes on a clear run. Example fares include Thurmaston to Leicester city centre from £8, Thurmaston to Leicester train station from £9, and Thurmaston to East Midlands Airport from £25 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Thurmaston sits alongside neighbouring Syston and borders Hamilton and Birstall, and we cover the whole north-east Leicester area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a shopper heading home from the retail park, a parent on the school run, or a commuter catching an early train, Aylestone Taxis gives Thurmaston a taxi service built on fixed fares, licensed drivers, and round-the-clock availability.",
+    ],
+    faqs: [
+      {
+        question: "How much is a taxi from Thurmaston to Leicester city centre?",
+        answer:
+          "A taxi from Thurmaston to Leicester city centre typically starts from £8 depending on your exact pickup and drop-off points. Journey time is around 15 minutes in normal traffic via the A607 or A563. You will receive a fixed quote before you confirm.",
+      },
+      {
+        question: "Do you offer airport transfers from Thurmaston to East Midlands Airport?",
+        answer:
+          "Yes. We provide fixed-fare airport transfers from Thurmaston to East Midlands Airport and all major UK terminals. EMA is around 20 minutes from Thurmaston and fares typically start from £25. Your price is confirmed before you travel.",
+      },
+      {
+        question: "Can I book a taxi from Thurmaston Shopping Centre?",
+        answer:
+          "Yes. We regularly pick up and drop off at Thurmaston Shopping Centre and the surrounding retail park — ideal when you have shopping bags or want a pre-booked return after your trip. Call 0116 233 8888 or book online.",
       },
     ],
   },
@@ -1891,45 +1919,6 @@ const areaContent: Record<string, AreaContent> = {
       },
     ],
   },
-  // 14. Thurmaston
-  thurmaston: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Thurmaston is a busy village on the north-eastern edge of Leicester, sandwiched between the city and the
-          Syston area. It&apos;s well known for Thurmaston Shopping Centre — one of the larger retail parks in the
-          area — and has a growing residential population along the A6 corridor. Aylestone Taxis covers all of
-          Thurmaston with professional taxi service 24 hours a day.
-        </p>
-        <p className="text-gray-700">
-          We pick up regularly from Thurmaston&apos;s residential streets, the shopping centre, and local businesses
-          along the A607. Connections into Leicester city centre (around 4 miles south) are quick via the A6 or A563
-          ring road, and our drivers know both routes well.
-        </p>
-        <p className="text-gray-700">
-          Thurmaston sits close to the A46 and M1 junctions, making it a great starting point for airport transfers.
-          East Midlands Airport is typically 25 minutes from Thurmaston — a direct, easy run up the M1. All airport
-          fares are fixed and include flight monitoring.
-        </p>
-        <p className="text-gray-700">
-          We also serve the business parks around Thurmaston, and corporate taxi accounts are available for companies
-          with regular travel requirements.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How long is a taxi from Thurmaston to Leicester city centre?",
-        answer:
-          "Approximately 15–20 minutes from Thurmaston to Leicester city centre via the A6 or A563. Rush hour can add 5–10 minutes.",
-      },
-      {
-        question: "Do you cover Thurmaston Shopping Centre?",
-        answer:
-          "Yes — we regularly pick up and drop off at Thurmaston Shopping Centre and the retail park. Handy when you've got bags to carry.",
-      },
-    ],
-  },
   // 15. Syston
   syston: {
     body: (
@@ -2396,6 +2385,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const isKnighton = slug === "knighton"
   const isClarendonPark = slug === "clarendon-park"
   const isStoneygate = slug === "stoneygate"
+  const isThurmaston = slug === "thurmaston"
   const isHighfields = slug === "highfields"
   const isBraunstone = slug === "braunstone"
   const isEvington = slug === "evington"
@@ -2913,6 +2903,72 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     </p>
                   </div>
                 </>
+              )}
+
+              {isThurmaston && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxis in Thurmaston — journey times, fares &amp; services
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Thurmaston Shopping Centre, Barkby Road, Watermead Park, and Thurmaston Lane are all within easy
+                    reach — making Thurmaston popular with shoppers, families, and commuters. We also cover
+                    neighbouring{" "}
+                    <Link href="/taxis-in/syston" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Syston
+                    </Link>{" "}
+                    and the wider north-east Leicester area.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Thurmaston</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Thurmaston → Leicester city centre: around 15 minutes in normal traffic</li>
+                    <li>Thurmaston → Syston: around 10 minutes</li>
+                    <li>Thurmaston → East Midlands Airport (EMA): around 20 minutes</li>
+                    <li>Thurmaston → Birmingham Airport (BHX): around 55 minutes</li>
+                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Thurmaston</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Thurmaston → Leicester city centre: from £8</li>
+                    <li>Thurmaston → Leicester Railway Station: from £9</li>
+                    <li>Thurmaston → East Midlands Airport: from £25</li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
+                    receive a fixed quote before you confirm.
+                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Thurmaston</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>24/7 availability — including early-morning airport runs and evening shopping-centre pickups</li>
+                    <li>Fixed prices confirmed at booking</li>
+                    <li>DBS-checked, Leicester City Council licensed drivers</li>
+                    <li>
+                      <Link
+                        href="/airport-transfers-leicester"
+                        className="text-[#06A0A6] hover:underline underline-offset-2"
+                      >
+                        Airport transfers
+                      </Link>{" "}
+                      to EMA, Birmingham, Heathrow, and all major UK airports
+                    </li>
+                    <li>Shopping trips to Thurmaston Shopping Centre and local retail destinations</li>
+                    <li>Regular school runs with standing bookings</li>
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <Link
+                      href={contactInfo.booking.online}
+                      className="inline-flex items-center justify-center gap-2 bg-[#06A0A6] hover:bg-[#06939a] text-white px-6 py-3 rounded-lg font-semibold transition-smooth"
+                    >
+                      Book Online
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link
+                      href="tel:01162338888"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
+                    >
+                      0116 233 8888
+                    </Link>
+                  </div>
+                </div>
               )}
 
               {isHamilton && (
