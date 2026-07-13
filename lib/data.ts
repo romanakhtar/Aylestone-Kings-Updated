@@ -1045,7 +1045,7 @@ export const siteData = {
   blogPage: {
     title: "Aylestone Taxis Blog",
     subtitle:
-      "Discover insights, tips, and stories about transportation in Leicester",
+      "Practical travel guides for Leicester — airport transfers, matchday taxis, prom nights, student moves, fare tips, and booking advice from your trusted local 24/7 taxi company.",
     blogs: [
       {
         id: "leicester-city-matchday-travel-taxi-guide-2026",
@@ -1121,7 +1121,7 @@ export const siteData = {
         date: "2026-07-07",
         author: "Aylestone Taxis Team",
         category: "Matchday Guide",
-        image: "/Blog-Leicester City Matchday Travel — Taxi Guide 2026.webp",
+        image: "/Blog_Leicester_City_Matchday_Travel_Taxi_Guide_2026.webp",
       },
       {
         id: "prom-night-taxi-guide-leicester-parents-2026",
@@ -1197,7 +1197,7 @@ export const siteData = {
         date: "2026-07-01",
         author: "Aylestone Taxis Team",
         category: "Parent Guide",
-        image: "/Blog-Prom Night Taxi Guide — Leicester Parents 2026.webp",
+        image: "/Blog_Prom_Night_Taxi_Guide_Leicester_Parents_2026.webp",
       },
       {
         id: "moving-out-university-halls-leicester-transport-guide",
@@ -1272,7 +1272,7 @@ export const siteData = {
         date: "2026-07-12",
         author: "Aylestone Taxis Team",
         category: "Student Guide",
-        image: "/Blog-Moving Out of University Halls in Leicester — Transport Guide.webp",
+        image: "/Blog_Moving_Out_University_Halls_Leicester_Transport_Guide.webp",
       },
       {
         id: "taxi-vs-uber-leicester-cheaper-2026",

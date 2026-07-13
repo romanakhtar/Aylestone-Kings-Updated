@@ -8,13 +8,14 @@ import BlogListingJsonLd from "@/components/seo/BlogListingJsonLd"
 export const metadata: Metadata = {
   title: "Leicester Taxi Blog | Tips, Airports & Travel | Aylestone",
   description:
-    "Leicester taxi blog: airport guides, travel tips, and local transport advice from Aylestone Taxis. Read free guides — book a taxi anytime on 0116 2338888 or online.",
+    "Read the Aylestone Taxis blog for Leicester travel guides — airport transfers, matchday taxis, prom transport, student moves, fare comparisons, and booking tips. Free advice from your local 24/7 taxi company. Book online or call 0116 2338888.",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/blog",
   },
   openGraph: {
     title: "Leicester Taxi Blog | Aylestone Taxis",
-    description: "Guides and tips for Leicester travellers. Book taxis 24/7 on 0116 2338888.",
+    description:
+      "Practical Leicester travel guides — airports, matchdays, prom nights, student moves, and fare tips from Aylestone Taxis. Book 24/7 on 0116 2338888.",
     url: "https://aylestone-taxis.co.uk/blog",
   },
 }
@@ -71,6 +72,18 @@ export default function BlogPage() {
       {/* Blog Posts Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="text-lg text-[#2E3C44] leading-relaxed">
+              Whether you are heading to East Midlands Airport, catching a Leicester City or Tigers match,
+              organising prom transport, or moving out of university halls, our guides are written to help
+              Leicester passengers plan ahead. Every article covers fixed pricing, booking tips, and local
+              knowledge from a licensed operator you can call any time on{" "}
+              <a href={`tel:${contactInfo.phone}`} className="text-[#06A0A6] font-semibold hover:text-[#0F0D3E]">
+                {contactInfo.phone}
+              </a>
+              .
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogs.map((blog) => (
               <article
