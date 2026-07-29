@@ -565,7 +565,7 @@ export default function HomePageClient() {
             <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">Professional taxi services for all your transportation needs</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/airport-transfers-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Plane className="h-8 w-8 text-[#06A0A6]" />
@@ -578,6 +578,22 @@ export default function HomePageClient() {
               </p>
               <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
                 Learn More
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link href="/airport-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
+                <Plane className="h-8 w-8 text-[#06A0A6]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6]">
+                Airport Taxi Leicester
+              </h3>
+              <p className="text-[#2E3C44] mb-6">
+                Compare airports, journey times, and fixed fares — your hub for booking an airport taxi from Leicester to EMA, Birmingham, Heathrow, and more.
+              </p>
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
+                Compare &amp; Book
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
