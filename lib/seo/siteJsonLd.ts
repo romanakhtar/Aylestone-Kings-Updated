@@ -153,6 +153,8 @@ export function getAreaServiceAreaLocalBusinessJsonLd(opts: {
   serviceAreaName: string
   geo: { latitude: number; longitude: number }
   description: string
+  serviceType?: string
+  serviceName?: string
 }): Record<string, unknown> {
   const root = getLocalBusinessJsonLd()
   const { ["@context"]: _ctx, aggregateRating: _rating, ...businessFields } = root as Record<
@@ -160,9 +162,9 @@ export function getAreaServiceAreaLocalBusinessJsonLd(opts: {
     unknown
   > & { "@context": string; aggregateRating: unknown }
 
-  return {
-    "@context": "https://schema.org",
+  const localBusinessNode: Record<string, unknown> = {
     ...businessFields,
+    "@type": ["LocalBusiness", "TaxiService"],
     "@id": `${opts.pageUrl}#area-localbusiness`,
     url: opts.pageUrl,
     description: opts.description.replace(/\s+/g, " ").trim(),
@@ -176,6 +178,30 @@ export function getAreaServiceAreaLocalBusinessJsonLd(opts: {
       { "@type": "Place", name: opts.serviceAreaName },
       { "@type": "City", name: "Leicester" },
       { "@type": "AdministrativeArea", name: "Leicestershire" },
+    ],
+  }
+
+  if (!opts.serviceType) {
+    return {
+      "@context": "https://schema.org",
+      ...localBusinessNode,
+    }
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      localBusinessNode,
+      {
+        "@type": "Service",
+        "@id": `${opts.pageUrl}#service`,
+        name: opts.serviceName ?? `Airport taxi — ${opts.serviceAreaName}`,
+        serviceType: opts.serviceType,
+        description: opts.description.replace(/\s+/g, " ").trim(),
+        url: opts.pageUrl,
+        provider: { "@id": `${opts.pageUrl}#area-localbusiness` },
+        areaServed: localBusinessNode.areaServed,
+      },
     ],
   }
 }

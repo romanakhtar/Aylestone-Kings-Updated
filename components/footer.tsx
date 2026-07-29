@@ -124,6 +124,7 @@ export default function Footer() {
                 title="Popular Services"
                 items={[
                   { name: "Airport Transfers", href: "/airport-transfers-leicester" },
+                  { name: "Airport Taxi Leicester", href: "/airport-taxi-leicester" },
                   { name: "Local Taxi Service", href: "/local-taxi-leicester" },
                   { name: "Long-Distance & Corporate", href: "/long-distance-taxi-leicester" },
                   { name: "Corporate Taxi Account Leicester", href: "/corporate-taxi-account-leicester" },
