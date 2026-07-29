@@ -10,6 +10,7 @@ import AreaPageStructuredData from "@/components/areas/AreaPageStructuredData"
 import AreaPageDeferredFAQ from "@/components/areas/AreaPageDeferredFAQ"
 import { areaPageBreadcrumbs } from "@/lib/seo/breadcrumbs"
 import { collectAreaPageFaqs } from "@/lib/seo/areaPageFaqs"
+import { getAreaServiceAreaLocalBusinessJsonLd } from "@/lib/seo/siteJsonLd"
 
 type AreaItem = { name: string; href: string }
 const siteUrl = "https://aylestone-taxis.co.uk"
@@ -33,9 +34,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 2. Leicester City Centre
   "leicester-city-centre": {
-    title: "Leicester City Centre Taxi | 24/7 | Aylestone Taxis",
+    title: "Taxi Leicester City Centre | Fixed Fares 24/7 | Aylestone Taxis",
     description:
-      "Fast taxi service in Leicester city centre. Highcross, railway station, restaurants, hotels — instant pickups day and night. Book online or call 0116 2338888.",
+      "Fast, fixed-price taxis across Leicester city centre — Highcross, Curve Theatre, train station. Book online or call 0116 233 8888.",
   },
   // 3. Oadby
   oadby: {
@@ -320,6 +321,7 @@ const AREA_CUSTOM_H1: Record<string, string> = {
   blaby: "Taxis in Blaby, Leicestershire",
   narborough: "Taxis in Narborough, Leicestershire",
   enderby: "Taxis in Enderby, Leicestershire",
+  "leicester-city-centre": "Taxi Leicester City Centre – Aylestone Taxis",
 }
 
 /** Optional contextual link from a taxis-in area page to a relevant blog post (SEO discovery). */
@@ -2080,7 +2082,11 @@ const areaContent: Record<string, AreaContent> = {
         <p className="text-gray-700">
           Leicester city centre is our busiest area — and for good reason. From the Highcross shopping centre to
           Leicester Market, from the Curve Theatre to the Golden Mile, the city centre generates thousands of taxi
-          journeys every week, and Aylestone Taxis is there for all of them.
+          journeys every week, and{" "}
+          <Link href="/company" className="text-[#06A0A6] hover:underline underline-offset-2">
+            Aylestone Taxis
+          </Link>{" "}
+          is there for all of them.
         </p>
         <p className="text-gray-700">
           We cover every corner of the city centre: Granby Street, Gallowtree Gate, Charles Street, New Walk, Waterloo
@@ -2089,35 +2095,81 @@ const areaContent: Record<string, AreaContent> = {
         </p>
         <p className="text-gray-700">
           The city centre is also our primary hub for connecting passengers to Leicester Railway Station — one of our
-          most frequent pickups. Whether you&apos;re catching a train to London St Pancras, Birmingham, or Nottingham,
-          we&apos;ll have you there on time. We also cover the St Margaret&apos;s Bus Station area for connecting
-          services.
+          most frequent pickups. Whether you need a{" "}
+          <strong>taxi Leicester train station</strong> connection for London St Pancras, Birmingham, or Nottingham, or
+          a drop-off after shopping, we&apos;ll have you there on time. We also cover the St Margaret&apos;s Bus Station
+          area for connecting services.
         </p>
         <p className="text-gray-700">
           For nights out in Leicester&apos;s vibrant restaurant and bar scene — from Highfields&apos; curry mile to the
           Lanes — we offer safe, comfortable rides home at any hour. Our late-night service is exactly the same price
           as daytime, with no surcharges.
         </p>
+        <h2 className="text-2xl font-semibold text-gray-900 pt-2">
+          Late night taxi Leicester city centre &amp; restaurant pickups
+        </h2>
         <p className="text-gray-700">
-          Book online, call 0116 2338888, or WhatsApp us anytime for your Leicester city centre taxi.
+          After an evening at the Curve Theatre, a meal on Granby Street, or drinks near Gallowtree Gate, a{" "}
+          <strong>late night taxi Leicester city centre</strong> is often the simplest way home. We operate as a{" "}
+          <strong>24 hour taxi Leicester city centre</strong> service — call or book online when you are ready to leave,
+          or pre-book a return time when you head out so you are not waiting on busy weekend nights. Fixed fares are
+          confirmed before travel, so your ride home costs the same whether it is afternoon or after midnight.
+        </p>
+        <h2 className="text-2xl font-semibold text-gray-900 pt-2">
+          Taxi near Highcross Leicester &amp; the business district
+        </h2>
+        <p className="text-gray-700">
+          Need a <strong>taxi near Highcross Leicester</strong> with bags, or a reliable commute along Charles Street
+          and the surrounding office blocks? Our Leicester city centre taxi service covers shopping trips, client
+          meetings, and regular business travel. Companies can set up invoiced travel through our{" "}
+          <Link
+            href="/corporate-taxi-account-leicester"
+            className="text-[#06A0A6] hover:underline underline-offset-2"
+          >
+            corporate taxi account
+          </Link>
+          , and passengers heading further afield can arrange{" "}
+          <Link href="/airport-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+            airport taxis from Leicester
+          </Link>{" "}
+          with fixed quotes confirmed at booking.
+        </p>
+        <h2 className="text-2xl font-semibold text-gray-900 pt-2">
+          Fixed price taxi Leicester city centre
+        </h2>
+        <p className="text-gray-700">
+          Whether you want a <strong>taxi Curve Theatre Leicester</strong> pickup, a station transfer, or a short hop
+          across the centre, we quote agreed fares upfront so you know the cost before the car arrives. For typical
+          local pricing and what affects your quote, see our fare guide linked below — then book online, call 0116 233
+          8888, or WhatsApp us anytime for your Leicester city centre taxi.
         </p>
       </div>
     ),
     faqs: [
       {
-        question: "How do I get a taxi from Leicester city centre late at night?",
+        question: "How much does a taxi cost in Leicester city centre?",
         answer:
-          "Call 0116 2338888 or WhatsApp +447888873795 — we operate 24/7. For busy weekend nights, we recommend pre-booking a return journey when you set out.",
+          "Fares depend on distance, time of day, and vehicle size, but we quote fixed prices before you confirm so there are no meter surprises. Short trips within the centre are typically among our most affordable local journeys — use online booking or call 0116 233 8888 for an upfront quote tailored to your pickup and drop-off.",
       },
       {
-        question: "Do you pick up from Leicester Railway Station?",
+        question: "How quickly can I get a taxi in Leicester city centre?",
         answer:
-          "Yes. Leicester Railway Station is one of our most common pickup points. We can collect from the main taxi rank outside or from the station drop-off zone.",
+          "Because our drivers work across Leicester, most central postcodes see a taxi within around 5–10 minutes in normal conditions. At peak times or on busy weekend nights, pre-booking helps secure a car when you need it — especially after events at the Curve Theatre or around Highcross.",
       },
       {
-        question: "Can I book a taxi to the Highcross shopping centre?",
+        question: "Do you offer late-night taxis in Leicester city centre?",
         answer:
-          "Yes — we drop off and collect from Highcross, the Haymarket, and all city centre shopping areas. Ideal when you have bags to carry.",
+          "Yes. We provide late-night and early-morning taxis across Leicester city centre 24 hours a day, with no late-night surcharge on our standard fixed fares. Call 0116 233 8888, book online, or WhatsApp when you are ready to leave — pre-booking a return journey is recommended on busy Friday and Saturday nights.",
+      },
+      {
+        question: "Can I book a taxi to Leicester train station?",
+        answer:
+          "Yes. Leicester Railway Station is one of our most frequent city-centre jobs — we collect from the main taxi rank or the station drop-off zone and drop off in good time for your train. Share your platform time when you book so we can plan the best route through central traffic.",
+      },
+      {
+        question: "Are your Leicester city centre drivers licensed and DBS checked?",
+        answer:
+          "Yes. Every driver carrying passengers for Aylestone Taxis is licensed by Leicester City Council and DBS checked as standard. Vehicles are licensed for hire and regularly inspected, so you can travel to work, nights out, or the station with a professional, vetted driver.",
       },
     ],
   },
@@ -2546,6 +2598,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     slug
   )
 
+  const isLeicesterCityCentre = slug === "leicester-city-centre"
   const areaFaqs = collectAreaPageFaqs({
     resolvedFaqs: resolvedContent?.faqs,
     areaPlain,
@@ -2553,7 +2606,18 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     isOadby,
     isBeaumontLeys,
     isPrioritySeoArea,
+    useDedicatedFaqsOnly: isLeicesterCityCentre,
   })
+
+  const areaLocalBusinessJsonLd = isLeicesterCityCentre
+    ? getAreaServiceAreaLocalBusinessJsonLd({
+        pageUrl: `${siteUrl}/taxis-in/leicester-city-centre`,
+        serviceAreaName: "Leicester City Centre",
+        geo: { latitude: 52.6369, longitude: -1.1398 },
+        description:
+          "Fixed-price taxi service in Leicester city centre from Aylestone Taxis — Highcross, Curve Theatre, Leicester Railway Station, and central Leicester 24/7.",
+      })
+    : undefined
 
   return (
     <main>
@@ -2561,6 +2625,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         breadcrumbItems={breadcrumbItems}
         breadcrumbPageUrl={breadcrumbPageUrl}
         faqs={areaFaqs}
+        localBusiness={areaLocalBusinessJsonLd}
       />
       <div className="pt-24 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">

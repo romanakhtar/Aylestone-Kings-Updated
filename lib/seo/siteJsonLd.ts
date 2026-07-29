@@ -145,6 +145,42 @@ export function getTaxiServiceJsonLd(opts: {
 }
 
 /**
+ * LocalBusiness JSON-LD for a taxis-in area page, focused on a specific service locality.
+ * Uses city-centre (or other) geo while keeping the canonical office @id as sameAs for the brand entity.
+ */
+export function getAreaServiceAreaLocalBusinessJsonLd(opts: {
+  pageUrl: string
+  serviceAreaName: string
+  geo: { latitude: number; longitude: number }
+  description: string
+}): Record<string, unknown> {
+  const root = getLocalBusinessJsonLd()
+  const { ["@context"]: _ctx, aggregateRating: _rating, ...businessFields } = root as Record<
+    string,
+    unknown
+  > & { "@context": string; aggregateRating: unknown }
+
+  return {
+    "@context": "https://schema.org",
+    ...businessFields,
+    "@id": `${opts.pageUrl}#area-localbusiness`,
+    url: opts.pageUrl,
+    description: opts.description.replace(/\s+/g, " ").trim(),
+    sameAs: LOCAL_BUSINESS_ID,
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: opts.geo.latitude,
+      longitude: opts.geo.longitude,
+    },
+    areaServed: [
+      { "@type": "Place", name: opts.serviceAreaName },
+      { "@type": "City", name: "Leicester" },
+      { "@type": "AdministrativeArea", name: "Leicestershire" },
+    ],
+  }
+}
+
+/**
  * Corporate B2B service + same LocalBusiness @id (single @graph for one script tag).
  */
 export function getCorporateServiceGraphJsonLd(opts: {

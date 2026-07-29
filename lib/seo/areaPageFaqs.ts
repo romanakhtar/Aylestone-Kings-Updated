@@ -108,15 +108,25 @@ export function collectAreaPageFaqs(options: {
   isOadby: boolean
   isBeaumontLeys: boolean
   isPrioritySeoArea: boolean
+  /** When true, only use resolved (and slug-specific extras) — no generic area FAQ template. */
+  useDedicatedFaqsOnly?: boolean
 }): AreaFaq[] {
-  const { resolvedFaqs, areaPlain, isWigston, isOadby, isBeaumontLeys, isPrioritySeoArea } = options
+  const {
+    resolvedFaqs,
+    areaPlain,
+    isWigston,
+    isOadby,
+    isBeaumontLeys,
+    isPrioritySeoArea,
+    useDedicatedFaqsOnly,
+  } = options
 
   const candidates: AreaFaq[] = [...(resolvedFaqs ?? [])]
 
   if (isWigston) candidates.push(...WIGSTON_EXTRA_FAQS)
   if (isOadby) candidates.push(...OADBY_EXTRA_FAQS)
   if (isBeaumontLeys) candidates.push(...BEAUMONT_LEYS_EXTRA_FAQS)
-  if (!isPrioritySeoArea) candidates.push(...genericAreaFaqs(areaPlain))
+  if (!isPrioritySeoArea && !useDedicatedFaqsOnly) candidates.push(...genericAreaFaqs(areaPlain))
 
   const seen = new Set<string>()
   return candidates.filter((faq) => {

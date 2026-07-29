@@ -7,6 +7,7 @@ type AreaPageStructuredDataProps = {
   breadcrumbItems: BreadcrumbItem[]
   breadcrumbPageUrl: string
   faqs: AreaFaq[]
+  localBusiness?: Record<string, unknown>
 }
 
 /** Server-rendered FAQ + BreadcrumbList JSON-LD (present in raw HTML without JavaScript). */
@@ -14,10 +15,12 @@ export default function AreaPageStructuredData({
   breadcrumbItems,
   breadcrumbPageUrl,
   faqs,
+  localBusiness,
 }: AreaPageStructuredDataProps) {
   return (
     <>
       <JsonLd data={buildBreadcrumbJsonLd(breadcrumbItems, breadcrumbPageUrl)} />
+      {localBusiness ? <JsonLd data={localBusiness} /> : null}
       <FAQSchema faqs={faqs} />
     </>
   )
