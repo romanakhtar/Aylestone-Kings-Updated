@@ -13,9 +13,9 @@ export const metadata = buildAirportMetadata({
   airportCode: "LHR",
   slug: "Heathrow",
   fromPrice: "£150",
-  title: "Heathrow taxi Leicester | ~115 mi | From £150 | Aylestone",
+  title: "Leicester to Heathrow Taxi | All Terminals | £150",
   description:
-    "Leicester to Heathrow (LHR): ~105–115 miles, typically 1h45–2h30 via M1/M25. Drop-off at T2, T3, T4, or T5. Fixed fares from £150. Compare parking + fuel — book or call 0116 2338888 24/7.",
+    "Reliable Leicester–Heathrow transfers, all terminals (T2–T5). Fixed £150 fare, no surge, flight-tracked. Call 0116 233 8888 or book online.",
 })
 
 const faqs = heathrowPricingFaqs

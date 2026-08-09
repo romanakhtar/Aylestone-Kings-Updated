@@ -7,21 +7,28 @@ import FAQSchema from "@/components/seo/FAQSchema"
 const CANONICAL = "https://aylestone-taxis.co.uk/leicester-to-east-midlands-airport-taxi"
 
 export const metadata: Metadata = {
-  title: "Leicester to EMA Taxi | From £40 | Return",
+  title: "Leicester to EMA Taxi Route & Times | From £40",
   description:
-    "Fixed-price transfers between Leicester and East Midlands Airport (EMA). Postcode DE74 2SA, A46 via Copt Oak route, terminal drop-off & return pickup points. From £40 — book or call 0116 2338888 24/7.",
+    "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £40. Call 0116 233 8888.",
   keywords:
     "Leicester to East Midlands Airport taxi, EMA taxi Leicester, East Midlands Airport transfer, Castle Donington airport taxi, fixed fare EMA",
   alternates: {
     canonical: CANONICAL,
   },
   openGraph: {
-    title: "Leicester ↔ East Midlands Airport (EMA) | Aylestone Taxis",
-    description: "Fixed fares from £40, route guidance for Leicester, Oadby & Wigston. Book online or call 0116 2338888.",
+    title: "Leicester to EMA Taxi Route & Times | From £40",
+    description:
+      "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £40. Call 0116 233 8888.",
     url: CANONICAL,
     siteName: "Aylestone Taxis",
     locale: "en_GB",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Leicester to EMA Taxi Route & Times | From £40",
+    description:
+      "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £40. Call 0116 233 8888.",
   },
 }
 
