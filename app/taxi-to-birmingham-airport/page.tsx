@@ -7,16 +7,16 @@ import { getTaxiServiceJsonLd } from "@/lib/seo/siteJsonLd"
 const CANONICAL_URL = "https://aylestone-taxis.co.uk/taxi-to-birmingham-airport"
 
 export const metadata: Metadata = {
-  title: "Taxi to Birmingham Airport from £60 | Leicester",
+  title: "Birmingham Airport Taxi Leicester | Fixed £60 | 24/7",
   description:
-    "Taxi to Birmingham Airport (BHX) from Leicester: fixed from £60, ~38 miles, ~1 hour via M69/M6. All airlines, T1/T2 drop-off zones, 24/7. Instant quote online — or call 0116 2338888 (no surge pricing).",
+    "Fixed-price taxi Leicester to Birmingham Airport from £60. Licensed drivers, flight tracking, no surge pricing. Book online or call 0116 233 8888.",
   alternates: {
     canonical: CANONICAL_URL,
   },
   openGraph: {
-    title: "Birmingham Airport Taxi from Leicester | From £60",
+    title: "Birmingham Airport Taxi Leicester | Fixed £60 | 24/7",
     description:
-      "Fixed-price Leicester to BHX transfers from £60. Licensed drivers, terminal forecourt drop-off, flight-tracked returns.",
+      "Fixed-price taxi Leicester to Birmingham Airport from £60. Licensed drivers, flight tracking, no surge pricing. Book online or call 0116 233 8888.",
     url: CANONICAL_URL,
     siteName: "Aylestone Taxis",
     locale: "en_GB",
@@ -24,8 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Taxi to Birmingham Airport from £60 | Leicester",
-    description: "Fixed fares to BHX. Book online or call 0116 2338888 — 24/7.",
+    title: "Birmingham Airport Taxi Leicester | Fixed £60 | 24/7",
+    description:
+      "Fixed-price taxi Leicester to Birmingham Airport from £60. Licensed drivers, flight tracking, no surge pricing. Book online or call 0116 233 8888.",
   },
 }
 

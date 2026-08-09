@@ -6,16 +6,23 @@ import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Leicester Airport Taxi Prices | Fixed Fares UK",
+  title: "Airport Taxi Prices Leicester | From £40 | 24/7",
   description:
-    "Airport taxi prices Leicester: fixed fares from Leicester to EMA, Birmingham, Heathrow, Gatwick, Luton, Stansted, Manchester. See airport taxi prices online or call 0116 2338888 — 24/7.",
+    "Compare fixed airport taxi prices from Leicester — from £40 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/pricing",
   },
   openGraph: {
-    title: "Leicester Airport Taxi Prices | Aylestone Taxis",
-    description: "Transparent fixed fares from Leicester to UK airports. Book online or call 0116 2338888.",
+    title: "Airport Taxi Prices Leicester | From £40 | 24/7",
+    description:
+      "Compare fixed airport taxi prices from Leicester — from £40 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
     url: "https://aylestone-taxis.co.uk/pricing",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Airport Taxi Prices Leicester | From £40 | 24/7",
+    description:
+      "Compare fixed airport taxi prices from Leicester — from £40 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
   },
 }
 

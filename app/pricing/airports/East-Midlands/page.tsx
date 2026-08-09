@@ -16,9 +16,9 @@ export const metadata = buildAirportMetadata({
   airportCode: "EMA",
   slug: "East-Midlands",
   fromPrice: "£40",
-  title: "EMA taxi Leicester | Closest airport | From £40 | Aylestone",
+  title: "East Midlands Airport Taxi Leicester | £40 | 24/7",
   description:
-    "Leicester to East Midlands Airport (EMA): ~22 mi, 35–45 min, forecourt drop-off. Fixed fares from £40. Beat week-long parking costs — get a quote or call 0116 2338888 24/7.",
+    "Fixed-price taxi Leicester to East Midlands Airport from £40. Closest airport, licensed drivers, no surge pricing. Book online or call 0116 233 8888.",
 })
 
 const faqs = eastMidlandsPricingFaqs

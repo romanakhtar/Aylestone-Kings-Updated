@@ -15,6 +15,12 @@ import { getAreaServiceAreaLocalBusinessJsonLd } from "@/lib/seo/siteJsonLd"
 type AreaItem = { name: string; href: string }
 const siteUrl = "https://aylestone-taxis.co.uk"
 
+/** Area pages with dedicated FAQ sets only — no generic or slug-extra FAQ templates. */
+const DEDICATED_FAQ_AREA_SLUGS = new Set([
+  "leicester-city-centre",
+  "melton-mowbray",
+])
+
 const POPULAR_JOURNEY_AIRPORTS = [
   { label: "East Midlands Airport", href: "/pricing/airports/East-Midlands", code: "EMA" },
   { label: "Birmingham Airport", href: "/pricing/airports/Birmingham", code: "BHX" },
@@ -712,16 +718,29 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
     ],
     faqs: [
       {
-        question: "How long does a taxi from Melton Mowbray to Leicester City Centre take?",
-        answer: "Most journeys are around 35 to 45 minutes via the A607, depending on time of day and city-centre traffic levels.",
+        question: "How much does a taxi from Melton Mowbray to Leicester city centre cost?",
+        answer:
+          "Fares from Melton Mowbray to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
       },
       {
-        question: "Do you provide early-morning airport taxis from Melton Mowbray?",
-        answer: "Yes, we pre-book early collections for EMA and BHX with confirmed pickup times and route planning in advance.",
+        question: "How long does a taxi from Melton Mowbray to Leicester take?",
+        answer:
+          "Most journeys from Melton Mowbray to Leicester city centre take around 35 to 45 minutes via the A607, depending on time of day and city-centre traffic levels.",
+      },
+      {
+        question: "Do you offer 24/7 taxi service in Melton Mowbray?",
+        answer:
+          "Yes. Aylestone Taxis operates 24 hours a day, seven days a week across Melton Mowbray and surrounding villages — including early-morning airport runs and late-night pickups.",
+      },
+      {
+        question: "Can I book a regular or scheduled taxi from Melton Mowbray?",
+        answer:
+          "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
       },
       {
         question: "Can I book a station pickup at Melton Mowbray railway station?",
-        answer: "Yes, station pickups are available and we can schedule around your train arrival for a smoother connection.",
+        answer:
+          "Yes. Station pickups are available at Melton Mowbray railway station — we can schedule around your train arrival for a smoother connection to Leicester, Nottingham, or London services.",
       },
     ],
   },
@@ -2606,7 +2625,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     isOadby,
     isBeaumontLeys,
     isPrioritySeoArea,
-    useDedicatedFaqsOnly: isLeicesterCityCentre,
+    useDedicatedFaqsOnly: DEDICATED_FAQ_AREA_SLUGS.has(slug),
   })
 
   const areaLocalBusinessJsonLd = isLeicesterCityCentre

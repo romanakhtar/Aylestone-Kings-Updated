@@ -4,18 +4,24 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Local Taxi Leicester | Same-Day Rides | Book 0116 2338888",
+  title: "Taxi in Leicester Now | 24/7 Local Service",
   description:
-    "Local taxi in Leicester and Leicestershire: fast pickups, clear fares, licensed drivers. Aylestone Taxis since 1995 — book online in seconds or call 0116 2338888, 24/7.",
+    "Need a taxi in Leicester right now? Fast local pickups, licensed drivers, fixed fares, 24/7. Book online or call 0116 233 8888.",
   keywords: "local taxi Leicester, taxi service Leicester, local taxi Aylestone, quick taxi Leicester, affordable taxi Leicester",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/local-taxi-leicester",
   },
   openGraph: {
-    title: "Local Taxi Leicester | Same-Day Rides | Aylestone Taxis",
+    title: "Taxi in Leicester Now | 24/7 Local Service",
     description:
-      "Local taxi Leicester: fast, affordable rides with instant booking. Call 0116 2338888 or book online — 24/7.",
+      "Need a taxi in Leicester right now? Fast local pickups, licensed drivers, fixed fares, 24/7. Book online or call 0116 233 8888.",
     url: "https://aylestone-taxis.co.uk/local-taxi-leicester",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Taxi in Leicester Now | 24/7 Local Service",
+    description:
+      "Need a taxi in Leicester right now? Fast local pickups, licensed drivers, fixed fares, 24/7. Book online or call 0116 233 8888.",
   },
 }
 

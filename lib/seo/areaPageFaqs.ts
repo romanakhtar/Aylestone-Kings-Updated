@@ -123,9 +123,11 @@ export function collectAreaPageFaqs(options: {
 
   const candidates: AreaFaq[] = [...(resolvedFaqs ?? [])]
 
-  if (isWigston) candidates.push(...WIGSTON_EXTRA_FAQS)
-  if (isOadby) candidates.push(...OADBY_EXTRA_FAQS)
-  if (isBeaumontLeys) candidates.push(...BEAUMONT_LEYS_EXTRA_FAQS)
+  if (!useDedicatedFaqsOnly) {
+    if (isWigston) candidates.push(...WIGSTON_EXTRA_FAQS)
+    if (isOadby) candidates.push(...OADBY_EXTRA_FAQS)
+    if (isBeaumontLeys) candidates.push(...BEAUMONT_LEYS_EXTRA_FAQS)
+  }
   if (!isPrioritySeoArea && !useDedicatedFaqsOnly) candidates.push(...genericAreaFaqs(areaPlain))
 
   const seen = new Set<string>()
