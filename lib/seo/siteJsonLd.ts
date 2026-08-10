@@ -78,7 +78,7 @@ export function getLocalBusinessJsonLd(): Record<string, unknown> {
           "Sunday",
         ],
         opens: "00:00",
-        closes: "24:00",
+        closes: "00:00",
       },
     ],
     areaServed: [
