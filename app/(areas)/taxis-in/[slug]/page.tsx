@@ -19,6 +19,15 @@ const siteUrl = "https://aylestone-taxis.co.uk"
 const DEDICATED_FAQ_AREA_SLUGS = new Set([
   "leicester-city-centre",
   "melton-mowbray",
+  "market-harborough",
+  "coalville",
+  "fosse-park",
+  "hinckley",
+  "oadby",
+  "blaby",
+  "aylestone",
+  "lutterworth",
+  "wigston-fields",
 ])
 
 const POPULAR_JOURNEY_AIRPORTS = [
@@ -556,19 +565,24 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
     ],
     faqs: [
       {
-        question: "How much is a taxi from Blaby to Leicester city centre?",
+        question: "How much does a taxi from Blaby to Leicester city centre cost?",
         answer:
-          "A taxi from Blaby to Leicester city centre typically starts from £7 depending on your exact pickup and drop-off points. Journey time is around 12–15 minutes in normal traffic via Blaby Road and the A426. You will receive a fixed quote before you confirm.",
+          "Blaby to Leicester city centre fares start from £7 depending on your exact pickup and drop-off points. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
       },
       {
-        question: "Do you offer fixed price airport transfers from Blaby?",
+        question: "How long does a taxi from Blaby to Leicester take?",
         answer:
-          "Yes. We provide fixed-price airport transfers from Blaby to East Midlands Airport, Birmingham, Heathrow, and all major UK airports. East Midlands Airport is around 15 minutes and fares start from £25. Your price is confirmed before you travel, with flight monitoring available on request.",
+          "Most journeys from Blaby to Leicester city centre take around 12–15 minutes in normal traffic via Blaby Road and the A426.",
       },
       {
-        question: "Can I book a school run taxi from Blaby?",
+        question: "Do you offer 24/7 taxi service in Blaby?",
         answer:
-          "Yes. We set up regular school runs from Blaby with consistent pickup times and, where possible, the same DBS-checked driver each morning. Call 0116 233 8888 or book online to arrange a standing school-run booking.",
+          "Yes. Aylestone Taxis operates 24 hours a day, seven days a week across Blaby and surrounding villages — including early-morning airport runs and late-night pickups.",
+      },
+      {
+        question: "Can I book a regular taxi for commuting or school runs from Blaby?",
+        answer:
+          "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
       },
     ],
   },
@@ -755,26 +769,24 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
     ],
     faqs: [
       {
-        question: "Do you offer station transfers from Market Harborough?",
-        answer: "Yes, we provide taxi pickups and drop-offs to Market Harborough railway station with pre-booked timing.",
-      },
-      {
-        question: "What is the usual route to Leicester from Market Harborough?",
-        answer: "Most Leicester trips follow the A6 and usually take around 25 to 35 minutes depending on traffic.",
-      },
-      {
-        question: "Can I pre-book a return journey from Foxton Locks?",
-        answer: "Yes, return bookings can be scheduled in advance so your driver arrives at an agreed meeting point.",
-      },
-      {
-        question: "What is the best taxi number for Market Harborough?",
+        question: "How much does a taxi from Market Harborough to Leicester city centre cost?",
         answer:
-          "For reliable bookings across Market Harborough, call Aylestone Taxis on 0116 233 8888. Our line is open 24/7 for local trips, station pickups, and airport transfers, with fixed fares confirmed before you travel.",
+          "Fares from Market Harborough to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
       },
       {
-        question: "Are there 24 hour taxi firms in Market Harborough?",
+        question: "How long does a taxi from Market Harborough to Leicester take?",
         answer:
-          "Yes. Aylestone Taxis operates as a 24-hour taxi firm serving Market Harborough and surrounding villages. You can call 0116 233 8888 at any time or book online for immediate or pre-scheduled journeys.",
+          "Most journeys from Market Harborough to Leicester city centre take around 25 to 35 minutes via the A6, depending on time of day and inbound traffic — peak times can extend this to around 40 minutes.",
+      },
+      {
+        question: "Do you offer 24/7 taxi service in Market Harborough?",
+        answer:
+          "Yes. Aylestone Taxis operates 24 hours a day, seven days a week across Market Harborough and surrounding villages — including early-morning airport runs and late-night pickups.",
+      },
+      {
+        question: "Can I book a regular taxi for commuting or school runs from Market Harborough?",
+        answer:
+          "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
       },
     ],
   },
@@ -789,16 +801,24 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
     ],
     faqs: [
       {
-        question: "How long is a taxi from Coalville to East Midlands Airport?",
-        answer: "Most journeys to EMA are around 20 to 30 minutes, depending on traffic and your exact pickup point.",
+        question: "How much does a taxi from Coalville to Leicester city centre cost?",
+        answer:
+          "Fares from Coalville to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
       },
       {
-        question: "Do you cover late-night pickups in Coalville?",
-        answer: "Yes, our service is available 24/7 for both local and long-distance journeys, including late evenings.",
+        question: "How long does a taxi from Coalville to Leicester take?",
+        answer:
+          "Most journeys from Coalville to Leicester city centre take around 35 minutes via the A511 and city approach roads, with rush-hour traffic occasionally extending the run.",
       },
       {
-        question: "Can I arrange regular work transport from Coalville?",
-        answer: "Yes, repeat bookings can be set up for shift patterns and regular weekday travel.",
+        question: "Do you offer 24/7 taxi service in Coalville?",
+        answer:
+          "Yes. Aylestone Taxis operates 24 hours a day, seven days a week across Coalville and surrounding villages — including early-morning airport runs and late-night pickups.",
+      },
+      {
+        question: "Can I book a regular taxi for commuting or school runs from Coalville?",
+        answer:
+          "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
       },
     ],
   },
@@ -912,16 +932,24 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
     ],
     faqs: [
       {
-        question: "What is the typical taxi route from Lutterworth to Leicester?",
-        answer: "Most Leicester journeys run via the A426 and usually take around 30 to 40 minutes.",
+        question: "How much does a taxi from Lutterworth to Leicester city centre cost?",
+        answer:
+          "Fares from Lutterworth to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
       },
       {
-        question: "Do you provide airport taxis from Lutterworth to BHX?",
-        answer: "Yes, we regularly serve Birmingham Airport from Lutterworth with pre-booked timed pickups.",
+        question: "How long does a taxi from Lutterworth to Leicester take?",
+        answer:
+          "Most journeys from Lutterworth to Leicester city centre take around 35 minutes via the A426, with peak traffic sometimes extending that to 40 minutes.",
       },
       {
-        question: "Can I schedule weekly work trips from Lutterworth?",
-        answer: "Yes, we can arrange repeat bookings for regular weekday travel and shift schedules.",
+        question: "Do you offer 24/7 taxi service in Lutterworth?",
+        answer:
+          "Yes. Aylestone Taxis operates 24 hours a day, seven days a week across Lutterworth and surrounding villages — including early-morning airport runs and late-night pickups.",
+      },
+      {
+        question: "Can I book a regular taxi for commuting or school runs from Lutterworth?",
+        answer:
+          "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
       },
     ],
   },
@@ -960,16 +988,24 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
     ],
     faqs: [
       {
-        question: "Is Birmingham Airport quicker than East Midlands from Hinckley?",
-        answer: "Often BHX is the quicker option from Hinckley, but traffic can shift this; we advise at booking time.",
+        question: "How much does a taxi from Hinckley to Leicester city centre cost?",
+        answer:
+          "Fares from Hinckley to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
       },
       {
-        question: "How long does Hinckley to Leicester City Centre usually take?",
-        answer: "Most journeys are around 30 to 40 minutes depending on route conditions and destination point.",
+        question: "How long does a taxi from Hinckley to Leicester take?",
+        answer:
+          "Most journeys from Hinckley to Leicester city centre take around 35 minutes via the A47 and connecting city routes.",
       },
       {
-        question: "Can I book a same-day return trip from Hinckley?",
-        answer: "Yes, same-day return journeys can be scheduled in advance for shopping, meetings, or appointments.",
+        question: "Do you offer 24/7 taxi service in Hinckley?",
+        answer:
+          "Yes. Aylestone Taxis operates 24 hours a day, seven days a week across Hinckley and surrounding villages — including early-morning airport runs and late-night pickups.",
+      },
+      {
+        question: "Can I book a regular taxi for commuting or school runs from Hinckley?",
+        answer:
+          "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
       },
     ],
   },
@@ -1008,16 +1044,24 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
     ],
     faqs: [
       {
-        question: "Is Wigston Fields covered for early morning taxi bookings?",
-        answer: "Yes, early morning and late-night bookings are available across Wigston Fields seven days a week.",
+        question: "How much does a taxi from Wigston Fields to Leicester city centre cost?",
+        answer:
+          "Fares from Wigston Fields to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
       },
       {
-        question: "What route is usually used from Wigston Fields to Leicester?",
-        answer: "Most trips use A5199 connections and typically take around 15 to 25 minutes.",
+        question: "How long does a taxi from Wigston Fields to Leicester take?",
+        answer:
+          "Most journeys from Wigston Fields to Leicester city centre take around 20 minutes via A5199 routes.",
       },
       {
-        question: "Can I check airport fares before booking from Wigston Fields?",
-        answer: "Yes, you can review indicative fare guidance on our pricing page before confirming your journey.",
+        question: "Do you offer 24/7 taxi service in Wigston Fields?",
+        answer:
+          "Yes. Aylestone Taxis operates 24 hours a day, seven days a week across Wigston Fields and surrounding areas — including early-morning airport runs and late-night pickups.",
+      },
+      {
+        question: "Can I book a regular taxi for commuting or school runs from Wigston Fields?",
+        answer:
+          "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
       },
     ],
   },
@@ -1056,19 +1100,24 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
     ],
     faqs: [
       {
-        question: "Can I get a taxi from Fosse Park to Leicester city centre?",
+        question: "How much does a taxi from Fosse Park to Leicester city centre cost?",
         answer:
-          "Yes. We run taxis from Fosse Park to Leicester city centre throughout the day and night. Journey time is around 10–12 minutes in normal traffic via the A563. Fares start from £6 depending on your exact pickup and drop-off points. You will receive a fixed quote before you confirm.",
+          "Fosse Park to Leicester city centre fares start from £6 depending on your exact pickup and drop-off points. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
       },
       {
-        question: "Do you cover early morning and late night rides for retail workers at Fosse Park?",
+        question: "How long does a taxi from Fosse Park to Leicester take?",
         answer:
-          "Yes. We provide early morning and late-night taxi rides for retail workers at Fosse Park — including shift-start pickups before buses run and collections after stores close. Pre-book standing bookings for consistent weekly times, or call 0116 233 8888 when you finish your shift.",
+          "Most journeys from Fosse Park to Leicester city centre take around 10–12 minutes via the A563 and inner-city approaches in normal traffic.",
       },
       {
-        question: "How much is a taxi from Fosse Park to East Midlands Airport?",
+        question: "Do you offer 24/7 taxi service for shoppers and retail workers at Fosse Park?",
         answer:
-          "A taxi from Fosse Park to East Midlands Airport (EMA) typically starts from £25 depending on your exact pickup point and vehicle size. Journey time is around 20 minutes — one of the shortest airport runs from Leicester. Your fixed fare is confirmed before you travel.",
+          "Yes. Aylestone Taxis operates 24 hours a day, seven days a week at Fosse Shopping Park — including early-morning shift starts for retail workers, late-night collections after stores close, and shopper pickups at any hour.",
+      },
+      {
+        question: "Can I book a taxi to Fosse Park for a shopping trip with a fixed return pickup time?",
+        answer:
+          "Yes. You can pre-book a taxi to Fosse Park for your shopping trip and schedule a fixed return pickup time — ideal when you want to skip parking and know exactly when your driver will meet you with your bags. Call 0116 233 8888 or book online and note your preferred return time and meeting point.",
       },
     ],
   },
@@ -1159,19 +1208,24 @@ const areaContent: Record<string, AreaContent> = {
     ),
     faqs: [
       {
-        question: "How quickly can I get a taxi in Aylestone?",
+        question: "How much does a taxi from Aylestone to Leicester city centre cost?",
         answer:
-          "Because we're based on Aylestone Road, most pickups in the Aylestone area are within 5–10 minutes. During very busy periods, pre-booking guarantees your car.",
+          "Aylestone to Leicester city centre fares typically range from £5 to £9 depending on your exact pickup and drop-off points. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
       },
       {
-        question: "How much is a taxi from Aylestone to Leicester City Centre?",
+        question: "How long does a taxi from Aylestone to Leicester take?",
         answer:
-          "A taxi from Aylestone to Leicester city centre typically costs £5–£9 depending on your exact pickup point and drop-off location. The journey takes around 10 minutes.",
+          "Most journeys from Aylestone to Leicester city centre take around 10 minutes — Aylestone sits just two miles south-west of the city centre.",
       },
       {
-        question: "Do you cover Aylestone Meadows and the canal area?",
+        question: "Do you offer 24/7 taxi service in Aylestone?",
         answer:
-          "Yes — we cover all parts of Aylestone including roads close to the Meadows, Saffron Lane, and the Aylestone Road corridor.",
+          "Yes. Aylestone Taxis operates 24 hours a day, seven days a week across Aylestone and surrounding areas — including early-morning airport runs and late-night pickups.",
+      },
+      {
+        question: "Can I book a regular taxi for commuting or school runs from Aylestone?",
+        answer:
+          "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
       },
     ],
   },
@@ -2221,19 +2275,24 @@ const areaContent: Record<string, AreaContent> = {
     ),
     faqs: [
       {
-        question: "How long is a taxi from Oadby to Leicester city centre?",
+        question: "How much does a taxi from Oadby to Leicester city centre cost?",
         answer:
-          "Typically 10–15 minutes from Oadby to Leicester city centre. During rush hours (8–9am, 4–6pm weekdays) allow up to 20 minutes.",
+          "Fares from Oadby to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
       },
       {
-        question: "How much is a taxi from Oadby to East Midlands Airport?",
+        question: "How long does a taxi from Oadby to Leicester take?",
         answer:
-          "A fixed-price taxi from Oadby to East Midlands Airport starts from approximately £28–£35. Price is confirmed at booking — no meters, no surprises.",
+          "Most journeys from Oadby to Leicester city centre take around 10–15 minutes in normal traffic along the A6 corridor — during rush hours (8–9am, 4–6pm weekdays) allow up to 20 minutes.",
       },
       {
-        question: "Do you cover late-night pickups in Oadby?",
+        question: "Do you offer 24/7 taxi service in Oadby?",
         answer:
-          "Yes. We operate 24/7 with no late-night surcharge. Call 0116 2338888 at any hour for immediate dispatch or pre-book in advance.",
+          "Yes. Aylestone Taxis operates 24 hours a day, seven days a week across Oadby and surrounding areas — including early-morning airport runs and late-night pickups.",
+      },
+      {
+        question: "Can I book a regular taxi for commuting or school runs from Oadby?",
+        answer:
+          "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
       },
     ],
   },
