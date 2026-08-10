@@ -412,10 +412,93 @@ export default function AboutPage() {
               </button>
             </a>
           </div>
+          </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">How long has Aylestone Taxis been operating in Leicester?</h3>
+              <p className="text-[#2E3C44]">Aylestone Taxis has been serving Leicester and Leicestershire since 1995 — over 30 years of continuous service to the local community.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">Are Aylestone Taxis drivers licensed and DBS checked?</h3>
+              <p className="text-[#2E3C44]">Yes. All drivers are fully licensed by Leicester City Council or Wolverhampton City Council, and every driver holds an enhanced DBS certificate as standard.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">What areas does Aylestone Taxis cover?</h3>
+              <p className="text-[#2E3C44]">We cover Leicester city centre and the wider Leicestershire area, including local journeys, airport transfers to all major UK airports, and long-distance UK-wide travel.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">Is Aylestone Taxis available 24 hours a day?</h3>
+              <p className="text-[#2E3C44]">Yes. We operate 24 hours a day, 7 days a week, including bank holidays — with no late-night or early-morning surcharge.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">How do I book a taxi with Aylestone Taxis?</h3>
+              <p className="text-[#2E3C44]">You can book online in seconds, call 0116 233 8888, or send a WhatsApp message to +44 7888 873795. You'll see your fixed price before you confirm.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How long has Aylestone Taxis been operating in Leicester?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Aylestone Taxis has been serving Leicester and Leicestershire since 1995 — over 30 years of continuous service to the local community."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are Aylestone Taxis drivers licensed and DBS checked?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. All drivers are fully licensed by Leicester City Council or Wolverhampton City Council, and every driver holds an enhanced DBS certificate as standard."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What areas does Aylestone Taxis cover?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We cover Leicester city centre and the wider Leicestershire area, including local journeys, airport transfers to all major UK airports, and long-distance UK-wide travel."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Aylestone Taxis available 24 hours a day?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We operate 24 hours a day, 7 days a week, including bank holidays — with no late-night or early-morning surcharge."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I book a taxi with Aylestone Taxis?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can book online in seconds, call 0116 233 8888, or send a WhatsApp message to +44 7888 873795. You'll see your fixed price before you confirm."
+                }
+              }
+            ]
+          })
+        }}
+      />
     </div>
   )
 }

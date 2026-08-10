@@ -250,11 +250,98 @@ export default function CompanyPage() {
                   <ArrowRight className="h-5 w-5 transition-smooth group-hover:translate-x-1" />
                 </button>
               </a>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section-padding bg-white">
+        <div className="max-w-4xl mx-auto container-padding">
+          <div className="text-center mb-16 fade-in">
+            <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
+              FAQs
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">Does Aylestone Taxis offer corporate taxi accounts?</h3>
+              <p className="text-[#2E3C44]">Yes. We provide corporate accounts with centralised billing, complete booking history and reporting, customisable invoices, and a dedicated account manager for your business.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">How many passengers does Aylestone Taxis serve each year?</h3>
+              <p className="text-[#2E3C44]">We serve over 10,000 passengers annually, with a 99.7% customer satisfaction rating, and we're licensed by Leicester City Council.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">Is Aylestone Taxis licensed to operate across Leicestershire?</h3>
+              <p className="text-[#2E3C44]">Yes. We are fully licensed by Leicester City Council and Wolverhampton City Council, meeting all local authority private hire licensing requirements.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">Can businesses set up invoiced travel with Aylestone Taxis?</h3>
+              <p className="text-[#2E3C44]">Yes. Business customers can set up monthly invoicing, reference fields on bookings, and standing weekday pickups for staff — contact us to set up a corporate account.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">Does Aylestone Taxis support public sector or corporate clients?</h3>
+              <p className="text-[#2E3C44]">Yes. We work with public sector institutions and multinational corporations, alongside individual passengers, offering the same fixed-price reliability at scale.</p>
             </div>
           </div>
         </div>
       </section>
-      
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does Aylestone Taxis offer corporate taxi accounts?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We provide corporate accounts with centralised billing, complete booking history and reporting, customisable invoices, and a dedicated account manager for your business."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How many passengers does Aylestone Taxis serve each year?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We serve over 10,000 passengers annually, with a 99.7% customer satisfaction rating, and we're licensed by Leicester City Council."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Aylestone Taxis licensed to operate across Leicestershire?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We are fully licensed by Leicester City Council and Wolverhampton City Council, meeting all local authority private hire licensing requirements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can businesses set up invoiced travel with Aylestone Taxis?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Business customers can set up monthly invoicing, reference fields on bookings, and standing weekday pickups for staff — contact us to set up a corporate account."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Aylestone Taxis support public sector or corporate clients?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We work with public sector institutions and multinational corporations, alongside individual passengers, offering the same fixed-price reliability at scale."
+                }
+              }
+            ]
+          })
+        }}
+      />
     </div>
   )
 }
