@@ -13,6 +13,19 @@ export default function Home() {
   return (
     <>
       <JsonLd data={getLocalBusinessJsonLd()} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": ["#hero-heading", "#trust-bar"],
+            },
+          }),
+        }}
+      />
       <HomePageClient />
     </>
   )

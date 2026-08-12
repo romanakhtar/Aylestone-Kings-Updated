@@ -53,7 +53,7 @@ export default function HomePageClient() {
       {/* Spacer: height = fixed navbar (top-5 + h-16) so next content sits below it */}
       <div className="w-full shrink-0" style={{ height: "4.1rem" }} aria-hidden="true" />
       {/* Trust bar – in flow, directly below navbar; 2-col grid on mobile so icons align */}
-      <div className="bg-[#0F0D3E] text-white text-xs font-medium py-1.5 px-3 sm:py-2 sm:px-6 sm:text-center">
+      <div id="trust-bar" className="bg-[#0F0D3E] text-white text-xs font-medium py-1.5 px-3 sm:py-2 sm:px-6 sm:text-center">
         <div className="max-w-5xl mx-auto w-full grid grid-cols-2 gap-x-3 gap-y-2 sm:flex sm:justify-center sm:items-center">
           <div className="contents sm:!inline-flex sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-0">
             <span className="flex items-center gap-1.5 sm:inline-flex sm:justify-center sm:gap-1.5">

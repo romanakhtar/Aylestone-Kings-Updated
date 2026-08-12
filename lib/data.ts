@@ -1048,6 +1048,191 @@ export const siteData = {
       "Practical travel guides for Leicester — airport transfers, matchday taxis, prom nights, student moves, fare tips, and booking advice from your trusted local 24/7 taxi company.",
     blogs: [
       {
+        id: "corporate-taxi-accounts-leicester-explained",
+        title: "Corporate Taxi Accounts in Leicester: How They Work",
+        metaTitle: "Corporate Taxi Accounts Leicester: How They Work",
+        metaDescription:
+          "How corporate taxi accounts work in Leicester — invoicing, staff booking, and what to ask before setting one up for your business.",
+        excerpt:
+          "How corporate taxi accounts work in Leicester — invoicing, staff booking, and what to ask before setting one up for your business.",
+        faqs: [
+          {
+            question: "How does invoicing work for a corporate taxi account?",
+            answer:
+              "Most corporate accounts use monthly invoicing, with each booking tagged to a reference such as a project code or department, so costs can be tracked and allocated clearly without individual expense claims.",
+          },
+          {
+            question: "Can staff book journeys directly on a corporate account?",
+            answer:
+              "Yes. Once an account is set up, authorised staff can book directly by phone, online, or through a dedicated channel, without needing to pay on the spot.",
+          },
+          {
+            question: "Is there a dedicated contact for corporate accounts?",
+            answer:
+              "Many corporate accounts include a dedicated account manager as a single point of contact, rather than staff dealing with general dispatch each time.",
+          },
+          {
+            question: "What size businesses typically use a corporate taxi account?",
+            answer:
+              "Corporate accounts suit businesses with regular travel needs — frequent client meetings, staff commuting, or regular airport travel — rather than those needing only occasional one-off bookings.",
+          },
+          {
+            question: "How do I set up a corporate taxi account in Leicester?",
+            answer:
+              "Get in touch to discuss your business's typical routes, expected booking volume, and invoicing preferences, and the account can be set up accordingly.",
+          },
+        ],
+        content: `
+          <p>For Leicester businesses that regularly need staff transport — client meetings, airport runs, or routine commuting — a corporate taxi account removes the friction of individual bookings and expense claims. Here's what a corporate account actually involves and how to set one up properly.</p>
+      
+          <h2>What a corporate taxi account gives you</h2>
+          <p>Instead of staff booking and paying individually then claiming expenses back, a corporate account centralises everything under one business relationship. Bookings are made against the company account, invoiced monthly, and tracked with full booking history — so finance teams get one clear bill instead of dozens of individual receipts to process.</p>
+      
+          <h2>How invoicing typically works</h2>
+          <p>Most corporate accounts operate on monthly invoicing, with each booking tagged to a reference (a project code, department, or employee name) so costs can be broken down and allocated correctly. This makes it straightforward to see which teams or projects are generating travel costs, without staff needing to submit individual expense claims.</p>
+      
+          <h2>Staff booking process</h2>
+          <p>Once an account is set up, authorised staff can book directly — by phone, online, or through a dedicated booking channel — without needing to pay on the spot. This is particularly useful for airport runs and client-facing travel, where you want a smooth, professional experience without staff fumbling for payment at the end of a journey.</p>
+      
+          <h2>What to ask before setting one up</h2>
+          <p><strong>Billing flexibility.</strong> Can invoicing be split by department, project, or cost centre if your business needs that level of detail?</p>
+          <p><strong>Account management.</strong> Is there a dedicated point of contact for your account, or will you be dealing with general dispatch every time?</p>
+          <p><strong>Booking flexibility.</strong> Can staff book last-minute, or does everything need advance notice? For client meetings and airport pickups, same-day flexibility matters.</p>
+          <p><strong>Vehicle range.</strong> Does the account cover different vehicle types — standard saloons for individual staff, larger vehicles for group travel or client parties?</p>
+      
+          <h2>Who typically uses a corporate account</h2>
+          <p>Corporate accounts suit businesses with regular travel needs rather than occasional one-off bookings — companies with frequent client meetings, staff commuting to business parks, regular airport travel for business trips, or organisations managing multiple staff members' transport needs centrally.</p>
+      
+          <h2>Setting up your account</h2>
+          <p>Getting started is usually straightforward: you get in touch to discuss your business's specific needs — expected volume, typical routes, invoicing preferences — and the account is set up accordingly, ready for staff to start booking. If you're considering a corporate taxi account in Leicester, our <a href="/corporate-taxi-account-leicester">corporate taxi accounts</a> page covers exactly how our account setup works, including invoicing and dedicated account management.</p>
+        `,
+        date: "2026-08-13",
+        author: "Aylestone Taxis Team",
+        category: "Local Guide",
+        image: "/Blog corporate-taxi-accounts-leicester-explained.webp",
+      },
+      {
+        id: "leicester-to-london-taxi-cost-time",
+        title: "Leicester to London Taxi: Cost, Time & When It Makes Sense",
+        metaTitle: "Leicester to London Taxi: Cost & Time Compared",
+        metaDescription:
+          "Taxi vs train from Leicester to London — real cost and time comparison, plus when a direct taxi actually makes sense for your journey.",
+        excerpt:
+          "Taxi vs train from Leicester to London — real cost and time comparison, plus when a direct taxi actually makes sense for your journey.",
+        faqs: [
+          {
+            question: "How long does a taxi from Leicester to London take?",
+            answer:
+              "A direct taxi from Leicester to London typically takes around 2 to 2.5 hours via the M1, depending on traffic, time of day, and your exact destination in London.",
+          },
+          {
+            question: "Is it cheaper to take a taxi or train from Leicester to London?",
+            answer:
+              "It depends on group size and timing. For solo travellers, the train is often cheaper, especially with advance tickets. For groups of 3-4 sharing a fixed taxi fare, a direct taxi can work out cheaper per person.",
+          },
+          {
+            question: "Can I book a taxi from Leicester to London for early morning travel?",
+            answer:
+              "Yes. A taxi runs on your schedule rather than a train timetable, so it's a practical option if you need to travel before the first train or after the last one.",
+          },
+          {
+            question: "Do you offer fixed prices for Leicester to London taxi journeys?",
+            answer:
+              "Yes. We agree your fare before you travel, based on your exact pickup point and London destination, so there are no surprises on arrival.",
+          },
+          {
+            question: "Is a taxi better than the train for London destinations away from St Pancras?",
+            answer:
+              "Often, yes. If your final destination isn't a quick journey from St Pancras, a direct door-to-door taxi can end up more convenient overall, even with a longer driving time.",
+          },
+        ],
+        content: `
+          <p>Leicester to London is one of the most common long-distance journeys people ask us about — and it's also one where the "best" option genuinely depends on your situation, not a single right answer. Here's a straightforward comparison to help you decide between a direct taxi and the train.</p>
+
+          <h2>Journey time — taxi vs train</h2>
+          <p>By taxi, Leicester to central London typically takes around 2 to 2.5 hours via the M1, depending on traffic, time of day, and your exact London destination. By train, the direct service from Leicester to London St Pancras usually takes just over an hour — significantly faster city-centre to city-centre, assuming you're travelling from Leicester station itself and your destination is a short hop from St Pancras.</p>
+
+          <h2>Where a taxi actually wins</h2>
+          <p>The train's speed advantage shrinks fast once you factor in real door-to-door circumstances:</p>
+          <p><strong>Early or late travel.</strong> If you need to leave before the first train or arrive after the last one, a taxi runs on your schedule, not the timetable.</p>
+          <p><strong>Multiple passengers or heavy luggage.</strong> A taxi splits cost across the group and avoids station-to-station luggage handling entirely — useful for family trips, business trips with equipment, or moving belongings.</p>
+          <p><strong>Destination away from a station.</strong> If you're heading somewhere in London that isn't a quick tube or taxi ride from St Pancras, a direct taxi can end up faster overall despite the longer driving time, since it skips the final London leg entirely.</p>
+          <p><strong>Group cost splitting.</strong> For 3-4 people travelling together, a fixed-price taxi fare split between passengers can come out cheaper per person than four individual train tickets, especially if booked close to the travel date when train fares rise.</p>
+
+          <h2>Where the train wins</h2>
+          <p>For a single traveller going city-centre to city-centre with light luggage, the train is very likely both cheaper and faster — an hour on a direct service is hard to beat, and advance-purchase tickets can be inexpensive if booked early.</p>
+
+          <h2>Making the decision</h2>
+          <p>There's no universally "right" answer — it depends on your group size, luggage, timing, and exact London destination. A useful rule of thumb: solo travellers with flexible timing and light luggage tend to do better by train; groups, early/late travel, or awkward final destinations tend to favour a direct taxi.</p>
+          <p>If you're planning a Leicester to London taxi journey and want a fixed price agreed before you travel, get in touch and we'll confirm your fare based on your exact pickup point and destination.</p>
+        `,
+        date: "2026-08-07",
+        author: "Aylestone Taxis Team",
+        category: "Local Guide",
+        image: "/Blog leicester-to-london-taxi-cost-time.webp",
+      },
+      {
+        id: "school-run-taxi-leicester-setup-guide",
+        title: "Setting Up a School Run Taxi in Leicester: A Parent's Guide",
+        metaTitle: "School Run Taxi Leicester: A Parent's Setup Guide",
+        metaDescription:
+          "Setting up a school run taxi in Leicester? Here's how DBS checks, same-driver options, and daily/weekly booking work — with tips for a smooth start.",
+        excerpt:
+          "Setting up a school run taxi in Leicester? Here's how DBS checks, same-driver options, and daily/weekly booking work — with tips for a smooth start.",
+        faqs: [
+          {
+            question: "What's the difference between a basic and enhanced DBS check?",
+            answer:
+              "An enhanced DBS check includes a broader search than a basic check, including local police records, and is the standard required for anyone regularly transporting children. Always ask specifically for 'enhanced' when confirming a driver's DBS status.",
+          },
+          {
+            question: "Can I request the same driver every day for my child's school run?",
+            answer:
+              "Many operators offer a consistent same-driver option for regular school runs, though this depends on driver availability. Ask when you set up your booking whether this can be guaranteed or offered on a best-effort basis.",
+          },
+          {
+            question: "How far in advance should I set up a school run taxi booking?",
+            answer:
+              "It's best to set up a recurring school run booking at least a few days before you need it to start, giving the company time to allocate a suitable driver and confirm your schedule.",
+          },
+          {
+            question: "Can school run bookings pause during holidays?",
+            answer:
+              "Yes, most operators allow you to pause or adjust a recurring school run booking during school holidays — just let them know your term dates in advance.",
+          },
+          {
+            question: "Do school run taxis provide booster seats?",
+            answer:
+              "Some operators can provide booster seats on request, but this isn't always automatic. Mention your child's seating requirements when you set up the booking to make sure the right vehicle is arranged.",
+          },
+        ],
+        content: `
+          <p>For many Leicester families, the school run is the most time-pressured part of the day — and one of the easiest to get wrong if you're relying on buses that don't quite line up with the bell, or juggling drop-offs between two children at different schools. A pre-arranged school run taxi Leicester service takes that daily stress off your plate, but knowing how to set one up properly (and what to actually ask for) makes a real difference to how smoothly it runs.</p>
+
+          <h2>Why parents choose a dedicated school run taxi over ad-hoc options</h2>
+          <p>Ad-hoc taxi apps are fine for the occasional trip, but they weren't built for a recurring 8:15am pickup five days a week. A different driver every day means your child doesn't build familiarity, and there's no guarantee of punctuality if the app is busy with other bookings that morning. A dedicated school run service, by contrast, is built around consistency — the same driver where possible, a fixed pickup window, and a company that already knows your child's school, route, and any specific needs.</p>
+
+          <h2>What to check before you book</h2>
+          <p><strong>DBS checks.</strong> This is non-negotiable. Ask specifically whether drivers hold an enhanced DBS certificate, not just a basic check — enhanced checks are the standard for anyone regularly transporting children, and a professional operator should confirm this without hesitation.</p>
+          <p><strong>Same-driver consistency.</strong> Ask whether the company can commit to the same driver for your regular run, or whether it's whoever's available that day. Familiarity matters for younger children especially — knowing who's picking them up reduces anxiety for both child and parent.</p>
+          <p><strong>Flexible scheduling.</strong> Life doesn't always fit a rigid Monday-to-Friday pattern. Check whether the operator supports part-week bookings, mornings-only or afternoons-only, and how easy it is to pause or adjust the booking during school holidays.</p>
+          <p><strong>Vehicle suitability.</strong> If your child needs a booster seat, confirm this is something the company can provide — don't assume it as standard.</p>
+
+          <h2>Setting up your first booking</h2>
+          <p>Most Leicester school run taxi services follow a similar process: you call or enquire online, discuss your specific days, times, addresses, and school, and the company then allocates a driver and sets up a recurring booking so you're not re-booking every single day. It's worth having a few details ready before you call — your child's school name, preferred pickup and drop-off times, and any specific requirements (child seat, after-school club pickup instead of home, etc.).</p>
+
+          <h2>Areas commonly covered</h2>
+          <p>Leicester school run services typically cover the city's main residential areas — Aylestone, Wigston, Knighton, and Clarendon Park are common examples — with collection available from home, a childminder's address, or an after-school club. If your area isn't explicitly listed, it's still worth asking, since most operators cover a wider radius than their website examples suggest.</p>
+
+          <h2>Final thoughts</h2>
+          <p>A good school run taxi service should feel like an extension of your own routine, not a gamble each morning. Enhanced DBS checks, a consistent driver, and flexible scheduling are the three things worth confirming before you commit. If you're setting this up in Leicester, our full <a href="/school-run-taxi-leicester">school run taxi service</a> page covers exactly how our own DBS-checked, same-driver option works, along with the areas we currently cover.</p>
+        `,
+        date: "2026-08-01",
+        author: "Aylestone Taxis Team",
+        category: "Local Guide",
+        image: "/Blog school-run-taxi-leicester-setup-guide.webp",
+      },
+      {
         id: "leicester-city-matchday-travel-taxi-guide-2026",
         title: "Leicester City Matchday Travel — Taxi Guide 2026",
         metaTitle: "Leicester City Matchday Taxi Guide 2026 — Fixed Prices, No Surge",

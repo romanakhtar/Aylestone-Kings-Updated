@@ -25,6 +25,12 @@ export const metadata: Metadata = {
       "Safe, reliable school run taxi Leicester service with enhanced DBS-checked drivers and an option for the same regular driver. Covering Aylestone, Wigston, Knighton and Clarendon Park.",
     url: "https://aylestone-taxis.co.uk/school-run-taxi-leicester",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "School Run Taxi Leicester | DBS Drivers | Aylestone Taxis",
+    description:
+      "Safe, reliable school run taxi Leicester service with enhanced DBS-checked drivers and an option for the same regular driver. Covering Aylestone, Wigston, Knighton and Clarendon Park.",
+  },
 }
 
 export default function SchoolRunTaxiLeicesterPage() {
@@ -146,8 +152,18 @@ export default function SchoolRunTaxiLeicesterPage() {
                 </h3>
                 <p className="text-[#2E3C44]">
                   Our school run taxis cover{" "}
-                  <strong>Aylestone, Wigston, Knighton and Clarendon Park</strong>{" "}
-                  plus surrounding Leicester areas. We can collect from home,
+                  <Link href="/taxis-in/aylestone" className="text-[#06A0A6] hover:underline font-medium">
+                    Aylestone
+                  </Link>
+                  ,{" "}
+                  <Link href="/taxis-in/wigston" className="text-[#06A0A6] hover:underline font-medium">
+                    Wigston
+                  </Link>
+                  ,{" "}
+                  <Link href="/taxis-in/knighton" className="text-[#06A0A6] hover:underline font-medium">
+                    Knighton
+                  </Link>{" "}
+                  and Clarendon Park plus surrounding Leicester areas. We can collect from home,
                   childminders or after-school clubs.
                 </p>
               </div>
@@ -265,6 +281,91 @@ export default function SchoolRunTaxiLeicesterPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
+                Frequently Asked Questions
+              </h2>
+            </div>
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">Are your school run drivers DBS checked?</h3>
+                <p className="text-[#2E3C44]">Yes. Every school run driver is enhanced DBS-checked and licensed, so you have full peace of mind about who is collecting your child each day.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">Can I have the same driver for every school run?</h3>
+                <p className="text-[#2E3C44]">Wherever possible, yes. We offer a consistent same-driver option so your child sees a familiar face and you always know who&apos;s picking them up.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">Which areas do you cover for school runs?</h3>
+                <p className="text-[#2E3C44]">We cover Aylestone, Wigston, Knighton, Clarendon Park, and surrounding Leicester areas, with collection from home, childminders, or after-school clubs.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">Can I book a daily or weekly school run?</h3>
+                <p className="text-[#2E3C44]">Yes. We offer flexible daily, weekly, or part-week bookings covering mornings, afternoons, or both, tailored to your schedule.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">How do I set up a regular school run booking?</h3>
+                <p className="text-[#2E3C44]">Call 0116 233 8888 to discuss your requirements — days, times, addresses, and any specific needs — and we&apos;ll set up a recurring booking with a consistent driver where possible.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Are your school run drivers DBS checked?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Every school run driver is enhanced DBS-checked and licensed, so you have full peace of mind about who is collecting your child each day."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I have the same driver for every school run?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Wherever possible, yes. We offer a consistent same-driver option so your child sees a familiar face and you always know who's picking them up."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Which areas do you cover for school runs?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We cover Aylestone, Wigston, Knighton, Clarendon Park, and surrounding Leicester areas, with collection from home, childminders, or after-school clubs."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I book a daily or weekly school run?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We offer flexible daily, weekly, or part-week bookings covering mornings, afternoons, or both, tailored to your schedule."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do I set up a regular school run booking?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Call 0116 233 8888 to discuss your requirements — days, times, addresses, and any specific needs — and we'll set up a recurring booking with a consistent driver where possible."
+                  }
+                }
+              ]
+            })
+          }}
+        />
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">

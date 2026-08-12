@@ -15,6 +15,7 @@ import {
 } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
+import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import CorporateAccountEnquiryForm from "@/components/CorporateAccountEnquiryForm"
 import JsonLd from "@/components/seo/JsonLd"
@@ -40,6 +41,12 @@ export const metadata: Metadata = {
     description:
       "Business taxi accounts with monthly invoicing, staff booking, and account management. Serving Leicester and the wider East Midlands. Enquire today.",
     url: CORPORATE_CANONICAL,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Corporate Taxi Accounts Leicester | Business Travel",
+    description:
+      "Business taxi accounts with monthly invoicing, staff booking, and account management. Serving Leicester and the wider East Midlands. Enquire today.",
   },
 }
 
@@ -157,7 +164,11 @@ export default function CorporateTaxiAccountLeicesterPage() {
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-8 leading-relaxed">
                 Aylestone Taxis (via Aylestone Taxis) provides <strong>corporate taxi accounts</strong> with centralised
                 billing, predictable pricing on agreed routes, and reliable drivers for staff movements, client visits,
-                and airport transfers across Leicester and beyond.
+                and{" "}
+                <Link href="/airport-taxi-leicester" className="text-[#06A0A6] font-semibold hover:underline">
+                  airport transfers
+                </Link>{" "}
+                across Leicester and beyond.
               </p>
               <p className="text-lg text-[#2E3C44] max-w-2xl mx-auto mb-10">
                 <span className="font-semibold text-[#0F0D3E]">Email </span>
@@ -290,8 +301,19 @@ export default function CorporateTaxiAccountLeicesterPage() {
               <ul className="space-y-3 text-[#2E3C44] text-lg list-disc list-inside">
                 <li>One monthly invoice instead of hundreds of driver receipts</li>
                 <li>Phone and app booking for authorised staff</li>
-                <li>Airport and UK-wide long-distance on account where agreed</li>
-                <li>Coverage for Leicester city centre, Fosse Park, Meridian Business Park, and surrounds</li>
+                <li>
+                  <Link href="/airport-taxi-leicester" className="text-[#06A0A6] font-semibold hover:underline">
+                    Airport
+                  </Link>{" "}
+                  and UK-wide long-distance on account where agreed
+                </li>
+                <li>
+                  Coverage for{" "}
+                  <Link href="/taxis-in/leicester-city-centre" className="text-[#06A0A6] font-semibold hover:underline">
+                    Leicester city centre
+                  </Link>
+                  , Fosse Park, Meridian Business Park, and surrounds
+                </li>
               </ul>
             </div>
           </div>

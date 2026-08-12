@@ -18,17 +18,23 @@ const CANONICAL = "https://aylestone-taxis.co.uk/prom-taxi-leicester"
 const PROM_PHONE = "0116 233 8888"
 
 export const metadata: Metadata = {
-  title: "Prom Taxi Leicester — Smart Vehicles, Fixed Prices | Book 24/7",
+  title: "Prom Taxi Leicester | Fixed Prices, DBS Drivers",
   description:
-    "Looking for a prom taxi in Leicester? Aylestone Taxis offers smart, fixed-price prom taxis with group bookings and patient drivers. Call 0116 233 8888 to book your prom night taxi.",
+    "Fixed-price prom taxis in Leicester — group bookings, photo-stop flexibility, DBS-checked drivers. From £15. Book early, call 0116 233 8888.",
   alternates: {
     canonical: CANONICAL,
   },
   openGraph: {
-    title: "Prom Taxi Leicester — Smart Vehicles, Fixed Prices | Book 24/7",
+    title: "Prom Taxi Leicester | Fixed Prices, DBS Drivers",
     description:
-      "Looking for a prom taxi in Leicester? Aylestone Taxis offers smart, fixed-price prom taxis with group bookings and patient drivers. Call 0116 233 8888 to book your prom night taxi.",
+      "Fixed-price prom taxis in Leicester — group bookings, photo-stop flexibility, DBS-checked drivers. From £15. Book early, call 0116 233 8888.",
     url: CANONICAL,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prom Taxi Leicester | Fixed Prices, DBS Drivers",
+    description:
+      "Fixed-price prom taxis in Leicester — group bookings, photo-stop flexibility, DBS-checked drivers. From £15. Book early, call 0116 233 8888.",
   },
 }
 
