@@ -1048,6 +1048,321 @@ export const siteData = {
       "Practical travel guides for Leicester — airport transfers, matchday taxis, prom nights, student moves, fare tips, and booking advice from your trusted local 24/7 taxi company.",
     blogs: [
       {
+        id: "corporate-taxi-accounts-leicester-explained",
+        title: "Corporate Taxi Accounts in Leicester: The Complete Guide",
+        metaTitle: "Corporate Taxi Accounts Leicester | Complete Guide 2026",
+        metaDescription:
+          "Corporate taxi accounts in Leicester explained — invoicing, staff booking, airport transfers, and how to compare providers. Everything businesses need to know.",
+        excerpt:
+          "Corporate taxi accounts in Leicester explained — invoicing, staff booking, airport transfers, and how to compare providers before you commit.",
+        faqs: [
+          {
+            question: "How does invoicing work for a corporate taxi account?",
+            answer:
+              "Most corporate accounts use monthly invoicing, with each booking tagged to a reference such as a project code, department, or employee name, so costs can be tracked and allocated clearly without individual expense claims. Some businesses request weekly or fortnightly invoicing instead — ask when you set up your account.",
+          },
+          {
+            question: "Can staff book journeys directly on a corporate account?",
+            answer:
+              "Yes. Once an account is set up, authorised staff can book directly by phone, online, or through a dedicated channel, without needing to pay on the spot. You can also set limits on who is authorised to book against the account.",
+          },
+          {
+            question: "Is there a dedicated contact for corporate accounts?",
+            answer:
+              "Many corporate accounts include a dedicated account manager as a single point of contact, rather than staff dealing with general dispatch each time. This is particularly useful for businesses with frequent or complex booking needs.",
+          },
+          {
+            question: "What size businesses typically use a corporate taxi account?",
+            answer:
+              "Corporate accounts suit businesses with regular travel needs — frequent client meetings, staff commuting, or regular airport travel — rather than those needing only occasional one-off bookings. This ranges from small firms with a handful of monthly journeys to larger organisations coordinating dozens of staff.",
+          },
+          {
+            question: "Can a corporate account cover airport transfers for business travel?",
+            answer:
+              "Yes. Airport runs are one of the most common uses for a corporate account, since fixed pricing and flight monitoring remove the uncertainty of last-minute booking for business travel to East Midlands, Birmingham, and other UK airports.",
+          },
+          {
+            question: "How do I set up a corporate taxi account in Leicester?",
+            answer:
+              "Get in touch to discuss your business's typical routes, expected booking volume, and invoicing preferences, and the account can be set up accordingly — usually ready for staff to start booking within a few days.",
+          },
+        ],
+        content: `
+          <div style="background:#F0FAFA; border-left:4px solid #06A0A6; padding:1.25rem 1.5rem; margin-bottom:2rem; border-radius:0.5rem;">
+            <strong>TL;DR:</strong> A corporate taxi account lets Leicester businesses centralise staff travel under one invoiced relationship — no individual expense claims, fixed pricing for airport runs, and a single point of contact. Setup typically takes a few days and suits businesses with regular travel needs, not just occasional bookings.
+          </div>
+      
+          <p>For Leicester businesses that regularly need staff transport — client meetings, airport runs, or routine commuting — a corporate taxi account removes the friction of individual bookings and expense claims. This guide covers exactly what a business taxi account involves, how invoicing works, what to compare between providers, and how to set one up properly.</p>
+      
+          <h2>What a corporate taxi account actually gives you</h2>
+          <p>Instead of staff booking and paying individually then claiming expenses back, a corporate account centralises everything under one business relationship. Bookings are made against the company account, invoiced on an agreed schedule, and tracked with full booking history — so finance teams get one clear bill instead of dozens of individual receipts to reconcile each month.</p>
+          <p>Beyond the administrative saving, a company taxi account also standardises the travel experience for staff and clients. Everyone books the same way, gets the same fixed-price reliability, and there's no awkward moment at the end of a client meeting where someone has to work out who's paying.</p>
+      
+          <h2>How invoicing typically works</h2>
+          <p>Most business accounts operate on monthly invoicing, with each booking tagged to a reference — a project code, department, cost centre, or employee name — so costs can be broken down and allocated correctly.</p>
+          <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:1rem;">
+            <thead>
+              <tr style="background:#0F0D3E; color:#fff;">
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Invoicing option</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Best for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Monthly, single invoice</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Small businesses with predictable, low-volume travel</td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Monthly, split by department/cost centre</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Larger organisations tracking spend across teams</td>
+              </tr>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Weekly or fortnightly</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">High-volume users wanting tighter cash-flow tracking</td>
+              </tr>
+            </tbody>
+          </table>
+      
+          <h2>Staff booking process</h2>
+          <p>Once an account is set up, authorised staff can book directly — by phone, online, or through a dedicated booking channel — without needing to pay on the spot. This is particularly useful for airport runs and client-facing travel, where you want a smooth, professional experience without staff fumbling for payment at the end of a journey. Businesses can typically decide how many staff are authorised to book, and whether certain journey types (long-distance or executive vehicles) need separate approval.</p>
+      
+          <h2>What to compare before setting one up</h2>
+          <p><strong>Billing flexibility.</strong> Can invoicing be split by department, project, or cost centre if your business needs that level of detail?</p>
+          <p><strong>Account management.</strong> Is there a dedicated point of contact for your account, or will you be dealing with general dispatch every time?</p>
+          <p><strong>Booking flexibility.</strong> Can staff book last-minute, or does everything need advance notice? For client meetings and airport pickups, same-day flexibility matters.</p>
+          <p><strong>Vehicle range.</strong> Does the account cover different vehicle types — standard saloons for individual staff, executive cars for client-facing travel, larger vehicles for group travel?</p>
+          <p><strong>Airport coverage.</strong> Does the provider offer fixed pricing and flight monitoring for business travel through East Midlands, Birmingham, and other UK airports? Our <a href="/blog/leicester-to-london-taxi-cost-time">Leicester to London cost comparison</a> covers similar fixed-price logic for long-distance business trips.</p>
+      
+          <h2>Who typically uses a corporate account</h2>
+          <p>Corporate accounts suit businesses with regular travel needs rather than occasional one-off bookings — companies with frequent client meetings, staff commuting to business parks such as Meridian Business Park, regular airport travel for business trips, or organisations managing multiple staff members' transport needs centrally. Public sector institutions and larger corporate clients also commonly use dedicated accounts for consistent, auditable travel spend.</p>
+      
+          <h2>Common use cases for a business taxi account</h2>
+          <ul>
+            <li><strong>Client meetings</strong> — reliable, presentable transport without staff needing to expense individual fares</li>
+            <li><strong>Airport travel</strong> — fixed pricing and flight monitoring for business trips</li>
+            <li><strong>Staff commuting</strong> — regular journeys to business parks or between sites</li>
+            <li><strong>Event and conference travel</strong> — group bookings for staff attending the same event</li>
+            <li><strong>Visitor transport</strong> — collecting clients or visitors from stations or airports</li>
+          </ul>
+      
+          <h2>Setting up your Leicester corporate taxi account</h2>
+          <p>Getting started is usually straightforward: you get in touch to discuss your business's specific needs — expected volume, typical routes, invoicing preferences — and the account is set up accordingly, ready for staff to start booking. If you're considering a corporate taxi account in Leicester, our <a href="/corporate-taxi-account-leicester">corporate taxi accounts</a> page covers exactly how our account setup works, including invoicing and dedicated account management.</p>
+        `,
+        date: "2026-08-13",
+        author: "Aylestone Taxis Team",
+        category: "Local Guide",
+        image: "/Blog corporate-taxi-accounts-leicester-explained.webp",
+      },
+      {
+        id: "leicester-to-london-taxi-cost-time",
+        title: "Leicester to London Taxi: Cost, Time & When It Makes Sense",
+        metaTitle: "Leicester to London Taxi: Full Cost & Time Comparison 2026",
+        metaDescription:
+          "Taxi vs train from Leicester to London compared — real costs, journey times, and when a direct taxi beats the train for solo travellers and groups.",
+        excerpt:
+          "Taxi vs train from Leicester to London compared — real costs, journey times, and when a direct taxi beats the train for solo travellers and groups.",
+        faqs: [
+          {
+            question: "How long does a taxi from Leicester to London take?",
+            answer:
+              "A direct taxi from Leicester to London typically takes around 2 to 2.5 hours via the M1, depending on traffic, time of day, and your exact destination in London. Early morning or late evening journeys tend to be closer to the 2-hour end.",
+          },
+          {
+            question: "Is it cheaper to take a taxi or train from Leicester to London?",
+            answer:
+              "It depends on group size and timing. For solo travellers, the train is often cheaper, especially with advance tickets. For groups of 3-4 sharing a fixed taxi fare, a direct taxi can work out cheaper per person than four individual train tickets, particularly if booked close to the travel date when train fares rise.",
+          },
+          {
+            question: "Can I book a taxi from Leicester to London for early morning travel?",
+            answer:
+              "Yes. A taxi runs on your schedule rather than a train timetable, so it's a practical option if you need to travel before the first train or after the last one — useful for early flights from London airports or late finishes at London events.",
+          },
+          {
+            question: "Do you offer fixed prices for Leicester to London taxi journeys?",
+            answer:
+              "Yes. We agree your fare before you travel, based on your exact pickup point and London destination, so there are no surprises on arrival regardless of traffic conditions on the M1 or M25.",
+          },
+          {
+            question: "Is a taxi better than the train for London destinations away from St Pancras?",
+            answer:
+              "Often, yes. If your final destination isn't a quick journey from St Pancras — for example, somewhere in west or south London — a direct door-to-door taxi can end up more convenient overall, even with a longer driving time, since it skips the final London leg on the Underground entirely.",
+          },
+          {
+            question: "Can a taxi from Leicester to London handle luggage for a full trip?",
+            answer:
+              "Yes. Larger vehicles such as estates or MPVs can be arranged for passengers travelling with substantial luggage, which is often easier than managing multiple large cases through a busy station.",
+          },
+        ],
+        content: `
+          <div style="background:#F0FAFA; border-left:4px solid #06A0A6; padding:1.25rem 1.5rem; margin-bottom:2rem; border-radius:0.5rem;">
+            <strong>TL;DR:</strong> Train is usually faster and cheaper for a solo traveller going city-centre to city-centre (around 1 hour to St Pancras vs 2–2.5 hours by taxi). A fixed-price taxi wins for groups splitting one fare, early/late departures outside train hours, heavy luggage, or destinations away from St Pancras.
+          </div>
+      
+          <p>Leicester to London is one of the most common long-distance journeys people ask us about — and it's also one where the "best" option genuinely depends on your situation, not a single right answer. This guide gives a straightforward, numbers-based comparison to help you decide between a direct taxi and the train.</p>
+      
+          <h2>Journey time — taxi vs train</h2>
+          <p>By taxi, Leicester to central London typically takes around 2 to 2.5 hours via the M1, depending on traffic, time of day, and your exact London destination. By train, the direct service from Leicester to London St Pancras usually takes just over an hour — significantly faster city-centre to city-centre, assuming you're travelling from Leicester station itself and your destination is a short hop from St Pancras.</p>
+      
+          <h2>Cost comparison at a glance</h2>
+          <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:1rem;">
+            <thead>
+              <tr style="background:#0F0D3E; color:#fff;">
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Scenario</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Train (approx.)</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Taxi (approx.)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Solo traveller, advance ticket</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Often the cheapest option</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Fixed fare, higher per person</td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Solo traveller, last-minute ticket</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Can be expensive close to travel date</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Same fixed fare regardless of booking date</td>
+              </tr>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Group of 3-4 sharing</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Multiplies per ticket</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">One fixed fare split between passengers — often cheaper per head</td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Heavy luggage or awkward items</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Manageable but inconvenient on platforms</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Door-to-door, no station transfers</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>These are general patterns rather than fixed prices — always compare your specific train fare against a confirmed taxi quote for your exact dates and destination before deciding.</p>
+      
+          <h2>Where a taxi actually wins</h2>
+          <p>The train's speed advantage shrinks fast once you factor in real door-to-door circumstances:</p>
+          <p><strong>Early or late travel.</strong> If you need to leave before the first train or arrive after the last one, a taxi runs on your schedule, not the timetable.</p>
+          <p><strong>Multiple passengers or heavy luggage.</strong> A taxi splits cost across the group and avoids station-to-station luggage handling entirely — useful for family trips, business trips with equipment, or moving belongings.</p>
+          <p><strong>Destination away from a station.</strong> If you're heading somewhere in London that isn't a quick tube or taxi ride from St Pancras, a direct taxi can end up faster overall despite the longer driving time, since it skips the final London leg entirely.</p>
+          <p><strong>Group cost splitting.</strong> For 3-4 people travelling together, a fixed-price taxi fare split between passengers can come out cheaper per person than four individual train tickets, especially if booked close to the travel date when train fares rise.</p>
+      
+          <h2>Where the train wins</h2>
+          <p>For a single traveller going city-centre to city-centre with light luggage, the train is very likely both cheaper and faster — an hour on a direct service is hard to beat, and advance-purchase tickets can be inexpensive if booked early. If your destination is genuinely close to St Pancras and you're travelling alone, the train is usually the sensible default.</p>
+      
+          <h2>Business travel considerations</h2>
+          <p>For business trips, a fixed-price taxi also has the advantage of a single, clear invoice line — useful if you're travelling under a <a href="/blog/corporate-taxi-accounts-leicester-explained">corporate taxi account</a> rather than claiming train tickets and connecting fares separately.</p>
+      
+          <h2>Making the decision</h2>
+          <p>There's no universally "right" answer — it depends on your group size, luggage, timing, and exact London destination. A useful rule of thumb: solo travellers with flexible timing and light luggage tend to do better by train; groups, early/late travel, or awkward final destinations tend to favour a direct taxi.</p>
+          <p>If you're planning a Leicester to London taxi journey and want a fixed price agreed before you travel, get in touch and we'll confirm your fare based on your exact pickup point and destination.</p>
+        `,
+        date: "2026-08-13",
+        author: "Aylestone Taxis Team",
+        category: "Local Guide",
+        image: "/Blog leicester-to-london-taxi-cost-time.webp",
+      },
+      {
+        id: "school-run-taxi-leicester-setup-guide",
+        title: "Setting Up a School Run Taxi in Leicester: A Parent's Complete Guide",
+        metaTitle: "School Run Taxi Leicester: Complete Parent's Guide 2026",
+        metaDescription:
+          "Setting up a school run taxi in Leicester? Full guide covering DBS checks, same-driver options, daily/weekly booking, holidays, and what to ask before booking.",
+        excerpt:
+          "Setting up a school run taxi in Leicester? Full guide covering DBS checks, same-driver options, daily/weekly booking, holidays, and what to ask before booking.",
+        faqs: [
+          {
+            question: "What's the difference between a basic and enhanced DBS check?",
+            answer:
+              "An enhanced DBS check includes a broader search than a basic check, including local police records, and is the standard required for anyone regularly transporting children. Always ask specifically for 'enhanced' when confirming a driver's DBS status — a basic check alone is not sufficient for regular school transport.",
+          },
+          {
+            question: "Can I request the same driver every day for my child's school run?",
+            answer:
+              "Many operators offer a consistent same-driver option for regular school runs, though this depends on driver availability. Ask when you set up your booking whether this can be guaranteed or offered on a best-effort basis, and what happens if your usual driver is unavailable.",
+          },
+          {
+            question: "How far in advance should I set up a school run taxi booking?",
+            answer:
+              "It's best to set up a recurring school run booking at least a few days before you need it to start, giving the company time to allocate a suitable driver and confirm your schedule. For September start dates, booking a week or two ahead is sensible given demand.",
+          },
+          {
+            question: "Can school run bookings pause during holidays?",
+            answer:
+              "Yes, most operators allow you to pause or adjust a recurring school run booking during school holidays — just let them know your term dates in advance so the schedule updates automatically rather than you needing to cancel and rebook.",
+          },
+          {
+            question: "Do school run taxis provide booster seats?",
+            answer:
+              "Some operators can provide booster seats on request, but this isn't always automatic. Mention your child's age, weight, and seating requirements when you set up the booking to make sure the right vehicle and seat are arranged.",
+          },
+          {
+            question: "What happens if my child is sick or the school run isn't needed one day?",
+            answer:
+              "Most recurring bookings allow you to cancel or skip individual days with reasonable notice — check the specific notice period required (often the evening before or early morning) when you set up your booking.",
+          },
+        ],
+        content: `
+          <div style="background:#F0FAFA; border-left:4px solid #06A0A6; padding:1.25rem 1.5rem; margin-bottom:2rem; border-radius:0.5rem;">
+            <strong>TL;DR:</strong> Before booking a school run taxi in Leicester, confirm the driver holds an <em>enhanced</em> DBS check, ask whether the same driver can be assigned daily, check flexibility for holidays and part-week bookings, and clarify the cancellation notice period. Setup usually takes a few days once you provide school, addresses, and timing.
+          </div>
+      
+          <p>For many Leicester families, the school run is the most time-pressured part of the day — and one of the easiest to get wrong if you're relying on buses that don't quite line up with the bell, or juggling drop-offs between two children at different schools. A pre-arranged school run taxi Leicester service takes that daily stress off your plate, but knowing how to set one up properly — and what to actually ask for — makes a real difference to how smoothly it runs.</p>
+      
+          <h2>Why parents choose a dedicated school run taxi over ad-hoc options</h2>
+          <p>Ad-hoc taxi apps are fine for the occasional trip, but they weren't built for a recurring 8:15am pickup five days a week. A different driver every day means your child doesn't build familiarity, and there's no guarantee of punctuality if the app is busy with other bookings that morning. A dedicated school run service, by contrast, is built around consistency — the same driver where possible, a fixed pickup window, and a company that already knows your child's school, route, and any specific needs.</p>
+      
+          <h2>What to check before you book</h2>
+          <p><strong>DBS checks.</strong> This is non-negotiable. Ask specifically whether drivers hold an enhanced DBS certificate, not just a basic check — enhanced checks are the standard for anyone regularly transporting children, and a professional operator should confirm this without hesitation.</p>
+          <p><strong>Same-driver consistency.</strong> Ask whether the company can commit to the same driver for your regular run, or whether it's whoever's available that day. Familiarity matters for younger children especially — knowing who's picking them up reduces anxiety for both child and parent.</p>
+          <p><strong>Flexible scheduling.</strong> Life doesn't always fit a rigid Monday-to-Friday pattern. Check whether the operator supports part-week bookings, mornings-only or afternoons-only, and how easy it is to pause or adjust the booking during school holidays.</p>
+          <p><strong>Vehicle suitability.</strong> If your child needs a booster seat, confirm this is something the company can provide — don't assume it as standard.</p>
+          <p><strong>Cancellation policy.</strong> Ask what notice is needed to skip a day (sickness, inset days, half term) so you're not paying for journeys you don't need.</p>
+      
+          <h2>What a typical setup process looks like</h2>
+          <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:1rem;">
+            <thead>
+              <tr style="background:#0F0D3E; color:#fff;">
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Step</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">What happens</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">1. Initial enquiry</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Call or enquire online with school, addresses, and days needed</td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">2. Driver allocation</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">A suitable, DBS-checked driver is assigned to your route</td>
+              </tr>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">3. Confirmation</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Pickup times, addresses, and any special requirements confirmed</td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">4. Ongoing booking</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Recurring booking runs automatically — no daily re-booking needed</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Have a few details ready before you call: your child's school name, preferred pickup and drop-off times, and any specific requirements such as a child seat or an after-school club pickup instead of home.</p>
+      
+          <h2>Areas commonly covered</h2>
+          <p>Leicester school run services typically cover the city's main residential areas — Aylestone, Wigston, Knighton, and Clarendon Park are common examples — with collection available from home, a childminder's address, or an after-school club. If your area isn't explicitly listed, it's still worth asking, since most operators cover a wider radius than their website examples suggest.</p>
+      
+          <h2>Managing holidays and irregular schedules</h2>
+          <p>School terms rarely run in a straight line — inset days, half terms, and appointments all disrupt a fixed weekly pattern. A good school run service should let you pause bookings during holidays with advance notice of your term dates, rather than requiring you to cancel and re-set-up the whole arrangement each half term.</p>
+      
+          <h2>Combining school runs with other family journeys</h2>
+          <p>Many families who set up a school run taxi also use the same trusted provider for other regular trips — after-school clubs, weekend activities, or occasional longer journeys. If your family also travels further afield, our <a href="/blog/leicester-to-london-taxi-cost-time">Leicester to London cost comparison</a> covers similar fixed-price logic for longer family trips.</p>
+      
+          <h2>Final thoughts</h2>
+          <p>A good school run taxi service should feel like an extension of your own routine, not a gamble each morning. Enhanced DBS checks, a consistent driver, flexible scheduling, and a clear cancellation policy are the things worth confirming before you commit. If you're setting this up in Leicester, our full <a href="/school-run-taxi-leicester">school run taxi service</a> page covers exactly how our own DBS-checked, same-driver option works, along with the areas we currently cover.</p>
+        `,
+        date: "2026-08-13",
+        author: "Aylestone Taxis Team",
+        category: "Local Guide",
+        image: "/Blog school-run-taxi-leicester-setup-guide.webp",
+      },
+      {
         id: "leicester-city-matchday-travel-taxi-guide-2026",
         title: "Leicester City Matchday Travel — Taxi Guide 2026",
         metaTitle: "Leicester City Matchday Taxi Guide 2026 — Fixed Prices, No Surge",
@@ -1828,31 +2143,50 @@ export const siteData = {
       {
         id: "why-leicester-locals-trust-aylestone-taxis",
         title: "Why Leicester Locals Trust Aylestone Taxis",
-        metaTitle: "Why Locals Trust Aylestone Taxis | Leicester",
+        metaTitle: "Why Leicester Trusts Aylestone Taxis | 30+ Years Local",
+        metaDescription:
+          "30+ years serving Leicester, 99.7% satisfaction, DBS-checked licensed drivers. Here's what actually makes Aylestone Taxis a trusted local choice — with real numbers.",
         excerpt:
-          "For over 30 years, Aylestone Taxis has been the trusted choice for transportation in Leicester. Discover what makes us the preferred taxi service for thousands of local residents.",
+          "30+ years serving Leicester, 99.7% satisfaction, DBS-checked licensed drivers. Here's what actually makes Aylestone Taxis a trusted local choice.",
         content: `
-          <p>When it comes to choosing a taxi service in Leicester, trust is everything. For over 30 years, Aylestone Taxis has been serving the local community with reliable, professional, and affordable transportation. But what exactly makes Leicester locals trust us with their journeys?</p>
-          
-          <h2>Deep Local Knowledge</h2>
-          <p>Our drivers know Leicester like the back of their hand. From navigating the busy streets of the city centre to finding the quickest routes during peak hours, our local expertise ensures you arrive at your destination on time, every time. Whether you're heading to the National Space Centre, Highcross Leicester, or any location across the city, we know the best routes.</p>
-          
-          <h2>Proven Track Record</h2>
-          <p>Since 1995, we've built a reputation for excellence. With over 30 years of experience, thousands of satisfied customers, and a 99.7% satisfaction rating, our track record speaks for itself. Leicester locals trust us because we've consistently delivered reliable service year after year.</p>
-          
-          <h2>Safety First</h2>
-          <p>All licensed drivers available through Aylestone Taxis are fully licensed by Leicester City Council and undergo rigorous DBS checks. Vehicles used for bookings are regularly maintained and inspected to ensure your safety. We're fully insured and operate with the highest safety standards in the industry.</p>
-          
-          <h2>24/7 Availability</h2>
-          <p>Life doesn't stop at 5pm, and neither do we. Our 24/7 service means you can count on us whenever you need us - whether it's an early morning airport transfer, a late-night journey home, or an emergency ride to the hospital.</p>
-          
-          <h2>Transparent Pricing</h2>
-          <p>No hidden fees, no surprises. We believe in transparent, fair pricing. Leicester locals appreciate knowing exactly what they'll pay upfront, with competitive rates that won't break the bank.</p>
-          
-          <h2>Community Commitment</h2>
-          <p>We're not just a taxi service - we're part of the Leicester community. We support local events, understand local needs, and are committed to serving our community for years to come. When you choose Aylestone Taxis, you're supporting a local business that cares about Leicester.</p>
-          
-          <p>Join thousands of Leicester locals who trust Aylestone Taxis for their transportation needs. Book your ride today and experience the difference that 30 years of excellence makes.</p>
+          <div style="background:#F0FAFA; border-left:4px solid #06A0A6; padding:1.25rem 1.5rem; margin-bottom:2rem; border-radius:0.5rem;">
+            <strong>TL;DR:</strong> Aylestone Taxis has operated in Leicester since 1995, serves over 10,000 passengers a year with a 99.7% satisfaction rating, and every driver is DBS-checked and licensed by Leicester City Council. Trust comes down to four things: licensing, local knowledge, 24/7 availability, and fixed pricing.
+          </div>
+      
+          <p>Leicester has plenty of taxi options — so what actually separates a trusted local operator from the rest? Since 1995, we've built our reputation on a small number of things done consistently rather than gimmicks: proper licensing, drivers who know the city, availability that doesn't disappear at midnight, and pricing you can trust before you get in the car.</p>
+      
+          <h2>Licensing and driver checks — the non-negotiable basics</h2>
+          <p>Every driver is licensed by Leicester City Council and holds an enhanced DBS certificate. This isn't a marketing point — it's the baseline any credible operator should meet, and it's worth checking directly with any taxi firm you're considering, not just assuming.</p>
+      
+          <h2>Local knowledge that actually saves time</h2>
+          <p>Leicester's one-way systems, match-day closures around King Power Stadium, and university term-time traffic around Clarendon Park and the campuses all require real local knowledge, not just sat-nav. Drivers who work the city daily learn the shortcuts and the roads to avoid at 5pm on a Friday.</p>
+      
+          <h2>24/7 availability that's genuinely 24/7</h2>
+          <p>Some services quietly slow down overnight or during bad weather. We operate around the clock, every day of the year, which matters most exactly when you need it most — a 4am airport departure, a late finish, or an emergency hospital run.</p>
+      
+          <h2>Fixed pricing vs surprises</h2>
+          <p>No surge pricing, no meter running unexpectedly in traffic on agreed routes. You know the fare before you travel. For a full breakdown of how this compares to app-based pricing, see our <a href="/blog/leicester-to-london-taxi-cost-time">taxi cost comparison guide</a>.</p>
+      
+          <h2>The numbers behind the reputation</h2>
+          <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:1rem;">
+            <thead>
+              <tr style="background:#0F0D3E; color:#fff;">
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Metric</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Figure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Years serving Leicester</td><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">30+ (since 1995)</td></tr>
+              <tr style="background:#f8f9fa;"><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Passengers served annually</td><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">10,000+</td></tr>
+              <tr><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Satisfaction rating</td><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">99.7%</td></tr>
+              <tr style="background:#f8f9fa;"><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Licensing</td><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Leicester City Council & Wolverhampton City Council</td></tr>
+            </tbody>
+          </table>
+      
+          <h2>Community, not just a service</h2>
+          <p>Based on Aylestone Road since day one, we're part of the local area rather than a national brand operating remotely. That local accountability means a real office and a named team if anything ever needs resolving — not a support ticket queue.</p>
+      
+          <p>Ready to see the difference? <a href="/company">Read more about our company</a> or book your next journey online.</p>
         `,
         date: "2025-11-04",
         author: "Aylestone Taxis Team",
@@ -1861,54 +2195,54 @@ export const siteData = {
       },
       {
         id: "reliable-airport-transfers-from-leicester",
-        title: "Reliable Airport Transfers from Leicester",
+        title: "Reliable Airport Transfers from Leicester: Complete Guide",
+        metaTitle: "Airport Transfers Leicester | All UK Airports Compared",
+        metaDescription:
+          "Compare journey times and pricing for airport transfers from Leicester to EMA, Birmingham, Heathrow, Gatwick, Luton, Stansted and Manchester. Fixed fares, flight monitoring.",
         excerpt:
-          "Planning your next trip? Discover why Aylestone Taxis is the preferred choice for stress-free airport transfers from Leicester to all major UK airports.",
+          "Compare journey times and pricing for airport transfers from Leicester to all major UK airports. Fixed fares, flight monitoring, meet and greet.",
         content: `
-          <p>Planning a trip abroad? Whether you're heading to Birmingham, East Midlands, Heathrow, Gatwick, or any other major UK airport, reliable airport transfers are essential for a stress-free start to your journey. Aylestone Taxis has been providing dependable airport transfer services from Leicester for over 30 years.</p>
-          
-          <h2>Why Choose Aylestone Taxis for Airport Transfers?</h2>
-          
-          <h3>Punctuality Guaranteed</h3>
-          <p>Missing a flight can be costly and stressful. That's why we guarantee punctuality for all airport transfers. We monitor flight schedules and adjust pickup times accordingly, ensuring you arrive at the airport with plenty of time to spare. Our drivers understand the importance of being on time and plan accordingly.</p>
-          
-          <h3>All Major Airports Covered</h3>
-          <p>We provide reliable transfers from Leicester to all major UK airports:</p>
+          <div style="background:#F0FAFA; border-left:4px solid #06A0A6; padding:1.25rem 1.5rem; margin-bottom:2rem; border-radius:0.5rem;">
+            <strong>TL;DR:</strong> East Midlands Airport is closest at 30-45 minutes from Leicester, Birmingham is 45-70 minutes, and London airports run 1.5-2.5 hours. All Aylestone Taxis airport transfers include fixed pricing and flight monitoring as standard.
+          </div>
+      
+          <p>Whichever UK airport you're flying from, the two things that matter most are punctuality and knowing your cost in advance. This guide compares journey times and what to expect for transfers from Leicester to every major UK airport.</p>
+      
+          <h2>Journey times compared</h2>
+          <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:1rem;">
+            <thead>
+              <tr style="background:#0F0D3E; color:#fff;">
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Airport</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Approx. journey time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">East Midlands (EMA)</td><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">30-45 minutes</td></tr>
+              <tr style="background:#f8f9fa;"><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Birmingham (BHX)</td><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">45-70 minutes</td></tr>
+              <tr><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Luton (LTN)</td><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">~1.5 hours</td></tr>
+              <tr style="background:#f8f9fa;"><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Manchester (MAN)</td><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">~1.5 hours</td></tr>
+              <tr><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Heathrow (LHR)</td><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">~2 hours</td></tr>
+              <tr style="background:#f8f9fa;"><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Stansted (STN)</td><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">~2 hours</td></tr>
+              <tr><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Gatwick (LGW)</td><td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">~2.5 hours</td></tr>
+            </tbody>
+          </table>
+          <p>Times are guides for normal traffic — for detailed route and pricing breakdowns, see our dedicated <a href="/pricing/airports/Heathrow">Heathrow</a> and <a href="/pricing/airports/East-Midlands">East Midlands</a> pricing pages, or the full <a href="/airport-taxi-leicester">airport taxi Leicester</a> hub.</p>
+      
+          <h2>What's included as standard</h2>
+          <p><strong>Flight monitoring.</strong> We track your flight and adjust pickup times automatically for early landings or delays.</p>
+          <p><strong>Fixed pricing.</strong> Your fare is agreed before you travel — no surge pricing, no meter surprises in motorway traffic.</p>
+          <p><strong>Meet and greet.</strong> Available on request — your driver meets you in arrivals with a name board and helps with luggage.</p>
+          <p><strong>Vehicle choice.</strong> Estate cars for extra luggage, MPVs and minibuses for groups.</p>
+      
+          <h2>Booking tips</h2>
           <ul>
-            <li><strong>Birmingham Airport</strong> - Approximately 45 minutes</li>
-            <li><strong>East Midlands Airport</strong> - Approximately 30 minutes</li>
-            <li><strong>Heathrow Airport</strong> - Approximately 2 hours</li>
-            <li><strong>Gatwick Airport</strong> - Approximately 2.5 hours</li>
-            <li><strong>Luton Airport</strong> - Approximately 1.5 hours</li>
-            <li><strong>Stansted Airport</strong> - Approximately 2 hours</li>
-            <li><strong>Manchester Airport</strong> - Approximately 1.5 hours</li>
+            <li>Book early for 4am-7am departures when demand concentrates</li>
+            <li>Share your flight number so we can monitor delays automatically</li>
+            <li>Confirm vehicle size if travelling with more than 2 large cases</li>
+            <li>Book your return leg at the same time to lock in your homebound plan</li>
           </ul>
-          
-          <h3>Comfortable Vehicles</h3>
-          <p>Start your journey in comfort. Our fleet includes spacious estate vehicles perfect for luggage, executive cars for business travel, and MPVs for larger groups. All vehicles are clean, well-maintained, and equipped with modern amenities.</p>
-          
-          <h3>Meet and Greet Service</h3>
-          <p>For added convenience, we offer meet and greet services at the airport. Your driver will meet you in the arrivals hall with a name board, help with your luggage, and ensure a smooth journey home.</p>
-          
-          <h3>Competitive Pricing</h3>
-          <p>We offer transparent, competitive pricing for all airport transfers. No hidden fees, no surprises. Book in advance for the best rates, and we'll confirm your price upfront.</p>
-          
-          <h3>Easy Booking</h3>
-          <p>Booking your airport transfer is simple. You can book online, call us directly, or use our mobile app. We recommend booking in advance, especially during peak travel seasons, to secure your preferred time slot.</p>
-          
-          <h3>Return Transfers</h3>
-          <p>Need a ride home from the airport? We also provide return transfer services. Simply provide your flight details, and we'll track your flight and adjust pickup times if there are any delays.</p>
-          
-          <h2>Tips for a Smooth Airport Transfer</h2>
-          <ul>
-            <li>Book in advance, especially for early morning or late-night flights</li>
-            <li>Provide your flight details so we can monitor for delays</li>
-            <li>Allow extra time during peak travel periods</li>
-            <li>Pack efficiently - our drivers can help with luggage</li>
-            <li>Have your booking confirmation ready</li>
-          </ul>
-          
-          <p>Don't let airport transfers stress you out. Trust Aylestone Taxis for reliable, punctual, and comfortable airport transfers from Leicester. Book your transfer today and travel with confidence.</p>
+      
+          <p>For a deeper look at specific routes, read our guides to <a href="/blog/leicester-to-heathrow-taxi-everything-you-need-to-know">Leicester to Heathrow</a> and <a href="/blog/leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips">Leicester to Birmingham Airport</a>. Ready to book? Visit our <a href="/airport-taxi-leicester">airport taxi Leicester</a> hub to compare all seven airports in one place.</p>
         `,
         date: "2025-11-03",
         author: "Aylestone Taxis Team",

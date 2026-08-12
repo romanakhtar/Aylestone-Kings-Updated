@@ -201,6 +201,7 @@ export default function AnimatedHero() {
             
             {/* Main Heading */}
             <h1
+              id="hero-heading"
               className={`text-3xl md:text-4xl font-bold mb-4 leading-tight ${
                 isChristmasActive ? 'text-white' : 'text-[#0F0D3E]'
               }`}

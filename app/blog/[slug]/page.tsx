@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Calendar, User, ArrowLeft, ArrowRight, BookOpen } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import { notFound } from "next/navigation"
+import BlogFAQSection from "@/components/blog/BlogFAQSection"
 import BlogPostingJsonLd from "@/components/seo/BlogPostingJsonLd"
 import FAQSchema from "@/components/seo/FAQSchema"
 
@@ -167,6 +168,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </article>
         </div>
       </section>
+
+      {faqs ? <BlogFAQSection faqs={faqs} /> : null}
 
       {/* Navigation Between Posts */}
       <section className="py-12 bg-[#E4E4E4] border-y border-[#E4E4E4]">
