@@ -4,9 +4,9 @@ import JsonLd from "@/components/seo/JsonLd"
 import { getLocalBusinessJsonLd } from "@/lib/seo/siteJsonLd"
 
 export const metadata: Metadata = {
-  title: "Taxi Leicester | Aylestone Taxis | Book Online 0116 2338888",
+  title: "Leicester Taxi | Fixed Fares, No Surge | Aylestone Taxis",
   description:
-    "Taxi Leicester & Leicestershire: Aylestone Taxis (Aylestone Taxis) since 1995. Leicester taxis and cabs — call 0116 2338888 for instant quotes, airport transfers, and flat fares 24/7.",
+    "Leicester taxis & airport transfers since 1995. Fixed fares, no surge, licensed drivers, 24/7. Book online or call 0116 233 8888.",
 }
 
 export default function Home() {
