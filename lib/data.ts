@@ -1148,116 +1148,10 @@ export const siteData = {
           <h2>Setting up your Leicester corporate taxi account</h2>
           <p>Getting started is usually straightforward: you get in touch to discuss your business's specific needs — expected volume, typical routes, invoicing preferences — and the account is set up accordingly, ready for staff to start booking. If you're considering a corporate taxi account in Leicester, our <a href="/corporate-taxi-account-leicester">corporate taxi accounts</a> page covers exactly how our account setup works, including invoicing and dedicated account management.</p>
         `,
-        date: "2026-08-13",
+        date: "2026-08-03",
         author: "Aylestone Taxis Team",
         category: "Local Guide",
         image: "/Blog corporate-taxi-accounts-leicester-explained.webp",
-      },
-      {
-        id: "leicester-to-london-taxi-cost-time",
-        title: "Leicester to London Taxi: Cost, Time & When It Makes Sense",
-        metaTitle: "Leicester to London Taxi: Full Cost & Time Comparison 2026",
-        metaDescription:
-          "Taxi vs train from Leicester to London compared — real costs, journey times, and when a direct taxi beats the train for solo travellers and groups.",
-        excerpt:
-          "Taxi vs train from Leicester to London compared — real costs, journey times, and when a direct taxi beats the train for solo travellers and groups.",
-        faqs: [
-          {
-            question: "How long does a taxi from Leicester to London take?",
-            answer:
-              "A direct taxi from Leicester to London typically takes around 2 to 2.5 hours via the M1, depending on traffic, time of day, and your exact destination in London. Early morning or late evening journeys tend to be closer to the 2-hour end.",
-          },
-          {
-            question: "Is it cheaper to take a taxi or train from Leicester to London?",
-            answer:
-              "It depends on group size and timing. For solo travellers, the train is often cheaper, especially with advance tickets. For groups of 3-4 sharing a fixed taxi fare, a direct taxi can work out cheaper per person than four individual train tickets, particularly if booked close to the travel date when train fares rise.",
-          },
-          {
-            question: "Can I book a taxi from Leicester to London for early morning travel?",
-            answer:
-              "Yes. A taxi runs on your schedule rather than a train timetable, so it's a practical option if you need to travel before the first train or after the last one — useful for early flights from London airports or late finishes at London events.",
-          },
-          {
-            question: "Do you offer fixed prices for Leicester to London taxi journeys?",
-            answer:
-              "Yes. We agree your fare before you travel, based on your exact pickup point and London destination, so there are no surprises on arrival regardless of traffic conditions on the M1 or M25.",
-          },
-          {
-            question: "Is a taxi better than the train for London destinations away from St Pancras?",
-            answer:
-              "Often, yes. If your final destination isn't a quick journey from St Pancras — for example, somewhere in west or south London — a direct door-to-door taxi can end up more convenient overall, even with a longer driving time, since it skips the final London leg on the Underground entirely.",
-          },
-          {
-            question: "Can a taxi from Leicester to London handle luggage for a full trip?",
-            answer:
-              "Yes. Larger vehicles such as estates or MPVs can be arranged for passengers travelling with substantial luggage, which is often easier than managing multiple large cases through a busy station.",
-          },
-        ],
-        content: `
-          <div style="background:#F0FAFA; border-left:4px solid #06A0A6; padding:1.25rem 1.5rem; margin-bottom:2rem; border-radius:0.5rem;">
-            <strong>TL;DR:</strong> Train is usually faster and cheaper for a solo traveller going city-centre to city-centre (around 1 hour to St Pancras vs 2–2.5 hours by taxi). A fixed-price taxi wins for groups splitting one fare, early/late departures outside train hours, heavy luggage, or destinations away from St Pancras.
-          </div>
-      
-          <p>Leicester to London is one of the most common long-distance journeys people ask us about — and it's also one where the "best" option genuinely depends on your situation, not a single right answer. This guide gives a straightforward, numbers-based comparison to help you decide between a direct taxi and the train.</p>
-      
-          <h2>Journey time — taxi vs train</h2>
-          <p>By taxi, Leicester to central London typically takes around 2 to 2.5 hours via the M1, depending on traffic, time of day, and your exact London destination. By train, the direct service from Leicester to London St Pancras usually takes just over an hour — significantly faster city-centre to city-centre, assuming you're travelling from Leicester station itself and your destination is a short hop from St Pancras.</p>
-      
-          <h2>Cost comparison at a glance</h2>
-          <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:1rem;">
-            <thead>
-              <tr style="background:#0F0D3E; color:#fff;">
-                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Scenario</th>
-                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Train (approx.)</th>
-                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Taxi (approx.)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Solo traveller, advance ticket</td>
-                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Often the cheapest option</td>
-                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Fixed fare, higher per person</td>
-              </tr>
-              <tr style="background:#f8f9fa;">
-                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Solo traveller, last-minute ticket</td>
-                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Can be expensive close to travel date</td>
-                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Same fixed fare regardless of booking date</td>
-              </tr>
-              <tr>
-                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Group of 3-4 sharing</td>
-                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Multiplies per ticket</td>
-                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">One fixed fare split between passengers — often cheaper per head</td>
-              </tr>
-              <tr style="background:#f8f9fa;">
-                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Heavy luggage or awkward items</td>
-                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Manageable but inconvenient on platforms</td>
-                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Door-to-door, no station transfers</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>These are general patterns rather than fixed prices — always compare your specific train fare against a confirmed taxi quote for your exact dates and destination before deciding.</p>
-      
-          <h2>Where a taxi actually wins</h2>
-          <p>The train's speed advantage shrinks fast once you factor in real door-to-door circumstances:</p>
-          <p><strong>Early or late travel.</strong> If you need to leave before the first train or arrive after the last one, a taxi runs on your schedule, not the timetable.</p>
-          <p><strong>Multiple passengers or heavy luggage.</strong> A taxi splits cost across the group and avoids station-to-station luggage handling entirely — useful for family trips, business trips with equipment, or moving belongings.</p>
-          <p><strong>Destination away from a station.</strong> If you're heading somewhere in London that isn't a quick tube or taxi ride from St Pancras, a direct taxi can end up faster overall despite the longer driving time, since it skips the final London leg entirely.</p>
-          <p><strong>Group cost splitting.</strong> For 3-4 people travelling together, a fixed-price taxi fare split between passengers can come out cheaper per person than four individual train tickets, especially if booked close to the travel date when train fares rise.</p>
-      
-          <h2>Where the train wins</h2>
-          <p>For a single traveller going city-centre to city-centre with light luggage, the train is very likely both cheaper and faster — an hour on a direct service is hard to beat, and advance-purchase tickets can be inexpensive if booked early. If your destination is genuinely close to St Pancras and you're travelling alone, the train is usually the sensible default.</p>
-      
-          <h2>Business travel considerations</h2>
-          <p>For business trips, a fixed-price taxi also has the advantage of a single, clear invoice line — useful if you're travelling under a <a href="/blog/corporate-taxi-accounts-leicester-explained">corporate taxi account</a> rather than claiming train tickets and connecting fares separately.</p>
-      
-          <h2>Making the decision</h2>
-          <p>There's no universally "right" answer — it depends on your group size, luggage, timing, and exact London destination. A useful rule of thumb: solo travellers with flexible timing and light luggage tend to do better by train; groups, early/late travel, or awkward final destinations tend to favour a direct taxi.</p>
-          <p>If you're planning a Leicester to London taxi journey and want a fixed price agreed before you travel, get in touch and we'll confirm your fare based on your exact pickup point and destination.</p>
-        `,
-        date: "2026-08-13",
-        author: "Aylestone Taxis Team",
-        category: "Local Guide",
-        image: "/Blog leicester-to-london-taxi-cost-time.webp",
       },
       {
         id: "school-run-taxi-leicester-setup-guide",
@@ -1360,7 +1254,113 @@ export const siteData = {
         date: "2026-08-13",
         author: "Aylestone Taxis Team",
         category: "Local Guide",
-        image: "/Blog school-run-taxi-leicester-setup-guide.webp",
+        image: "/Blog school-run-taxi-leicester-setup-guide-2.webp",
+      },
+      {
+        id: "leicester-to-london-taxi-cost-time",
+        title: "Leicester to London Taxi: Cost, Time & When It Makes Sense",
+        metaTitle: "Leicester to London Taxi: Full Cost & Time Comparison 2026",
+        metaDescription:
+          "Taxi vs train from Leicester to London compared — real costs, journey times, and when a direct taxi beats the train for solo travellers and groups.",
+        excerpt:
+          "Taxi vs train from Leicester to London compared — real costs, journey times, and when a direct taxi beats the train for solo travellers and groups.",
+        faqs: [
+          {
+            question: "How long does a taxi from Leicester to London take?",
+            answer:
+              "A direct taxi from Leicester to London typically takes around 2 to 2.5 hours via the M1, depending on traffic, time of day, and your exact destination in London. Early morning or late evening journeys tend to be closer to the 2-hour end.",
+          },
+          {
+            question: "Is it cheaper to take a taxi or train from Leicester to London?",
+            answer:
+              "It depends on group size and timing. For solo travellers, the train is often cheaper, especially with advance tickets. For groups of 3-4 sharing a fixed taxi fare, a direct taxi can work out cheaper per person than four individual train tickets, particularly if booked close to the travel date when train fares rise.",
+          },
+          {
+            question: "Can I book a taxi from Leicester to London for early morning travel?",
+            answer:
+              "Yes. A taxi runs on your schedule rather than a train timetable, so it's a practical option if you need to travel before the first train or after the last one — useful for early flights from London airports or late finishes at London events.",
+          },
+          {
+            question: "Do you offer fixed prices for Leicester to London taxi journeys?",
+            answer:
+              "Yes. We agree your fare before you travel, based on your exact pickup point and London destination, so there are no surprises on arrival regardless of traffic conditions on the M1 or M25.",
+          },
+          {
+            question: "Is a taxi better than the train for London destinations away from St Pancras?",
+            answer:
+              "Often, yes. If your final destination isn't a quick journey from St Pancras — for example, somewhere in west or south London — a direct door-to-door taxi can end up more convenient overall, even with a longer driving time, since it skips the final London leg on the Underground entirely.",
+          },
+          {
+            question: "Can a taxi from Leicester to London handle luggage for a full trip?",
+            answer:
+              "Yes. Larger vehicles such as estates or MPVs can be arranged for passengers travelling with substantial luggage, which is often easier than managing multiple large cases through a busy station.",
+          },
+        ],
+        content: `
+          <div style="background:#F0FAFA; border-left:4px solid #06A0A6; padding:1.25rem 1.5rem; margin-bottom:2rem; border-radius:0.5rem;">
+            <strong>TL;DR:</strong> Train is usually faster and cheaper for a solo traveller going city-centre to city-centre (around 1 hour to St Pancras vs 2–2.5 hours by taxi). A fixed-price taxi wins for groups splitting one fare, early/late departures outside train hours, heavy luggage, or destinations away from St Pancras.
+          </div>
+      
+          <p>Leicester to London is one of the most common long-distance journeys people ask us about — and it's also one where the "best" option genuinely depends on your situation, not a single right answer. This guide gives a straightforward, numbers-based comparison to help you decide between a direct taxi and the train.</p>
+      
+          <h2>Journey time — taxi vs train</h2>
+          <p>By taxi, Leicester to central London typically takes around 2 to 2.5 hours via the M1, depending on traffic, time of day, and your exact London destination. By train, the direct service from Leicester to London St Pancras usually takes just over an hour — significantly faster city-centre to city-centre, assuming you're travelling from Leicester station itself and your destination is a short hop from St Pancras.</p>
+      
+          <h2>Cost comparison at a glance</h2>
+          <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:1rem;">
+            <thead>
+              <tr style="background:#0F0D3E; color:#fff;">
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Scenario</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Train (approx.)</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Taxi (approx.)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Solo traveller, advance ticket</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Often the cheapest option</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Fixed fare, higher per person</td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Solo traveller, last-minute ticket</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Can be expensive close to travel date</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Same fixed fare regardless of booking date</td>
+              </tr>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Group of 3-4 sharing</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Multiplies per ticket</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">One fixed fare split between passengers — often cheaper per head</td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Heavy luggage or awkward items</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Manageable but inconvenient on platforms</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Door-to-door, no station transfers</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>These are general patterns rather than fixed prices — always compare your specific train fare against a confirmed taxi quote for your exact dates and destination before deciding.</p>
+      
+          <h2>Where a taxi actually wins</h2>
+          <p>The train's speed advantage shrinks fast once you factor in real door-to-door circumstances:</p>
+          <p><strong>Early or late travel.</strong> If you need to leave before the first train or arrive after the last one, a taxi runs on your schedule, not the timetable.</p>
+          <p><strong>Multiple passengers or heavy luggage.</strong> A taxi splits cost across the group and avoids station-to-station luggage handling entirely — useful for family trips, business trips with equipment, or moving belongings.</p>
+          <p><strong>Destination away from a station.</strong> If you're heading somewhere in London that isn't a quick tube or taxi ride from St Pancras, a direct taxi can end up faster overall despite the longer driving time, since it skips the final London leg entirely.</p>
+          <p><strong>Group cost splitting.</strong> For 3-4 people travelling together, a fixed-price taxi fare split between passengers can come out cheaper per person than four individual train tickets, especially if booked close to the travel date when train fares rise.</p>
+      
+          <h2>Where the train wins</h2>
+          <p>For a single traveller going city-centre to city-centre with light luggage, the train is very likely both cheaper and faster — an hour on a direct service is hard to beat, and advance-purchase tickets can be inexpensive if booked early. If your destination is genuinely close to St Pancras and you're travelling alone, the train is usually the sensible default.</p>
+      
+          <h2>Business travel considerations</h2>
+          <p>For business trips, a fixed-price taxi also has the advantage of a single, clear invoice line — useful if you're travelling under a <a href="/blog/corporate-taxi-accounts-leicester-explained">corporate taxi account</a> rather than claiming train tickets and connecting fares separately.</p>
+      
+          <h2>Making the decision</h2>
+          <p>There's no universally "right" answer — it depends on your group size, luggage, timing, and exact London destination. A useful rule of thumb: solo travellers with flexible timing and light luggage tend to do better by train; groups, early/late travel, or awkward final destinations tend to favour a direct taxi.</p>
+          <p>If you're planning a Leicester to London taxi journey and want a fixed price agreed before you travel, get in touch and we'll confirm your fare based on your exact pickup point and destination.</p>
+        `,
+        date: "2026-08-07",
+        author: "Aylestone Taxis Team",
+        category: "Local Guide",
+        image: "/Blog leicester-to-london-taxi-cost-time.webp",
       },
       {
         id: "leicester-city-matchday-travel-taxi-guide-2026",
@@ -2639,6 +2639,7 @@ export const siteData = {
       {
         id: "top-tips-smooth-airport-pickup-leicester",
         title: "Top Tips for a Smooth Airport Pickup in Leicester",
+        metaTitle: "Smooth Airport Pickup Leicester | Aylestone Taxis",
         excerpt:
           "Essential tips for a smooth airport pickup in Leicester. How to ensure reliable airport transfers, what to expect, and how to prepare for your journey.",
         content: `

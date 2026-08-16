@@ -33,6 +33,12 @@ export function AirportLeicesterGuide({ facts }: { facts: LeicesterAirportGuideF
         <p>{facts.airlinesLeicester}</p>
         <h3 className="text-2xl font-bold text-gray-900 pt-2">Return journeys and where we meet you</h3>
         <p>{facts.returnJourneys}</p>
+        {facts.reverseDirection ? (
+          <>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 pt-4">{facts.reverseDirection.title}</h2>
+            <p>{facts.reverseDirection.content}</p>
+          </>
+        ) : null}
       </div>
     </section>
   )

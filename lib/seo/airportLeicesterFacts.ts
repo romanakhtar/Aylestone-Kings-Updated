@@ -12,6 +12,8 @@ export type LeicesterAirportGuideFacts = {
   airlinesLeicester: string
   earlyLateAvailability: string
   returnJourneys: string
+  /** Optional H2 block after return-journey copy (e.g. BHX → Leicester). */
+  reverseDirection?: { title: string; content: string }
 }
 
 export type AirportFaqItem = { question: string; answer: string }
@@ -340,6 +342,11 @@ export const birminghamLeicesterFacts: LeicesterAirportGuideFacts = {
     "We schedule Leicester pickups from around 04:00 for early European banks and collect arrivals after 23:00. Pre-booked night transfers are confirmed at a fixed price.",
   returnJourneys:
     "Arrivals: meet in the ground-floor arrivals pickup hall or the express pickup forecourt as signed that month — BHX sometimes adjusts private-hire meeting pins. We text your driver’s location and plate when you land.",
+  reverseDirection: {
+    title: "Taxi from Birmingham Airport to Leicester",
+    content:
+      "Flying into BHX and heading home to Leicester? Book a fixed-price return transfer and we will meet you in the ground-floor arrivals pickup hall or the express pickup forecourt — whichever BHX is operating that month for private hire. After baggage reclaim, we text your driver’s location and vehicle registration so you know exactly where to go. Share your flight number when you book and we track inbound delays, adjusting collection time so your driver is ready when you exit rather than waiting on a running meter. The same fixed fare applies both ways — saloon transfers from Leicester city centre start at £60, with estate and MPV prices confirmed at booking. No surge pricing on late arrivals; just a direct run back via the M42, M6, and M69.",
+  },
 }
 
 export const birminghamPricingFaqs: AirportFaqItem[] = [
@@ -377,5 +384,10 @@ export const birminghamPricingFaqs: AirportFaqItem[] = [
     question: "How much do Birmingham Airport taxis cost from Leicester?",
     answer:
       "Birmingham Airport taxis prices from Leicester typically start from £60 for a saloon, £70 for an estate, and £80 for an MPV/minibus, all as fixed fares agreed before travel. Pickups outside the city centre may vary slightly; call 0116 233 8888 or book online for an exact quote.",
+  },
+  {
+    question: "Can I book a taxi from Birmingham Airport to Leicester?",
+    answer:
+      "Yes. We provide fixed-price return transfers from Birmingham Airport to Leicester, meeting you at the arrivals pickup hall. Share your flight number and we'll track it for delays before confirming your driver's location and vehicle details.",
   },
 ]
