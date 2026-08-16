@@ -19,14 +19,14 @@ const CANONICAL = "https://aylestone-taxis.co.uk/student-taxi-leicester"
 const STUDENT_PHONE = "0116 233 8888"
 
 export const metadata: Metadata = {
-  title: "Student Taxi Leicester — House Moves, Airport Transfers | Book 24/7",
+  title: "Student Taxi Leicester | Moves & Airport Transfers",
   description:
     "Student taxi services in Leicester for University of Leicester and DMU students. House moves, airport transfers and group bookings. Fixed prices. Call 0116 233 8888.",
   alternates: {
     canonical: CANONICAL,
   },
   openGraph: {
-    title: "Student Taxi Leicester — House Moves, Airport Transfers | Book 24/7",
+    title: "Student Taxi Leicester | Moves & Airport Transfers",
     description:
       "Student taxi services in Leicester for University of Leicester and DMU students. House moves, airport transfers and group bookings. Fixed prices. Call 0116 233 8888.",
     url: CANONICAL,

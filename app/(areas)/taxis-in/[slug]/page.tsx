@@ -121,7 +121,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 14. Thurmaston
   thurmaston: {
-    title: "Taxis in Thurmaston Leicester — Fixed Fares, Airport Transfers | 24/7",
+    title: "Thurmaston Taxi Leicester | Fixed Fares 24/7",
     description:
       "Need a taxi in Thurmaston, Leicester? Aylestone Taxis offers fixed price taxis from Thurmaston 24/7. Airport transfers, shopping trips and local journeys. Call 0116 233 8888.",
   },
@@ -199,7 +199,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 27. Stoneygate
   stoneygate: {
-    title: "Taxis in Stoneygate Leicester — Fixed Fares, Airport Transfers | 24/7",
+    title: "Stoneygate Taxi Leicester | Fixed Fares 24/7",
     description:
       "Need a taxi in Stoneygate, Leicester? Aylestone Taxis offers fixed price taxis from Stoneygate 24/7. Airport transfers, corporate travel and local journeys. Call 0116 233 8888.",
   },
@@ -2472,12 +2472,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const title = customMeta
     ? customMeta.title
     : isDestination
-      ? `Taxi to ${areaName}, Leicester | Book 24/7 | 0116 2338888`
+      ? `${areaName} Taxi | Fixed Fares 24/7`
       : `Taxi in ${areaName}, Leicester | Fixed Fares | Aylestone Taxis`
   const description = customMeta
     ? customMeta.description
     : isDestination
-      ? `Book a taxi to ${areaName} from anywhere in Leicester. Fixed fares, licensed drivers, instant online booking. Serving ${areaName} 24/7 — call 0116 2338888.`
+      ? `Taxi to ${areaName}, Leicester — fixed fares, licensed drivers, 24/7. Book online or call 0116 2338888.`
       : `Need a taxi in ${areaName}? Aylestone Taxis: fast local pickups, airport transfers, school runs. Book online in seconds or call 0116 2338888 — 24/7.`
   
   const canonicalUrl = `${siteUrl}/taxis-in/${slug}`
