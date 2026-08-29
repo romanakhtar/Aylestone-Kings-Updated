@@ -2271,6 +2271,14 @@ const areaContent: Record<string, AreaContent> = {
           Pre-booking is always available and we send WhatsApp and SMS confirmation for every journey. Call 0116
           2338888 or book online anytime.
         </p>
+        <p className="text-gray-700">
+          Heading into Leicester for an evening out? Our{" "}
+          <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+            late night taxi Leicester
+          </Link>{" "}
+          service covers fixed-fare runs home from the city centre after midnight — pre-book or WhatsApp when you are
+          ready to leave.
+        </p>
       </div>
     ),
     faqs: [
@@ -2647,6 +2655,71 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       student taxi Leicester
                     </Link>{" "}
                     service for campus trips and end-of-term moves.
+                  </p>
+                ) : null}
+                {slug === "wigston" && index === 0 ? (
+                  <p className="text-gray-700">
+                    Wigston passengers heading into Leicester for an evening out often pre-book a return pickup — our{" "}
+                    <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      late night taxi Leicester
+                    </Link>{" "}
+                    service offers fixed fares home from the city centre with no surge pricing on Friday and Saturday
+                    nights.
+                  </p>
+                ) : null}
+                {slug === "clarendon-park" && index === 2 ? (
+                  <p className="text-gray-700">
+                    For fixed-fare journeys home after a night out in Leicester, see our{" "}
+                    <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      late night taxi Leicester
+                    </Link>{" "}
+                    service — pre-book your return or WhatsApp us when you are ready to leave.
+                  </p>
+                ) : null}
+                {slug === "knighton" && index === 1 ? (
+                  <p className="text-gray-700">
+                    After city-centre evenings, our{" "}
+                    <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      late night taxi Leicester
+                    </Link>{" "}
+                    service gets Knighton residents home with fixed fares and no surge pricing when bars close.
+                  </p>
+                ) : null}
+                {slug === "beaumont-leys" && index === 0 ? (
+                  <p className="text-gray-700">
+                    When evening pickups matter more than daytime buses, our{" "}
+                    <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      late night taxi Leicester
+                    </Link>{" "}
+                    service covers fixed-fare journeys home from the city centre to Beaumont Leys — pre-book or WhatsApp
+                    on the night.
+                  </p>
+                ) : null}
+                {slug === "evington" && index === 4 ? (
+                  <p className="text-gray-700">
+                    Evington residents heading into Leicester for an evening out can rely on our{" "}
+                    <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      late night taxi Leicester
+                    </Link>{" "}
+                    service for fixed-fare rides home from the city centre — no surge pricing on Friday nights.
+                  </p>
+                ) : null}
+                {slug === "highfields" && index === 2 ? (
+                  <p className="text-gray-700">
+                    After evenings in the city centre, Highfields residents use our{" "}
+                    <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      late night taxi Leicester
+                    </Link>{" "}
+                    service for fixed-fare journeys home — pre-book your return or WhatsApp when you are ready.
+                  </p>
+                ) : null}
+                {slug === "braunstone" && index === 2 ? (
+                  <p className="text-gray-700">
+                    Braunstone workers and residents finishing late hospitality shifts in the city centre use our{" "}
+                    <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      late night taxi Leicester
+                    </Link>{" "}
+                    service for fixed-fare journeys home — no surge pricing when venues close.
                   </p>
                 ) : null}
               </div>

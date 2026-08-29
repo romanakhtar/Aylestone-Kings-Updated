@@ -683,6 +683,10 @@ export const siteData = {
         href: "/student-taxi-leicester",
       },
       {
+        name: "Late Night Taxi Leicester",
+        href: "/late-night-taxi-leicester",
+      },
+      {
         name: "Match Day Taxi Leicester",
         href: "/match-day-taxi-leicester",
       },
@@ -1047,6 +1051,129 @@ export const siteData = {
     subtitle:
       "Practical travel guides for Leicester — airport transfers, matchday taxis, prom nights, student moves, fare tips, and booking advice from your trusted local 24/7 taxi company.",
     blogs: [
+      {
+        id: "late-night-taxi-leicester-how-to-get-home-safely-friday-night",
+        title: "Late Night Taxi Leicester — How to Get Home Safely on a Friday Night",
+        metaTitle: "Late Night Taxi Leicester 2026 — Get Home Safely on a Friday Night",
+        metaDescription:
+          "Planning a night out in Leicester? Find out why pre-booking beats Uber surge pricing on Friday nights. Fixed fares, DBS drivers, WhatsApp booking. Call 0116 233 8888.",
+        excerpt:
+          "Planning a Friday night out in Leicester? Why pre-booking beats standing in the street near Clock Tower and Highcross, fixed fares vs Uber surge, WhatsApp booking on the night, areas we cover, and DBS-checked driver safety.",
+        faqs: [
+          {
+            question: "How much is a late night taxi in Leicester?",
+            answer:
+              "Late night taxi Leicester fares depend on your destination, but typical fixed prices from the city centre start from £8 to Clarendon Park, £9 to Knighton, and £12 to Oadby or Wigston on a Friday night. Your exact fare is quoted upfront when you book — there is no surge pricing like ride-hailing apps apply when bars close.",
+          },
+          {
+            question: "Is it safe to book a taxi in Leicester late at night?",
+            answer:
+              "Yes, when you book with a licensed local operator. Aylestone Taxis drivers are licensed by Leicester City Council and DBS-checked, which matters especially for solo travellers and women travelling alone after midnight. Pre-booking or WhatsApp booking means you get a confirmed driver and vehicle details rather than accepting a random unlicensed offer on the street.",
+          },
+          {
+            question: "Can I WhatsApp to book a taxi on the night?",
+            answer:
+              "Yes. Message us on WhatsApp at +447888873795 when you are ready to leave. Send your location pin, destination, and passenger count — we confirm your fixed fare and dispatch the nearest available driver. It takes seconds and works perfectly when your night out runs longer than planned.",
+          },
+        ],
+        content: `
+          <p>Friday night in Leicester means drinks in The Lanes, dinner near <strong>Highcross Shopping Centre</strong>, or meeting friends at the <strong>Clock Tower</strong> before the clubs open. The fun part is easy — getting home safely at 1am or 2am is where most people get caught out. If you have ever stood on a cold pavement watching Uber prices double, you already know why so many Leicester residents search for a reliable <strong>late night taxi Leicester</strong> before they even leave the house. This guide explains why pre-booking beats waiting on the street, how fixed fares compare to surge pricing, and the safest way to arrange your <strong>taxi home Leicester night</strong> journey.</p>
+
+          <h2>Why pre-booking beats standing on the street on a Friday night</h2>
+          <p>Leicester city centre gets busy fast on Friday evenings. Around the <strong>Clock Tower</strong> and <strong>Highcross Shopping Centre</strong>, hundreds of people leave restaurants, bars, and cinemas at roughly the same time — especially between 11pm and 2am when venues close. If you are standing on the street trying to hail a cab or waiting for an app driver, three things usually go wrong at once: prices surge, wait times stretch, and unlicensed touts start offering lifts you should refuse.</p>
+          <p>Pre-booking your <strong>Friday night taxi Leicester</strong> removes all of that uncertainty. You confirm a fixed fare before you travel, know a licensed driver is assigned to your booking, and avoid the post-closing scramble when everyone opens their phone at the same moment. Even if you do not know your exact leaving time, you can still plan ahead by booking a flexible return window or messaging us on WhatsApp when you are ready — the key is not leaving your ride home to chance on a wet Friday pavement.</p>
+          <p>For a dedicated service page with venue coverage and booking options, see our <a href="/late-night-taxi-leicester">late night taxi Leicester</a> guide.</p>
+
+          <h2>Fixed price vs Uber surge pricing on a Friday night</h2>
+          <p>Ride-hailing apps use dynamic pricing. When demand spikes — exactly when Leicester pubs and clubs empty — fares multiply. A journey that looked reasonable at 9pm can cost twice as much at 1am. Aylestone Taxis works differently: we quote a <strong>fixed price</strong> when you book, with no surprise surge multipliers on busy Friday and Saturday nights.</p>
+          <p>Below are realistic example fares from Leicester city centre on a typical Friday night. These are fixed prices quoted upfront — not estimates that change when you tap confirm.</p>
+
+          <table style="width:100%; border-collapse:collapse; margin-bottom:1.5rem; font-size:1rem;">
+            <thead>
+              <tr style="background:#0F0D3E; color:#fff;">
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Route (Friday night)</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Aylestone Taxis (fixed)</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Uber (typical surge)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>City centre → Oadby</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>from £12</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">£18–£28+</td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>City centre → Wigston</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>from £12</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">£18–£28+</td>
+              </tr>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>City centre → Clarendon Park</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>from £8</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">£12–£20+</td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>City centre → Knighton</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>from £9</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">£14–£22+</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>On a busy <strong>Friday night taxi Leicester</strong> run, the difference between a £12 fixed fare and a surging app quote of £25 or more adds up fast — especially if you go out regularly. Fixed pricing also means you can split the cost with friends knowing the total in advance, rather than discovering a higher fare on the pavement when everyone wants to leave at once.</p>
+          <p>For wider pricing context across Leicester journeys, see our <a href="/cheap-taxi-leicester">cheap taxi Leicester</a> guide.</p>
+
+          <h2>WhatsApp booking — how it works on the night</h2>
+          <p>Not every night out follows a schedule. You might plan to leave at midnight and stay until 2am, or decide suddenly that you are ready to go. WhatsApp booking bridges that gap without the surge pricing of opening an app on the street.</p>
+          <p>Here is how it works:</p>
+          <ol>
+            <li><strong>Message us at +447888873795</strong> when you are ready to leave — from inside the venue or once you are outside.</li>
+            <li><strong>Send your location</strong> — a WhatsApp pin or the name of the venue near Clock Tower, Highcross, or wherever you are standing.</li>
+            <li><strong>Tell us your destination and passenger count</strong> — so we dispatch the right vehicle size.</li>
+            <li><strong>We confirm your fixed fare</strong> — the price is agreed before the driver sets off, not adjusted because it is peak demand.</li>
+            <li><strong>Your driver is dispatched</strong> — you receive confirmation and can track when they are arriving.</li>
+          </ol>
+          <p>WhatsApp is ideal for spontaneous <strong>taxi Leicester night out</strong> journeys when pre-booking a specific time did not make sense, but you still want a licensed operator rather than a random street offer. Keep our number saved before you go out — it takes seconds to book when you need it.</p>
+
+          <h2>Areas we cover for your journey home</h2>
+          <p>Whether your night ends in the city centre or you need a <strong>taxi home Leicester night</strong> run to the suburbs, we cover all major residential areas. Popular Friday night drop-offs include:</p>
+          <ul>
+            <li><strong>Oadby</strong> — south Leicester, fixed fares from £12 from the city centre</li>
+            <li><strong>Wigston</strong> — regular late-night runs from clubs and bars back to LE18</li>
+            <li><strong>Clarendon Park</strong> — close to the university area, from £8 from town</li>
+            <li><strong>Knighton</strong> — south Leicester suburbs, from £9 on a Friday night</li>
+            <li><strong>Beaumont Leys</strong> — north Leicester with reliable late-night coverage</li>
+            <li><strong>Evington</strong> — east Leicester pickups and drop-offs throughout the night</li>
+            <li><strong>Highfields</strong> — popular with students and city-centre workers alike</li>
+            <li><strong>Braunstone</strong> — west Leicester with fixed-price journeys home</li>
+          </ul>
+          <p>Wherever you live in Leicester, the principle is the same: fixed fare confirmed upfront, licensed driver, no surge when the city centre empties. If you are planning ahead, pre-book your return online or by phone. If plans change, WhatsApp us when you are ready.</p>
+
+          <h2>DBS-checked drivers — safety for solo travellers and women at night</h2>
+          <p>Safety is the reason many Leicester residents choose a licensed local taxi over an unregulated street offer or a stranger from a social media group. Every Aylestone Taxis driver is <strong>licensed by Leicester City Council</strong> and <strong>DBS-checked</strong> — a criminal records check that matters when you are travelling alone after midnight.</p>
+          <p>This is especially important for <strong>solo travellers</strong> and <strong>women travelling alone at night</strong>. You deserve to know exactly who is picking you up, in a fully insured vehicle, with a company you can contact if anything goes wrong. Pre-booking or WhatsApp booking through an established operator gives you driver details and a record of your journey — not an anonymous profile that disappears after the trip.</p>
+          <p>Practical safety tips for your Friday night:</p>
+          <ul>
+            <li>Book through phone, online, or WhatsApp — not with unlicensed touts near venues</li>
+            <li>Check the vehicle registration matches what you were sent</li>
+            <li>Share your journey details with a friend if travelling alone</li>
+            <li>Wait inside the venue until your driver confirms they are outside</li>
+          </ul>
+          <p>A <strong>late night taxi Leicester</strong> from a licensed operator is one of the safest ways to get home after a night out — provided you book properly rather than accepting the first offer on the street.</p>
+
+          <h2>Book your Friday night taxi home</h2>
+          <p>Planning a <strong>taxi Leicester night out</strong> does not need to be complicated. Pre-book your return for peace of mind, or WhatsApp us when you are ready to leave — either way, you get a fixed fare, a DBS-checked driver, and a safe journey home across Leicester.</p>
+
+          <p style="text-align:center; margin-top:2rem;">
+            <a href="https://wa.me/447888873795?text=Hi!%20I%20need%20a%20late%20night%20taxi%20in%20Leicester" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447888873795</a>
+            <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
+          </p>
+        `,
+        date: "2026-08-27",
+        author: "Aylestone Taxis Team",
+        category: "Travel Tips",
+        image: "/Late-Night-Taxi Leicester-How-to-Get-Home-Safely-on-a-Friday-Night.webp",
+      },
       {
         id: "corporate-taxi-accounts-leicester-explained",
         title: "Corporate Taxi Accounts in Leicester: The Complete Guide",
