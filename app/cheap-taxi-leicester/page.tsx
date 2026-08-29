@@ -211,7 +211,12 @@ export default function CheapTaxiLeicesterPage() {
                     <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">No Surge Pricing</h3>
                     <p className="text-[#2E3C44]">
                       Unlike some services, our <strong>Cheap Taxi Leicester</strong> service doesn't use surge pricing. 
-                      Fair rates at all times, including peak hours and bank holidays.
+                      Fair rates at all times, including peak hours and bank holidays. Heading home after a Friday night out? 
+                      Our{" "}
+                      <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline font-medium">
+                        late night taxi Leicester
+                      </Link>{" "}
+                      service keeps the same fixed-fare standard when bars close.
                     </p>
                   </div>
                 </div>
