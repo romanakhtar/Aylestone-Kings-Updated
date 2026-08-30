@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, MapPin, Plane, Clock, Shield, Car } from "lucide-react"
 import { footerData, companyInfo, contactInfo, nearbyAreasBySlug } from "@/lib/data"
@@ -2244,6 +2245,16 @@ const areaContent: Record<string, AreaContent> = {
         answer:
           "Yes. Every driver carrying passengers for Aylestone Taxis is licensed by Leicester City Council and DBS checked as standard. Vehicles are licensed for hire and regularly inspected, so you can travel to work, nights out, or the station with a professional, vetted driver.",
       },
+      {
+        question: "Do you pick up from the Clock Tower in Leicester city centre?",
+        answer:
+          "Yes — the Clock Tower is our main city centre pickup point, available 24/7 including Friday and Saturday nights. Call 0116 233 8888 or WhatsApp us to arrange your pickup from the Clock Tower area.",
+      },
+      {
+        question: "Is it cheaper to get a taxi from Leicester city centre on a Friday night than Uber?",
+        answer:
+          "Yes — our fares are fixed and never increase on busy nights. Unlike Uber surge pricing which can double or triple on Friday and Saturday nights, you pay the same fixed fare whether it is a quiet Tuesday or a busy Saturday night after a concert at De Montfort Hall.",
+      },
     ],
   },
   // 3. Oadby
@@ -2828,6 +2839,21 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           </div>
         </div>
       </section>
+      {isLeicesterCityCentre && (
+        <div className="bg-white border-b border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <Image
+              src="/leicester-clock-tower-city-centre-taxi.webp"
+              alt="Leicester Clock Tower city centre at sunset — Aylestone Taxis serve the city centre 24/7"
+              width={1200}
+              height={675}
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+              className="w-full max-w-2xl mx-auto h-auto rounded-xl shadow-lg object-cover"
+            />
+          </div>
+        </div>
+      )}
       {/* Content */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
@@ -2848,6 +2874,53 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               {resolvedContent ? (
                 <>
                   <div>{resolvedContent.body}</div>
+
+                  {isLeicesterCityCentre && (
+                    <div className="space-y-4 pt-2">
+                      <h2 className="text-2xl font-semibold text-gray-900">
+                        Leicester City Centre on Friday and Saturday Nights
+                      </h2>
+                      <p className="text-gray-700">
+                        Friday and Saturday nights transform Leicester city centre — and the{" "}
+                        <strong>Clock Tower</strong> becomes the main meeting point for taxis when bars and clubs
+                        close. Whether you arranged to meet friends beneath the landmark or stepped out of a venue on
+                        Gallowtree Gate, the Clock Tower area is where most passengers wait for their ride home. Our{" "}
+                        <strong>taxi Leicester city centre</strong> drivers know the surrounding streets, rank
+                        locations, and the quickest pickup spots when the centre is busy after midnight.
+                      </p>
+                      <p className="text-gray-700">
+                        Leicester&apos;s nightlife is concentrated within easy walking distance of the Clock Tower.{" "}
+                        <strong>Highcross Shopping Centre</strong> sits minutes away for pre-drinks and late-night
+                        food, <strong>The Lanes</strong> is packed with independent bars and restaurants, and{" "}
+                        <strong>Curve Theatre</strong>, <strong>Athena</strong>, and nearby venues on Granby Street and
+                        Waterloo Way all draw crowds on weekend evenings. You can walk between most of these spots — but
+                        getting home across Leicester at 1am or 2am is where a pre-booked{" "}
+                        <strong>taxi Leicester city centre</strong> makes the difference.
+                      </p>
+                      <p className="text-gray-700">
+                        Unlike Uber, which applies <strong>surge pricing</strong> when demand spikes on Friday and
+                        Saturday nights, our fares are <strong>fixed and never increase on busy nights</strong>. The
+                        price you are quoted when you book is the price you pay — whether it is a quiet Tuesday
+                        afternoon or a packed Saturday after last orders. That predictability matters when you are
+                        budgeting a night out and do not want a fare that doubles because everyone left the club at
+                        once.
+                      </p>
+                      <p className="text-gray-700">
+                        <strong>Pre-booking is recommended</strong> for Friday and Saturday nights, especially after
+                        midnight when demand peaks across the city centre. Reserve your return pickup online or by
+                        calling 0116 233 8888 before you head out, or message us on WhatsApp at +447888873795 when you
+                        are ready to leave — we confirm your fixed fare and dispatch a licensed driver to your location.
+                        For full venue coverage, fixed fares, and booking options, see our{" "}
+                        <Link
+                          href="/late-night-taxi-leicester"
+                          className="text-[#06A0A6] hover:underline underline-offset-2"
+                        >
+                          late night taxi Leicester
+                        </Link>{" "}
+                        guide.
+                      </p>
+                    </div>
+                  )}
 
                   {AREA_BLOG_CALLOUTS[slug] && (
                     <div className="rounded-lg border border-gray-200 bg-gradient-to-r from-[#06A0A6]/8 to-transparent p-4">

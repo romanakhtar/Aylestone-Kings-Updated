@@ -324,6 +324,67 @@ export default function StudentTaxiLeicesterPage() {
           </div>
         </section>
 
+        {/* Leicester Freshers 2026 */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
+                Leicester Freshers 2026 — Getting Started
+              </h2>
+              <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
+                New to the University of Leicester or DMU this September? Here is how our{" "}
+                <strong>student taxi Leicester</strong> service helps you from move-in day through
+                freshers fortnight and beyond.
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto space-y-6 text-[#2E3C44] text-lg leading-relaxed">
+              <p>
+                <strong>Move-in transport</strong> is often the first taxi you will book in Leicester.
+                New students arrive with suitcases, bedding, kitchen boxes, and everything else that
+                seemed manageable at home but feels heavy on a new pavement. We offer{" "}
+                <strong>estate and MPV options</strong> with generous luggage space for multiple bags
+                and boxes — tell us how much you are bringing when you book and we will recommend the
+                right vehicle. If several housemates in a shared house are moving on the same day,
+                <strong> group bookings</strong> let you share one car and split a single fixed fare
+                rather than booking separately.
+              </p>
+              <p>
+                Arriving by train? Our <strong>station to halls transfers</strong> run from{" "}
+                <strong>Leicester train station</strong> direct to University of Leicester halls from{" "}
+                <strong>£6</strong> and to DMU halls from <strong>£5</strong> — fixed prices confirmed
+                before you travel. We operate <strong>24/7</strong>, so early-morning arrivals and
+                late-night trains are both covered. Share your train time when you book and we will
+                meet you at the station taxi rank or an agreed pickup point.
+              </p>
+              <p>
+                Freshers fortnight means nights out — and Leicester&apos;s main freshers venues fill
+                fast. We cover late-night pickups from <strong>2Funky</strong>,{" "}
+                <strong>Quarter 25</strong>, <strong>Club Republic</strong>, <strong>R/Bar</strong>,
+                and other city-centre clubs throughout freshers fortnight. Pre-booking your return
+                taxi is recommended on the busiest nights when thousands of students leave at once,
+                or message us on WhatsApp when you are ready to head back to halls.
+              </p>
+              <p>
+                Save <strong>{STUDENT_PHONE}</strong> and our WhatsApp number for the{" "}
+                <strong>whole academic year</strong> — not just freshers week. The same service covers{" "}
+                <strong>airport transfers home at Christmas and Easter</strong>, end-of-term house
+                moves when you relocate or head home for the holidays, and late-night rides whenever
+                you need them. One local operator, fixed fares, DBS-checked drivers — from your first
+                day in Leicester to your last exam. For a full arrival and freshers planning guide,
+                read our{" "}
+                <Link
+                  href="/blog/leicester-freshers-2026-taxi-guide-new-students"
+                  className="text-[#06A0A6] hover:underline font-medium"
+                >
+                  Leicester Freshers 2026 taxi guide
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
