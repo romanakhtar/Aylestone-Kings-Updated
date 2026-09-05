@@ -1052,6 +1052,105 @@ export const siteData = {
       "Practical travel guides for Leicester — airport transfers, matchday taxis, prom nights, student moves, fare tips, and booking advice from your trusted local 24/7 taxi company.",
     blogs: [
       {
+        id: "leicester-freshers-2026-taxi-guide-new-students",
+        title: "Leicester Freshers 2026 — Taxi Guide for New Students",
+        metaTitle: "Leicester Freshers 2026 — Taxi Guide for New Students | Aylestone Taxis",
+        metaDescription:
+          "New to Leicester for freshers 2026? Our taxi guide covers getting from the train station, airport transfers, luggage moves and late nights out. Call 0116 233 8888.",
+        excerpt:
+          "Leicester freshers 2026 taxi guide for new University of Leicester and DMU students — train station to campus, airport transfers, luggage moves, WhatsApp booking for freshers nights, and saving our number for the year.",
+        faqs: [
+          {
+            question: "How do I get from Leicester train station to the University of Leicester?",
+            answer:
+              "Book a taxi from Leicester Railway Station to the University of Leicester on University Road — the journey takes around 8–10 minutes and fares start from £6. Tell us your train arrival time when you book and we will meet you at the station taxi rank or an agreed pickup point. Fixed price confirmed before you travel.",
+          },
+          {
+            question: "Can I book a taxi from the airport to my university halls in Leicester?",
+            answer:
+              "Yes. We run fixed-price airport transfers from East Midlands Airport, Birmingham, Heathrow, and other UK airports direct to University of Leicester halls, DMU accommodation, and private house shares across Leicester. Tell us your flight number, terminal, and halls address when you book — we quote upfront and can send an estate or MPV if you have multiple bags.",
+          },
+          {
+            question: "Do you offer late night taxis during Leicester freshers week?",
+            answer:
+              "Yes. We operate 24/7 throughout freshers fortnight, including late-night pickups after events at 2Funky, Club Republic, and other city-centre venues. Pre-booking is recommended on busy freshers nights when demand is high — or message us on WhatsApp at +447888873795 when you are ready to leave.",
+          },
+        ],
+        content: `
+          <p>September in Leicester means one thing for thousands of new arrivals: freshers. Whether you are heading to the <strong>University of Leicester</strong> or <strong>De Montfort University (DMU)</strong>, your first week involves trains, airports, heavy luggage, and more nights out than you have probably planned for. A reliable <strong>freshers taxi Leicester</strong> service takes the stress out of arrival day and keeps you moving safely through the whole fortnight — and beyond. This guide covers everything new students need to know about getting around Leicester in September 2026, from the train station to campus, airport runs from home, and late nights during freshers events.</p>
+
+          <h2>Getting from Leicester train station to both universities</h2>
+          <p>Most students arriving by rail step off at <strong>Leicester Railway Station</strong> on London Road with suitcases, bedding bags, and the slightly dazed look of someone who has just found their new city. The good news: both universities are a short, affordable taxi ride away — much easier than dragging bags onto a bus when you do not yet know the routes.</p>
+
+          <table style="width:100%; border-collapse:collapse; margin-bottom:1.5rem; font-size:1rem;">
+            <thead>
+              <tr style="background:#0F0D3E; color:#fff;">
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Route</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Journey time</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Fixed fare from</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>Leicester train station → University of Leicester (University Road)</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">8–10 minutes</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>from £6</strong></td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>Leicester train station → DMU (The Gateway)</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">6–8 minutes</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>from £5</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>A <strong>taxi from Leicester train station to university</strong> campuses is the simplest option on arrival day. The University of Leicester sits on <strong>University Road</strong>, south of the city centre near Victoria Park — our drivers know the main halls entrances and drop-off points along the campus. DMU&apos;s <strong>The Gateway</strong> building on Mill Lane is even closer to the station, making it one of Leicester&apos;s quickest student runs.</p>
+          <p>Share your train arrival time when you book and we can meet you at the station taxi rank or coordinate a pickup once you are on the platform. Fixed fare confirmed upfront — no meter surprises when you are already juggling bags. For year-round student travel including house moves and group bookings, see our dedicated <a href="/student-taxi-leicester">student taxi Leicester</a> service.</p>
+
+          <h2>Airport transfers from home</h2>
+          <p>Many students fly into the UK rather than taking the train — especially international arrivals and those travelling from Scotland, Northern Ireland, or further afield. A pre-booked airport transfer means you land, collect your bags, and step into a fixed-price taxi direct to your halls rather than working out rail connections with three suitcases.</p>
+          <p>Guide prices for popular airport routes into Leicester (September 2026):</p>
+          <ul>
+            <li><strong>East Midlands Airport (EMA)</strong> — from <strong>£28</strong> (approx 30–40 minutes). The closest airport to Leicester and the most common choice for domestic flights.</li>
+            <li><strong>Birmingham Airport (BHX)</strong> — from <strong>£60</strong> (approx 45–70 minutes depending on traffic).</li>
+            <li><strong>Heathrow (LHR)</strong> — from <strong>£150</strong> (approx 2–2.5 hours). Popular for long-haul arrivals and connecting flights.</li>
+          </ul>
+          <p>All fares are fixed and confirmed when you book — not calculated on a running meter after a long flight. Tell us your flight number when you reserve and we can monitor delays where possible. For full route details and booking advice, see our <a href="/airport-transfers-leicester">airport transfers Leicester</a> page.</p>
+          <p>Travelling with more than one suitcase? Request an <strong>estate car or MPV</strong> when you book — both offer generous luggage space compared to a standard saloon, and an MPV accommodates up to eight passengers if several housemates are arriving on the same flight.</p>
+
+          <h2>Moving luggage at start of term</h2>
+          <p>Start of term is rarely a single bag. Most students arrive with suitcases, bedding, kitchen boxes, and the miscellaneous items that seemed essential at home but suddenly feel very heavy on a Leicester pavement. A standard saloon works for light loads, but if you are moving into halls or a shared house with everything you own, an <strong>estate or MPV</strong> is worth booking from the start.</p>
+          <p><strong>Estate cars</strong> handle two large suitcases plus bags comfortably. <strong>MPVs</strong> fit multiple passengers and several boxes — ideal when you and new flatmates share one vehicle from the train station or airport and split the fixed fare. Group bookings work on a <strong>fixed price per vehicle, not per person</strong>, so sharing with housemates keeps costs down.</p>
+          <p>Popular student areas for start-of-term moves include Clarendon Park, Knighton, Highfields, and Oadby — all within easy reach of both campuses. Whether you need one trip from Leicester Railway Station or a run from EMA with four bags and a duvet, quote your luggage when you book and we will recommend the right vehicle. Our <a href="/student-taxi-leicester">student taxi Leicester</a> page covers end-of-term moves too — the same service works in reverse when you head home for Christmas.</p>
+
+          <h2>WhatsApp booking for late nights out during freshers fortnight</h2>
+          <p>Freshers fortnight is not just about arrival — it is about nights out. Leicester&apos;s city centre fills with new students every September, and venues from The Lanes to <strong>2Funky</strong> on Braunstone Gate host some of the busiest events of the year. A <strong>student taxi Leicester freshers</strong> booking keeps you safe without the surge pricing ride-hailing apps apply when thousands of students leave at once.</p>
+          <p>Key freshers events to plan transport for:</p>
+          <ul>
+            <li><strong>DMU Freshers Opening Party — 26 September</strong> — one of the biggest single freshers events in the city. Pre-book your return taxi or save our WhatsApp number before you go.</li>
+            <li><strong>Leicester Official Big Freshers Icebreaker at 2Funky</strong> — a city-wide freshers staple. The area around Braunstone Gate gets busy when the event finishes — booking ahead beats waiting on the street.</li>
+          </ul>
+          <p><strong>Pre-booking is strongly recommended</strong> on the busiest freshers nights. Demand peaks when events end between midnight and 2am, and unlicensed touts sometimes appear near venues offering lifts you should refuse. Message us on WhatsApp at <strong>+447888873795</strong> when you are ready to leave, or pre-book a return window when you know your plans.</p>
+          <p>For fixed fares home from city-centre venues with no surge pricing, see our <a href="/late-night-taxi-leicester">late night taxi Leicester</a> guide — the same service covers freshers fortnight and every Friday night after.</p>
+
+          <h2>Save our number for the whole academic year</h2>
+          <p>Freshers week is just the start. Throughout the academic year you will need taxis for lecture days when the bus is late, supermarket runs with heavy bags, trips to Leicester Railway Station at the end of term, airport transfers home for Christmas and Easter, and nights out that run longer than planned. Saving <strong>0116 233 8888</strong> and <strong>+447888873795</strong> on WhatsApp now means you are never scrambling for a number at 1am in October or during exam season in May.</p>
+          <p>Aylestone Taxis has served Leicester students since 1995. Every driver is licensed by Leicester City Council and DBS-checked. Fares are fixed and quoted before you travel — whether you are a first-year in halls or a third-year in a Clarendon Park house share. One number covers your whole time in Leicester, not just the first fortnight.</p>
+
+          <h2>Book your freshers taxi in Leicester</h2>
+          <p>Arriving by train, flying into EMA, moving bags into halls, or heading to the DMU Freshers Opening Party on 26 September — a <strong>freshers taxi Leicester</strong> from Aylestone Taxis gets you there with a fixed fare and a licensed driver. Pre-book online, call us, or WhatsApp when you need us.</p>
+
+          <p style="text-align:center; margin-top:2rem;">
+            <a href="https://wa.me/447888873795?text=Hi!%20I%20need%20a%20freshers%20taxi%20in%20Leicester" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447888873795</a>
+            <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
+          </p>
+        `,
+        date: "2026-09-01",
+        author: "Aylestone Taxis Team",
+        category: "Student Guide",
+        image: "/Blog_Moving_Out_University_Halls_Leicester_Transport_Guide.webp",
+      },
+      {
         id: "late-night-taxi-leicester-how-to-get-home-safely-friday-night",
         title: "Late Night Taxi Leicester — How to Get Home Safely on a Friday Night",
         metaTitle: "Late Night Taxi Leicester 2026 — Get Home Safely on a Friday Night",

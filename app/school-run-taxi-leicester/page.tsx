@@ -282,6 +282,94 @@ export default function SchoolRunTaxiLeicesterPage() {
           </div>
         </section>
 
+{/* Leicester Freshers 2026 Section — insert after main content, before FAQ */}
+<section className="py-20 bg-[#E4E4E4]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
+        Leicester Freshers 2026 — Getting Started
+      </h2>
+      <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
+        Starting university in Leicester this September? Aylestone Taxis
+        makes moving in, getting around and heading out during freshers'
+        fortnight easy.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+        <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
+          <MapPin className="h-6 w-6 text-[#06A0A6]" />
+        </div>
+        <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">
+          Move-In Day Transport
+        </h3>
+        <p className="text-[#2E3C44]">
+          We offer estate and MPV vehicles for move-in day, so bringing
+          boxes, bags and everything else from home doesn't mean multiple
+          trips or squeezing into a standard car.
+        </p>
+      </div>
+
+      <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+        <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
+          <Calendar className="h-6 w-6 text-[#06A0A6]" />
+        </div>
+        <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">
+          Station to Halls Transfers
+        </h3>
+        <p className="text-[#2E3C44]">
+          Arriving by train? We run regular station-to-halls transfers from
+          just <strong>£6 for University of Leicester</strong> and{" "}
+          <strong>£5 for De Montfort University</strong> — a simple, affordable
+          first journey into student life.
+        </p>
+      </div>
+
+      <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+        <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
+          <Users className="h-6 w-6 text-[#06A0A6]" />
+        </div>
+        <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">
+          Freshers Party Transport
+        </h3>
+        <p className="text-[#2E3C44]">
+          We cover all the main freshers' fortnight venues — including{" "}
+          <strong>2Funky, Quarter 25, Club Republic and R/Bar</strong> — with
+          fixed fares, no Uber-style surge pricing, and WhatsApp booking so
+          getting home is never a hassle.
+        </p>
+      </div>
+
+      <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+        <div className="w-12 h-12 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-4">
+          <Phone className="h-6 w-6 text-[#06A0A6]" />
+        </div>
+        <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">
+          Save the Number for the Year
+        </h3>
+        <p className="text-[#2E3C44]">
+          It's not just for freshers' week — from weekly nights out to trips
+          home for the holidays, keep Aylestone Taxis saved for the whole
+          academic year.
+        </p>
+      </div>
+    </div>
+
+    <div className="text-center mt-12">
+      <p className="text-lg text-[#2E3C44]">
+        New to the city and planning your first few weeks? Read our{" "}
+        <Link
+          href="/blog/leicester-freshers-2026-taxi-guide-new-students"
+          className="text-[#06A0A6] hover:underline font-medium"
+        >
+          Leicester Freshers 2026 taxi guide
+        </Link>{" "}
+        for everything you need to know.
+      </p>
+    </div>
+  </div>
+</section>
         {/* FAQ Section */}
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -238,6 +238,33 @@ export default function LocalTaxiLeicesterPage() {
           </div>
         </section>
 
+        {/* Related Services */}
+        <section className="py-12 bg-[#E4E4E4]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-[#0F0D3E] mb-6 text-center">Related Services</h2>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+              <Link
+                href="/taxi-leicester"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#0F0D3E] px-6 py-3 rounded-xl font-semibold shadow-md hover:text-[#06A0A6] transition-colors"
+              >
+                Leicester Taxi Service
+              </Link>
+              <Link
+                href="/taxi-near-me-leicester"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#0F0D3E] px-6 py-3 rounded-xl font-semibold shadow-md hover:text-[#06A0A6] transition-colors"
+              >
+                Taxi Near Me in Leicester
+              </Link>
+              <Link
+                href="/local-taxi-leicester"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#0F0D3E] px-6 py-3 rounded-xl font-semibold shadow-md hover:text-[#06A0A6] transition-colors"
+              >
+                Local Taxi Leicester
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
