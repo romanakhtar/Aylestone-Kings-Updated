@@ -44,7 +44,7 @@ const POPULAR_JOURNEY_AIRPORTS = [
 const areaMeta: Record<string, { title: string; description: string }> = {
   // 1. Aylestone
   aylestone: {
-    title: "Taxis in Aylestone Leicester | Book Online | Aylestone Taxis",
+    title: "Taxis in Aylestone — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Need a taxi in Aylestone? Aylestone Taxis has served the area since 1995. Fixed airport fares, 24/7 local rides, DBS-checked drivers. Call 0116 2338888.",
   },
@@ -56,7 +56,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 3. Oadby
   oadby: {
-    title: "Oadby Taxi Leicester | Fixed Fares 24/7 | Aylestone Taxis",
+    title: "Taxis in Oadby — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Reliable taxi service in Oadby, Leicester. Fixed airport fares, local rides, and 24/7 availability. Licensed drivers. Call 0116 2338888 or book online.",
   },
@@ -68,19 +68,19 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 5. Evington
   evington: {
-    title: "Taxis in Evington Leicester | Fixed Fares 24/7",
+    title: "Taxis in Evington — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Need a taxi in Evington, Leicester? Aylestone Taxis provides fixed price taxis from Evington 24/7. Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 6. Belgrave
   belgrave: {
-    title: "Belgrave Taxi Leicester | 24/7 Fixed Fares | Aylestone",
+    title: "Taxis in Belgrave — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Fast, reliable taxis in Belgrave, Leicester. Airport transfers, local rides, and 24/7 service from Aylestone Taxis. Licensed drivers. Call 0116 2338888.",
   },
   // 7. Spinney Hills
   "spinney-hills": {
-    title: "Spinney Hills Taxi Leicester | 24/7 | Aylestone Taxis",
+    title: "Taxis in Spinney Hills — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Reliable taxi service in Spinney Hills, Leicester. Local journeys, airport transfers, school runs. Licensed drivers available 24/7. Call 0116 2338888.",
   },

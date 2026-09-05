@@ -5,17 +5,17 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Taxi Leicester | Leicester Taxis | Book 0116 2338888",
+  title: "Taxi Leicester — Fixed Fares, No Surge | 4.7★ | Book 24/7",
   description:
-    "Taxi Leicester, taxis in Leicester & Leicester city centre: licensed drivers, instant online quotes, airport and local trips. Taxi in Leicester 24/7 — call 0116 2338888 or book online.",
+    "Leicester taxi service with fixed prices and no surge charging. Rated 4.7 stars. DBS-checked drivers available 24/7. Call 0116 233 8888 or book online.",
   keywords: "Taxi Leicester, taxi in Leicester, Leicester taxis, taxis in Leicester, Leicester taxi service, taxi company Leicester, taxi Leicester city centre",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/taxi-leicester",
   },
   openGraph: {
-    title: "Taxi Leicester | Leicester Taxis | Aylestone Taxis",
+    title: "Taxi Leicester — Fixed Fares, No Surge | 4.7★ | Book 24/7",
     description:
-      "Trusted Leicester taxis since 1995. Licensed drivers, fast pick-ups, book online or call 0116 2338888.",
+      "Leicester taxi service with fixed prices and no surge charging. Rated 4.7 stars. DBS-checked drivers available 24/7. Call 0116 233 8888 or book online.",
     url: "https://aylestone-taxis.co.uk/taxi-leicester",
   },
 }
@@ -298,6 +298,33 @@ export default function TaxiLeicesterPage() {
                   </details>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Services */}
+        <section className="py-12 bg-[#E4E4E4]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-[#0F0D3E] mb-6 text-center">Related Services</h2>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+              <Link
+                href="/taxi-leicester"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#0F0D3E] px-6 py-3 rounded-xl font-semibold shadow-md hover:text-[#06A0A6] transition-colors"
+              >
+                Leicester Taxi Service
+              </Link>
+              <Link
+                href="/taxi-near-me-leicester"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#0F0D3E] px-6 py-3 rounded-xl font-semibold shadow-md hover:text-[#06A0A6] transition-colors"
+              >
+                Taxi Near Me in Leicester
+              </Link>
+              <Link
+                href="/local-taxi-leicester"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#0F0D3E] px-6 py-3 rounded-xl font-semibold shadow-md hover:text-[#06A0A6] transition-colors"
+              >
+                Local Taxi Leicester
+              </Link>
             </div>
           </div>
         </section>
