@@ -523,6 +523,11 @@ export default function JoinDriverPage() {
       errors.update_mobile = 'Enter your mobile number.'
     }
 
+    const email = formData.get('email') as string
+    if (!email || email.trim().length < 1) {
+      errors.email = 'Enter your email.'
+    }
+
     const badgeNumber = formData.get('update_badge_number') as string
     if (!badgeNumber || badgeNumber.trim().length < 1) {
       errors.update_badge_number = 'Enter your badge/licence number so we can find your record.'
@@ -1674,6 +1679,21 @@ export default function JoinDriverPage() {
                   />
                   {updateFormErrors.update_mobile && (
                     <p className="mt-1 text-sm text-red-500">{updateFormErrors.update_mobile}</p>
+                  )}
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
+                   Email <span className="text-red-500">*</span>
+                  </label>
+                  <Input
+                   id="email"
+                   name="email"
+                   type="email"
+                   required
+                   className={updateFormErrors.email ? 'border-red-500' : ''}
+                  />
+                   {updateFormErrors.email && (
+                   <p className="mt-1 text-sm text-red-500">{updateFormErrors.email}</p>
                   )}
                 </div>
 

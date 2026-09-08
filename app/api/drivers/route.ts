@@ -24,14 +24,30 @@ const createTransporter = () => {
   })
 }
 
+// Maps each "update" document field to a friendly label for the email
+const updateDocumentFields: Array<{
+  dateField: string
+  fileField: string
+  label: string
+  dateLabel: string
+}> = [
+  { dateField: 'update_dl_expiry_date', fileField: 'update_upload_driving_licence', label: 'Driving Licence', dateLabel: 'New Expiry Date' },
+  { dateField: 'update_badge_expiry_date', fileField: 'update_upload_badge_licence', label: 'Private Hire Badge / Licence', dateLabel: 'New Expiry Date' },
+  { dateField: 'update_dbs_issue_date', fileField: 'update_upload_dbs', label: 'DBS Certificate', dateLabel: 'New Issue Date' },
+  { dateField: 'update_insurance_expiry_date', fileField: 'update_upload_insurance_certificate', label: 'Insurance Certificate', dateLabel: 'New Expiry Date' },
+  { dateField: 'update_mot_expiry_date', fileField: 'update_upload_mot', label: 'MOT Certificate', dateLabel: 'New Expiry Date' },
+  { dateField: 'update_plate_expiry_date', fileField: 'update_upload_plate', label: 'Vehicle Plate', dateLabel: 'New Expiry Date' },
+  { dateField: 'update_rtw_expiry_date', fileField: 'update_upload_rtw_proof', label: 'Right to Work Document', dateLabel: 'New Expiry Date' },
+]
+
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData()
-    
+
     // Extract form fields
     const formFields: Record<string, string> = {}
     const files: Array<{ name: string; file: File }> = []
-    
+
     // Separate form fields from files
     for (const [key, value] of formData.entries()) {
       if (value instanceof File) {
@@ -41,104 +57,29 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Build email HTML content
-    let emailHtml = `
-      <h2>New Driver Application</h2>
-      <h3>Personal Information</h3>
-      <ul>
-        <li><strong>Full Name:</strong> ${formFields.full_name || 'N/A'}</li>
-        <li><strong>Date of Birth:</strong> ${formFields.dob || 'N/A'}</li>
-        <li><strong>Mobile:</strong> ${formFields.mobile || 'N/A'}</li>
-        <li><strong>Email:</strong> ${formFields.email || 'N/A'}</li>
-        <li><strong>National Insurance Number:</strong> ${formFields.ni_number || 'N/A'}</li>
-        <li><strong>Address:</strong> ${formFields.address_line1 || 'N/A'}</li>
-        <li><strong>City:</strong> ${formFields.city || 'N/A'}</li>
-        <li><strong>Postcode:</strong> ${formFields.postcode || 'N/A'}</li>
-      </ul>
+    const isDocumentUpdate = formFields.formType === 'driverDocumentUpdate'
 
-      <h3>Licence & Compliance</h3>
-      <ul>
-        <li><strong>Driving Licence Number:</strong> ${formFields.driving_licence_number || 'N/A'}</li>
-        <li><strong>Licence Issue Date:</strong> ${formFields.dl_issue_date || 'N/A'}</li>
-        <li><strong>Licence Expiry Date:</strong> ${formFields.dl_expiry_date || 'N/A'}</li>
-        <li><strong>Licensing Council:</strong> ${formFields.licensing_council || 'N/A'}</li>
-        <li><strong>Badge Number:</strong> ${formFields.badge_number || 'N/A'}</li>
-        <li><strong>Badge Expiry Date:</strong> ${formFields.badge_expiry_date || 'N/A'}</li>
-        <li><strong>DBS Number:</strong> ${formFields.dbs_number || 'N/A'}</li>
-        <li><strong>DBS Issue Date:</strong> ${formFields.dbs_issue_date || 'N/A'}</li>
-        <li><strong>DBS Update Service:</strong> ${formFields.dbs_update_service || 'N/A'}</li>
-        <li><strong>Right to Work Status:</strong> ${formFields.right_to_work_status || 'N/A'}</li>
-    `
-
-    if (formFields.rtw_share_code) {
-      emailHtml += `<li><strong>Share Code:</strong> ${formFields.rtw_share_code}</li>`
-    }
-
-    if (formFields.visa_type) {
-      emailHtml += `
-        <li><strong>Visa Type:</strong> ${formFields.visa_type}</li>
-        <li><strong>Visa Expiry Date:</strong> ${formFields.visa_expiry_date || 'N/A'}</li>
-      `
-    }
-
-    emailHtml += `</ul>`
-
-    if (formFields.owns_vehicle === 'true' || formFields.vrm) {
-      emailHtml += `
-        <h3>Vehicle Information</h3>
-        <ul>
-          <li><strong>VRM:</strong> ${formFields.vrm || 'N/A'}</li>
-          <li><strong>Make:</strong> ${formFields.make || 'N/A'}</li>
-          <li><strong>Model:</strong> ${formFields.model || 'N/A'}</li>
-          <li><strong>Year:</strong> ${formFields.year || 'N/A'}</li>
-          <li><strong>Colour:</strong> ${formFields.colour || 'N/A'}</li>
-          <li><strong>Plate Expiry:</strong> ${formFields.plate_expiry_date || 'N/A'}</li>
-          <li><strong>Insurance Expiry:</strong> ${formFields.insurance_expiry_date || 'N/A'}</li>
-          <li><strong>MOT Expiry:</strong> ${formFields.mot_expiry_date || 'N/A'}</li>
-        </ul>
-      `
-    }
-
-    emailHtml += `
-      <h3>Payment & Work Preferences</h3>
-      <ul>
-        <li><strong>Account Holder:</strong> ${formFields.account_holder || 'N/A'}</li>
-        <li><strong>Sort Code:</strong> ${formFields.sort_code || 'N/A'}</li>
-        <li><strong>Account Number:</strong> ${formFields.account_number || 'N/A'}</li>
-        <li><strong>Work Type:</strong> ${formFields.work_type || 'N/A'}</li>
-        <li><strong>Preferred Shifts:</strong> ${formFields.preferred_shifts || 'N/A'}</li>
-        <li><strong>Vehicle Option:</strong> ${formFields.vehicle_option || 'N/A'}</li>
-      </ul>
-
-      <h3>Declarations</h3>
-      <ul>
-        <li><strong>Accuracy Declaration:</strong> ${formFields.decl_accuracy ? 'Yes' : 'No'}</li>
-        <li><strong>Verification Authorization:</strong> ${formFields.decl_verification ? 'Yes' : 'No'}</li>
-        <li><strong>GDPR Consent:</strong> ${formFields.decl_gdpr ? 'Yes' : 'No'}</li>
-      </ul>
-    `
-
-    // Upload files and get download links
+    // Upload files and get download links (shared by both form types)
     const fileLinks: Array<{ fieldName: string; originalName: string; downloadUrl: string; size: string }> = []
     const uploadedFiles: Array<{ filename: string }> = []
-    
+
     try {
       for (const { name, file } of files) {
         try {
           const savedFile = await saveFile(file)
-          const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 
-                         process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 
-                         request.headers.get('origin') || 
+          const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ||
+                         process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` :
+                         request.headers.get('origin') ||
                          'http://localhost:3000'
           const downloadUrl = `${baseUrl}/api/files/download/${savedFile.filename}`
-          
+
           fileLinks.push({
             fieldName: name,
             originalName: file.name,
             downloadUrl,
             size: formatFileSize(file.size),
           })
-          
+
           uploadedFiles.push({ filename: savedFile.filename })
         } catch (fileError) {
           console.error(`Error uploading file ${file.name}:`, fileError)
@@ -150,39 +91,156 @@ export async function POST(request: NextRequest) {
       // Continue with email sending even if file upload fails
     }
 
-    // Add file links section to email
-    if (fileLinks.length > 0) {
-      emailHtml += `
-        <h3>Uploaded Documents</h3>
-        <p>The following documents have been uploaded and are available for download:</p>
+    let emailHtml = ''
+    let emailSubject = ''
+
+    if (isDocumentUpdate) {
+      // ---- SHORT EMAIL: Existing driver document update ----
+      emailSubject = `Document Update - ${formFields.update_full_name || 'Unknown'}`
+
+      emailHtml = `
+        <h2>Driver Document Update</h2>
+        <h3>Driver Details</h3>
+        <ul>
+          <li><strong>Full Name:</strong> ${formFields.update_full_name || 'N/A'}</li>
+          <li><strong>Mobile:</strong> ${formFields.update_mobile || 'N/A'}</li>
+          <li><strong>Email:</strong> ${formFields.email || 'N/A'}</li>
+          <li><strong>Badge / Licence Number:</strong> ${formFields.update_badge_number || 'N/A'}</li>
+        </ul>
+
+        <h3>Documents Updated</h3>
         <ul>
       `
-      
-      // Map field names to user-friendly labels
-      const fieldLabels: Record<string, string> = {
-        proof_address: 'Proof of Address',
-        upload_driving_licence_front: 'Driving Licence (Front)',
-        upload_driving_licence_back: 'Driving Licence (Back)',
-        upload_badge_licence: 'Private Hire Badge',
-        upload_dbs: 'DBS Certificate',
-        upload_rtw_proof: 'Right to Work Proof',
-        upload_insurance_certificate: 'Insurance Certificate',
-        upload_mot: 'MOT Certificate',
-        upload_plate: 'Plate Photo',
+
+      for (const doc of updateDocumentFields) {
+        const dateValue = formFields[doc.dateField]
+        const fileLink = fileLinks.find((f) => f.fieldName === doc.fileField)
+
+        // Only include documents that were actually submitted in this update
+        if (dateValue || fileLink) {
+          emailHtml += `<li><strong>${doc.label}</strong> — ${doc.dateLabel}: ${dateValue || 'N/A'}`
+          if (fileLink) {
+            emailHtml += ` — <a href="${fileLink.downloadUrl}" style="color: #06A0A6; text-decoration: underline;">${fileLink.originalName}</a> (${fileLink.size})`
+          }
+          emailHtml += `</li>`
+        }
       }
-      
-      for (const fileLink of fileLinks) {
-        const label = fieldLabels[fileLink.fieldName] || fileLink.fieldName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+
+      emailHtml += `</ul>`
+    } else {
+      // ---- FULL EMAIL: New driver application (unchanged) ----
+      emailSubject = `New Driver Application - ${formFields.full_name || 'Unknown'}`
+
+      emailHtml = `
+        <h2>New Driver Application</h2>
+        <h3>Personal Information</h3>
+        <ul>
+          <li><strong>Full Name:</strong> ${formFields.full_name || 'N/A'}</li>
+          <li><strong>Date of Birth:</strong> ${formFields.dob || 'N/A'}</li>
+          <li><strong>Mobile:</strong> ${formFields.mobile || 'N/A'}</li>
+          <li><strong>Email:</strong> ${formFields.email || 'N/A'}</li>
+          <li><strong>National Insurance Number:</strong> ${formFields.ni_number || 'N/A'}</li>
+          <li><strong>Address:</strong> ${formFields.address_line1 || 'N/A'}</li>
+          <li><strong>City:</strong> ${formFields.city || 'N/A'}</li>
+          <li><strong>Postcode:</strong> ${formFields.postcode || 'N/A'}</li>
+        </ul>
+
+        <h3>Licence & Compliance</h3>
+        <ul>
+          <li><strong>Driving Licence Number:</strong> ${formFields.driving_licence_number || 'N/A'}</li>
+          <li><strong>Licence Issue Date:</strong> ${formFields.dl_issue_date || 'N/A'}</li>
+          <li><strong>Licence Expiry Date:</strong> ${formFields.dl_expiry_date || 'N/A'}</li>
+          <li><strong>Licensing Council:</strong> ${formFields.licensing_council || 'N/A'}</li>
+          <li><strong>Badge Number:</strong> ${formFields.badge_number || 'N/A'}</li>
+          <li><strong>Badge Expiry Date:</strong> ${formFields.badge_expiry_date || 'N/A'}</li>
+          <li><strong>DBS Number:</strong> ${formFields.dbs_number || 'N/A'}</li>
+          <li><strong>DBS Issue Date:</strong> ${formFields.dbs_issue_date || 'N/A'}</li>
+          <li><strong>DBS Update Service:</strong> ${formFields.dbs_update_service || 'N/A'}</li>
+          <li><strong>Right to Work Status:</strong> ${formFields.right_to_work_status || 'N/A'}</li>
+      `
+
+      if (formFields.rtw_share_code) {
+        emailHtml += `<li><strong>Share Code:</strong> ${formFields.rtw_share_code}</li>`
+      }
+
+      if (formFields.visa_type) {
         emailHtml += `
-          <li>
-            <strong>${label}:</strong> 
-            <a href="${fileLink.downloadUrl}" style="color: #06A0A6; text-decoration: underline;">${fileLink.originalName}</a> 
-            (${fileLink.size})
-          </li>
+          <li><strong>Visa Type:</strong> ${formFields.visa_type}</li>
+          <li><strong>Visa Expiry Date:</strong> ${formFields.visa_expiry_date || 'N/A'}</li>
         `
       }
-      
+
       emailHtml += `</ul>`
+
+      if (formFields.owns_vehicle === 'true' || formFields.vrm) {
+        emailHtml += `
+          <h3>Vehicle Information</h3>
+          <ul>
+            <li><strong>VRM:</strong> ${formFields.vrm || 'N/A'}</li>
+            <li><strong>Make:</strong> ${formFields.make || 'N/A'}</li>
+            <li><strong>Model:</strong> ${formFields.model || 'N/A'}</li>
+            <li><strong>Year:</strong> ${formFields.year || 'N/A'}</li>
+            <li><strong>Colour:</strong> ${formFields.colour || 'N/A'}</li>
+            <li><strong>Plate Expiry:</strong> ${formFields.plate_expiry_date || 'N/A'}</li>
+            <li><strong>Insurance Expiry:</strong> ${formFields.insurance_expiry_date || 'N/A'}</li>
+            <li><strong>MOT Expiry:</strong> ${formFields.mot_expiry_date || 'N/A'}</li>
+          </ul>
+        `
+      }
+
+      emailHtml += `
+        <h3>Payment & Work Preferences</h3>
+        <ul>
+          <li><strong>Account Holder:</strong> ${formFields.account_holder || 'N/A'}</li>
+          <li><strong>Sort Code:</strong> ${formFields.sort_code || 'N/A'}</li>
+          <li><strong>Account Number:</strong> ${formFields.account_number || 'N/A'}</li>
+          <li><strong>Work Type:</strong> ${formFields.work_type || 'N/A'}</li>
+          <li><strong>Preferred Shifts:</strong> ${formFields.preferred_shifts || 'N/A'}</li>
+          <li><strong>Vehicle Option:</strong> ${formFields.vehicle_option || 'N/A'}</li>
+        </ul>
+
+        <h3>Declarations</h3>
+        <ul>
+          <li><strong>Accuracy Declaration:</strong> ${formFields.decl_accuracy ? 'Yes' : 'No'}</li>
+          <li><strong>Verification Authorization:</strong> ${formFields.decl_verification ? 'Yes' : 'No'}</li>
+          <li><strong>GDPR Consent:</strong> ${formFields.decl_gdpr ? 'Yes' : 'No'}</li>
+        </ul>
+      `
+
+      // Add file links section to email (new-application file fields only)
+      if (fileLinks.length > 0) {
+        emailHtml += `
+          <h3>Uploaded Documents</h3>
+          <p>The following documents have been uploaded and are available for download:</p>
+          <ul>
+        `
+
+        // Map field names to user-friendly labels
+        const fieldLabels: Record<string, string> = {
+          proof_address: 'Proof of Address',
+          upload_driving_licence_front: 'Driving Licence (Front)',
+          upload_driving_licence_back: 'Driving Licence (Back)',
+          upload_badge_licence: 'Private Hire Badge',
+          upload_dbs: 'DBS Certificate',
+          upload_rtw_proof: 'Right to Work Proof',
+          upload_insurance_certificate: 'Insurance Certificate',
+          upload_mot: 'MOT Certificate',
+          upload_plate: 'Plate Photo',
+        }
+
+        for (const fileLink of fileLinks) {
+          const label = fieldLabels[fileLink.fieldName] || fileLink.fieldName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+          emailHtml += `
+            <li>
+              <strong>${label}:</strong>
+              <a href="${fileLink.downloadUrl}" style="color: #06A0A6; text-decoration: underline;">${fileLink.originalName}</a>
+              (${fileLink.size})
+            </li>
+          `
+        }
+
+        emailHtml += `</ul>`
+      }
     }
 
     // Check if SMTP is configured
@@ -190,7 +248,7 @@ export async function POST(request: NextRequest) {
     if (!transporter) {
       console.error('SMTP is not configured - missing SMTP_USER or SMTP_PASSWORD environment variables')
       return NextResponse.json(
-        { 
+        {
           error: 'Email service not configured. Please set SMTP_USER and SMTP_PASSWORD environment variables.',
           details: 'Missing SMTP configuration. See PRODUCTION_DEPLOYMENT.md for setup instructions.'
         },
@@ -203,9 +261,9 @@ export async function POST(request: NextRequest) {
 
     try {
       const info = await transporter.sendMail({
-        from: `Driver Application <${fromEmail}>`,
+        from: `${isDocumentUpdate ? 'Driver Document Update' : 'Driver Application'} <${fromEmail}>`,
         to: emailTo,
-        subject: `New Driver Application - ${formFields.full_name || 'Unknown'}`,
+        subject: emailSubject,
         html: emailHtml,
         // No attachments - files are now accessed via download links
       })
@@ -213,18 +271,18 @@ export async function POST(request: NextRequest) {
       console.log('Email sent successfully:', info.messageId)
 
       return NextResponse.json(
-        { success: true, message: 'Application submitted successfully', messageId: info.messageId },
+        { success: true, message: isDocumentUpdate ? 'Document update submitted successfully' : 'Application submitted successfully', messageId: info.messageId },
         { status: 200 }
       )
     } catch (sendError) {
       console.error('Error sending email:', sendError)
-      
+
       let errorMessage = 'Failed to send email'
-      let userFriendlyMessage = 'There was an error sending your application. Please try again or contact us directly.'
+      let userFriendlyMessage = 'There was an error sending your submission. Please try again or contact us directly.'
 
       if (sendError instanceof Error) {
         errorMessage = sendError.message
-        
+
         // Provide user-friendly messages for common SMTP errors
         if (errorMessage.includes('Invalid login') || errorMessage.includes('authentication failed')) {
           userFriendlyMessage = 'Email service authentication error. Please contact the website administrator.'
@@ -236,7 +294,7 @@ export async function POST(request: NextRequest) {
       }
 
       return NextResponse.json(
-        { 
+        {
           error: userFriendlyMessage,
           details: errorMessage,
           technicalError: sendError instanceof Error ? sendError.stack : String(sendError)
