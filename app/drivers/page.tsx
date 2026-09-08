@@ -604,12 +604,12 @@ export default function JoinDriverPage() {
     {
       question: "What are the working hours?",
       answer:
-        "You choose your own hours! We offer full-time and part-time positions with flexible day, night, or both shift options.",
+        "You choose your own hours! We offer to choose your own availability positions with flexible day, night, or both shift options.",
     },
     {
       question: "How much can I earn?",
       answer:
-        "Earnings vary based on hours worked and bookings. We offer competitive rates with a fair commission structure. Weekly payments are made directly to your bank account.",
+        "Earnings vary based on hours worked and bookings. We offer competitive rates with a fair commission structure. Weekly transfer of booking funds are made directly to your bank account.",
     },
     {
       question: "What documents do I need?",
@@ -1973,7 +1973,7 @@ export default function JoinDriverPage() {
                 <div>
                   <h3 className="font-bold text-[#0F0D3E] mb-2 text-lg">Fair Commission Structure</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Transparent and fair commission rates. Weekly payments directly to your bank account with no hidden fees.
+                    Transparent and fair commission rates. Weekly transfer of booking funds directly to your bank account with no hidden fees.
                   </p>
                 </div>
               </div>
@@ -1990,7 +1990,7 @@ export default function JoinDriverPage() {
               Application Process
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light">
-              Getting started is simple. Follow these steps to join our team:
+              Getting started is simple. Follow these steps to Sign Up as a Self-Employed Driver:
             </p>
           </div>
 
@@ -2084,7 +2084,7 @@ export default function JoinDriverPage() {
                 <div>
                   <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">What are the working hours?</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    You choose your own hours! We offer full-time and part-time positions with flexible day, night, or both shift options.
+                    You choose your own hours! We offer to choose your own availability with flexible day, night, or both shift options.
                   </p>
                 </div>
               </div>
@@ -2098,7 +2098,7 @@ export default function JoinDriverPage() {
                 <div>
                   <h3 className="font-bold text-[#0F0D3E] mb-2.5 text-lg">How much can I earn?</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Earnings vary based on hours worked and bookings. We offer competitive rates with a fair commission structure. Weekly payments are made directly to your bank account.
+                    Earnings vary based on hours worked and bookings. We offer competitive rates with a fair commission structure.  Weekly transfer of booking funds are made directly to your bank account.
                   </p>
                 </div>
               </div>

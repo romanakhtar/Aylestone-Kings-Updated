@@ -150,7 +150,7 @@ export default function AboutPage() {
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-[#06A0A6] mb-2">50+</div>
-              <div className="text-[#2E3C44]">Professional Drivers</div>
+              <div className="text-[#2E3C44]">Independent Licensed Drivers</div>
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-[#0F0D3E] mb-4">Safety First</h3>
               <p className="text-[#2E3C44] leading-relaxed">
-                Your safety is our top priority. We maintain rigorous standards for vehicle maintenance, driver training, and operational procedures.
+                Your safety is our top priority. We maintain rigorous standards for vehicle maintenance, driver standards and licensing compliance and operational procedures.
               </p>
             </div>
 
@@ -231,7 +231,7 @@ export default function AboutPage() {
                 "To provide the highest quality transportation services while upholding the highest standards of safety, reliability, and customer satisfaction. We are committed to being the trusted choice for transportation in North East England."
               </p>
               <p className="text-lg text-[#2E3C44] leading-relaxed">
-                Our mission guides every decision we make — from the vehicles we operate to the drivers we employ.  
+                Our mission guides every decision we make ; from the vehicles we operate to the Independent licensed drivers we work with.  
                 We believe that exceptional transport should be accessible to everyone, and we work tirelessly to make that vision a reality for our local community.
               </p>
             </div>

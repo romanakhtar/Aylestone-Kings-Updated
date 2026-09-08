@@ -239,16 +239,15 @@ export default function HomePageClient() {
             {/* Header */}
             <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
-                Career Opportunities
+                Self-Employed Driver Opportunities
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">Join Our Team as a Driver</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">Self-Employed Driver Opportunities</h2>
               <p className="text-xl text-[#2E3C44] mb-4 leading-relaxed max-w-3xl mx-auto">
-                Become part of Leicester&apos;s most trusted taxi service. We&apos;re looking for professional, licensed drivers
-                to join our established team.
+              Licensed self-employed drivers can register to access booking opportunities through the Aylestone Taxis booking and dispatch platform.
               </p>
               <p className="text-lg text-[#2E3C44] leading-relaxed max-w-3xl mx-auto">
                 With over 30 years of experience serving the Leicester community, Aylestone Taxis offers a supportive,
-                professional environment where drivers can thrive. Whether you&apos;re looking for full-time work or part-time
+                professional environment where self-employed drivers can thrive. Whether you&apos;re looking to Choose when you make yourself available for bookings
                 flexibility, we have opportunities that fit your lifestyle.
               </p>
             </div>
@@ -261,7 +260,7 @@ export default function HomePageClient() {
                   <h3 className="text-lg font-semibold text-[#0F0D3E]">Competitive Earnings</h3>
                 </div>
                 <p className="text-[#2E3C44]">
-                  Earn competitive rates with flexible payment options. Transparent commission structure with weekly payments
+                  Earn competitive rates with flexible payment options. Transparent commission structure with Weekly transfer of booking funds
                   directly to your bank account. Keep more of what you earn with our fair pricing model.
                 </p>
               </div>
@@ -272,8 +271,8 @@ export default function HomePageClient() {
                   <h3 className="text-lg font-semibold text-[#0F0D3E]">Flexible Schedule</h3>
                 </div>
                 <p className="text-[#2E3C44]">
-                  Choose your own hours with full-time or part-time options. Work day shifts, night shifts, or both - the choice
-                  is yours. Perfect for balancing work with personal commitments.
+                Decide when you wish to make yourself available for booking opportunities.
+                This allows you to balance work with personal commitments and choose your own hours and availability.
                 </p>
               </div>
 
@@ -291,9 +290,10 @@ export default function HomePageClient() {
               <div className="bg-[#E4E4E4] rounded-xl p-6">
                 <div className="flex items-center gap-3 mb-3">
                   <Check className="h-6 w-6 text-[#06A0A6]" />
-                  <h3 className="text-lg font-semibold text-[#0F0D3E]">24/7 Support</h3>
+                  <h3 className="text-lg font-semibold text-[#0F0D3E]">24/7 Driver Support</h3>
                 </div>
                 <p className="text-[#2E3C44]">
+                  Booking and dispatch support is available for booking-related queries.
                   Round-the-clock support from our dedicated operations team. Help is always available when you need it, day or
                   night. We&apos;re here to support your success.
                 </p>
@@ -350,10 +350,7 @@ export default function HomePageClient() {
                   <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
                   <span className="text-[#2E3C44]">Work in your local community</span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
-                  <span className="text-[#2E3C44]">Opportunities for career growth</span>
-                </div>
+                
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
                   <span className="text-[#2E3C44]">Professional development support</span>
@@ -394,7 +391,7 @@ export default function HomePageClient() {
             {/* CTA */}
             <div className="text-center">
               <p className="text-lg text-[#2E3C44] mb-6">
-                Ready to start your journey with Aylestone Taxis? Apply today and join Leicester&apos;s most trusted taxi service.
+                Ready to start your journey with Aylestone Taxis? Apply today and Sign-up for Leicester&apos;s most trusted taxi service.
               </p>
               <a href="/drivers" className="inline-block">
                 <button
@@ -402,7 +399,7 @@ export default function HomePageClient() {
                     isHalloweenActive ? "halloween-cta-glow" : "bg-[#06A0A6] hover:bg-[#0F0D3E]"
                   } text-white px-8 py-4 rounded-lg font-semibold  flex items-center gap-3 mx-auto`}
                 >
-                  Join as a driver now
+                  Sign Up as a Self-Employed Driver now
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>

@@ -30,7 +30,7 @@ export const siteData = {
       { name: "Home", href: "/" },
       { name: "About Us", href: "/about" },
       { name: "Airport Pricing", href: "/pricing" },
-      { name: "Join as a Driver", href: "/drivers" },
+      { name: "Sign Up as Driver", href: "/drivers" },
       { name: "Contact", href: "/contact" },
       { name: "More", href: "#", hasDropdown: true },
     ],
@@ -429,7 +429,7 @@ export const siteData = {
       drivers: {
         title: "For Drivers",
         description:
-          "Join our team and enjoy flexible schedules, competitive earnings, and modern technology.",
+          "Sign Up as a Self-Employed Driver and enjoy flexible schedules, competitive earnings, and modern technology.",
         features: [
           "Flexible schedules",
           "Competitive earnings",
@@ -443,18 +443,18 @@ export const siteData = {
   // Driver Page Content
   driverPage: {
     seo: {
-      title: "Become a Driver – Aylestone Taxis Leicester",
+      title: "Sign Up as a Self-Employed Driver – Aylestone Taxis Leicester",
       metaDescription:
-        "Join Aylestone Taxis as a licensed driver in Leicester. Flexible hours, weekly pay, steady bookings, and full local support. Apply online today.",
+        "Sign-up as a Self-Employed Driver with Aylestone Taxis in Leicester. Flexible hours, Weekly transfer of booking funds, steady bookings, and full local support. Apply online today.",
     },
     hero: {
-      badge: "Career Opportunities",
-      heading: "Join Our Team as a Driver",
+      badge: "Self-Employed Driver Opportunities",
+      heading: "Self-Employed Driver Opportunities",
       subheading:
-        "Become part of Leicester's most reliable and trusted taxi service. We're looking for licensed, professional drivers to join our established team.",
-      body: "With over 30 years serving the Leicester community, Aylestone Taxis offers a stable, supportive, and rewarding environment for both full-time and part-time drivers. Whether you want flexible hours, night shifts, or weekend work, we have opportunities that fit your lifestyle.",
+        "Aylestone Taxis provides a booking and dispatch service connecting passengers with licensed independent drivers.",
+      body: "Licensed self-employed private hire drivers can register their interest in accessing booking opportunities through our booking and dispatch platform. Drivers operate independently and decide when they wish to make themselves available for booking opportunities.",
       primaryCta: {
-        label: "Join as a Driver Now",
+        label: "Sign Up as a Self-Employed Driver Now",
         href: "/driver-signup",
       },
     },
@@ -468,12 +468,12 @@ export const siteData = {
           {
             icon: "pound",
             title: "Competitive Earnings",
-            body: "Earn competitive rates with weekly payments direct to your bank. Our transparent commission structure means you keep more of what you earn.",
+            body: "Earn competitive rates with  Weekly transfer of booking funds direct to your bank. Our transparent commission structure means you keep more of what you earn.",
           },
           {
             icon: "clock",
             title: "Flexible Schedule",
-            body: "Choose shifts that suit you — days, nights, weekends or part-time. Perfect for balancing work around your lifestyle and family.",
+            body: "Choose shifts that suit you ; days, nights or weekends . Perfect for balancing work around your lifestyle and family.",
           },
           {
             icon: "car",
@@ -508,7 +508,6 @@ export const siteData = {
           "Fair and transparent commission structure",
           "Supportive, friendly team environment",
           "Guidance with licensing and compliance",
-          "Opportunities for career growth within the company",
           "Strong reputation and presence in the local community",
         ],
       },
@@ -530,9 +529,9 @@ export const siteData = {
         id: "final-cta",
         type: "cta",
         heading: "Ready to Start Driving with Aylestone Taxis?",
-        body: "Apply today and join Leicester's most trusted taxi service. Get steady earnings, flexible hours and a local team that's here to support you.",
+        body: "Sign-up as a Self-Employed Driver with Leicester's most trusted taxi service. Get steady earnings, flexible hours and a local team that's here to support you.",
         primaryCta: {
-          label: "Join as a Driver Now",
+          label: "Sign Up as a Self-Employed Driver Now",
           href: "/driver-signup",
         },
       },
@@ -2290,7 +2289,7 @@ export const siteData = {
           <ul>
             <li>Book early for 4am–7am airport departures when demand is concentrated.</li>
             <li>Share accurate postcodes; rural lanes and new estates affect route distance.</li>
-            <li>Ask for a written or SMS-confirmed quote for long jobs.</li>
+            <li>Ask for a written or SMS-confirmed quote for long Bookings.</li>
             <li>If you need an MPV, book it explicitly rather than hoping on the day.</li>
           </ul>
 
