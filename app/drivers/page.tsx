@@ -3,7 +3,7 @@
 import { useState, useEffect, FormEvent } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Shield, FileText, Car, CreditCard, CheckCircle2, PoundSterling, Clock, Users, Award, MapPin, Phone, Mail, HelpCircle, TrendingUp, Star, Briefcase, Headphones, GraduationCap, CalendarCheck, ArrowRight } from 'lucide-react'
+import { Shield, FileText, Car, CreditCard, CheckCircle2, PoundSterling, Clock, Users, Award, MapPin, Phone, Mail, HelpCircle, TrendingUp, Star, Briefcase, Headphones, GraduationCap, CalendarCheck, ArrowRight, RefreshCw, UserCheck } from 'lucide-react'
 import type { Metadata } from 'next'
 import { siteData } from '@/lib/data'
 import FAQSchema from "@/components/seo/FAQSchema"
@@ -18,6 +18,17 @@ const iconMap: Record<string, any> = {
   'graduation-cap': GraduationCap,
 }
 
+// Document types available for the renewal/update form
+const documentTypes = [
+  { key: 'driving_licence', label: 'Driving Licence', dateField: 'update_dl_expiry_date', fileField: 'update_upload_driving_licence', dateLabel: 'New Expiry Date' },
+  { key: 'badge', label: 'Private Hire Badge / Licence', dateField: 'update_badge_expiry_date', fileField: 'update_upload_badge_licence', dateLabel: 'New Expiry Date' },
+  { key: 'dbs', label: 'DBS Certificate', dateField: 'update_dbs_issue_date', fileField: 'update_upload_dbs', dateLabel: 'New Issue Date' },
+  { key: 'insurance', label: 'Insurance Certificate', dateField: 'update_insurance_expiry_date', fileField: 'update_upload_insurance_certificate', dateLabel: 'New Expiry Date' },
+  { key: 'mot', label: 'MOT Certificate', dateField: 'update_mot_expiry_date', fileField: 'update_upload_mot', dateLabel: 'New Expiry Date' },
+  { key: 'plate', label: 'Vehicle Plate', dateField: 'update_plate_expiry_date', fileField: 'update_upload_plate', dateLabel: 'New Expiry Date' },
+  { key: 'rtw', label: 'Right to Work Document', dateField: 'update_rtw_expiry_date', fileField: 'update_upload_rtw_proof', dateLabel: 'New Expiry Date' },
+]
+
 // Note: Metadata will be handled via layout or parent
 export default function JoinDriverPage() {
   const [ownsVehicle, setOwnsVehicle] = useState(false)
@@ -25,6 +36,12 @@ export default function JoinDriverPage() {
   const [hasMounted, setHasMounted] = useState(false)
   const [formErrors, setFormErrors] = useState<Record<string, string>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // Update Documents form state
+  const [selectedDocs, setSelectedDocs] = useState<Record<string, boolean>>({})
+  const [updateFormErrors, setUpdateFormErrors] = useState<Record<string, string>>({})
+  const [isUpdateSubmitting, setIsUpdateSubmitting] = useState(false)
+  const [updateSuccess, setUpdateSuccess] = useState(false)
 
   useEffect(() => {
     setHasMounted(true)
@@ -482,6 +499,98 @@ export default function JoinDriverPage() {
       alert(`Network error while submitting: ${errorMessage}. Please check your connection and try again.`)
     } finally {
       setIsSubmitting(false)
+    }
+  }
+
+  // Handle the short document-renewal form submission
+  const handleUpdateSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsUpdateSubmitting(true)
+    setUpdateFormErrors({})
+    setUpdateSuccess(false)
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    const errors: Record<string, string> = {}
+
+    const fullName = formData.get('update_full_name') as string
+    if (!fullName || fullName.trim().length < 1) {
+      errors.update_full_name = 'Enter your full name.'
+    }
+
+    const mobile = formData.get('update_mobile') as string
+    if (!mobile || mobile.trim().length < 1) {
+      errors.update_mobile = 'Enter your mobile number.'
+    }
+
+    const badgeNumber = formData.get('update_badge_number') as string
+    if (!badgeNumber || badgeNumber.trim().length < 1) {
+      errors.update_badge_number = 'Enter your badge/licence number so we can find your record.'
+    }
+
+    const anySelected = documentTypes.some((doc) => selectedDocs[doc.key])
+    if (!anySelected) {
+      errors.update_documents = 'Select at least one document to update.'
+    }
+
+    documentTypes.forEach((doc) => {
+      if (selectedDocs[doc.key]) {
+        const dateValue = formData.get(doc.dateField) as string
+        if (!dateValue) {
+          errors[doc.dateField] = `Enter the ${doc.dateLabel.toLowerCase()}.`
+        }
+        const fileValue = formData.get(doc.fileField) as File
+        if (!fileValue || fileValue.size === 0) {
+          errors[doc.fileField] = `Upload the updated ${doc.label.toLowerCase()}.`
+        } else if (!validateFile(fileValue)) {
+          errors[doc.fileField] = 'File must be PDF, JPG, JPEG, or PNG format.'
+        }
+      }
+    })
+
+    if (Object.keys(errors).length > 0) {
+      setUpdateFormErrors(errors)
+      setIsUpdateSubmitting(false)
+      const firstErrorField = Object.keys(errors)[0]
+      const element = document.getElementById(firstErrorField)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        element.focus()
+      }
+      return
+    }
+
+    try {
+      formData.append('formType', 'driverDocumentUpdate')
+
+      const response = await fetch('/api/drivers', {
+        method: 'POST',
+        body: formData,
+      })
+
+      const responseData = await response.json().catch(() => null)
+
+      if (response.ok && responseData?.success) {
+        if (form) {
+          form.reset()
+        }
+        setSelectedDocs({})
+        setUpdateSuccess(true)
+      } else {
+        let errorMessage = 'There was an error submitting your update. Please try again.'
+        if (responseData?.error) {
+          errorMessage = responseData.error
+        } else if (!response.ok) {
+          errorMessage = `Server error (${response.status}). Please try again later.`
+        }
+        alert(errorMessage)
+      }
+    } catch (err) {
+      console.error('Update submission failed:', err)
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error'
+      alert(`Network error while submitting: ${errorMessage}. Please check your connection and try again.`)
+    } finally {
+      setIsUpdateSubmitting(false)
     }
   }
 
@@ -1498,6 +1607,186 @@ export default function JoinDriverPage() {
         </div>
       </section>
 
+      {/* Update Your Documents Section - for existing drivers renewing expiring/expired documents */}
+      <section id="update-driver-documents" className="py-12 md:py-16 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/10 text-[#0F0D3E] rounded-full text-sm font-medium mb-4">
+              <RefreshCw className="h-4 w-4 text-[#06A0A6] mr-2" />
+              Existing Drivers
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-3">
+              Update Your Documents
+            </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              Already driving with us? If a document is expiring or has expired, use this
+              short form to send us the updated one — no need to fill out the full
+              application again.
+            </p>
+          </div>
+
+          {updateSuccess && (
+            <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-center">
+              <p className="text-green-800 font-medium">
+                Thanks! Your updated document(s) have been received and are being reviewed.
+              </p>
+            </div>
+          )}
+
+          <form onSubmit={handleUpdateSubmit} className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <input type="hidden" name="formType" value="driverDocumentUpdate" />
+
+            {/* Identity */}
+            <div className="p-6 md:p-8 border-b border-slate-200">
+              <div className="flex items-center gap-3 mb-6">
+                <UserCheck className="h-5 w-5 text-[#06A0A6]" />
+                <h3 className="text-xl font-bold text-[#0F0D3E]">Confirm It's You</h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                <div>
+                  <label htmlFor="update_full_name" className="block text-sm font-semibold text-slate-700 mb-2">
+                    Full Name <span className="text-red-500">*</span>
+                  </label>
+                  <Input
+                    id="update_full_name"
+                    name="update_full_name"
+                    type="text"
+                    required
+                    className={updateFormErrors.update_full_name ? 'border-red-500' : ''}
+                  />
+                  {updateFormErrors.update_full_name && (
+                    <p className="mt-1 text-sm text-red-500">{updateFormErrors.update_full_name}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="update_mobile" className="block text-sm font-semibold text-slate-700 mb-2">
+                    Mobile Number <span className="text-red-500">*</span>
+                  </label>
+                  <Input
+                    id="update_mobile"
+                    name="update_mobile"
+                    type="tel"
+                    placeholder="07xxxxxxxxx"
+                    required
+                    className={updateFormErrors.update_mobile ? 'border-red-500' : ''}
+                  />
+                  {updateFormErrors.update_mobile && (
+                    <p className="mt-1 text-sm text-red-500">{updateFormErrors.update_mobile}</p>
+                  )}
+                </div>
+
+                <div className="md:col-span-2">
+                  <label htmlFor="update_badge_number" className="block text-sm font-semibold text-slate-700 mb-2">
+                    Badge / Licence Number <span className="text-red-500">*</span>
+                  </label>
+                  <Input
+                    id="update_badge_number"
+                    name="update_badge_number"
+                    type="text"
+                    required
+                    className={updateFormErrors.update_badge_number ? 'border-red-500' : ''}
+                  />
+                  <p className="mt-1 text-xs text-slate-500">Used to match this update to your existing driver record</p>
+                  {updateFormErrors.update_badge_number && (
+                    <p className="mt-1 text-sm text-red-500">{updateFormErrors.update_badge_number}</p>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Document selection */}
+            <div className="p-6 md:p-8 border-b border-slate-200">
+              <div className="flex items-center gap-3 mb-6">
+                <RefreshCw className="h-5 w-5 text-[#06A0A6]" />
+                <h3 className="text-xl font-bold text-[#0F0D3E]">Which Document(s) Are You Updating?</h3>
+              </div>
+
+              <div className="space-y-3 mb-2">
+                {documentTypes.map((doc) => (
+                  <label key={doc.key} className="flex items-center gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={!!selectedDocs[doc.key]}
+                      onChange={(e) =>
+                        setSelectedDocs((prev) => ({ ...prev, [doc.key]: e.target.checked }))
+                      }
+                      className="w-4 h-4 text-[#06A0A6] rounded border-slate-300 focus:ring-[#06A0A6]"
+                    />
+                    <span className="text-sm font-medium text-slate-700">{doc.label}</span>
+                  </label>
+                ))}
+              </div>
+              {updateFormErrors.update_documents && (
+                <p className="mt-1 text-sm text-red-500">{updateFormErrors.update_documents}</p>
+              )}
+
+              {documentTypes.some((doc) => selectedDocs[doc.key]) && (
+                <div className="mt-6 space-y-6">
+                  {documentTypes
+                    .filter((doc) => selectedDocs[doc.key])
+                    .map((doc) => (
+                      <div key={doc.key} className="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                        <h4 className="text-sm font-bold text-[#0F0D3E] mb-3">{doc.label}</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <label htmlFor={doc.dateField} className="block text-sm font-semibold text-slate-700 mb-2">
+                              {doc.dateLabel} <span className="text-red-500">*</span>
+                            </label>
+                            <Input
+                              id={doc.dateField}
+                              name={doc.dateField}
+                              type="date"
+                              required
+                              className={updateFormErrors[doc.dateField] ? 'border-red-500' : ''}
+                            />
+                            {updateFormErrors[doc.dateField] && (
+                              <p className="mt-1 text-sm text-red-500">{updateFormErrors[doc.dateField]}</p>
+                            )}
+                          </div>
+                          <div>
+                            <label htmlFor={doc.fileField} className="block text-sm font-semibold text-slate-700 mb-2">
+                              Upload Updated Document <span className="text-red-500">*</span>
+                            </label>
+                            <Input
+                              id={doc.fileField}
+                              name={doc.fileField}
+                              type="file"
+                              accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"
+                              required
+                              className={updateFormErrors[doc.fileField] ? 'border-red-500' : ''}
+                            />
+                            {updateFormErrors[doc.fileField] && (
+                              <p className="mt-1 text-sm text-red-500">{updateFormErrors[doc.fileField]}</p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              )}
+            </div>
+
+            {/* Submit */}
+            <div className="p-6 md:p-8 bg-slate-50">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p className="text-xs text-slate-600">
+                  Accepted files: PDF, JPG, PNG (max 50 MB each)
+                </p>
+                <Button
+                  type="submit"
+                  disabled={isUpdateSubmitting}
+                  className="bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] hover:from-[#0F0D3E] hover:to-[#06A0A6] text-white px-8 py-6 text-base font-semibold"
+                >
+                  {isUpdateSubmitting ? 'Submitting...' : 'Send Updated Documents'}
+                </Button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
       {/* Driver Benefits Section */}
       {driverContent.sections.find(s => s.id === 'benefits') && (() => {
         const benefitsSection = driverContent.sections.find(s => s.id === 'benefits')!
@@ -1905,4 +2194,3 @@ export default function JoinDriverPage() {
     </div>
   )
 }
-

@@ -19,16 +19,16 @@ const CANONICAL = "https://aylestone-taxis.co.uk/student-taxi-leicester"
 const STUDENT_PHONE = "0116 233 8888"
 
 export const metadata: Metadata = {
-  title: "Student Taxi Leicester | Freshers, Moves & Airport Transfers",
+  title: "Student Taxi Leicester | Moves & Airport Transfers",
   description:
-    "Student taxi services in Leicester for University of Leicester and DMU students. Freshers, house moves, airport transfers and group bookings. Low, fixed fares. Call 0116 233 8888.",
+    "Student taxi services in Leicester for University of Leicester and DMU students. House moves, airport transfers and group bookings. Fixed prices. Call 0116 233 8888.",
   alternates: {
     canonical: CANONICAL,
   },
   openGraph: {
-    title: "Student Taxi Leicester | Freshers, Moves & Airport Transfers",
+    title: "Student Taxi Leicester | Moves & Airport Transfers",
     description:
-      "Student taxi services in Leicester for University of Leicester and DMU students. Freshers, house moves, airport transfers and group bookings. Low, fixed fares. Call 0116 233 8888.",
+      "Student taxi services in Leicester for University of Leicester and DMU students. House moves, airport transfers and group bookings. Fixed prices. Call 0116 233 8888.",
     url: CANONICAL,
   },
 }
@@ -37,27 +37,17 @@ const faqs = [
   {
     question: "Do you offer student discounts on taxi fares?",
     answer:
-      "We keep student taxi Leicester fares affordable with fixed pricing rather than surge charges — so you always know the cost before you travel. While we do not run a separate discount code scheme, our low, fixed fares for airport runs, train station trips, and local journeys are competitive for students on a budget. Book online or call 0116 233 8888 for a quote.",
+      "We keep student taxi Leicester fares affordable with fixed pricing rather than surge charges — so you always know the cost before you travel. While we do not run a separate discount code scheme, our fixed fares for airport runs, train station trips, and local journeys are competitive for students on a budget. Book online or call 0116 233 8888 for a quote.",
   },
   {
     question: "Can you help with a house move at the end of term in Leicester?",
     answer:
-      "Yes. End-of-term house moves are one of our most popular student bookings. We send estate cars or MPVs with generous luggage space for boxes, suitcases, and bedding. Tell us your pickup and drop-off addresses, how much you are moving, and we will quote a low, fixed price for the journey — no meter running while you load up.",
+      "Yes. End-of-term house moves are one of our most popular student bookings. We send estate cars or MPVs with generous luggage space for boxes, suitcases, and bedding. Tell us your pickup and drop-off addresses, how much you are moving, and we will quote a fixed price for the journey — no meter running while you load up.",
   },
   {
     question: "Do you offer group bookings for students sharing a house?",
     answer:
       "Yes. If you live in a shared house in Clarendon Park, Knighton, Highfields, or elsewhere in Leicester, you can book one vehicle for the whole group. Group bookings work well for house moves, nights out, and airport runs when several housemates are travelling together. One fixed fare per vehicle, not per person.",
-  },
-  {
-    question: "Can I book a taxi from Leicester train station to my halls?",
-    answer:
-      "Yes. We run regular transfers from Leicester train station direct to University of Leicester and DMU halls, at a low, fixed fare confirmed before you travel.",
-  },
-  {
-    question: "Do you offer late-night taxis during freshers week?",
-    answer:
-      "Yes. We cover all the major freshers venues with fixed fares and no surge pricing — see our late night taxi Leicester page for full venue coverage.",
   },
 ]
 
@@ -65,36 +55,6 @@ export default function StudentTaxiLeicesterPage() {
   return (
     <div className="min-h-screen bg-white">
       <FAQSchema faqs={faqs} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Student Taxi Service",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Aylestone Taxis",
-              "telephone": STUDENT_PHONE,
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "753A Aylestone Road",
-                "addressLocality": "Leicester",
-                "postalCode": "LE2 8TG",
-                "addressCountry": "GB",
-              },
-            },
-            "areaServed": [
-              { "@type": "Place", "name": "Leicester" },
-              { "@type": "Place", "name": "Clarendon Park" },
-              { "@type": "Place", "name": "Knighton" },
-              { "@type": "Place", "name": "Highfields" },
-            ],
-            "description":
-              "Student taxi service in Leicester covering University of Leicester and De Montfort University, with low, fixed fares and DBS-checked drivers.",
-          }),
-        }}
-      />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">
@@ -113,7 +73,7 @@ export default function StudentTaxiLeicesterPage() {
                 <strong>end-of-term house move</strong> with luggage space, an{" "}
                 <strong>airport or train station transfer</strong> home for the holidays, or a{" "}
                 <strong>group booking</strong> for your shared house, Aylestone Taxis offers{" "}
-                <strong>low, fixed pricing</strong> with no surprise charges.
+                <strong>affordable fixed pricing</strong> with no surprise charges.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -167,7 +127,7 @@ export default function StudentTaxiLeicesterPage() {
                 <p className="text-[#2E3C44]">
                   Moving out at the end of term? We provide <strong>estate and MPV options</strong>{" "}
                   with generous <strong>luggage space</strong> for boxes, suitcases, kitchen gear,
-                  and bedding. One low, fixed fare for the whole move — load at your old address, unload
+                  and bedding. One fixed fare for the whole move — load at your old address, unload
                   at your new one, and split the cost with housemates.
                 </p>
               </div>
@@ -180,7 +140,7 @@ export default function StudentTaxiLeicesterPage() {
                   Airport &amp; Train Station Transfers
                 </h3>
                 <p className="text-[#2E3C44]">
-                  Heading home for the holidays? Book a low, fixed-price run to{" "}
+                  Heading home for the holidays? Book a fixed-price run to{" "}
                   <strong>Leicester train station</strong> or{" "}
                   <strong>East Midlands Airport</strong>. We also cover Birmingham, Heathrow, and
                   other UK airports — see our{" "}
@@ -215,7 +175,7 @@ export default function StudentTaxiLeicesterPage() {
                     Highfields
                   </Link>
                   ? Book one vehicle for the whole house — nights out, airport runs, or end-of-term
-                  moves. <strong>Low, fixed pricing</strong> per car keeps costs predictable
+                  moves. <strong>Affordable fixed pricing</strong> per car keeps costs predictable
                   when you split the fare.
                 </p>
               </div>
@@ -252,7 +212,7 @@ export default function StudentTaxiLeicesterPage() {
                 </Link>{" "}
                 is another well-established student area south of the university, with good links
                 to both the University of Leicester and DMU. Whether you need a quick run into town
-                or a larger vehicle for a house move, we cover Knighton with the same low, fixed-price
+                or a larger vehicle for a house move, we cover Knighton with the same fixed-price
                 service available across Leicester.
               </p>
               <p>
@@ -268,15 +228,15 @@ export default function StudentTaxiLeicesterPage() {
           </div>
         </section>
 
-        {/* Fixed Fare Examples */}
+        {/* Pricing Examples */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-                Student Taxi Leicester — Common Journeys
+                Student Taxi Leicester — Example Prices
               </h2>
               <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
-                <strong>Low, fixed fares</strong> for common student journeys. Your exact
+                Indicative <strong>fixed fares</strong> for common student journeys. Your exact
                 quote is confirmed when you book.
               </p>
             </div>
@@ -287,12 +247,11 @@ export default function StudentTaxiLeicesterPage() {
                   <MapPin className="h-6 w-6 text-[#06A0A6] flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">
-                      City Centre to Leicester Train Station
+                      City Centre to Leicester Train Station — from £6
                     </h3>
                     <p className="text-[#2E3C44]">
-                      A quick, low-cost run from the <strong>city centre</strong> to{" "}
-                      <strong>Leicester train station</strong> at a{" "}
-                      <strong>low, fixed price</strong> — ideal
+                      A quick, affordable run from the <strong>city centre</strong> to{" "}
+                      <strong>Leicester train station</strong> from <strong>£6</strong> — ideal
                       when you are catching a train home with a suitcase and want to avoid the
                       walk with heavy bags.
                     </p>
@@ -303,12 +262,12 @@ export default function StudentTaxiLeicesterPage() {
                   <MapPin className="h-6 w-6 text-[#06A0A6] flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">
-                      City Centre to East Midlands Airport
+                      City Centre to East Midlands Airport — from £28
                     </h3>
                     <p className="text-[#2E3C44]">
                       Flying home for the holidays? A fixed-price run from the{" "}
-                      <strong>city centre to East Midlands Airport</strong> is available at a{" "}
-                      <strong>low, fixed fare</strong>. No surge pricing at the end of term — the fare is
+                      <strong>city centre to East Midlands Airport</strong> starts from{" "}
+                      <strong>£28</strong>. No surge pricing at the end of term — the fare is
                       agreed before you travel.
                     </p>
                   </div>
@@ -318,11 +277,11 @@ export default function StudentTaxiLeicesterPage() {
                   <Luggage className="h-6 w-6 text-[#06A0A6] flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">
-                      House Move Within Leicester
+                      House Move Within Leicester — from £20
                     </h3>
                     <p className="text-[#2E3C44]">
-                      Moving between student houses within Leicester is available at a{" "}
-                      <strong>low, fixed price</strong> in an estate car, with MPV options available for larger
+                      Moving between student houses within Leicester starts from{" "}
+                      <strong>£20</strong> in an estate car, with MPV options available for larger
                       loads. Tell us what you are moving and we will recommend the right vehicle
                       and quote a single fixed price for the journey.
                     </p>
@@ -333,61 +292,8 @@ export default function StudentTaxiLeicesterPage() {
           </div>
         </section>
 
-        {/* Taxi vs Bus vs Rideshare Comparison */}
-        <section className="py-20 bg-[#E4E4E4]">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
-                Taxi vs Bus vs Rideshare for Students
-              </h2>
-              <p className="text-xl text-[#2E3C44] max-w-3xl mx-auto">
-                Not sure how to get around as a student? Here&apos;s how we compare.
-              </p>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
-                <thead>
-                  <tr className="bg-[#0F0D3E] text-white">
-                    <th className="p-4 text-left font-semibold"></th>
-                    <th className="p-4 text-left font-semibold">Aylestone Taxis</th>
-                    <th className="p-4 text-left font-semibold">Bus</th>
-                    <th className="p-4 text-left font-semibold">Rideshare Apps</th>
-                  </tr>
-                </thead>
-                <tbody className="text-[#2E3C44]">
-                  <tr className="border-b border-gray-100">
-                    <td className="p-4 font-semibold">Pricing</td>
-                    <td className="p-4">Low, fixed fare — no surge</td>
-                    <td className="p-4">Low, fixed fare</td>
-                    <td className="p-4">Surge pricing at busy times</td>
-                  </tr>
-                  <tr className="border-b border-gray-100 bg-white/50">
-                    <td className="p-4 font-semibold">Luggage</td>
-                    <td className="p-4">Estate/MPV available</td>
-                    <td className="p-4">Limited space</td>
-                    <td className="p-4">Depends on car assigned</td>
-                  </tr>
-                  <tr className="border-b border-gray-100">
-                    <td className="p-4 font-semibold">Driver vetting</td>
-                    <td className="p-4">Enhanced DBS-checked</td>
-                    <td className="p-4">N/A</td>
-                    <td className="p-4">Varies by driver</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 font-semibold">Late-night availability</td>
-                    <td className="p-4">24/7, pre-bookable</td>
-                    <td className="p-4">Limited/no night service</td>
-                    <td className="p-4">Availability varies</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
         {/* Why Students Choose Us */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-[#E4E4E4]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
@@ -398,7 +304,7 @@ export default function StudentTaxiLeicesterPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[
                 { icon: Clock, label: "24/7 booking", detail: "Book online or by phone any time — useful for early trains and late arrivals." },
-                { icon: PoundSterling, label: "Low, fixed pricing", detail: "Know the fare upfront. No surge charges during busy end-of-term weekends." },
+                { icon: PoundSterling, label: "Affordable fixed pricing", detail: "Know the fare upfront. No surge charges during busy end-of-term weekends." },
                 { icon: Shield, label: "DBS-checked drivers", detail: "Licensed, vetted drivers you can trust for late-night and early-morning runs." },
                 { icon: Luggage, label: "Estate & MPV options", detail: "Room for suitcases, boxes, and house-move belongings." },
                 { icon: Users, label: "Group bookings", detail: "One car for your whole house — split the fixed fare between housemates." },
@@ -419,7 +325,7 @@ export default function StudentTaxiLeicesterPage() {
         </section>
 
         {/* Leicester Freshers 2026 */}
-        <section className="py-20 bg-[#E4E4E4]">
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
@@ -436,9 +342,7 @@ export default function StudentTaxiLeicesterPage() {
               <p>
                 <strong>Move-in transport</strong> is often the first taxi you will book in Leicester.
                 New students arrive with suitcases, bedding, kitchen boxes, and everything else that
-                seemed manageable at home but feels heavy on a new pavement. Whether you&apos;re
-                moving into <strong>Freemen&apos;s Common, Bede Park, Painter House</strong>, or
-                elsewhere, we offer{" "}
+                seemed manageable at home but feels heavy on a new pavement. We offer{" "}
                 <strong>estate and MPV options</strong> with generous luggage space for multiple bags
                 and boxes — tell us how much you are bringing when you book and we will recommend the
                 right vehicle. If several housemates in a shared house are moving on the same day,
@@ -447,8 +351,8 @@ export default function StudentTaxiLeicesterPage() {
               </p>
               <p>
                 Arriving by train? Our <strong>station to halls transfers</strong> run from{" "}
-                <strong>Leicester train station</strong> direct to both University of Leicester and
-                DMU halls at a <strong>low, fixed price</strong> confirmed
+                <strong>Leicester train station</strong> direct to University of Leicester halls from{" "}
+                <strong>£6</strong> and to DMU halls from <strong>£5</strong> — fixed prices confirmed
                 before you travel. We operate <strong>24/7</strong>, so early-morning arrivals and
                 late-night trains are both covered. Share your train time when you book and we will
                 meet you at the station taxi rank or an agreed pickup point.
@@ -457,14 +361,7 @@ export default function StudentTaxiLeicesterPage() {
                 Freshers fortnight means nights out — and Leicester&apos;s main freshers venues fill
                 fast. We cover late-night pickups from <strong>2Funky</strong>,{" "}
                 <strong>Quarter 25</strong>, <strong>Club Republic</strong>, <strong>R/Bar</strong>,
-                and other city-centre clubs throughout freshers fortnight — see our{" "}
-                <Link
-                  href="/late-night-taxi-leicester"
-                  className="text-[#06A0A6] hover:underline font-medium"
-                >
-                  late night taxi Leicester
-                </Link>{" "}
-                page for the full venue list and fare details. Pre-booking your return
+                and other city-centre clubs throughout freshers fortnight. Pre-booking your return
                 taxi is recommended on the busiest nights when thousands of students leave at once,
                 or message us on WhatsApp when you are ready to head back to halls.
               </p>
@@ -473,7 +370,7 @@ export default function StudentTaxiLeicesterPage() {
                 <strong>whole academic year</strong> — not just freshers week. The same service covers{" "}
                 <strong>airport transfers home at Christmas and Easter</strong>, end-of-term house
                 moves when you relocate or head home for the holidays, and late-night rides whenever
-                you need them. One local operator, low fixed fares, DBS-checked drivers — from your first
+                you need them. One local operator, fixed fares, DBS-checked drivers — from your first
                 day in Leicester to your last exam. For a full arrival and freshers planning guide,
                 read our{" "}
                 <Link
@@ -488,53 +385,8 @@ export default function StudentTaxiLeicesterPage() {
           </div>
         </section>
 
-        {/* Quick Answers Block */}
-        <section className="py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#0F0D3E] mb-6">
-                Quick Answers for New Students
-              </h2>
-              <div className="space-y-5">
-                <div>
-                  <p className="font-semibold text-[#0F0D3E] mb-1">
-                    How do I get from Leicester train station to university?
-                  </p>
-                  <p className="text-[#2E3C44]">
-                    Book a taxi directly from the station — we offer low,
-                    fixed fares to both University of Leicester and DMU
-                    halls, and it&apos;s the quickest way to travel with luggage.
-                  </p>
-                </div>
-                <div>
-                  <p className="font-semibold text-[#0F0D3E] mb-1">
-                    Is a taxi from Leicester station more expensive than the bus?
-                  </p>
-                  <p className="text-[#2E3C44]">
-                    Our fares are kept low and fixed, so a taxi is often only
-                    a small step up from the bus — but far quicker and
-                    easier when you&apos;re carrying luggage.
-                  </p>
-                </div>
-                <div>
-                  <p className="font-semibold text-[#0F0D3E] mb-1">
-                    Do you cover taxis to freshers&apos; venues like 2Funky or Club Republic?
-                  </p>
-                  <p className="text-[#2E3C44]">
-                    Yes — see our{" "}
-                    <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline font-medium">
-                      late night taxi Leicester
-                    </Link>{" "}
-                    page for full venue coverage and fixed fares.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* FAQ */}
-        <section className="py-20 bg-[#E4E4E4]">
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6">
@@ -560,7 +412,7 @@ export default function StudentTaxiLeicesterPage() {
             </h2>
             <p className="text-xl text-[#E4E4E4] mb-8">
               House moves, airport transfers, and group bookings for University of Leicester and
-              DMU students. Call <strong>{STUDENT_PHONE}</strong> or book online — low, fixed prices,
+              DMU students. Call <strong>{STUDENT_PHONE}</strong> or book online — fixed prices,
               no surprises.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">

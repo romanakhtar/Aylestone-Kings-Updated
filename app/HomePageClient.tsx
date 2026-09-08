@@ -598,6 +598,22 @@ export default function HomePageClient() {
               </div>
             </Link>
 
+            <Link href="/taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
+                <Car className="h-8 w-8 text-[#06A0A6]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6]">
+                taxi Leicester service
+              </h3>
+              <p className="text-[#2E3C44] mb-6">
+                Fixed-price Leicester taxis with licensed drivers, 24/7 booking, and no surge charging across the city.
+              </p>
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
+                Learn More
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
             <Link href="/local-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <MapPin className="h-8 w-8 text-[#06A0A6]" />
