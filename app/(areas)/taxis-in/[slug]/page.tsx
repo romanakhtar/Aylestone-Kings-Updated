@@ -50,7 +50,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 2. Leicester City Centre
   "leicester-city-centre": {
-    title: "Taxi Leicester City Centre | Fixed Fares 24/7 | Aylestone Taxis",
+    title: "Taxis in Leicester City Centre — Fixed Fares | 24/7",
     description:
       "Fast, fixed-price taxis across Leicester city centre — Highcross, Curve Theatre, train station. Book online or call 0116 233 8888.",
   },
@@ -86,25 +86,25 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 8. Highfields
   highfields: {
-    title: "Taxis in Highfields Leicester | Hospital & Airports",
+    title: "Taxis in Highfields — Hospital & Airport Transfers | 24/7",
     description:
       "Need a taxi in Highfields, Leicester? Aylestone Taxis offers fixed price taxis from Highfields 24/7. Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 9. Clarendon Park
   "clarendon-park": {
-    title: "Taxis in Clarendon Park Leicester | Fixed Fares 24/7",
+    title: "Taxis in Clarendon Park — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Need a taxi in Clarendon Park, Leicester? Aylestone Taxis provides fixed price taxis 24/7 from Clarendon Park. Airport transfers and late night rides. Call 0116 233 8888.",
   },
   // 10. Knighton
   knighton: {
-    title: "Taxis in Knighton Leicester | Fixed Fares 24/7",
+    title: "Taxis in Knighton — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Looking for a taxi in Knighton, Leicester? Aylestone Taxis offers fixed price taxis from Knighton 24/7. Airport transfers, school runs and local journeys. Call 0116 233 8888.",
   },
   // 11. Hamilton
   hamilton: {
-    title: "Taxis in Hamilton Leicester | Fixed Fares 24/7",
+    title: "Taxis in Hamilton — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Taxis in Hamilton Leicester: fixed fares from £8 to the city centre, EMA from £28, 24/7 school runs, shopping trips and airport transfers. DBS-checked drivers — call 0116 233 8888 or book online.",
   },
@@ -116,13 +116,13 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 13. Braunstone
   braunstone: {
-    title: "Taxis in Braunstone Leicester | Fixed Fares 24/7",
+    title: "Taxis in Braunstone — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Need a taxi in Braunstone, Leicester? Aylestone Taxis provides fixed price taxis from Braunstone 24/7. Airport transfers, school runs and local journeys. Call 0116 233 8888.",
   },
   // 14. Thurmaston
   thurmaston: {
-    title: "Thurmaston Taxi Leicester | Fixed Fares 24/7",
+    title: "Taxis in Thurmaston — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Need a taxi in Thurmaston, Leicester? Aylestone Taxis offers fixed price taxis from Thurmaston 24/7. Airport transfers, shopping trips and local journeys. Call 0116 233 8888.",
   },
@@ -134,31 +134,31 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 16. Birstall
   birstall: {
-    title: "Birstall Taxis Leicester | Local & Airport | Aylestone Taxis",
+    title: "Taxis in Birstall — Local & Airport | Aylestone Taxis",
     description:
       "Birstall taxis Leicester: reliable Birstall taxis for local trips and airports, 24/7. Book Birstall taxis online or call 0116 2338888.",
   },
   // 17. Glenfield
   glenfield: {
-    title: "Taxis in Glenfield Leicester | Fixed Fares 24/7",
+    title: "Taxis in Glenfield — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Need a taxi in Glenfield, Leicester? Aylestone Taxis offers fixed price taxis from Glenfield 24/7. Glenfield Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 18. Blaby
   blaby: {
-    title: "Taxis in Blaby Leicester | Fixed Fares 24/7",
+    title: "Taxis in Blaby — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Need a taxi in Blaby, Leicester? Fixed fares from £7 to the city centre, EMA from £25, 24/7 school runs and retail park trips. DBS-checked drivers — call 0116 233 8888.",
   },
   // 19. Narborough
   narborough: {
-    title: "Taxis in Narborough Leicester | Fixed Fares 24/7",
+    title: "Taxis in Narborough — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Need a taxi in Narborough, Leicester? Fixed fares from £8 to the city centre, EMA from £22, train station pickups and school runs 24/7. DBS-checked drivers — call 0116 233 8888.",
   },
   // 20. Enderby
   enderby: {
-    title: "Taxis in Enderby Leicester | Fixed Fares 24/7",
+    title: "Taxis in Enderby — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Need a taxi in Enderby or Meridian Business Park? Fixed fares from £8 to Leicester, EMA from £22, corporate accounts and 24/7 business park runs. Call 0116 233 8888.",
   },
@@ -194,55 +194,55 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 26. Rushey Mead
   "rushey-mead": {
-    title: "Rushey Mead Taxi Leicester | 24/7 Pickups",
+    title: "Taxis in Rushey Mead — 24/7 Pickups | Fixed Fares",
     description:
       "Reliable taxi service in Rushey Mead, Leicester. Local rides, airport transfers, school runs. 24/7 availability. Call 0116 2338888.",
   },
   // 27. Stoneygate
   stoneygate: {
-    title: "Stoneygate Taxi Leicester | Fixed Fares 24/7",
+    title: "Taxis in Stoneygate — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Need a taxi in Stoneygate, Leicester? Aylestone Taxis offers fixed price taxis from Stoneygate 24/7. Airport transfers, corporate travel and local journeys. Call 0116 233 8888.",
   },
   // 28. South Wigston
   "south-wigston": {
-    title: "South Wigston Taxi Leicester | 24/7 Fixed Fares",
+    title: "Taxis in South Wigston — Fixed Fares | 24/7",
     description:
       "Taxi service in South Wigston, Leicestershire. Airport transfers, local rides, station pickups. 24/7 from Aylestone Taxis. Call 0116 2338888.",
   },
   // 29. Humberstone
   humberstone: {
-    title: "Humberstone Taxi Leicester | 24/7 Service",
+    title: "Taxis in Humberstone — 24/7 Service | Fixed Fares",
     description:
       "Reliable taxi service in Humberstone, Leicester. Local rides, airport transfers, 24/7 availability. Call Aylestone Taxis on 0116 2338888.",
   },
   // 30. Thurnby Lodge
   "thurnby-lodge": {
-    title: "Thurnby Lodge Taxi Leicester | 24/7",
+    title: "Taxis in Thurnby Lodge — Airport Transfers | 24/7",
     description:
       "Fast taxi service in Thurnby Lodge, Leicester. Local rides, airport transfers, 24/7 availability from Aylestone Taxis. Call 0116 2338888.",
   },
   // 31. Westcotes
   westcotes: {
-    title: "Westcotes Taxi Leicester | 24/7 | Aylestone Taxis",
+    title: "Taxis in Westcotes | 24/7 | Aylestone Taxis",
     description:
       "Reliable taxi service in Westcotes, Leicester. Local rides, airport transfers, 24/7 service from Aylestone Taxis. Call 0116 2338888.",
   },
   // 32. Eyres Monsell
   "eyres-monsell": {
-    title: "Eyres Monsell Taxi Leicester | 24/7",
+    title: "Taxis in Eyres Monsell — Airport Transfers | 24/7",
     description:
       "Fast, affordable taxi service in Eyres Monsell, Leicester. Local rides, airport transfers, 24/7 availability. Call 0116 2338888.",
   },
   // 33. Glen Parva
   "glen-parva": {
-    title: "Glen Parva Taxi Leicester | Fixed Fares 24/7",
+    title: "Taxis in Glen Parva — Fixed Fares, Airport Transfers | 24/7",
     description:
       "Reliable taxi service in Glen Parva, Leicestershire. Airport transfers, local rides, 24/7 from Aylestone Taxis. Call 0116 2338888.",
   },
   // 34. Fosse Park
   "fosse-park": {
-    title: "Fosse Park Leicester Taxi | Shopping Pickups | Aylestone",
+    title: "Taxis to Fosse Park — Shopping Pickups | Aylestone Taxis",
     description:
       "Fosse Park Leicester taxi: drop-offs & pickups at Fosse Park retail park. Fosse taxi Leicester — skip parking queues, call 0116 2338888 or book online.",
   },
@@ -260,7 +260,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 37. Wigston Fields
   "wigston-fields": {
-    title: "Wigston Fields Taxi Leicester | 24/7 Fixed",
+    title: "Taxis in Wigston Fields — Fixed Fares | 24/7",
     description:
       "Fast taxi service in Wigston Fields, Leicestershire. Airport transfers, local rides, 24/7 availability. Call Aylestone Taxis on 0116 2338888.",
   },
@@ -302,7 +302,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 44. University & College Areas – De Montfort University & University of Leicester
   "de-montfort-university": {
-    title: "Taxi to De Montfort University Leicester | 24/7",
+    title: "Taxi to De Montfort University — Airport Transfers | 24/7",
     description:
       "Need a taxi to De Montfort University? Aylestone Taxis provides fast, affordable rides to DMU 24/7. Airport transfers, city rides, student-friendly. Call 0116 2338888.",
   },
@@ -2492,7 +2492,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     ? customMeta.title
     : isDestination
       ? `${areaName} Taxi | Fixed Fares 24/7`
-      : `Taxi in ${areaName}, Leicester | Fixed Fares | Aylestone Taxis`
+      : `Taxis in ${areaName} — Fixed Fares, Airport Transfers | 24/7`
   const description = customMeta
     ? customMeta.description
     : isDestination

@@ -235,7 +235,7 @@ export default function CompanyPage() {
                 Innovating Urban Mobility Together
               </h3>
               <p className="text-lg text-[#2E3C44] mb-8 leading-relaxed">
-                At Aylestone Taxis, we champion both local spirit and global tech innovation. Join us as we continue 
+                At Aylestone Taxis, we champion both local spirit and global tech innovation. Sign-up as a Self-Employed Driver and join with us as we continue 
                 to shape the future of urban mobility, ensuring that innovation meets reliability in every journey.
               </p>
               <p className="text-lg text-[#2E3C44] mb-8 leading-relaxed">

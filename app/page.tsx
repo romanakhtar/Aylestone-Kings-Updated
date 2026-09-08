@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   title: "Aylestone Taxis Leicester — Fixed Fares, Book 24/7 | 0116 233 8888",
   description:
     "Leicester taxis & airport transfers since 1995. Fixed fares, no surge, licensed drivers, 24/7. Book online or call 0116 233 8888.",
+  openGraph: {
+    title: "Aylestone Taxis Leicester — Fixed Fares, Book 24/7 | 0116 233 8888",
+    description:
+      "Leicester taxis & airport transfers since 1995. Fixed fares, no surge, licensed drivers, 24/7. Book online or call 0116 233 8888.",
+    url: "https://aylestone-taxis.co.uk",
+  },
 }
 
 export default function Home() {
