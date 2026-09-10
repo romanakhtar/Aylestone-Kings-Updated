@@ -15,9 +15,9 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Cheap Taxi Leicester | Low Fare Quotes Online | 24/7",
+  title: "Cheap Taxi Leicester | Fixed Low Fares | Book 24/7",
   description:
-    "Cheap taxi Leicester: see your fare online before you book — competitive rates for local runs, EMA and UK airports. Transparent cheap taxi Leicester pricing, no hidden charges. Call 0116 2338888 — Aylestone Taxis 24/7.",
+    "Affordable Leicester taxis with fixed, low fares — no surge pricing. Licensed drivers, 24/7. Get an instant quote now.",
   keywords: "Cheap Taxi Leicester, cheapest taxi Leicester, cheap taxi in Leicester, cheapest taxi in Leicester, 24 hour taxi Leicester, affordable taxi Leicester, budget taxi Leicester, low cost taxi Leicester, cheap taxi to East Midlands Airport",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/cheap-taxi-leicester",

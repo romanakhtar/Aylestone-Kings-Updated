@@ -705,10 +705,10 @@ export const siteData = {
         name: "Gatwick South Terminal Taxi Transfers",
         href: "/gatwick-south-terminal-taxi-transfers",
       },
-      { name: "Shopping", href: "/travel" },
-      { name: "Students Transport", href: "/travel" },
-      { name: "Match-Day Travel", href: "/travel" },
-      { name: "Train Station", href: "/travel" },
+      { name: "Shopping", href: "/taxis-in/fosse-park" },
+      { name: "Students Transport", href: "/student-taxi-leicester" },
+      { name: "Match-Day Travel", href: "/taxis-in/king-power-stadium" },
+      { name: "Train Station", href: "/taxis-in/leicester-railway-station" },
     ],
 
     legal: [
@@ -2311,7 +2311,9 @@ export const siteData = {
       {
         id: "leicester-to-east-midlands-airport-taxi-travel-guide-prices-booking-tips",
         title: "Leicester to EMA Taxi: Prices, Time & Booking Tips",
-        metaTitle: "Leicester to EMA Taxi Guide | Aylestone Taxis",
+        metaTitle: "Leicester to EMA Airport Taxi | Prices & Booking",
+        metaDescription:
+          "Leicester to East Midlands Airport taxi guide — fixed prices, booking tips & journey times. Book your transfer now.",
         excerpt:
           "Planning an EMA trip? See typical journey times (30–45 mins), fixed fares from £40, and simple booking tips for a stress-free Leicester to East Midlands Airport taxi — plus return pickups and luggage advice.",
         content: `
@@ -2550,7 +2552,9 @@ export const siteData = {
       {
         id: "best-taxi-service-leicester-airport-transfers",
         title: "Best Taxi Service in Leicester for Airport Transfers",
-        metaTitle: "Best Airport Taxi Service Leicester | Aylestone Taxis",
+        metaTitle: "Best Leicester Airport Taxi | Fixed Fares 24/7",
+        metaDescription:
+          "Compare Leicester's best airport taxi service — fixed prices, flight tracking, 24/7 pickups. Book your transfer today.",
         excerpt:
           "Discover why Aylestone Taxis is the best taxi service in Leicester for airport transfers. Fast, reliable, and affordable airport taxi service with fixed prices and flight monitoring.",
         content: `
@@ -2627,6 +2631,9 @@ export const siteData = {
       {
         id: "how-to-book-taxi-leicester-quickly",
         title: "How to Book a Taxi in Leicester",
+        metaTitle: "How to Book a Taxi in Leicester Fast | Guide",
+        metaDescription:
+          "Quick guide to booking a Leicester taxi — phone, app or WhatsApp. Fixed fares, no surge. Book your ride now.",
         excerpt:
           "Learn how to book a taxi in Leicester quickly and easily. Online booking, phone booking, and WhatsApp options for fast taxi service in Leicester.",
         content: `

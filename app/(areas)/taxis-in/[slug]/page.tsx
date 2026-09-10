@@ -29,6 +29,25 @@ const DEDICATED_FAQ_AREA_SLUGS = new Set([
   "aylestone",
   "lutterworth",
   "wigston-fields",
+  "knighton",
+  "clarendon-park",
+  "stoneygate",
+  "highfields",
+  "braunstone",
+  "narborough",
+  "enderby",
+  "evington",
+  "glenfield",
+  "loughborough",
+  "beaumont-leys",
+  "syston",
+  "thurmaston",
+  "birstall",
+  "south-wigston",
+  "wigston",
+  "leicester-royal-infirmary",
+  "hamilton",
+  "glen-parva",
 ])
 
 const POPULAR_JOURNEY_AIRPORTS = [
@@ -311,6 +330,42 @@ const areaMeta: Record<string, { title: string; description: string }> = {
     description:
       "Need a taxi to the University of Leicester? Aylestone Taxis provides reliable 24/7 student-friendly rides, airport transfers, and local journeys. Call 0116 2338888.",
   },
+  // 45. Leicester Railway Station
+  "leicester-railway-station": {
+    title: "Leicester Station Taxi | Fixed Fares | Book Now",
+    description:
+      "Taxi from Leicester Railway Station — fixed fares, no surge, drivers waiting on arrival. Book online or call now.",
+  },
+  // 46. Asda Fosse Park
+  "asda-fosse-park": {
+    title: "Taxi to Fosse Park & Asda | Fixed Fares 24/7",
+    description:
+      "Book a taxi to Asda Fosse Park Leicester — fixed fares, no surge, quick pickups. Call or book online now.",
+  },
+  // 47. South Wigston Station
+  "south-wigston-station": {
+    title: "South Wigston Station Taxi | Pre-Book Train Pickups",
+    description:
+      "Taxi to or from South Wigston Station. Fixed fares, pickups timed to your train, rides across Wigston & Leicester. Call 0116 233 8888 or book online.",
+  },
+  // 48. Tesco Narborough Road
+  "tesco-narborough-road": {
+    title: "Tesco Narborough Road Taxi | Weekly Shop Rides 24/7",
+    description:
+      "Taxi to Tesco Narborough Road for your weekly shop. Fixed fares, help with shopping bags and a ride back home. Book online or call 0116 233 8888, 24/7.",
+  },
+  // 49. Narborough Station
+  "narborough-station": {
+    title: "Narborough Station Taxi | Pre-Book Train Pickups",
+    description:
+      "Taxi to or from Narborough Station. Fixed fares, pickups timed to your train, onward rides to Leicester or EMA. Call 0116 233 8888 or book online.",
+  },
+  // 50. De Montfort Hall
+  "de-montfort-hall": {
+    title: "Taxi to De Montfort Hall | Concerts & Events 24/7",
+    description:
+      "Taxi to De Montfort Hall for concerts, graduations and shows. Fixed fares and pre-booked pickups home after the event. Call 0116 233 8888 or book online.",
+  },
 }
 
 type AreaContent = {
@@ -426,7 +481,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "For students, Knighton is a practical base. Shared houses on Knighton Fields Road, Church Road, and the streets around DMU generate steady demand for campus runs, library sessions, city-centre evenings, and Leicester Railway Station at the start and end of term. We operate 24/7, so a late society event or an early exam does not leave you stranded — a licensed, DBS-checked driver from our Leicester fleet can be with you quickly. Many students pre-book airport transfers for half-term and summer travel, with fixed fares confirmed before pickup so there are no meter surprises on the way to East Midlands or Birmingham.",
       "Professional commuters book us just as regularly. Knighton's position south of the city centre gives quick access to the inner ring road and the A563, which makes morning runs into Leicester offices, Leicester Royal Infirmary, and business parks predictable when you set a standing pickup time. Parents in Knighton's school catchments arrange regular school runs with a consistent driver where possible, giving children a familiar face each morning. Every driver is licensed by Leicester City Council and DBS checked as standard.",
       "We quote fixed prices on agreed routes, so you know the fare before the car arrives — whether that is a five-minute hop or a pre-booked airport day. Core services from Knighton include 24/7 local taxis, airport transfers to all major UK airports, school-run contracts, hospital appointments, and longer-distance business travel. Vehicles range from standard saloons for solo commuters to estates and MPVs for families and luggage-heavy airport trips.",
-      "Typical journey times reflect Knighton's favourable position: Leicester city centre is around 10–12 minutes in normal traffic via London Road or Clarence Road, East Midlands Airport is roughly 25 minutes via the A563 and M1, and Birmingham Airport is around 50 minutes on a clear run. Example fares include Knighton to Leicester city centre from £6 and Knighton to East Midlands Airport from £28 — final pricing is confirmed at booking based on your exact pickup point, vehicle size, and time of travel.",
+      "Typical journey times reflect Knighton's favourable position: Leicester city centre is around 10–12 minutes in normal traffic via London Road or Clarence Road, East Midlands Airport is roughly 25 minutes via the A563 and M1, and Birmingham Airport is around 50 minutes on a clear run. Example fares for Knighton to Leicester city centre and Knighton to East Midlands Airport are shown below — final pricing is confirmed at booking based on your exact pickup point, vehicle size, and time of travel.",
       "Knighton sits alongside neighbouring Oadby and Clarendon Park, and we cover the whole south Leicester area without boundary surcharges. For full airport route guidance including terminal drop-offs and flight-timing advice, see our airport transfers service. Whether you are a DMU student catching an early lecture, a parent on the school run, or a professional commuting into the city, Aylestone Taxis gives Knighton a taxi service built around fixed fares, licensed drivers, and round-the-clock availability.",
     ],
     faqs: [
@@ -453,7 +508,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Students make up a large share of Clarendon Park's daily taxi demand. Shared houses on Clarendon Park Road, Knighton Road, and the streets between Victoria Park and the university generate regular bookings for lecture runs, library sessions, supermarket trips, and Leicester Railway Station at the start and end of term. Because we operate 24/7, a late-night pickup after a city-centre event or a society evening on campus is never a problem — call us and a licensed, DBS-checked driver will be dispatched from our Leicester fleet. Many students pre-book airport transfers for reading week and summer travel, with the fare confirmed upfront so there are no meter surprises.",
       "Young professionals living in Clarendon Park value the same reliability. The area's position — close enough to walk to Victoria Park on a lunch break, but well connected to the inner ring road — makes it a popular base for people working in Leicester's offices, hospitals, and creative industries. Standing morning pickups to the city centre, regular school-run contracts for families in the catchment, and evening returns after restaurants on London Road are all common requests. Every driver is licensed by Leicester City Council and DBS checked before they carry passengers.",
       "We quote fixed prices on agreed routes, so you always know the fare before the car arrives. Services from Clarendon Park include 24/7 local taxis, late-night rides home from the city centre or campus, airport transfers to all major UK airports, school-run standing bookings, and hospital appointments. Vehicles range from standard saloons for a solo commuter to estates and MPVs when you are travelling with luggage or a group.",
-      "Journey times from Clarendon Park reflect how close the area sits to Leicester's core: the city centre is around 8–10 minutes in normal traffic via London Road or Welford Road, East Midlands Airport is roughly 25 minutes via the A563 and M1, and Birmingham Airport is around 50 minutes on a clear run. Example fares include Clarendon Park to Leicester city centre from £5 and Clarendon Park to East Midlands Airport from £28 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Journey times from Clarendon Park reflect how close the area sits to Leicester's core: the city centre is around 8–10 minutes in normal traffic via London Road or Welford Road, East Midlands Airport is roughly 25 minutes via the A563 and M1, and Birmingham Airport is around 50 minutes on a clear run. Example fares for Clarendon Park to Leicester city centre and Clarendon Park to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Clarendon Park borders Knighton and sits between the University of Leicester and De Montfort University's London Road campus, and we cover the whole south Leicester triangle without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a student heading to a 9am lecture, a professional commuting to the office, or a resident catching a late-night ride home, Aylestone Taxis gives Clarendon Park a taxi service built on fixed fares, licensed drivers, and round-the-clock availability.",
     ],
     faqs: [
@@ -480,7 +535,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Professionals living in Stoneygate value punctuality and discretion. Standing morning pickups to Leicester city centre, the Royal Infirmary, or business parks along the ring road mean you are not hunting for parking or waiting on an unreliable bus. Families in the conservation-area streets arrange regular school runs with consistent DBS-checked drivers where possible, and weekend trips to Victoria Park, Highcross, or relatives across Leicestershire are booked with a fixed fare confirmed upfront. Students from the University of Leicester — many in houses near London Road and the park — use us for lecture runs, library sessions, nights out, and term-start journeys to Leicester Railway Station with luggage.",
       "Corporate travel is a regular request from Stoneygate. Account holders pre-book airport days, client meetings, and conference runs with a single point of contact and itemised billing. We cover executive saloons and larger vehicles for groups, and every driver is licensed by Leicester City Council and DBS checked before they carry passengers. Whether you need a same-day collection or a standing weekly schedule, our dispatch team confirms your price before the car is sent.",
       "We quote fixed prices on agreed routes, so you know the fare before the vehicle arrives. Core services from Stoneygate include 24/7 local taxis, airport transfers to all major UK airports, corporate accounts, school-run standing bookings, and hospital appointments. Vehicles range from standard saloons for a solo commuter to estates and MPVs when you are travelling with luggage, children, or colleagues.",
-      "Typical journey times reflect Stoneygate's excellent position south of the city core: Leicester city centre is around 8–10 minutes in normal traffic via London Road, Leicester Railway Station is roughly 10 minutes, East Midlands Airport is around 25 minutes via the A563 and M1, and Birmingham Airport is about 50 minutes on a clear run. Example fares include Stoneygate to Leicester city centre from £5, Stoneygate to Leicester train station from £6, and Stoneygate to East Midlands Airport from £28 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Typical journey times reflect Stoneygate's excellent position south of the city core: Leicester city centre is around 8–10 minutes in normal traffic via London Road, Leicester Railway Station is roughly 10 minutes, East Midlands Airport is around 25 minutes via the A563 and M1, and Birmingham Airport is about 50 minutes on a clear run. Example fares for Stoneygate to Leicester city centre, Stoneygate to Leicester train station, and Stoneygate to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Stoneygate sits alongside neighbouring Clarendon Park and borders Oadby and Knighton, and we cover the whole south Leicester area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a professional heading to an early meeting, a parent on the school run, or a student catching a late flight, Aylestone Taxis gives Stoneygate a taxi service built on fixed fares, licensed drivers, and round-the-clock availability.",
     ],
     faqs: [
@@ -507,7 +562,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Families in Highfields rely on taxis for the journeys that buses and walking cannot always cover comfortably — the school run on a rainy morning, a Saturday trip to Fosse Park, or a hospital visit with children in tow. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean, comfortable, and suitable for family travel.",
       "NHS workers make up a significant share of our Highfields demand. Leicester Royal Infirmary is one of the region's busiest hospitals, and staff on early starts, late finishes, and rotating night shifts need a taxi service that is genuinely available around the clock — not one that stops answering after midnight. We run hospital transfers to LRI from anywhere in Highfields throughout the day and night, with drivers who know the main entrances, A&E drop-off points, and staff car park collection areas. A typical run from Highfields to LRI takes around five minutes, and fares start from £4.",
       "Commuters heading into Leicester city centre from Highfields benefit from the area's central position. Evington Road and London Road both provide quick routes into town, and a standing morning pickup means you are not relying on bus timetables or searching for parking. We quote fixed prices on agreed routes, so your daily commute cost is predictable week to week. The same applies to airport days — pre-book a fixed-fare transfer to East Midlands or Birmingham and travel with luggage without the stress of surge pricing.",
-      "Typical journey times from Highfields: Leicester city centre around 8–10 minutes in normal traffic, Leicester Royal Infirmary around five minutes, East Midlands Airport roughly 25 minutes via the A563 and M1, and Birmingham Airport around 50 minutes on a clear run. Example fares include Highfields to Leicester city centre from £5, Highfields to East Midlands Airport from £28, and Highfields to LRI from £4 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Typical journey times from Highfields: Leicester city centre around 8–10 minutes in normal traffic, Leicester Royal Infirmary around five minutes, East Midlands Airport roughly 25 minutes via the A563 and M1, and Birmingham Airport around 50 minutes on a clear run. Example fares for Highfields to Leicester city centre, Highfields to East Midlands Airport, and Highfields to LRI are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Highfields borders Spinney Hills and sits close to Evington, Clarendon Park, and the city centre, and we cover the whole inner Leicester area without boundary surcharges. Core services include 24/7 local taxis, hospital runs, airport transfers to all major UK airports, school-run standing bookings, and shift-change pickups for NHS and other night workers. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a nurse finishing a night shift, a parent on the school run, or a commuter heading to the office, Aylestone Taxis gives Highfields a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
@@ -534,7 +589,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Families in Braunstone use taxis for the everyday journeys that matter — the school run on a wet morning, a Saturday trip to Fosse Shopping Park with bags of shopping, or a lift to a relative's house across Leicester. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day so children and parents know who to expect. All drivers are licensed by Leicester City Council, and our vehicles are clean and comfortable for family travel. Pre-booking a return pickup from Fosse Park after a long shop means you are not wrestling with bags on a bus.",
       "Working commuters in Braunstone value straightforward pricing above everything else. Many residents travel into Leicester city centre for retail, hospitality, and warehouse shifts, or head south-west towards Narborough and the M69 corridor for logistics and manufacturing work. A standing morning pickup to the city centre or a regular night-shift collection means you are not gambling on bus timetables or paying for city-centre parking. We quote fixed prices on agreed routes, so your weekly commute cost is predictable — no surge pricing, no meter ticking up in traffic once the job is booked.",
       "Braunstone's west-side position also makes it one of Leicester's better-connected areas for airport travel. East Midlands Airport is typically around 20 minutes via the M1, and Birmingham Airport is around 45 minutes on a clear run — shorter than many other Leicester suburbs because of quick ring-road and motorway access. Pre-book a fixed-fare airport transfer and travel with family and luggage without worrying about the final bill. We cover all major UK airports from Braunstone with flight monitoring available on request.",
-      "Typical journey times from Braunstone: Leicester city centre around 10–12 minutes in normal traffic via Narborough Road or the ring road, East Midlands Airport roughly 20 minutes, and Birmingham Airport around 45 minutes. Example fares include Braunstone to Leicester city centre from £6 and Braunstone to East Midlands Airport from £25 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Typical journey times from Braunstone: Leicester city centre around 10–12 minutes in normal traffic via Narborough Road or the ring road, East Midlands Airport roughly 20 minutes, and Birmingham Airport around 45 minutes. Example fares for Braunstone to Leicester city centre and Braunstone to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Braunstone sits close to Narborough, Glen Parva, and Aylestone, and we cover the whole west Leicester area without boundary surcharges. Core services include 24/7 local taxis, school-run standing bookings, shopping trips to Fosse Shopping Park and other retail destinations, airport transfers to all major UK airports, and hospital appointments. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a parent on the school run, a commuter heading to a shift, or a family catching an early flight, Aylestone Taxis gives Braunstone a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
@@ -561,7 +616,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Families in Blaby book us for the journeys that matter on a school day — the wet-morning run when the bus is not appealing, a lift to after-school clubs in Leicester, or a Saturday trip into town with children and bags. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each morning so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean and comfortable for family travel. Pre-booking a return pickup from Blaby Retail Park after a big shop means you are not wrestling with trolley loads onto a bus.",
       "Commuters treat Blaby as a practical base south of the city. Morning runs into Leicester offices, Leicester Railway Station, and business parks along the A426 are among our most frequent bookings. Blaby's position close to the M69 junction also makes it one of south Leicestershire's better-connected areas for airport days — but the everyday commute is where fixed pricing matters most. We quote agreed fares before the car arrives, so your weekly travel cost is predictable with no surge multipliers on rainy Tuesdays or match-day evenings.",
       "Shoppers use our Blaby taxi service for Grove Farm Triangle, Blaby Retail Park, and trips onward to Fosse Park or Leicester city centre. Retail park forecourts can be busy on weekends, so tell us your preferred pickup point — store entrance, car park aisle, or a nearby side road — and we will note it on the job. Whether you are collecting a large click-and-collect order, visiting the weekly market in Blaby town centre, or meeting friends for lunch before an afternoon in the city, a pre-booked taxi keeps the day simple.",
-      "Typical journey times from Blaby reflect the town's favourable road position: Leicester city centre is around 12–15 minutes in normal traffic via Blaby Road and the A426, East Midlands Airport is roughly 15 minutes via the M1 corridor, and Birmingham Airport is around 50 minutes on a clear run via the M69 and M42. Example fares include Blaby to Leicester city centre from £7 and Blaby to East Midlands Airport from £25 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Typical journey times from Blaby reflect the town's favourable road position: Leicester city centre is around 12–15 minutes in normal traffic via Blaby Road and the A426, East Midlands Airport is roughly 15 minutes via the M1 corridor, and Birmingham Airport is around 50 minutes on a clear run via the M69 and M42. Example fares for Blaby to Leicester city centre and Blaby to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Core services from Blaby include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, school-run standing bookings, and retail park trips to Blaby Retail Park and Grove Farm Triangle. Blaby sits close to Narborough, Wigston, and Glen Parva, and we cover the whole south Leicestershire area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a parent on the school run, a commuter heading to the city, or a family catching an early EMA flight, Aylestone Taxis gives Blaby a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
@@ -593,7 +648,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Commuters book us for the journeys that train timetables cannot always cover. Early-morning starts before the first service, late finishes when connections are thin, and door-to-door runs with luggage to Leicester city centre or Leicester Railway Station are all common requests from Narborough. Pre-book with your train arrival time and we will meet you at Narborough Train Station, or call when you step off the platform and we will dispatch the nearest available driver. We quote fixed prices on agreed routes, so your weekly commute cost stays predictable — no app surge on rainy evenings or match days.",
       "Families in Narborough rely on taxis for school runs, weekend outings, and the practical trips that buses make awkward — the wet-morning dash to school, a lift to after-school clubs in Leicester, or a Saturday visit to Narborough Park followed by shopping in town. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each morning so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean and comfortable for family travel.",
       "Narborough's position close to the M1 and M69 junctions makes it one of the quickest Leicester-area starting points for airport travel. East Midlands Airport is especially convenient — many Narborough passengers reach the terminal in around ten minutes on a clear run, making a pre-booked fixed-fare transfer far simpler than long-stay parking or multiple bus connections. Birmingham Airport is also popular from Narborough, with a typical drive of around 45 minutes via the M69 and M42 when traffic is light.",
-      "Typical journey times from Narborough: Leicester city centre around 15 minutes in normal traffic via Narborough Road and the A5460, East Midlands Airport roughly 10 minutes via the M1 corridor, and Birmingham Airport around 45 minutes on a clear run. Example fares include Narborough to Leicester city centre from £8 and Narborough to East Midlands Airport from £22 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Typical journey times from Narborough: Leicester city centre around 15 minutes in normal traffic via Narborough Road and the A5460, East Midlands Airport roughly 10 minutes via the M1 corridor, and Birmingham Airport around 45 minutes on a clear run. Example fares for Narborough to Leicester city centre and Narborough to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Core services from Narborough include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, train station pickups at Narborough Train Station, and school-run standing bookings. Narborough sits close to Blaby, Enderby, and Braunstone, and we cover the whole south Leicestershire area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a commuter catching the first train, a parent on the school run, or a family heading to an early EMA flight, Aylestone Taxis gives Narborough a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
@@ -620,7 +675,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Meridian Business Park runs are among our most frequent bookings. Early-morning shift starts, late-evening finishes, and client meetings in Leicester city centre all generate steady demand from staff who want a door-to-door service without hunting for parking at the business park or waiting on infrequent public transport. We know the main Meridian entrances, staff car parks, and collection points along the A5460, so your driver can meet you at the right gate rather than circling the estate. Corporate accounts are available for businesses with regular travel requirements — invoicing, reference fields, and standing weekday bookings keep finance teams and office managers in control.",
       "Corporate commuters value fixed pricing above almost everything else. A standing 7am pickup from Mill Lane to Leicester offices, or a regular evening return after a late shift, should cost the same every week — not surge on a rainy Tuesday because every app in Leicestershire is busy. We quote agreed fares before the car arrives, and recurring commuters can set up standing bookings so dispatch already knows your route, vehicle preference, and pickup point. Every driver is licensed by Leicester City Council and DBS checked as standard.",
       "Enderby's position close to junction 21 of the M1 makes it one of the quickest Leicester-area starting points for airport travel. East Midlands Airport is typically around ten minutes on a clear run — ideal for early-morning departures when you need certainty rather than a meter ticking in traffic. Birmingham Airport is around 45 minutes via the M69 and M42, and we provide fixed-fare transfers to all major UK airports with flight monitoring available on request. Business travellers heading to client sites, conferences, or international flights benefit from the same upfront quoting whether the journey is local or cross-country.",
-      "Typical journey times from Enderby: Leicester city centre around 15 minutes in normal traffic via the A5460 and Narborough Road corridor, East Midlands Airport roughly 10 minutes via the M1, and Birmingham Airport around 45 minutes on a clear run. Example fares include Enderby to Leicester city centre from £8 and Enderby to East Midlands Airport from £22 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Typical journey times from Enderby: Leicester city centre around 15 minutes in normal traffic via the A5460 and Narborough Road corridor, East Midlands Airport roughly 10 minutes via the M1, and Birmingham Airport around 45 minutes on a clear run. Example fares for Enderby to Leicester city centre and Enderby to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Core services from Enderby include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, corporate accounts for Meridian Business Park employers, and regular Meridian Business Park runs for shift workers and office staff. Enderby sits close to Narborough, Blaby, and the M1/M69 motorway junctions, and we cover the whole south-west Leicestershire corridor without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a shift worker starting at 5am, a manager heading to a city-centre meeting, or a team organising corporate travel accounts, Aylestone Taxis gives Enderby a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
@@ -647,7 +702,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Families in Evington rely on taxis for the journeys that buses and walking cannot always cover comfortably — the school run on a rainy morning, a Saturday outing, or a trip to visit relatives across Leicester. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean and comfortable for family travel.",
       "Elderly residents in Evington are a significant part of our daily work. Many passengers need a little extra time getting in and out of the vehicle, help with shopping bags, or a driver who will wait at the door rather than driving off the moment you step outside. We offer assisted taxi rides with patient, DBS-checked drivers who are used to supporting older passengers on hospital visits, GP appointments, and social outings. Mention any mobility or assistance needs when you book and we will note them on your job.",
       "NHS workers at Leicester General Hospital book us for shift changes at all hours — early-morning starts, late finishes, and rotating night patterns that do not align with bus timetables. A typical run from Evington to Leicester General Hospital takes around five minutes, and we know the main entrances, outpatient clinics, and staff collection points. The same drivers who cover hospital staff also serve patients and visitors attending appointments, so you are travelling with people who understand the layout and timing pressures of a busy NHS site.",
-      "Typical journey times from Evington: Leicester city centre around 10–12 minutes in normal traffic via Evington Road or the A47, Leicester General Hospital around five minutes, East Midlands Airport roughly 25 minutes, and Birmingham Airport around 50 minutes on a clear run. Example fares include Evington to Leicester city centre from £6 and Evington to East Midlands Airport from £28 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Typical journey times from Evington: Leicester city centre around 10–12 minutes in normal traffic via Evington Road or the A47, Leicester General Hospital around five minutes, East Midlands Airport roughly 25 minutes, and Birmingham Airport around 50 minutes on a clear run. Example fares for Evington to Leicester city centre and Evington to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Evington sits close to Oadby, Highfields, and Spinney Hills, and we cover the whole east Leicester area without boundary surcharges. Core services include 24/7 local taxis, hospital runs to Leicester General and other medical sites, elderly assistance, school-run standing bookings, and airport transfers to all major UK airports. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are an elderly resident heading to a GP appointment, an NHS worker finishing a night shift, or a family on the school run, Aylestone Taxis gives Evington a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
@@ -673,7 +728,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Glenfield is a residential village on Leicester's western edge — a neighbourhood where Glenfield Village preserves a quiet suburban character while Glenfield Hospital, one of the UK's leading specialist NHS centres, draws patients, visitors, and staff from across the Midlands every day. Dominion Road and Groby Road form the main arteries through the area, connecting local streets to the A50 corridor and onward routes into the city. Aylestone Taxis has served Glenfield since 1995, and our bookings here reflect what the village actually needs: dependable hospital transport at all hours, fixed-price airport runs for families leaving early, and everyday local taxis for residents along Groby Road and the village lanes.",
       "NHS workers make up a substantial share of our Glenfield bookings. Glenfield Hospital operates around the clock as a major cardiac centre and specialist unit, and staff on early starts, late finishes, and rotating night shifts need a taxi service that does not stop answering after midnight. Patients travelling to outpatient appointments, families visiting relatives on the wards, and visitors unsure of parking all book us for direct, stress-free journeys. Our drivers are DBS checked, licensed by Leicester City Council, and experienced with hospital pickups — they know the main entrances, outpatient clinics, and staff collection points so you are not left searching for the right drop-off on arrival.",
       "Hospital journeys often carry extra pressure — an early appointment slot, a discharge after a long stay, or a family member travelling with you who needs a little more time boarding. We build that into how we handle Glenfield Hospital runs. Mention the department or entrance when you book and we will note it on the job. A typical taxi from anywhere in Glenfield to Glenfield Hospital takes around five minutes, making us a practical choice for residents on Dominion Road or along Groby Road who want a reliable door-to-hospital service rather than relying on infrequent bus connections.",
-      "Beyond hospital runs, Glenfield sits in one of Leicester's best-connected positions for airport travel. The village is close to junction 21A of the M1, which makes East Midlands Airport one of the quickest airport runs from west Leicester. Typical journey times from Glenfield are: Leicester city centre around 12–15 minutes via the A50 or B5380, East Midlands Airport roughly 25 minutes, and Birmingham Airport around 50 minutes on a clear run. Example fares include Glenfield to Leicester city centre from £7 and Glenfield to East Midlands Airport from £28 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Beyond hospital runs, Glenfield sits in one of Leicester's best-connected positions for airport travel. The village is close to junction 21A of the M1, which makes East Midlands Airport one of the quickest airport runs from west Leicester. Typical journey times from Glenfield are: Leicester city centre around 12–15 minutes via the A50 or B5380, East Midlands Airport roughly 25 minutes, and Birmingham Airport around 50 minutes on a clear run. Example fares for Glenfield to Leicester city centre and Glenfield to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Core services from Glenfield include 24/7 availability with no night surcharge, fixed prices confirmed before the car arrives, DBS-checked licensed drivers, hospital runs to Glenfield Hospital and other medical sites, early morning rides for flight departures, and airport transfers to all major UK airports. Whether you need a 4am pickup for an EMA flight, a lunchtime run into Leicester city centre, or a standing booking for recurring shift work at the hospital, the process is the same — quote upfront, arrive on time, travel comfortably.",
       "Glenfield borders Beaumont Leys to the east and sits close to Kirby Muxloe, Ratby, and Braunstone, and we cover the whole west Leicester area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Neighbouring Beaumont Leys residents often use the same hospital and airport routes, and we serve both areas with the same fixed-fare standard. Whether you are an NHS worker finishing a night shift, a patient heading to a cardiac appointment, or a family catching an early flight, Aylestone Taxis gives Glenfield a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
@@ -701,7 +756,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "University students make up a large share of our Loughborough work. Term starts, reading weeks, and end-of-term travel generate steady demand for airport runs to East Midlands Airport — one of the shortest airport journeys from anywhere in the region — as well as longer transfers to Birmingham, Heathrow, and other UK hubs. We also cover late-night pickups from the town centre, campus-area collections, and group minibus bookings when housemates share the cost of a fixed-fare airport transfer. All drivers are DBS checked and licensed, and we confirm the price before the car arrives so there are no meter surprises on the way to your flight.",
       "Commuters rely on us for the journeys that need to run to a schedule. Loughborough Train Station is a busy interchange, and many passengers book a taxi to meet a specific train departure or collect them on arrival when public transport does not align with their shift. The A6 link to Leicester city centre is one of our most frequent routes, and we also run regularly to Nottingham for work, appointments, and evenings out. Standing weekday bookings are available for passengers who want the same pickup time each morning without rebooking every day.",
       "Families in Loughborough use taxis for the practical trips that matter — the school run on a wet morning, a Saturday outing from the town centre, or a lift to relatives across Charnwood Borough and beyond. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day. Long-distance journeys are also common from Loughborough: whether you are visiting family in another county, heading to a hospital appointment outside the area, or travelling to an event, we quote fixed fares upfront so the cost is clear before you confirm.",
-      "Typical journey times from Loughborough reflect the town's strong road position: Leicester city centre around 20–25 minutes via the A6, East Midlands Airport roughly 15 minutes, Birmingham Airport around 60 minutes on a clear run, and Nottingham around 30 minutes. Example fares include Loughborough to Leicester city centre from £18 and Loughborough to East Midlands Airport from £20 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Typical journey times from Loughborough reflect the town's strong road position: Leicester city centre around 20–25 minutes via the A6, East Midlands Airport roughly 15 minutes, Birmingham Airport around 60 minutes on a clear run, and Nottingham around 30 minutes. Example fares for Loughborough to Leicester city centre and Loughborough to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Core services from Loughborough include 24/7 availability with no night surcharge, fixed prices confirmed before the car arrives, DBS-checked licensed drivers, airport transfers to all major UK airports, university student runs, train station pickups at Loughborough Train Station, and long-distance journeys across the Midlands and beyond. Loughborough sits close to Syston, Shepshed, and Coalville, and we cover the whole Charnwood area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a student catching an early EMA flight, a commuter heading to Leicester for work, or a family planning a long-distance trip, Aylestone Taxis gives Loughborough a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
@@ -877,7 +932,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Shoppers use us most around Thurmaston Shopping Centre and the surrounding retail stretches — pre-booking a return pickup after a long shop, or calling when bus times do not suit an evening trip home. Families in the streets off Barkby Road and Thurmaston Lane arrange standing school-run bookings with consistent DBS-checked drivers where possible, and weekend outings to Watermead Park or relatives across Leicestershire are booked with a fixed fare confirmed upfront. Every driver is licensed by Leicester City Council, and vehicles range from standard saloons for a quick local hop to estates when you are travelling with children, shopping, or luggage.",
       "Commuters in Thurmaston value punctuality above almost everything else. Standing morning pickups into Leicester city centre, Leicester Railway Station, or business parks along the ring road mean you are not gambling on an unreliable bus or paying for city-centre parking every day. We quote fixed prices on agreed routes, so your weekly commute cost stays predictable — no surge pricing once the booking is confirmed. The same applies to airport days: pre-book a fixed-fare transfer to East Midlands or Birmingham and travel with luggage without a meter ticking up in traffic.",
       "We operate 24/7 across Thurmaston with fixed prices confirmed before dispatch, DBS-checked licensed drivers, airport transfers to all major UK airports, shopping trips to Thurmaston Shopping Centre and other retail destinations, and school-run standing bookings. Whether you need a same-day collection from Barkby Road, a timed airport run before an early flight, or a regular weekday schedule, our dispatch team confirms your price before the car is sent.",
-      "Typical journey times reflect Thurmaston's strong position north of the city: Leicester city centre is around 15 minutes in normal traffic via the A607 or A563, Syston is roughly 10 minutes along Melton Road, East Midlands Airport is around 20 minutes via the M1, and Birmingham Airport is about 55 minutes on a clear run. Example fares include Thurmaston to Leicester city centre from £8, Thurmaston to Leicester train station from £9, and Thurmaston to East Midlands Airport from £25 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Typical journey times reflect Thurmaston's strong position north of the city: Leicester city centre is around 15 minutes in normal traffic via the A607 or A563, Syston is roughly 10 minutes along Melton Road, East Midlands Airport is around 20 minutes via the M1, and Birmingham Airport is about 55 minutes on a clear run. Example fares for Thurmaston to Leicester city centre, Thurmaston to Leicester train station, and Thurmaston to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Thurmaston sits alongside neighbouring Syston and borders Hamilton and Birstall, and we cover the whole north-east Leicester area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a shopper heading home from the retail park, a parent on the school run, or a commuter catching an early train, Aylestone Taxis gives Thurmaston a taxi service built on fixed fares, licensed drivers, and round-the-clock availability.",
     ],
     faqs: [
@@ -1096,7 +1151,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Shoppers use us for the journeys that make a retail trip easier — a Saturday run to Fosse Shopping Park without hunting for a parking space, a return pickup when you are loaded with bags, or a lift from Oadby, Wigston, or Narborough with a fixed fare confirmed upfront. Our drivers know the retail park layout, the main entrance and exit points along Fosse Park Avenue, and where collections work best when car parks and frontages are busy. We agree a clear meeting point when you book so you are not standing in a congested lane wondering where the car is.",
       "Retail workers make up a significant share of our Fosse Park work. Stores across the shopping park operate extended hours, and staff finishing late shifts — often after 9pm or 10pm when bus frequency drops — need a taxi service that is genuinely available around the clock. We run early morning pickups for staff opening stores before public transport starts, late-night collections after closing, and pre-booked standing bookings for employees who want the same driver at the same time each week. All drivers are DBS checked and licensed, and fixed prices are confirmed before the car arrives.",
       "Corporate runs to Meridian Business Park are another regular booking type. Professionals heading to client meetings, commuting between the business park and Leicester city centre, or connecting to East Midlands Airport for business travel rely on us for punctual, fixed-fare journeys. The A563 ring road and M1 junction 21 give Fosse Park one of Leicester's strongest positions for airport access — East Midlands Airport is one of the quickest runs from anywhere in the city. We also cover multi-stop corporate bookings when a team needs collecting from different addresses before heading to a shared destination.",
-      "Typical journey times from Fosse Park reflect the area's favourable west-side position: Leicester city centre around 10–12 minutes via the A563 and inner-city approaches, East Midlands Airport roughly 20 minutes via the M1, and Birmingham Airport around 45 minutes on a clear run. Example fares include Fosse Park to Leicester city centre from £6 and Fosse Park to East Midlands Airport from £25 — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Typical journey times from Fosse Park reflect the area's favourable west-side position: Leicester city centre around 10–12 minutes via the A563 and inner-city approaches, East Midlands Airport roughly 20 minutes via the M1, and Birmingham Airport around 45 minutes on a clear run. Example fares for Fosse Park to Leicester city centre and Fosse Park to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "Core services from Fosse Park include 24/7 availability with no night surcharge, fixed prices confirmed before the car arrives, DBS-checked licensed drivers, airport transfers to all major UK airports, early morning and late-night rides for retail workers, and corporate runs to Meridian Business Park and other business sites. Fosse Park sits alongside Braunstone and Glen Parva, and we cover the whole west Leicester area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a shopper heading home with bags, a retail worker finishing a late shift, or a business traveller catching an early flight, Aylestone Taxis gives Fosse Park a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
     ],
     faqs: [
@@ -1125,7 +1180,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   hamilton: {
     bodyParagraphs: [
       "Hamilton is one of Leicester's largest residential areas in the north-east of the city, and local taxi demand is driven by everyday needs rather than occasional tourism. Families rely on school-run collections, commuters need dependable routes into the city centre and business parks, and shoppers want straightforward trips home after a heavy day at the shops. Aylestone Taxis provides 24/7 Hamilton coverage built around those real patterns — punctual pickups, fixed fares agreed before travel, and drivers who know the estate roads rather than relying on generic sat-nav routes alone.",
-      "Typical journey times from Hamilton reflect how well connected the area is to wider Leicestershire: Leicester city centre is around 15 minutes via the A563 and inner-city approaches in normal traffic, East Midlands Airport (EMA) is roughly 25 minutes using ring-road and M1 links, and Birmingham Airport (BHX) is around 50 minutes on a clear run via the M69 and M6 corridor. Example fixed fares start from £8 for city-centre journeys and from £28 to EMA — your exact price is confirmed at booking based on pickup point, vehicle size, and time of travel.",
+      "Typical journey times from Hamilton reflect how well connected the area is to wider Leicestershire: Leicester city centre is around 15 minutes via the A563 and inner-city approaches in normal traffic, East Midlands Airport (EMA) is roughly 25 minutes using ring-road and M1 links, and Birmingham Airport (BHX) is around 50 minutes on a clear run via the M69 and M6 corridor. Example fixed fares for city-centre journeys and EMA are shown below — your exact price is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "We collect and drop off across Hamilton every day, including Hamilton Shopping Centre, Hamilton Park, Thurmaston Lane, and the Hamilton Park and Ride site where commuters often start or finish a journey. School-time traffic around estate entrances and busy periods near the shopping centre can slow buses, which is why many residents prefer a pre-booked taxi with a confirmed ETA. Whether you need a morning commute, an afternoon trip with children, or an evening return after shopping, we agree a practical pickup point so boarding stays quick and safe.",
       "Among taxi companies in Hamilton, Aylestone Taxis is known for transparent fixed pricing — no meter surprises and no surge multipliers on early airport mornings. Our core services include 24/7 availability, fixed prices confirmed at booking, DBS-checked licensed drivers, airport transfers to all major UK airports, standing school-run contracts, and shopping trips with room for bags. We also handle hospital appointments, station connections, and late-night returns when public transport options are limited.",
       "Hamilton sits close to neighbouring Thurmaston and Syston, and we cover that wider north Leicester corridor without boundary surcharges. Our dispatch team manages high volumes on the A563 and A6 approaches, so ETAs stay realistic when ring-road traffic builds at peak times. Passengers benefit from professional communication, comfortable saloons and MPVs when needed, and a service standard focused on repeat reliability for households that book week after week.",
@@ -1263,39 +1318,6 @@ const areaContent: Record<string, AreaContent> = {
       },
     ],
   },
-  // 33. Glen Parva
-  "glen-parva": {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Glen Parva is a quiet residential village on the southern edge of Leicester, bordering Wigston and Blaby.
-          Popular with families for its green spaces and community feel, Glen Parva is an area Aylestone Taxis has
-          served for decades, providing reliable taxi service for local journeys and longer trips alike.
-        </p>
-        <p className="text-gray-700">
-          We cover all of Glen Parva including Leicester Road, Gerard Road, and the residential streets around the
-          village. The area is well placed for both Leicester city centre (approximately 5 miles north) and the M1 and
-          M69 junctions to the south and west — giving excellent access to both the city and the motorway network for
-          airport runs.
-        </p>
-        <p className="text-gray-700">
-          East Midlands Airport is approximately 20–25 minutes from Glen Parva via the M1, making it one of the more
-          convenient areas of South Leicester for airport transfers. Birmingham Airport is around 35–40 minutes via the
-          M69. All fares fixed, all confirmed at booking.
-        </p>
-        <p className="text-gray-700">
-          Call 0116 2338888 or book online 24 hours a day.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How far is Glen Parva from Leicester city centre?",
-        answer:
-          "Glen Parva is approximately 5 miles south of Leicester city centre — usually a 15–20 minute taxi journey via the A426 or Saffron Lane.",
-      },
-    ],
-  },
   // 35. Braunstone Town
   "braunstone-town": {
     body: (
@@ -1360,39 +1382,6 @@ const areaContent: Record<string, AreaContent> = {
         question: "How far is Groby from Leicester city centre?",
         answer:
           "Groby is approximately 5 miles north-west of Leicester city centre — usually a 15–20 minute taxi journey via the A50 or B5380.",
-      },
-    ],
-  },
-  // 37. Wigston Fields
-  "wigston-fields": {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Wigston Fields is a leafy residential area on the eastern side of Wigston, known for its mature housing stock
-          and quiet streets. It borders Oadby to the east and Wigston Magna to the west, and sits in a pleasant part of
-          south Leicestershire that&apos;s popular with families and retirees. Aylestone Taxis covers Wigston Fields
-          with reliable, professional 24/7 taxi service.
-        </p>
-        <p className="text-gray-700">
-          The area is well positioned for journeys into Leicester city centre (approximately 5–6 miles north) and for
-          airport transfers via the A563 ring road. East Midlands Airport is typically 25–30 minutes from Wigston
-          Fields — a quick, comfortable run for early-morning departures.
-        </p>
-        <p className="text-gray-700">
-          We cover the full range of local journeys from Wigston Fields — trips to Oadby town centre, connections to
-          Wigston station in South Wigston, visits to family in the city, and medical appointments. Our drivers know
-          the residential roads here well and can navigate to any address without difficulty.
-        </p>
-        <p className="text-gray-700">
-          Call 0116 2338888, WhatsApp, or book online. Available 24 hours a day.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How far is Wigston Fields from Oadby?",
-        answer:
-          "Wigston Fields borders Oadby — many addresses are just a 2–5 minute drive away. We regularly serve both areas and the streets between them.",
       },
     ],
   },
@@ -1529,45 +1518,6 @@ const areaContent: Record<string, AreaContent> = {
       },
     ],
   },
-  // 42. Lutterworth
-  lutterworth: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Lutterworth is a small market town in south Leicestershire, historically significant as the home of John
-          Wycliffe and today a thriving community close to the M1 and M6. It&apos;s a popular base for logistics and
-          distribution businesses, and Aylestone Taxis covers Lutterworth and the surrounding area with professional
-          24/7 taxi service.
-        </p>
-        <p className="text-gray-700">
-          The town sits close to junction 20 of the M1 and the M6 interchange — one of the best motorway positions in
-          the East Midlands. This makes Lutterworth an excellent starting point for airport transfers. Birmingham
-          Airport is approximately 30–35 minutes via the M6, and East Midlands Airport is around 30 minutes via the M1.
-          Both at fixed, pre-agreed fares with flight monitoring included.
-        </p>
-        <p className="text-gray-700">
-          For residents, we provide local journeys into Leicester (approximately 12 miles north), Hinckley, Rugby, and
-          surrounding towns. Corporate accounts are available for Lutterworth businesses — the logistics sector in the
-          area means we have a number of regular business clients with ongoing travel requirements.
-        </p>
-        <p className="text-gray-700">
-          Call 0116 2338888 or book online at any hour.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How far is Lutterworth from Birmingham Airport?",
-        answer:
-          "Lutterworth is extremely well positioned for Birmingham Airport — approximately 30–35 minutes via the M6. One of the quickest BHX runs from anywhere in Leicestershire.",
-      },
-      {
-        question: "Do you provide corporate taxis in Lutterworth?",
-        answer:
-          "Yes — we have several corporate clients in the Lutterworth logistics area. Monthly invoicing and a dedicated account manager are available. Contact info@aylestone-taxis.co.uk.",
-      },
-    ],
-  },
   // 43. Whetstone
   whetstone: {
     body: (
@@ -1662,44 +1612,6 @@ const areaContent: Record<string, AreaContent> = {
         question: "Do you provide airport taxis for University of Leicester students?",
         answer:
           "Yes — we regularly take UOL students to East Midlands, Birmingham, Heathrow, Gatwick, Luton and Manchester airports, with fixed fares and enough space for luggage.",
-      },
-    ],
-  },
-  // 28. South Wigston
-  "south-wigston": {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          South Wigston is a working-class residential community immediately south of Wigston, with its own railway
-          station providing regular services into Leicester and onwards to Nuneaton. Aylestone Taxis covers South
-          Wigston with fast, affordable 24/7 taxi service — including pickups from the railway station at any hour.
-        </p>
-        <p className="text-gray-700">
-          The area sits approximately 5 miles south of Leicester city centre, and our drivers are in and around South
-          Wigston regularly. Whether it&apos;s a commute, a trip to the supermarket, a school run, or a late-night
-          pickup, we&apos;re typically a few minutes away.
-        </p>
-        <p className="text-gray-700">
-          Airport transfers from South Wigston are popular — the station connections give flexibility, but for early
-          morning flights or families with luggage, a direct taxi is far more convenient. East Midlands Airport is
-          approximately 20–25 minutes from South Wigston via the A563 and M1.
-        </p>
-        <p className="text-gray-700">
-          Call 0116 2338888 anytime, WhatsApp, or book online. We&apos;re available 24/7 with no surcharges for early
-          morning or late-night journeys.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "Do you pick up from South Wigston railway station?",
-        answer:
-          "Yes — we regularly collect from South Wigston station. Great for late night arrivals or early-morning departures when other options aren't running.",
-      },
-      {
-        question: "How much is a taxi from South Wigston to Leicester?",
-        answer:
-          "A taxi from South Wigston to Leicester city centre typically costs £9–£13. Journey time is around 15–20 minutes depending on traffic.",
       },
     ],
   },
@@ -1799,124 +1711,6 @@ const areaContent: Record<string, AreaContent> = {
       },
     ],
   },
-  // 23. Coalville
-  coalville: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Coalville is a large town in north-west Leicestershire, the main commercial centre for the National Forest
-          area. Situated around 13 miles from Leicester city centre, Coalville has strong transport links via the A511
-          and A50, and Aylestone Taxis provides professional 24/7 taxi service throughout the town and surrounding
-          villages.
-        </p>
-        <p className="text-gray-700">
-          We cover Coalville town centre, Hugglescote, Whitwick, Ravenstone, and the expanding residential areas
-          around the town. With no direct rail link into Leicester, taxis play an important role for Coalville
-          residents — particularly for early-morning and late-night journeys when bus services are limited.
-        </p>
-        <p className="text-gray-700">
-          Airport transfers are a strong part of our Coalville service. East Midlands Airport is approximately 20–25
-          minutes from Coalville via the M1 — one of the closest airports for this part of Leicestershire — and we
-          offer fixed fares with no meter running. For Birmingham Airport (around 45 minutes via the M42), we&apos;re
-          equally competitive.
-        </p>
-        <p className="text-gray-700">
-          Corporate accounts are available for Coalville businesses with regular travel requirements. Call 0116
-          2338888 or book online 24 hours a day.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How far is Coalville from East Midlands Airport?",
-        answer:
-          "Coalville is very well located for East Midlands Airport — approximately 20–25 minutes via the A511 and M1 junction 23. One of the quickest areas for an EMA run.",
-      },
-      {
-        question: "Is there a 24-hour taxi service in Coalville?",
-        answer:
-          "Yes — Aylestone Taxis operates 24/7 in Coalville. Pre-booking is recommended for very early or late-night journeys.",
-      },
-    ],
-  },
-  // 24. Melton Mowbray
-  "melton-mowbray": {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Melton Mowbray is a historic market town in north-east Leicestershire — famous for its pork pies and Stilton
-          cheese, its thriving Tuesday market, and its strong rural community. Aylestone Taxis covers Melton Mowbray
-          and the surrounding villages with professional taxi service 24 hours a day, 365 days a year.
-        </p>
-        <p className="text-gray-700">
-          Melton is approximately 16 miles north-east of Leicester, accessible via the A607, and our drivers make
-          regular journeys along this route for commuters, shoppers, and families. For those without a car — or simply
-          wanting a comfortable, stress-free journey — we&apos;re a trusted option across the town.
-        </p>
-        <p className="text-gray-700">
-          Airport transfers from Melton Mowbray are one of our most valued services in the area. East Midlands Airport
-          is approximately 30–35 minutes away via the A46 and M1, and all fares are fixed at the time of booking — no
-          meters, no guesswork. For Heathrow or Gatwick, our larger vehicles and fixed-price long-distance fares make
-          us a competitive choice over rail.
-        </p>
-        <p className="text-gray-700">
-          Call 0116 2338888, WhatsApp, or book online. We pre-book and confirm every journey in advance.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How much is a taxi from Melton Mowbray to East Midlands Airport?",
-        answer:
-          "Fixed-price taxis from Melton Mowbray to East Midlands Airport start from approximately £32–£42. Journey time is around 30–35 minutes via the A46 and M1.",
-      },
-      {
-        question: "Do you serve villages around Melton Mowbray?",
-        answer:
-          "Yes — we cover surrounding villages including Asfordby, Frisby on the Wreake, Gaddesby, and other rural postcodes in the Melton area.",
-      },
-    ],
-  },
-  // 25. Market Harborough
-  "market-harborough": {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Market Harborough is a prosperous market town in south Leicestershire, popular with families and
-          professionals drawn to its excellent schools, beautiful town centre, and strong rail connections to London St
-          Pancras and Leicester. Aylestone Taxis provides professional 24/7 taxi coverage across Market Harborough and
-          the surrounding villages.
-        </p>
-        <p className="text-gray-700">
-          The town has its own railway station with fast services into Leicester (around 20 minutes) and direct trains
-          to London in under an hour. We regularly supplement these connections — collecting from the station for
-          onward journeys, or providing door-to-door service for passengers who need more flexibility than the
-          timetable allows.
-        </p>
-        <p className="text-gray-700">
-          Airport transfers are a popular booking from Market Harborough. East Midlands Airport is approximately 30–35
-          minutes via the A6 and M1, and our fixed pricing means the cost is confirmed before you travel. For London
-          airports — Heathrow, Gatwick, or Luton — our comfortable long-distance vehicles make the journey easy, with
-          fixed fares agreed in advance.
-        </p>
-        <p className="text-gray-700">
-          Corporate accounts are available for Market Harborough businesses. Call 0116 2338888 or book online anytime.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How long is a taxi from Market Harborough to Leicester city centre?",
-        answer:
-          "A taxi from Market Harborough to Leicester city centre takes approximately 30–40 minutes via the A6. Pre-booking is recommended to guarantee availability.",
-      },
-      {
-        question: "How much is a taxi from Market Harborough to Heathrow Airport?",
-        answer:
-          "Fixed-price taxis from Market Harborough to London Heathrow start from approximately £160–£180. Price is confirmed at booking — no meters on long-distance journeys.",
-      },
-    ],
-  },
   // 26. Rushey Mead
   "rushey-mead": {
     body: (
@@ -1952,200 +1746,6 @@ const areaContent: Record<string, AreaContent> = {
         question: "Do you cover school runs in the Rushey Mead area?",
         answer:
           "Yes — we provide regular school run services in Rushey Mead. Pre-book for a reliable daily pickup and drop-off at a consistent time.",
-      },
-    ],
-  },
-  // 20. Enderby
-  // 22. Hinckley
-  hinckley: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Hinckley is a busy market town in south-west Leicestershire, around 13 miles from Leicester city centre.
-          It&apos;s a hub for manufacturing, logistics, and retail — and Aylestone Taxis provides a dependable taxi
-          service for Hinckley residents and businesses who need professional, reliable transport at any hour.
-        </p>
-        <p className="text-gray-700">
-          We cover all parts of Hinckley — the town centre, Barwell, Earl Shilton, Burbage, and the surrounding
-          business parks — with 24/7 service. Our drivers are experienced on the A47, A5, and other key routes that
-          link Hinckley to Leicester and the wider Midlands.
-        </p>
-        <p className="text-gray-700">
-          Hinckley&apos;s position close to the M69 makes it an excellent starting point for airport transfers.
-          Birmingham Airport (BHX) is typically 35–40 minutes by car, making it the most popular airport choice for
-          Hinckley passengers — and our fixed fares mean you know exactly what you&apos;ll pay. East Midlands Airport
-          is also accessible via the M1 (around 50 minutes). We cover all major UK airports.
-        </p>
-        <p className="text-gray-700">
-          For businesses in Hinckley, corporate taxi accounts are available with monthly invoicing and a dedicated
-          account manager. Contact us at info@aylestone-taxis.co.uk.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How long does a taxi from Hinckley to Leicester city centre take?",
-        answer:
-          "A taxi from Hinckley to Leicester city centre takes approximately 25–35 minutes via the A47 or A5. During peak times allow up to 45 minutes.",
-      },
-      {
-        question: "How much is a taxi from Hinckley to Birmingham Airport?",
-        answer:
-          "Fixed-price taxis from Hinckley to Birmingham Airport (BHX) start from approximately £40–£50 via the M69. Flight monitoring is included.",
-      },
-    ],
-  },
-  // 15. Syston
-  syston: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Syston is a growing market town north of Leicester with a strong local identity and excellent transport links.
-          With its own railway station offering direct services to Leicester and Nottingham, Syston is well connected —
-          but for airport runs, hospital trips, and late-night journeys, Aylestone Taxis provides the comfortable,
-          on-demand service that rail simply can&apos;t match.
-        </p>
-        <p className="text-gray-700">
-          We cover all of Syston — High Street, Melton Road, Barkby Road, and the residential streets across the village
-          — with 24/7 taxi service. Our drivers travel to and from Syston regularly and can typically reach any address
-          in the area within 10–15 minutes.
-        </p>
-        <p className="text-gray-700">
-          For airport transfers, Syston&apos;s position north of Leicester gives quick access to the M1 northbound —
-          ideal for East Midlands Airport, which is approximately 20–25 minutes away. All airport transfers include
-          flight monitoring and a fixed, pre-agreed fare. We also run to Birmingham, Heathrow, Gatwick, Luton,
-          Stansted, and Manchester.
-        </p>
-        <p className="text-gray-700">
-          Call 0116 2338888 anytime, or pre-book your journey online.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "Is there a taxi service from Syston railway station?",
-        answer:
-          "Yes — we collect from Syston railway station. Useful if you miss the last train or arrive on an early service before buses are running.",
-      },
-      {
-        question: "How much is a taxi from Syston to East Midlands Airport?",
-        answer:
-          "Fixed-price taxis from Syston to East Midlands Airport start from approximately £25–£32. Quick journey via the M1.",
-      },
-    ],
-  },
-  // 16. Birstall
-  birstall: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Birstall is a thriving village north of Leicester, anchored by major retail parks and strong local amenities.
-          Aylestone Taxis covers all of Birstall with fast, professional taxi service every hour of the day.
-        </p>
-        <p className="text-gray-700">
-          We pick up from Birstall&apos;s residential streets, local shops, and routes towards the A6. For shoppers with
-          heavy bags or families returning from trips into Leicester, a taxi is far more comfortable than the bus — and
-          we&apos;re often just minutes away.
-        </p>
-        <p className="text-gray-700">
-          Birstall sits close to major routes into Leicester and the M1, making it well-positioned for airport
-          transfers. East Midlands Airport is approximately 20–25 minutes from Birstall — a quick, clean run.
-          Birmingham Airport is around 45–50 minutes. All airport fares are fixed, with no meters or surprises.
-        </p>
-        <p className="text-gray-700">
-          Our 6 and 8-seater minibuses are popular for groups heading to the airport together from Birstall — splitting
-          the cost makes it extremely competitive. Pre-booking is advised for group travel.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How much is a taxi from Birstall to Leicester city centre?",
-        answer:
-          "A taxi from Birstall to Leicester city centre typically costs £8–£12. The journey takes around 15–20 minutes depending on traffic on the A6.",
-      },
-      {
-        question: "Do you do early morning pickups from Birstall?",
-        answer:
-          "Yes — we regularly do 3am, 4am, and 5am airport runs from Birstall. Pre-book the night before and we'll confirm your driver that evening.",
-      },
-    ],
-  },
-  // 11. Hamilton
-  hamilton: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Hamilton is a large modern housing estate in north-east Leicester — one of the city&apos;s biggest
-          residential developments, built around the A6 corridor and growing steadily with new homes and facilities.
-          Aylestone Taxis covers all of Hamilton, including the newer streets around Netherhall and Thurncourt, with
-          24/7 taxi service for residents at all hours.
-        </p>
-        <p className="text-gray-700">
-          The area sits approximately 4 miles from Leicester city centre, and the lack of a direct bus route into town
-          at certain hours makes taxis a practical option for many Hamilton residents — particularly early in the
-          morning and late at night. Our drivers know the Hamilton estate roads well and can navigate to any address
-          without difficulty.
-        </p>
-        <p className="text-gray-700">
-          We cover the full range of journeys from Hamilton — commutes to the city centre and business parks, airport
-          transfers, trips to Leicester&apos;s hospitals, and late-night pickups after events. East Midlands Airport
-          from Hamilton is typically 30–35 minutes on a clear road.
-        </p>
-        <p className="text-gray-700">
-          Call 0116 2338888 anytime or book online. Pre-booking is recommended for airport runs.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "Is there a taxi service available in Hamilton, Leicester at night?",
-        answer:
-          "Yes — we operate 24/7 in Hamilton. Many residents use us for late evening pickups when public transport options are limited.",
-      },
-      {
-        question: "How far is Hamilton from Leicester city centre?",
-        answer:
-          "Hamilton is approximately 4 miles north-east of Leicester city centre — usually a 15–20 minute taxi journey depending on traffic on the A6 or A563.",
-      },
-    ],
-  },
-  // 12. Beaumont Leys
-  "beaumont-leys": {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Beaumont Leys is one of Leicester&apos;s largest housing areas, sitting north-west of the city with its own
-          shopping centre, schools, and community facilities. Aylestone Taxis provides full taxi coverage across
-          Beaumont Leys — from the shopping centre to Mossdale Meadows, Strasbourg Drive, and the surrounding
-          residential streets — 24 hours a day.
-        </p>
-        <p className="text-gray-700">
-          The area is popular with families, and we handle a significant number of school runs across Beaumont Leys, as
-          well as hospital appointments at Glenfield Hospital nearby. The proximity to Glenfield makes us a regular
-          choice for patients and visitors who need reliable, on-time transport.
-        </p>
-        <p className="text-gray-700">
-          Beaumont Leys sits close to the M1 junction 21A, giving excellent access for airport transfers. East Midlands
-          Airport is around 20–25 minutes from here — one of the quickest parts of Leicester for an airport run. We
-          offer fixed fares for all airports, and our 6 and 8-seater vehicles are ideal for family groups travelling
-          together.
-        </p>
-        <p className="text-gray-700">
-          Call 0116 2338888, WhatsApp, or book online. We&apos;re available every hour of every day.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How close is Beaumont Leys to Glenfield Hospital?",
-        answer:
-          "Beaumont Leys is very close to Glenfield Hospital — just a few minutes by taxi. We regularly cover hospital appointments and visitor pickups in the area.",
-      },
-      {
-        question: "How much is a taxi from Beaumont Leys to East Midlands Airport?",
-        answer:
-          "Fixed-price taxis from Beaumont Leys to East Midlands Airport start from approximately £25–£32. One of the shorter airport runs from Leicester due to quick M1 access.",
       },
     ],
   },
@@ -2312,50 +1912,6 @@ const areaContent: Record<string, AreaContent> = {
         question: "Can I book a regular taxi for commuting or school runs from Oadby?",
         answer:
           "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
-      },
-    ],
-  },
-  // 4. Wigston
-  wigston: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Wigston is a thriving market town five miles south of Leicester, and one of our busiest service areas. We
-          cover all parts of Wigston — Long Street, the Bull Head Street town centre, Wigston Fields, and South Wigston
-          — with fast pickups around the clock.
-        </p>
-        <p className="text-gray-700">
-          South Wigston has its own railway station with regular services into Leicester, and we do a steady trade
-          collecting passengers who&apos;ve missed the last train or need an early-morning connection. The A5199 and
-          A426 give our drivers quick access in and out of the area at all times of day.
-        </p>
-        <p className="text-gray-700">
-          Airport transfers from Wigston are popular with families and commuters alike. East Midlands Airport is
-          approximately 20–25 minutes away, and all our airport fares are fixed price — confirmed when you book, not
-          calculated on arrival. We cover all major UK airports, and our drivers monitor flights for delays so your
-          pickup time adjusts automatically.
-        </p>
-        <p className="text-gray-700">
-          For businesses in Wigston, we offer corporate taxi accounts with monthly invoicing and a dedicated account
-          manager for regular travel needs.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How far is Wigston from Leicester city centre by taxi?",
-        answer:
-          "Wigston is approximately 5 miles from Leicester city centre — usually a 12–18 minute journey via the A5199 or A426.",
-      },
-      {
-        question: "Do you cover South Wigston and Wigston Fields?",
-        answer:
-          "Yes — we cover all parts of Wigston including South Wigston, Wigston Fields, Wigston Magna, and the surrounding streets.",
-      },
-      {
-        question: "Can I book a taxi from Wigston to Birmingham Airport?",
-        answer:
-          "Yes. Fixed-price taxis from Wigston to Birmingham Airport start from approximately £48–£58. Flight monitoring is included at no extra cost.",
       },
     ],
   },

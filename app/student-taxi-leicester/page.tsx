@@ -19,9 +19,9 @@ const CANONICAL = "https://aylestone-taxis.co.uk/student-taxi-leicester"
 const STUDENT_PHONE = "0116 233 8888"
 
 export const metadata: Metadata = {
-  title: "Student Taxi Leicester | Moves & Airport Transfers",
+  title: "Student Taxi Leicester | Fixed Fares | Book Now",
   description:
-    "Student taxi services in Leicester for University of Leicester and DMU students. House moves, airport transfers and group bookings. Fixed prices. Call 0116 233 8888.",
+    "Student taxi service in Leicester for house moves, airport runs & group bookings. Fixed, low fares. Book online today.",
   alternates: {
     canonical: CANONICAL,
   },
