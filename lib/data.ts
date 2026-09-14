@@ -1051,6 +1051,91 @@ export const siteData = {
       "Practical travel guides for Leicester — airport transfers, matchday taxis, prom nights, student moves, fare tips, and booking advice from your trusted local 24/7 taxi company.",
     blogs: [
       {
+        id: "taxi-to-de-montfort-hall-leicester-concerts-events-parking-guide",
+        title: "Taxi to De Montfort Hall Leicester — Concerts, Events & Parking Guide",
+        metaTitle: "De Montfort Hall Taxi Guide | Parking & Drop-Off",
+        metaDescription:
+          "Taxi to De Montfort Hall for concerts & comedy: drop-off point, parking tips and pre-booked pickups after the show. Fixed fares. Call 0116 233 8888.",
+        excerpt:
+          "Going to a concert or comedy show at De Montfort Hall this September? Where the taxi drop-off point is, why a taxi beats hunting for parking, how to arrange your collection after the show, and what's on — including Urzila Carlson on 15 September.",
+        faqs: [
+          {
+            question: "Where is the taxi drop-off point at De Montfort Hall?",
+            answer:
+              "De Montfort Hall's drop-off and pick-up point is at the front entrance to the hall, off Granville Road (Leicester LE1 7RU). Tell the front of house team member on the main gate you are being dropped off or collected. Our drivers use this point for both arrivals and after-show pickups.",
+          },
+          {
+            question: "Can I pre-book a taxi home after a concert at De Montfort Hall?",
+            answer:
+              "Yes. Book your return when you book your journey there — tell us the show and roughly when it finishes and we will have a driver waiting at the Granville Road pick-up point. If you are not sure when you will leave, WhatsApp us on +447888873795 as the show ends and we will confirm a fixed fare and dispatch a driver.",
+          },
+          {
+            question: "Is there parking at De Montfort Hall?",
+            answer:
+              "There is limited premium parking next to the hall at £10 per car, entered from University Road, and the venue strongly advises booking it in advance. The nearest public car park is at Victoria Park off Granville Road, and the closest NCP is on Welford Road, about a 20-minute walk. Blue badge parking at the front is free but limited — book it through the box office on 0116 233 3111.",
+          },
+          {
+            question: "How much is a taxi to De Montfort Hall?",
+            answer:
+              "Your fare depends on where you are travelling from, but it is always a fixed price confirmed before you travel — no meter and no surge pricing when a show empties out. Call 0116 233 8888, WhatsApp us, or book online for an instant quote. Groups can share one car and split a single fare.",
+          },
+        ],
+        content: `
+          <p>De Montfort Hall is Leicester's biggest music and performance venue — a landmark hall on Granville Road, right next to Victoria Park, hosting everything from comedy tours and tribute nights to orchestras and West End stars. It is a brilliant night out, but anyone who has driven there on a busy show night knows the catch: limited parking, queues to get out of the car parks afterwards, and someone always stuck as the designated driver. Booking a <strong>taxi to De Montfort Hall</strong> takes all of that away. This guide covers where the drop-off point is, how to arrange your pickup after the show, and what is on at the hall this September.</p>
+
+          <h2>Why a taxi beats driving and parking at De Montfort Hall</h2>
+          <p>Parking is the biggest headache for events at De Montfort Hall. The hall's own premium car park costs <strong>£10 per car</strong>, is entered from University Road, and the venue strongly advises booking it in advance because spaces are limited. On popular nights it can sell out, leaving you circling for a space at <strong>Victoria Park</strong> or walking around 20 minutes from the NCP car park on Welford Road.</p>
+          <p>Then there is the end of the night. When a sold-out show finishes, hundreds of cars try to leave the same few exits at once, and the roads around Granville Road, University Road and London Road slow to a crawl. A <strong>taxi de montfort hall leicester</strong> booking means you step out of the hall, walk to the pick-up point, and let the driver deal with the traffic.</p>
+          <p>A taxi also means nobody has to stay sober to drive home. For groups, one fixed fare split between friends is simple and predictable, and you are dropped at your own front door rather than a car park a walk away from the venue.</p>
+
+          <h2>Where is the De Montfort Hall taxi drop-off point?</h2>
+          <p>De Montfort Hall has a dedicated <strong>drop-off and pick-up point at the front entrance to the hall, off Granville Road</strong> (Leicester LE1 7RU). There is a member of the front of house team on the main gate — just let them know you are being dropped off or collected. Pedestrians can also use the entrance on the corner of Granville Road and Regent Road.</p>
+          <p>When you book with Aylestone Taxis, our drivers take you straight to the Granville Road front entrance, so there is no wandering around Victoria Park in the dark looking for the right gate. If anyone in your group has limited mobility, tell us when you book — the front drop-off keeps the walk to the doors as short as possible. Blue badge holders who prefer to drive can reserve the free accessible spaces at the front through the box office on 0116 233 3111.</p>
+
+          <h2>Getting collected after the show</h2>
+          <p>The part most people forget to plan is the journey home. As the audience pours out, everyone opens a ride-hailing app at the same moment, prices surge, and waits stretch. There are two easy ways to avoid that:</p>
+          <ul>
+            <li><strong>Pre-book your return.</strong> When you book your taxi to the hall, book the journey home too. Tell us which show you are seeing and when it is due to finish, and your driver will be waiting at the Granville Road pick-up point.</li>
+            <li><strong>WhatsApp us when you are ready.</strong> If you are not sure when you will leave — encores, a drink afterwards, or waiting for friends — message us on WhatsApp at <strong>+447888873795</strong> with your location and destination. We confirm a fixed fare and dispatch the nearest driver.</li>
+          </ul>
+          <p>Either way the price is agreed before you travel, with no surge pricing because the venue has just emptied. That is the whole point of a <strong>concert taxi Leicester</strong> booking with a local operator. For evenings that carry on into the city centre after the show, our <a href="/late-night-taxi-leicester">late night taxi Leicester</a> service covers fixed-fare journeys home from bars and venues across town.</p>
+
+          <h2>Pre-book early for popular events</h2>
+          <p>Big-name concerts and sold-out comedy tours create the busiest nights of the year around the hall. If you are going to a popular show, book your <strong>taxi to De Montfort Hall</strong> as soon as you have your tickets — especially for Friday and Saturday evenings, when demand across Leicester is already high. Pre-booking also lets us send the right vehicle: a saloon for a couple, or an MPV if six or eight of you are going together.</p>
+          <p>If you are planning a bigger night — a birthday, a works do, or a group of friends — a single larger vehicle is usually easier and better value than several separate cars. Book online, call <strong>0116 233 8888</strong>, or WhatsApp us and we will confirm the fare before you commit. Our <a href="/taxis-in/de-montfort-hall">taxi to De Montfort Hall</a> page has booking details and the areas we cover.</p>
+
+          <h2>What's on at De Montfort Hall in September 2026</h2>
+          <p>September is a packed month at the hall. Highlights from the venue's listings include:</p>
+          <ul>
+            <li><strong>Saturday 12 September</strong> — Copacabana Magic: The Barry Manilow Show</li>
+            <li><strong>Sunday 13 September</strong> — Glenn Miller Orchestra</li>
+            <li><strong>Tuesday 15 September</strong> — <strong>Urzila Carlson: Fatty on a Yacht</strong> (comedy, 8pm, 16+)</li>
+            <li><strong>Thursday 17 September</strong> — Michael Ball</li>
+            <li><strong>Friday 18 September</strong> — Too Much Too Young</li>
+            <li><strong>Saturday 19 September</strong> — Fastlove: The Tribute to George Michael</li>
+            <li><strong>Thursday 24 September</strong> — The Phantoms starring Lee Mead</li>
+            <li><strong>Friday 25 September</strong> — Daniel O'Reilly: Let's Have It</li>
+            <li><strong>Sunday 27 September</strong> — Bollywood Legends: Live in Concert</li>
+          </ul>
+          <p>South African comedian <strong>Urzila Carlson</strong> brings her new show <em>Fatty on a Yacht</em> to De Montfort Hall on <strong>Tuesday 15 September</strong>, starting at 8pm. A midweek evening show is exactly when a taxi makes sense: no rushing from work to find a parking space, and a pre-booked car waiting at the Granville Road pick-up point when the laughs are over. Always check the <a href="https://www.demontforthall.co.uk/whats-on/" target="_blank" rel="noopener noreferrer">De Montfort Hall website</a> for the latest times before you travel.</p>
+
+          <h2>Events beyond De Montfort Hall</h2>
+          <p>The same fixed-fare, pre-booked approach works for every big event in Leicester. Heading to the King Power Stadium instead? Our <a href="/match-day-taxi-leicester">match day taxi Leicester</a> service gets you to the ground and home again without the post-match traffic. Wherever the event, you get a licensed, DBS-checked driver and a price agreed before you set off.</p>
+
+          <h2>Book your taxi to De Montfort Hall</h2>
+          <p>Whether it is a concert, a comedy night or a family show, a <strong>taxi to De Montfort Hall</strong> means no parking fees, no queue out of the car park, and no designated driver. Pre-book your journey there and back, or WhatsApp us when the show finishes — fixed fares, licensed drivers, 24/7.</p>
+
+          <p style="text-align:center; margin-top:2rem;">
+            <a href="https://wa.me/447888873795?text=Hi!%20I%20need%20a%20taxi%20to%20De%20Montfort%20Hall" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447888873795</a>
+            <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
+          </p>
+        `,
+        date: "2026-09-11",
+        author: "Aylestone Taxis Team",
+        category: "Local Guide",
+        image: "/leicester-clock-tower-city-centre-taxi.webp",
+      },
+      {
         id: "leicester-freshers-2026-taxi-guide-new-students",
         title: "Leicester Freshers 2026 — Taxi Guide for New Students",
         metaTitle: "Leicester Freshers 2026 — Taxi Guide for New Students | Aylestone Taxis",
