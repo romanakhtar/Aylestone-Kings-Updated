@@ -9,9 +9,9 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Taxi Services Leicester | MPVs & Airports | Aylestone",
+  title: "Leicester Taxi Services | Fixed Fares | Book 24/7",
   description:
-    "Taxi services in Leicester: online booking, 6 & 8-seater MPVs, all UK airports, school runs, corporate & meet & greet. Taxi services you can book in seconds — call 0116 2338888, 24/7.",
+    "Explore Aylestone Taxis' Leicester services — airport transfers, school runs, corporate travel & more. Book today.",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/services",
   },

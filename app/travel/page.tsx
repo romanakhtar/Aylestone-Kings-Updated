@@ -4,9 +4,9 @@ import { ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Travel by Taxi Leicester | Stations, Uni, Match Days | Book",
+  title: "Leicester Taxi Travel | Fixed Fares, Book 24/7",
   description:
-    "Travel Leicester by taxi: stations, universities, shopping, match days, nights out. Comfortable cars, local drivers, clear fares. Book online or call 0116 2338888 — 24/7.",
+    "Travel Leicester by taxi — stations, uni, matches & more. Fixed fares, no surge. Book online or call 0116 233 8888.",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/travel",
   },

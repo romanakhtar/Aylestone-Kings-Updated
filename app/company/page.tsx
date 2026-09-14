@@ -4,9 +4,9 @@ import { Shield, Users, Award, Clock, Check, ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About Aylestone Taxis | Leicester Taxi Company Since 1995",
+  title: "Leicester Taxi Company | Aylestone Taxis Since '95",
   description:
-    "Aylestone Taxis — Leicester taxi company with 30+ years experience. 10,000 passengers per year, 99.7% satisfaction rating. Licensed DBS-checked drivers available 24/7.",
+    "Meet Aylestone Taxis, Leicester's trusted taxi company since 1995. Licensed drivers, fixed fares. Learn more & book.",
   alternates: {
     canonical: "https://aylestone-taxis.co.uk/company",
   },
