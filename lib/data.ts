@@ -1133,7 +1133,7 @@ export const siteData = {
         date: "2026-09-11",
         author: "Aylestone Taxis Team",
         category: "Local Guide",
-        image: "/leicester-clock-tower-city-centre-taxi.webp",
+        image: "/Inside-de-montfort-hall.webp",
       },
       {
         id: "leicester-freshers-2026-taxi-guide-new-students",
@@ -1232,7 +1232,7 @@ export const siteData = {
         date: "2026-09-01",
         author: "Aylestone Taxis Team",
         category: "Student Guide",
-        image: "/Blog_Moving_Out_University_Halls_Leicester_Transport_Guide.webp",
+        image: "/De-mont-fort-university-1.webp",
       },
       {
         id: "late-night-taxi-leicester-how-to-get-home-safely-friday-night",
@@ -1355,7 +1355,7 @@ export const siteData = {
         date: "2026-08-27",
         author: "Aylestone Taxis Team",
         category: "Travel Tips",
-        image: "/Late-Night-Taxi Leicester-How-to-Get-Home-Safely-on-a-Friday-Night.webp",
+        image: "/Curve-theater-and-athena.webp",
       },
       {
         id: "corporate-taxi-accounts-leicester-explained",
