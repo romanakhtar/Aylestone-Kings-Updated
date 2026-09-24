@@ -442,7 +442,7 @@ export default function AboutPage() {
             </div>
             <div>
               <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">How do I book a taxi with Aylestone Taxis?</h3>
-              <p className="text-[#2E3C44]">You can book online in seconds, call 0116 233 8888, or send a WhatsApp message to +44 7888 873795. You'll see your fixed price before you confirm.</p>
+              <p className="text-[#2E3C44]">You can book online in seconds, call 0116 233 8888, or send a WhatsApp message to +44 7535 855786. You'll see your fixed price before you confirm.</p>
             </div>
           </div>
         </div>
@@ -492,7 +492,7 @@ export default function AboutPage() {
                 "name": "How do I book a taxi with Aylestone Taxis?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "You can book online in seconds, call 0116 233 8888, or send a WhatsApp message to +44 7888 873795. You'll see your fixed price before you confirm."
+                  "text": "You can book online in seconds, call 0116 233 8888, or send a WhatsApp message to +44 7535 855786. You'll see your fixed price before you confirm."
                 }
               }
             ]

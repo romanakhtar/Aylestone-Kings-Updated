@@ -16,7 +16,7 @@ import JsonLd from "@/components/seo/JsonLd"
 
 const CANONICAL = "https://aylestone-taxis.co.uk/late-night-taxi-leicester"
 const LATE_NIGHT_PHONE = "0116 233 8888"
-const WHATSAPP_HREF = "https://wa.me/447888873795?text=Hi!%20I%20need%20a%20late%20night%20taxi%20in%20Leicester"
+const WHATSAPP_HREF = "https://wa.me/447535855786?text=Hi!%20I%20need%20a%20late%20night%20taxi%20in%20Leicester"
 
 export const metadata: Metadata = {
   title: "Late Night Taxi Leicester — Fixed Fares, No Surge | Book 24/7",
@@ -114,7 +114,7 @@ export default function LateNightTaxiLeicesterPage() {
                 >
                   <button className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-4 rounded-xl font-semibold transition-[transform,opacity] duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg">
                     <MessageCircle className="h-6 w-6" />
-                    WhatsApp +447888873795
+                    WhatsApp +447535855786
                   </button>
                 </a>
                 <a
@@ -329,7 +329,7 @@ export default function LateNightTaxiLeicesterPage() {
                 <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4">WhatsApp On the Night</h3>
                 <p className="text-[#2E3C44] text-lg leading-relaxed mb-4">
                   Plans changed or you did not know when you would leave? Message us on WhatsApp at{" "}
-                  <strong>+447888873795</strong> when you are ready. Send your location pin, destination,
+                  <strong>+447535855786</strong> when you are ready. Send your location pin, destination,
                   and how many passengers — we confirm your fixed fare and dispatch the nearest available
                   driver. Perfect for spontaneous <strong>Friday night taxi Leicester</strong> journeys
                   when you decide it is time to head home.
@@ -410,7 +410,7 @@ export default function LateNightTaxiLeicesterPage() {
               <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-3">
                   <MessageCircle className="h-5 w-5" />
-                  WhatsApp +447888873795
+                  WhatsApp +447535855786
                 </button>
               </a>
               <a href={`tel:${LATE_NIGHT_PHONE.replace(/\s/g, "")}`} className="w-full sm:w-auto">

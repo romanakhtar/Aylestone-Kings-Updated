@@ -1258,7 +1258,7 @@ const areaContent: Record<string, AreaContent> = {
           recommended on matchdays.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888, WhatsApp +447888873795, or book online — we operate 24 hours a day.
+          Call 0116 2338888, WhatsApp +447535855786, or book online — we operate 24 hours a day.
         </p>
       </div>
     ),
@@ -1373,7 +1373,7 @@ const areaContent: Record<string, AreaContent> = {
           Airport is around 45 minutes via the M69. All airport fares are fixed at booking.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888 or WhatsApp +447888873795 to book anytime.
+          Call 0116 2338888 or WhatsApp +447535855786 to book anytime.
         </p>
       </div>
     ),
@@ -1438,7 +1438,7 @@ const areaContent: Record<string, AreaContent> = {
           M69). Fixed fares only — we don&apos;t use meters on pre-booked journeys.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888 or WhatsApp +447888873795 anytime.
+          Call 0116 2338888 or WhatsApp +447535855786 anytime.
         </p>
       </div>
     ),
@@ -1571,7 +1571,7 @@ const areaContent: Record<string, AreaContent> = {
           groups of students sharing the cost.
         </p>
         <p className="text-gray-700">
-          Book online, call 0116 2338888, or WhatsApp +447888873795 for your DMU taxi.
+          Book online, call 0116 2338888, or WhatsApp +447535855786 for your DMU taxi.
         </p>
       </div>
     ),
@@ -2464,7 +2464,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <p className="text-gray-700">
                         <strong>Pre-booking is recommended</strong> for Friday and Saturday nights, especially after
                         midnight when demand peaks across the city centre. Reserve your return pickup online or by
-                        calling 0116 233 8888 before you head out, or message us on WhatsApp at +447888873795 when you
+                        calling 0116 233 8888 before you head out, or message us on WhatsApp at +447535855786 when you
                         are ready to leave — we confirm your fixed fare and dispatch a licensed driver to your location.
                         For full venue coverage, fixed fares, and booking options, see our{" "}
                         <Link

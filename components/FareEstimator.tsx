@@ -636,7 +636,7 @@ const FareEstimator: React.FC = () => {
                         <a href="tel:01162338888" className="btn-book" onClick={onPhoneClick}>
                           📞 Call for Exact Quote
                         </a>
-                        <a href="https://wa.me/447888873795" className="btn-call" target="_blank" rel="noreferrer" onClick={onWhatsAppClick}>
+                        <a href="https://wa.me/447535855786" className="btn-call" target="_blank" rel="noreferrer" onClick={onWhatsAppClick}>
                           WhatsApp
                         </a>
                       </div>
