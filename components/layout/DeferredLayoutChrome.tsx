@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic"
 
-const Footer = dynamic(() => import("@/components/footer"), { ssr: false })
+const Footer = dynamic(() => import("@/components/footer"))
 const FloatingContactButton = dynamic(() => import("@/components/FloatingContactButton"), { ssr: false })
 const AnalyticsTracker = dynamic(() => import("@/components/AnalyticsTracker"), { ssr: false })
 const HalloweenTopBanner = dynamic(() => import("@/components/HalloweenTopBanner"), { ssr: false })

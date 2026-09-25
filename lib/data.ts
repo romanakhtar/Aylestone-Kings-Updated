@@ -5,7 +5,7 @@ export const siteData = {
     tagline: "",
     region: "Aylestone and surrounding areas",
     phone: "0116 2338888",
-    whatsapp: "+447888873795",
+    whatsapp: "+447535855786",
     email: "info@aylestone-taxis.co.uk",
     address: "753A Aylestone Rd, Aylestone, Leicester, LE2 8TG, UK",
     description:
@@ -706,7 +706,7 @@ export const siteData = {
         href: "/gatwick-south-terminal-taxi-transfers",
       },
       { name: "Shopping", href: "/taxis-in/fosse-park" },
-      { name: "Students Transport", href: "/student-taxi-leicester" },
+      { name: "Students Transport", href: "/taxis-in/university-of-leicester" },
       { name: "Match-Day Travel", href: "/taxis-in/king-power-stadium" },
       { name: "Train Station", href: "/taxis-in/leicester-railway-station" },
     ],
@@ -1067,7 +1067,7 @@ export const siteData = {
           {
             question: "Can I pre-book a taxi home after a concert at De Montfort Hall?",
             answer:
-              "Yes. Book your return when you book your journey there — tell us the show and roughly when it finishes and we will have a driver waiting at the Granville Road pick-up point. If you are not sure when you will leave, WhatsApp us on +447888873795 as the show ends and we will confirm a fixed fare and dispatch a driver.",
+              "Yes. Book your return when you book your journey there — tell us the show and roughly when it finishes and we will have a driver waiting at the Granville Road pick-up point. If you are not sure when you will leave, WhatsApp us on +447535855786 as the show ends and we will confirm a fixed fare and dispatch a driver.",
           },
           {
             question: "Is there parking at De Montfort Hall?",
@@ -1096,7 +1096,7 @@ export const siteData = {
           <p>The part most people forget to plan is the journey home. As the audience pours out, everyone opens a ride-hailing app at the same moment, prices surge, and waits stretch. There are two easy ways to avoid that:</p>
           <ul>
             <li><strong>Pre-book your return.</strong> When you book your taxi to the hall, book the journey home too. Tell us which show you are seeing and when it is due to finish, and your driver will be waiting at the Granville Road pick-up point.</li>
-            <li><strong>WhatsApp us when you are ready.</strong> If you are not sure when you will leave — encores, a drink afterwards, or waiting for friends — message us on WhatsApp at <strong>+447888873795</strong> with your location and destination. We confirm a fixed fare and dispatch the nearest driver.</li>
+            <li><strong>WhatsApp us when you are ready.</strong> If you are not sure when you will leave — encores, a drink afterwards, or waiting for friends — message us on WhatsApp at <strong>+447535855786</strong> with your location and destination. We confirm a fixed fare and dispatch the nearest driver.</li>
           </ul>
           <p>Either way the price is agreed before you travel, with no surge pricing because the venue has just emptied. That is the whole point of a <strong>concert taxi Leicester</strong> booking with a local operator. For evenings that carry on into the city centre after the show, our <a href="/late-night-taxi-leicester">late night taxi Leicester</a> service covers fixed-fare journeys home from bars and venues across town.</p>
 
@@ -1126,7 +1126,7 @@ export const siteData = {
           <p>Whether it is a concert, a comedy night or a family show, a <strong>taxi to De Montfort Hall</strong> means no parking fees, no queue out of the car park, and no designated driver. Pre-book your journey there and back, or WhatsApp us when the show finishes — fixed fares, licensed drivers, 24/7.</p>
 
           <p style="text-align:center; margin-top:2rem;">
-            <a href="https://wa.me/447888873795?text=Hi!%20I%20need%20a%20taxi%20to%20De%20Montfort%20Hall" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447888873795</a>
+            <a href="https://wa.me/447535855786?text=Hi!%20I%20need%20a%20taxi%20to%20De%20Montfort%20Hall" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447535855786</a>
             <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
           </p>
         `,
@@ -1157,7 +1157,7 @@ export const siteData = {
           {
             question: "Do you offer late night taxis during Leicester freshers week?",
             answer:
-              "Yes. We operate 24/7 throughout freshers fortnight, including late-night pickups after events at 2Funky, Club Republic, and other city-centre venues. Pre-booking is recommended on busy freshers nights when demand is high — or message us on WhatsApp at +447888873795 when you are ready to leave.",
+              "Yes. We operate 24/7 throughout freshers fortnight, including late-night pickups after events at 2Funky, Club Republic, and other city-centre venues. Pre-booking is recommended on busy freshers nights when demand is high — or message us on WhatsApp at +447535855786 when you are ready to leave.",
           },
         ],
         content: `
@@ -1214,18 +1214,18 @@ export const siteData = {
             <li><strong>DMU Freshers Opening Party — 26 September</strong> — one of the biggest single freshers events in the city. Pre-book your return taxi or save our WhatsApp number before you go.</li>
             <li><strong>Leicester Official Big Freshers Icebreaker at 2Funky</strong> — a city-wide freshers staple. The area around Braunstone Gate gets busy when the event finishes — booking ahead beats waiting on the street.</li>
           </ul>
-          <p><strong>Pre-booking is strongly recommended</strong> on the busiest freshers nights. Demand peaks when events end between midnight and 2am, and unlicensed touts sometimes appear near venues offering lifts you should refuse. Message us on WhatsApp at <strong>+447888873795</strong> when you are ready to leave, or pre-book a return window when you know your plans.</p>
+          <p><strong>Pre-booking is strongly recommended</strong> on the busiest freshers nights. Demand peaks when events end between midnight and 2am, and unlicensed touts sometimes appear near venues offering lifts you should refuse. Message us on WhatsApp at <strong>+447535855786</strong> when you are ready to leave, or pre-book a return window when you know your plans.</p>
           <p>For fixed fares home from city-centre venues with no surge pricing, see our <a href="/late-night-taxi-leicester">late night taxi Leicester</a> guide — the same service covers freshers fortnight and every Friday night after.</p>
 
           <h2>Save our number for the whole academic year</h2>
-          <p>Freshers week is just the start. Throughout the academic year you will need taxis for lecture days when the bus is late, supermarket runs with heavy bags, trips to Leicester Railway Station at the end of term, airport transfers home for Christmas and Easter, and nights out that run longer than planned. Saving <strong>0116 233 8888</strong> and <strong>+447888873795</strong> on WhatsApp now means you are never scrambling for a number at 1am in October or during exam season in May.</p>
+          <p>Freshers week is just the start. Throughout the academic year you will need taxis for lecture days when the bus is late, supermarket runs with heavy bags, trips to Leicester Railway Station at the end of term, airport transfers home for Christmas and Easter, and nights out that run longer than planned. Saving <strong>0116 233 8888</strong> and <strong>+447535855786</strong> on WhatsApp now means you are never scrambling for a number at 1am in October or during exam season in May.</p>
           <p>Aylestone Taxis has served Leicester students since 1995. Every driver is licensed by Leicester City Council and DBS-checked. Fares are fixed and quoted before you travel — whether you are a first-year in halls or a third-year in a Clarendon Park house share. One number covers your whole time in Leicester, not just the first fortnight.</p>
 
           <h2>Book your freshers taxi in Leicester</h2>
           <p>Arriving by train, flying into EMA, moving bags into halls, or heading to the DMU Freshers Opening Party on 26 September — a <strong>freshers taxi Leicester</strong> from Aylestone Taxis gets you there with a fixed fare and a licensed driver. Pre-book online, call us, or WhatsApp when you need us.</p>
 
           <p style="text-align:center; margin-top:2rem;">
-            <a href="https://wa.me/447888873795?text=Hi!%20I%20need%20a%20freshers%20taxi%20in%20Leicester" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447888873795</a>
+            <a href="https://wa.me/447535855786?text=Hi!%20I%20need%20a%20freshers%20taxi%20in%20Leicester" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447535855786</a>
             <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
           </p>
         `,
@@ -1256,7 +1256,7 @@ export const siteData = {
           {
             question: "Can I WhatsApp to book a taxi on the night?",
             answer:
-              "Yes. Message us on WhatsApp at +447888873795 when you are ready to leave. Send your location pin, destination, and passenger count — we confirm your fixed fare and dispatch the nearest available driver. It takes seconds and works perfectly when your night out runs longer than planned.",
+              "Yes. Message us on WhatsApp at +447535855786 when you are ready to leave. Send your location pin, destination, and passenger count — we confirm your fixed fare and dispatch the nearest available driver. It takes seconds and works perfectly when your night out runs longer than planned.",
           },
         ],
         content: `
@@ -1310,7 +1310,7 @@ export const siteData = {
           <p>Not every night out follows a schedule. You might plan to leave at midnight and stay until 2am, or decide suddenly that you are ready to go. WhatsApp booking bridges that gap without the surge pricing of opening an app on the street.</p>
           <p>Here is how it works:</p>
           <ol>
-            <li><strong>Message us at +447888873795</strong> when you are ready to leave — from inside the venue or once you are outside.</li>
+            <li><strong>Message us at +447535855786</strong> when you are ready to leave — from inside the venue or once you are outside.</li>
             <li><strong>Send your location</strong> — a WhatsApp pin or the name of the venue near Clock Tower, Highcross, or wherever you are standing.</li>
             <li><strong>Tell us your destination and passenger count</strong> — so we dispatch the right vehicle size.</li>
             <li><strong>We confirm your fixed fare</strong> — the price is agreed before the driver sets off, not adjusted because it is peak demand.</li>
@@ -1348,7 +1348,7 @@ export const siteData = {
           <p>Planning a <strong>taxi Leicester night out</strong> does not need to be complicated. Pre-book your return for peace of mind, or WhatsApp us when you are ready to leave — either way, you get a fixed fare, a DBS-checked driver, and a safe journey home across Leicester.</p>
 
           <p style="text-align:center; margin-top:2rem;">
-            <a href="https://wa.me/447888873795?text=Hi!%20I%20need%20a%20late%20night%20taxi%20in%20Leicester" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447888873795</a>
+            <a href="https://wa.me/447535855786?text=Hi!%20I%20need%20a%20late%20night%20taxi%20in%20Leicester" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447535855786</a>
             <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
           </p>
         `,
@@ -2748,7 +2748,7 @@ export const siteData = {
           </ul>
           
           <h3>3. WhatsApp Booking - Convenient Option</h3>
-          <p>Book a taxi in Leicester via WhatsApp for a quick, convenient booking experience. Simply message us at +447888873795 with your pickup location, destination, and preferred time. We'll confirm your booking quickly and send driver details when your taxi is dispatched.</p>
+          <p>Book a taxi in Leicester via WhatsApp for a quick, convenient booking experience. Simply message us at +447535855786 with your pickup location, destination, and preferred time. We'll confirm your booking quickly and send driver details when your taxi is dispatched.</p>
           <p><strong>WhatsApp booking benefits:</strong></p>
           <ul>
             <li>Quick messaging</li>
@@ -3020,7 +3020,7 @@ export const siteData = {
             <li>Driver's contact number</li>
             <li>Booking confirmation</li>
             <li>Our main number: 0116 2338888</li>
-            <li>WhatsApp contact: +447888873795</li>
+            <li>WhatsApp contact: +447535855786</li>
           </ul>
           <p>Having these details ready ensures you can contact us if needed during your airport pickup in Leicester.</p>
           
@@ -3233,7 +3233,7 @@ export const siteData = {
           <p>Call 0116 2338888 to discuss your school run needs. We can set up regular bookings and answer any questions.</p>
           
           <h3>WhatsApp</h3>
-          <p>Message us on WhatsApp at +447888873795 for quick booking and updates.</p>
+          <p>Message us on WhatsApp at +447535855786 for quick booking and updates.</p>
           
           <h2>Areas We Cover</h2>
           <p>Our school run taxi services in Leicester cover:</p>
@@ -3385,7 +3385,7 @@ export const siteData = {
           <ul>
             <li><strong>Online:</strong> book 24/7</li>
             <li><strong>Phone:</strong> call 0116 2338888</li>
-            <li><strong>WhatsApp:</strong> message +447888873795</li>
+            <li><strong>WhatsApp:</strong> message +447535855786</li>
           </ul>
 
           <p>For airport journeys, start here: <a href="/airport-transfers-leicester"><strong>Airport transfers Leicester</strong></a>.</p>
@@ -3567,7 +3567,7 @@ export const siteData = {
           <ul>
             <li><strong>Online:</strong> Book through our website 24/7</li>
             <li><strong>Phone:</strong> Call 0116 2338888</li>
-            <li><strong>WhatsApp:</strong> Message +447888873795</li>
+            <li><strong>WhatsApp:</strong> Message +447535855786</li>
             <li><strong>Mobile App:</strong> Book and track your journey</li>
           </ul>
           

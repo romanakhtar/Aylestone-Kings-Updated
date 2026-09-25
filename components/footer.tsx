@@ -2,7 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, ArrowRight, MessageCircle, Rocket, ShoppingBag, Theater, Crown, Church, Music, ShoppingCart, Calendar, Star } from "lucide-react"
+import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, MessageCircle, Rocket, ShoppingBag, Theater, Crown, Church, Music, ShoppingCart, Calendar, Star } from "lucide-react"
 import Logo from "@/components/logo"
 import { companyInfo, contactInfo, socialLinks, footerData, copyrightInfo } from "@/lib/data"
 import { useChristmasTheme } from "@/components/ChristmasThemeProvider"
@@ -305,90 +305,124 @@ export default function Footer() {
         </div>
       </div>
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-100">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <Logo showText={true} className="mb-6" />
-            <p className="text-gray-800 text-sm mb-6 leading-relaxed">
-              {companyInfo.description}
-            </p>
-            <div className="flex space-x-4">
-              <Link href={socialLinks.facebook} className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-800 hover:bg-[#06A0A6] hover:text-white transition-smooth hover:scale-110 shadow-professional hover:shadow-professional-lg">
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link href={socialLinks.instagram} className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-[#06A0A6] hover:text-white transition-smooth hover:scale-110 shadow-professional hover:shadow-professional-lg">
-                <Instagram className="h-5 w-5" />
-              </Link>
+      <div className="border-t border-gray-200 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1.15fr] lg:gap-16">
+            {/* Brand */}
+            <div>
+              <Logo showText={true} className="mb-5" />
+              <p className="text-gray-600 text-sm leading-relaxed max-w-sm">
+                {companyInfo.description}
+              </p>
+              <p className="mt-5 text-xs text-gray-500 leading-relaxed">
+                Licensed by Leicester City Council &middot; DBS-checked drivers &middot; Established {companyInfo.founded}
+              </p>
+              <div className="mt-6 flex gap-3">
+                <a
+                  href={socialLinks.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Aylestone Taxis on Facebook"
+                  className="w-9 h-9 rounded-full border border-gray-300 text-gray-500 flex items-center justify-center hover:border-[#06A0A6] hover:bg-[#06A0A6] hover:text-white transition-colors"
+                >
+                  <Facebook className="h-4 w-4" />
+                </a>
+                <a
+                  href={socialLinks.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Aylestone Taxis on Instagram"
+                  className="w-9 h-9 rounded-full border border-gray-300 text-gray-500 flex items-center justify-center hover:border-[#06A0A6] hover:bg-[#06A0A6] hover:text-white transition-colors"
+                >
+                  <Instagram className="h-4 w-4" />
+                </a>
+              </div>
             </div>
-          </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-gray-800 text-lg mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              {footerData.quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link href={link.href} className="text-gray-600 hover:text-[#06A0A6] text-sm transition-smooth flex items-center group">
-                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
-                    {link.name}
-                  </Link>
+            {/* Quick Links */}
+            <nav aria-label="Quick links">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 mb-5">Quick Links</h3>
+              <ul className="space-y-2.5">
+                {footerData.quickLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-gray-600 hover:text-[#06A0A6] transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            {/* Contact Info */}
+            <div>
+              <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 mb-5">Get in Touch</h3>
+              <ul className="space-y-3.5 text-sm">
+                <li className="flex items-start gap-3">
+                  <MapPin className="h-4 w-4 text-[#06A0A6] mt-0.5 flex-shrink-0" aria-hidden />
+                  <address className="not-italic text-gray-600 leading-relaxed">
+                    {contactInfo.address.street}
+                    <br />
+                    {contactInfo.address.city}, {contactInfo.address.postcode}
+                  </address>
                 </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="font-semibold text-gray-800 text-lg mb-6">Services</h3>
-            <ul className="space-y-3">
-              {footerData.services.map((service) => (
-                <li key={service.name}>
-                  <Link href={service.href} className="text-gray-600 hover:text-[#06A0A6] text-sm transition-smooth flex items-center group">
-                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-smooth" />
-                    {service.name}
-                  </Link>
+                <li className="flex items-center gap-3">
+                  <Phone className="h-4 w-4 text-[#06A0A6] flex-shrink-0" aria-hidden />
+                  <a
+                    href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
+                    className="text-gray-600 hover:text-[#06A0A6] transition-colors"
+                  >
+                    {contactInfo.phone}
+                  </a>
                 </li>
-              ))}
-            </ul>
-          </div>
-
-          
-
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-semibold text-gray-800 text-lg mb-6">Get in Touch</h3>
-            <div className="space-y-4 text-sm text-gray-600">
-              <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-[#06A0A6] mt-0.5 flex-shrink-0" />
-                <div>
-                  <p>{contactInfo.address.street}</p>
-                  <p>{contactInfo.address.city}, {contactInfo.address.postcode}</p>
-                  <p>{contactInfo.address.country}</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-[#06A0A6]" />
-                <p>{contactInfo.phone}</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <MessageCircle className="h-5 w-5 text-[#06A0A6]" />
-                <p>{contactInfo.whatsapp}</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-[#06A0A6]" />
-                <p>{contactInfo.email}</p>
-              </div>
-            </div>            
-            <div className="mt-6">
-              <Link href="/contact">
-                <Button className="w-full bg-[#0F0D3E] hover:bg-[#06A0A6] text-white rounded-lg font-semibold transition-smooth shadow-professional hover:shadow-professional-lg hover:scale-105 focus-ring">
+                <li className="flex items-center gap-3">
+                  <MessageCircle className="h-4 w-4 text-[#06A0A6] flex-shrink-0" aria-hidden />
+                  <a
+                    href={`https://wa.me/${contactInfo.whatsapp.replace(/\D/g, "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-[#06A0A6] transition-colors"
+                  >
+                    {contactInfo.whatsapp}
+                  </a>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Mail className="h-4 w-4 text-[#06A0A6] flex-shrink-0" aria-hidden />
+                  <a
+                    href={`mailto:${contactInfo.email}`}
+                    className="text-gray-600 hover:text-[#06A0A6] transition-colors break-all"
+                  >
+                    {contactInfo.email}
+                  </a>
+                </li>
+              </ul>
+              <p className="mt-5 text-xs text-gray-500">Booking line open 24 hours, 7 days a week.</p>
+              <Link href="/contact" className="inline-block mt-5">
+                <Button className="bg-[#0F0D3E] hover:bg-[#06A0A6] text-white rounded-lg font-semibold px-6 transition-smooth focus-ring">
                   Contact Us
                 </Button>
               </Link>
             </div>
           </div>
+
+          {/* Services */}
+          <nav aria-label="Services" className="mt-12 border-t border-gray-200 pt-10">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 mb-5">Services</h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-2.5">
+              {footerData.services.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    href={service.href}
+                    className="text-sm text-gray-600 hover:text-[#06A0A6] transition-colors"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
       {/* Bottom Footer */}
