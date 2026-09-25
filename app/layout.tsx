@@ -12,6 +12,7 @@ import { ChristmasThemeProvider } from "@/components/ChristmasThemeProvider"
 import { ValentineThemeProvider } from "@/components/ValentineThemeProvider"
 import { DeferredLayoutChrome, DeferredHalloweenFloating } from "@/components/layout/DeferredLayoutChrome"
 import ThirdPartyScripts from "@/components/analytics/ThirdPartyScripts"
+import Footer from "@/components/footer"
 import { getAggregateRatingJsonLd } from "@/lib/seo/siteJsonLd"
 const inter = Inter({
   subsets: ["latin"],
@@ -48,10 +49,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png",
+        url: "https://aylestone-taxis.co.uk/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Aylestone Taxis - Taxi Leicester",
+        alt: "Aylestone Taxis — Leicester taxis and airport transfers, fixed fares, 24/7",
       },
     ],
   },
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
     title: "Leicester Taxi | Fixed Fares, No Surge | Aylestone Taxis",
     description:
       "Leicester taxis & airport transfers since 1995. Fixed fares, no surge, licensed drivers, 24/7.",
-    images: ["https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png"],
+    images: ["https://aylestone-taxis.co.uk/og-image.jpg"],
   },
   alternates: {
     canonical: "/",
@@ -176,6 +177,7 @@ export default function RootLayout({
                 <DeferredHalloweenFloating />
                 {children}
               </main>
+              <Footer />
               <DeferredLayoutChrome />
             </ValentineThemeProvider>
           </ChristmasThemeProvider>
