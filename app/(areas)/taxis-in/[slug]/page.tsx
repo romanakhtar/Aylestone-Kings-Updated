@@ -48,6 +48,7 @@ const DEDICATED_FAQ_AREA_SLUGS = new Set([
   "leicester-royal-infirmary",
   "hamilton",
   "glen-parva",
+  "kirby-muxloe",
 ])
 
 const POPULAR_JOURNEY_AIRPORTS = [
@@ -123,15 +124,15 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 11. Hamilton
   hamilton: {
-    title: "Taxis in Hamilton — Fixed Fares, Airport Transfers | 24/7",
+    title: "Hamilton Taxi Leicester | Taxis in Hamilton | 24/7",
     description:
-      "Taxis in Hamilton Leicester: fixed fares from £8 to the city centre, EMA from £28, 24/7 school runs, shopping trips and airport transfers. DBS-checked drivers — call 0116 233 8888 or book online.",
+      "Hamilton taxi Leicester: taxis in Hamilton for school runs, shopping and airports. Taxi Hamilton pickups 24/7 — call 0116 233 8888 or book online.",
   },
   // 12. Beaumont Leys
   "beaumont-leys": {
-    title: "Beaumont Leys Taxi | 24/7 Book Online | Aylestone Taxis",
+    title: "Beaumont Leys Taxi | Taxis in Beaumont Leys | 24/7",
     description:
-      "Beaumont Leys taxi: fast pickups, school runs, airport transfers. Beaumont taxi service across LE4 — call 0116 2338888 or book online 24/7.",
+      "Beaumont Leys taxi for shopping, school runs and airports. Taxis in Beaumont Leys across LE4 — call 0116 2338888 or book online 24/7.",
   },
   // 13. Braunstone
   braunstone: {
@@ -207,9 +208,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 25. Market Harborough
   "market-harborough": {
-    title: "Market Harborough Taxi | Airport & Local 24/7",
+    title: "Market Harborough Taxis | Taxi & Cabs 24/7",
     description:
-      "Market Harborough airport taxi to EMA, Birmingham, Heathrow & UK airports. Fixed-fare airport taxis from Market Harborough — call 0116 2338888 or book online.",
+      "Market Harborough taxis, taxi Market Harborough and cabs for town, station and airports. Fixed fares 24/7 — call 0116 2338888 or book online.",
   },
   // 26. Rushey Mead
   "rushey-mead": {
@@ -261,9 +262,14 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 34. Fosse Park
   "fosse-park": {
-    title: "Taxis to Fosse Park — Shopping Pickups | Aylestone Taxis",
+    title: "Fosse Park Taxi | Taxi to Fosse Park Leicester",
     description:
-      "Fosse Park Leicester taxi: drop-offs & pickups at Fosse Park retail park. Fosse taxi Leicester — skip parking queues, call 0116 2338888 or book online.",
+      "Fosse Park taxi for shopping pickups and drop-offs at Fosse Shopping Park. Taxi to Fosse Park from Leicester — skip parking, call 0116 2338888 or book online.",
+  },
+  "kirby-muxloe": {
+    title: "Kirby Muxloe Taxi | Taxis in Kirby Muxloe | 24/7",
+    description:
+      "Kirby Muxloe taxi for village pickups, station links and airports. Taxis in Kirby Muxloe 24/7 — call 0116 2338888 or book online.",
   },
   // 35. Braunstone Town
   "braunstone-town": {
@@ -393,6 +399,11 @@ const AREA_CUSTOM_H1: Record<string, string> = {
   narborough: "Taxis in Narborough, Leicestershire",
   enderby: "Taxis in Enderby, Leicestershire",
   "leicester-city-centre": "Taxi Leicester City Centre – Aylestone Taxis",
+  hamilton: "Hamilton Taxi Leicester — Taxis in Hamilton",
+  "beaumont-leys": "Beaumont Leys Taxi — Taxis in Beaumont Leys",
+  "market-harborough": "Market Harborough Taxis, Cabs & Local Pickups",
+  "fosse-park": "Fosse Park Taxi — Pickups at Fosse Shopping Park",
+  "kirby-muxloe": "Kirby Muxloe Taxi — Taxis in Kirby Muxloe",
 }
 
 /** Optional contextual link from a taxis-in area page to a relevant blog post (SEO discovery). */
@@ -816,7 +827,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "market-harborough": {
     bodyParagraphs: [
-      "Market Harborough is known for its independent town centre, strong commuter rail links, and nearby attractions like Foxton Locks, so taxi demand here is highly mixed. One hour you may need a station connection for a business train, and the next you need a family pickup from a leisure destination. That variety is exactly why local route understanding matters. Aylestone Taxis covers central streets, housing estates, and surrounding villages with practical dispatch planning built around real journey patterns.",
+      "Market Harborough taxis, a taxi Market Harborough, and cabs Market Harborough are all the same local need: a licensed car for the town centre, the station, or a village pickup. Aylestone Taxis covers The Square, Market Harborough railway station, housing estates, and surrounding villages with fixed fares and 24/7 dispatch. One hour you may need a train connection; the next a family pickup from Foxton Locks — local route knowledge keeps both simple.",
       "Most journeys from Market Harborough to Leicester city centre are around 30 minutes via the A6, although peak inbound traffic can push this to 35 minutes. For airport travel, East Midlands Airport is typically the nearest major terminal from Market Harborough at around 50 to 60 minutes using A6 and M1 links. A standard fare is usually in the GBP 72 to GBP 88 range depending on pickup location and time slot, with pricing confirmed before travel.",
       "We regularly serve Market Harborough railway station and The Square, both of which have frequent pickup activity throughout the week. Foxton Locks is another common booking destination, especially in spring and summer when visitor traffic rises and parking pressure increases. For busy periods in the town centre, we can agree exact meeting points near side roads so collections are smooth and customers avoid waiting on congested frontages.",
       "Families in Market Harborough often rely on taxis for school logistics, healthcare appointments, and evening returns when bus timetables are less convenient. Professional users typically want a dependable repeat service for rail and office travel, so we support recurring bookings with consistent booking notes and reliable timing. Instead of treating every request as a one-off, we build journeys around known routines and communicate clearly if traffic conditions require route adjustments.",
@@ -843,6 +854,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
         question: "Can I book a regular taxi for commuting or school runs from Market Harborough?",
         answer:
           "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
+      },
+      {
+        question: "Do you provide Market Harborough taxis and cabs 24/7?",
+        answer:
+          "Yes. Market Harborough taxis and cabs Market Harborough are available day and night, including bank holidays. Book a taxi Market Harborough online or call 0116 233 8888.",
       },
     ],
   },
@@ -880,7 +896,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "beaumont-leys": {
     bodyParagraphs: [
-      "Beaumont Leys is a busy north Leicester suburb where local journeys happen all day between estates, schools, shopping areas, and healthcare appointments. It is known for Beaumont Shopping Centre and large residential catchments, so taxi demand is frequent and practical rather than occasional. Aylestone Taxis provides fast-response coverage in this area with booking processes designed for everyday travel - school runs, errands, family visits, and evening pickups when bus links become less convenient.",
+      "A Beaumont Leys taxi is one of the most booked local journeys on our board: estates, schools, Beaumont Shopping Centre, and evening returns when buses thin out. Taxis in Beaumont Leys run all day across LE4. Aylestone Taxis is an independent Leicester operator covering this suburb 24/7 — school runs, errands, family visits, and shopping pickups with a fare confirmed before you travel.",
       "A normal journey from Beaumont Leys to Leicester city centre takes around 18 minutes via the A563 and inner-city routes, with longer times during rush-hour inflow. East Midlands Airport is the closest major airport from this area, usually around 35 to 40 minutes via ring-road links and the M1 corridor. Typical fares from Beaumont Leys to EMA are about GBP 46 to GBP 58, and we confirm expected costs before travel so passengers can budget clearly.",
       "Two of the most common pickup landmarks are Beaumont Shopping Centre and Beaumont Park, both generating regular weekday and weekend demand. We also run many journeys to Leicester Royal Infirmary and Leicester Railway Station for onward travel. Where frontage roads are crowded, we provide clear alternative meeting points nearby to keep boarding safe for families, older passengers, and customers travelling with shopping or luggage.",
       "Because Beaumont Leys journeys are often short but time-sensitive, consistency matters more than novelty. We focus on arriving when promised, keeping communication straightforward, and adjusting route choices around known traffic pinch points. Customers can book one-off rides quickly, but we also support repeat schedules for work shifts, school transport, and appointment routines where missing a pickup can disrupt the whole day.",
@@ -891,6 +907,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Do you pick up from Beaumont Shopping Centre?",
         answer: "Yes, we provide pickups and drop-offs around Beaumont Shopping Centre and nearby residential streets.",
+      },
+      {
+        question: "How do I book a Beaumont Leys taxi?",
+        answer:
+          "Book a Beaumont Leys taxi online or call 0116 233 8888. Taxis in Beaumont Leys run 24/7 with a fixed fare before you travel.",
       },
       {
         question: "How long does Beaumont Leys to Leicester City Centre usually take?",
@@ -1147,7 +1168,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "fosse-park": {
     bodyParagraphs: [
-      "Fosse Shopping Park is one of the East Midlands' busiest retail destinations — a sprawling out-of-town centre on Leicester's western edge where major brands, dining, and leisure draw thousands of visitors every week. Fosse Park Avenue provides the main access route into the site, Braunstone Lane connects the area to surrounding residential neighbourhoods, and Meridian Business Park sits close by with offices and corporate tenants that generate steady weekday taxi demand. Aylestone Taxis has served the Fosse Park corridor since 1995, and our bookings here fall into three clear groups: shoppers who want a comfortable ride with their bags, retail workers needing reliable transport at shift start and finish, and business park employees travelling to meetings, the city centre, or the airport.",
+      "Book a Fosse Park taxi or a taxi to Fosse Park with Aylestone Taxis — an independent Leicester operator collecting at Fosse Shopping Park, not another firm's switchboard. Fosse Park Avenue is the main access route, Braunstone Lane links nearby neighbourhoods, and Meridian Business Park sits next door. Shoppers, retail staff and business-park employees book us for bag-friendly pickups, late finishes, and airport runs from the west of Leicester.",
       "Shoppers use us for the journeys that make a retail trip easier — a Saturday run to Fosse Shopping Park without hunting for a parking space, a return pickup when you are loaded with bags, or a lift from Oadby, Wigston, or Narborough with a fixed fare confirmed upfront. Our drivers know the retail park layout, the main entrance and exit points along Fosse Park Avenue, and where collections work best when car parks and frontages are busy. We agree a clear meeting point when you book so you are not standing in a congested lane wondering where the car is.",
       "Retail workers make up a significant share of our Fosse Park work. Stores across the shopping park operate extended hours, and staff finishing late shifts — often after 9pm or 10pm when bus frequency drops — need a taxi service that is genuinely available around the clock. We run early morning pickups for staff opening stores before public transport starts, late-night collections after closing, and pre-booked standing bookings for employees who want the same driver at the same time each week. All drivers are DBS checked and licensed, and fixed prices are confirmed before the car arrives.",
       "Corporate runs to Meridian Business Park are another regular booking type. Professionals heading to client meetings, commuting between the business park and Leicester city centre, or connecting to East Midlands Airport for business travel rely on us for punctual, fixed-fare journeys. The A563 ring road and M1 junction 21 give Fosse Park one of Leicester's strongest positions for airport access — East Midlands Airport is one of the quickest runs from anywhere in the city. We also cover multi-stop corporate bookings when a team needs collecting from different addresses before heading to a shared destination.",
@@ -1175,11 +1196,16 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
         answer:
           "Yes. You can pre-book a taxi to Fosse Park for your shopping trip and schedule a fixed return pickup time — ideal when you want to skip parking and know exactly when your driver will meet you with your bags. Call 0116 233 8888 or book online and note your preferred return time and meeting point.",
       },
+      {
+        question: "Do you offer a Fosse Park taxi from other parts of Leicester?",
+        answer:
+          "Yes. A Fosse Park taxi can start from Aylestone, Braunstone, Wigston, the city centre or anywhere we cover. Book a taxi to Fosse Park with a fixed fare — we collect at an agreed entrance so you are not waiting in a busy car park lane.",
+      },
     ],
   },
   hamilton: {
     bodyParagraphs: [
-      "Hamilton is one of Leicester's largest residential areas in the north-east of the city, and local taxi demand is driven by everyday needs rather than occasional tourism. Families rely on school-run collections, commuters need dependable routes into the city centre and business parks, and shoppers want straightforward trips home after a heavy day at the shops. Aylestone Taxis provides 24/7 Hamilton coverage built around those real patterns — punctual pickups, fixed fares agreed before travel, and drivers who know the estate roads rather than relying on generic sat-nav routes alone.",
+      "Need a Hamilton taxi Leicester residents can book the same day? Aylestone Taxis runs taxis in Hamilton (LE5) — if you searched taxi Hamilton, that is Hamilton in Leicester, not Hamilton in Scotland. Families rely on school-run collections, commuters need dependable routes into the city centre, and shoppers want a straightforward trip home. We provide 24/7 Hamilton coverage: punctual pickups, fixed fares agreed before travel, and drivers who know the estate roads.",
       "Typical journey times from Hamilton reflect how well connected the area is to wider Leicestershire: Leicester city centre is around 15 minutes via the A563 and inner-city approaches in normal traffic, East Midlands Airport (EMA) is roughly 25 minutes using ring-road and M1 links, and Birmingham Airport (BHX) is around 50 minutes on a clear run via the M69 and M6 corridor. Example fixed fares for city-centre journeys and EMA are shown below — your exact price is confirmed at booking based on pickup point, vehicle size, and time of travel.",
       "We collect and drop off across Hamilton every day, including Hamilton Shopping Centre, Hamilton Park, Thurmaston Lane, and the Hamilton Park and Ride site where commuters often start or finish a journey. School-time traffic around estate entrances and busy periods near the shopping centre can slow buses, which is why many residents prefer a pre-booked taxi with a confirmed ETA. Whether you need a morning commute, an afternoon trip with children, or an evening return after shopping, we agree a practical pickup point so boarding stays quick and safe.",
       "Among taxi companies in Hamilton, Aylestone Taxis is known for transparent fixed pricing — no meter surprises and no surge multipliers on early airport mornings. Our core services include 24/7 availability, fixed prices confirmed at booking, DBS-checked licensed drivers, airport transfers to all major UK airports, standing school-run contracts, and shopping trips with room for bags. We also handle hospital appointments, station connections, and late-night returns when public transport options are limited.",
@@ -1196,6 +1222,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
         question: "How much is a taxi from Hamilton to Leicester city centre?",
         answer:
           "A taxi from Hamilton to Leicester city centre starts from £8 and typically takes around 15 minutes in normal traffic. Rush-hour ring-road delays can add a few minutes; your fixed fare is confirmed at booking.",
+      },
+      {
+        question: "How do I book a taxi Hamilton Leicester?",
+        answer:
+          "Call 0116 233 8888 or book online. We cover Hamilton Leicester 24/7 including Hamilton Shopping Centre, Park and Ride, and residential streets — you get a fixed fare before the car arrives.",
       },
       {
         question: "Do you offer airport transfers from Hamilton Leicester?",
@@ -2044,6 +2075,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     (footerData as any).priorityAreas?.optionalPriority?.some((d: any) => slugFromHref(d.href) === slug)
 
   const customMeta = areaMeta[slug]
+  const areaKeywords: Record<string, string[]> = {
+    hamilton: ["Hamilton taxi Leicester", "taxis in Hamilton", "taxi Hamilton Leicester", "Hamilton taxis"],
+    "beaumont-leys": [
+      "Beaumont Leys taxi",
+      "taxis in Beaumont Leys",
+      "taxi Beaumont Leys Leicester",
+      "Beaumont Leys taxis",
+    ],
+    "market-harborough": [
+      "Market Harborough taxis",
+      "taxi Market Harborough",
+      "cabs Market Harborough",
+      "Market Harborough taxi",
+    ],
+    "fosse-park": ["Fosse Park taxi", "taxi to Fosse Park", "Fosse Park taxis Leicester"],
+    "kirby-muxloe": ["Kirby Muxloe taxi", "taxis in Kirby Muxloe", "taxi Kirby Muxloe"],
+  }
   const title = customMeta
     ? customMeta.title
     : isDestination
@@ -2060,6 +2108,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title,
     description,
+    keywords: areaKeywords[slug],
     alternates: {
       canonical: canonicalUrl,
     },
@@ -2102,6 +2151,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const isFossePark = slug === "fosse-park"
   const isHamilton = slug === "hamilton"
   const isMarketHarborough = slug === "market-harborough"
+  const isKirbyMuxloe = slug === "kirby-muxloe"
   const supermarketDestinationSlugs = new Set<string>([
     "asda-fosse-park",
     "sainsburys-grove-triangle",
@@ -2819,7 +2869,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               {isHamilton && (
                 <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
                   <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-                    Taxis in Hamilton — journey times, fares &amp; services
+                    Hamilton taxi Leicester — journey times, fares &amp; services
                   </h2>
                   <p className="text-gray-700 mb-4">
                     Hamilton Shopping Centre, Hamilton Park, Thurmaston Lane, and Hamilton Park and Ride are all within
@@ -2995,6 +3045,28 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       0116 233 8888
                     </Link>
                   </div>
+                </div>
+              )}
+
+              {isKirbyMuxloe && (
+                <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Kirby Muxloe taxi — village pickups 24/7
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Need a Kirby Muxloe taxi? Aylestone Taxis is an independent Leicester operator covering taxis in
+                    Kirby Muxloe, Ratby Road, Station Road and nearby villages. We do not run another firm&apos;s
+                    switchboard — book us for local rides, Fosse Park shopping trips and airport transfers with a fare
+                    confirmed before the car arrives.
+                  </p>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                    <li>Kirby Muxloe → Leicester city centre: typically 15–20 minutes</li>
+                    <li>Kirby Muxloe → Fosse Park: typically 10–15 minutes</li>
+                    <li>Kirby Muxloe → East Midlands Airport: typically 20–25 minutes</li>
+                  </ul>
+                  <p className="text-gray-800 font-medium">
+                    Book a taxi Kirby Muxloe online or call 0116 233 8888 — 24/7 including early airport runs.
+                  </p>
                 </div>
               )}
 

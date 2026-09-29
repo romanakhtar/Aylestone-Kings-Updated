@@ -4,8 +4,19 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const homeFaqs = [
   {
-    question: "How do I book a taxi in Leicester?",
-    answer: "Book online in seconds or call our office. You can book instantly or pre-book for later.",
+    question: "How do I book a taxi Leicester passengers use every day?",
+    answer:
+      "Book Leicester taxis and Leicester cabs online in seconds, call 0116 233 8888, or WhatsApp us. You see a fixed fare before you confirm.",
+  },
+  {
+    question: "Are Leicester cabs and Leicester taxis the same service?",
+    answer:
+      "Yes. Leicester cabs, Leicester taxi and taxi Leicester searches all point to the same Aylestone Taxis service — licensed drivers, fixed fares, no surge.",
+  },
+  {
+    question: "Do you cover Leicestershire taxis outside the city?",
+    answer:
+      "Yes. Leicestershire taxis with Aylestone Taxis cover towns and villages across the county, including Hamilton, Beaumont Leys, Fosse Park, Kirby Muxloe and Market Harborough, plus airport transfers.",
   },
   {
     question: "Are you available 24/7?",
@@ -35,7 +46,9 @@ export default function HomeFAQSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-6">Frequently Asked Questions</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Common questions about booking a taxi in Leicester</p>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Common questions about Leicester taxis, Leicester cabs and Leicestershire taxis
+          </p>
         </div>
 
         <Accordion type="single" collapsible className="w-full space-y-4">

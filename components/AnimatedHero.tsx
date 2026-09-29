@@ -202,7 +202,7 @@ export default function AnimatedHero() {
             {/* Main Heading */}
             <h1
               id="hero-heading"
-              className={`text-3xl md:text-4xl font-bold mb-4 leading-tight ${
+              className={`text-2xl md:text-3xl font-bold mb-2 leading-tight ${
                 isChristmasActive ? 'text-white' : 'text-[#0F0D3E]'
               }`}
             >
@@ -212,22 +212,32 @@ export default function AnimatedHero() {
                 ? "Reliable, Safe Taxi for Your Valentine's Evening"
                 : isChristmasActive
                 ? "Leicester Taxi Service This Christmas"
-                : "Leicester Taxi Service & Airport Transfers – Available 24/7"}
+                : "Leicester Taxi Service & Airport Transfers Fixed Fares 24/7"}
             </h1>
 
             {/* Description */}
-            <p
-              className={`text-xl mb-4 leading-relaxed ${
-                isChristmasActive ? 'text-[#E4E4E4]' : 'text-[#2E3C44]'
-              }`}
-            >
-              {isValentineActive
-                ? "Pre-book with confidence. Licensed, safe and on time — every time."
-                : isSeasonal
-                ? siteData.homepage.hero.subtitle
-                : "Aylestone Taxis provides fixed-price Leicester taxis with licensed local drivers. Whether you need Leicester cabs for a local trip, Leicester city taxis for an evening out, or a reliable airport transfer to East Midlands, Birmingham, Heathrow and all major UK airports — we're available 24/7."}
-            </p>
-
+            <div
+  className={`text-lg mb-1 leading-relaxed ${
+    isChristmasActive ? 'text-[#E4E4E4]' : 'text-[#2E3C44]'
+  }`}
+>
+  {isValentineActive ? (
+    "Pre-book with confidence. Licensed, safe, and on time, every time."
+  ) : isSeasonal ? (
+    siteData.homepage.hero.subtitle
+  ) : (
+    <>
+      <p className="mb-0">
+        <strong>Book a taxi Leicester locals have used since 1995.</strong> Aylestone Taxis runs Leicester taxis and Leicester cabs with licensed drivers, fixed fares, and no surge pricing. Available 24/7, we provide:
+      </p>
+      <ul className="list-disc pl-6 space-y-0">
+        <li><strong>Local journeys</strong> right across Leicester and Leicestershire</li>     
+        <li>Transfers to EMA, BHX, LHR and all <strong>UK airports</strong></li>
+        <li><strong>Weekend travel solutions</strong> for nights out, events, and shopping trips</li>
+      </ul>
+    </>
+  )}
+</div>
             {/* Enhanced Features with Icons */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
               {(isValentineActive
