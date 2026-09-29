@@ -4,7 +4,7 @@ import { contactInfo, siteData } from "@/lib/data"
 export const SITE_ORIGIN = "https://aylestone-taxis.co.uk"
 
 /** Stable @id for the business entity (used across Service provider references). */
-export const LOCAL_BUSINESS_ID = `${SITE_ORIGIN}/#localbusiness`
+export const LOCAL_BUSINESS_ID = `${SITE_ORIGIN}/#business`
 
 /** Approximate coordinates for 753A Aylestone Rd, Leicester LE2 8TG (GeoCoordinates for LocalBusiness). */
 const OFFICE_GEO = {

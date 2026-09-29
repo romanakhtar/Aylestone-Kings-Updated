@@ -80,7 +80,7 @@ export default function AnimatedHero() {
   }
 
   return (
-    <main className={`relative min-h-[70vh] ${isChristmasActive ? 'bg-gradient-to-br from-[#0F0D3E] via-[#0F0D3E] to-[#2E3C44]' : 'bg-white'}`}>
+    <section aria-labelledby="hero-heading" className={`relative min-h-[70vh] ${isChristmasActive ? 'bg-gradient-to-br from-[#0F0D3E] via-[#0F0D3E] to-[#2E3C44]' : 'bg-white'}`}>
       {/* Valentine Tagline Banner - Just below fixed navbar (top-5 + h-16 = 84px), overlays hero */}
       {isValentineActive && (
         <div
@@ -337,6 +337,6 @@ export default function AnimatedHero() {
           </div>
         </div>
       </div>
-    </main>
+    </section>
   )
 }

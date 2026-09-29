@@ -1,13 +1,10 @@
-"use client"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, MessageCircle, Rocket, ShoppingBag, Theater, Crown, Church, Music, ShoppingCart, Calendar, Star } from "lucide-react"
 import Logo from "@/components/logo"
+import FooterSeasonalBanners from "@/components/footer-seasonal-banners"
 import { companyInfo, contactInfo, socialLinks, footerData, copyrightInfo } from "@/lib/data"
-import { useChristmasTheme } from "@/components/ChristmasThemeProvider"
-import { useValentineTheme } from "@/components/ValentineThemeProvider"
-import { usePathname } from "next/navigation"
 
 // Icon mapping function
 function getIconComponent(iconName: string) {
@@ -54,43 +51,10 @@ function AreaSection({
 }
 
 export default function Footer() {
-  const { isChristmasActive } = useChristmasTheme()
-  const { isValentineActive } = useValentineTheme()
-  const pathname = usePathname()
-  const isHomepage = pathname === '/'
   
   return (
     <footer className="bg-gray-100 text-gray-800">
-      {/* Valentine Footer Ribbon - Only on Homepage, Feb 1–14 */}
-      {isValentineActive && isHomepage && (
-        <div
-          className="w-full min-h-[120px] sm:min-h-[160px] bg-cover bg-no-repeat bg-center"
-          style={{
-            
-          }}
-          role="img"
-          aria-label="Valentine's Day taxi service - Aylestone Taxis Leicester"
-        />
-      )}
-      {/* Christmas Footer Banner - Only on Homepage */}
-      {isChristmasActive && isHomepage && (
-        <div className="w-full relative">
-          <Image 
-            src="/christmas-banner.jpg"
-            alt="Christmas banner decoration for Aylestone Taxis taxi service"
-            width={1920}
-            height={200}
-            className="w-full h-auto object-cover"
-            style={{
-              display: 'block',
-              width: '100%',
-              height: 'auto'
-            }}
-            priority={false}
-            loading="lazy"
-          />
-        </div>
-      )}
+      <FooterSeasonalBanners />
       {/* Areas We Cover (Top Band) */}
       <div className="border-t border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
