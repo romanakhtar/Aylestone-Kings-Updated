@@ -33,16 +33,16 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aylestone-taxis.co.uk"),
-  title: "Leicester Taxi | Fixed Fares, No Surge | Aylestone Taxis",
+  title: "Taxi Leicester | Leicester Cabs & Taxis | Aylestone",
   description:
-  "Leicester taxis & airport transfers since 1995. Fixed fares, no surge, licensed drivers, 24/7. Book online or call 0116 233 8888.",
-   keywords: "Taxi Leicester, Leicester taxis, Aylestone Taxis, taxi near me Leicester, Taxi Near Me Leicester, Leicester Airport Taxi, Leicester to East Midlands Airport Taxi, Leicester Taxi Company, Cheap Taxi Leicester, 24 Hour Taxi Leicester, taxi in Leicester, Leicester taxi service, airport taxi Leicester, airport transfers Leicester, taxi company Leicester",
+    "Book Leicester taxis, Leicester cabs and Leicestershire taxis 24/7. Fixed fares, no surge, licensed drivers. Call 0116 233 8888 or book online.",
+  keywords: "Taxi Leicester, Leicester taxi, Leicester taxis, Leicester cabs, Leicester cab, Leicestershire taxis, Leicestershire taxi, Aylestone Taxis, taxi near me Leicester, Taxi Near Me Leicester, Leicester Airport Taxi, Leicester to East Midlands Airport Taxi, Leicester Taxi Company, Cheap Taxi Leicester, 24 Hour Taxi Leicester, taxi in Leicester, Leicester taxi service, airport taxi Leicester, airport transfers Leicester, taxi company Leicester",
   generator: "Aylestone Taxis",
   authors: [{ name: "Aylestone Taxis" }],
   openGraph: {
-    title: "Leicester Taxi | Fixed Fares, No Surge | Aylestone Taxis",
+    title: "Taxi Leicester | Leicester Cabs & Taxis | Aylestone",
     description:
-    "Leicester taxis & airport transfers since 1995. Fixed fares, no surge, licensed drivers, 24/7. Book online or call 0116 233 8888.",
+    "Book Leicester taxis, Leicester cabs and Leicestershire taxis 24/7. Fixed fares, no surge, licensed drivers. Call 0116 233 8888 or book online.",
     url: "https://aylestone-taxis.co.uk",
     siteName: "Aylestone Taxis",
     locale: "en_GB",
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leicester Taxi | Fixed Fares, No Surge | Aylestone Taxis",
+    title: "Taxi Leicester | Leicester Cabs & Taxis | Aylestone",
     description:
-      "Leicester taxis & airport transfers since 1995. Fixed fares, no surge, licensed drivers, 24/7.",
+      "Book Leicester taxis, Leicester cabs and Leicestershire taxis 24/7. Fixed fares, no surge, licensed drivers.",
     images: ["https://aylestone-taxis.co.uk/og-image.jpg"],
   },
   alternates: {
@@ -82,7 +82,7 @@ const schemaData = {
   name: "Aylestone Taxis Taxi Service",
   alternateName: "Aylestone Taxis",
   description:
-    "Leicester's trusted taxi service since 1995. 24/7 airport transfers, local taxis, and long-distance travel across Leicester, Leicestershire and the East Midlands. Licensed by Leicester City Council.",
+    "Leicester taxis and Leicester cabs since 1995. 24/7 airport transfers, local taxis, and long-distance travel across Leicester, Leicestershire and the East Midlands. Licensed by Leicester City Council.",
   url: "https://aylestone-taxis.co.uk",
   logo: "https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png",
   image: "https://aylestone-taxis.co.uk/white-modern-taxi-side.webp",

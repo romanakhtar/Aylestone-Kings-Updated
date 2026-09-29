@@ -161,9 +161,9 @@ export const siteData = {
 
     // SEO-focused extended homepage content (rendered near page bottom)
     seoContent: {
-      introHeading: "Leicester Taxi Service – Trusted Since 1995",
+      introHeading: "Leicester Taxis, Leicester Cabs & Leicestershire Taxis",
       introBody:
-        "Looking for reliable transport in Leicester? Passengers can book licensed drivers across Leicester through Aylestone Taxis. Whether you need a local journey, a safe ride home, corporate travel, or a dependable airport transfer, licensed drivers are available through the Aylestone booking platform 24/7.",
+        "Looking for a taxi Leicester passengers can rely on? Book Leicester taxis, Leicester cabs and Leicestershire taxis with licensed drivers across the city and county. Local journeys, a safe ride home, corporate travel, or an airport transfer — Aylestone Taxis is available 24/7.",
 
       mission:
         "We specialise in fixed-price airport transfers from Leicester to East Midlands Airport, Birmingham Airport, Heathrow and other major UK airports. With on-time pickups, comfortable vehicles, and experienced local drivers, we ensure every journey is smooth and stress-free.",
@@ -236,7 +236,7 @@ export const siteData = {
       services: {
         heading: "Our Taxi Services Across Leicester",
         items: [
-          "Local Leicester Taxi Service — fast pick-ups and safe travel anywhere in Leicester",
+          "Local Leicester Taxi Service — Leicester taxis and Leicester cabs for fast pick-ups anywhere in the city",
           "Long-Distance Taxi Travel — comfortable and affordable to any UK destination",
           "Train Station Transfers — reliable for Leicester Railway Station and beyond",
           "Corporate & Business Taxi Accounts — professional travel for staff and clients",
@@ -250,7 +250,7 @@ export const siteData = {
       },
       areas: {
         heading: "Areas We Cover in Leicester & Leicestershire",
-        text: "Leicester City Centre, Oadby, Wigston, Evington, Belgrave, Spinney Hills, Highfields, Clarendon Park, Knighton, Hamilton, Beaumont Leys, Braunstone, Aylestone, Thurmaston, Syston, Birstall, Glenfield, Blaby, Narborough, Enderby, Loughborough, Hinckley, Coalville, Melton Mowbray, Market Harborough and more. If you are anywhere in Leicester — we’ll get to you quickly.",
+        text: "Leicester City Centre, Oadby, Wigston, Evington, Belgrave, Spinney Hills, Highfields, Clarendon Park, Knighton, Hamilton, Beaumont Leys, Fosse Park, Kirby Muxloe, Braunstone, Aylestone, Thurmaston, Syston, Birstall, Glenfield, Blaby, Narborough, Enderby, Loughborough, Hinckley, Coalville, Melton Mowbray, Market Harborough and more. If you are anywhere in Leicester or Leicestershire — we’ll get to you quickly.",
         links: [
           {
             name: "Leicester City Centre",
@@ -265,8 +265,10 @@ export const siteData = {
           { name: "Highfields", href: "/taxis-in/highfields" },
           { name: "Clarendon Park", href: "/taxis-in/clarendon-park" },
           { name: "Knighton", href: "/taxis-in/knighton" },
-          { name: "Hamilton", href: "/taxis-in/hamilton" },
-          { name: "Beaumont Leys", href: "/taxis-in/beaumont-leys" },
+          { name: "Hamilton taxis", href: "/taxis-in/hamilton" },
+          { name: "Beaumont Leys taxi", href: "/taxis-in/beaumont-leys" },
+          { name: "Fosse Park taxi", href: "/taxis-in/fosse-park" },
+          { name: "Kirby Muxloe taxi", href: "/taxis-in/kirby-muxloe" },
           { name: "Braunstone", href: "/taxis-in/braunstone" },
           { name: "Thurmaston", href: "/taxis-in/thurmaston" },
           { name: "Syston", href: "/taxis-in/syston" },
@@ -279,7 +281,7 @@ export const siteData = {
           { name: "Hinckley", href: "/taxis-in/hinckley" },
           { name: "Coalville", href: "/taxis-in/coalville" },
           { name: "Melton Mowbray", href: "/taxis-in/melton-mowbray" },
-          { name: "Market Harborough", href: "/taxis-in/market-harborough" },
+          { name: "Market Harborough taxis", href: "/taxis-in/market-harborough" },
         ],
       },
       fleet: {

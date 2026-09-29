@@ -5,18 +5,19 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 
 export const metadata: Metadata = {
-  title: "Taxi Leicester — Fixed Fares, No Surge | 4.7★ | Book 24/7",
+  title: "How to Book Leicester Taxis & Cabs | App, Phone, WhatsApp",
   description:
-    "Leicester taxi service with fixed prices and no surge charging. Rated 4.7 stars. DBS-checked drivers available 24/7. Call 0116 233 8888 or book online.",
-  keywords: "Taxi Leicester, taxi in Leicester, Leicester taxis, taxis in Leicester, Leicester taxi service, taxi company Leicester, taxi Leicester city centre",
+    "Book Leicester taxis and Leicester cabs by app, phone or WhatsApp. Same Aylestone Taxis service as the homepage — 24/7, fixed fares. Call 0116 233 8888.",
+  keywords:
+    "book taxi Leicester, Leicester taxi number, how to book Leicester cabs, Leicester taxi app, WhatsApp taxi Leicester",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/taxi-leicester",
+    canonical: "https://aylestone-taxis.co.uk/",
   },
   openGraph: {
-    title: "Taxi Leicester — Fixed Fares, No Surge | 4.7★ | Book 24/7",
+    title: "How to Book Leicester Taxis & Cabs | App, Phone, WhatsApp",
     description:
-      "Leicester taxi service with fixed prices and no surge charging. Rated 4.7 stars. DBS-checked drivers available 24/7. Call 0116 233 8888 or book online.",
-    url: "https://aylestone-taxis.co.uk/taxi-leicester",
+      "Book Leicester taxis and Leicester cabs by app, phone or WhatsApp. Same Aylestone Taxis service as the homepage — 24/7, fixed fares.",
+    url: "https://aylestone-taxis.co.uk/",
   },
 }
 
@@ -53,14 +54,18 @@ export default function TaxiLeicesterPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
-                Taxi Leicester
+                Book Leicester taxis &amp; cabs
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                Taxi Leicester - Your Trusted Local Taxi Service
+                How to Book Leicester Taxis and Cabs
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Looking for a reliable <strong>Taxi Leicester</strong>? Aylestone Taxis has been Leicester's most trusted taxi service since 1995. 
-                Fast pick-ups, professional drivers, and competitive prices throughout Leicester and Leicestershire.
+                Same Aylestone Taxis service as our{" "}
+                <Link href="/" className="text-[#06A0A6] font-semibold underline underline-offset-2">
+                  Taxi Leicester homepage
+                </Link>
+                : app, phone or WhatsApp, fixed fares, licensed drivers since 1995. Use this page if you want booking
+                steps and local area links — then confirm your ride in seconds.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

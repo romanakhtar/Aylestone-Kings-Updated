@@ -9,6 +9,9 @@ type AirportSeoConfig = {
   title?: string
   /** Meta description override (aim for a clear benefit + CTA, ~150–160 characters). */
   description?: string
+  /** Override canonical when two route URLs share the same intent. */
+  canonicalPath?: string
+  keywords?: string[]
 }
 
 const siteUrl = "https://aylestone-taxis.co.uk"
@@ -20,8 +23,11 @@ export function buildAirportMetadata({
   fromPrice,
   title: titleOverride,
   description: descriptionOverride,
+  canonicalPath,
+  keywords: keywordOverride,
 }: AirportSeoConfig): Metadata {
   const route = `/pricing/airports/${slug}`
+  const canonical = `${siteUrl}${canonicalPath ?? route}`
   const title =
     titleOverride ??
     `Leicester to ${airportName} Airport Taxi | From ${fromPrice} | Book 24/7`
@@ -32,20 +38,19 @@ export function buildAirportMetadata({
   return {
     title,
     description,
-    keywords: [
+    keywords: keywordOverride ?? [
       `Leicester to ${airportName} Airport taxi`,
-      `${airportName} airport transfer Leicester`,
-      `${airportCode} taxi Leicester`,
-      `${airportName} fixed fare taxi`,
-      `${airportName} airport pickup Leicester`,
+      `${airportName} airport transfer from Leicester`,
+      `taxi from Leicester to ${airportName} Airport`,
+      `${airportCode} taxi from Leicester`,
     ],
     alternates: {
-      canonical: `${siteUrl}${route}`,
+      canonical,
     },
     openGraph: {
       title,
       description,
-      url: `${siteUrl}${route}`,
+      url: canonical,
       siteName: "Aylestone Taxis",
       locale: "en_GB",
       type: "website",

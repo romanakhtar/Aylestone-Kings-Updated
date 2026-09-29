@@ -7,9 +7,10 @@ export const metadata = buildAirportMetadata({
   airportCode: "BHX",
   slug: "Birmingham",
   fromPrice: "£60",
-  title: "Birmingham Airport taxi Leicester | From £60 | BHX terminals",
+  title: "Leicester to Birmingham Airport Taxi | From £60",
   description:
-    "Leicester to Birmingham Airport (BHX): ~38 mi, ~55–75 min via M69/M6. One terminal, T1/T2 forecourt zones. Fixed from £60. Emirates, KLM, Jet2 — book or call 0116 2338888 24/7.",
+    "Leicester to Birmingham Airport (BHX): ~38 mi, ~55–75 min via M69/M6. One terminal, T1/T2 forecourt. Fixed from £60. Book or call 0116 2338888 24/7.",
+  canonicalPath: "/taxi-to-birmingham-airport",
 })
 
 export default function BirminghamPage() {

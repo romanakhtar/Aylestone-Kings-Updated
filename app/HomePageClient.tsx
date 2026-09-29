@@ -22,8 +22,19 @@ export default function HomePageClient() {
 
   const homeFaqs = [
     {
-      question: "How do I book a taxi in Leicester?",
-      answer: "Book online in seconds or call our office. You can book instantly or pre-book for later.",
+      question: "How do I book a taxi Leicester passengers use every day?",
+      answer:
+        "Book Leicester taxis and Leicester cabs online in seconds, call 0116 233 8888, or WhatsApp us. You see a fixed fare before you confirm.",
+    },
+    {
+      question: "Are Leicester cabs and Leicester taxis the same service?",
+      answer:
+        "Yes. Leicester cabs, Leicester taxi and taxi Leicester searches all point to the same Aylestone Taxis service — licensed drivers, fixed fares, no surge.",
+    },
+    {
+      question: "Do you cover Leicestershire taxis outside the city?",
+      answer:
+        "Yes. Leicestershire taxis with Aylestone Taxis cover towns and villages across the county, including Hamilton, Beaumont Leys, Fosse Park, Kirby Muxloe and Market Harborough, plus airport transfers.",
     },
     {
       question: "Are you available 24/7?",
