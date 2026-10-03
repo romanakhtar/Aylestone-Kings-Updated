@@ -3,6 +3,9 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/meet-and-greet-taxi-leicester")
 
 export const metadata: Metadata = {
   title: "Meet and Greet Taxi Leicester | EMA & BHX | Aylestone",
@@ -11,13 +14,13 @@ export const metadata: Metadata = {
   keywords:
     "meet and greet taxi Leicester, meet & greet taxi Leicester, airport meet and greet Leicester, East Midlands Airport meet and greet taxi, EMA meet and greet taxi, Birmingham Airport meet and greet taxi, BHX meet and greet taxi, taxi with name board Leicester",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/meet-and-greet-taxi-leicester",
+    canonical,
   },
   openGraph: {
     title: "Meet and Greet Taxi Leicester | EMA & BHX | Aylestone",
     description:
       "Pre-book a meet and greet taxi Leicester for EMA and BHX. Your driver meets you in arrivals with a name sign, assists with luggage and walks you to your taxi.",
-    url: "https://aylestone-taxis.co.uk/meet-and-greet-taxi-leicester",
+    url: canonical,
   },
 }
 

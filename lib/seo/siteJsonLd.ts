@@ -1,7 +1,7 @@
 import { contactInfo, siteData } from "@/lib/data"
+import { SITE_ORIGIN } from "@/lib/seo/canonical"
 
-/** Canonical site origin (must match metadata / sitemap). */
-export const SITE_ORIGIN = "https://aylestone-taxis.co.uk"
+export { SITE_ORIGIN }
 
 /** Stable @id for the business entity (used across Service provider references). */
 export const LOCAL_BUSINESS_ID = `${SITE_ORIGIN}/#business`

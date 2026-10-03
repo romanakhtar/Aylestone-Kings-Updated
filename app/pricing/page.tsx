@@ -4,19 +4,22 @@ import { contactInfo } from "@/lib/data"
 import Link from "next/link"
 import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/pricing")
 
 export const metadata: Metadata = {
   title: "Airport Taxi Prices Leicester | From £40 | 24/7",
   description:
     "Compare fixed airport taxi prices from Leicester — from £40 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/pricing",
+    canonical,
   },
   openGraph: {
     title: "Airport Taxi Prices Leicester | From £40 | 24/7",
     description:
       "Compare fixed airport taxi prices from Leicester — from £40 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
-    url: "https://aylestone-taxis.co.uk/pricing",
+    url: canonical,
   },
   twitter: {
     card: "summary_large_image",

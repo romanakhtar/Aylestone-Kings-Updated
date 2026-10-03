@@ -6,8 +6,9 @@ import FAQSchema from "@/components/seo/FAQSchema"
 import JsonLd from "@/components/seo/JsonLd"
 import AreaPageDeferredFAQ from "@/components/areas/AreaPageDeferredFAQ"
 import { getAreaServiceAreaLocalBusinessJsonLd } from "@/lib/seo/siteJsonLd"
+import { buildCanonical } from "@/lib/seo/canonical"
 
-const CANONICAL = "https://aylestone-taxis.co.uk/airport-taxi-leicester"
+const CANONICAL = buildCanonical("/airport-taxi-leicester")
 
 export const metadata: Metadata = {
   title: "Airport Taxi Leicester | Fixed Fares 24/7 | Aylestone Taxis",

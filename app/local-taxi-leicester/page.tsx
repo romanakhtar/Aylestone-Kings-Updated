@@ -2,6 +2,9 @@ import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Navigation, Home
 import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/local-taxi-leicester")
 
 export const metadata: Metadata = {
   title: "Taxi in Leicester Now | 24/7 Local Service",
@@ -9,13 +12,13 @@ export const metadata: Metadata = {
     "Need a taxi in Leicester right now? Fast local pickups, licensed drivers, fixed fares, 24/7. Book online or call 0116 233 8888.",
   keywords: "local taxi Leicester, taxi service Leicester, local taxi Aylestone, quick taxi Leicester, affordable taxi Leicester",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/local-taxi-leicester",
+    canonical,
   },
   openGraph: {
     title: "Taxi in Leicester Now | 24/7 Local Service",
     description:
       "Need a taxi in Leicester right now? Fast local pickups, licensed drivers, fixed fares, 24/7. Book online or call 0116 233 8888.",
-    url: "https://aylestone-taxis.co.uk/local-taxi-leicester",
+    url: canonical,
   },
   twitter: {
     card: "summary_large_image",

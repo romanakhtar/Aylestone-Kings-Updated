@@ -7,18 +7,21 @@ import {
 } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/services")
 
 export const metadata: Metadata = {
   title: "Leicester Taxi Services | Fixed Fares | Book 24/7",
   description:
     "Explore Aylestone Taxis' Leicester services — airport transfers, school runs, corporate travel & more. Book today.",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/services",
+    canonical,
   },
   openGraph: {
     title: "Taxi Services Leicester | Aylestone Taxis",
     description: "Airport, local, school runs, business travel — book online or call 0116 2338888.",
-    url: "https://aylestone-taxis.co.uk/services",
+    url: canonical,
   },
 }
 

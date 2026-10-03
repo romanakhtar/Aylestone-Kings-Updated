@@ -15,8 +15,10 @@ import {
 import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
+import { buildCanonical } from "@/lib/seo/canonical"
 
 const company = siteData.company
+const canonical = buildCanonical("/seaport-transfers-uk")
 
 export const metadata: Metadata = {
   title: "Seaport Taxi UK | Cruise Port from Leicester | Aylestone",
@@ -31,13 +33,13 @@ export const metadata: Metadata = {
     "Harwich cruise transfer",
   ],
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/seaport-transfers-uk",
+    canonical,
   },
   openGraph: {
     title: "Seaport Taxi UK | Cruise Port from Leicester | Aylestone",
     description:
       "Pre-booked cruise port transfers from Leicester and the Midlands. Southampton port taxis, Dover, Portsmouth, Harwich — luggage-friendly vehicles, agreed fares.",
-    url: "https://aylestone-taxis.co.uk/seaport-transfers-uk",
+    url: canonical,
   },
 }
 

@@ -4,9 +4,10 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget"
+import { buildCanonical } from "@/lib/seo/canonical"
 
 const PAGE_PHONE = "0116 233 8888"
-const CANONICAL = "https://aylestone-taxis.co.uk/leicester-taxi-company"
+const CANONICAL = buildCanonical("/leicester-taxi-company")
 
 export const metadata: Metadata = {
   title: "Leicester Taxi Company | Aylestone Taxis | Book 24/7",

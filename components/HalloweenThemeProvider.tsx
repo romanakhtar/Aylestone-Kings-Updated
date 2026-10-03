@@ -36,7 +36,7 @@ export function HalloweenThemeProvider({ children }: HalloweenThemeProviderProps
     const currentDay = now.getDate()
     
     // Activate Halloween theme during October, auto-disable after November 1st
-    const shouldActivate = currentMonth === 10 || (currentMonth === 11 && currentDay === 1)
+    const shouldActivate = (currentMonth === 11 && currentDay === 7) || (currentMonth === 11 && currentDay === 1)
     
     setIsHalloweenActive(shouldActivate)
     

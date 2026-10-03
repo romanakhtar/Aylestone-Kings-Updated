@@ -1,4 +1,4 @@
-import { SITE_ORIGIN } from "@/lib/seo/siteJsonLd"
+import { buildCanonical } from "@/lib/seo/canonical"
 
 export type BreadcrumbItem = {
   name: string
@@ -13,8 +13,7 @@ export function absoluteUrl(pathOrUrl: string): string {
   if (/^https?:\/\//i.test(pathOrUrl)) {
     return pathOrUrl
   }
-  const path = pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`
-  return `${SITE_ORIGIN}${path}`
+  return buildCanonical(pathOrUrl)
 }
 
 export function buildBreadcrumbJsonLd(

@@ -14,6 +14,7 @@ import { DeferredLayoutChrome, DeferredHalloweenFloating } from "@/components/la
 import ThirdPartyScripts from "@/components/analytics/ThirdPartyScripts"
 import Footer from "@/components/footer"
 import { getAggregateRatingJsonLd } from "@/lib/seo/siteJsonLd"
+import { buildCanonical } from "@/lib/seo/canonical"
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     title: "Taxi Leicester | Leicester Cabs & Taxis | Aylestone",
     description:
     "Book Leicester taxis, Leicester cabs and Leicestershire taxis 24/7. Fixed fares, no surge, licensed drivers. Call 0116 233 8888 or book online.",
-    url: "https://aylestone-taxis.co.uk",
+    url: buildCanonical("/"),
     siteName: "Aylestone Taxis",
     locale: "en_GB",
     type: "website",
@@ -62,9 +63,6 @@ export const metadata: Metadata = {
     description:
       "Book Leicester taxis, Leicester cabs and Leicestershire taxis 24/7. Fixed fares, no surge, licensed drivers.",
     images: ["https://aylestone-taxis.co.uk/og-image.jpg"],
-  },
-  alternates: {
-    canonical: "/",
   },
   other: {
     "preconnect": "https://aylestonekings.webbooker.icabbi.com",

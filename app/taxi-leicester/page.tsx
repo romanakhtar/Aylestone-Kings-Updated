@@ -3,6 +3,9 @@ import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/taxi-leicester")
 
 export const metadata: Metadata = {
   title: "How to Book Leicester Taxis & Cabs | App, Phone, WhatsApp",
@@ -11,13 +14,19 @@ export const metadata: Metadata = {
   keywords:
     "book taxi Leicester, Leicester taxi number, how to book Leicester cabs, Leicester taxi app, WhatsApp taxi Leicester",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/",
+    canonical,
   },
   openGraph: {
     title: "How to Book Leicester Taxis & Cabs | App, Phone, WhatsApp",
     description:
       "Book Leicester taxis and Leicester cabs by app, phone or WhatsApp. Same Aylestone Taxis service as the homepage — 24/7, fixed fares.",
-    url: "https://aylestone-taxis.co.uk/",
+    url: canonical,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Book Leicester Taxis & Cabs | App, Phone, WhatsApp",
+    description:
+      "Book Leicester taxis and Leicester cabs by app, phone or WhatsApp. Same Aylestone Taxis service as the homepage — 24/7, fixed fares. Call 0116 233 8888.",
   },
 }
 
