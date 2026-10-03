@@ -28,6 +28,8 @@ export default function AnimatedHero() {
   
   // Core homepage search-intent messaging (used when not in seasonal modes)
   const isSeasonal = isHalloweenActive || isChristmasActive || isValentineActive
+  // Halloween keeps the default hero copy - only the background changes
+  const isSeasonalCopy = isChristmasActive || isValentineActive
   const coreFeatures = [
     "24/7 Leicester Taxi Service",
     "Fixed & Transparent Fares",
@@ -98,37 +100,37 @@ export default function AnimatedHero() {
         </div>
       )}
 
-      {/* Halloween Background Image - Extended */}
+      {/* Halloween hero background: art-directed photo + brand colour overlay */}
       {isHalloweenActive && (
-        <div className="absolute inset-0 opacity-50 z-0 h-screen pointer-events-none" aria-hidden>
-          <Image
-            src="/Halloweenbg.png"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-contain object-left"
-            loading="lazy"
-          />
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden>
+          {/* Portrait crop on phones, landscape on tablet/desktop - the browser downloads only one */}
+          <picture>
+            <source media="(min-width: 1024px)" srcSet="/Halloween-Theme-bg-IMG.webp" />
+            <source media="(max-width: 1023px)" srcSet="/Halloween-Theme-bg-Mobile.webp" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/Halloween-Theme-bg-IMG.webp"
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover object-center"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+            />
+          </picture>
+
+          {/* Brand overlay, above the photo and below the hero content (z-10):
+              deep brand navy at the left where the copy sits, clearing to the right. */}
+          {/* Primary brand colour, strongest at the left and decreasing to the right -
+              never fully clear, so the whole hero carries the brand wash. */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#06A0A6]/90 via-[#06A0A6]/45 to-[#06A0A6]/15" />
+          {/* Navy under the copy keeps the headline readable over the photo */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0F0D3E]/85 via-[#0F0D3E]/35 via-40% to-transparent to-75%" />
+          {/* Grounds the hero into the section below */}
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0F0D3E]/85 to-transparent" />
         </div>
       )}
-      
-      {/* Spider Web Background Image */}
-      {isHalloweenActive && (
-        <div className="absolute right-0 top-0 opacity-50 z-0 w-[26%] min-w-[120px] max-w-[320px] aspect-square pointer-events-none" aria-hidden>
-          <Image
-            src="/Spider-web2.png"
-            alt=""
-            fill
-            sizes="(max-width: 768px) 120px, 320px"
-            className="object-contain object-right-top"
-            loading="lazy"
-          />
-        </div>
-      )}
-      
-      {/* Halloween Overlay */}
-      {isHalloweenActive && <div className="halloween-hero-overlay" />}
-      {isHalloweenActive && <div className="halloween-mist" />}
+
+      {/* Halloween haze layers disabled - the background photo carries the atmosphere */}
       
       
       {/* Christmas Background Pattern Overlay */}
@@ -203,12 +205,12 @@ export default function AnimatedHero() {
             <h1
               id="hero-heading"
               className={`text-2xl md:text-3xl font-bold mb-2 leading-tight ${
-                isChristmasActive ? 'text-white' : 'text-[#0F0D3E]'
+                isChristmasActive || isHalloweenActive
+                  ? 'text-white [text-shadow:0_2px_14px_rgba(5,8,30,0.55)]'
+                  : 'text-[#0F0D3E]'
               }`}
             >
-              {isHalloweenActive
-                ? "Leicester Taxi Service & Airport Transfers Fixed Fares 24/7 🎃"
-                : isValentineActive
+              {isValentineActive
                 ? "Reliable, Safe Taxi for Your Valentine's Evening"
                 : isChristmasActive
                 ? "Leicester Taxi Service This Christmas"
@@ -218,16 +220,16 @@ export default function AnimatedHero() {
             {/* Description */}
             <div
   className={`text-lg mb-1 leading-relaxed ${
-    isChristmasActive ? 'text-[#E4E4E4]' : 'text-[#2E3C44]'
+    isChristmasActive || isHalloweenActive ? 'text-[#E4E4E4]' : 'text-[#2E3C44]'
   }`}
 >
   {isValentineActive ? (
     "Pre-book with confidence. Licensed, safe, and on time, every time."
-  ) : isSeasonal ? (
+  ) : isSeasonalCopy ? (
     siteData.homepage.hero.subtitle
   ) : (
     <>
-      <p className="mb-0">
+      <p className={isChristmasActive || isHalloweenActive ? "mb-0 text-[#E4E4E4]" : "mb-0"}>
         <strong>Book a taxi Leicester locals have used since 1995.</strong> Aylestone Taxis runs Leicester taxis and Leicester cabs with licensed drivers, fixed fares, and no surge pricing. Available 24/7, we provide:
       </p>
       <ul className="list-disc pl-6 space-y-0">
@@ -242,7 +244,7 @@ export default function AnimatedHero() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
               {(isValentineActive
                 ? ["Reliable", "Safe", "Pre-book"]
-                : isSeasonal
+                : isSeasonalCopy
                 ? siteData.homepage.hero.features
                 : coreFeatures
               ).map((feature, index) => {
@@ -256,17 +258,19 @@ export default function AnimatedHero() {
                           ? 'bg-[#EF5B6A]/20 border-[#EF5B6A]/40'
                           : isChristmasActive
                           ? 'bg-[#D9B35A]/20 border-[#D9B35A]/30'
+                          : isHalloweenActive
+                          ? 'bg-white/10 border-white/30 backdrop-blur-sm shadow-lg shadow-black/20'
                           : 'bg-cyan-500/20 border-cyan-500/30'
                       }`}
                     >
                       <IconComponent
                         className={`h-4 w-4 ${
-                          isValentineActive ? 'text-[#EF5B6A]' : isChristmasActive ? 'text-[#D9B35A]' : 'text-[#06A0A6]'
+                          isValentineActive ? 'text-[#EF5B6A]' : isChristmasActive ? 'text-[#D9B35A]' : isHalloweenActive ? 'text-[#FF8A3D]' : 'text-[#06A0A6]'
                         }`}
                       />
                       <span
                         className={`font-medium text-sm ${
-                          isChristmasActive ? 'text-white' : 'text-[#2E3C44]'
+                          isChristmasActive || isHalloweenActive ? 'text-white' : 'text-[#2E3C44]'
                         }`}
                       >
                         {feature}
@@ -289,9 +293,7 @@ export default function AnimatedHero() {
                   : 'bg-[#06A0A6] hover:bg-[#0F0D3E] text-white'
               } w-full sm:w-auto px-8 py-4 rounded-lg font-semibold text-sm flex items-center justify-center gap-3 shadow-lg hover:shadow-xl mb-4`}
             >
-              {isHalloweenActive
-                ? "Book Your Spook-tacular Ride Now 🎃"
-                : isValentineActive
+              {isValentineActive
                 ? "Pre-book Your Ride 🧡"
                 : isChristmasActive
                 ? "🎄 Book Your Festive Ride Now 🎄"

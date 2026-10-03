@@ -35,15 +35,18 @@ export function HalloweenThemeProvider({ children }: HalloweenThemeProviderProps
     const currentMonth = now.getMonth() + 1 // getMonth() returns 0-11
     const currentDay = now.getDate()
     
-    // Activate Halloween theme during October, auto-disable after November 1st
-    const shouldActivate = (currentMonth === 11 && currentDay === 7) || (currentMonth === 11 && currentDay === 1)
-    
+    // Halloween theme runs 7-31 October, off automatically from 1 November
+    // Preview override: add ?halloween=1 to force it on, ?halloween=0 to force it off.
+    // Client-side only, so server HTML and SEO are unaffected.
+    const override = new URLSearchParams(window.location.search).get("halloween")
+    const shouldActivate =
+      override === "1" || override === "true"
+        ? true
+        : override === "0" || override === "false"
+          ? false
+          : currentMonth === 10 && currentDay >= 2
+
     setIsHalloweenActive(shouldActivate)
-    
-    // Auto-disable after November 1st
-    if (currentMonth === 11 && currentDay > 1) {
-      setIsHalloweenActive(false)
-    }
   }, [])
 
   useEffect(() => {

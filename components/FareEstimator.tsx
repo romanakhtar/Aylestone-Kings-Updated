@@ -229,7 +229,7 @@ const FareEstimator: React.FC = () => {
                     }}
                   >
                     <div className="parking-note">
-                      🚗 <strong>Standard saloon car (up to 4 passengers).</strong> Need a larger vehicle?{" "}
+                      <strong>Standard saloon car (up to 4 passengers).</strong> Need a larger vehicle?{" "}
                       <a
                         href="https://aylestonekings.webbooker.icabbi.com/"
                         target="_blank"
@@ -563,7 +563,8 @@ const FareEstimator: React.FC = () => {
                     }}
                   >
                     <div className="parking-note">
-                      🚗 <strong>Standard saloon car (up to 4 passengers).</strong> Need a larger vehicle?{" "}
+                      
+                      <strong>Standard saloon car (up to 4 passengers).</strong> Need a larger vehicle?{" "}
                       <a
                         href="https://aylestonekings.webbooker.icabbi.com/"
                         target="_blank"
