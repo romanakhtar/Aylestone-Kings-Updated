@@ -7,13 +7,13 @@ import { siteData, contactInfo } from "@/lib/data"
 import { onBookNowClick } from "@/lib/analytics"
 import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
+import HomeReviewsSection from "@/components/home/HomeReviewsSection"
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 import { useValentineTheme } from "@/components/ValentineThemeProvider"
 
 const FareEstimator = dynamic(() => import("@/components/FareEstimator"), { ssr: false })
 const FAQSchema = dynamic(() => import("@/components/seo/FAQSchema"))
 const AppDownloadButtons = dynamic(() => import("@/components/AppDownloadButtons"), { ssr: false })
-const HomeReviewsSection = dynamic(() => import("@/components/home/HomeReviewsSection"))
 const HomeFAQSection = dynamic(() => import("@/components/home/HomeFAQSection"))
 
 export default function HomePageClient() {

@@ -2,12 +2,10 @@
 
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
-import dynamic from "next/dynamic"
 import { ArrowRight, MapPin, Clock, Shield } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import { trackBookNowClick, onPhoneClick } from "@/lib/analytics"
-
-const ContactModeCards = dynamic(() => import("@/components/ContactModeCards"), { ssr: false })
+import ContactModeCards from "@/components/ContactModeCards"
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 import { useChristmasTheme } from "@/components/ChristmasThemeProvider"
 import { useValentineTheme } from "@/components/ValentineThemeProvider"
@@ -118,15 +116,22 @@ export default function AnimatedHero() {
             />
           </picture>
 
-          {/* Brand overlay, above the photo and below the hero content (z-10):
-              deep brand navy at the left where the copy sits, clearing to the right. */}
-          {/* Primary brand colour, strongest at the left and decreasing to the right -
-              never fully clear, so the whole hero carries the brand wash. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#06A0A6]/90 via-[#06A0A6]/45 to-[#06A0A6]/15" />
-          {/* Navy under the copy keeps the headline readable over the photo */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F0D3E]/85 via-[#0F0D3E]/35 via-40% to-transparent to-75%" />
-          {/* Grounds the hero into the section below */}
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0F0D3E]/85 to-transparent" />
+          {/* Navy overlay matching the reference: solid on the left copy, gone by 70%, right 30% is the photo. */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(15,13,62,0.94) 0%, rgba(15,13,62,0.86) 28%, rgba(15,13,62,0.42) 48%, rgba(15,13,62,0.12) 62%, rgba(15,13,62,0) 70%)",
+            }}
+          />
+          {/* Soft navy lift at the base of the copy, kept inside the left 70% so the clock tower stays clear */}
+          <div
+            className="absolute bottom-0 left-0 h-36 w-[70%]"
+            style={{
+              background:
+                "linear-gradient(to top, rgba(15,13,62,0.88) 0%, rgba(15,13,62,0.35) 50%, rgba(15,13,62,0) 100%)",
+            }}
+          />
         </div>
       )}
 
@@ -199,7 +204,7 @@ export default function AnimatedHero() {
       >
         <div className={`grid grid-cols-1 ${isChristmasActive ? 'lg:grid-cols-2' : 'lg:grid-cols-2'} gap-8 lg:gap-16 items-start w-full`}>
           {/* Left Content - Main Content with Enhanced Visuals */}
-          <div className={`${isChristmasActive ? 'order-1 lg:order-1' : 'order-1'} max-w-xl`}>
+          <div className={`${isChristmasActive ? 'order-1 lg:order-1' : 'order-1'} w-[70%] lg:w-auto max-w-xl`}>
             
             {/* Main Heading */}
             <h1
@@ -334,8 +339,9 @@ export default function AnimatedHero() {
                     width={280}
                     height={224}
                     sizes="(max-width: 768px) 80px, 280px"
-                    className="relative z-10 w-38 lg:w-[280px] h-auto drop-shadow-2xl"
+                    className="relative z-10 w-auto max-w-[80px] lg:max-w-[280px] drop-shadow-2xl"
                     style={{ width: "auto", height: "auto" }}
+                    priority
                   />
                 </div>
               </div>
@@ -345,7 +351,7 @@ export default function AnimatedHero() {
           
           {/* Right Content - Contact Mode Cards (Desktop Only) */}
           <div className="hidden lg:flex max-w-md order-2 justify-center lg:justify-end mb-8 lg:mb-0 lg:self-stretch lg:items-center">
-            <ContactModeCards />
+            <ContactModeCards transparentBackground={isHalloweenActive} />
           </div>
         </div>
       </div>

@@ -3,7 +3,6 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
-import GoogleReviewsWidget from "@/components/GoogleReviewsWidget"
 import { buildCanonical } from "@/lib/seo/canonical"
 
 const PAGE_PHONE = "0116 233 8888"
@@ -239,7 +238,6 @@ export default function LeicesterTaxiCompanyPage() {
           </div>
         </section>
 
-        <GoogleReviewsWidget />
 
         {/* CTA */}
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">
