@@ -3,6 +3,9 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/gatwick-south-terminal-taxi-transfers")
 
 export const metadata: Metadata = {
   title: "Leicester to Gatwick South Taxi | Fixed Fares | Aylestone",
@@ -11,13 +14,13 @@ export const metadata: Metadata = {
   keywords:
     "Leicester to Gatwick South taxi, Gatwick South terminal taxi Leicester, taxi to Gatwick South from Leicester, Gatwick airport transfer Leicester, Gatwick South pickup",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/gatwick-south-terminal-taxi-transfers",
+    canonical,
   },
   openGraph: {
     title: "Leicester to Gatwick South Taxi | Fixed Fares | Aylestone",
     description:
       "Leicester to Gatwick South: fixed pricing, flight tracking, professional drivers. Book online or call 0116 2338888.",
-    url: "https://aylestone-taxis.co.uk/gatwick-south-terminal-taxi-transfers",
+    url: canonical,
   },
 }
 

@@ -13,6 +13,9 @@ import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/cheap-taxi-leicester")
 
 export const metadata: Metadata = {
   title: "Cheap Taxi Leicester | Fixed Low Fares | Book 24/7",
@@ -20,13 +23,13 @@ export const metadata: Metadata = {
     "Affordable Leicester taxis with fixed, low fares — no surge pricing. Licensed drivers, 24/7. Get an instant quote now.",
   keywords: "Cheap Taxi Leicester, cheapest taxi Leicester, cheap taxi in Leicester, cheapest taxi in Leicester, 24 hour taxi Leicester, affordable taxi Leicester, budget taxi Leicester, low cost taxi Leicester, cheap taxi to East Midlands Airport",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/cheap-taxi-leicester",
+    canonical,
   },
   openGraph: {
     title: "Cheap Taxi Leicester | Online Quotes | Aylestone Taxis",
     description:
       "Affordable Leicester taxis with transparent pricing. Book online or call 0116 2338888 — 24/7.",
-    url: "https://aylestone-taxis.co.uk/cheap-taxi-leicester",
+    url: canonical,
   },
 }
 

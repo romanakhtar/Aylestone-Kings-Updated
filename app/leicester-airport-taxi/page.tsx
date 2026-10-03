@@ -2,6 +2,9 @@ import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar, Plane 
 import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/leicester-airport-taxi")
 
 export const metadata: Metadata = {
   title: "Leicester Airport Taxi | Transfers 24/7 | 0116 2338888",
@@ -10,12 +13,12 @@ export const metadata: Metadata = {
   keywords:
     "Leicester Airport Taxi, Leicester airport taxis, airport taxi Leicester, Leicester airport transfers, Leicester airport transfer, airport taxi from Leicester, Leicester to airport taxi",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/leicester-airport-taxi",
+    canonical,
   },
   openGraph: {
     title: "Leicester Airport Taxi | Transfers & Airport Taxis",
     description: "UK-wide airport transfers from Leicester. Book online or call 0116 2338888 — 24/7.",
-    url: "https://aylestone-taxis.co.uk/leicester-airport-taxi",
+    url: canonical,
   },
 }
 

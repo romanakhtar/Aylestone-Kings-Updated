@@ -3,6 +3,9 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/gatwick-north-terminal-taxi-transfers")
 
 export const metadata: Metadata = {
   title: "Leicester to Gatwick North Taxi | Fixed Fares | Aylestone",
@@ -11,13 +14,13 @@ export const metadata: Metadata = {
   keywords:
     "Leicester to Gatwick North taxi, Gatwick North terminal taxi Leicester, taxi to Gatwick North from Leicester, Gatwick airport transfer Leicester, Gatwick North pickup",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/gatwick-north-terminal-taxi-transfers",
+    canonical,
   },
   openGraph: {
     title: "Leicester to Gatwick North Taxi | Fixed Fares | Aylestone",
     description:
       "Leicester to Gatwick North: fixed pricing, flight tracking, professional drivers. Book online or call 0116 2338888.",
-    url: "https://aylestone-taxis.co.uk/gatwick-north-terminal-taxi-transfers",
+    url: canonical,
   },
 }
 

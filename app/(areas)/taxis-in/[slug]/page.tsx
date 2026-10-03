@@ -12,9 +12,9 @@ import AreaPageDeferredFAQ from "@/components/areas/AreaPageDeferredFAQ"
 import { areaPageBreadcrumbs } from "@/lib/seo/breadcrumbs"
 import { collectAreaPageFaqs } from "@/lib/seo/areaPageFaqs"
 import { getAreaServiceAreaLocalBusinessJsonLd } from "@/lib/seo/siteJsonLd"
+import { buildCanonical } from "@/lib/seo/canonical"
 
 type AreaItem = { name: string; href: string }
-const siteUrl = "https://aylestone-taxis.co.uk"
 
 /** Area pages with dedicated FAQ sets only — no generic or slug-extra FAQ templates. */
 const DEDICATED_FAQ_AREA_SLUGS = new Set([
@@ -2103,7 +2103,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       ? `Taxi to ${areaName}, Leicester — fixed fares, licensed drivers, 24/7. Book online or call 0116 2338888.`
       : `Need a taxi in ${areaName}? Aylestone Taxis: fast local pickups, airport transfers, school runs. Book online in seconds or call 0116 2338888 — 24/7.`
   
-  const canonicalUrl = `${siteUrl}/taxis-in/${slug}`
+  const canonicalUrl = buildCanonical(`/taxis-in/${slug}`)
   
   return {
     title,
@@ -2379,7 +2379,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
   const areaLocalBusinessJsonLd = isLeicesterCityCentre
     ? getAreaServiceAreaLocalBusinessJsonLd({
-        pageUrl: `${siteUrl}/taxis-in/leicester-city-centre`,
+        pageUrl: buildCanonical("/taxis-in/leicester-city-centre"),
         serviceAreaName: "Leicester City Centre",
         geo: { latitude: 52.6369, longitude: -1.1398 },
         description:

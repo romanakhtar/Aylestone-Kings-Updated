@@ -12,9 +12,10 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
+import { buildCanonical } from "@/lib/seo/canonical"
 
 const PAGE_PHONE = "0116 233 8888"
-const CANONICAL = "https://aylestone-taxis.co.uk/wheelchair-accessible-taxi-leicester"
+const CANONICAL = buildCanonical("/wheelchair-accessible-taxi-leicester")
 
 export const metadata: Metadata = {
   title: "Wheelchair Accessible Taxi Leicester | Aylestone Taxis",

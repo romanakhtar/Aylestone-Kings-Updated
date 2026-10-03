@@ -3,8 +3,9 @@ import BirminghamAirportContent from "../pricing/airports/Birmingham/BirminghamA
 import { birminghamPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
 import JsonLd from "@/components/seo/JsonLd"
 import { getTaxiServiceJsonLd } from "@/lib/seo/siteJsonLd"
+import { buildCanonical } from "@/lib/seo/canonical"
 
-const CANONICAL_URL = "https://aylestone-taxis.co.uk/taxi-to-birmingham-airport"
+const CANONICAL_URL = buildCanonical("/taxi-to-birmingham-airport")
 
 export const metadata: Metadata = {
   title: "Leicester to Birmingham Airport Taxi | From £60",

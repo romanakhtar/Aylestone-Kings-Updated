@@ -3,24 +3,26 @@ export const siteData = {
   company: {
     name: "Aylestone Taxis",
     tagline: "",
-    region: "Aylestone and surrounding areas",
-    phone: "0116 2338888",
+    region: "Leicester and Leicestershire",
+    phone: "0116 233 8888",
+    phoneE164: "+441162338888",
     whatsapp: "+447535855786",
     email: "info@aylestone-taxis.co.uk",
     address: "753A Aylestone Rd, Aylestone, Leicester, LE2 8TG, UK",
+    geo: { lat: 52.6369, lng: -1.1398 },
     description:
-      "Founded in 1995, Aylestone Taxis started a mission to provide a reliable and affordable taxi service to the people of Aylestone and surrounding areas. Today, we operate across the region, offering diverse services 365 days a year with the same commitment to excellence.",
-    founded: "1995",
-    passengersServed: "10,000",
-    satisfactionRating: "99.7%",
-    yearsExperience: "30+",
+      "Aylestone Taxis has served Leicester and Leicestershire since 1995, offering fixed-fare local journeys, airport transfers and late-night rides, available 24/7 with licensed, DBS-checked drivers.",
+    founded: 1995,
     serviceAvailability: "24/7",
-    happyCustomers: "10,000+",
-    drivers: "Multiple Professional Drivers",
     licenses: [
       "Licensed by Leicester City Council and Wolverhampton City Council",
-      "Drivers are DBS checked, ensuring a safe and secure service",
-      "Providing airport, courier services and more",
+      "Drivers are DBS checked",
+    ],
+    services: ["Local taxis", "Airport transfers", "Courier services", "Corporate accounts"],
+    sameAs: [
+      "https://www.facebook.com/share/1EzHEEqLRK/",
+      "https://www.instagram.com/aylestone_kings",
+      // add the Google Business Profile URL
     ],
   },
 

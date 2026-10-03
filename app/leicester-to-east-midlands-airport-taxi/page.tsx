@@ -3,8 +3,9 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
+import { buildCanonical } from "@/lib/seo/canonical"
 
-const CANONICAL = "https://aylestone-taxis.co.uk/leicester-to-east-midlands-airport-taxi"
+const CANONICAL = buildCanonical("/leicester-to-east-midlands-airport-taxi")
 
 export const metadata: Metadata = {
   title: "Leicester to EMA Taxi Route & Times | From £40",

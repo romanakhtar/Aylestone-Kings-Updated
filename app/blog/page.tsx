@@ -4,19 +4,22 @@ import { Calendar, User, ArrowRight, BookOpen } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import BlogListingJsonLd from "@/components/seo/BlogListingJsonLd"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/blog")
 
 export const metadata: Metadata = {
   title: "Leicester Taxi Blog | Tips, Airports & Travel | Aylestone",
   description:
     "Read the Aylestone Taxis blog for Leicester travel guides — airport transfers, matchday taxis, prom transport, student moves, fare comparisons, and booking tips. Free advice from your local 24/7 taxi company. Book online or call 0116 2338888.",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/blog",
+    canonical,
   },
   openGraph: {
     title: "Leicester Taxi Blog | Aylestone Taxis",
     description:
       "Practical Leicester travel guides — airports, matchdays, prom nights, student moves, and fare tips from Aylestone Taxis. Book 24/7 on 0116 2338888.",
-    url: "https://aylestone-taxis.co.uk/blog",
+    url: canonical,
   },
 }
 

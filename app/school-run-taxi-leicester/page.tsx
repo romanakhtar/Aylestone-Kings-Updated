@@ -9,6 +9,9 @@ import {
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/school-run-taxi-leicester")
 
 export const metadata: Metadata = {
   title: "School Run Taxi Leicester | DBS Drivers | Aylestone Taxis",
@@ -17,13 +20,13 @@ export const metadata: Metadata = {
   keywords:
     "school run taxi Leicester, school taxi Leicester, school transport Leicester, school run taxis Leicester, DBS checked school taxi Leicester, regular school run taxi Leicester, school run taxi Aylestone, school run taxi Wigston, school run taxi Knighton, school run taxi Clarendon Park",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/school-run-taxi-leicester",
+    canonical,
   },
   openGraph: {
     title: "School Run Taxi Leicester | DBS Drivers | Aylestone Taxis",
     description:
       "Safe, reliable school run taxi Leicester service with enhanced DBS-checked drivers and an option for the same regular driver. Covering Aylestone, Wigston, Knighton and Clarendon Park.",
-    url: "https://aylestone-taxis.co.uk/school-run-taxi-leicester",
+    url: canonical,
   },
   twitter: {
     card: "summary_large_image",

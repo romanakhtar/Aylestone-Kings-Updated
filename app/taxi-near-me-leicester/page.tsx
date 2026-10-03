@@ -3,6 +3,9 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/taxi-near-me-leicester")
 
 export const metadata: Metadata = {
   title: "Taxi Near Me Leicester | Taxis Near Me | Book in Seconds",
@@ -11,12 +14,12 @@ export const metadata: Metadata = {
   keywords:
     "taxi near me, taxis near me, Taxi Near Me Leicester, taxi near me leicester, Leicester taxi near me, find taxi Leicester, nearest taxi Leicester, 6 seater taxi near me",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/taxi-near-me-leicester",
+    canonical,
   },
   openGraph: {
     title: "Taxi Near Me Leicester | Taxis Near Me | Aylestone Taxis",
     description: "Taxi near me Leicester: instant quotes, 6-seaters available, 24/7. Call 0116 2338888 or book online.",
-    url: "https://aylestone-taxis.co.uk/taxi-near-me-leicester",
+    url: canonical,
   },
 }
 

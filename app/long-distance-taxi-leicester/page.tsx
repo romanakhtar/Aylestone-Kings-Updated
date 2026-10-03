@@ -2,6 +2,9 @@ import { Check, ArrowRight, Clock, Shield, Star, Phone, Briefcase, Route } from 
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/long-distance-taxi-leicester")
 
 export const metadata: Metadata = {
   title: "Long-Distance Taxi Leicester | UK-Wide | Book 0116 2338888",
@@ -10,13 +13,13 @@ export const metadata: Metadata = {
   keywords:
     "long distance taxi Leicester, long distance taxis, taxi for long distance, corporate taxi Leicester, business taxi Leicester, intercity taxi Leicester",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/long-distance-taxi-leicester",
+    canonical,
   },
   openGraph: {
     title: "Long-Distance Taxi Leicester | UK-Wide | Aylestone Taxis",
     description:
       "Corporate and long-distance taxi from Leicester with guide prices on popular routes. Agreed fares, 24/7. Book online or call 0116 2338888.",
-    url: "https://aylestone-taxis.co.uk/long-distance-taxi-leicester",
+    url: canonical,
   },
 }
 

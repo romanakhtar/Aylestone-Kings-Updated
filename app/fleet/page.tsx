@@ -2,18 +2,21 @@ import Image from "next/image"
 import { Check, ArrowRight, Users, Car, Shield, Star, Clock } from "lucide-react"
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/fleet")
 
 export const metadata: Metadata = {
   title: "Taxi Fleet Leicester | Saloons, MPVs & 8-Seaters | Aylestone",
   description:
     "Our Leicester taxi fleet: saloons, executive cars, 6- and 8-seaters — clean, licensed, maintained in-house. Need the right vehicle? Book online or call 0116 2338888.",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/fleet",
+    canonical,
   },
   openGraph: {
     title: "Taxi Fleet Leicester | Aylestone Taxis",
     description: "Modern vehicles for every journey. Book on 0116 2338888 or online.",
-    url: "https://aylestone-taxis.co.uk/fleet",
+    url: canonical,
   },
 }
 

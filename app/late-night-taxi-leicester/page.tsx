@@ -13,8 +13,9 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import JsonLd from "@/components/seo/JsonLd"
+import { buildCanonical } from "@/lib/seo/canonical"
 
-const CANONICAL = "https://aylestone-taxis.co.uk/late-night-taxi-leicester"
+const CANONICAL = buildCanonical("/late-night-taxi-leicester")
 const LATE_NIGHT_PHONE = "0116 233 8888"
 const WHATSAPP_HREF = "https://wa.me/447535855786?text=Hi!%20I%20need%20a%20late%20night%20taxi%20in%20Leicester"
 

@@ -13,6 +13,9 @@ import {
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/24-hour-taxi-leicester")
 
 export const metadata: Metadata = {
   title: "24 Hour Taxi Leicester — All Night Service | Book 24/7",
@@ -21,13 +24,13 @@ export const metadata: Metadata = {
   keywords:
     "24 hour taxi Leicester, 24 hour taxi in Leicester, all night taxi Leicester, 24/7 taxi Leicester, late night taxi Leicester, taxi Leicester 24 hours, overnight taxi Leicester",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/24-hour-taxi-leicester",
+    canonical,
   },
   openGraph: {
     title: "24 Hour Taxi Leicester — All Night Service | Book 24/7",
     description:
       "24 hour taxi Leicester - Round-the-clock taxi service. Day or night, bank holidays included. Book now or call 0116 2338888.",
-    url: "https://aylestone-taxis.co.uk/24-hour-taxi-leicester",
+    url: canonical,
   },
 }
 

@@ -207,7 +207,7 @@ export default function AnimatedHero() {
               }`}
             >
               {isHalloweenActive
-                ? "Driving Leicester Forward 🎃"
+                ? "Leicester Taxi Service & Airport Transfers Fixed Fares 24/7 🎃"
                 : isValentineActive
                 ? "Reliable, Safe Taxi for Your Valentine's Evening"
                 : isChristmasActive

@@ -6,6 +6,7 @@ import { notFound } from "next/navigation"
 import BlogFAQSection from "@/components/blog/BlogFAQSection"
 import BlogPostingJsonLd from "@/components/seo/BlogPostingJsonLd"
 import FAQSchema from "@/components/seo/FAQSchema"
+import { buildCanonical } from "@/lib/seo/canonical"
 
 export async function generateStaticParams() {
   return siteData.blogPage.blogs.map((blog) => ({
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
   }
 
-  const canonicalUrl = `https://aylestone-taxis.co.uk/blog/${blog.id}`
+  const canonicalUrl = buildCanonical(`/blog/${blog.id}`)
 
   const metaTitle = "metaTitle" in blog && blog.metaTitle ? blog.metaTitle : `${blog.title} | Aylestone Taxis`
   const metaDescription = "metaDescription" in blog && blog.metaDescription ? blog.metaDescription : blog.excerpt
@@ -71,7 +72,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     ? siteData.blogPage.blogs[currentIndex - 1] 
     : null
 
-  const canonicalUrl = `https://aylestone-taxis.co.uk/blog/${blog.id}`
+  const canonicalUrl = buildCanonical(`/blog/${blog.id}`)
   const imageAbsolute = blog.image ? `https://aylestone-taxis.co.uk${blog.image}` : undefined
   const faqs =
     "faqs" in blog && Array.isArray(blog.faqs) && blog.faqs.length > 0

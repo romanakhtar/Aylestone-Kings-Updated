@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { buildCanonical } from "@/lib/seo/canonical"
 
 type AirportSeoConfig = {
   airportName: string
@@ -14,8 +15,6 @@ type AirportSeoConfig = {
   keywords?: string[]
 }
 
-const siteUrl = "https://aylestone-taxis.co.uk"
-
 export function buildAirportMetadata({
   airportName,
   airportCode,
@@ -27,7 +26,7 @@ export function buildAirportMetadata({
   keywords: keywordOverride,
 }: AirportSeoConfig): Metadata {
   const route = `/pricing/airports/${slug}`
-  const canonical = `${siteUrl}${canonicalPath ?? route}`
+  const canonical = buildCanonical(canonicalPath ?? route)
   const title =
     titleOverride ??
     `Leicester to ${airportName} Airport Taxi | From ${fromPrice} | Book 24/7`

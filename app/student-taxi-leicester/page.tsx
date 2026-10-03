@@ -14,8 +14,9 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
+import { buildCanonical } from "@/lib/seo/canonical"
 
-const CANONICAL = "https://aylestone-taxis.co.uk/student-taxi-leicester"
+const CANONICAL = buildCanonical("/student-taxi-leicester")
 const STUDENT_PHONE = "0116 233 8888"
 
 export const metadata: Metadata = {

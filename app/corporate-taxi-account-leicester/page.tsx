@@ -20,8 +20,9 @@ import FAQSchema from "@/components/seo/FAQSchema"
 import CorporateAccountEnquiryForm from "@/components/CorporateAccountEnquiryForm"
 import JsonLd from "@/components/seo/JsonLd"
 import { getCorporateServiceGraphJsonLd } from "@/lib/seo/siteJsonLd"
+import { buildCanonical } from "@/lib/seo/canonical"
 
-const CORPORATE_CANONICAL = "https://aylestone-taxis.co.uk/corporate-taxi-account-leicester"
+const CORPORATE_CANONICAL = buildCanonical("/corporate-taxi-account-leicester")
 
 export const metadata: Metadata = {
   title: "Corporate Taxi Accounts Leicester | Business Travel",

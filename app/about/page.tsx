@@ -2,18 +2,21 @@ import Image from "next/image"
 import { Shield, Clock, Users, Award, MapPin, Phone, Check, ArrowRight, MessageCircle, Mail, Globe } from "lucide-react"
 import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
+import { buildCanonical } from "@/lib/seo/canonical"
+
+const canonical = buildCanonical("/about")
 
 export const metadata: Metadata = {
   title: "About Aylestone Taxis Taxi Leicester | Since 1995",
   description:
     "About us at Aylestone, Leicester: Aylestone Taxis taxi company since 1995, licensed private hire, DBS-checked drivers. Based on Aylestone Road — book on 0116 2338888 or online.",
   alternates: {
-    canonical: "https://aylestone-taxis.co.uk/about",
+    canonical,
   },
   openGraph: {
     title: "About Aylestone Taxis | Aylestone Road Leicester",
     description: "Leicester's long-established taxi firm: licensed, insured, 24/7. Call 0116 2338888 or book online.",
-    url: "https://aylestone-taxis.co.uk/about",
+    url: canonical,
   },
 }
 

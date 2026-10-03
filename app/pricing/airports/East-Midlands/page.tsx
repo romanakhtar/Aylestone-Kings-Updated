@@ -10,6 +10,7 @@ import { buildAirportMetadata } from "@/lib/seo/airportSeo"
 import { eastMidlandsLeicesterFacts, eastMidlandsPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
 import JsonLd from "@/components/seo/JsonLd"
 import { getTaxiServiceJsonLd } from "@/lib/seo/siteJsonLd"
+import { buildCanonical } from "@/lib/seo/canonical"
 
 export const metadata = buildAirportMetadata({
   airportName: "East Midlands",
@@ -23,7 +24,7 @@ export const metadata = buildAirportMetadata({
 
 const faqs = eastMidlandsPricingFaqs
 
-const EMA_PRICING_URL = "https://aylestone-taxis.co.uk/pricing/airports/East-Midlands"
+const EMA_PRICING_URL = buildCanonical("/pricing/airports/East-Midlands")
 
 export default function EastMidlandsPage() {
   const serviceJsonLd = getTaxiServiceJsonLd({
