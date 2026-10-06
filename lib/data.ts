@@ -1150,7 +1150,7 @@ export const siteData = {
         date: "2026-10-04",
         author: "Aylestone Taxis Team",
         category: "Travel Tips",
-        image: "/Late-Night-Taxi Leicester-How-to-Get-Home-Safely-on-a-Friday-Night.webp",
+        image: "/Halloween-Theme-bg-IMG.webp",
       },
       {
         id: "taxi-leicester-to-nottingham-cost-time-booking-guide-2026",

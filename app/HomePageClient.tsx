@@ -889,7 +889,7 @@ export default function HomePageClient() {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl text-white font-bold mb-6">
-            {isHalloweenActive ? "🎃Ready for a Spook-tacular Ride?🎃" : isValentineActive ? "Pre-book Your Valentine's Evening" : "Ready to experience the difference?"}
+            {isHalloweenActive ? "Ready for a Spook-tacular Ride?" : isValentineActive ? "Pre-book Your Valentine's Evening" : "Ready to experience the difference?"}
           </h2>
           <p className="text-xl text-[#E4E4E4] mb-8 max-w-2xl mx-auto">
             {isHalloweenActive
