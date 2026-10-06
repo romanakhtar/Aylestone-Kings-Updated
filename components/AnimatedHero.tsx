@@ -28,6 +28,10 @@ export default function AnimatedHero() {
   const isSeasonal = isHalloweenActive || isChristmasActive || isValentineActive
   // Halloween keeps the default hero copy - only the background changes
   const isSeasonalCopy = isChristmasActive || isValentineActive
+  // Picks out a few words in Halloween orange. Wording is unchanged either
+  // way, so the indexed hero copy stays exactly the same.
+  const hw = (text: string) =>
+    isHalloweenActive ? <span className="text-[#FF8A3D]">{text}</span> : <>{text}</>
   const coreFeatures = [
     "24/7 Leicester Taxi Service",
     "Fixed & Transparent Fares",
@@ -132,6 +136,20 @@ export default function AnimatedHero() {
                 "linear-gradient(to top, rgba(15,13,62,0.88) 0%, rgba(15,13,62,0.35) 50%, rgba(15,13,62,0) 100%)",
             }}
           />
+          {/* Night-sky silhouettes - decorative, drift gently, hidden on small screens */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/halloween/bats-276128.svg"
+            alt=""
+            className="halloween-silhouette halloween-silhouette-light halloween-drift absolute top-[14%] left-[50%] hidden w-[95px] sm:block lg:w-[115px]"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/halloween/ghost-with-bag-black-and-white-1225.svg"
+            alt=""
+            className="halloween-silhouette halloween-silhouette-light halloween-sway absolute top-[54%] left-[2.5%] hidden w-[44px] lg:block"
+            style={{ animationDelay: "1.2s", opacity: 0.55 }}
+          />
         </div>
       )}
 
@@ -219,6 +237,13 @@ export default function AnimatedHero() {
                 ? "Reliable, Safe Taxi for Your Valentine's Evening"
                 : isChristmasActive
                 ? "Leicester Taxi Service This Christmas"
+                : isHalloweenActive
+                ? (
+                  <>
+                    Leicester Taxi Service &amp; Airport Transfers{" "}
+                    <span className="text-[#FF8A3D]">Fixed Fares 24/7</span>
+                  </>
+                )
                 : "Leicester Taxi Service & Airport Transfers Fixed Fares 24/7"}
             </h1>
 
@@ -235,7 +260,7 @@ export default function AnimatedHero() {
   ) : (
     <>
       <p className={isChristmasActive || isHalloweenActive ? "mb-0 text-[#E4E4E4]" : "mb-0"}>
-        <strong>Book a taxi Leicester locals have used since 1995.</strong> Aylestone Taxis runs Leicester taxis and Leicester cabs with licensed drivers, fixed fares, and no surge pricing. Available 24/7, we provide:
+        <strong>Book a taxi Leicester locals have used since 1995.</strong> Aylestone Taxis runs Leicester taxis and Leicester cabs with licensed drivers, {hw("fixed fares")}, and {hw("no surge pricing")}. Available {hw("24/7")}, we provide:
       </p>
       <ul className="list-disc pl-6 space-y-0">
         <li><strong>Local journeys</strong> right across Leicester and Leicestershire</li>     
@@ -336,7 +361,7 @@ export default function AnimatedHero() {
                   <Image
                     src={siteData.images.heroTaxi}
                     alt="Modern white taxi Leicester from Aylestone Taxis — professional fleet serving Leicester and the Midlands since 1995"
-                    width={280}
+                    width={560}
                     height={224}
                     sizes="(max-width: 768px) 80px, 280px"
                     className="relative z-10 w-auto max-w-[80px] lg:max-w-[280px] drop-shadow-2xl"

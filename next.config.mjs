@@ -99,18 +99,27 @@ const nextConfig = {
           { key: 'Content-Security-Policy', value: contentSecurityPolicy },
         ],
       },
-      {
-        source: '/:path*\\.(jpg|jpeg|png|gif|webp|avif|svg|ico)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
-      },
-      {
-        source: '/:path*\\.(js|css|woff|woff2|ttf|otf)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
-      },
+      // Long-lived asset caching, production only.
+      // 'immutable' tells the browser never to revalidate the file - not even
+      // on a hard refresh - so in development it pins stale JS/CSS chunks and
+      // changed images, which surfaces as hydration mismatches and edits that
+      // never appear in the browser.
+      ...(process.env.NODE_ENV === 'production'
+        ? [
+          {
+            source: '/:path*\\.(jpg|jpeg|png|gif|webp|avif|svg|ico)',
+            headers: [
+              { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+            ],
+          },
+          {
+            source: '/:path*\\.(js|css|woff|woff2|ttf|otf)',
+            headers: [
+              { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+            ],
+          },
+          ]
+        : []),
     ];
   },
 

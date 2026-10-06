@@ -756,6 +756,7 @@ export const siteData = {
           { name: "Taxis in Wigston Fields", href: "/taxis-in/wigston-fields" },
           { name: "Taxis in Thurmaston", href: "/taxis-in/thurmaston" },
           { name: "Taxis in Birstall", href: "/taxis-in/birstall" },
+          { name: "Taxis in Thurcaston", href: "/taxis-in/thurcaston" },
           { name: "Taxis in Glenfield", href: "/taxis-in/glenfield" },
         ],
       },
@@ -1054,6 +1055,258 @@ export const siteData = {
     subtitle:
       "Practical travel guides for Leicester — airport transfers, matchday taxis, prom nights, student moves, fare tips, and booking advice from your trusted local 24/7 taxi company.",
     blogs: [
+      {
+        id: "halloween-taxi-leicester-2026-pre-book-before-surge-prices-hit",
+        title: "Halloween Taxi Leicester 2026 — Pre-Book Before Surge Prices Hit",
+        metaTitle: "Halloween Taxi Leicester 2026 | Fixed Fares",
+        metaDescription:
+          "Halloween taxi Leicester: fixed fares, no surge on 31 October. Pre-book your ride home from 2Funky, Athena, Mosh & more. Call 0116 233 8888.",
+        excerpt:
+          "Halloween falls on Friday 31 October 2026 — one of the busiest taxi nights of the year in Leicester. Why ride-hailing surge pricing bites hardest on Halloween, how far ahead to pre-book, the venues and areas we cover, and how to book on the night by WhatsApp.",
+        faqs: [
+          {
+            question: "How far in advance should I book a taxi for Halloween in Leicester?",
+            answer:
+              "Book as soon as you know your plans — ideally a week or more before 31 October. Halloween lands on a Friday in 2026, so it competes with normal weekend demand. Pre-booking by mid-October gives you the best chance of the exact pickup time you want, both out and back.",
+          },
+          {
+            question: "Do your fares go up on Halloween night?",
+            answer:
+              "No. We quote a fixed price when you book and that is what you pay, whether you travel at 8pm or 2am on 31 October. There is no surge multiplier, no peak-time uplift and no bank holiday surcharge.",
+          },
+          {
+            question: "Can I book a Halloween taxi on the night rather than in advance?",
+            answer:
+              "Yes. Message us on WhatsApp at +447535855786 when you are ready to leave, send your location and destination, and we will confirm a fixed fare before the driver sets off. Pre-booking is still safer on 31 October, because demand across Leicester peaks between 11pm and 2am.",
+          },
+          {
+            question: "Which Leicester venues do you pick up from on Halloween?",
+            answer:
+              "We cover the city centre venues that host the biggest Halloween events, including Vibe, 2Funky, Club Republic, Mosh and Athena, plus the bars around the Clock Tower, The Lanes and Granby Street. Tell us the venue name when you book and the driver will meet you at a safe, agreed collection point nearby.",
+          },
+        ],
+        content: `
+          <p>Halloween 2026 falls on <strong>Friday 31 October</strong> — and for taxis in Leicester, that combination is about as busy as the year gets. A Friday night already fills the city centre; add costume parties, club events and thousands of people all leaving within the same two hours, and getting home becomes the hardest part of the night. This guide explains why a <strong>halloween taxi Leicester</strong> booking is worth sorting early, what it costs, and how to book on the night if your plans change.</p>
+
+          <h2>Why Halloween is the worst night for surge pricing</h2>
+          <p>Ride-hailing apps price by live demand. When hundreds of people in Leicester open the same app at the same moment — typically when venues call last orders — the fare multiplies. On an ordinary Tuesday you might pay a predictable amount for a short hop home. On Halloween, with demand spiking city-wide at once, the same journey can cost noticeably more, and wait times stretch while you stand outside in a costume in late October.</p>
+          <p>Our pricing works the other way round. We quote a <strong>fixed fare when you book</strong>, and that price does not change because the city centre has emptied all at once. Here are realistic fixed fares home from the city centre on a busy night:</p>
+
+          <table style="width:100%; border-collapse:collapse; margin-bottom:1.5rem; font-size:1rem;">
+            <thead>
+              <tr style="background:#0F0D3E; color:#fff;">
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Route home</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Aylestone Taxis (fixed)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>City centre → Clarendon Park</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>from £8</strong></td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>City centre → Knighton</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>from £9</strong></td>
+              </tr>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>City centre → Oadby</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>from £12</strong></td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>City centre → Wigston</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>from £12</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Final pricing depends on your exact pickup point, vehicle size and group — but it is agreed before you travel, not after. For year-round detail on how our night-time pricing works, see our <a href="/late-night-taxi-leicester">late night taxi Leicester</a> service.</p>
+
+          <h2>How far ahead should you pre-book?</h2>
+          <p>For 31 October, the practical answer is <strong>as early as you can, and ideally a week or more ahead</strong>. Pre-booking does two things: it locks your price, and it reserves a vehicle at a time when every operator in the city is busy. If you are travelling as a group of five or more, book earlier still — larger vehicles are the first to go on Halloween weekend.</p>
+          <p>Booking both legs at once is the single best move. Plenty of people arrange a lift into town and then find the journey home is the problem. Tell us roughly when the event finishes and we will have a driver waiting.</p>
+
+          <h2>Leicester's Halloween venues</h2>
+          <p>The city's biggest Halloween nights run at venues including <strong>Vibe</strong>, <strong>2Funky</strong>, <strong>Club Republic</strong>, <strong>Mosh</strong> and <strong>Athena</strong>, with the bars around the Clock Tower, The Lanes and Granby Street busy from early evening. Streets close to the venues get congested as crowds spill out, so when you book, name the venue and we will agree a collection point that is easy to reach on foot and safe to wait at.</p>
+
+          <h2>Areas we cover for the journey home</h2>
+          <p>Whether your night ends at midnight or 3am, we cover the residential areas across Leicester and Leicestershire — including <strong>Oadby</strong>, <strong>Wigston</strong>, <strong>Clarendon Park</strong>, <strong>Knighton</strong>, <strong>Beaumont Leys</strong>, <strong>Evington</strong>, <strong>Highfields</strong>, <strong>Braunstone</strong>, <strong>Aylestone</strong>, <strong>Syston</strong> and <strong>Glen Parva</strong>. Every driver is licensed by the council and DBS-checked, which matters on a night when a lot of people are travelling alone and in costume.</p>
+
+          <h2>Booking on the night by WhatsApp</h2>
+          <p>Halloween plans rarely run to schedule. If you do not know when you will leave, message us on WhatsApp at <strong>+447535855786</strong> when you are ready:</p>
+          <ol>
+            <li>Send your <strong>location</strong> — a pin or the venue name.</li>
+            <li>Tell us your <strong>destination and how many passengers</strong>.</li>
+            <li>We confirm your <strong>fixed fare</strong> and dispatch the nearest licensed driver.</li>
+          </ol>
+          <p>It takes seconds and it beats standing on Granby Street watching app prices climb. Save the number before you go out.</p>
+
+          <h2>Book your Halloween taxi now</h2>
+          <p>Fixed fares, no surge on 31 October, DBS-checked drivers and 24/7 cover. Pre-book online or call <strong>0116 233 8888</strong> — and if plans change on the night, WhatsApp us.</p>
+
+          <p style="text-align:center; margin-top:2rem;">
+            <a href="https://wa.me/447535855786?text=Hi!%20I%20need%20a%20taxi%20in%20Leicester" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447535855786</a>
+            <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
+          </p>
+        `,
+        date: "2026-10-04",
+        author: "Aylestone Taxis Team",
+        category: "Travel Tips",
+        image: "/Late-Night-Taxi Leicester-How-to-Get-Home-Safely-on-a-Friday-Night.webp",
+      },
+      {
+        id: "taxi-leicester-to-nottingham-cost-time-booking-guide-2026",
+        title: "Taxi from Leicester to Nottingham — Cost, Time & Booking Guide 2026",
+        metaTitle: "Leicester to Nottingham Taxi | Cost & Time 2026",
+        metaDescription:
+          "Leicester to Nottingham taxi: fixed fares from £45, about 30 minutes via the A453. When a taxi beats the train. Book online or call 0116 233 8888.",
+        excerpt:
+          "What a Leicester to Nottingham taxi costs in 2026, how long the journey takes via the A453, and when a fixed-fare taxi works out better than East Midlands Railway — for groups, luggage and door-to-door travel.",
+        faqs: [
+          {
+            question: "How much is a taxi from Leicester to Nottingham?",
+            answer:
+              "Fixed fares start from £45 in a saloon car for up to four passengers, and from £65 in an MPV for five or six. Your exact price depends on the pickup and drop-off addresses, the time of travel and the vehicle you need — it is confirmed before you travel, with no meter and no surge pricing.",
+          },
+          {
+            question: "How long does the journey from Leicester to Nottingham take?",
+            answer:
+              "Around 30 minutes on a clear run via the A453, covering roughly 27 miles. Allow extra at peak times, particularly on the approach into Nottingham city centre in the morning and late afternoon.",
+          },
+          {
+            question: "Is a taxi cheaper than the train from Leicester to Nottingham?",
+            answer:
+              "For one person travelling light, the train is usually cheaper. For a group of three or four, a fixed £45 fare split between you is often comparable to or less than individual rail tickets — and you travel door to door with your luggage, without a change or a walk at either end.",
+          },
+          {
+            question: "Can I book a return taxi from Nottingham back to Leicester?",
+            answer:
+              "Yes. Book both legs at the same time and we will confirm a fixed price for each. Return pickups are common for business meetings, airport connections, hospital appointments and nights out, and pre-booking the return means you are not hunting for a ride at the other end.",
+          },
+        ],
+        content: `
+          <p>Leicester to Nottingham is one of the most-travelled routes in the East Midlands — roughly 27 miles between two city centres, with business, shopping, hospital appointments, concerts and student travel running in both directions every day. This guide sets out what a <strong>Leicester to Nottingham taxi</strong> costs in 2026, how long it takes, and the situations where it makes more sense than the train.</p>
+
+          <h2>Leicester to Nottingham taxi prices</h2>
+          <p>We quote fixed fares on this route, agreed before you travel:</p>
+          <table style="width:100%; border-collapse:collapse; margin-bottom:1.5rem; font-size:1rem;">
+            <thead>
+              <tr style="background:#0F0D3E; color:#fff;">
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Vehicle</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Passengers</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Fixed fare</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>Saloon</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">1–4</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>From £45</strong></td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>MPV</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">5–6</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>From £65</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <p>The quote covers the whole car, not a price per head, so four people travelling together split one fare. Full route pricing for other cities is on our <a href="/long-distance-taxi-leicester">long-distance taxi Leicester</a> page.</p>
+
+          <h2>How long does it take?</h2>
+          <p>The quickest route is the <strong>A453</strong>, which runs north from the M1 corridor straight into Nottingham, and the journey takes <strong>about 30 minutes</strong> when the roads are clear. Rush hour into Nottingham adds time, as do events at the arena or at Trent Bridge and the City Ground on match days. We build realistic timings into your booking rather than quoting a best case — tell us when you need to arrive and we will set the pickup time accordingly.</p>
+
+          <h2>When a taxi beats the train</h2>
+          <p>East Midlands Railway runs a frequent service between Leicester and Nottingham, and for a single traveller with a bag it is usually the cheaper option. A taxi wins in four situations:</p>
+          <ul>
+            <li><strong>Travelling as a group.</strong> One fixed fare split three or four ways compares well with individual tickets, especially at short notice when walk-up rail fares are highest.</li>
+            <li><strong>Luggage, equipment or shopping.</strong> No lifting cases on and off a train, no stairs at either station — the car takes you from door to door.</li>
+            <li><strong>Addresses away from the stations.</strong> If you are heading to a business park, a hospital, a hotel or a home address, the train still leaves you with the last leg to arrange.</li>
+            <li><strong>Early, late or awkward times.</strong> Outside the timetable, or when a connection would leave you waiting, a pre-booked car is simply more practical.</li>
+          </ul>
+
+          <h2>Common reasons people book this route</h2>
+          <p>Business travel between the two city centres is steady throughout the week, often as a return booking with a confirmed collection time after a meeting. Hospital appointments are another regular one, where arriving at a specific entrance matters more than saving a few pounds. We also carry families heading to events, students moving between the cities, and groups travelling to concerts and sport — plus onward airport connections, with East Midlands Airport sitting conveniently between the two.</p>
+
+          <h2>Booking your Leicester to Nottingham taxi</h2>
+          <p>Book online, call <strong>0116 233 8888</strong> or message us on WhatsApp. Tell us your pickup address, your destination in Nottingham, the time and the number of passengers, and we will confirm the fixed fare and the vehicle before you commit. Every driver is licensed and DBS-checked, and we operate 24/7 including weekends and bank holidays.</p>
+
+          <p style="text-align:center; margin-top:2rem;">
+            <a href="https://wa.me/447535855786?text=Hi!%20I%20need%20a%20taxi%20in%20Leicester" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447535855786</a>
+            <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
+          </p>
+        `,
+        date: "2026-10-04",
+        author: "Aylestone Taxis Team",
+        category: "Fare Guide",
+        image: "/Blog_Leicester_to_Manchester_airport_taxi.webp",
+      },
+      {
+        id: "taxi-to-leicester-royal-infirmary-everything-you-need-to-know",
+        title: "Taxi to Leicester Royal Infirmary — Everything You Need to Know",
+        metaTitle: "Taxi to Leicester Royal Infirmary | 24/7 LRI Taxis",
+        metaDescription:
+          "Taxi to Leicester Royal Infirmary: drop-off points, pre-booked appointment times, wheelchair accessible vehicles, 24/7. Call 0116 233 8888.",
+        excerpt:
+          "A practical guide to getting a taxi to Leicester Royal Infirmary — where drivers drop off, why pre-booking matters for appointment times, wheelchair accessible options, and how we cover Glenfield Hospital and Leicester General too.",
+        faqs: [
+          {
+            question: "Where does a taxi drop off at Leicester Royal Infirmary?",
+            answer:
+              "Leicester Royal Infirmary is on Infirmary Square, Leicester LE1 5WW, and the site has separate entrances for outpatients, the Emergency Department and the Children's Hospital. Tell us the department or clinic when you book and the driver will take you to the nearest entrance rather than leaving you to cross the site on foot.",
+          },
+          {
+            question: "Should I pre-book a taxi for a hospital appointment?",
+            answer:
+              "Yes. Appointment slots do not move, and city-centre traffic around the Infirmary is unpredictable at peak times. Pre-booking means we build the journey time in and collect you early enough to arrive comfortably. You can also book the return leg, which saves waiting outside after a long appointment.",
+          },
+          {
+            question: "Do you provide wheelchair accessible taxis to the hospital?",
+            answer:
+              "Yes, wheelchair accessible vehicles are available and should be requested when you book so we can allocate the right vehicle. See our wheelchair accessible taxi Leicester page for details, or mention it on the phone and we will arrange it.",
+          },
+          {
+            question: "Can I get a taxi from the hospital late at night?",
+            answer:
+              "Yes. We operate 24 hours a day, every day, including weekends and bank holidays. Discharges and visits often finish late, so if you are unsure when you will be ready, call or WhatsApp us when you know and we will send the nearest available car.",
+          },
+        ],
+        content: `
+          <p>Leicester Royal Infirmary is the busiest hospital site in the city, handling emergency care, outpatient clinics and the Children's Hospital on one central site at <strong>Infirmary Square, Leicester LE1 5WW</strong>. Parking is limited, the one-way system around the site is awkward, and appointment times do not wait. A pre-booked <strong>taxi to Leicester Royal Infirmary</strong> removes the two things people find hardest: finding a space, and judging how long to allow.</p>
+
+          <h2>Where taxis drop off at the LRI</h2>
+          <p>The Infirmary is a large site with more than one entrance, and the right one depends on where you are going — outpatient clinics, the Emergency Department and the Children's Hospital are not in the same place. When you book, <strong>tell us the department, clinic or ward</strong>. The driver will use the closest entrance, which matters a great deal if you are attending with someone who is unwell, elderly or in pain, or if it is raining and you have a long corridor walk ahead.</p>
+          <p>For collections, the same applies in reverse. Give us the entrance you will be waiting at and we will meet you there rather than circling the site.</p>
+
+          <h2>Why pre-booking matters for appointments</h2>
+          <p>Hospital appointments run on fixed slots, and missing one can mean waiting weeks for another. The roads around the Infirmary are at their slowest during the morning peak, exactly when most clinics start. Pre-booking lets us set a pickup time that allows for that traffic, rather than hoping a car is free when you call.</p>
+          <p>Booking the return at the same time is worth doing. After a long appointment, a scan or a procedure, the last thing anyone wants is to stand outside arranging a ride. If you do not know how long you will be, that is fine — call or message when you are ready and we will send the nearest driver.</p>
+
+          <h2>Wheelchair accessible and assisted travel</h2>
+          <p>Wheelchair accessible vehicles are available and should be requested at the time of booking so the right vehicle is allocated. Our <a href="/wheelchair-accessible-taxi-leicester">wheelchair accessible taxi Leicester</a> page covers what to expect. If a passenger needs extra time to board, help with a bag, or a driver who will walk them to the door, say so when you book — it is noted on the job so the driver arrives prepared rather than surprised.</p>
+
+          <h2>24-hour cover for discharges and visiting</h2>
+          <p>Hospital travel does not keep office hours. We run <strong>24 hours a day, seven days a week</strong>, which covers early-morning admissions, late discharges and visiting hours that finish after the buses thin out. NHS staff on shift changes use us for the same reason — the service is there at 5am and at midnight.</p>
+
+          <h2>Glenfield Hospital and Leicester General</h2>
+          <p>Leicester's hospital care is split across three main sites, and appointments are not always where people expect. We cover all three:</p>
+          <ul>
+            <li><strong>Leicester Royal Infirmary</strong> — Infirmary Square, in the city centre.</li>
+            <li><strong>Glenfield Hospital</strong> — to the north-west of the city, off Groby Road, with cardiac and respiratory services.</li>
+            <li><strong>Leicester General Hospital</strong> — to the east on Gwendolen Road, serving the Evington side of the city.</li>
+          </ul>
+          <p>Transfers between the three sites are a regular booking for us, as are journeys from across Leicester and Leicestershire to whichever site your letter names. Fares are fixed and confirmed before you travel, so there is no meter running while you sit in traffic.</p>
+
+          <h2>Booking a hospital taxi</h2>
+          <p>Book online, call <strong>0116 233 8888</strong> or WhatsApp us. Give us the hospital, the department and your appointment time, and we will work back from it. Every driver is licensed by the council and DBS-checked.</p>
+
+          <p style="text-align:center; margin-top:2rem;">
+            <a href="https://wa.me/447535855786?text=Hi!%20I%20need%20a%20taxi%20in%20Leicester" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447535855786</a>
+            <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
+          </p>
+        `,
+        date: "2026-10-04",
+        author: "Aylestone Taxis Team",
+        category: "Local Guide",
+        image: "/Blog_Moving_Out_University_Halls_Leicester_Transport_Guide.webp",
+      },
       {
         id: "taxi-to-de-montfort-hall-leicester-concerts-events-parking-guide",
         title: "Taxi to De Montfort Hall Leicester — Concerts, Events & Parking Guide",

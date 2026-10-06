@@ -237,9 +237,14 @@
     right: 15px;
   }
   
-  .halloween-floating-bat,
   .halloween-floating-leaf {
-    display: none !important; /* Hide floating elements on mobile */
+    display: none !important; /* Hide floating leaves on mobile */
+  }
+
+  /* Bats stay visible on mobile, scaled down so they read as background
+     decor instead of crowding the copy. */
+  .halloween-floating-bat {
+    max-width: 56px;
   }
   
   .halloween-cta-glow {
@@ -285,3 +290,70 @@
   }
 }
 
+
+/* --- SVG silhouettes (bats, ghost) ------------------------------------ */
+/* Source art is solid black; invert to white so it reads as a night-sky
+   silhouette over the dark hero, then keep it faint. */
+.halloween-silhouette {
+  filter: brightness(0);
+  opacity: 0.55;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* White version, for use over the dark hero only */
+.halloween-silhouette-light {
+  filter: brightness(0) invert(1);
+}
+
+.halloween-drift { animation: halloween-drift 14s ease-in-out infinite; }
+.halloween-sway { animation: halloween-sway 7s ease-in-out infinite; }
+
+@keyframes halloween-drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  25% { transform: translate3d(14px, -10px, 0); }
+  50% { transform: translate3d(26px, 4px, 0); }
+  75% { transform: translate3d(10px, -6px, 0); }
+}
+
+@keyframes halloween-sway {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-2deg); }
+  50% { transform: translate3d(0, -9px, 0) rotate(2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .halloween-drift, .halloween-sway { animation: none; }
+}
+
+/* --- Seasonal card tint ------------------------------------------------- */
+/* Cards keep their own background colour; the Halloween wash is a low-opacity
+   orange -> black gradient layered on top with background-image, so body text
+   contrast barely moves. Only applies while body.halloween-theme is set, so
+   the whole site reverts on 1 November with no component changes. */
+.halloween-theme .halloween-card {
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 123, 0, 0.22) 0%,
+    rgba(255, 123, 0, 0.09) 45%,
+    rgba(17, 17, 17, 0.2) 100%
+  );
+  border-color: rgba(255, 123, 0, 0.3);
+}
+
+/* Cards with a strong brand background of their own (e.g. the review slides)
+   need that colour neutralised first or the orange reads as muddy teal. */
+.halloween-theme .halloween-card-neutral {
+  background-color: rgba(255, 255, 255, 0.82);
+}
+
+.halloween-theme .halloween-card:hover,
+.halloween-theme .group:hover > .halloween-card,
+.halloween-theme a:hover > .halloween-card {
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 123, 0, 0.26) 0%,
+    rgba(255, 123, 0, 0.11) 45%,
+    rgba(17, 17, 17, 0.2) 100%
+  );
+  border-color: rgba(255, 123, 0, 0.48);
+}

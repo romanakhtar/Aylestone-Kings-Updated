@@ -55,7 +55,7 @@ export default function HomeReviewsSection() {
               {reviews.map((review, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
                   <div className="max-w-2xl mx-auto">
-                    <div className="bg-cyan-500/20 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-cyan-500/30 transform transition-transform duration-300 hover:scale-105">
+                    <div className="bg-cyan-500/20 backdrop-blur-md p-6 md:p-8 rounded-2xl shadow-xl border border-cyan-500/30 halloween-card halloween-card-neutral transform transition-transform duration-300 hover:scale-105">
                       <div className="flex justify-center mb-4">
                         <div className="w-12 h-12 bg-gradient-to-br from-[#06A0A6] to-[#0F0D3E] rounded-full flex items-center justify-center">
                           <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">

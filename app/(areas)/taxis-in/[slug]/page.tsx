@@ -62,6 +62,18 @@ const POPULAR_JOURNEY_AIRPORTS = [
 ] as const
 
 const areaMeta: Record<string, { title: string; description: string }> = {
+  // Thurcaston (October brief, Block B)
+  thurcaston: {
+    title: "Taxi Thurcaston | Thurcaston Taxis 24/7 Fixed Fares",
+    description:
+      "Thurcaston taxis: 20 minutes to Leicester city centre, airport transfers, Watermead and Beaumont Leys runs. Fixed fares 24/7 — call 0116 233 8888.",
+  },
+  // Thurcaston (October brief, Block B)
+  oadby: {
+    title: "Taxi Oadby | Oadby Taxis to Leicester & EMA 24/7",
+    description:
+      "Taxi in Oadby from £12 to Leicester city centre, £30-35 to EMA. Racecourse, Stoughton Road, station runs. Fixed fares 24/7 — call 0116 233 8888.",
+  },
   // 1. Aylestone
   aylestone: {
     title: "Taxis in Aylestone — Fixed Fares, Airport Transfers | 24/7",
@@ -73,12 +85,6 @@ const areaMeta: Record<string, { title: string; description: string }> = {
     title: "Taxis in Leicester City Centre — Fixed Fares | 24/7",
     description:
       "Fast, fixed-price taxis across Leicester city centre — Highcross, Curve Theatre, train station. Book online or call 0116 233 8888.",
-  },
-  // 3. Oadby
-  oadby: {
-    title: "Taxis in Oadby — Fixed Fares, Airport Transfers | 24/7",
-    description:
-      "Reliable taxi service in Oadby, Leicester. Fixed airport fares, local rides, and 24/7 availability. Licensed drivers. Call 0116 2338888 or book online.",
   },
   // 4. Wigston
   wigston: {
@@ -148,9 +154,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 15. Syston
   syston: {
-    title: "Syston Taxis | Call 0116 2338888 | Book Online 24/7",
+    title: "Syston Taxis | Station Pickups & EMA from £25",
     description:
-      "Syston taxis from Aylestone Taxis — syston taxis phone number 0116 2338888. Local & airport fares, licensed drivers. Book Syston taxis online 24/7.",
+      "Taxi Syston: station pickups, 20 mins to Leicester city centre, East Midlands Airport from £25. Fixed fares, 24/7. Call 0116 233 8888 or book online.",
   },
   // 16. Birstall
   birstall: {
@@ -256,9 +262,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 33. Glen Parva
   "glen-parva": {
-    title: "Taxis in Glen Parva — Fixed Fares, Airport Transfers | 24/7",
+    title: "Taxi Glen Parva | EMA in 15 Mins | Fixed Fares",
     description:
-      "Reliable taxi service in Glen Parva, Leicestershire. Airport transfers, local rides, 24/7 from Aylestone Taxis. Call 0116 2338888.",
+      "Glen Parva taxis: 20 mins to Leicester city centre, East Midlands Airport in about 15 minutes, HMP Fosse Way visits. Fixed fares 24/7. Call 0116 233 8888.",
   },
   // 34. Fosse Park
   "fosse-park": {
@@ -486,6 +492,69 @@ const AREA_BLOG_CALLOUTS: Record<
 }
 
 const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
+  oadby: {
+    bodyParagraphs: [
+      "Oadby sits four miles south-east of Leicester along the A6, and it is one of the busiest areas we serve. It is a settled, well-off suburb with a mix of long-standing residents, University of Leicester staff and students around the Oadby student village, and families who commute into the city every weekday. Aylestone Taxis has covered Oadby since 1995, and the pattern of bookings here is steady rather than seasonal: school runs in the morning, appointments and shopping through the day, airport transfers at dawn, and rides home from the city centre late at night.",
+      "A taxi from Oadby to Leicester city centre takes around 15 to 20 minutes in normal traffic along the A6 London Road, and fares are typically £12 to £15 depending on your exact pickup point and the time of day. East Midlands Airport is the nearest major airport, roughly 30 to 35 minutes away via the A563 ring road and the M1, with fares usually in the £30 to £35 range. Every price is fixed and confirmed before you travel, so there is no meter ticking in traffic on London Road and no surge pricing when the city empties at closing time.",
+      "Leicester Racecourse on Oadby Road is the single biggest driver of event bookings in the area. Race days fill the car parks and the surrounding roads, and pre-booking a taxi both ways is far easier than hunting for a space. We also run constantly along Stoughton Road and the residential streets off it, to and from The Parade for shopping, and out to Oadby Grange and Brocks Hill. For rail connections, South Wigston station is a short hop from Oadby and a common booking for commuters heading to Birmingham or Nuneaton, while Leicester railway station is the usual choice for London and the north.",
+      "Night-time cover matters here. Oadby is far enough out that the last buses stop early, and a lot of our Oadby work is the journey home from a restaurant on Granby Street or a night out around the Clock Tower. We operate 24 hours a day, every day of the year, so a 1am pickup on a Saturday is treated exactly like a 9am one on a Tuesday: a licensed, DBS-checked driver and a price agreed in advance.",
+      "Regular bookings are straightforward to set up. Parents arrange the same school run each morning, often with the same driver where we can manage it, and older residents book recurring hospital and GP appointments to Leicester Royal Infirmary, Glenfield Hospital and Leicester General. Businesses along the A6 corridor use standing bookings for staff and clients. Tell us the days and times you need and we will hold the slot rather than making you book from scratch each week.",
+      "Our vehicles range from standard saloons for a single commuter to estates and MPVs for families, race-day groups and airport trips with luggage. Wheelchair accessible vehicles are available on request — just mention it when you book so the right vehicle is allocated. To book a taxi in Oadby, call 0116 233 8888, message us on WhatsApp, or book online in under a minute.",
+    ],
+    faqs: [
+      {
+        question: "How much is a taxi from Oadby to Leicester city centre?",
+        answer:
+          "Fares are typically £12 to £15, depending on your exact pickup point, the vehicle you need and the time of travel. The journey takes around 15 to 20 minutes via the A6. Your price is fixed and confirmed before you travel — no meter, and no surge pricing at night.",
+      },
+      {
+        question: "Do you cover Oadby at night?",
+        answer:
+          "Yes, 24 hours a day, every day including weekends and bank holidays. Late-night rides home from Leicester city centre are one of our most common Oadby bookings, and the fare is the same price at 1am as it is at lunchtime.",
+      },
+      {
+        question: "Can I book a regular taxi from Oadby?",
+        answer:
+          "Yes. We set up standing bookings for school runs, commutes, hospital appointments and regular business travel, with the same pickup time each day and, where possible, the same DBS-checked driver. Call 0116 233 8888 or book online to arrange one.",
+      },
+      {
+        question: "Can you take me to Leicester Racecourse or South Wigston station?",
+        answer:
+          "Yes. Leicester Racecourse on Oadby Road is a regular booking, especially on race days when parking is tight — we recommend booking your return at the same time. South Wigston station is a short journey from Oadby and a common commuter run; tell us your train time and we will build it into the pickup.",
+      },
+    ],
+  },
+  thurcaston: {
+    bodyParagraphs: [
+      "Thurcaston is a small village on the northern edge of Leicester, sitting between Anstey, Birstall and Rothley with Thurcaston Road running south towards the city. It is a quiet, largely residential place with a strong commuter population — close enough to Leicester for a short drive, far enough out to feel properly rural. Aylestone Taxis covers Thurcaston and the surrounding villages 24 hours a day, and most bookings here follow the commuter pattern: into the city in the morning, home again in the evening, plus airport runs, school transport and trips into town at the weekend.",
+      "A taxi from Thurcaston to Leicester city centre takes around 20 minutes in normal traffic, heading south on Thurcaston Road and through the Beaumont Leys and Blackbird Road approaches. Peak-hour traffic on the way into the city adds a few minutes, so if you need to be somewhere for a fixed time, tell us when you book and we will set the pickup accordingly. Fares are fixed and confirmed before you travel — no meter, no surge pricing in the evenings, and no change to the price if the traffic is heavier than expected.",
+      "Beaumont Leys is the nearest large centre, a few minutes down the road, and trips to the shopping centre there are among our most frequent Thurcaston bookings. Watermead Country Park, just to the east across the Soar, draws visitors and dog walkers throughout the year and is an easy drop-off and collection for us. We also run regularly to Birstall, Anstey and Rothley, into Leicester for the railway station and the hospitals, and out to the retail parks on the north side of the city.",
+      "Airport travel is the other big one. East Midlands Airport is the closest major airport to Thurcaston, with Birmingham a longer run for international flights. These are the bookings where a fixed fare and a reliable pickup matter most, and we are happy to take a booking weeks ahead for a 4am departure. Flight monitoring is available on return journeys so we are there when you land rather than when you were scheduled to.",
+      "Every driver is licensed by the council and DBS-checked, and the fleet runs from saloons through to estates and MPVs for families, groups and luggage-heavy airport trips. Wheelchair accessible vehicles are available if you request one at the time of booking. To book a taxi in Thurcaston, call 0116 233 8888, message us on WhatsApp, or book online and see your fixed price before you confirm.",
+    ],
+    faqs: [
+      {
+        question: "How long does a taxi take from Thurcaston to Leicester city centre?",
+        answer:
+          "Around 20 minutes in normal traffic via Thurcaston Road and the northern approaches into the city. Morning and late-afternoon peaks add a few minutes, which we build into the pickup time when you tell us your arrival time.",
+      },
+      {
+        question: "Do you cover airport transfers from Thurcaston?",
+        answer:
+          "Yes. East Midlands Airport is the nearest major airport, and we also run to Birmingham, Heathrow, Gatwick, Stansted, Luton and Manchester. Fares are fixed and confirmed when you book, we cover early-morning departures 24/7, and flight monitoring is available for return pickups.",
+      },
+      {
+        question: "Can you pick up from Watermead Country Park or Beaumont Leys?",
+        answer:
+          "Yes, both are regular Thurcaston-area bookings. Tell us the car park or entrance you will be at and the driver will meet you there. Beaumont Leys Shopping Centre is only a few minutes away and is one of our most common short runs from the village.",
+      },
+      {
+        question: "Is there a 24-hour taxi service in Thurcaston?",
+        answer:
+          "Yes. We operate 24 hours a day, seven days a week, including bank holidays. That covers early-morning airport departures and late journeys home from Leicester once buses have stopped for the night.",
+      },
+    ],
+  },
   knighton: {
     bodyParagraphs: [
       "Knighton is one of south Leicester's most established residential neighbourhoods — a mix of Victorian terraces, Edwardian villas, and family homes between Clarendon Park and the Welford Road corridor. Walk a few minutes in any direction and you are never far from green space: Knighton Park borders the western edge of the ward, Victoria Park stretches east towards the city, and De Montfort University sits on the London Road boundary, drawing thousands of students and staff through Knighton every term. Aylestone Taxis has served this area since 1995, and our Knighton passengers tend to fall into two groups — university commuters who need reliable early-morning and late-night runs, and professionals heading into the city centre, hospitals, or business parks on a fixed daily schedule.",
@@ -925,25 +994,32 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   syston: {
     bodyParagraphs: [
-      "Syston offers a village-town mix with strong commuting links into Leicester, and local taxi demand reflects that rhythm. Residents often need reliable transport for rail connections, school runs, and shopping trips around a compact but busy road network. Aylestone Taxis serves Syston with routes built around actual movement patterns, including quieter residential pickups and timed collections where missing a connection can quickly turn into a long delay.",
-      "Most Syston to Leicester city centre journeys take about 25 minutes via the A607, though peak-hour flow can increase that by several minutes. For airport travel, East Midlands Airport is generally the nearest major terminal from Syston at around 38 to 45 minutes depending on traffic through ring-road connectors and M1 links. A typical EMA fare from Syston is roughly GBP 52 to GBP 64 for a standard car, confirmed at booking.",
-      "Frequent pickup points include Syston railway station and Central Park, along with local retail stretches where evening return travel is common. We also complete regular journeys to Leicester hospitals and the city stations for onward travel. During busier periods near station approaches or school times, we can suggest an easier collection location nearby so boarding remains quick and safe.",
-      "Syston passengers often value repeatability: same pickup process, clear ETA updates, and dependable timing week after week. We support recurring bookings for commuters and families, while keeping one-off bookings straightforward for visitors or occasional users. Our drivers take a practical approach to route planning rather than relying on one fixed path, which helps maintain punctuality when road conditions change unexpectedly.",
-      "Aylestone Taxis is well suited to Syston because we combine local-area awareness with full Leicester coverage, making it easy to handle both short local runs and longer intercity or airport journeys. Customers benefit from polite licensed drivers, responsive support, and honest timing advice before the car is dispatched. That consistency is what keeps repeat bookings strong in Syston.",
-      "If you want airport transfer details before confirming, visit /airport-transfers-leicester. For clear fare guidance in advance, check /pricing so your budget and journey plan are aligned from the start. This keeps Syston travel practical and transparent.",
+      "Syston is one of the largest villages in Leicestershire, sitting about five miles north-east of Leicester where the A607 meets the edge of Charnwood. It has a proper village centre around High Street and Melton Road, its own railway station, and a steady flow of commuters heading into Leicester each morning. Aylestone Taxis covers Syston around that rhythm — early station runs, school mornings, shopping trips, hospital appointments, and the journey home when the last train or bus has gone.",
+      "A taxi from Syston to Leicester city centre takes around 20 minutes along the A607 in normal traffic, with peak-hour flow adding a few minutes on the approach into town. East Midlands Airport is the nearest major airport and the most common long trip we run from the village, with fares usually in the region of £25 to £30 for a standard car. Prices are fixed and confirmed before you travel, which matters most on early-morning airport runs when nobody wants a surprise at the end of the journey.",
+      "Syston railway station is the busiest pickup point in the village, with services towards Leicester and Loughborough, and we time collections to the train rather than to a rough guess. Birstall Road, Melton Road and the residential streets off them make up most of our local work, along with trips to Syston Health Centre, the Co-op and the retail stretch on Melton Road. We also run regularly to Leicester Royal Infirmary and Glenfield Hospital for appointments, and to Thurmaston Shopping Centre just down the road.",
+      "A lot of Syston travel is repeat travel, so we make that easy. Commuters book a standing morning pickup to the station; parents set up the school run; families arrange the airport transfer weeks ahead with a confirmed price. One-off bookings are just as simple, and we are available 24 hours a day, seven days a week, including the late-evening returns that public transport no longer covers.",
+      "Every driver is licensed by the council and DBS-checked, and our fleet runs from saloons for single passengers up to estates and MPVs for families and luggage-heavy airport trips. To book a taxi in Syston, call 0116 233 8888, message us on WhatsApp, or book online and get your fixed price in seconds.",
     ],
     faqs: [
       {
-        question: "How long is the taxi journey from Syston to Leicester?",
-        answer: "Most Syston to Leicester City Centre trips are around 20 to 30 minutes via the A607.",
+        question: "How much is a taxi from Syston to East Midlands Airport?",
+        answer:
+          "Fares to East Midlands Airport from Syston are usually in the £25 to £30 range for a standard car, confirmed as a fixed price before you travel. Larger vehicles for groups or extra luggage are quoted when you book. We run 24/7, so early-morning departures are covered.",
       },
       {
-        question: "Do you cover airport transfers from Syston at night?",
-        answer: "Yes, we offer 24/7 airport transfer bookings from Syston, including early-morning departures.",
+        question: "How long does a taxi take from Syston to Leicester city centre?",
+        answer:
+          "About 20 minutes via the A607 in normal traffic. Allow a little longer during the morning and late-afternoon peaks, when the approach into the city slows. Tell us when you need to arrive and we will set the pickup time to suit.",
       },
       {
-        question: "Can I arrange repeat weekday bookings from Syston?",
-        answer: "Yes, regular recurring bookings can be set up for commuting, school, or appointment travel.",
+        question: "Can you collect me from Syston railway station?",
+        answer:
+          "Yes. Station pickups are one of our most frequent Syston bookings. Give us your train time when you book and we will be waiting when you arrive, or call us when you are a few minutes out if your train is running late.",
+      },
+      {
+        question: "Do you run taxis in Syston at night?",
+        answer:
+          "Yes, 24 hours a day, every day of the year. Late-evening journeys home from Leicester city centre are common from Syston once buses and trains stop, and the fixed fare does not change because it is late.",
       },
     ],
   },
@@ -1237,25 +1313,32 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "glen-parva": {
     bodyParagraphs: [
-      "Glen Parva combines village-edge character with direct links into Leicester's southern corridor, and travel needs here are often practical and repeat-based. Residents frequently book taxis for work, education, healthcare, and family logistics where consistent timing is more important than occasional convenience. Aylestone Taxis serves Glen Parva with reliable local coverage and straightforward booking support, including journeys that start early, finish late, or require clear return scheduling.",
-      "A typical taxi from Glen Parva to Leicester city centre takes around 20 minutes via the A426 and city approaches. For airport travel, East Midlands Airport is usually the nearest major terminal, commonly around 30 to 35 minutes through A563 and M1 links. Standard fares from Glen Parva to EMA are generally in the GBP 40 to GBP 52 range, and we provide a clear fare expectation before you confirm the booking.",
-      "Two landmarks that regularly appear in bookings are Glen Parva Manor and HMP Leicester visitors' routes via the Glen Parva area, alongside frequent trips toward South Leicestershire College and local community facilities. We also complete regular transfers to Fosse Park and Leicester hospitals. If access is restricted at the requested pickup location, drivers can suggest a practical nearby collection point to keep the trip efficient.",
-      "Many Glen Parva journeys are repeat patterns, such as weekday appointments, school schedules, or recurring work travel. We support those patterns with pre-booked slots and clear confirmation messages that reduce uncertainty. For one-off requests, the process remains simple and responsive, with realistic ETA guidance and route planning based on live road conditions rather than assumptions.",
-      "Aylestone Taxis is particularly effective in Glen Parva because we are already active throughout south Leicester and understand the local access roads, traffic rhythms, and common destination patterns. That local knowledge helps maintain punctuality across both short local runs and longer airport trips. Customers benefit from licensed drivers, professional communication, and dependable service standards every day of the week.",
-      "If you are planning flight travel, review /airport-transfers-leicester for transfer details first. For transparent fare guidance, check /pricing before finalising your booking. This keeps Glen Parva passengers informed on both time and cost before they travel.",
+      "Glen Parva sits on the southern edge of Leicester, between Wigston, Blaby and the Soar valley, with Lutterworth Road running through the middle of it. It is a practical, well-connected place to live: close enough to the city for a short commute, close enough to the M1 and M69 for the airport and long-distance trips, and close enough to Fosse Park for the weekly shop. Aylestone Taxis covers Glen Parva throughout the day and night, and most of our bookings here are the everyday kind — work, school, appointments, shopping and the journey home.",
+      "A taxi from Glen Parva to Leicester city centre takes around 20 minutes in normal traffic, heading north on the A426 and through the southern approaches. East Midlands Airport is remarkably close from this side of the city — around 15 minutes on a clear run via the M1 — which makes Glen Parva one of the easier areas in Leicestershire for an early flight. Every fare is fixed and agreed before you travel, so an airport run booked for 4am costs exactly what you were quoted the week before.",
+      "Local pickups cluster along Lutterworth Road, Little Glen Road and the estates around them, with regular trips to Glen Parva Manor, South Leicestershire College and the Grove Park and Fosse Park retail sites. The prison on the former Glen Parva site reopened as HMP Fosse Way in 2023, and visitor journeys there are a steady booking for us — if you are travelling for a visit, give us your visiting slot when you book and we will time the pickup so you arrive with time in hand, and arrange the return for when the session ends.",
+      "We also run constantly to the Leicester hospitals from Glen Parva: Leicester Royal Infirmary in the city centre, Glenfield Hospital to the north-west and Leicester General out to the east. Tell us the department when you book and the driver will take you to the nearest entrance rather than the main gate. Recurring appointments can be set up as standing bookings so you are not rebooking the same trip each week.",
+      "Our drivers are licensed by the council and DBS-checked, and we operate 24 hours a day, every day of the year. Vehicles range from saloons to estates and MPVs for groups and luggage, with wheelchair accessible vehicles available on request. To book a taxi in Glen Parva, call 0116 233 8888, message us on WhatsApp, or book online for an instant fixed price.",
     ],
     faqs: [
       {
-        question: "How long is a taxi from Glen Parva to Leicester City Centre?",
-        answer: "Most journeys are around 15 to 25 minutes, usually via the A426 and nearby connecting roads.",
+        question: "How long is a taxi from Glen Parva to Leicester city centre?",
+        answer:
+          "Around 20 minutes in normal traffic via the A426 and the southern approaches into the city. Peak-time traffic adds a few minutes, which we allow for when setting your pickup time.",
       },
       {
-        question: "Do you cover airport transfers from Glen Parva at all hours?",
-        answer: "Yes, airport bookings from Glen Parva are available 24/7 including very early departures.",
+        question: "How far is Glen Parva from East Midlands Airport by taxi?",
+        answer:
+          "About 15 minutes on a clear run via the M1, which makes Glen Parva one of the quickest areas in Leicestershire for an EMA departure. Fares are fixed and confirmed when you book, and we cover early-morning flights 24/7 with flight monitoring on request.",
       },
       {
-        question: "Can I arrange regular weekly bookings in Glen Parva?",
-        answer: "Yes, recurring bookings are available for work trips, appointments, and school-related travel.",
+        question: "Do you take passengers to HMP Fosse Way for prison visits?",
+        answer:
+          "Yes. The prison on the former Glen Parva site reopened as HMP Fosse Way in 2023, and visitor journeys are a regular booking. Tell us your visiting slot when you book so we can time the arrival, and book the return at the same time for when the visit ends.",
+      },
+      {
+        question: "Can I book a regular taxi in Glen Parva?",
+        answer:
+          "Yes. Standing bookings are available for commutes, school runs, college travel and recurring hospital appointments, with the same time each day and a consistent driver where possible. Call 0116 233 8888 to set one up.",
       },
     ],
   },
@@ -1885,64 +1968,6 @@ const areaContent: Record<string, AreaContent> = {
         question: "Is it cheaper to get a taxi from Leicester city centre on a Friday night than Uber?",
         answer:
           "Yes — our fares are fixed and never increase on busy nights. Unlike Uber surge pricing which can double or triple on Friday and Saturday nights, you pay the same fixed fare whether it is a quiet Tuesday or a busy Saturday night after a concert at De Montfort Hall.",
-      },
-    ],
-  },
-  // 3. Oadby
-  oadby: {
-    body: (
-      <div className="space-y-4">
-        <p className="text-gray-700">
-          Oadby is one of Leicester&apos;s most desirable residential areas, sitting just four miles south-east of the
-          city centre along the A6 corridor. Aylestone Taxis has been serving Oadby passengers since 1995 — whether you
-          need a ride into town, a school run, or an early-morning airport transfer, our drivers know every road in the
-          area.
-        </p>
-        <p className="text-gray-700">
-          The town is home to the University of Leicester&apos;s Oadby student village, Oadby Racecourse, and popular
-          retail along the high street and London Road. We pick up from residential streets, the university campus, and
-          business addresses across the area every day.
-        </p>
-        <p className="text-gray-700">
-          For airport transfers, Oadby sits in an ideal spot. East Midlands Airport is typically 25–30 minutes from
-          Oadby via the A6 and M1, and we offer fixed fares with no surprises. Birmingham, Heathrow, Gatwick, Luton,
-          Stansted, and Manchester are all covered too. We track your flight and adjust pickup times if there are
-          delays.
-        </p>
-        <p className="text-gray-700">
-          Pre-booking is always available and we send WhatsApp and SMS confirmation for every journey. Call 0116
-          2338888 or book online anytime.
-        </p>
-        <p className="text-gray-700">
-          Heading into Leicester for an evening out? Our{" "}
-          <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
-            late night taxi Leicester
-          </Link>{" "}
-          service covers fixed-fare runs home from the city centre after midnight — pre-book or WhatsApp when you are
-          ready to leave.
-        </p>
-      </div>
-    ),
-    faqs: [
-      {
-        question: "How much does a taxi from Oadby to Leicester city centre cost?",
-        answer:
-          "Fares from Oadby to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
-      },
-      {
-        question: "How long does a taxi from Oadby to Leicester take?",
-        answer:
-          "Most journeys from Oadby to Leicester city centre take around 10–15 minutes in normal traffic along the A6 corridor — during rush hours (8–9am, 4–6pm weekdays) allow up to 20 minutes.",
-      },
-      {
-        question: "Do you offer 24/7 taxi service in Oadby?",
-        answer:
-          "Yes. Aylestone Taxis operates 24 hours a day, seven days a week across Oadby and surrounding areas — including early-morning airport runs and late-night pickups.",
-      },
-      {
-        question: "Can I book a regular taxi for commuting or school runs from Oadby?",
-        answer:
-          "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
       },
     ],
   },

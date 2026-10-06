@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, MessageCircle, Rocket, ShoppingBag, Theater, Crown, Church, Music, ShoppingCart, Calendar, Star } from "lucide-react"
 import Logo from "@/components/logo"
 import FooterSeasonalBanners from "@/components/footer-seasonal-banners"
+import HalloweenFooterLink from "@/components/HalloweenFooterLink"
 import { companyInfo, contactInfo, socialLinks, footerData, copyrightInfo } from "@/lib/data"
 
 // Icon mapping function
@@ -171,7 +172,7 @@ export default function Footer() {
                   const IconComponent = getIconComponent(area.icon)
                   return (
                     <Link key={area.name} href={area.href} className="group">
-                      <div className="bg-gradient-to-br from-[#06A0A6]/5 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-[#06A0A6]/30 transition-[transform,opacity] duration-300 hover:scale-105">
+                      <div className="bg-gradient-to-br from-[#06A0A6]/5 to-white border border-gray-200 rounded-xl p-6 halloween-card hover:shadow-lg hover:border-[#06A0A6]/30 transition-[transform,opacity] duration-300 hover:scale-105">
                         <div className="flex items-start space-x-4">
                           <div className="flex-shrink-0">
                             <div className="w-12 h-12 bg-[#06A0A6]/10 rounded-lg flex items-center justify-center group-hover:bg-[#06A0A6]/20">
@@ -207,7 +208,7 @@ export default function Footer() {
                   const IconComponent = getIconComponent(area.icon)
                   return (
                     <Link key={area.name} href={area.href} className="group">
-                      <div className="bg-gradient-to-br from-blue-50 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-300 transition-[transform,opacity] duration-300 hover:scale-105">
+                      <div className="bg-gradient-to-br from-blue-50 to-white border border-gray-200 rounded-xl p-6 halloween-card hover:shadow-lg hover:border-blue-300 transition-[transform,opacity] duration-300 hover:scale-105">
                         <div className="flex items-start space-x-4">
                           <div className="flex-shrink-0">
                             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200">
@@ -243,7 +244,7 @@ export default function Footer() {
                   const IconComponent = getIconComponent(area.icon)
                   return (
                     <Link key={area.name} href={area.href} className="group">
-                      <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-gray-300 transition-[transform,opacity] duration-300 hover:scale-105">
+                      <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 halloween-card hover:shadow-lg hover:border-gray-300 transition-[transform,opacity] duration-300 hover:scale-105">
                         <div className="flex items-start space-x-4">
                           <div className="flex-shrink-0">
                             <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-200">
@@ -375,6 +376,7 @@ export default function Footer() {
           <nav aria-label="Services" className="mt-12 border-t border-gray-200 pt-10">
             <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 mb-5">Services</h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-2.5">
+              <HalloweenFooterLink />
               {footerData.services.map((service) => (
                 <li key={service.name}>
                   <Link
