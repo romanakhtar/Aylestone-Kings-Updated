@@ -86,7 +86,7 @@ export default function HalloweenTaxiLeicesterPage() {
             className="inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em]"
             style={{ backgroundColor: ORANGE, color: BLACK }}
           >
-            Friday 31 October 2026
+            October 2026
           </p>
           <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.08]">
             <span style={{ color: ORANGE }}>Halloween Taxi Leicester</span>
