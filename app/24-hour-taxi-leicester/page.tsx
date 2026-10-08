@@ -20,7 +20,7 @@ const canonical = buildCanonical("/24-hour-taxi-leicester")
 export const metadata: Metadata = {
   title: "24 Hour Taxi Leicester — All Night Service | Book 24/7",
   description:
-    "Need a 24 hour taxi in Leicester? Aylestone Taxis provides round-the-clock taxi service. Day or night, 365 days a year. Book your 24 hour taxi Leicester now - call 0116 2338888.",
+    "24 hour taxi in Leicester, every day of the year. Fixed fares with no surge however late it is, licensed drivers. Call 0116 233 8888 or book online.",
   keywords:
     "24 hour taxi Leicester, 24 hour taxi in Leicester, all night taxi Leicester, 24/7 taxi Leicester, late night taxi Leicester, taxi Leicester 24 hours, overnight taxi Leicester",
   alternates: {

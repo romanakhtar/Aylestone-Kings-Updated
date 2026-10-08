@@ -412,6 +412,33 @@ const AREA_CUSTOM_H1: Record<string, string> = {
   "kirby-muxloe": "Kirby Muxloe Taxi — Taxis in Kirby Muxloe",
 }
 
+/**
+ * Areas that get a contextual link to the city centre nights out hub.
+ *
+ * Separate from AREA_BLOG_CALLOUTS because that map holds one callout per
+ * slug and several are already pointing at blog posts.
+ */
+const AREA_NIGHTS_OUT_SLUGS = new Set([
+  "leicester-city-centre",
+  "clarendon-park",
+  "highfields",
+  "knighton",
+  "stoneygate",
+  "aylestone",
+  "belgrave",
+  "evington",
+  "oadby",
+  "wigston",
+  "beaumont-leys",
+  "braunstone",
+  "humberstone",
+  "rushey-mead",
+  "spinney-hills",
+  "highcross-leicester",
+  "university-of-leicester",
+  "de-montfort-university",
+])
+
 /** Optional contextual link from a taxis-in area page to a relevant blog post (SEO discovery). */
 const AREA_BLOG_CALLOUTS: Record<
   string,
@@ -2562,6 +2589,23 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                           className="text-[#06A0A6] font-semibold hover:underline underline-offset-2"
                         >
                           {AREA_BLOG_CALLOUTS[slug].title}
+                        </Link>
+                        .
+                      </p>
+                    </div>
+                  )}
+
+                  {AREA_NIGHTS_OUT_SLUGS.has(slug) && (
+                    <div className="rounded-lg border border-gray-200 bg-gradient-to-r from-[#06A0A6]/8 to-transparent p-4">
+                      <p className="text-gray-800 text-sm sm:text-base leading-relaxed">
+                        <span className="font-semibold text-[#0F0D3E]">
+                          Heading into town for the evening? See the venues we collect from in our{" "}
+                        </span>
+                        <Link
+                          href="/leicester-city-centre-nights-out-taxi"
+                          className="text-[#06A0A6] font-semibold hover:underline underline-offset-2"
+                        >
+                          guide to Leicester city centre pubs, bars and clubs
                         </Link>
                         .
                       </p>

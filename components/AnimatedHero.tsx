@@ -120,17 +120,27 @@ export default function AnimatedHero() {
             />
           </picture>
 
-          {/* Navy overlay matching the reference: solid on the left copy, gone by 70%, right 30% is the photo. */}
+          {/* Phones: copy runs the full width, so the scrim has to carry all the
+              way across or the text sits on the lit clock tower. Stays light
+              enough on the right for the photo to read through. */}
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 lg:hidden"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(15,13,62,0.95) 0%, rgba(15,13,62,0.90) 40%, rgba(15,13,62,0.80) 75%, rgba(15,13,62,0.72) 100%)",
+            }}
+          />
+          {/* Desktop: solid behind the left copy, gone by 70%, right 30% is the photo. */}
+          <div
+            className="absolute inset-0 hidden lg:block"
             style={{
               background:
                 "linear-gradient(to right, rgba(15,13,62,0.94) 0%, rgba(15,13,62,0.86) 28%, rgba(15,13,62,0.42) 48%, rgba(15,13,62,0.12) 62%, rgba(15,13,62,0) 70%)",
             }}
           />
-          {/* Soft navy lift at the base of the copy, kept inside the left 70% so the clock tower stays clear */}
+          {/* Soft navy lift at the base of the copy - full width on phones, inside the left 70% on desktop */}
           <div
-            className="absolute bottom-0 left-0 h-36 w-[70%]"
+            className="absolute bottom-0 left-0 h-36 w-full lg:w-[70%]"
             style={{
               background:
                 "linear-gradient(to top, rgba(15,13,62,0.88) 0%, rgba(15,13,62,0.35) 50%, rgba(15,13,62,0) 100%)",
@@ -222,7 +232,7 @@ export default function AnimatedHero() {
       >
         <div className={`grid grid-cols-1 ${isChristmasActive ? 'lg:grid-cols-2' : 'lg:grid-cols-2'} gap-8 lg:gap-16 items-start w-full`}>
           {/* Left Content - Main Content with Enhanced Visuals */}
-          <div className={`${isChristmasActive ? 'order-1 lg:order-1' : 'order-1'} w-[70%] lg:w-auto max-w-xl`}>
+          <div className={`${isChristmasActive ? 'order-1 lg:order-1' : 'order-1'} w-full lg:w-auto max-w-xl`}>
             
             {/* Main Heading */}
             <h1

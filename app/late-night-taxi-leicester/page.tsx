@@ -331,6 +331,17 @@ export default function LateNightTaxiLeicesterPage() {
                 </div>
               ))}
             </div>
+
+            <p className="max-w-4xl mx-auto mt-10 text-center text-lg text-[#2E3C44]">
+              Heading out rather than home? See which venues we collect from in our{" "}
+              <Link
+                href="/leicester-city-centre-nights-out-taxi"
+                className="text-[#06A0A6] underline underline-offset-2 hover:text-[#0F0D3E]"
+              >
+                guide to Leicester city centre pubs, bars and clubs
+              </Link>
+              .
+            </p>
           </div>
         </section>
 

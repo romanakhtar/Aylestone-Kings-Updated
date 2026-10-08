@@ -690,6 +690,10 @@ export const siteData = {
         href: "/late-night-taxi-leicester",
       },
       {
+        name: "City Centre Nights Out Taxi",
+        href: "/leicester-city-centre-nights-out-taxi",
+      },
+      {
         name: "Match Day Taxi Leicester",
         href: "/match-day-taxi-leicester",
       },
@@ -1147,7 +1151,7 @@ export const siteData = {
             <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
           </p>
         `,
-        date: "2026-10-04",
+        date: "2026-10-08",
         author: "Aylestone Taxis Team",
         category: "Travel Tips",
         image: "/Halloween-Theme-bg-IMG.webp",
@@ -1233,10 +1237,10 @@ export const siteData = {
             <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
           </p>
         `,
-        date: "2026-10-04",
+        date: "2026-09-30",
         author: "Aylestone Taxis Team",
         category: "Fare Guide",
-        image: "/Blog_Leicester_to_Manchester_airport_taxi.webp",
+        image: "/Blog-Leicester-to-Nottingham-Cost-Time-&-Booking-Guide.webp",
       },
       {
         id: "taxi-to-leicester-royal-infirmary-everything-you-need-to-know",
@@ -1302,10 +1306,10 @@ export const siteData = {
             <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
           </p>
         `,
-        date: "2026-10-04",
+        date: "2026-09-21",
         author: "Aylestone Taxis Team",
         category: "Local Guide",
-        image: "/Blog_Moving_Out_University_Halls_Leicester_Transport_Guide.webp",
+        image: "/Blog-Taxi-to-Leicester-Royal-Infirmary.webp",
       },
       {
         id: "taxi-to-de-montfort-hall-leicester-concerts-events-parking-guide",
@@ -4067,5 +4071,290 @@ export const copyrightInfo = {
   year: 2026,
   text: "© 2026 Aylestone Taxis. All rights reserved.",
 };
+
+
+/* ------------------------------------------------------------------------ */
+/* Leicester city centre nights out — venue data                            */
+/* ------------------------------------------------------------------------ */
+
+/** Cluster page a venue is grouped under. `null` = listed on the hub only. */
+export type CityCentreClusterSlug =
+  | "taxi-leicester-nightclubs"
+  | "taxi-leicester-the-lanes-market-place"
+  | "taxi-leicester-king-street-granby-street"
+  | "taxi-leicester-high-street-pubs"
+
+export type CityCentreVenueType = "Nightclub" | "Late & cocktail bar" | "Pub & bar"
+
+export type CityCentreVenue = {
+  name: string
+  type: CityCentreVenueType
+  /** Street address without the postcode. */
+  address: string
+  postcode: string
+  clusterSlug: CityCentreClusterSlug | null
+  /**
+   * One line of pickup/drop-off context shown under the address.
+   * Street-level only — no opening hours, closing times or named pick-up
+   * spots, none of which are verified anywhere in this codebase.
+   */
+  note: string
+}
+
+/** ISO date the venue list was last reviewed. Shown on the nights-out pages. */
+export const CITY_CENTRE_VENUES_LAST_CHECKED = "2026-10-07"
+
+/** Human-readable form of CITY_CENTRE_VENUES_LAST_CHECKED. */
+export const CITY_CENTRE_VENUES_LAST_CHECKED_LABEL = "7 October 2026"
+
+export const cityCentreVenues: CityCentreVenue[] = [
+  // --- Nightclubs -------------------------------------------------------
+  {
+    name: "Mosh Nightclub",
+    type: "Nightclub",
+    address: "37 St Nicholas Place",
+    postcode: "LE1 4LD",
+    clusterSlug: "taxi-leicester-nightclubs",
+    note: "Quote St Nicholas Place when you book and we will confirm the drop-off with you.",
+  },
+  {
+    name: "The Basement Nightclub",
+    type: "Nightclub",
+    address: "1 Wellington Street",
+    postcode: "LE1 6HH",
+    clusterSlug: "taxi-leicester-nightclubs",
+    note: "Wellington Street is a straightforward address to give a driver heading into the centre.",
+  },
+  {
+    name: "Quarter 25 Nightclub",
+    type: "Nightclub",
+    address: "25 Yeoman Street",
+    postcode: "LE1 1UT",
+    clusterSlug: "taxi-leicester-nightclubs",
+    note: "Book with the Yeoman Street address and your driver will head straight there.",
+  },
+  {
+    name: "Club Republic Nightclub",
+    type: "Nightclub",
+    address: "Gravel Street",
+    postcode: "LE1 3AG",
+    clusterSlug: "taxi-leicester-nightclubs",
+    note: "A regular pickup for groups travelling home together — tell us your numbers and we will send the right vehicle.",
+  },
+  {
+    name: "The Fan Club Nightclub",
+    type: "Nightclub",
+    address: "40 Abbey Street",
+    postcode: "LE1 3TD",
+    clusterSlug: "taxi-leicester-nightclubs",
+    note: "Abbey Street sits near the Belgrave Gate side of the centre, handy if your night moves between venues.",
+  },
+  {
+    name: "Motto Nightclub",
+    type: "Nightclub",
+    address: "94-96 Belgrave Gate",
+    postcode: "LE1 3GR",
+    clusterSlug: "taxi-leicester-nightclubs",
+    note: "Belgrave Gate is one of the busier city centre roads, so a pre-booked return is worth arranging.",
+  },
+  {
+    name: "Sophy Cocktail Bar & Club",
+    type: "Nightclub",
+    address: "8-10 King Street",
+    postcode: "LE1 6RJ",
+    clusterSlug: "taxi-leicester-nightclubs",
+    note: "Shares King Street with several other bars, so give us the venue name as well as the number.",
+  },
+
+  // --- Late & cocktail bars ---------------------------------------------
+  {
+    name: "Firebug",
+    type: "Late & cocktail bar",
+    address: "1 Millstone Lane",
+    postcode: "LE1 5JN",
+    clusterSlug: "taxi-leicester-the-lanes-market-place",
+    note: "One of three Millstone Lane venues we collect from — the house number keeps it unambiguous.",
+  },
+  {
+    name: "Little Sister",
+    type: "Late & cocktail bar",
+    address: "1 St Martins Square",
+    postcode: "LE1 5DF",
+    clusterSlug: "taxi-leicester-the-lanes-market-place",
+    note: "St Martins Square sits inside The Lanes, so agree the meeting street with your driver.",
+  },
+  {
+    name: "The Gadabout",
+    type: "Late & cocktail bar",
+    address: "10 Guildhall Lane",
+    postcode: "LE1 5FQ",
+    clusterSlug: "taxi-leicester-the-lanes-market-place",
+    note: "Guildhall Lane runs through the older quarter near the Cathedral.",
+  },
+  {
+    name: "BAR TROPICIA",
+    type: "Late & cocktail bar",
+    address: "5 St Martins Walk",
+    postcode: "LE1 5DG",
+    clusterSlug: "taxi-leicester-the-lanes-market-place",
+    note: "St Martins Walk is pedestrianised, so we will agree the nearest road with you when you book.",
+  },
+  {
+    name: "33 Cank Street",
+    type: "Late & cocktail bar",
+    address: "33 Cank Street",
+    postcode: "LE1 5GX",
+    clusterSlug: "taxi-leicester-the-lanes-market-place",
+    note: "Cank Street links the Market Place end of The Lanes, close to several other bars on this list.",
+  },
+  {
+    name: "Watson's Bar Leicester",
+    type: "Late & cocktail bar",
+    address: "94 Granby Street",
+    postcode: "LE1 1DJ",
+    clusterSlug: "taxi-leicester-king-street-granby-street",
+    note: "Granby Street is a main route through the centre and an easy address for a driver to find.",
+  },
+  {
+    name: "Inside No 9",
+    type: "Late & cocktail bar",
+    address: "Market Place",
+    postcode: "LE1 5GG",
+    clusterSlug: "taxi-leicester-the-lanes-market-place",
+    note: "Market Place addresses are best booked with the venue name so there is no mix-up.",
+  },
+  {
+    name: "Grand Union",
+    type: "Late & cocktail bar",
+    address: "24 King Street",
+    postcode: "LE1 6RL",
+    clusterSlug: "taxi-leicester-king-street-granby-street",
+    note: "King Street is short and narrow, so pre-booking the return keeps things simple.",
+  },
+
+  // --- Pubs & bars -------------------------------------------------------
+  {
+    name: "Queen of Bradgate",
+    type: "Pub & bar",
+    address: "93 High Street",
+    postcode: "LE1 4JB",
+    clusterSlug: "taxi-leicester-high-street-pubs",
+    note: "One of three venues on this stretch of High Street, so give us the number or the name.",
+  },
+  {
+    name: "Tree Leicester",
+    type: "Pub & bar",
+    address: "99 High Street",
+    postcode: "LE1 4JB",
+    clusterSlug: "taxi-leicester-high-street-pubs",
+    note: "A few doors along High Street from the Queen of Bradgate — same postcode, different number.",
+  },
+  {
+    name: "The High Cross",
+    type: "Pub & bar",
+    address: "103-105 High Street",
+    postcode: "LE1 4JB",
+    clusterSlug: "taxi-leicester-high-street-pubs",
+    note: "Sits near the Highcross end of High Street, within easy reach of the shopping centre.",
+  },
+  {
+    name: "O'Neill's Leicester",
+    type: "Pub & bar",
+    address: "16-20 Loseby Lane",
+    postcode: "LE1 5DR",
+    clusterSlug: "taxi-leicester-the-lanes-market-place",
+    note: "Loseby Lane is one of the narrow Lanes streets, so we will arrange a workable pickup road with you.",
+  },
+  {
+    name: "The Globe",
+    type: "Pub & bar",
+    address: "43 Silver Street",
+    postcode: "LE1 5EU",
+    clusterSlug: "taxi-leicester-the-lanes-market-place",
+    note: "Silver Street runs through the heart of The Lanes and is well known to our drivers.",
+  },
+  {
+    name: "The Corn Exchange",
+    type: "Pub & bar",
+    address: "1 Corn Exchange, Market Place",
+    postcode: "LE1 5GG",
+    clusterSlug: "taxi-leicester-the-lanes-market-place",
+    note: "Right on the Market Place, a common meeting point for groups travelling home together.",
+  },
+  {
+    name: "The Blue Boar",
+    type: "Pub & bar",
+    address: "16 Millstone Lane",
+    postcode: "LE1 5JN",
+    clusterSlug: "taxi-leicester-the-lanes-market-place",
+    note: "Shares Millstone Lane with Firebug and the Rutland & Derby Arms, so quote the venue name.",
+  },
+  {
+    name: "The Rutland & Derby Arms",
+    type: "Pub & bar",
+    address: "21 Millstone Lane",
+    postcode: "LE1 5JN",
+    clusterSlug: "taxi-leicester-the-lanes-market-place",
+    note: "The third Millstone Lane venue we are asked for — the house number tells them apart.",
+  },
+  {
+    name: "The King's Head",
+    type: "Pub & bar",
+    address: "36 King Street",
+    postcode: "LE1 6RL",
+    clusterSlug: "taxi-leicester-king-street-granby-street",
+    note: "A few doors from Grand Union on King Street, so the name matters more than the number.",
+  },
+  {
+    name: "The Royal Standard",
+    type: "Pub & bar",
+    address: "87 Charles Street",
+    postcode: "LE1 1FA",
+    clusterSlug: "taxi-leicester-king-street-granby-street",
+    note: "Charles Street is a wide main road, which makes it straightforward for drop-offs.",
+  },
+  {
+    name: "The Salmon",
+    type: "Pub & bar",
+    address: "19 Butt Close Lane",
+    postcode: "LE1 4QA",
+    clusterSlug: null,
+    note: "Butt Close Lane sits on the Highcross side of the city centre.",
+  },
+  {
+    name: "Knight & Garter",
+    type: "Pub & bar",
+    address: "14 Hotel Street",
+    postcode: "LE1 5AW",
+    clusterSlug: null,
+    note: "Hotel Street is just off the New Market Square side of the centre.",
+  },
+  {
+    name: "The Castle",
+    type: "Pub & bar",
+    address: "8-9 Castle View",
+    postcode: "LE1 5WH",
+    clusterSlug: null,
+    note: "Castle View is on the quieter Castle Gardens side, away from the busiest streets.",
+  },
+  {
+    name: "The Bowling Green",
+    type: "Pub & bar",
+    address: "44 Oxford Street",
+    postcode: "LE1 5XW",
+    clusterSlug: null,
+    note: "Oxford Street is on the southern edge of the centre, towards the De Montfort University side.",
+  },
+]
+
+/** Venues grouped under one cluster page, in listing order. */
+export function venuesForCluster(clusterSlug: CityCentreClusterSlug): CityCentreVenue[] {
+  return cityCentreVenues.filter((venue) => venue.clusterSlug === clusterSlug)
+}
+
+/** Venues of one type, for the hub's grouped listing. */
+export function venuesByType(type: CityCentreVenueType): CityCentreVenue[] {
+  return cityCentreVenues.filter((venue) => venue.type === type)
+}
 
 export default siteData;

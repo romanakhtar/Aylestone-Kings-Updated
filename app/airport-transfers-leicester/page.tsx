@@ -20,7 +20,7 @@ const canonical = buildCanonical("/airport-transfers-leicester")
 export const metadata: Metadata = {
   title: "Airport Transfers Leicester | Fixed Fares | Aylestone",
   description:
-    "Airport transfers Leicester & airport taxi Leicester: fixed fares to EMA, Birmingham, Heathrow, Gatwick, Stansted, Luton & Manchester. Airport taxis Leicester with flight monitoring. Book online or call 0116 2338888 — 24/7.",
+    "Airport transfers from Leicester to EMA, Birmingham, Heathrow and Gatwick. Fixed fares, no surge, flight tracking. Call 0116 233 8888 or book online 24/7.",
   keywords:
     "airport transfers Leicester, airport taxi Leicester, airport taxis Leicester, Leicester airport transfers, airport taxi service Leicester, East Midlands airport taxi, Heathrow taxi Leicester, Gatwick taxi Leicester",
   alternates: {

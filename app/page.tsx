@@ -5,7 +5,7 @@ import HomePageClient from "./HomePageClient"
 const canonical = buildCanonical("/")
 
 export const metadata: Metadata = {
-  title: "Taxi Leicester | Leicester Cabs & Taxis | Aylestone",
+  title: "Taxi Leicester | Fixed Fares, No Surge | Aylestone Taxis",
   description:
     "Book Leicester taxis, Leicester cabs and Leicestershire taxis 24/7. Fixed fares, no surge, licensed drivers. Call 0116 233 8888 or book online.",
   keywords:
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     canonical,
   },
   openGraph: {
-    title: "Taxi Leicester | Leicester Cabs & Taxis | Aylestone",
+    title: "Taxi Leicester | Fixed Fares, No Surge | Aylestone Taxis",
     description:
       "Book Leicester taxis, Leicester cabs and Leicestershire taxis 24/7. Fixed fares, no surge, licensed drivers. Call 0116 233 8888 or book online.",
     url: canonical,
