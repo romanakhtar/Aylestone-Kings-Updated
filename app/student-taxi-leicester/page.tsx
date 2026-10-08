@@ -181,6 +181,17 @@ export default function StudentTaxiLeicesterPage() {
                 </p>
               </div>
             </div>
+
+            <p className="max-w-4xl mx-auto mt-10 text-center text-lg text-[#2E3C44]">
+              Planning a night in town? Our{" "}
+              <Link
+                href="/leicester-city-centre-nights-out-taxi"
+                className="text-[#06A0A6] hover:underline font-medium"
+              >
+                guide to Leicester city centre pubs, bars and clubs
+              </Link>{" "}
+              lists the venues we collect from and how to plan the trip back.
+            </p>
           </div>
         </section>
 

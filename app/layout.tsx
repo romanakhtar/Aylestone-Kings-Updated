@@ -128,7 +128,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${roboto.variable} antialiased`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${roboto.variable} antialiased`}>
       <head>
         {/* Resource Hints */}
         <link rel="preconnect" href="https://aylestonekings.webbooker.icabbi.com" />

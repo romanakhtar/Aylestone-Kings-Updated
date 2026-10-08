@@ -9,7 +9,7 @@ const canonical = buildCanonical("/leicester-airport-taxi")
 export const metadata: Metadata = {
   title: "Leicester Airport Taxi | Transfers 24/7 | 0116 2338888",
   description:
-    "Leicester airport taxi & Leicester airport taxis: fixed fares to every major UK airport, flight tracking, return & East Midlands Airport to Leicester. See price online — call 0116 2338888, 24/7.",
+    "Leicester airport taxi to every major UK airport. Fixed fares agreed before you travel, no surge, flight tracking. Call 0116 233 8888 or book online 24/7.",
   keywords:
     "Leicester Airport Taxi, Leicester airport taxis, airport taxi Leicester, Leicester airport transfers, Leicester airport transfer, airport taxi from Leicester, Leicester to airport taxi",
   alternates: {

@@ -8,7 +8,7 @@ import { buildCanonical } from "@/lib/seo/canonical"
 const CANONICAL_URL = buildCanonical("/taxi-to-birmingham-airport")
 
 export const metadata: Metadata = {
-  title: "Leicester to Birmingham Airport Taxi | From £60",
+  title: "Leicester to Birmingham Airport Taxi | Fixed Fares from £60",
   description:
     "Fixed-fare transfer from Leicester to Birmingham Airport from £60. Licensed drivers, flight tracking, no surge. Book online or call 0116 233 8888.",
   keywords:
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     canonical: CANONICAL_URL,
   },
   openGraph: {
-    title: "Leicester to Birmingham Airport Taxi | From £60",
+    title: "Leicester to Birmingham Airport Taxi | Fixed Fares from £60",
     description:
       "Fixed-fare transfer from Leicester to Birmingham Airport from £60. Licensed drivers, flight tracking, no surge. Book online or call 0116 233 8888.",
     url: CANONICAL_URL,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leicester to Birmingham Airport Taxi | From £60",
+    title: "Leicester to Birmingham Airport Taxi | Fixed Fares from £60",
     description:
       "Fixed-fare transfer from Leicester to Birmingham Airport from £60. Licensed drivers, flight tracking, no surge. Book online or call 0116 233 8888.",
   },

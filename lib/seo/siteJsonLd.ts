@@ -34,8 +34,8 @@ export function getAggregateRatingJsonLd(): Record<string, unknown> {
   return {
     "@type": "AggregateRating",
     ratingValue: 4.7,
-    ratingCount: 145,
-    reviewCount: 145,
+    ratingCount: 152,
+    reviewCount: 152,
     bestRating: 5,
     worstRating: 1,
   }

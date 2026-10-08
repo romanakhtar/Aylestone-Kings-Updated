@@ -2,12 +2,10 @@
 
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
-import dynamic from "next/dynamic"
 import { ArrowRight, MapPin, Clock, Shield } from "lucide-react"
 import { siteData, contactInfo } from "@/lib/data"
 import { trackBookNowClick, onPhoneClick } from "@/lib/analytics"
-
-const ContactModeCards = dynamic(() => import("@/components/ContactModeCards"), { ssr: false })
+import ContactModeCards from "@/components/ContactModeCards"
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 import { useChristmasTheme } from "@/components/ChristmasThemeProvider"
 import { useValentineTheme } from "@/components/ValentineThemeProvider"
@@ -28,6 +26,12 @@ export default function AnimatedHero() {
   
   // Core homepage search-intent messaging (used when not in seasonal modes)
   const isSeasonal = isHalloweenActive || isChristmasActive || isValentineActive
+  // Halloween keeps the default hero copy - only the background changes
+  const isSeasonalCopy = isChristmasActive || isValentineActive
+  // Picks out a few words in Halloween orange. Wording is unchanged either
+  // way, so the indexed hero copy stays exactly the same.
+  const hw = (text: string) =>
+    isHalloweenActive ? <span className="text-[#FF8A3D]">{text}</span> : <>{text}</>
   const coreFeatures = [
     "24/7 Leicester Taxi Service",
     "Fixed & Transparent Fares",
@@ -98,37 +102,68 @@ export default function AnimatedHero() {
         </div>
       )}
 
-      {/* Halloween Background Image - Extended */}
+      {/* Halloween hero background: art-directed photo + brand colour overlay */}
       {isHalloweenActive && (
-        <div className="absolute inset-0 opacity-50 z-0 h-screen pointer-events-none" aria-hidden>
-          <Image
-            src="/Halloweenbg.png"
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden>
+          {/* Portrait crop on phones, landscape on tablet/desktop - the browser downloads only one */}
+          <picture>
+            <source media="(min-width: 1024px)" srcSet="/Halloween-Theme-bg-IMG.webp" />
+            <source media="(max-width: 1023px)" srcSet="/Halloween-Theme-bg-Mobile.webp" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/Halloween-Theme-bg-IMG.webp"
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover object-center"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+            />
+          </picture>
+
+          {/* Phones: copy runs the full width, so the scrim has to carry all the
+              way across or the text sits on the lit clock tower. Stays light
+              enough on the right for the photo to read through. */}
+          <div
+            className="absolute inset-0 lg:hidden"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(15,13,62,0.95) 0%, rgba(15,13,62,0.90) 40%, rgba(15,13,62,0.80) 75%, rgba(15,13,62,0.72) 100%)",
+            }}
+          />
+          {/* Desktop: solid behind the left copy, gone by 70%, right 30% is the photo. */}
+          <div
+            className="absolute inset-0 hidden lg:block"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(15,13,62,0.94) 0%, rgba(15,13,62,0.86) 28%, rgba(15,13,62,0.42) 48%, rgba(15,13,62,0.12) 62%, rgba(15,13,62,0) 70%)",
+            }}
+          />
+          {/* Soft navy lift at the base of the copy - full width on phones, inside the left 70% on desktop */}
+          <div
+            className="absolute bottom-0 left-0 h-36 w-full lg:w-[70%]"
+            style={{
+              background:
+                "linear-gradient(to top, rgba(15,13,62,0.88) 0%, rgba(15,13,62,0.35) 50%, rgba(15,13,62,0) 100%)",
+            }}
+          />
+          {/* Night-sky silhouettes - decorative, drift gently, hidden on small screens */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/halloween/bats-276128.svg"
             alt=""
-            fill
-            sizes="100vw"
-            className="object-contain object-left"
-            loading="lazy"
+            className="halloween-silhouette halloween-silhouette-light halloween-drift absolute top-[14%] left-[50%] hidden w-[95px] sm:block lg:w-[115px]"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/halloween/ghost-with-bag-black-and-white-1225.svg"
+            alt=""
+            className="halloween-silhouette halloween-silhouette-light halloween-sway absolute top-[54%] left-[2.5%] hidden w-[44px] lg:block"
+            style={{ animationDelay: "1.2s", opacity: 0.55 }}
           />
         </div>
       )}
-      
-      {/* Spider Web Background Image */}
-      {isHalloweenActive && (
-        <div className="absolute right-0 top-0 opacity-50 z-0 w-[26%] min-w-[120px] max-w-[320px] aspect-square pointer-events-none" aria-hidden>
-          <Image
-            src="/Spider-web2.png"
-            alt=""
-            fill
-            sizes="(max-width: 768px) 120px, 320px"
-            className="object-contain object-right-top"
-            loading="lazy"
-          />
-        </div>
-      )}
-      
-      {/* Halloween Overlay */}
-      {isHalloweenActive && <div className="halloween-hero-overlay" />}
-      {isHalloweenActive && <div className="halloween-mist" />}
+
+      {/* Halloween haze layers disabled - the background photo carries the atmosphere */}
       
       
       {/* Christmas Background Pattern Overlay */}
@@ -197,38 +232,45 @@ export default function AnimatedHero() {
       >
         <div className={`grid grid-cols-1 ${isChristmasActive ? 'lg:grid-cols-2' : 'lg:grid-cols-2'} gap-8 lg:gap-16 items-start w-full`}>
           {/* Left Content - Main Content with Enhanced Visuals */}
-          <div className={`${isChristmasActive ? 'order-1 lg:order-1' : 'order-1'} max-w-xl`}>
+          <div className={`${isChristmasActive ? 'order-1 lg:order-1' : 'order-1'} w-full lg:w-auto max-w-xl`}>
             
             {/* Main Heading */}
             <h1
               id="hero-heading"
               className={`text-2xl md:text-3xl font-bold mb-2 leading-tight ${
-                isChristmasActive ? 'text-white' : 'text-[#0F0D3E]'
+                isChristmasActive || isHalloweenActive
+                  ? 'text-white [text-shadow:0_2px_14px_rgba(5,8,30,0.55)]'
+                  : 'text-[#0F0D3E]'
               }`}
             >
-              {isHalloweenActive
-                ? "Leicester Taxi Service & Airport Transfers Fixed Fares 24/7 🎃"
-                : isValentineActive
+              {isValentineActive
                 ? "Reliable, Safe Taxi for Your Valentine's Evening"
                 : isChristmasActive
                 ? "Leicester Taxi Service This Christmas"
+                : isHalloweenActive
+                ? (
+                  <>
+                    Leicester Taxi Service &amp; Airport Transfers{" "}
+                    <span className="text-[#FF8A3D]">Fixed Fares 24/7</span>
+                  </>
+                )
                 : "Leicester Taxi Service & Airport Transfers Fixed Fares 24/7"}
             </h1>
 
             {/* Description */}
             <div
   className={`text-lg mb-1 leading-relaxed ${
-    isChristmasActive ? 'text-[#E4E4E4]' : 'text-[#2E3C44]'
+    isChristmasActive || isHalloweenActive ? 'text-[#E4E4E4]' : 'text-[#2E3C44]'
   }`}
 >
   {isValentineActive ? (
     "Pre-book with confidence. Licensed, safe, and on time, every time."
-  ) : isSeasonal ? (
+  ) : isSeasonalCopy ? (
     siteData.homepage.hero.subtitle
   ) : (
     <>
-      <p className="mb-0">
-        <strong>Book a taxi Leicester locals have used since 1995.</strong> Aylestone Taxis runs Leicester taxis and Leicester cabs with licensed drivers, fixed fares, and no surge pricing. Available 24/7, we provide:
+      <p className={isChristmasActive || isHalloweenActive ? "mb-0 text-[#E4E4E4]" : "mb-0"}>
+        <strong>Book a taxi Leicester locals have used since 1995.</strong> Aylestone Taxis runs Leicester taxis and Leicester cabs with licensed drivers, {hw("fixed fares")}, and {hw("no surge pricing")}. Available {hw("24/7")}, we provide:
       </p>
       <ul className="list-disc pl-6 space-y-0">
         <li><strong>Local journeys</strong> right across Leicester and Leicestershire</li>     
@@ -242,7 +284,7 @@ export default function AnimatedHero() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
               {(isValentineActive
                 ? ["Reliable", "Safe", "Pre-book"]
-                : isSeasonal
+                : isSeasonalCopy
                 ? siteData.homepage.hero.features
                 : coreFeatures
               ).map((feature, index) => {
@@ -256,17 +298,19 @@ export default function AnimatedHero() {
                           ? 'bg-[#EF5B6A]/20 border-[#EF5B6A]/40'
                           : isChristmasActive
                           ? 'bg-[#D9B35A]/20 border-[#D9B35A]/30'
+                          : isHalloweenActive
+                          ? 'bg-white/10 border-white/30 backdrop-blur-sm shadow-lg shadow-black/20'
                           : 'bg-cyan-500/20 border-cyan-500/30'
                       }`}
                     >
                       <IconComponent
                         className={`h-4 w-4 ${
-                          isValentineActive ? 'text-[#EF5B6A]' : isChristmasActive ? 'text-[#D9B35A]' : 'text-[#06A0A6]'
+                          isValentineActive ? 'text-[#EF5B6A]' : isChristmasActive ? 'text-[#D9B35A]' : isHalloweenActive ? 'text-[#FF8A3D]' : 'text-[#06A0A6]'
                         }`}
                       />
                       <span
                         className={`font-medium text-sm ${
-                          isChristmasActive ? 'text-white' : 'text-[#2E3C44]'
+                          isChristmasActive || isHalloweenActive ? 'text-white' : 'text-[#2E3C44]'
                         }`}
                       >
                         {feature}
@@ -289,9 +333,7 @@ export default function AnimatedHero() {
                   : 'bg-[#06A0A6] hover:bg-[#0F0D3E] text-white'
               } w-full sm:w-auto px-8 py-4 rounded-lg font-semibold text-sm flex items-center justify-center gap-3 shadow-lg hover:shadow-xl mb-4`}
             >
-              {isHalloweenActive
-                ? "Book Your Spook-tacular Ride Now 🎃"
-                : isValentineActive
+              {isValentineActive
                 ? "Pre-book Your Ride 🧡"
                 : isChristmasActive
                 ? "🎄 Book Your Festive Ride Now 🎄"
@@ -329,11 +371,12 @@ export default function AnimatedHero() {
                   <Image
                     src={siteData.images.heroTaxi}
                     alt="Modern white taxi Leicester from Aylestone Taxis — professional fleet serving Leicester and the Midlands since 1995"
-                    width={280}
+                    width={560}
                     height={224}
                     sizes="(max-width: 768px) 80px, 280px"
-                    className="relative z-10 w-38 lg:w-[280px] h-auto drop-shadow-2xl"
+                    className="relative z-10 w-auto max-w-[80px] lg:max-w-[280px] drop-shadow-2xl"
                     style={{ width: "auto", height: "auto" }}
+                    priority
                   />
                 </div>
               </div>
@@ -343,7 +386,7 @@ export default function AnimatedHero() {
           
           {/* Right Content - Contact Mode Cards (Desktop Only) */}
           <div className="hidden lg:flex max-w-md order-2 justify-center lg:justify-end mb-8 lg:mb-0 lg:self-stretch lg:items-center">
-            <ContactModeCards />
+            <ContactModeCards transparentBackground={isHalloweenActive} />
           </div>
         </div>
       </div>

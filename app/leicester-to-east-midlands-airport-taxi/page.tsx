@@ -8,7 +8,7 @@ import { buildCanonical } from "@/lib/seo/canonical"
 const CANONICAL = buildCanonical("/leicester-to-east-midlands-airport-taxi")
 
 export const metadata: Metadata = {
-  title: "Leicester to EMA Taxi Route & Times | From £40",
+  title: "Leicester to East Midlands Airport Taxi | Fixed Fares",
   description:
     "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £40. Call 0116 233 8888.",
   keywords:
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     canonical: CANONICAL,
   },
   openGraph: {
-    title: "Leicester to EMA Taxi Route & Times | From £40",
+    title: "Leicester to East Midlands Airport Taxi | Fixed Fares",
     description:
       "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £40. Call 0116 233 8888.",
     url: CANONICAL,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leicester to EMA Taxi Route & Times | From £40",
+    title: "Leicester to East Midlands Airport Taxi | Fixed Fares",
     description:
       "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £40. Call 0116 233 8888.",
   },

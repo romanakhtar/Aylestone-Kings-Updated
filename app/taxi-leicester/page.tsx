@@ -7,26 +7,35 @@ import { buildCanonical } from "@/lib/seo/canonical"
 
 const canonical = buildCanonical("/taxi-leicester")
 
+/*
+ * This page is the Areas hub (see AREAS_HUB_PATH in lib/seo/breadcrumbs.ts) —
+ * every /taxis-in/* page breadcrumbs back to it as "Areas".
+ *
+ * GSC shows the homepage, not this page, is what Google ranks for the head
+ * term "taxi leicester" (93% of impressions for that query). So this page is
+ * positioned for area and coverage intent instead of competing with it.
+ */
+const TITLE = "Taxis in Leicester | Every Area We Cover | 24/7"
+const DESCRIPTION =
+  "Taxis in Leicester and Leicestershire, covering every area from Aylestone to Oadby. Fixed fares, no surge, licensed drivers. Call 0116 233 8888, 24/7."
+
 export const metadata: Metadata = {
-  title: "How to Book Leicester Taxis & Cabs | App, Phone, WhatsApp",
-  description:
-    "Book Leicester taxis and Leicester cabs by app, phone or WhatsApp. Same Aylestone Taxis service as the homepage — 24/7, fixed fares. Call 0116 233 8888.",
+  title: TITLE,
+  description: DESCRIPTION,
   keywords:
-    "book taxi Leicester, Leicester taxi number, how to book Leicester cabs, Leicester taxi app, WhatsApp taxi Leicester",
+    "taxis in Leicester, Leicester taxi areas, taxi coverage Leicester, local taxi Leicester, Leicester taxi journey times",
   alternates: {
     canonical,
   },
   openGraph: {
-    title: "How to Book Leicester Taxis & Cabs | App, Phone, WhatsApp",
-    description:
-      "Book Leicester taxis and Leicester cabs by app, phone or WhatsApp. Same Aylestone Taxis service as the homepage — 24/7, fixed fares.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: canonical,
   },
   twitter: {
     card: "summary_large_image",
-    title: "How to Book Leicester Taxis & Cabs | App, Phone, WhatsApp",
-    description:
-      "Book Leicester taxis and Leicester cabs by app, phone or WhatsApp. Same Aylestone Taxis service as the homepage — 24/7, fixed fares. Call 0116 233 8888.",
+    title: TITLE,
+    description: DESCRIPTION,
   },
 }
 
@@ -66,15 +75,17 @@ export default function TaxiLeicesterPage() {
                 Book Leicester taxis &amp; cabs
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                How to Book Leicester Taxis and Cabs
+                Taxis in Leicester — Every Area We Cover
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Same Aylestone Taxis service as our{" "}
+                Find your neighbourhood below and book a licensed, DBS-checked driver with a fare
+                agreed before you travel. We have covered Leicester and Leicestershire since 1995 —
+                from Aylestone and Clarendon Park to Oadby, Wigston and the county villages. To
+                book straight away, use our{" "}
                 <Link href="/" className="text-[#06A0A6] font-semibold underline underline-offset-2">
-                  Taxi Leicester homepage
+                  Taxi Leicester booking page
                 </Link>
-                : app, phone or WhatsApp, fixed fares, licensed drivers since 1995. Use this page if you want booking
-                steps and local area links — then confirm your ride in seconds.
+                .
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

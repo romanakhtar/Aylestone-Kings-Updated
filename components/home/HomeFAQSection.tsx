@@ -56,7 +56,7 @@ export default function HomeFAQSection() {
             <AccordionItem
               key={faq.question}
               value={`item-${index + 1}`}
-              className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm"
+              className="bg-white border border-gray-200 rounded-lg px-6 py-2 shadow-sm halloween-card"
             >
               <AccordionTrigger className="text-left font-semibold text-[#0F0D3E] hover:no-underline">
                 {faq.question}

@@ -7,13 +7,13 @@ import { siteData, contactInfo } from "@/lib/data"
 import { onBookNowClick } from "@/lib/analytics"
 import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
+import HomeReviewsSection from "@/components/home/HomeReviewsSection"
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 import { useValentineTheme } from "@/components/ValentineThemeProvider"
 
 const FareEstimator = dynamic(() => import("@/components/FareEstimator"), { ssr: false })
 const FAQSchema = dynamic(() => import("@/components/seo/FAQSchema"))
 const AppDownloadButtons = dynamic(() => import("@/components/AppDownloadButtons"), { ssr: false })
-const HomeReviewsSection = dynamic(() => import("@/components/home/HomeReviewsSection"))
 const HomeFAQSection = dynamic(() => import("@/components/home/HomeFAQSection"))
 
 export default function HomePageClient() {
@@ -164,7 +164,7 @@ export default function HomePageClient() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Leicester City Council */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center halloween-card">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-blue-600" />
               </div>
@@ -173,7 +173,7 @@ export default function HomePageClient() {
             </div>
 
             {/* Wolverhampton City Council */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center halloween-card">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-green-600" />
               </div>
@@ -182,7 +182,7 @@ export default function HomePageClient() {
             </div>
 
             {/* DBS Checked */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center halloween-card">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-purple-600" />
               </div>
@@ -191,7 +191,7 @@ export default function HomePageClient() {
             </div>
 
             {/* 24/7 Service */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center halloween-card">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="h-8 w-8 text-orange-600" />
               </div>
@@ -265,7 +265,7 @@ export default function HomePageClient() {
 
             {/* Benefits Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <div className="bg-[#E4E4E4] rounded-xl p-6">
+              <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
                 <div className="flex items-center gap-3 mb-3">
                   <Check className="h-6 w-6 text-[#06A0A6]" />
                   <h3 className="text-lg font-semibold text-[#0F0D3E]">Competitive Earnings</h3>
@@ -276,7 +276,7 @@ export default function HomePageClient() {
                 </p>
               </div>
 
-              <div className="bg-[#E4E4E4] rounded-xl p-6">
+              <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
                 <div className="flex items-center gap-3 mb-3">
                   <Check className="h-6 w-6 text-[#06A0A6]" />
                   <h3 className="text-lg font-semibold text-[#0F0D3E]">Flexible Schedule</h3>
@@ -287,7 +287,7 @@ export default function HomePageClient() {
                 </p>
               </div>
 
-              <div className="bg-[#E4E4E4] rounded-xl p-6">
+              <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
                 <div className="flex items-center gap-3 mb-3">
                   <Check className="h-6 w-6 text-[#06A0A6]" />
                   <h3 className="text-lg font-semibold text-[#0F0D3E]">Vehicle Options</h3>
@@ -298,7 +298,7 @@ export default function HomePageClient() {
                 </p>
               </div>
 
-              <div className="bg-[#E4E4E4] rounded-xl p-6">
+              <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
                 <div className="flex items-center gap-3 mb-3">
                   <Check className="h-6 w-6 text-[#06A0A6]" />
                   <h3 className="text-lg font-semibold text-[#0F0D3E]">24/7 Driver Support</h3>
@@ -310,7 +310,7 @@ export default function HomePageClient() {
                 </p>
               </div>
 
-              <div className="bg-[#E4E4E4] rounded-xl p-6">
+              <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
                 <div className="flex items-center gap-3 mb-3">
                   <Check className="h-6 w-6 text-[#06A0A6]" />
                   <h3 className="text-lg font-semibold text-[#0F0D3E]">Steady Bookings</h3>
@@ -321,7 +321,7 @@ export default function HomePageClient() {
                 </p>
               </div>
 
-              <div className="bg-[#E4E4E4] rounded-xl p-6">
+              <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
                 <div className="flex items-center gap-3 mb-3">
                   <Check className="h-6 w-6 text-[#06A0A6]" />
                   <h3 className="text-lg font-semibold text-[#0F0D3E]">Training & Development</h3>
@@ -334,7 +334,7 @@ export default function HomePageClient() {
             </div>
 
             {/* Additional Benefits List */}
-            <div className="bg-gradient-to-r from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-xl p-8 mb-12">
+            <div className="bg-gradient-to-r from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-xl p-8 mb-12 halloween-card">
               <h3 className="text-2xl font-bold text-[#0F0D3E] mb-6 text-center">Why Choose Aylestone Taxis?</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-start gap-3">
@@ -372,7 +372,7 @@ export default function HomePageClient() {
             {/* Requirements Preview */}
             <div className="mb-12">
               <h3 className="text-2xl font-bold text-[#0F0D3E] mb-6 text-center">What We&apos;re Looking For</h3>
-              <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 halloween-card">
                 <p className="text-[#2E3C44] mb-4 leading-relaxed">We welcome drivers who meet our requirements:</p>
                 <ul className="space-y-3 text-[#2E3C44]">
                   <li className="flex items-start gap-3">
@@ -553,8 +553,8 @@ export default function HomePageClient() {
               <Image
                 src="/eco-friendly-taxi-side.webp"
                 alt="Eco-friendly and sustainable taxi vehicle from Aylestone Taxis green fleet in Leicester"
-                width={600}
-                height={300}
+                width={2016}
+                height={809}
                 sizes="(max-width: 768px) 100vw, 600px"
                 className="rounded-2xl"
                 style={{ width: "auto", height: "auto" }}
@@ -574,7 +574,7 @@ export default function HomePageClient() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/airport-transfers-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+            <Link href="/airport-transfers-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group halloween-card">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Plane className="h-8 w-8 text-[#06A0A6]" />
               </div>
@@ -590,7 +590,7 @@ export default function HomePageClient() {
               </div>
             </Link>
 
-            <Link href="/airport-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+            <Link href="/airport-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group halloween-card">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Plane className="h-8 w-8 text-[#06A0A6]" />
               </div>
@@ -606,7 +606,7 @@ export default function HomePageClient() {
               </div>
             </Link>
 
-            <Link href="/taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+            <Link href="/taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group halloween-card">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Car className="h-8 w-8 text-[#06A0A6]" />
               </div>
@@ -622,7 +622,7 @@ export default function HomePageClient() {
               </div>
             </Link>
 
-            <Link href="/local-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+            <Link href="/local-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group halloween-card">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <MapPin className="h-8 w-8 text-[#06A0A6]" />
               </div>
@@ -638,7 +638,7 @@ export default function HomePageClient() {
               </div>
             </Link>
 
-            <Link href="/long-distance-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+            <Link href="/long-distance-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group halloween-card">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Car className="h-8 w-8 text-[#06A0A6]" />
               </div>
@@ -654,7 +654,7 @@ export default function HomePageClient() {
               </div>
             </Link>
 
-            <Link href="/corporate-taxi-account-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+            <Link href="/corporate-taxi-account-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group halloween-card">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Briefcase className="h-8 w-8 text-[#06A0A6]" />
               </div>
@@ -670,7 +670,7 @@ export default function HomePageClient() {
               </div>
             </Link>
 
-            <Link href="/prom-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+            <Link href="/prom-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group halloween-card">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Sparkles className="h-8 w-8 text-[#06A0A6]" />
               </div>
@@ -686,7 +686,7 @@ export default function HomePageClient() {
               </div>
             </Link>
 
-            <Link href="/student-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+            <Link href="/student-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group halloween-card">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Users className="h-8 w-8 text-[#06A0A6]" />
               </div>
@@ -702,7 +702,7 @@ export default function HomePageClient() {
               </div>
             </Link>
 
-            <Link href="/match-day-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+            <Link href="/match-day-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group halloween-card">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Calendar className="h-8 w-8 text-[#06A0A6]" />
               </div>
@@ -718,7 +718,7 @@ export default function HomePageClient() {
               </div>
             </Link>
 
-            <Link href="/late-night-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group">
+            <Link href="/late-night-taxi-leicester" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group halloween-card">
               <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
                 <Clock className="h-8 w-8 text-[#06A0A6]" />
               </div>
@@ -749,7 +749,7 @@ export default function HomePageClient() {
 
           {/* Booking */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div className="bg-white rounded-xl p-6 border border-gray-100">
+            <div className="bg-white rounded-xl p-6 border border-gray-100 halloween-card">
               <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-4">
                 {siteData.homepage.seoContent.booking.heading}
               </div>
@@ -773,7 +773,7 @@ export default function HomePageClient() {
             </div>
 
             {/* Why Us */}
-            <div className="bg-white rounded-xl p-6 border border-gray-100">
+            <div className="bg-white rounded-xl p-6 border border-gray-100 halloween-card">
               <h3 className="text-2xl font-semibold text-[#0F0D3E] mb-4">{siteData.homepage.seoContent.whyUs.heading}</h3>
               <div className="space-y-3">
                 {siteData.homepage.seoContent.whyUs.items.map((w: { title: string; text: string }, idx: number) => (
@@ -790,7 +790,7 @@ export default function HomePageClient() {
           <div className="mb-16">
             <h3 className="text-2xl font-semibold text-[#0F0D3E] mb-4">{siteData.homepage.seoContent.airports.heading}</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-gray-100">
+              <div className="bg-white rounded-xl p-6 border border-gray-100 halloween-card">
                 <div className="font-semibold text-[#0F0D3E] mb-2">Airports Covered</div>
                 <ul className="list-disc ml-5 text-[#2E3C44] space-y-1">
                   {siteData.homepage.seoContent.airports.airportsList.map((a: { name: string; href: string }, idx: number) => (
@@ -802,7 +802,7 @@ export default function HomePageClient() {
                   ))}
                 </ul>
               </div>
-              <div className="bg-white rounded-xl p-6 border border-gray-100 md:col-span-2">
+              <div className="bg-white rounded-xl p-6 border border-gray-100 halloween-card md:col-span-2">
                 <div className="font-semibold text-[#0F0D3E] mb-2">Why choose our airport service?</div>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {siteData.homepage.seoContent.airports.bullets.map((b: string, idx: number) => (
@@ -860,7 +860,7 @@ export default function HomePageClient() {
           </div>
 
           {/* Closing CTA Points */}
-          <div className="bg-[#E4E4E4] rounded-xl p-6">
+          <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
             <h3 className="text-2xl font-semibold text-[#0F0D3E] mb-4">{siteData.homepage.seoContent.closingCta.heading}</h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
               {siteData.homepage.seoContent.closingCta.bullets.map((c: string, idx: number) => (
@@ -889,7 +889,7 @@ export default function HomePageClient() {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl text-white font-bold mb-6">
-            {isHalloweenActive ? "🎃Ready for a Spook-tacular Ride?🎃" : isValentineActive ? "Pre-book Your Valentine's Evening" : "Ready to experience the difference?"}
+            {isHalloweenActive ? "Ready for a Spook-tacular Ride?" : isValentineActive ? "Pre-book Your Valentine's Evening" : "Ready to experience the difference?"}
           </h2>
           <p className="text-xl text-[#E4E4E4] mb-8 max-w-2xl mx-auto">
             {isHalloweenActive

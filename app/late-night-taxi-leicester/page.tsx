@@ -141,6 +141,53 @@ export default function LateNightTaxiLeicesterPage() {
           </div>
         </section>
 
+        {/* Halloween - seasonal section (A.3, October brief) */}
+        <section className="py-16 md:py-20 bg-[#0F0D3E] text-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Halloween in Leicester — Book Early
+            </h2>
+            <p className="text-lg text-[#E4E4E4] mb-5 leading-relaxed">
+              Halloween falls on <strong className="text-white">Friday 31 October 2026</strong>, and it is one of the
+              busiest nights of the year for taxis in Leicester. Costumed crowds fill the Clock Tower, The Lanes and
+              Granby Street, every bar and club turns out at once, and ride-hailing apps apply their heaviest surge
+              pricing of the season just as everyone wants to get home.
+            </p>
+            <p className="text-lg text-[#E4E4E4] mb-5 leading-relaxed">
+              Our fares do not change on Halloween. The price you are quoted when you book is the price you pay,
+              whether you travel at 8pm or 2am. Pre-book your journey home as soon as you know your plans — Halloween
+              pre-bookings fill up quickly, and the later you leave it the harder it is to guarantee a car at the time
+              you want.
+            </p>
+            <p className="text-lg text-[#E4E4E4] mb-8 leading-relaxed">
+              Not sure when you will be leaving? Message us on WhatsApp at{" "}
+              <strong className="text-white">+44 7535 855786</strong> on the night and we will confirm a fixed fare
+              before the driver sets off. For costs, venues and the full pre-booking window, read our{" "}
+              <Link
+                href="/blog/halloween-taxi-leicester-2026-pre-book-before-surge-prices-hit"
+                className="text-[#06A0A6] underline underline-offset-2 hover:text-white"
+              >
+                Halloween taxi Leicester guide
+              </Link>
+              .
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href={contactInfo.booking.online}
+                className="inline-flex items-center justify-center rounded-lg bg-[#F26B21] px-7 py-3.5 font-semibold text-white transition-colors hover:bg-[#d85b14]"
+              >
+                Pre-Book Your Halloween Taxi
+              </Link>
+              <a
+                href="tel:01162338888"
+                className="inline-flex items-center justify-center rounded-lg border border-white/40 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-white/10"
+              >
+                Call 0116 233 8888
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Fixed Fares */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -284,6 +331,17 @@ export default function LateNightTaxiLeicesterPage() {
                 </div>
               ))}
             </div>
+
+            <p className="max-w-4xl mx-auto mt-10 text-center text-lg text-[#2E3C44]">
+              Heading out rather than home? See which venues we collect from in our{" "}
+              <Link
+                href="/leicester-city-centre-nights-out-taxi"
+                className="text-[#06A0A6] underline underline-offset-2 hover:text-[#0F0D3E]"
+              >
+                guide to Leicester city centre pubs, bars and clubs
+              </Link>
+              .
+            </p>
           </div>
         </section>
 

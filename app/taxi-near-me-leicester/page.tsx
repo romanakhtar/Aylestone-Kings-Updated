@@ -10,7 +10,7 @@ const canonical = buildCanonical("/taxi-near-me-leicester")
 export const metadata: Metadata = {
   title: "Taxi Near Me Leicester | Taxis Near Me | Book in Seconds",
   description:
-    "Taxi near me & taxis near me in Leicester and Leicestershire: fast dispatch, saloons and 6-seaters, see your fare before you book. Taxi near me Leicester — call 0116 2338888 or book online 24/7.",
+    "Taxi near me in Leicester: fast local pickups, fixed fares with no surge, saloons and 6-seaters. See your price before you book. Call 0116 233 8888, 24/7.",
   keywords:
     "taxi near me, taxis near me, Taxi Near Me Leicester, taxi near me leicester, Leicester taxi near me, find taxi Leicester, nearest taxi Leicester, 6 seater taxi near me",
   alternates: {

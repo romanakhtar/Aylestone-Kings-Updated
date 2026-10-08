@@ -3,21 +3,20 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
-import GoogleReviewsWidget from "@/components/GoogleReviewsWidget"
 import { buildCanonical } from "@/lib/seo/canonical"
 
 const PAGE_PHONE = "0116 233 8888"
 const CANONICAL = buildCanonical("/leicester-taxi-company")
 
 export const metadata: Metadata = {
-  title: "Leicester Taxi Company | Aylestone Taxis | Book 24/7",
+  title: "Leicester Taxi Company | Fixed Fares, No Surge | 24/7",
   description:
-    "Aylestone Taxis — Leicester's trusted taxi company since 1995. Fixed prices, DBS-checked drivers, available 24/7. Airport transfers, school runs & corporate accounts. Call 0116 233 8888.",
+    "Leicester taxi company since 1995. Fixed fares with no surge, DBS-checked drivers, airport transfers and corporate accounts. Call 0116 233 8888, 24/7.",
   alternates: {
     canonical: CANONICAL,
   },
   openGraph: {
-    title: "Leicester Taxi Company | Aylestone Taxis | Book 24/7",
+    title: "Leicester Taxi Company | Fixed Fares, No Surge | 24/7",
     description:
       "Aylestone Taxis — Leicester's trusted taxi company since 1995. Fixed prices, DBS-checked drivers, available 24/7.",
     url: CANONICAL,
@@ -239,7 +238,6 @@ export default function LeicesterTaxiCompanyPage() {
           </div>
         </section>
 
-        <GoogleReviewsWidget />
 
         {/* CTA */}
         <section className="py-20 bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white">

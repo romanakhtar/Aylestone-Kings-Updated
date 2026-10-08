@@ -64,6 +64,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   urls.push(createUrl('/wheelchair-accessible-taxi-leicester', 0.85, 'monthly'))
   urls.push(createUrl('/taxi-to-birmingham-airport', 0.9, 'weekly'))
 
+  // Leicester city centre nights out - hub + venue cluster pages
+  urls.push(createUrl('/leicester-city-centre-nights-out-taxi', 0.85, 'monthly'))
+  urls.push(createUrl('/taxi-leicester-nightclubs', 0.8, 'monthly'))
+  urls.push(createUrl('/taxi-leicester-the-lanes-market-place', 0.8, 'monthly'))
+  urls.push(createUrl('/taxi-leicester-king-street-granby-street', 0.8, 'monthly'))
+  urls.push(createUrl('/taxi-leicester-high-street-pubs', 0.8, 'monthly'))
+
   // Airport Pricing Pages
   const airports = [
     'East-Midlands',
