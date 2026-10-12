@@ -7,6 +7,8 @@ import { Shield, FileText, Car, CreditCard, CheckCircle2, PoundSterling, Clock, 
 import type { Metadata } from 'next'
 import { siteData } from '@/lib/data'
 import FAQSchema from "@/components/seo/FAQSchema"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { buildCanonical } from "@/lib/seo/canonical"
 
 // Icon mapping
 const iconMap: Record<string, any> = {
@@ -33,7 +35,6 @@ const documentTypes = [
 export default function JoinDriverPage() {
   const [ownsVehicle, setOwnsVehicle] = useState(false)
   const [rtwStatus, setRtwStatus] = useState('')
-  const [hasMounted, setHasMounted] = useState(false)
   const [formErrors, setFormErrors] = useState<Record<string, string>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -43,9 +44,6 @@ export default function JoinDriverPage() {
   const [isUpdateSubmitting, setIsUpdateSubmitting] = useState(false)
   const [updateSuccess, setUpdateSuccess] = useState(false)
 
-  useEffect(() => {
-    setHasMounted(true)
-  }, [])
 
   // Show/hide conditional fields based on RTW status
   const showShareCode = rtwStatus === 'Share code'
@@ -638,40 +636,18 @@ export default function JoinDriverPage() {
     },
   ]
 
-  // Prevent hydration mismatch by not rendering conditional content until mounted
-  if (!hasMounted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-        <section className="relative py-16 md:py-24 bg-gradient-to-br from-[#0F0D3E] via-[#2E3C44] to-[#06A0A6]/20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F0D3E]/90 via-[#0F0D3E]/80 to-[#06A0A6]/30"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium mb-8 shadow-lg">
-                <Shield className="h-4 w-4 text-[#06A0A6] mr-3" />
-                {driverContent.hero.badge}
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                {driverContent.hero.heading}
-              </h1>
-              <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-                {driverContent.hero.subheading}
-              </p>
-            </div>
-          </div>
-        </section>
-        <section className="py-12 md:py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-xl shadow-lg border border-slate-200 p-8">
-              <p className="text-center text-slate-600">Loading form...</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    )
-  }
+  // NOTE: this page previously returned a "Loading form..." placeholder until
+  // a hasMounted flag flipped, which meant the server HTML contained almost
+  // none of the page — Google saw 22 words instead of ~1,100. The conditional
+  // form fields derive from state that starts the same on server and client,
+  // so the gate was not needed and the whole page now renders server-side.
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Driver Jobs" }]}
+        pageUrl={buildCanonical("/drivers")}
+      />
       <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#0F0D3E] via-[#1a1f3a] to-[#0F0D3E] overflow-hidden">

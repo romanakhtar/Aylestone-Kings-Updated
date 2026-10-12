@@ -13,21 +13,24 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const CANONICAL = buildCanonical("/match-day-taxi-leicester")
 const MATCH_DAY_PHONE = "0116 233 8888"
 
 export const metadata: Metadata = {
-  title: "Match Day Taxi Leicester — Fixed Prices, No Surge | Book 24/7",
+  title: "Match Day Taxi Leicester | Fixed Prices, No Surge",
   description:
-    "Need a match day taxi in Leicester? Aylestone Taxis offers fixed price taxis to King Power Stadium and Mattioli Woods Welford Road. No surge pricing. Call 0116 233 8888.",
+    "Match day taxi to King Power Stadium and Welford Road. Fixed prices, no surge, group vehicles available. Call 0116 233 8888.",
   alternates: {
     canonical: CANONICAL,
   },
   openGraph: {
-    title: "Match Day Taxi Leicester — Fixed Prices, No Surge | Book 24/7",
+    images: [OG_IMAGE],
+    title: "Match Day Taxi Leicester | Fixed Prices, No Surge",
     description:
-      "Need a match day taxi in Leicester? Aylestone Taxis offers fixed price taxis to King Power Stadium and Mattioli Woods Welford Road. No surge pricing. Call 0116 233 8888.",
+      "Match day taxi to King Power Stadium and Welford Road. Fixed prices, no surge, group vehicles available. Call 0116 233 8888.",
     url: CANONICAL,
   },
 }
@@ -53,6 +56,10 @@ const faqs = [
 export default function MatchDayTaxiLeicesterPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Match Day Taxi Leicester" }]}
+        pageUrl={buildCanonical("/match-day-taxi-leicester")}
+      />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}

@@ -3,19 +3,22 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/long-distance-taxi-leicester")
 
 export const metadata: Metadata = {
   title: "Long-Distance Taxi Leicester | UK-Wide | Book 0116 2338888",
   description:
-    "Long-distance taxi from Leicester with guide prices: London from £180, Manchester from £150, Nottingham from £45, and more. Saloon (1–4) and MPV (5–6). Corporate accounts welcome. Book online or call 0116 2338888.",
+    "Long-distance taxi from Leicester: London from £180, Manchester from £150, Nottingham from £45. Saloons and MPVs — call 0116 233 8888.",
   keywords:
     "long distance taxi Leicester, long distance taxis, taxi for long distance, corporate taxi Leicester, business taxi Leicester, intercity taxi Leicester",
   alternates: {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Long-Distance Taxi Leicester | UK-Wide | Aylestone Taxis",
     description:
       "Corporate and long-distance taxi from Leicester with guide prices on popular routes. Agreed fares, 24/7. Book online or call 0116 2338888.",
@@ -42,6 +45,10 @@ const LONG_DISTANCE_GUIDE_PRICES: {
 export default function LongDistanceTaxiLeicesterPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Long-Distance Taxi Leicester" }]}
+        pageUrl={buildCanonical("/long-distance-taxi-leicester")}
+      />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">

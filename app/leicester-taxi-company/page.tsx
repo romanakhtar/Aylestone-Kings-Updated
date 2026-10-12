@@ -4,6 +4,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const PAGE_PHONE = "0116 233 8888"
 const CANONICAL = buildCanonical("/leicester-taxi-company")
@@ -16,6 +18,7 @@ export const metadata: Metadata = {
     canonical: CANONICAL,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Leicester Taxi Company | Fixed Fares, No Surge | 24/7",
     description:
       "Aylestone Taxis — Leicester's trusted taxi company since 1995. Fixed prices, DBS-checked drivers, available 24/7.",
@@ -92,6 +95,10 @@ export default function LeicesterTaxiCompanyPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Leicester Taxi Company" }]}
+        pageUrl={buildCanonical("/leicester-taxi-company")}
+      />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero */}

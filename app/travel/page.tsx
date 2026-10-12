@@ -3,6 +3,8 @@ import { contactInfo, siteData } from "@/lib/data"
 import { ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/travel")
 
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Travel by Taxi Leicester | Aylestone Taxis",
     description: "Stations, airports, events — book on 0116 2338888 or online.",
     url: canonical,
@@ -23,6 +26,10 @@ export const metadata: Metadata = {
 export default function OurTeamPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Travel" }]}
+        pageUrl={buildCanonical("/travel")}
+      />
 
       {/* Hero Section */}
       <section className="py-20 bg-gray-50 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">

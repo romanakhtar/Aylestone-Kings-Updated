@@ -5,6 +5,8 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/pricing")
 
@@ -16,12 +18,14 @@ export const metadata: Metadata = {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Airport Taxi Prices Leicester | From £40 | 24/7",
     description:
       "Compare fixed airport taxi prices from Leicester — from £40 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
     url: canonical,
   },
   twitter: {
+    images: [OG_IMAGE_URL],
     card: "summary_large_image",
     title: "Airport Taxi Prices Leicester | From £40 | 24/7",
     description:
@@ -95,6 +99,10 @@ export default function PricingPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Airport Pricing" }]}
+        pageUrl={buildCanonical("/pricing")}
+      />
       <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
@@ -236,7 +244,7 @@ export default function PricingPage() {
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
-                        <Link href="/pricing/airports/Birmingham" className="hover:text-cyan-600 cursor-pointer">
+                        <Link href="/taxi-to-birmingham-airport" className="hover:text-cyan-600 cursor-pointer">
                           Birmingham
                         </Link>
                       </td>

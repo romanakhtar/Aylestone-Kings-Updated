@@ -13,6 +13,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const PAGE_PHONE = "0116 233 8888"
 const CANONICAL = buildCanonical("/wheelchair-accessible-taxi-leicester")
@@ -20,11 +22,12 @@ const CANONICAL = buildCanonical("/wheelchair-accessible-taxi-leicester")
 export const metadata: Metadata = {
   title: "Wheelchair Accessible Taxi Leicester | Aylestone Taxis",
   description:
-    "Need a wheelchair accessible taxi in Leicester? Aylestone Taxis provides safe, comfortable wheelchair accessible vehicles across Leicester. Pre-book online or call 0116 233 8888",
+    "Wheelchair accessible taxis across Leicester: safe, comfortable vehicles with trained drivers. Pre-book online or call 0116 233 8888.",
   alternates: {
     canonical: CANONICAL,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Wheelchair Accessible Taxi Leicester | Aylestone Taxis",
     description:
       "Safe, comfortable wheelchair accessible taxis across Leicester. Pre-book online or call 0116 233 8888.",
@@ -76,6 +79,10 @@ export default function WheelchairAccessibleTaxiLeicesterPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Wheelchair Accessible Taxi Leicester" }]}
+        pageUrl={buildCanonical("/wheelchair-accessible-taxi-leicester")}
+      />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero */}

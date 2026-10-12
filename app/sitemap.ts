@@ -4,17 +4,22 @@ import { siteData, footerData } from '@/lib/data'
 const baseUrl = 'https://aylestone-taxis.co.uk'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const currentDate = new Date().toISOString().split('T')[0]
-
-  // Helper function to create URL entry
+  // Helper function to create URL entry.
+  //
+  // `lastmod` is deliberately omitted unless a real modification date is
+  // known (currently only blog posts carry one). Stamping every URL with the
+  // build date tells Google the whole site changed on each deploy, which is
+  // untrue, and Google discounts lastmod it judges unreliable. Omitting it is
+  // valid per the sitemaps protocol and keeps the dates we do publish
+  // trustworthy.
   const createUrl = (
     path: string,
     priority: number,
     changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' = 'weekly',
-    lastmod: string = currentDate
+    lastmod?: string
   ): MetadataRoute.Sitemap[0] => ({
     url: `${baseUrl}${path}`,
-    lastModified: lastmod,
+    ...(lastmod ? { lastModified: lastmod } : {}),
     changeFrequency: changefreq,
     priority,
   })
@@ -74,7 +79,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Airport Pricing Pages
   const airports = [
     'East-Midlands',
-    'Birmingham',
+    // 'Birmingham' is omitted: /pricing/airports/Birmingham 308-redirects
+    // to /taxi-to-birmingham-airport, which is listed above.
     'Heathrow',
     'Gatwick',
     'Luton',

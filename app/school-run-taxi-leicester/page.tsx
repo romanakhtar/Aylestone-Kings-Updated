@@ -10,25 +10,29 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/school-run-taxi-leicester")
 
 export const metadata: Metadata = {
   title: "School Run Taxi Leicester | DBS Drivers | Aylestone Taxis",
   description:
-    "School run taxi Leicester with enhanced DBS-checked drivers and the option for a consistent same driver. Regular school transport covering Aylestone, Wigston, Knighton and Clarendon Park. Set up daily or weekly school run bookings today.",
+    "School run taxi Leicester with enhanced DBS-checked drivers and the same driver where possible. Daily or weekly bookings — call 0116 233 8888.",
   keywords:
     "school run taxi Leicester, school taxi Leicester, school transport Leicester, school run taxis Leicester, DBS checked school taxi Leicester, regular school run taxi Leicester, school run taxi Aylestone, school run taxi Wigston, school run taxi Knighton, school run taxi Clarendon Park",
   alternates: {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "School Run Taxi Leicester | DBS Drivers | Aylestone Taxis",
     description:
       "Safe, reliable school run taxi Leicester service with enhanced DBS-checked drivers and an option for the same regular driver. Covering Aylestone, Wigston, Knighton and Clarendon Park.",
     url: canonical,
   },
   twitter: {
+    images: [OG_IMAGE_URL],
     card: "summary_large_image",
     title: "School Run Taxi Leicester | DBS Drivers | Aylestone Taxis",
     description:
@@ -39,6 +43,10 @@ export const metadata: Metadata = {
 export default function SchoolRunTaxiLeicesterPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "School Run Taxi Leicester" }]}
+        pageUrl={buildCanonical("/school-run-taxi-leicester")}
+      />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">

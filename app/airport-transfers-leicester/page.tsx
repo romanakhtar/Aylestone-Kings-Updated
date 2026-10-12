@@ -14,6 +14,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/airport-transfers-leicester")
 
@@ -27,6 +29,7 @@ export const metadata: Metadata = {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Airport Transfers Leicester | Aylestone Taxis",
     description:
       "Fixed-fare airport transfers and airport taxis from Leicester. EMA, BHX, Heathrow, Gatwick & more. Call 0116 2338888 or book online.",
@@ -89,6 +92,10 @@ export default function AirportTransfersLeicesterPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Airport Transfers Leicester" }]}
+        pageUrl={buildCanonical("/airport-transfers-leicester")}
+      />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}

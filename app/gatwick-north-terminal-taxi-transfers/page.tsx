@@ -4,19 +4,22 @@ import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/gatwick-north-terminal-taxi-transfers")
 
 export const metadata: Metadata = {
   title: "Leicester to Gatwick North Taxi | Fixed Fares | Aylestone",
   description:
-    "Pre-book a taxi from Leicester to Gatwick North Terminal. Fixed fares, flight monitoring, meet & greet option, saloons and MPVs. Call 0116 2338888 or book online — 24/7.",
+    "Taxi from Leicester to Gatwick North Terminal: fixed fares, flight monitoring, saloons and MPVs. 24/7 — call 0116 233 8888.",
   keywords:
     "Leicester to Gatwick North taxi, Gatwick North terminal taxi Leicester, taxi to Gatwick North from Leicester, Gatwick airport transfer Leicester, Gatwick North pickup",
   alternates: {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Leicester to Gatwick North Taxi | Fixed Fares | Aylestone",
     description:
       "Leicester to Gatwick North: fixed pricing, flight tracking, professional drivers. Book online or call 0116 2338888.",
@@ -54,6 +57,10 @@ export default function GatwickNorthTerminalTaxiTransfersPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Airport Transfers", href: "/airport-transfers-leicester" }, { name: "Gatwick North Terminal" }]}
+        pageUrl={buildCanonical("/gatwick-north-terminal-taxi-transfers")}
+      />
       <FAQSchema faqs={faqs.map((item) => ({ question: item.q, answer: item.a }))} />
       <main className="pt-24">
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">

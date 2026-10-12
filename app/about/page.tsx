@@ -3,17 +3,20 @@ import { Shield, Clock, Users, Award, MapPin, Phone, Check, ArrowRight, MessageC
 import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/about")
 
 export const metadata: Metadata = {
   title: "About Aylestone Taxis Taxi Leicester | Since 1995",
   description:
-    "About us at Aylestone, Leicester: Aylestone Taxis taxi company since 1995, licensed private hire, DBS-checked drivers. Based on Aylestone Road — book on 0116 2338888 or online.",
+    "Aylestone Taxis: a Leicester taxi company since 1995. Licensed private hire, DBS-checked drivers, fixed fares. Call 0116 233 8888.",
   alternates: {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "About Aylestone Taxis | Aylestone Road Leicester",
     description: "Leicester's long-established taxi firm: licensed, insured, 24/7. Call 0116 2338888 or book online.",
     url: canonical,
@@ -23,6 +26,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "About Us" }]}
+        pageUrl={buildCanonical("/about")}
+      />
 
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-[#0F0D3E] via-[#2E3C44] to-[#06A0A6]/20 overflow-hidden">

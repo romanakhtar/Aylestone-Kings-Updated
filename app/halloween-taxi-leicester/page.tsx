@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 
 const CANONICAL = buildCanonical("/halloween-taxi-leicester")
 const PHONE = "0116 233 8888"
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
     "halloween taxi leicester, taxi halloween leicester, halloween night out leicester taxi, halloween party taxi leicester, pre book halloween taxi leicester",
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Halloween Taxi Leicester | Fixed Fares, No Surge",
     description:
       "Fixed fares, no surge pricing on Halloween night in Leicester. Pre-book your taxi home from Vibe, 2Funky, Athena, Mosh and Club Republic.",

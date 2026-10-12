@@ -5,17 +5,20 @@ import { siteData, contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import BlogListingJsonLd from "@/components/seo/BlogListingJsonLd"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/blog")
 
 export const metadata: Metadata = {
   title: "Leicester Taxi Blog | Tips, Airports & Travel | Aylestone",
   description:
-    "Read the Aylestone Taxis blog for Leicester travel guides — airport transfers, matchday taxis, prom transport, student moves, fare comparisons, and booking tips. Free advice from your local 24/7 taxi company. Book online or call 0116 2338888.",
+    "Leicester travel guides from Aylestone Taxis: airport transfers, matchday taxis, student moves and fare comparisons. Call 0116 233 8888.",
   alternates: {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Leicester Taxi Blog | Aylestone Taxis",
     description:
       "Practical Leicester travel guides — airports, matchdays, prom nights, student moves, and fare tips from Aylestone Taxis. Book 24/7 on 0116 2338888.",
@@ -28,6 +31,10 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Blog" }]}
+        pageUrl={buildCanonical("/blog")}
+      />
       <BlogListingJsonLd
         name={siteData.blogPage.title}
         description={siteData.blogPage.subtitle}

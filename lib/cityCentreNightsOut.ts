@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import type { CityCentreClusterSlug } from "@/lib/data"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 
 /**
  * Content for the Leicester city centre nights out cluster pages.
@@ -274,11 +275,13 @@ export function buildClusterMetadata(slug: CityCentreClusterSlug): Metadata {
     description: cluster.description,
     alternates: { canonical },
     openGraph: {
+      images: [OG_IMAGE],
       title: cluster.title,
       description: cluster.description,
       url: canonical,
     },
     twitter: {
+      images: [OG_IMAGE_URL],
       card: "summary_large_image",
       title: cluster.title,
       description: cluster.description,

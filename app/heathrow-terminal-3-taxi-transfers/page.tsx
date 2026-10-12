@@ -4,19 +4,22 @@ import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/heathrow-terminal-3-taxi-transfers")
 
 export const metadata: Metadata = {
   title: "Leicester to Heathrow T3 Taxi | Fixed Fares | Aylestone",
   description:
-    "Taxi to Heathrow Terminal 3 (T3) from Leicester: private hire with fixed fares, flight tracking, meet & greet option, licensed drivers. Book online or call 0116 2338888 — 24/7.",
+    "Taxi from Leicester to Heathrow Terminal 3: fixed fares, flight tracking and meet & greet. Licensed drivers 24/7 — call 0116 233 8888.",
   keywords:
     "Leicester to Heathrow T3 taxi, taxi to Heathrow Terminal 3 from Leicester, LHR Terminal 3 taxi Leicester, Heathrow Terminal 3 taxi Leicester, taxi to Heathrow T3 from Leicester, Heathrow T3 transfer Leicester, Heathrow Terminal 3 airport taxi",
   alternates: {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Leicester to Heathrow T3 Taxi | Fixed Fares | Aylestone",
     description:
       "Leicester to Heathrow T3 transfers: fixed pricing, flight monitoring, professional drivers. Book online or call 0116 2338888.",
@@ -54,6 +57,10 @@ export default function HeathrowTerminal3TaxiTransfersPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Airport Transfers", href: "/airport-transfers-leicester" }, { name: "Heathrow Terminal 3" }]}
+        pageUrl={buildCanonical("/heathrow-terminal-3-taxi-transfers")}
+      />
       <FAQSchema faqs={faqs.map((item) => ({ question: item.q, answer: item.a }))} />
       <main className="pt-24">
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">

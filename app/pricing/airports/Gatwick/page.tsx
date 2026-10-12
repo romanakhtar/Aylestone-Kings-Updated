@@ -14,7 +14,7 @@ export const metadata = buildAirportMetadata({
   fromPrice: "£200",
   title: "Gatwick taxi Leicester | From £200 | ~150 mi | Book 24/7",
   description:
-    "Leicester to Gatwick (LGW): ~150 mi, ~2h45–3h30 via M1/M25/M23. North & South terminal drop-off. Fixed from £200 — see price vs week parking + fuel. Call 0116 2338888 or book online.",
+    "Leicester to Gatwick (LGW): ~150 mi, ~2h45–3h30 via M1/M25/M23. North and South terminals. Fixed from £200 — call 0116 233 8888.",
 })
 
 const faqs = gatwickPricingFaqs

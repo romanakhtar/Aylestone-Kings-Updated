@@ -8,6 +8,8 @@ import {
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/services")
 
@@ -19,6 +21,7 @@ export const metadata: Metadata = {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Taxi Services Leicester | Aylestone Taxis",
     description: "Airport, local, school runs, business travel — book online or call 0116 2338888.",
     url: canonical,
@@ -121,6 +124,10 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Services" }]}
+        pageUrl={buildCanonical("/services")}
+      />
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-[#0F0D3E] via-[#2E3C44] to-[#06A0A6]/20 overflow-hidden">
         <div className="absolute inset-0 z-0">

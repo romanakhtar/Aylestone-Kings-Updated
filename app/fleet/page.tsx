@@ -3,17 +3,20 @@ import { Check, ArrowRight, Users, Car, Shield, Star, Clock } from "lucide-react
 import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/fleet")
 
 export const metadata: Metadata = {
   title: "Taxi Fleet Leicester | Saloons, MPVs & 8-Seaters | Aylestone",
   description:
-    "Our Leicester taxi fleet: saloons, executive cars, 6- and 8-seaters — clean, licensed, maintained in-house. Need the right vehicle? Book online or call 0116 2338888.",
+    "Our Leicester taxi fleet: saloons, executive cars, 6- and 8-seaters. Clean, licensed, maintained in-house. Call 0116 233 8888.",
   alternates: {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Taxi Fleet Leicester | Aylestone Taxis",
     description: "Modern vehicles for every journey. Book on 0116 2338888 or online.",
     url: canonical,
@@ -23,6 +26,10 @@ export const metadata: Metadata = {
 export default function FleetPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Our Fleet" }]}
+        pageUrl={buildCanonical("/fleet")}
+      />
 
       <main className="pt-24">
         {/* Hero Section */}

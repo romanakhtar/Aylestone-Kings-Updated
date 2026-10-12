@@ -11,7 +11,10 @@ export default function BirminghamAirportContent({ faqs }: { faqs: AirportFaqIte
     <div className="min-h-screen bg-white">
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
-        <AirportPricingBreadcrumbs pageName="Birmingham Airport" path="/pricing/airports/Birmingham" />
+        {/* This component renders at /taxi-to-birmingham-airport; the old
+            /pricing/airports/Birmingham path 308-redirects there, so the
+            breadcrumb must point at the live URL, not the redirect. */}
+        <AirportPricingBreadcrumbs pageName="Birmingham Airport" path="/taxi-to-birmingham-airport" />
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

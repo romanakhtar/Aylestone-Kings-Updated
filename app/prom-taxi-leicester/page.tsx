@@ -14,6 +14,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const CANONICAL = buildCanonical("/prom-taxi-leicester")
 const PROM_PHONE = "0116 233 8888"
@@ -26,12 +28,14 @@ export const metadata: Metadata = {
     canonical: CANONICAL,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Prom Taxi Leicester | Fixed Prices, DBS Drivers",
     description:
       "Fixed-price prom taxis in Leicester — group bookings, photo-stop flexibility, DBS-checked drivers. From £15. Book early, call 0116 233 8888.",
     url: CANONICAL,
   },
   twitter: {
+    images: [OG_IMAGE_URL],
     card: "summary_large_image",
     title: "Prom Taxi Leicester | Fixed Prices, DBS Drivers",
     description:
@@ -60,6 +64,10 @@ const faqs = [
 export default function PromTaxiLeicesterPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Prom Taxi Leicester" }]}
+        pageUrl={buildCanonical("/prom-taxi-leicester")}
+      />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}

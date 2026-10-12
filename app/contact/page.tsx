@@ -15,6 +15,8 @@ import { onBookNowClick, onPhoneClick, onWhatsAppClick } from "@/lib/analytics";
 import { useForm, ValidationError } from "@formspree/react";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { buildCanonical } from "@/lib/seo/canonical"
 
 // Note: Metadata cannot be exported from client components
 // This page's metadata should be handled in a layout or parent component
@@ -36,6 +38,10 @@ export default function ContactPage() {
  if (state.succeeded) {
  return (
 <div className="min-h-screen bg-white">
+  <BreadcrumbJsonLd
+    items={[{ name: "Home", href: "/" }, { name: "Contact" }]}
+    pageUrl={buildCanonical("/contact")}
+  />
  <section className="relative py-20">
  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="text-center">

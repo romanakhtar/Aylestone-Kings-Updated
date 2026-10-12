@@ -14,6 +14,8 @@ import { contactInfo } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/24-hour-taxi-leicester")
 
@@ -27,6 +29,7 @@ export const metadata: Metadata = {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "24 Hour Taxi Leicester — All Night Service | Book 24/7",
     description:
       "24 hour taxi Leicester - Round-the-clock taxi service. Day or night, bank holidays included. Book now or call 0116 2338888.",
@@ -37,6 +40,10 @@ export const metadata: Metadata = {
 export default function TwentyFourHourTaxiLeicesterPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "24 Hour Taxi Leicester" }]}
+        pageUrl={buildCanonical("/24-hour-taxi-leicester")}
+      />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">
