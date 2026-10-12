@@ -4,19 +4,22 @@ import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/heathrow-terminal-4-taxi-transfers")
 
 export const metadata: Metadata = {
   title: "Leicester to Heathrow T4 Taxi | Fixed Fares | Aylestone",
   description:
-    "Private taxi from Leicester to Heathrow Terminal 4 (T4). Fixed fares, flight tracking, meet & greet option, licensed drivers. Book online or call 0116 2338888 — 24/7.",
+    "Taxi from Leicester to Heathrow Terminal 4: fixed fares, flight tracking and meet & greet. Licensed drivers 24/7 — call 0116 233 8888.",
   keywords:
     "Leicester to Heathrow T4 taxi, Heathrow Terminal 4 taxi Leicester, taxi to Heathrow T4 from Leicester, Heathrow T4 transfer Leicester, Heathrow Terminal 4 airport taxi",
   alternates: {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Leicester to Heathrow T4 Taxi | Fixed Fares | Aylestone",
     description:
       "Leicester to Heathrow T4 transfers: fixed pricing, flight monitoring, professional drivers. Book online or call 0116 2338888.",
@@ -54,6 +57,10 @@ export default function HeathrowTerminal4TaxiTransfersPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Airport Transfers", href: "/airport-transfers-leicester" }, { name: "Heathrow Terminal 4" }]}
+        pageUrl={buildCanonical("/heathrow-terminal-4-taxi-transfers")}
+      />
       <FAQSchema faqs={faqs.map((item) => ({ question: item.q, answer: item.a }))} />
       <main className="pt-24">
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">

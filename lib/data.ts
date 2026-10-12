@@ -217,7 +217,7 @@ export const siteData = {
             name: "East Midlands Airport",
             href: "/pricing/airports/East-Midlands",
           },
-          { name: "Birmingham Airport", href: "/pricing/airports/Birmingham" },
+          { name: "Birmingham Airport", href: "/taxi-to-birmingham-airport" },
           { name: "Luton Airport", href: "/pricing/airports/Luton" },
           { name: "Heathrow Airport", href: "/pricing/airports/Heathrow" },
           { name: "Stansted Airport", href: "/pricing/airports/Stansted" },
@@ -816,7 +816,7 @@ export const siteData = {
       },
     ],
     airportLinks: [
-      { name: "Birmingham Airport", href: "/pricing/airports/Birmingham" },
+      { name: "Birmingham Airport", href: "/taxi-to-birmingham-airport" },
       {
         name: "East Midlands Airport",
         href: "/pricing/airports/East-Midlands",
@@ -1399,9 +1399,9 @@ export const siteData = {
       {
         id: "leicester-freshers-2026-taxi-guide-new-students",
         title: "Leicester Freshers 2026 — Taxi Guide for New Students",
-        metaTitle: "Leicester Freshers 2026 — Taxi Guide for New Students | Aylestone Taxis",
+        metaTitle: "Leicester Freshers 2026 Taxi Guide | Aylestone Taxis",
         metaDescription:
-          "New to Leicester for freshers 2026? Our taxi guide covers getting from the train station, airport transfers, luggage moves and late nights out. Call 0116 233 8888.",
+          "New to Leicester for freshers 2026? Station pickups, airport transfers, luggage moves and late nights out. Fixed fares — call 0116 233 8888.",
         excerpt:
           "Leicester freshers 2026 taxi guide for new University of Leicester and DMU students — train station to campus, airport transfers, luggage moves, WhatsApp booking for freshers nights, and saving our number for the year.",
         faqs: [
@@ -1498,9 +1498,9 @@ export const siteData = {
       {
         id: "late-night-taxi-leicester-how-to-get-home-safely-friday-night",
         title: "Late Night Taxi Leicester — How to Get Home Safely on a Friday Night",
-        metaTitle: "Late Night Taxi Leicester 2026 — Get Home Safely on a Friday Night",
+        metaTitle: "Late Night Taxi Leicester | Get Home Safely 2026",
         metaDescription:
-          "Planning a night out in Leicester? Find out why pre-booking beats Uber surge pricing on Friday nights. Fixed fares, DBS drivers, WhatsApp booking. Call 0116 233 8888.",
+          "Why pre-booking beats Uber surge on a Friday night in Leicester. Fixed fares, DBS-checked drivers, WhatsApp booking. Call 0116 233 8888.",
         excerpt:
           "Planning a Friday night out in Leicester? Why pre-booking beats standing in the street near Clock Tower and Highcross, fixed fares vs Uber surge, WhatsApp booking on the night, areas we cover, and DBS-checked driver safety.",
         faqs: [
@@ -1936,9 +1936,9 @@ export const siteData = {
       {
         id: "leicester-city-matchday-travel-taxi-guide-2026",
         title: "Leicester City Matchday Travel — Taxi Guide 2026",
-        metaTitle: "Leicester City Matchday Taxi Guide 2026 — Fixed Prices, No Surge",
+        metaTitle: "Leicester City Matchday Taxi Guide 2026 | No Surge",
         metaDescription:
-          "Getting to King Power Stadium or Mattioli Woods Welford Road? Our matchday taxi guide covers pre-booking, group travel and fixed prices with no surge pricing. Call 0116 233 8888.",
+          "Getting to King Power Stadium or Welford Road: pre-booking, group travel and fixed prices with no surge. Call 0116 233 8888.",
         excerpt:
           "Matchday travel made simple for Leicester City FC and Leicester Tigers supporters: parking restrictions, road closures, pre-booked taxis, group bookings, fixed prices (no surge), and calmer post-match pickup points away from the crowds.",
         faqs: [
@@ -2088,9 +2088,9 @@ export const siteData = {
       {
         id: "moving-out-university-halls-leicester-transport-guide",
         title: "Moving Out of University Halls in Leicester — Transport Guide",
-        metaTitle: "Moving Out of University in Leicester — Student Transport Guide",
+        metaTitle: "Moving Out of Leicester Halls | Student Transport",
         metaDescription:
-          "End of term in Leicester? Our student transport guide covers luggage taxis, house moves, airport transfers and group bookings for University of Leicester and DMU students. Call 0116 233 8888.",
+          "End of term in Leicester: luggage taxis, house moves, airport transfers and group bookings for University of Leicester and DMU. Call 0116 233 8888.",
         excerpt:
           "End-of-term student transport in Leicester: why a taxi beats buses with boxes, estate and MPV options, group bookings for shared houses, and fixed-price trips to the station or airport — plus peak May–June booking advice.",
         faqs: [
@@ -2165,7 +2165,7 @@ export const siteData = {
         title: "Taxi vs Uber in Leicester — Which is Cheaper in 2026?",
         metaTitle: "Taxi vs Uber Leicester — Price Comparison 2026",
         metaDescription:
-          "Is a taxi or Uber cheaper in Leicester? We compare real prices for airport runs, train station trips and night outs. Fixed fares, no surge pricing. Call 0116 233 8888.",
+          "Taxi or Uber in Leicester — which is cheaper? We compare airport runs, station trips and nights out. Fixed fares, no surge. Call 0116 233 8888.",
         excerpt:
           "Taxi vs Uber Leicester in 2026: real price comparisons on three common routes, how surge pricing affects Uber fares, why fixed prices win for airports and nights out, and why local licensing matters.",
         content: `
@@ -2275,7 +2275,7 @@ export const siteData = {
         title: "Leicester to Manchester Taxi — Cost & Time 2026",
         metaTitle: "Leicester to Manchester Taxi — Fixed Price Guide 2026",
         metaDescription:
-          "Need a taxi from Leicester to Manchester? Fixed prices from £150, approx 2 hour journey. Compare costs vs train for groups. Call Aylestone Taxis on 0116 233 8888.",
+          "Taxi from Leicester to Manchester: fixed prices from £150, about 2 hours. Compare with the train for groups. Call 0116 233 8888.",
         excerpt:
           "Planning a Leicester to Manchester taxi? Typical M6 journey times around 2 hours, fixed fares from £150, when a cab beats the train, vehicle options for groups, and how to book long-distance transfers in advance.",
         content: `
@@ -2380,7 +2380,7 @@ export const siteData = {
         title: "Summer Holidays Airport Taxi Guide — Leicester Families 2026",
         metaTitle: "Summer Airport Taxi Guide Leicester 2026 | Tips",
         metaDescription:
-          "Planning summer holidays from Leicester? Our guide covers family airport taxis, fixed prices, large vehicles and flight tracking. Book with Aylestone Taxis — call 0116 233 8888.",
+          "Family airport taxis from Leicester: fixed prices, large vehicles and flight tracking for summer holidays. Call 0116 233 8888.",
         excerpt:
           "Planning summer holidays from Leicester with children? This family airport taxi guide covers advance booking, MPVs, early flights, meet-and-greet, fixed fares, child seats, and journey times to EMA, Birmingham, and Manchester.",
         content: `
@@ -2404,7 +2404,7 @@ export const siteData = {
 
           <h2>Fixed pricing: easier budgeting for family holidays</h2>
           <p>Holiday spending adds up fast. Fixed airport fares let you know the transfer cost before you travel — no meter climbing in unexpected M42 traffic, no surge pricing on the morning of your flight. That certainty helps when you are balancing flights, hotels, insurance, and spending money.</p>
-          <p>Compare indicative fares on our dedicated airport pricing pages — <a href="/pricing/airports/East-Midlands">East Midlands Airport pricing</a> and <a href="/pricing/airports/Birmingham">Birmingham Airport pricing</a> — then confirm your exact quote for your postcode and vehicle type. For a wider overview of routes and services, visit our <a href="/airport-transfers-leicester">airport transfers Leicester</a> hub.</p>
+          <p>Compare indicative fares on our dedicated airport pricing pages — <a href="/pricing/airports/East-Midlands">East Midlands Airport pricing</a> and <a href="/taxi-to-birmingham-airport">Birmingham Airport pricing</a> — then confirm your exact quote for your postcode and vehicle type. For a wider overview of routes and services, visit our <a href="/airport-transfers-leicester">airport transfers Leicester</a> hub.</p>
 
           <h2>Child seats and travelling safely</h2>
           <p>UK law requires children to use the correct car seat or booster until they reach the height or age threshold. If you are bringing your own seat, tell us so we can plan boot space. If you need us to supply one, request it at booking — infant, child, and booster seats can usually be arranged when we know the child&apos;s age and weight in advance.</p>
@@ -2454,7 +2454,7 @@ export const siteData = {
           <p>Share your flight number when you book. We monitor arrivals where possible and adjust pickup times for many delays automatically. If you are still in the air or your plans change significantly, contact us as soon as you can — especially on late-night returns — so we can update your driver and avoid unnecessary waiting charges.</p>
 
           <h2>Book your summer airport taxi from Leicester</h2>
-          <p>Whether you are heading to the Costa del Sol from EMA or flying long-haul from Birmingham, a pre-booked <strong>airport taxi Leicester summer</strong> journey lets the holiday start at your front door. Check fares on <a href="/pricing/airports/East-Midlands">East Midlands pricing</a> and <a href="/pricing/airports/Birmingham">Birmingham pricing</a>, explore all routes on <a href="/airport-transfers-leicester">airport transfers Leicester</a>, then confirm your family transfer today.</p>
+          <p>Whether you are heading to the Costa del Sol from EMA or flying long-haul from Birmingham, a pre-booked <strong>airport taxi Leicester summer</strong> journey lets the holiday start at your front door. Check fares on <a href="/pricing/airports/East-Midlands">East Midlands pricing</a> and <a href="/taxi-to-birmingham-airport">Birmingham pricing</a>, explore all routes on <a href="/airport-transfers-leicester">airport transfers Leicester</a>, then confirm your family transfer today.</p>
 
           <p style="text-align:center; margin-top:2rem;">
             <a href="https://aylestonekings.webbooker.icabbi.com/" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#06A0A6; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">Book Online</a>
@@ -2472,6 +2472,8 @@ export const siteData = {
         metaTitle: "Leicester to Heathrow Taxi Guide | Aylestone Taxis",
         excerpt:
           "Planning a Leicester to Heathrow taxi? Typical M1/M25 drive times, when to leave for LHR, fixed fares vs metered rides, luggage and meet-and-greet tips — plus links to Heathrow pricing and our full airport transfer hub.",
+          metaDescription:
+            "Leicester to Heathrow taxi: M1/M25 drive times, when to leave, fixed fares vs metered, luggage and meet-and-greet. Call 0116 233 8888.",
         content: `
           <p>A <strong>Leicester to Heathrow taxi</strong> is one of the longest regular airport runs many Leicestershire passengers book. Unlike a quick hop to East Midlands Airport, Heathrow needs realistic timing, a vehicle suited to luggage, and a clear price before you set off. This guide explains what to expect on the day, how to avoid common mistakes, and where to confirm numbers before you travel.</p>
 
@@ -2519,6 +2521,8 @@ export const siteData = {
         metaTitle: "Best Taxi Service in Leicester | Aylestone Taxis",
         excerpt:
           "Searching for the best taxi Leicester has to offer? Here is a practical checklist: licensing, transparent pricing, vehicle standards, complaints handling, and how to spot operators that invest in training — with links to our company story and full service list.",
+          metaDescription:
+            "How to choose the best taxi service in Leicester: licensing, transparent pricing, vehicle standards and complaints handling. Call 0116 233 8888.",
         content: `
           <p>If you type <strong>best taxi Leicester</strong> into a search engine, you will see dozens of names. The real question is not who shouts the loudest, but who will show up on time, charge the fare you were quoted, and keep you safe on the journey. Below is a straight checklist you can use for airport transfers, nights out, school runs, and hospital visits.</p>
 
@@ -2561,6 +2565,8 @@ export const siteData = {
         metaTitle: "Leicester to Birmingham Airport Taxi | Aylestone Taxis",
         excerpt:
           "Everything you need for a Leicester to Birmingham Airport taxi: typical drive time via M69/M42, when to book, BHX terminals, fixed fares, luggage — with links to our dedicated BHX page and full pricing tables.",
+          metaDescription:
+            "Leicester to Birmingham Airport taxi: drive time via M69/M42, when to book, BHX terminals and fixed fares. Call 0116 233 8888.",
         content: `
           <p>Booking a <strong>Leicester to Birmingham airport taxi</strong> is one of the most common airport requests we see from south Leicestershire. Birmingham Airport (BHX) is often the right choice for long-haul departures, European business routes, and passengers who prefer a shorter road transfer than travelling all the way to Heathrow by car. This guide walks through timing, cost planning, and simple tips so your transfer starts calmly.</p>
 
@@ -2609,6 +2615,8 @@ export const siteData = {
         metaTitle: "Taxi Prices in Leicester 2026 | Aylestone Taxis",
         excerpt:
           "Updated 2026 guide to taxi prices Leicester passengers actually pay: local hops vs airport runs, fixed quotes vs surge apps, how vehicle type affects cost, and where to compare official tables before you book.",
+          metaDescription:
+            "What a taxi costs in Leicester in 2026: local hops vs airport runs, fixed quotes vs surge apps, and how vehicle type changes the price.",
         content: `
           <p>If you are budgeting a week in Leicester, one of the first practical questions is simple: what will a cab cost? This <strong>2026 price guide</strong> focuses on how <strong>taxi prices Leicester</strong> travellers see in the real world are built — short city hops, longer runs to stations and hospitals, and airport transfers where timing matters as much as money.</p>
 
@@ -2718,7 +2726,7 @@ export const siteData = {
         title: "Why Leicester Locals Trust Aylestone Taxis",
         metaTitle: "Why Leicester Trusts Aylestone Taxis | 30+ Years Local",
         metaDescription:
-          "30+ years serving Leicester, 99.7% satisfaction, DBS-checked licensed drivers. Here's what actually makes Aylestone Taxis a trusted local choice — with real numbers.",
+          "30+ years serving Leicester with DBS-checked licensed drivers and fixed fares. What actually makes a local taxi firm worth trusting.",
         excerpt:
           "30+ years serving Leicester, 99.7% satisfaction, DBS-checked licensed drivers. Here's what actually makes Aylestone Taxis a trusted local choice.",
         content: `
@@ -2771,7 +2779,7 @@ export const siteData = {
         title: "Reliable Airport Transfers from Leicester: Complete Guide",
         metaTitle: "Airport Transfers Leicester | All UK Airports Compared",
         metaDescription:
-          "Compare journey times and pricing for airport transfers from Leicester to EMA, Birmingham, Heathrow, Gatwick, Luton, Stansted and Manchester. Fixed fares, flight monitoring.",
+          "Airport transfers from Leicester to EMA, Birmingham, Heathrow, Gatwick, Luton, Stansted and Manchester. Fixed fares with flight monitoring.",
         excerpt:
           "Compare journey times and pricing for airport transfers from Leicester to all major UK airports. Fixed fares, flight monitoring, meet and greet.",
         content: `
@@ -2827,6 +2835,8 @@ export const siteData = {
         title: "Explore Leicester with Aylestone Taxis",
         excerpt:
           "Discover Leicester's hidden gems and popular attractions with Aylestone Taxis. From historic sites to modern entertainment, we'll get you there in comfort and style.",
+          metaDescription:
+            "Explore Leicester's attractions and hidden gems by taxi. Fixed fares, licensed local drivers, 24/7. Call 0116 233 8888 to plan your trip.",
         content: `
           <p>Leicester is a city rich in history, culture, and entertainment. From the historic King Richard III Visitor Centre to the modern Highcross shopping centre, there's something for everyone to explore. Aylestone Taxis makes it easy to discover all that Leicester has to offer with reliable, comfortable taxi services throughout the city.</p>
           
@@ -3098,6 +3108,8 @@ export const siteData = {
         metaTitle: "Local Taxi vs Uber Leicester | Aylestone Taxis",
         excerpt:
           "Discover why choosing a local taxi service in Leicester beats ride-sharing apps. Fixed prices, licensed drivers, local knowledge, and reliable service with Aylestone Taxis.",
+          metaDescription:
+            "Local taxi or ride-sharing app in Leicester? Compare fixed prices, licensed drivers and local knowledge. Call Aylestone Taxis on 0116 233 8888.",
         content: `
           <p>When you need a ride in Leicester, you have two main options: local taxi services like Aylestone Taxis or ride-sharing apps like Uber. While ride-sharing apps might seem convenient, there are compelling reasons why choosing a local taxi service in Leicester is often the better choice.</p>
           
@@ -3611,6 +3623,8 @@ export const siteData = {
         metaTitle: "Early Morning Taxi Leicester | Aylestone Taxis",
         excerpt:
           "Need a taxi at 4am? Learn how to book an early morning taxi in Leicester for airport transfers, shifts and appointments — plus safety tips, what time to book, and fixed-fare options.",
+          metaDescription:
+            "Booking a 4am taxi in Leicester for airport runs, shifts or appointments: what time to book, safety tips and fixed fares. Call 0116 233 8888.",
         content: `
           <p>Searching for an <strong>early morning taxi in Leicester</strong>? The main issue at 4am isn’t price — it’s reliability. This guide shows how to book a dependable early taxi for airport runs, work shifts and appointments, with simple tips to avoid last‑minute stress.</p>
 
@@ -3662,6 +3676,8 @@ export const siteData = {
         metaTitle: "Areas We Cover in Leicester | Aylestone Taxis",
         excerpt:
           "Discover the comprehensive coverage of Aylestone Taxis across Leicester and surrounding areas. Licensed drivers available through Aylestone Taxis cover Leicester and surrounding areas.",
+          metaDescription:
+            "Every Leicester area Aylestone Taxis covers, from Aylestone to Oadby and the county villages. Fixed fares, licensed drivers, 24/7.",
         content: `
           <p>When you need a reliable local taxi service in Leicester, coverage matters. Licensed drivers available through Aylestone Taxis cover Leicester and surrounding areas, ensuring you can get where you need to go, wherever you are in the region.</p>
           

@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 
 type AirportSeoConfig = {
   airportName: string
@@ -47,6 +48,7 @@ export function buildAirportMetadata({
       canonical,
     },
     openGraph: {
+      images: [OG_IMAGE],
       title,
       description,
       url: canonical,
@@ -55,6 +57,7 @@ export function buildAirportMetadata({
       type: "website",
     },
     twitter: {
+      images: [OG_IMAGE_URL],
       card: "summary_large_image",
       title,
       description,

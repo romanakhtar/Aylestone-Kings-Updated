@@ -4,6 +4,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/taxi-leicester")
 
@@ -28,11 +30,13 @@ export const metadata: Metadata = {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: TITLE,
     description: DESCRIPTION,
     url: canonical,
   },
   twitter: {
+    images: [OG_IMAGE_URL],
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
@@ -65,6 +69,10 @@ export default function TaxiLeicesterPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Areas We Cover" }]}
+        pageUrl={buildCanonical("/taxi-leicester")}
+      />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}

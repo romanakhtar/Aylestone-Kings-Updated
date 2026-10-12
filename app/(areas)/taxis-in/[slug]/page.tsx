@@ -10,9 +10,11 @@ import PageBreadcrumbs from "@/components/PageBreadcrumbs"
 import AreaPageStructuredData from "@/components/areas/AreaPageStructuredData"
 import AreaPageDeferredFAQ from "@/components/areas/AreaPageDeferredFAQ"
 import { areaPageBreadcrumbs } from "@/lib/seo/breadcrumbs"
+import { destinationAreaContent } from "@/lib/seo/destinationAreaContent"
 import { collectAreaPageFaqs } from "@/lib/seo/areaPageFaqs"
 import { getAreaServiceAreaLocalBusinessJsonLd } from "@/lib/seo/siteJsonLd"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 
 type AreaItem = { name: string; href: string }
 
@@ -53,7 +55,7 @@ const DEDICATED_FAQ_AREA_SLUGS = new Set([
 
 const POPULAR_JOURNEY_AIRPORTS = [
   { label: "East Midlands Airport", href: "/pricing/airports/East-Midlands", code: "EMA" },
-  { label: "Birmingham Airport", href: "/pricing/airports/Birmingham", code: "BHX" },
+  { label: "Birmingham Airport", href: "/taxi-to-birmingham-airport", code: "BHX" },
   { label: "Heathrow Airport", href: "/pricing/airports/Heathrow", code: "LHR" },
   { label: "Gatwick Airport", href: "/pricing/airports/Gatwick", code: "LGW" },
   { label: "Stansted Airport", href: "/pricing/airports/Stansted", code: "STN" },
@@ -96,7 +98,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   evington: {
     title: "Taxis in Evington — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Need a taxi in Evington, Leicester? Aylestone Taxis provides fixed price taxis from Evington 24/7. Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
+      "Taxi in Evington, Leicester: fixed fares with no surge, hospital runs and airport transfers. Licensed drivers 24/7 — call 0116 233 8888.",
   },
   // 6. Belgrave
   belgrave: {
@@ -106,7 +108,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 7. Spinney Hills
   "spinney-hills": {
-    title: "Taxis in Spinney Hills — Fixed Fares, Airport Transfers | 24/7",
+    title: "Taxis in Spinney Hills | Fixed Fares 24/7",
     description:
       "Reliable taxi service in Spinney Hills, Leicester. Local journeys, airport transfers, school runs. Licensed drivers available 24/7. Call 0116 2338888.",
   },
@@ -114,19 +116,19 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   highfields: {
     title: "Taxis in Highfields — Hospital & Airport Transfers | 24/7",
     description:
-      "Need a taxi in Highfields, Leicester? Aylestone Taxis offers fixed price taxis from Highfields 24/7. Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
+      "Taxi in Highfields, Leicester: fixed fares, hospital runs, airport transfers and local journeys. Licensed drivers 24/7 — call 0116 233 8888.",
   },
   // 9. Clarendon Park
   "clarendon-park": {
-    title: "Taxis in Clarendon Park — Fixed Fares, Airport Transfers | 24/7",
+    title: "Taxis in Clarendon Park | Fixed Fares 24/7",
     description:
-      "Need a taxi in Clarendon Park, Leicester? Aylestone Taxis provides fixed price taxis 24/7 from Clarendon Park. Airport transfers and late night rides. Call 0116 233 8888.",
+      "Taxi in Clarendon Park, Leicester: fixed fares, airport transfers and late-night rides home. Licensed drivers 24/7 — call 0116 233 8888.",
   },
   // 10. Knighton
   knighton: {
     title: "Taxis in Knighton — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Looking for a taxi in Knighton, Leicester? Aylestone Taxis offers fixed price taxis from Knighton 24/7. Airport transfers, school runs and local journeys. Call 0116 233 8888.",
+      "Taxi in Knighton, Leicester: fixed fares, airport transfers, school runs and local journeys. Licensed drivers 24/7 — call 0116 233 8888.",
   },
   // 11. Hamilton
   hamilton: {
@@ -144,13 +146,13 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   braunstone: {
     title: "Taxis in Braunstone — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Need a taxi in Braunstone, Leicester? Aylestone Taxis provides fixed price taxis from Braunstone 24/7. Airport transfers, school runs and local journeys. Call 0116 233 8888.",
+      "Taxi in Braunstone, Leicester: fixed fares, airport transfers, school runs and local journeys. Licensed drivers 24/7 — call 0116 233 8888.",
   },
   // 14. Thurmaston
   thurmaston: {
     title: "Taxis in Thurmaston — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Need a taxi in Thurmaston, Leicester? Aylestone Taxis offers fixed price taxis from Thurmaston 24/7. Airport transfers, shopping trips and local journeys. Call 0116 233 8888.",
+      "Taxi in Thurmaston, Leicester: fixed fares, airport transfers, shopping trips and local journeys. 24/7 — call 0116 233 8888.",
   },
   // 15. Syston
   syston: {
@@ -168,31 +170,31 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   glenfield: {
     title: "Taxis in Glenfield — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Need a taxi in Glenfield, Leicester? Aylestone Taxis offers fixed price taxis from Glenfield 24/7. Glenfield Hospital runs, airport transfers and local journeys. Call 0116 233 8888.",
+      "Taxi in Glenfield, Leicester: fixed fares, Glenfield Hospital runs and airport transfers. Licensed drivers 24/7 — call 0116 233 8888.",
   },
   // 18. Blaby
   blaby: {
     title: "Taxis in Blaby — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Need a taxi in Blaby, Leicester? Fixed fares from £7 to the city centre, EMA from £25, 24/7 school runs and retail park trips. DBS-checked drivers — call 0116 233 8888.",
+      "Taxi in Blaby: fixed fares from £7 to the city centre, EMA from £25, school runs and retail park trips. DBS-checked drivers — call 0116 233 8888.",
   },
   // 19. Narborough
   narborough: {
     title: "Taxis in Narborough — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Need a taxi in Narborough, Leicester? Fixed fares from £8 to the city centre, EMA from £22, train station pickups and school runs 24/7. DBS-checked drivers — call 0116 233 8888.",
+      "Taxi in Narborough: fixed fares from £8 to the city centre, EMA from £22, station pickups and school runs 24/7. Call 0116 233 8888.",
   },
   // 20. Enderby
   enderby: {
     title: "Taxis in Enderby — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Need a taxi in Enderby or Meridian Business Park? Fixed fares from £8 to Leicester, EMA from £22, corporate accounts and 24/7 business park runs. Call 0116 233 8888.",
+      "Taxi in Enderby and Meridian Business Park: fixed fares from £8 to Leicester, EMA from £22, corporate accounts. Call 0116 233 8888.",
   },
   // 21. Loughborough
   loughborough: {
     title: "Taxis in Loughborough | Fixed Fares & Airports",
     description:
-      "Need a taxi in Loughborough? Aylestone Taxis provides fixed price taxis from Loughborough 24/7. East Midlands Airport transfers, Leicester runs and train station pickups. Call 0116 233 8888.",
+      "Taxi in Loughborough: fixed fares 24/7, East Midlands Airport transfers, Leicester runs and station pickups. Call 0116 233 8888.",
   },
   // 22. Hinckley
   hinckley: {
@@ -228,7 +230,7 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   stoneygate: {
     title: "Taxis in Stoneygate — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Need a taxi in Stoneygate, Leicester? Aylestone Taxis offers fixed price taxis from Stoneygate 24/7. Airport transfers, corporate travel and local journeys. Call 0116 233 8888.",
+      "Taxi in Stoneygate, Leicester: fixed fares, airport transfers, corporate travel and local journeys. 24/7 — call 0116 233 8888.",
   },
   // 28. South Wigston
   "south-wigston": {
@@ -335,12 +337,12 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   "de-montfort-university": {
     title: "Taxi to De Montfort University — Airport Transfers | 24/7",
     description:
-      "Need a taxi to De Montfort University? Aylestone Taxis provides fast, affordable rides to DMU 24/7. Airport transfers, city rides, student-friendly. Call 0116 2338888.",
+      "Taxi to De Montfort University: fast, affordable DMU rides 24/7, airport transfers and city journeys. Student-friendly — call 0116 233 8888.",
   },
   "university-of-leicester": {
     title: "Taxi to University of Leicester | 24/7 Rides",
     description:
-      "Need a taxi to the University of Leicester? Aylestone Taxis provides reliable 24/7 student-friendly rides, airport transfers, and local journeys. Call 0116 2338888.",
+      "Taxi to the University of Leicester: reliable 24/7 student rides, airport transfers and local journeys. Call 0116 233 8888.",
   },
   // 45. Leicester Railway Station
   "leicester-railway-station": {
@@ -1369,6 +1371,11 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       },
     ],
   },
+
+  // Destination pages that previously fell through to the shared category
+  // templates and rendered byte-identical copy (supermarkets, places of
+  // worship, museums, hospitals, outlying towns, city landmarks).
+  ...destinationAreaContent,
 }
 
 const areaContent: Record<string, AreaContent> = {
@@ -2144,11 +2151,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     "fosse-park": ["Fosse Park taxi", "taxi to Fosse Park", "Fosse Park taxis Leicester"],
     "kirby-muxloe": ["Kirby Muxloe taxi", "taxis in Kirby Muxloe", "taxi Kirby Muxloe"],
   }
+  // Long area names push the descriptive variant past 60 chars and Google
+  // truncates it, so fall back to the short form only when it would overflow.
+  const descriptiveTitle = `Taxis in ${areaName} — Fixed Fares, Airport Transfers | 24/7`
   const title = customMeta
     ? customMeta.title
     : isDestination
       ? `${areaName} Taxi | Fixed Fares 24/7`
-      : `Taxis in ${areaName} — Fixed Fares, Airport Transfers | 24/7`
+      : descriptiveTitle.length <= 60
+        ? descriptiveTitle
+        : `Taxis in ${areaName} | Fixed Fares 24/7`
   const description = customMeta
     ? customMeta.description
     : isDestination
@@ -2165,6 +2177,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       canonical: canonicalUrl,
     },
     openGraph: {
+      images: [OG_IMAGE],
       title,
       description,
       url: canonicalUrl,
@@ -2172,6 +2185,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: companyInfo.name,
     },
     twitter: {
+      images: [OG_IMAGE_URL],
       card: 'summary_large_image',
       title,
       description,

@@ -21,13 +21,15 @@ import CorporateAccountEnquiryForm from "@/components/CorporateAccountEnquiryFor
 import JsonLd from "@/components/seo/JsonLd"
 import { getCorporateServiceGraphJsonLd } from "@/lib/seo/siteJsonLd"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const CORPORATE_CANONICAL = buildCanonical("/corporate-taxi-account-leicester")
 
 export const metadata: Metadata = {
   title: "Corporate Taxi Accounts Leicester | Business Travel",
   description:
-    "Corporate taxi accounts in Leicester: monthly invoicing, staff and client travel, airport runs, and dedicated account support. We serve healthcare, logistics, retail, education, legal, and finance sectors. Enquire at " +
+    "Corporate taxi accounts in Leicester: monthly invoicing, staff travel and airport runs. Enquire at " +
     contactInfo.email +
     " or call " +
     contactInfo.phone +
@@ -38,12 +40,14 @@ export const metadata: Metadata = {
     canonical: CORPORATE_CANONICAL,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Corporate Taxi Accounts Leicester | Business Travel",
     description:
       "Business taxi accounts with monthly invoicing, staff booking, and account management. Serving Leicester and the wider East Midlands. Enquire today.",
     url: CORPORATE_CANONICAL,
   },
   twitter: {
+    images: [OG_IMAGE_URL],
     card: "summary_large_image",
     title: "Corporate Taxi Accounts Leicester | Business Travel",
     description:
@@ -149,6 +153,10 @@ export default function CorporateTaxiAccountLeicesterPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Corporate Accounts" }]}
+        pageUrl={buildCanonical("/corporate-taxi-account-leicester")}
+      />
       <JsonLd data={corporateGraphLd} />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">

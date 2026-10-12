@@ -3,6 +3,8 @@ import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/leicester-airport-taxi")
 
@@ -16,6 +18,7 @@ export const metadata: Metadata = {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Leicester Airport Taxi | Transfers & Airport Taxis",
     description: "UK-wide airport transfers from Leicester. Book online or call 0116 2338888 — 24/7.",
     url: canonical,
@@ -25,6 +28,10 @@ export const metadata: Metadata = {
 export default function LeicesterAirportTaxiPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Leicester Airport Taxi" }]}
+        pageUrl={buildCanonical("/leicester-airport-taxi")}
+      />
       <main className="pt-24">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">

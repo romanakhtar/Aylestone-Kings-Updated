@@ -14,29 +14,33 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import JsonLd from "@/components/seo/JsonLd"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const CANONICAL = buildCanonical("/late-night-taxi-leicester")
 const LATE_NIGHT_PHONE = "0116 233 8888"
 const WHATSAPP_HREF = "https://wa.me/447535855786?text=Hi!%20I%20need%20a%20late%20night%20taxi%20in%20Leicester"
 
 export const metadata: Metadata = {
-  title: "Late Night Taxi Leicester — Fixed Fares, No Surge | Book 24/7",
+  title: "Late Night Taxi Leicester | Fixed Fares, No Surge",
   description:
-    "Late night taxi in Leicester with fixed prices and no surge charging. Pre-book or WhatsApp on the night. Covering all city centre venues and all areas. Call 0116 233 8888.",
+    "Late night taxi in Leicester with fixed prices and no surge. Pre-book or WhatsApp on the night, all city centre venues. Call 0116 233 8888.",
   alternates: {
     canonical: CANONICAL,
   },
   openGraph: {
-    title: "Late Night Taxi Leicester — Fixed Fares, No Surge | Book 24/7",
+    images: [OG_IMAGE],
+    title: "Late Night Taxi Leicester | Fixed Fares, No Surge",
     description:
-      "Late night taxi in Leicester with fixed prices and no surge charging. Pre-book or WhatsApp on the night. Covering all city centre venues and all areas. Call 0116 233 8888.",
+      "Late night taxi in Leicester with fixed prices and no surge. Pre-book or WhatsApp on the night, all city centre venues. Call 0116 233 8888.",
     url: CANONICAL,
   },
   twitter: {
+    images: [OG_IMAGE_URL],
     card: "summary_large_image",
-    title: "Late Night Taxi Leicester — Fixed Fares, No Surge | Book 24/7",
+    title: "Late Night Taxi Leicester | Fixed Fares, No Surge",
     description:
-      "Late night taxi in Leicester with fixed prices and no surge charging. Pre-book or WhatsApp on the night. Covering all city centre venues and all areas. Call 0116 233 8888.",
+      "Late night taxi in Leicester with fixed prices and no surge. Pre-book or WhatsApp on the night, all city centre venues. Call 0116 233 8888.",
   },
 }
 
@@ -92,6 +96,10 @@ const journeyHomeAreas = [
 export default function LateNightTaxiLeicesterPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Late Night Taxi Leicester" }]}
+        pageUrl={buildCanonical("/late-night-taxi-leicester")}
+      />
       <JsonLd data={serviceJsonLd} />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">

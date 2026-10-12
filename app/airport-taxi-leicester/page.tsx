@@ -7,6 +7,8 @@ import JsonLd from "@/components/seo/JsonLd"
 import AreaPageDeferredFAQ from "@/components/areas/AreaPageDeferredFAQ"
 import { getAreaServiceAreaLocalBusinessJsonLd } from "@/lib/seo/siteJsonLd"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const CANONICAL = buildCanonical("/airport-taxi-leicester")
 
@@ -18,6 +20,7 @@ export const metadata: Metadata = {
     canonical: CANONICAL,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Airport Taxi Leicester | Fixed Fares 24/7 | Aylestone Taxis",
     description:
       "Fixed-price airport taxis from Leicester to every major UK airport. Licensed drivers, 24/7 — book online or call 0116 233 8888.",
@@ -159,6 +162,10 @@ export default function AirportTaxiLeicesterPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Airport Taxi Leicester" }]}
+        pageUrl={buildCanonical("/airport-taxi-leicester")}
+      />
       <JsonLd data={structuredData} />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">

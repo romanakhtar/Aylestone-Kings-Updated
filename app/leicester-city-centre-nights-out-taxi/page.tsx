@@ -13,6 +13,7 @@ import {
 } from "@/lib/data"
 import { clusterPages, NIGHTS_OUT_HUB_PATH } from "@/lib/cityCentreNightsOut"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 
 const CANONICAL = buildCanonical(NIGHTS_OUT_HUB_PATH)
 
@@ -25,11 +26,13 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: TITLE,
     description: DESCRIPTION,
     url: CANONICAL,
   },
   twitter: {
+    images: [OG_IMAGE_URL],
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,

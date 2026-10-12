@@ -16,6 +16,8 @@ import { contactInfo, siteData } from "@/lib/data"
 import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const company = siteData.company
 const canonical = buildCanonical("/seaport-transfers-uk")
@@ -23,7 +25,7 @@ const canonical = buildCanonical("/seaport-transfers-uk")
 export const metadata: Metadata = {
   title: "Seaport Taxi UK | Cruise Port from Leicester | Aylestone",
   description:
-    "Seaport taxi transfer and cruise port taxi from Leicester to Southampton, Dover, Portsmouth & Harwich. Fixed quotes before you travel, room for cruise luggage, saloons and MPVs. Licensed drivers, 24/7. Call 0116 2338888 or book online.",
+    "Cruise port taxi from Leicester to Southampton, Dover, Portsmouth and Harwich. Fixed quotes, room for luggage, 24/7. Call 0116 233 8888.",
   keywords: [
     "seaport taxi transfer",
     "cruise port transfer UK",
@@ -36,6 +38,7 @@ export const metadata: Metadata = {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Seaport Taxi UK | Cruise Port from Leicester | Aylestone",
     description:
       "Pre-booked cruise port transfers from Leicester and the Midlands. Southampton port taxis, Dover, Portsmouth, Harwich — luggage-friendly vehicles, agreed fares.",
@@ -84,6 +87,10 @@ const faqs = [
 export default function SeaportTransfersUkPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Seaport Transfers" }]}
+        pageUrl={buildCanonical("/seaport-transfers-uk")}
+      />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero */}
@@ -321,7 +328,7 @@ export default function SeaportTransfersUkPage() {
                 </Link>
                 , or{" "}
                 <Link
-                  href="/pricing/airports/Birmingham"
+                  href="/taxi-to-birmingham-airport"
                   className="text-[#06A0A6] font-semibold underline hover:text-[#0F0D3E]"
                 >
                   Birmingham

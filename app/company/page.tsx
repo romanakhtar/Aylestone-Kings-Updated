@@ -3,6 +3,8 @@ import { siteData } from "@/lib/data"
 import { Shield, Users, Award, Clock, Check, ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/company")
 
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Aylestone Taxis — Leicester Taxi Company",
     description:
       "Aylestone Taxis — Leicester taxi company with 30+ years experience. 10,000 passengers per year, 99.7% satisfaction rating. Licensed DBS-checked drivers available 24/7.",
@@ -24,6 +27,10 @@ export const metadata: Metadata = {
 export default function CompanyPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Company" }]}
+        pageUrl={buildCanonical("/company")}
+      />
 
     {/* Hero Section */}
     <section className="relative section-padding bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E] text-white overflow-hidden">      

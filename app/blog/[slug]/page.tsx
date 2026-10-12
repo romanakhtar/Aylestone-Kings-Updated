@@ -7,6 +7,7 @@ import BlogFAQSection from "@/components/blog/BlogFAQSection"
 import BlogPostingJsonLd from "@/components/seo/BlogPostingJsonLd"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 export async function generateStaticParams() {
   return siteData.blogPage.blogs.map((blog) => ({
@@ -81,6 +82,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: blog.title }]}
+        pageUrl={buildCanonical(`/blog/${blog.id}`)}
+      />
       {faqs ? <FAQSchema faqs={faqs} /> : null}
       <BlogPostingJsonLd
         headline={blog.title}

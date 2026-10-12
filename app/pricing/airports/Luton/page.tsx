@@ -28,7 +28,7 @@ export const metadata = buildAirportMetadata({
   fromPrice: "£120",
   title: "Luton taxi Leicester | From £120 | M1 route | Aylestone",
   description:
-    "Leicester to Luton (LTN): ~85–95 mi, ~1h15–1h45 via M1. Main terminal drop-off. Wizz, easyJet, Ryanair. Fixed from £120 — beat parking + DART hassle. Book or call 0116 2338888 24/7.",
+    "Leicester to Luton (LTN): ~85–95 mi, ~1h15–1h45 via M1. Main terminal drop-off. Fixed from £120 — call 0116 233 8888, 24/7.",
 })
 
 const faqs: AirportFaqItem[] = [

@@ -4,6 +4,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const CANONICAL = buildCanonical("/leicester-to-east-midlands-airport-taxi")
 
@@ -17,6 +19,7 @@ export const metadata: Metadata = {
     canonical: CANONICAL,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Leicester to East Midlands Airport Taxi | Fixed Fares",
     description:
       "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £40. Call 0116 233 8888.",
@@ -26,6 +29,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
+    images: [OG_IMAGE_URL],
     card: "summary_large_image",
     title: "Leicester to East Midlands Airport Taxi | Fixed Fares",
     description:
@@ -69,6 +73,10 @@ const faqs = [
 export default function LeicesterToEastMidlandsAirportTaxiPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Leicester to East Midlands Airport" }]}
+        pageUrl={buildCanonical("/leicester-to-east-midlands-airport-taxi")}
+      />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
         <section className="py-24 bg-gradient-to-br from-[#06A0A6]/10 via-white to-[#0F0D3E]/10">

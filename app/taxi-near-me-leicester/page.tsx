@@ -4,6 +4,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/taxi-near-me-leicester")
 
@@ -17,6 +19,7 @@ export const metadata: Metadata = {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Taxi Near Me Leicester | Taxis Near Me | Aylestone Taxis",
     description: "Taxi near me Leicester: instant quotes, 6-seaters available, 24/7. Call 0116 2338888 or book online.",
     url: canonical,
@@ -49,6 +52,10 @@ export default function TaxiNearMeLeicesterPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Taxi Near Me Leicester" }]}
+        pageUrl={buildCanonical("/taxi-near-me-leicester")}
+      />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}

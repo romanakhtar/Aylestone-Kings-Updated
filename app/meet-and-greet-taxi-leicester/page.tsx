@@ -4,19 +4,22 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 
 const canonical = buildCanonical("/meet-and-greet-taxi-leicester")
 
 export const metadata: Metadata = {
   title: "Meet and Greet Taxi Leicester | EMA & BHX | Aylestone",
   description:
-    "Book a meet and greet taxi Leicester for East Midlands Airport (EMA) and Birmingham Airport (BHX). Your driver meets you in arrivals with a name board, helps with luggage and escorts you to your taxi. Pre-booking required.",
+    "Meet and greet taxi Leicester for EMA and Birmingham Airport. Your driver meets you in arrivals with a name board and helps with luggage.",
   keywords:
     "meet and greet taxi Leicester, meet & greet taxi Leicester, airport meet and greet Leicester, East Midlands Airport meet and greet taxi, EMA meet and greet taxi, Birmingham Airport meet and greet taxi, BHX meet and greet taxi, taxi with name board Leicester",
   alternates: {
     canonical,
   },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Meet and Greet Taxi Leicester | EMA & BHX | Aylestone",
     description:
       "Pre-book a meet and greet taxi Leicester for EMA and BHX. Your driver meets you in arrivals with a name sign, assists with luggage and walks you to your taxi.",
@@ -50,6 +53,10 @@ export default function MeetAndGreetTaxiLeicesterPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", href: "/" }, { name: "Meet & Greet" }]}
+        pageUrl={buildCanonical("/meet-and-greet-taxi-leicester")}
+      />
       <FAQSchema faqs={faqs} />
       <main className="pt-24">
         {/* Hero Section */}
