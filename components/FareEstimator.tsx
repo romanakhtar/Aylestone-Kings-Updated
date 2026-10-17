@@ -78,7 +78,7 @@ const FareEstimator: React.FC = () => {
   const [selectedAirport, setSelectedAirport] = useState<Airport>({
     code: "EMA",
     name: "East Midlands",
-    car: 40,
+    car: 41,
     minibus: 60,
   })
 
@@ -393,7 +393,7 @@ const FareEstimator: React.FC = () => {
                           setSelectedAirport({
                             code: "EMA",
                             name: "East Midlands",
-                            car: 40,
+                            car: 41,
                             minibus: 60,
                           })
                         }
@@ -411,7 +411,7 @@ const FareEstimator: React.FC = () => {
                             code: "BHX",
                             name: "Birmingham",
                             car: 60,
-                            minibus: 80,
+                            minibus: 85,
                           })
                         }
                       >
@@ -427,8 +427,8 @@ const FareEstimator: React.FC = () => {
                           setSelectedAirport({
                             code: "LHR",
                             name: "Heathrow",
-                            car: 150,
-                            minibus: 200,
+                            car: 160,
+                            minibus: 220,
                           })
                         }
                       >
@@ -444,8 +444,8 @@ const FareEstimator: React.FC = () => {
                           setSelectedAirport({
                             code: "LGW",
                             name: "Gatwick",
-                            car: 200,
-                            minibus: 260,
+                            car: 210,
+                            minibus: 280,
                           })
                         }
                       >
@@ -461,8 +461,8 @@ const FareEstimator: React.FC = () => {
                           setSelectedAirport({
                             code: "LTN",
                             name: "Luton",
-                            car: 120,
-                            minibus: 160,
+                            car: 130,
+                            minibus: 170,
                           })
                         }
                       >
@@ -478,8 +478,8 @@ const FareEstimator: React.FC = () => {
                           setSelectedAirport({
                             code: "MAN",
                             name: "Manchester",
-                            car: 150,
-                            minibus: 200,
+                            car: 160,
+                            minibus: 220,
                           })
                         }
                       >
@@ -495,8 +495,8 @@ const FareEstimator: React.FC = () => {
                           setSelectedAirport({
                             code: "STN",
                             name: "Stansted",
-                            car: 150,
-                            minibus: 200,
+                            car: 160,
+                            minibus: 220,
                           })
                         }
                       >

@@ -12,7 +12,7 @@ const CANONICAL = buildCanonical("/leicester-to-east-midlands-airport-taxi")
 export const metadata: Metadata = {
   title: "Leicester to East Midlands Airport Taxi | Fixed Fares",
   description:
-    "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £40. Call 0116 233 8888.",
+    "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £41. Call 0116 233 8888.",
   keywords:
     "Leicester to East Midlands Airport taxi, EMA taxi Leicester, East Midlands Airport transfer, Castle Donington airport taxi, fixed fare EMA",
   alternates: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Leicester to East Midlands Airport Taxi | Fixed Fares",
     description:
-      "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £40. Call 0116 233 8888.",
+      "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £41. Call 0116 233 8888.",
     url: CANONICAL,
     siteName: "Aylestone Taxis",
     locale: "en_GB",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Leicester to East Midlands Airport Taxi | Fixed Fares",
     description:
-      "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £40. Call 0116 233 8888.",
+      "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £41. Call 0116 233 8888.",
   },
 }
 
@@ -86,7 +86,7 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
                 East Midlands Airport (EMA)
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                Leicester to East Midlands Airport taxi — fixed fares from £40
+                Leicester to East Midlands Airport taxi — fixed fares from £41
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
                 If you are booking a <strong>Leicester to East Midlands Airport taxi</strong>, Aylestone Taxis offers
@@ -239,7 +239,7 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
                         </div>
                       </td>
                       <td className="px-6 py-4 text-center text-[#2E3C44]">1-4 passengers</td>
-                      <td className="px-6 py-4 text-right text-[#06A0A6] font-semibold text-lg">from £40</td>
+                      <td className="px-6 py-4 text-right text-[#06A0A6] font-semibold text-lg">from £41</td>
                     </tr>
                     <tr className="border-b border-gray-100 hover:bg-[#06A0A6]/5">
                       <td className="px-6 py-4 font-medium text-[#0F0D3E]">
@@ -324,7 +324,7 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">Book your EMA transfer</h2>
             <p className="text-xl text-[#E4E4E4] mb-8">
-              Book your <strong>Leicester to East Midlands Airport taxi</strong> online for fixed fares from £40, local
+              Book your <strong>Leicester to East Midlands Airport taxi</strong> online for fixed fares from £41, local
               drivers, and flight-friendly timing — or call the office on {contactInfo.phone}.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">

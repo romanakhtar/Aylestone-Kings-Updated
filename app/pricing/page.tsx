@@ -11,25 +11,25 @@ import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 const canonical = buildCanonical("/pricing")
 
 export const metadata: Metadata = {
-  title: "Airport Taxi Prices Leicester | From £40 | 24/7",
+  title: "Airport Taxi Prices Leicester | From £41 | 24/7",
   description:
-    "Compare fixed airport taxi prices from Leicester — from £40 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
+    "Compare fixed airport taxi prices from Leicester — from £41 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
   alternates: {
     canonical,
   },
   openGraph: {
     images: [OG_IMAGE],
-    title: "Airport Taxi Prices Leicester | From £40 | 24/7",
+    title: "Airport Taxi Prices Leicester | From £41 | 24/7",
     description:
-      "Compare fixed airport taxi prices from Leicester — from £40 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
+      "Compare fixed airport taxi prices from Leicester — from £41 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
     url: canonical,
   },
   twitter: {
     images: [OG_IMAGE_URL],
     card: "summary_large_image",
-    title: "Airport Taxi Prices Leicester | From £40 | 24/7",
+    title: "Airport Taxi Prices Leicester | From £41 | 24/7",
     description:
-      "Compare fixed airport taxi prices from Leicester — from £40 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
+      "Compare fixed airport taxi prices from Leicester — from £41 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
   },
 }
 
@@ -239,7 +239,7 @@ export default function PricingPage() {
                           East Midlands
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£40</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£41</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£60</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50">
@@ -249,7 +249,7 @@ export default function PricingPage() {
                         </Link>
                       </td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£60</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£80</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£85</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
@@ -257,8 +257,8 @@ export default function PricingPage() {
                           Manchester
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£150</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£200</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£160</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£220</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
@@ -266,8 +266,8 @@ export default function PricingPage() {
                           Luton
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£120</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£160</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£130</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£170</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
@@ -275,8 +275,8 @@ export default function PricingPage() {
                           Heathrow
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£150</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£200</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£160</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£220</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
@@ -284,8 +284,8 @@ export default function PricingPage() {
                           Gatwick
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£200</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£275</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£210</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£280</td>
                     </tr>
                     <tr className="hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
@@ -293,8 +293,8 @@ export default function PricingPage() {
                           Stansted
                         </Link>
                       </td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£150</td>
-                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£200</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£160</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£220</td>
                     </tr>
                   </tbody>
                 </table>

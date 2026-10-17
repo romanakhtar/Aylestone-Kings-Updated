@@ -420,7 +420,7 @@ export default function AirportTransfersLeicesterPage() {
                   href="/leicester-to-east-midlands-airport-taxi"
                   className="inline-flex items-center gap-2 text-[#06A0A6] hover:text-[#0F0D3E] font-semibold"
                 >
-                  Leicester → East Midlands Airport (EMA) taxi (fixed fares from £40)
+                  Leicester → East Midlands Airport (EMA) taxi (fixed fares from £41)
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>

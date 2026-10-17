@@ -11,10 +11,10 @@ export const metadata = buildAirportMetadata({
   airportName: "Heathrow",
   airportCode: "LHR",
   slug: "Heathrow",
-  fromPrice: "£150",
-  title: "Leicester to Heathrow Taxi | All Terminals | £150",
+  fromPrice: "£160",
+  title: "Leicester to Heathrow Taxi | All Terminals | £160",
   description:
-    "Reliable Leicester–Heathrow transfers, all terminals (T2–T5). Fixed £150 fare, no surge, flight-tracked. Call 0116 233 8888 or book online.",
+    "Reliable Leicester–Heathrow transfers, all terminals (T2–T5). Fixed £160 fare, no surge, flight-tracked. Call 0116 233 8888 or book online.",
 })
 
 const faqs = heathrowPricingFaqs
@@ -37,7 +37,7 @@ export default function HeathrowPage() {
               </h1>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
                 Approximately 1 hour 45 minutes to 2 hours 30 minutes from Leicester city centre in good traffic (~115
-                miles), with forecourt drop-off at Terminal 2, 3, 4, or 5. Fixed fares from £150 for long-haul and USA
+                miles), with forecourt drop-off at Terminal 2, 3, 4, or 5. Fixed fares from £160 for long-haul and USA
                 connections without parking stress.
               </p>
 
@@ -95,7 +95,7 @@ export default function HeathrowPage() {
                         </div>
                       </td>
                       <td className="px-6 py-4 text-center text-gray-700">1-4 passengers</td>
-                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £150</td>
+                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £160</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900">
@@ -105,7 +105,7 @@ export default function HeathrowPage() {
                         </div>
                       </td>
                       <td className="px-6 py-4 text-center text-gray-700">6-8 passengers</td>
-                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £200</td>
+                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £220</td>
                     </tr>
                     
                   </tbody>

@@ -11,10 +11,10 @@ export const metadata = buildAirportMetadata({
   airportName: "Gatwick",
   airportCode: "LGW",
   slug: "Gatwick",
-  fromPrice: "£200",
-  title: "Gatwick taxi Leicester | From £200 | ~150 mi | Book 24/7",
+  fromPrice: "£210",
+  title: "Gatwick taxi Leicester | From £210 | ~150 mi | Book 24/7",
   description:
-    "Leicester to Gatwick (LGW): ~150 mi, ~2h45–3h30 via M1/M25/M23. North and South terminals. Fixed from £200 — call 0116 233 8888.",
+    "Leicester to Gatwick (LGW): ~150 mi, ~2h45–3h30 via M1/M25/M23. North and South terminals. Fixed from £210 — call 0116 233 8888.",
 })
 
 const faqs = gatwickPricingFaqs
@@ -38,7 +38,7 @@ export default function GatwickPage() {
               <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
                 About 150 miles and typically 2 hours 45 minutes to 3 hours 30 minutes from Leicester via the M1, M25,
                 and M23. We drop at the correct North or South departures forecourt for easyJet, BA, or TUI — fixed
-                fares from £200 with room for holiday luggage.
+                fares from £210 with room for holiday luggage.
               </p>
 
               {/* Book Now Button */}
@@ -95,7 +95,7 @@ export default function GatwickPage() {
                         </div>
                       </td>
                       <td className="px-6 py-4 text-center text-gray-700">1-4 passengers</td>
-                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £200</td>
+                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £210</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900">
@@ -105,7 +105,7 @@ export default function GatwickPage() {
                         </div>
                       </td>
                       <td className="px-6 py-4 text-center text-gray-700">6-8 passengers</td>
-                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £275</td>
+                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £280</td>
                     </tr>
                     
                   </tbody>

@@ -25,10 +25,10 @@ export const metadata = buildAirportMetadata({
   airportName: "Luton",
   airportCode: "LTN",
   slug: "Luton",
-  fromPrice: "£120",
-  title: "Luton taxi Leicester | From £120 | M1 route | Aylestone",
+  fromPrice: "£130",
+  title: "Luton taxi Leicester | From £130 | M1 route | Aylestone",
   description:
-    "Leicester to Luton (LTN): ~85–95 mi, ~1h15–1h45 via M1. Main terminal drop-off. Fixed from £120 — call 0116 233 8888, 24/7.",
+    "Leicester to Luton (LTN): ~85–95 mi, ~1h15–1h45 via M1. Main terminal drop-off. Fixed from £130 — call 0116 233 8888, 24/7.",
 })
 
 const faqs: AirportFaqItem[] = [
@@ -41,7 +41,7 @@ const faqs: AirportFaqItem[] = [
   {
     question: "How much is a taxi from Leicester to Luton Airport?",
     answer:
-      "Fixed fares start from £120 for a standard saloon and from £160 for MPV/minibus vehicles from Leicester city centre. Tell us your full pickup address for a firm quote.",
+      "Fixed fares start from £130 for a standard saloon and from £170 for MPV/minibus vehicles from Leicester city centre. Tell us your full pickup address for a firm quote.",
   },
   {
     question: "Can you pick me up inside Luton Airport when I land?",
@@ -207,8 +207,8 @@ export default function LutonPage() {
               quoted as fixed fares for the vehicle type you choose, not a
               ticking meter that climbs when traffic stalls. The table below
               shows starting rates from Leicester city centre: a standard
-              saloon from <strong>£120</strong> and larger{" "}
-              <strong>MPV / minibus</strong> options from <strong>£160</strong>{" "}
+              saloon from <strong>£130</strong> and larger{" "}
+              <strong>MPV / minibus</strong> options from <strong>£170</strong>{" "}
               for bigger parties or extra luggage capacity.
             </p>
             <p>
@@ -408,7 +408,7 @@ export default function LutonPage() {
                         1–4 passengers
                       </td>
                       <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">
-                        from £120
+                        from £130
                       </td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50">
@@ -422,7 +422,7 @@ export default function LutonPage() {
                         6–8 passengers
                       </td>
                       <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">
-                        from £160
+                        from £170
                       </td>
                     </tr>
                   </tbody>
