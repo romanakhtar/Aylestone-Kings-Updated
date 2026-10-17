@@ -1458,7 +1458,7 @@ export const siteData = {
           <ul>
             <li><strong>East Midlands Airport (EMA)</strong> — from <strong>£28</strong> (approx 30–40 minutes). The closest airport to Leicester and the most common choice for domestic flights.</li>
             <li><strong>Birmingham Airport (BHX)</strong> — from <strong>£60</strong> (approx 45–70 minutes depending on traffic).</li>
-            <li><strong>Heathrow (LHR)</strong> — from <strong>£150</strong> (approx 2–2.5 hours). Popular for long-haul arrivals and connecting flights.</li>
+            <li><strong>Heathrow (LHR)</strong> — from <strong>£160</strong> (approx 2–2.5 hours). Popular for long-haul arrivals and connecting flights.</li>
           </ul>
           <p>All fares are fixed and confirmed when you book — not calculated on a running meter after a long flight. Tell us your flight number when you reserve and we can monitor delays where possible. For full route details and booking advice, see our <a href="/airport-transfers-leicester">airport transfers Leicester</a> page.</p>
           <p>Travelling with more than one suitcase? Request an <strong>estate car or MPV</strong> when you book — both offer generous luggage space compared to a standard saloon, and an MPV accommodates up to eight passengers if several housemates are arriving on the same flight.</p>

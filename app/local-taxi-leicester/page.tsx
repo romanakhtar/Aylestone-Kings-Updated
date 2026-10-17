@@ -239,7 +239,7 @@ export default function LocalTaxiLeicesterPage() {
               </Link>
               <Link href="/leicester-to-east-midlands-airport-taxi" className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-[transform,opacity]">
                 <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Leicester to East Midlands Airport Taxi (EMA)</h3>
-                <p className="text-[#2E3C44]">Fixed fares from £40, 24/7 pickups, and journey time information</p>
+                <p className="text-[#2E3C44]">Fixed fares from £41, 24/7 pickups, and journey time information</p>
               </Link>
               <Link href="/long-distance-taxi-leicester" className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-[transform,opacity]">
                 <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Long-Distance & Corporate</h3>

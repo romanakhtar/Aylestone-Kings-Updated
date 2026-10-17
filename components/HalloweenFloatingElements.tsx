@@ -56,6 +56,12 @@ export default function HalloweenFloatingElements() {
           key={i}
           src={item.src}
           alt=""
+          // Purely decorative and spread down a 17,000px page, so there is no
+          // reason for these to compete with the hero image for bandwidth.
+          // Lazy + low priority keeps them off the critical path.
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
           className={`halloween-silhouette halloween-floating-bat absolute ${
             item.sway ? 'halloween-sway' : 'halloween-drift'
           }`}

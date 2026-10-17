@@ -210,7 +210,7 @@ export default function CheapTaxiLeicesterPage() {
                     <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Airport Transfers</h3>
                     <p className="text-[#2E3C44]">
                       Fixed-price airport transfers from our <strong>Cheap Taxi Leicester</strong> service. 
-                      From £40 to East Midlands Airport, competitive rates to all major UK airports.
+                      From £41 to East Midlands Airport, competitive rates to all major UK airports.
                     </p>
                   </div>
                 </div>

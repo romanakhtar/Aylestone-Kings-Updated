@@ -92,7 +92,7 @@ export default function BirminghamAirportContent({ faqs }: { faqs: AirportFaqIte
                         </div>
                       </td>
                       <td className="px-6 py-4 text-center text-gray-700">6-8 passengers</td>
-                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £80</td>
+                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £85</td>
                     </tr>
                   </tbody>
                 </table>
@@ -165,7 +165,7 @@ export default function BirminghamAirportContent({ faqs }: { faqs: AirportFaqIte
                   <tr>
                     <td className="px-6 py-4 font-medium text-gray-900">MPV / minibus</td>
                     <td className="px-6 py-4 text-center text-gray-700">5–8 + luggage</td>
-                    <td className="px-6 py-4 text-right text-cyan-700 font-semibold">£80</td>
+                    <td className="px-6 py-4 text-right text-cyan-700 font-semibold">£85</td>
                   </tr>
                 </tbody>
               </table>

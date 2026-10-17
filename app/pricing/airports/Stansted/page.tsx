@@ -11,10 +11,10 @@ export const metadata = buildAirportMetadata({
   airportName: "Stansted",
   airportCode: "STN",
   slug: "Stansted",
-  fromPrice: "£150",
-  title: "Stansted Airport Taxi Leicester | From £150",
+  fromPrice: "£160",
+  title: "Stansted Airport Taxi Leicester | From £160",
   description:
-    "Leicester to Stansted (STN): ~115 mi, ~2h–2h45 via M1/M11. One-terminal drop-off. Fixed from £150 — call 0116 233 8888, 24/7.",
+    "Leicester to Stansted (STN): ~115 mi, ~2h–2h45 via M1/M11. One-terminal drop-off. Fixed from £160 — call 0116 233 8888, 24/7.",
 })
 
 const faqs = stanstedPricingFaqs
@@ -95,7 +95,7 @@ export default function StanstedPage() {
                         </div>
                       </td>
                       <td className="px-6 py-4 text-center text-gray-700">1-4 passengers</td>
-                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £150</td>
+                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £160</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900">
@@ -105,7 +105,7 @@ export default function StanstedPage() {
                         </div>
                       </td>
                       <td className="px-6 py-4 text-center text-gray-700">6-8 passengers</td>
-                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £200</td>
+                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £220</td>
                     </tr>
                     
                   </tbody>

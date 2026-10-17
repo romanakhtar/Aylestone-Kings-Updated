@@ -383,7 +383,7 @@ export const birminghamPricingFaqs: AirportFaqItem[] = [
   {
     question: "How much do Birmingham Airport taxis cost from Leicester?",
     answer:
-      "Birmingham Airport taxis prices from Leicester typically start from £60 for a saloon, £70 for an estate, and £80 for an MPV/minibus, all as fixed fares agreed before travel. Pickups outside the city centre may vary slightly; call 0116 233 8888 or book online for an exact quote.",
+      "Birmingham Airport taxis prices from Leicester typically start from £60 for a saloon, £70 for an estate, and £85 for an MPV/minibus, all as fixed fares agreed before travel. Pickups outside the city centre may vary slightly; call 0116 233 8888 or book online for an exact quote.",
   },
   {
     question: "Can I book a taxi from Birmingham Airport to Leicester?",

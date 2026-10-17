@@ -15,10 +15,10 @@ export const metadata = buildAirportMetadata({
   airportName: "East Midlands",
   airportCode: "EMA",
   slug: "East-Midlands",
-  fromPrice: "£40",
-  title: "East Midlands Airport Taxi Leicester | £40 | 24/7",
+  fromPrice: "£41",
+  title: "East Midlands Airport Taxi Leicester | £41 | 24/7",
   description:
-    "Fixed-price taxi Leicester to East Midlands Airport from £40. Closest airport, licensed drivers, no surge pricing. Book online or call 0116 233 8888.",
+    "Fixed-price taxi Leicester to East Midlands Airport from £41. Closest airport, licensed drivers, no surge pricing. Book online or call 0116 233 8888.",
 })
 
 const faqs = eastMidlandsPricingFaqs
@@ -37,7 +37,7 @@ export default function EastMidlandsPage() {
       {
         price: "40",
         name: "Standard saloon (1–4 passengers)",
-        description: "Leicester city centre to East Midlands Airport (EMA) — from £40",
+        description: "Leicester city centre to East Midlands Airport (EMA) — from £41",
         url: EMA_PRICING_URL,
       },
       {
@@ -134,7 +134,7 @@ export default function EastMidlandsPage() {
                         </div>
                       </td>
                       <td className="px-6 py-4 text-center text-gray-700">1-4 passengers</td>
-                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £40</td>
+                      <td className="px-6 py-4 text-right text-cyan-700 font-semibold text-lg">from £41</td>
                     </tr>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900">

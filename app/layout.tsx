@@ -148,6 +148,26 @@ export default function RootLayout({
         {/* Favicon */}
         <link rel="icon" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
+
+        {/*
+          Seasonal hero preload.
+
+          The homepage is statically prerendered and the Halloween theme is
+          decided client-side (HalloweenThemeProvider, in an effect), so the
+          hero background image is not in the HTML and the browser only
+          discovers it after hydration — measured at 3.8s, making it the LCP
+          element at 6.1s on a throttled mobile connection.
+
+          This runs during head parsing (~150ms), does the same date check, and
+          preloads the right crop so the bytes are already there when the
+          element appears. Keeps the decision at request time rather than
+          baking it into the static build, so it stops on 1 November by itself.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var d=new Date(),m=d.getMonth()+1,day=d.getDate();var q=location.search;var on=/[?&]halloween=(1|true)/.test(q)||(!/[?&]halloween=(0|false)/.test(q)&&m===10&&day>=2);if(!on)return;var l=document.createElement('link');l.rel='preload';l.as='image';l.href=(window.innerWidth<1024)?'/Halloween-Theme-bg-Mobile.webp':'/Halloween-Theme-bg-IMG.webp';l.setAttribute('fetchpriority','high');document.head.appendChild(l);}catch(e){}})();`,
+          }}
+        />
         
         {/* LocalBusiness + TaxiService Schema */}
         <script

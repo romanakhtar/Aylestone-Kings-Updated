@@ -54,7 +54,7 @@ export default function TaxiToBirminghamAirportPage() {
       {
         price: "80",
         name: "MPV / larger vehicle (6–8 passengers)",
-        description: "Leicester city centre to Birmingham Airport (BHX) — from £80",
+        description: "Leicester city centre to Birmingham Airport (BHX) — from £85",
         url: CANONICAL_URL,
       },
     ],
