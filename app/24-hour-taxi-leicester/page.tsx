@@ -20,9 +20,9 @@ import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 const canonical = buildCanonical("/24-hour-taxi-leicester")
 
 export const metadata: Metadata = {
-  title: "24 Hour Taxi Leicester — All Night Service | Book 24/7",
+  title: "24 Hour Taxi Leicester | Day & Night | Aylestone Taxis",
   description:
-    "24 hour taxi in Leicester, every day of the year. Fixed fares with no surge however late it is, licensed drivers. Call 0116 233 8888 or book online.",
+    "A 24 hour taxi service in Leicester: early mornings, overnight runs, weekends and bank holidays. Fixed fares whatever the hour. Call 0116 233 8888.",
   keywords:
     "24 hour taxi Leicester, 24 hour taxi in Leicester, all night taxi Leicester, 24/7 taxi Leicester, late night taxi Leicester, taxi Leicester 24 hours, overnight taxi Leicester",
   alternates: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: [OG_IMAGE],
-    title: "24 Hour Taxi Leicester — All Night Service | Book 24/7",
+    title: "24 Hour Taxi Leicester | Day & Night | Aylestone Taxis",
     description:
       "24 hour taxi Leicester - Round-the-clock taxi service. Day or night, bank holidays included. Book now or call 0116 2338888.",
     url: canonical,
@@ -53,15 +53,15 @@ export default function TwentyFourHourTaxiLeicesterPage() {
                 24 Hour Taxi Leicester
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                24 Hour Taxi Leicester – Always Here When You Need Us
+                24 Hour Taxi Leicester — Early Mornings to Overnight
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Searching for a <strong>24 hour taxi Leicester</strong>? Aylestone
-                Kings provides round-the-clock taxi service every day of the
-                year. Whether it&apos;s 2am or 2pm, a <strong>24 hour taxi in
-                Leicester</strong> is just a call away – no surge pricing, no
-                waiting. Reliable <strong>24 hour taxi Leicester</strong> service
-                you can trust.
+                We run every hour of every day, including Christmas Day and bank holidays. That
+                means 4am airport runs, shift changes at the hospitals, and the journey home long
+                after the last bus — all at a fare agreed before you set off, exactly as with any{" "}
+                <Link href="/taxi-leicester" className="text-[#06A0A6] font-semibold underline underline-offset-2">taxi Leicester</Link> booking. Heading out for the evening? Our{" "}
+                <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] font-semibold underline underline-offset-2">late night taxi page</Link> covers nights out in
+                particular.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

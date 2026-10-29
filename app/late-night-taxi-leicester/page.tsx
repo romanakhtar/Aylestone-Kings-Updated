@@ -156,7 +156,7 @@ export default function LateNightTaxiLeicesterPage() {
               Halloween in Leicester — Book Early
             </h2>
             <p className="text-lg text-[#E4E4E4] mb-5 leading-relaxed">
-              Halloween falls on <strong className="text-white">Friday 31 October 2026</strong>, and it is one of the
+              Halloween falls on <strong className="text-white">Saturday 31 October 2026</strong>, and it is one of the
               busiest nights of the year for taxis in Leicester. Costumed crowds fill the Clock Tower, The Lanes and
               Granby Street, every bar and club turns out at once, and ride-hailing apps apply their heaviest surge
               pricing of the season just as everyone wants to get home.

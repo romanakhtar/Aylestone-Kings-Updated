@@ -20,16 +20,16 @@ import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 const canonical = buildCanonical("/cheap-taxi-leicester")
 
 export const metadata: Metadata = {
-  title: "Cheap Taxi Leicester | Fixed Low Fares | Book 24/7",
+  title: "Cheap Taxi Leicester | No Hidden Charges | Aylestone",
   description:
-    "Affordable Leicester taxis with fixed, low fares and no surge pricing. Licensed drivers, 24/7. Call 0116 233 8888 or get an instant quote.",
+    "Affordable taxis in Leicester with transparent fixed fares agreed up front. No hidden charges and no surge pricing, ever. Call 0116 233 8888 for a quote.",
   keywords: "Cheap Taxi Leicester, cheapest taxi Leicester, cheap taxi in Leicester, cheapest taxi in Leicester, 24 hour taxi Leicester, affordable taxi Leicester, budget taxi Leicester, low cost taxi Leicester, cheap taxi to East Midlands Airport",
   alternates: {
     canonical,
   },
   openGraph: {
     images: [OG_IMAGE],
-    title: "Cheap Taxi Leicester | Online Quotes | Aylestone Taxis",
+    title: "Cheap Taxi Leicester | No Hidden Charges | Aylestone",
     description:
       "Affordable Leicester taxis with transparent pricing. Book online or call 0116 2338888 — 24/7.",
     url: canonical,
@@ -71,12 +71,14 @@ export default function CheapTaxiLeicesterPage() {
                 Cheap Taxi Leicester
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                Cheap Taxi Leicester - Affordable & Reliable
+                Affordable Leicester Taxis, Priced Up Front
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Looking for a <strong>Cheap Taxi Leicester</strong>? Aylestone Taxis offers affordable taxi services 
-                throughout Leicester with competitive prices, no hidden fees, and professional service. 
-                Our <strong>cheap 24 hour taxi Leicester</strong> is available day and night – quality service that doesn't compromise on safety or reliability.
+                An affordable fare should not mean a surprise at the end of the journey. Your price
+                is agreed before you travel and it does not move because it is raining, because it is
+                a Friday, or because half the city wants a car at once. No booking fee, no card
+                surcharge, no surge. The same fixed pricing applies right across our{" "}
+                <Link href="/taxi-leicester" className="text-[#06A0A6] font-semibold underline underline-offset-2">taxi Leicester</Link> service.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

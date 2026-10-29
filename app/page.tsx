@@ -5,18 +5,16 @@ import HomePageClient from "./HomePageClient"
 const canonical = buildCanonical("/")
 
 export const metadata: Metadata = {
-  title: "Taxi Leicester | Fixed Fares, No Surge | Aylestone Taxis",
+  title: "Aylestone Taxis | Leicester Cabs & Airport Transfers",
   description:
-    "Book Leicester taxis, Leicester cabs and Leicestershire taxis 24/7. Fixed fares, no surge, licensed drivers. Call 0116 233 8888 or book online.",
-  keywords:
-    "Taxi Leicester, Leicester taxi, Leicester taxis, Leicester cabs, Leicester cab, Leicestershire taxis, Leicestershire taxi, Aylestone Taxis",
+    "Aylestone Taxis has served Leicester since 1995 — local cabs, fixed-fare airport transfers and 24/7 booking by phone, app or WhatsApp. Call 0116 233 8888.",
   alternates: {
     canonical,
   },
   openGraph: {
-    title: "Taxi Leicester | Fixed Fares, No Surge | Aylestone Taxis",
+    title: "Aylestone Taxis | Leicester Cabs & Airport Transfers",
     description:
-      "Book Leicester taxis, Leicester cabs and Leicestershire taxis 24/7. Fixed fares, no surge, licensed drivers. Call 0116 233 8888 or book online.",
+      "Aylestone Taxis has served Leicester since 1995 — local cabs, fixed-fare airport transfers and 24/7 booking by phone, app or WhatsApp.",
     url: canonical,
     images: [
       {

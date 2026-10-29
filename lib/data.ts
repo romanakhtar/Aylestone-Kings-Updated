@@ -163,9 +163,9 @@ export const siteData = {
 
     // SEO-focused extended homepage content (rendered near page bottom)
     seoContent: {
-      introHeading: "Leicester Taxis, Leicester Cabs & Leicestershire Taxis",
+      introHeading: "Cabs and Airport Transfers Across Leicester",
       introBody:
-        "Looking for a taxi Leicester passengers can rely on? Book Leicester taxis, Leicester cabs and Leicestershire taxis with licensed drivers across the city and county. Local journeys, a safe ride home, corporate travel, or an airport transfer — Aylestone Taxis is available 24/7.",
+        "Aylestone Taxis has been driving people around Leicester and the county since 1995. Whether it is a short hop across the city, a safe ride home at night, corporate travel or an airport run, you get a licensed driver and a fare agreed before you set off. Looking for general local cover? See our taxi Leicester page.",
 
       mission:
         "We specialise in fixed-price airport transfers from Leicester to East Midlands Airport, Birmingham Airport, Heathrow and other major UK airports. With on-time pickups, comfortable vehicles, and experienced local drivers, we ensure every journey is smooth and stress-free.",
@@ -1066,12 +1066,12 @@ export const siteData = {
         metaDescription:
           "Halloween taxi Leicester: fixed fares, no surge on 31 October. Pre-book your ride home from 2Funky, Athena, Mosh & more. Call 0116 233 8888.",
         excerpt:
-          "Halloween falls on Friday 31 October 2026 — one of the busiest taxi nights of the year in Leicester. Why ride-hailing surge pricing bites hardest on Halloween, how far ahead to pre-book, the venues and areas we cover, and how to book on the night by WhatsApp.",
+          "Halloween falls on Saturday 31 October 2026 — one of the busiest taxi nights of the year in Leicester. Why ride-hailing surge pricing bites hardest on Halloween, how far ahead to pre-book, the venues and areas we cover, and how to book on the night by WhatsApp.",
         faqs: [
           {
             question: "How far in advance should I book a taxi for Halloween in Leicester?",
             answer:
-              "Book as soon as you know your plans — ideally a week or more before 31 October. Halloween lands on a Friday in 2026, so it competes with normal weekend demand. Pre-booking by mid-October gives you the best chance of the exact pickup time you want, both out and back.",
+              "Book as soon as you know your plans — ideally a week or more before 31 October. Halloween lands on a Saturday in 2026, the busiest night of the week, so it stacks on top of normal weekend demand. Pre-booking by mid-October gives you the best chance of the exact pickup time you want, both out and back.",
           },
           {
             question: "Do your fares go up on Halloween night?",
@@ -1090,7 +1090,7 @@ export const siteData = {
           },
         ],
         content: `
-          <p>Halloween 2026 falls on <strong>Friday 31 October</strong> — and for taxis in Leicester, that combination is about as busy as the year gets. A Friday night already fills the city centre; add costume parties, club events and thousands of people all leaving within the same two hours, and getting home becomes the hardest part of the night. This guide explains why a <strong>halloween taxi Leicester</strong> booking is worth sorting early, what it costs, and how to book on the night if your plans change.</p>
+          <p>Halloween 2026 falls on <strong>Saturday 31 October</strong> — and for taxis in Leicester, that combination is about as busy as the year gets. A Saturday night already fills the city centre; add costume parties, club events and thousands of people all leaving within the same two hours, and getting home becomes the hardest part of the night. This guide explains why a <strong>halloween taxi Leicester</strong> booking is worth sorting early, what it costs, and how to book on the night if your plans change.</p>
 
           <h2>Why Halloween is the worst night for surge pricing</h2>
           <p>Ride-hailing apps price by live demand. When hundreds of people in Leicester open the same app at the same moment — typically when venues call last orders — the fare multiplies. On an ordinary Tuesday you might pay a predictable amount for a short hop home. On Halloween, with demand spiking city-wide at once, the same journey can cost noticeably more, and wait times stretch while you stand outside in a costume in late October.</p>

@@ -10,9 +10,9 @@ import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 const canonical = buildCanonical("/taxi-near-me-leicester")
 
 export const metadata: Metadata = {
-  title: "Taxi Near Me Leicester | Taxis Near Me | Book in Seconds",
+  title: "Taxi Near Me Leicester | Quick Pick-Ups | Aylestone Taxis",
   description:
-    "Taxi near me in Leicester: fast local pickups, fixed fares with no surge, saloons and 6-seaters. See your price before you book. Call 0116 233 8888, 24/7.",
+    "Need a taxi near you in Leicester? Quick pick-ups across Aylestone and the surrounding areas. Call or WhatsApp and we send the nearest car. 0116 233 8888.",
   keywords:
     "taxi near me, taxis near me, Taxi Near Me Leicester, taxi near me leicester, Leicester taxi near me, find taxi Leicester, nearest taxi Leicester, 6 seater taxi near me",
   alternates: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: [OG_IMAGE],
-    title: "Taxi Near Me Leicester | Taxis Near Me | Aylestone Taxis",
+    title: "Taxi Near Me Leicester | Quick Pick-Ups | Aylestone Taxis",
     description: "Taxi near me Leicester: instant quotes, 6-seaters available, 24/7. Call 0116 2338888 or book online.",
     url: canonical,
   },
@@ -66,11 +66,14 @@ export default function TaxiNearMeLeicesterPage() {
                 Taxi Near Me Leicester
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                Taxi Near Me Leicester - Fast Local Pick-Ups
+                Taxi Near Me — Quick Pick-Ups Across Leicester
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Looking for a <strong>Taxi Near Me Leicester</strong>? Aylestone Taxis provides fast, reliable taxi service 
-                throughout Leicester with immediate pick-up in most areas. Find your nearest <strong>Taxi Near Me Leicester</strong> service now.
+                Need a car now rather than later? We dispatch from Aylestone and the streets
+                around it, so the nearest free driver is usually minutes away instead of across the
+                city. Call us or send a WhatsApp message and we will tell you honestly how long the
+                wait is. If you are planning ahead instead of travelling right now, our{" "}
+                <Link href="/taxi-leicester" className="text-[#06A0A6] font-semibold underline underline-offset-2">taxi Leicester</Link> page covers the wider service.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
