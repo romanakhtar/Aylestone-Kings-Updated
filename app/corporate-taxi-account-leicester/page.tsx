@@ -324,6 +324,16 @@ export default function CorporateTaxiAccountLeicesterPage() {
                   , Fosse Park, Meridian Business Park, and surrounds
                 </li>
               </ul>
+              <p className="mt-6 text-[#2E3C44] text-lg leading-relaxed">
+                Planning a company Christmas night out? See our guide to booking a{" "}
+                <Link
+                  href="/blog/corporate-christmas-party-taxi-leicester"
+                  className="text-[#06A0A6] font-semibold hover:underline"
+                >
+                  corporate Christmas party taxi in Leicester
+                </Link>{" "}
+                — fixed fares, group vehicles, and practical tips for getting staff home safely.
+              </p>
             </div>
           </div>
         </section>
