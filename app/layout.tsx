@@ -34,16 +34,15 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aylestone-taxis.co.uk"),
-  title: "Taxi Leicester | Leicester Cabs & Taxis | Aylestone",
+  title: "Aylestone Taxis | Leicester Cabs & Airport Transfers",
   description:
-    "Book Leicester taxis, Leicester cabs and Leicestershire taxis 24/7. Fixed fares, no surge, licensed drivers. Call 0116 233 8888 or book online.",
-  keywords: "Taxi Leicester, Leicester taxi, Leicester taxis, Leicester cabs, Leicester cab, Leicestershire taxis, Leicestershire taxi, Aylestone Taxis, taxi near me Leicester, Taxi Near Me Leicester, Leicester Airport Taxi, Leicester to East Midlands Airport Taxi, Leicester Taxi Company, Cheap Taxi Leicester, 24 Hour Taxi Leicester, taxi in Leicester, Leicester taxi service, airport taxi Leicester, airport transfers Leicester, taxi company Leicester",
+    "Aylestone Taxis has served Leicester since 1995 — local cabs, fixed-fare airport transfers and 24/7 booking. Call 0116 233 8888 or book online.",
   generator: "Aylestone Taxis",
   authors: [{ name: "Aylestone Taxis" }],
   openGraph: {
-    title: "Taxi Leicester | Leicester Cabs & Taxis | Aylestone",
+    title: "Aylestone Taxis | Leicester Cabs & Airport Transfers",
     description:
-    "Book Leicester taxis, Leicester cabs and Leicestershire taxis 24/7. Fixed fares, no surge, licensed drivers. Call 0116 233 8888 or book online.",
+    "Aylestone Taxis has served Leicester since 1995 — local cabs, fixed-fare airport transfers and 24/7 booking. Call 0116 233 8888 or book online.",
     url: buildCanonical("/"),
     siteName: "Aylestone Taxis",
     locale: "en_GB",
@@ -59,9 +58,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Taxi Leicester | Leicester Cabs & Taxis | Aylestone",
+    title: "Aylestone Taxis | Leicester Cabs & Airport Transfers",
     description:
-      "Book Leicester taxis, Leicester cabs and Leicestershire taxis 24/7. Fixed fares, no surge, licensed drivers.",
+      "Local cabs and fixed-fare airport transfers from Leicester, 24/7, with licensed drivers and no surge pricing.",
     images: ["https://aylestone-taxis.co.uk/og-image.jpg"],
   },
   other: {

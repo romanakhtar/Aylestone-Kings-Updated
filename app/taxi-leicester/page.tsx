@@ -17,15 +17,15 @@ const canonical = buildCanonical("/taxi-leicester")
  * term "taxi leicester" (93% of impressions for that query). So this page is
  * positioned for area and coverage intent instead of competing with it.
  */
-const TITLE = "Taxis in Leicester | Every Area We Cover | 24/7"
+const TITLE = "Taxi Leicester | Fixed Fares, 24/7 | Aylestone Taxis"
 const DESCRIPTION =
-  "Taxis in Leicester and Leicestershire, covering every area from Aylestone to Oadby. Fixed fares, no surge, licensed drivers. Call 0116 233 8888, 24/7."
+  "Book a taxi in Leicester with fixed fares agreed before you travel and no surge pricing. Licensed, DBS-checked drivers, 24/7. Call 0116 233 8888."
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   keywords:
-    "taxis in Leicester, Leicester taxi areas, taxi coverage Leicester, local taxi Leicester, Leicester taxi journey times",
+    "taxi Leicester, Leicester taxi, Leicester taxis, book a taxi Leicester, 24 hour taxi Leicester, fixed fare taxi Leicester",
   alternates: {
     canonical,
   },
@@ -83,17 +83,13 @@ export default function TaxiLeicesterPage() {
                 Book Leicester taxis &amp; cabs
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                Taxis in Leicester — Every Area We Cover
+                Taxi Leicester — Fixed Fares, Day and Night
               </h1>
               <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                Find your neighbourhood below and book a licensed, DBS-checked driver with a fare
-                agreed before you travel. We have covered Leicester and Leicestershire since 1995 —
-                from Aylestone and Clarendon Park to Oadby, Wigston and the county villages. To
-                book straight away, use our{" "}
-                <Link href="/" className="text-[#06A0A6] font-semibold underline underline-offset-2">
-                  Taxi Leicester booking page
-                </Link>
-                .
+                Aylestone Taxis has run taxis in Leicester since 1995. Every fare is agreed
+                before you travel, so the price does not change when the city is busy, and every
+                driver is licensed and DBS-checked. We cover the whole city and county, around the
+                clock, for local journeys, station runs and airport transfers alike.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

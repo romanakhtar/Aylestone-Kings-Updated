@@ -163,9 +163,9 @@ export const siteData = {
 
     // SEO-focused extended homepage content (rendered near page bottom)
     seoContent: {
-      introHeading: "Leicester Taxis, Leicester Cabs & Leicestershire Taxis",
+      introHeading: "Cabs and Airport Transfers Across Leicester",
       introBody:
-        "Looking for a taxi Leicester passengers can rely on? Book Leicester taxis, Leicester cabs and Leicestershire taxis with licensed drivers across the city and county. Local journeys, a safe ride home, corporate travel, or an airport transfer — Aylestone Taxis is available 24/7.",
+        "Aylestone Taxis has been driving people around Leicester and the county since 1995. Whether it is a short hop across the city, a safe ride home at night, corporate travel or an airport run, you get a licensed driver and a fare agreed before you set off. Looking for general local cover? See our taxi Leicester page.",
 
       mission:
         "We specialise in fixed-price airport transfers from Leicester to East Midlands Airport, Birmingham Airport, Heathrow and other major UK airports. With on-time pickups, comfortable vehicles, and experienced local drivers, we ensure every journey is smooth and stress-free.",
@@ -1060,18 +1060,107 @@ export const siteData = {
       "Practical travel guides for Leicester — airport transfers, matchday taxis, prom nights, student moves, fare tips, and booking advice from your trusted local 24/7 taxi company.",
     blogs: [
       {
+        id: "corporate-christmas-party-taxi-leicester",
+        title:
+          "Corporate Christmas Party Taxi Leicester 2026: Book Before December Fills Up",
+        metaTitle: "Corporate Christmas Party Taxi Leicester 2026 | Book Early",
+        metaDescription:
+          "Pre-book your Leicester Christmas party taxi. Fixed fares, no surge pricing, saloons and people carriers for staff nights out.",
+        excerpt:
+          "How Leicester businesses can pre-book a corporate Christmas party taxi for 2026: fixed fares with no surge, the right vehicle for your group, corporate accounts for staff nights out, and practical pickup tips from Athena, Curve Theatre, Hotel Maiyango, Mercure Leicester and Morningside Arena.",
+        faqs: [
+          {
+            question: "How far ahead should I book a Christmas party taxi in Leicester?",
+            answer:
+              "Book as soon as your party date is confirmed — ideally from mid-November, and earlier still for Friday or Saturday in December. Those nights are among the busiest of the year for taxis across Leicester, and larger vehicles go first. Pre-booking locks in your pickup time and a fixed fare before the city centre fills up.",
+          },
+          {
+            question: "Do you offer fixed fares on Christmas party nights?",
+            answer:
+              "Yes. We quote a fixed fare when you book, and that is the price you pay — including on busy December Fridays and Saturdays. There is no surge pricing when venues empty at once. For an indicative figure before you commit, use the fare estimator on our homepage or ask for a quote when you book.",
+          },
+          {
+            question: "Can you take a large group or arrange multiple cars?",
+            answer:
+              "Yes. A saloon suits smaller parties of up to four; for larger groups we can send a people carrier seating up to eight, or arrange more than one vehicle so colleagues leave together. Tell us the headcount and rough departure time when you book and we will match the fleet to your night out.",
+          },
+          {
+            question: "Do you cover late-night pickups after the Christmas party?",
+            answer:
+              "Yes. We operate 24/7, so pickups after midnight and into the early hours are part of normal cover. Pre-book your return if you know roughly when the party ends, or message us on WhatsApp when you are ready to leave. See our late night taxi Leicester page for year-round night-out cover.",
+          },
+          {
+            question: "What happens if the party finishes later than planned?",
+            answer:
+              "Christmas parties rarely finish on the minute. If you have pre-booked, contact us as soon as you know you will be late and we will adjust the pickup where we can. If plans are completely open-ended, WhatsApp us at +447535855786 when the group is ready — we confirm a fixed fare before the driver sets off.",
+          },
+        ],
+        content: `
+          <p>December in Leicester means office dinners, client drinks and full staff nights out — and it also means some of the longest taxi queues of the year. If you are organising a <strong>corporate Christmas party taxi Leicester</strong> booking for 2026, the smart move is to sort the journey home before the invitations go out. This guide covers why pre-booking matters, how fixed fares work on party nights, which vehicles suit your group, how a corporate account helps, and practical tips for pickups from the venues Leicester businesses actually use.</p>
+
+          <h2>Why pre-booking matters for Christmas party nights</h2>
+          <p>December Fridays and Saturdays sit among the busiest taxi nights of the year. Work parties empty restaurants, hotels and event spaces within the same narrow window, and hundreds of people open a booking app at once. Waiting on the street after a work do — cold pavement, unclear pickup point, colleagues splitting in different directions — is exactly the problem a pre-booked <strong>christmas party taxi Leicester</strong> journey is meant to solve.</p>
+          <p>Pre-booking does three useful things. It reserves a licensed vehicle at a time when every operator is stretched. It gives your group a clear meeting point and a confirmed fare before anyone leaves the venue. And it means the organiser is not left on the phone at midnight trying to find cars for eight people who all live in different suburbs. Even if the party might overrun, locking in a return window or agreeing that someone will WhatsApp when you are ready is far safer than hoping a free car appears outside the door.</p>
+
+          <h2>Fixed fares versus surge pricing on party nights</h2>
+          <p>On busy nights, many app-based rides raise the price as demand rises. The same short hop home that looked reasonable at 8pm can cost noticeably more when every bar and dining room turns out together. That is frustrating after a company night out, especially when the fare is being split or claimed later.</p>
+          <p>Aylestone Taxis works the other way. We quote a <strong>fixed fare at booking</strong>, and that price does not climb because the city centre has emptied all at once. There is no surge multiplier on a December Saturday. Final pricing depends on pickup, destination and vehicle size — we do not publish a one-size-fits-all Christmas rate — so when price matters, use our <a href="/#fare-estimator">fare estimator</a> for an indicative figure, then confirm the exact quote when you book online or by phone. You know the cost before the driver sets off, which makes splitting the bill or posting it to a company account straightforward.</p>
+
+          <h2>Choosing the right vehicle for your staff night out</h2>
+          <p>Match the car to the headcount rather than squeezing everyone into the first available saloon. Our fleet includes:</p>
+          <ul>
+            <li><strong>Saloon cars</strong> — comfortable for smaller groups of up to four, ideal for a manager and a few colleagues heading to the same suburb.</li>
+            <li><strong>People carriers (MPVs)</strong> — seating up to eight passengers, suited to larger tables leaving together so the group stays in one vehicle.</li>
+          </ul>
+          <p>For bigger parties we can arrange multiple cars with staggered or shared pickup times. Tell us how many people are travelling and roughly when you expect to leave; we will recommend saloons, people carriers or a mix. Full vehicle categories are on our <a href="/fleet">fleet</a> page if you want to compare options before you book a <strong>company christmas night out taxi Leicester</strong> run.</p>
+
+          <h2>Group bookings and corporate accounts</h2>
+          <p>One-off bookings work well for a single Christmas night. If your business already moves staff around Leicester through the year — client visits, airport runs, late finishes — a <a href="/corporate-taxi-account-leicester">corporate taxi account in Leicester</a> keeps Christmas travel on the same footing as everyday journeys.</p>
+          <p>On our corporate account page we set out how accounts actually work: company registration and agreed payment terms at setup, authorised colleagues booking by phone or app with journeys posting to the account automatically, one consolidated monthly invoice with line-by-line journey detail for finance, and a single point of contact for account management. That is useful when several teams are out on different December evenings — staff do not need to settle individually on the night, and finance receives one clear statement rather than a pile of receipts.</p>
+          <p>Accounts also cover staff movements and client travel across Leicester, including airport and long-distance work where agreed. If Christmas is the nudge to centralise travel, enquire on the corporate page; if you only need cars for the party itself, a standard pre-booking is enough.</p>
+
+          <h2>Getting home safely from typical Leicester Christmas party areas</h2>
+          <p>Leicester’s corporate Christmas calendar clusters around a handful of well-known spots. We regularly pick up from and drop off at <strong>Athena</strong>, <strong>Curve Theatre</strong>, <strong>Hotel Maiyango</strong>, <strong>Mercure Leicester</strong>, and events at <strong>Morningside Arena</strong> — as pickup and drop-off points, not as partner venues. Name the venue when you book so the driver can agree a collection point that is easy to reach on foot and safe to wait at while the pavement is busy.</p>
+          <h3>Practical tips for the night</h3>
+          <ul>
+            <li><strong>Agree the pickup point in advance</strong> — a side street or named entrance beats standing in a crowded doorway guessing which car is yours.</li>
+            <li><strong>Share the booking with the group</strong> — send the confirmation, vehicle details and meeting spot to a shared chat so nobody wanders off.</li>
+            <li><strong>Book the return early</strong> — the journey home is the one that fails when left to chance; outward legs are usually easier to rearrange.</li>
+          </ul>
+          <p>If the evening runs on past midnight, our <a href="/late-night-taxi-leicester">late night taxi Leicester</a> service covers the same fixed-fare approach for city-centre and suburban drop-offs through the early hours.</p>
+
+          <h2>How to book your corporate Christmas party taxi</h2>
+          <p>You can arrange a <strong>corporate christmas party taxi Leicester</strong> booking three ways:</p>
+          <ol>
+            <li><strong>Phone</strong> — call <strong>0116 233 8888</strong> with the date, venue, passenger count and preferred pickup time.</li>
+            <li><strong>WhatsApp</strong> — message <strong>+447535855786</strong> before the night to pre-book, or when you are ready to leave if timing is flexible.</li>
+            <li><strong>Website booking</strong> — use our online booker to secure the journey and confirm the fixed fare before you travel.</li>
+          </ol>
+          <p>Whether you need one saloon for a small team or several people carriers for a full company christmas night out taxi Leicester departure, book while December still has space. Fixed fares, no surge pricing, and licensed DBS-checked drivers — so the only thing left to organise is the table plan.</p>
+
+          <p style="text-align:center; margin-top:2rem;">
+            <a href="https://wa.me/447535855786?text=Hi!%20I%20need%20a%20Christmas%20party%20taxi%20in%20Leicester" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447535855786</a>
+            <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
+          </p>
+        `,
+        date: "2026-11-05",
+        author: "Aylestone Taxis Team",
+        category: "Travel Tips",
+        image: "/Blog corporate-taxi-accounts-leicester-explained.webp",
+      },
+      {
         id: "halloween-taxi-leicester-2026-pre-book-before-surge-prices-hit",
         title: "Halloween Taxi Leicester 2026 — Pre-Book Before Surge Prices Hit",
         metaTitle: "Halloween Taxi Leicester 2026 | Fixed Fares",
         metaDescription:
           "Halloween taxi Leicester: fixed fares, no surge on 31 October. Pre-book your ride home from 2Funky, Athena, Mosh & more. Call 0116 233 8888.",
         excerpt:
-          "Halloween falls on Friday 31 October 2026 — one of the busiest taxi nights of the year in Leicester. Why ride-hailing surge pricing bites hardest on Halloween, how far ahead to pre-book, the venues and areas we cover, and how to book on the night by WhatsApp.",
+          "Halloween falls on Saturday 31 October 2026 — one of the busiest taxi nights of the year in Leicester. Why ride-hailing surge pricing bites hardest on Halloween, how far ahead to pre-book, the venues and areas we cover, and how to book on the night by WhatsApp.",
         faqs: [
           {
             question: "How far in advance should I book a taxi for Halloween in Leicester?",
             answer:
-              "Book as soon as you know your plans — ideally a week or more before 31 October. Halloween lands on a Friday in 2026, so it competes with normal weekend demand. Pre-booking by mid-October gives you the best chance of the exact pickup time you want, both out and back.",
+              "Book as soon as you know your plans — ideally a week or more before 31 October. Halloween lands on a Saturday in 2026, the busiest night of the week, so it stacks on top of normal weekend demand. Pre-booking by mid-October gives you the best chance of the exact pickup time you want, both out and back.",
           },
           {
             question: "Do your fares go up on Halloween night?",
@@ -1090,7 +1179,7 @@ export const siteData = {
           },
         ],
         content: `
-          <p>Halloween 2026 falls on <strong>Friday 31 October</strong> — and for taxis in Leicester, that combination is about as busy as the year gets. A Friday night already fills the city centre; add costume parties, club events and thousands of people all leaving within the same two hours, and getting home becomes the hardest part of the night. This guide explains why a <strong>halloween taxi Leicester</strong> booking is worth sorting early, what it costs, and how to book on the night if your plans change.</p>
+          <p>Halloween 2026 falls on <strong>Saturday 31 October</strong> — and for taxis in Leicester, that combination is about as busy as the year gets. A Saturday night already fills the city centre; add costume parties, club events and thousands of people all leaving within the same two hours, and getting home becomes the hardest part of the night. This guide explains why a <strong>halloween taxi Leicester</strong> booking is worth sorting early, what it costs, and how to book on the night if your plans change.</p>
 
           <h2>Why Halloween is the worst night for surge pricing</h2>
           <p>Ride-hailing apps price by live demand. When hundreds of people in Leicester open the same app at the same moment — typically when venues call last orders — the fare multiplies. On an ordinary Tuesday you might pay a predictable amount for a short hop home. On Halloween, with demand spiking city-wide at once, the same journey can cost noticeably more, and wait times stretch while you stand outside in a costume in late October.</p>

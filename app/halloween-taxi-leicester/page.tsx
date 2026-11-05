@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "How early should I book a Halloween taxi in Leicester?",
     answer:
-      "As soon as your plans are set — ideally a week or more ahead. Halloween 2026 falls on a Friday, so it competes with normal weekend demand. Larger vehicles for groups of five or more go first, so book those earliest.",
+      "As soon as your plans are set — ideally a week or more ahead. Halloween 2026 falls on a Saturday, the busiest night of the week, so it stacks on top of normal weekend demand. Larger vehicles for groups of five or more go first, so book those earliest.",
   },
   {
     question: "Can I book a taxi on Halloween night itself?",

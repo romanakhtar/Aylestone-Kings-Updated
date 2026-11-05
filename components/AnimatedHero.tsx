@@ -250,11 +250,11 @@ export default function AnimatedHero() {
                 : isHalloweenActive
                 ? (
                   <>
-                    Leicester Taxi Service &amp; Airport Transfers{" "}
-                    <span className="text-[#FF8A3D]">Fixed Fares 24/7</span>
+                    Aylestone Taxis — Leicester Cabs &amp;{" "}
+                    <span className="text-[#FF8A3D]">Airport Transfers</span>
                   </>
                 )
-                : "Leicester Taxi Service & Airport Transfers Fixed Fares 24/7"}
+                : "Aylestone Taxis — Leicester Cabs & Airport Transfers"}
             </h1>
 
             {/* Description */}
