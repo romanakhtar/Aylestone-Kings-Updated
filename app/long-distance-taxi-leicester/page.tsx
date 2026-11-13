@@ -272,8 +272,14 @@ export default function LongDistanceTaxiLeicesterPage() {
                 </table>
               </div>
               <p className="mt-6 text-center text-sm text-[#2E3C44]">
-                Times are typical in normal traffic; night or peak travel may vary. For Birmingham, Leeds, Bristol, and
-                other routes, call {contactInfo.phone} or{" "}
+                Times are typical in normal traffic; night or peak travel may vary. Travelling to Birmingham? See our{" "}
+                <Link
+                  href="/blog/taxi-leicester-to-birmingham-cost-time-booking-guide-2026"
+                  className="text-[#06A0A6] font-semibold underline hover:text-[#0F0D3E]"
+                >
+                  Leicester to Birmingham taxi guide
+                </Link>
+                . For Leeds, Bristol, and other routes, call {contactInfo.phone} or{" "}
                 <a
                   href={contactInfo.booking.online}
                   target="_blank"

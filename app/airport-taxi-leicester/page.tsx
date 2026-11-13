@@ -227,7 +227,14 @@ export default function AirportTaxiLeicesterPage() {
                   Leicester city centre
                 </Link>
                 , Aylestone, Oadby, or anywhere in Leicestershire — no changes at Birmingham New Street, no DART transfer
-                at Luton, and no surprise parking fees at the station. Your fare is agreed upfront, so you can compare it
+                at Luton (see our{" "}
+                <Link
+                  href="/blog/taxi-leicester-to-luton-airport-fixed-price-no-surge"
+                  className="text-[#06A0A6] font-semibold hover:underline"
+                >
+                  Leicester to Luton Airport taxi guide
+                </Link>
+                ), and no surprise parking fees at the station. Your fare is agreed upfront, so you can compare it
                 fairly against train tickets, fuel, and long-stay airport parking.
               </p>
               <p>

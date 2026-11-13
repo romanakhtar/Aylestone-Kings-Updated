@@ -1060,9 +1060,190 @@ export const siteData = {
       "Practical travel guides for Leicester — airport transfers, matchday taxis, prom nights, student moves, fare tips, and booking advice from your trusted local 24/7 taxi company.",
     blogs: [
       {
+        id: "taxi-leicester-to-luton-airport-fixed-price-no-surge",
+        title: "Taxi from Leicester to Luton Airport — Fixed Price, No Surge",
+        metaTitle: "Leicester to Luton Airport Taxi | Fixed Price, No Surge",
+        metaDescription:
+          "Leicester to Luton Airport taxi from £130, about 75 mins via the M1. Fixed price, no surge, protected if your flight is delayed. Call 0116 233 8888.",
+        excerpt:
+          "A Leicester to Luton Airport taxi with a fixed price and no surge: journey time via the M1, what happens to your fare if your flight is delayed, when a taxi beats the train and DART, and how far in advance to book.",
+        faqs: [
+          {
+            question: "How much is a taxi from Leicester to Luton Airport?",
+            answer:
+              "Fixed fares start from £130 in a saloon for up to four passengers and from £170 in an MPV for larger groups or extra luggage, from Leicester city centre. The exact price depends on your pickup address and vehicle, and it is confirmed before you travel — no meter and no surge pricing.",
+          },
+          {
+            question: "How long does a taxi from Leicester to Luton Airport take?",
+            answer:
+              "Around 75 minutes on a clear run via the M1 to junction 10. Allow 1 hour 15 minutes to 1 hour 45 minutes depending on the time of day, roadworks and traffic on the M1, and we will set your pickup time around your check-in, not the best-case drive.",
+          },
+          {
+            question: "What happens to my fare if my flight is delayed?",
+            answer:
+              "Your fixed price is protected. Give us your flight number when you book a pickup from Luton and we track the arrival, so if your flight lands late the driver is there when you actually land and the agreed fare does not change. For outbound trips, call or WhatsApp us if your departure time moves and we will re-time the pickup.",
+          },
+          {
+            question: "How far in advance should I book a Leicester to Luton Airport taxi?",
+            answer:
+              "As soon as your flights are confirmed, and at least 48 hours ahead where possible. For early-morning departures, school holidays and Christmas travel, book earlier still — those slots and larger vehicles go first. Same-day bookings are possible, subject to availability.",
+          },
+          {
+            question: "Is a taxi better than the train to Luton Airport?",
+            answer:
+              "For one person travelling light at a convenient time, the train to Luton Airport Parkway plus the DART shuttle can be cheaper. For families, groups, heavy luggage or early-morning flights before the first trains, a door-to-door taxi at one fixed price for the whole car is usually simpler and often better value.",
+          },
+        ],
+        content: `
+          <p>Luton is one of the most popular airports for Leicester travellers, with a busy schedule of European flights and plenty of early-morning departures. Getting there should be the easy part of the trip. This guide explains how a <strong>Leicester to Luton Airport taxi</strong> works with Aylestone Taxis — the journey time, why a fixed price matters on an airport run, what happens if your flight is delayed, and how far in advance to book.</p>
+
+          <h2>Why a fixed price matters for airport runs</h2>
+          <p>An airport run is a long journey on a motorway that can slow down at any time. On a meter, every hold-up on the M1 adds to the bill. With app-based rides, the price can rise with demand — and early mornings, Friday afternoons and holiday weekends are exactly when demand peaks. Neither is what you want when you are already paying for flights, parking or a holiday.</p>
+          <p>We quote a <strong>fixed price when you book</strong>, and that is the price you pay. Roadworks near junction 10, slow traffic around Luton or a busy terminal forecourt do not change it, and there is no surge pricing at 4am or on a bank holiday. The quote covers the whole car, not a price per passenger.</p>
+          <table style="width:100%; border-collapse:collapse; margin-bottom:1.5rem; font-size:1rem;">
+            <thead>
+              <tr style="background:#0F0D3E; color:#fff;">
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Vehicle</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Best for</th>
+                <th style="padding:0.75rem 1rem; text-align:left; border:1px solid #E4E4E4;">Fixed fare from Leicester</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>Saloon</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">1–4 passengers, standard luggage</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>From £130</strong></td>
+              </tr>
+              <tr style="background:#f8f9fa;">
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>MPV</strong></td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;">Families, groups, extra cases</td>
+                <td style="padding:0.75rem 1rem; border:1px solid #E4E4E4;"><strong>From £170</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Prices are from Leicester city centre; your exact fare is confirmed for your pickup address before you commit. Full route details are on our <a href="/pricing/airports/Luton">Luton Airport taxi prices</a> page.</p>
+
+          <h2>How long is the journey?</h2>
+          <p>The drive from Leicester to Luton Airport takes <strong>around 75 minutes</strong> on a clear run. The route heads south on the M1 to junction 10, then follows the airport approach road to the terminal drop-off. At busy times — weekday rush hour, Friday afternoons and the start of school holidays — allow 1 hour 15 minutes to 1 hour 45 minutes. We plan your pickup time around those realistic conditions rather than the fastest possible run.</p>
+          <p>As a rule of thumb for a European flight, aim to arrive at the terminal two hours before departure. That usually means leaving Leicester around three and a half to four hours before your flight time. Tell us your departure time when you book and we will suggest a pickup time that fits.</p>
+
+          <h2>What if your flight is delayed?</h2>
+          <p>This is where a fixed price really protects you. For pickups from Luton, give us your <strong>flight number</strong> when you book. We track your flight, so if it lands late the driver is there when you actually arrive — and your agreed fare stays the same. You are not charged more because the plane was late, and you are not left in arrivals wondering whether your car has gone.</p>
+          <p>For outbound journeys, if your airline changes your departure time, call or WhatsApp us as soon as you know and we will move the pickup. If you would like the driver to meet you inside the terminal on your return, our <a href="/meet-and-greet-taxi-leicester">meet and greet service</a> is available on request.</p>
+
+          <h2>Taxi or train to Luton Airport?</h2>
+          <p>There is a rail option: East Midlands Railway runs from Leicester to Luton Airport Parkway, where the DART shuttle takes you up to the terminal. For a solo traveller with a small bag at a convenient time, that can be the cheaper choice. A taxi makes more sense when:</p>
+          <ul>
+            <li><strong>You are travelling as a family or group</strong> — one fixed fare for the whole car often compares well with several rail and shuttle tickets.</li>
+            <li><strong>You have heavy luggage, children or a pushchair</strong> — no carrying cases between platforms, trains and the shuttle.</li>
+            <li><strong>Your flight is early</strong> — many Luton departures leave before the first trains would get you there in time.</li>
+            <li><strong>You live outside the city centre</strong> — we collect from your door in Oadby, Wigston, Blaby, Beaumont Leys or anywhere across Leicestershire, with no extra trip to the station.</li>
+          </ul>
+
+          <h2>How far in advance should you book?</h2>
+          <ul>
+            <li><strong>As soon as your flights are confirmed</strong> — the earlier you book, the easier it is to guarantee the vehicle you need.</li>
+            <li><strong>At least 48 hours ahead</strong> where possible for any Luton transfer.</li>
+            <li><strong>Earlier still for peak dates</strong> — school holidays, Christmas and New Year, and early-morning departures fill up first, especially for MPVs.</li>
+            <li><strong>Book the return at the same time</strong> — it is one less thing to organise when you land, and your fixed price is locked in for both legs.</li>
+          </ul>
+          <p>Same-day bookings are possible, subject to availability. For our full range of airport routes, including East Midlands, Birmingham, Heathrow, Gatwick, Stansted and Manchester, visit our <a href="/airport-taxi-leicester">airport taxi Leicester</a> page.</p>
+
+          <h2>Book your Leicester to Luton Airport taxi</h2>
+          <p>Call <strong>0116 233 8888</strong>, message us on WhatsApp, or book online. Tell us your pickup address, flight time and flight number, number of passengers and luggage, and we will confirm your fixed price and vehicle before you commit. All our drivers are licensed and DBS-checked, and we operate 24/7, 365 days a year.</p>
+
+          <p style="text-align:center; margin-top:2rem;">
+            <a href="https://wa.me/447535855786?text=Hi!%20I%20need%20a%20taxi%20from%20Leicester%20to%20Luton%20Airport" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447535855786</a>
+            <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
+          </p>
+        `,
+        date: "2026-11-13",
+        author: "Aylestone Taxis Team",
+        category: "Airport Transfers",
+        // Photo: Rumega Daniel / Unsplash (Unsplash Licence) — easyJet A320 on the 07/25 taxiway at Luton
+        image: "/Blog-Taxi-Leicester-to-Luton-Airport.webp",
+      },
+      {
+        id: "taxi-leicester-to-birmingham-cost-time-booking-guide-2026",
+        title: "Taxi from Leicester to Birmingham — Cost, Time & Booking Guide 2026",
+        metaTitle: "Leicester to Birmingham Taxi | Cost, Time & Booking 2026",
+        metaDescription:
+          "Leicester to Birmingham taxi: about 50–60 minutes via the M69 and M6, fixed price agreed before you travel, no surge. Book online or call 0116 233 8888.",
+        excerpt:
+          "What a Leicester to Birmingham taxi costs in 2026, how long the journey takes via the M69 and M6, when a fixed-fare taxi beats the train for groups and luggage, and how to book door to door.",
+        faqs: [
+          {
+            question: "How much is a taxi from Leicester to Birmingham?",
+            answer:
+              "We quote a fixed price for every Leicester to Birmingham taxi, confirmed before you travel. It depends on your pickup address, your destination in Birmingham, the vehicle and the time of travel. The price covers the whole car, not each passenger, and it does not change with traffic or demand — there is no meter and no surge pricing.",
+          },
+          {
+            question: "How long does a taxi from Leicester to Birmingham take?",
+            answer:
+              "About 50 to 60 minutes to Birmingham city centre on a clear run, via the M69 and the M6. Weekday rush hour around the M6 and the approach into the city can add time, so tell us when you need to arrive and we will set the pickup accordingly.",
+          },
+          {
+            question: "Is a taxi better than the train from Leicester to Birmingham?",
+            answer:
+              "For one person travelling light to New Street, the train is usually cheaper. A taxi wins for groups sharing one fixed fare, for heavy luggage, and for addresses away from the station such as the NEC, Edgbaston, hospitals or business parks — and for late returns after the last convenient train.",
+          },
+          {
+            question: "Can I book a return taxi from Birmingham back to Leicester?",
+            answer:
+              "Yes. Book both legs together and we will confirm a fixed price for each. Return pickups are common after meetings, concerts, matches and exhibitions — tell us the pickup point and a rough finish time, and message us on WhatsApp if your plans change on the day.",
+          },
+        ],
+        content: `
+          <p>Birmingham is around 40 miles from Leicester, and the route between the two cities is busy every day with business meetings, shopping trips, concerts, football, exhibitions and hospital appointments. This guide covers what a <strong>Leicester to Birmingham taxi</strong> costs, how long it takes, when a taxi makes more sense than the train, and how to book with Aylestone Taxis.</p>
+
+          <h2>How much does a taxi from Leicester to Birmingham cost?</h2>
+          <p>Every <strong>taxi Leicester Birmingham</strong> journey we run is a <strong>fixed price quote</strong>, agreed before you travel. Your fare is based on three things:</p>
+          <ul>
+            <li><strong>Pickup and drop-off addresses</strong> — Birmingham city centre, the NEC, Edgbaston and Solihull are all different trips, and a pickup in Oadby or Beaumont Leys differs from one in the city centre.</li>
+            <li><strong>Vehicle size</strong> — a saloon for up to four passengers, or an MPV for larger groups and more luggage.</li>
+            <li><strong>Time of travel and extras</strong> — such as a return leg, waiting time or an extra stop on the way.</li>
+          </ul>
+          <p>Once quoted, that price does not move. There is no meter running in traffic on the M6 and no surge pricing at busy times, and the fare covers the whole car rather than each passenger — so four colleagues or friends travelling together split one price. You can compare our other intercity routes on the <a href="/long-distance-taxi-leicester">long-distance taxi Leicester</a> page, then call or book online for your exact quote.</p>
+
+          <h2>How long is the journey?</h2>
+          <p>A taxi from Leicester to Birmingham city centre takes <strong>about 50 to 60 minutes</strong> in normal traffic. The usual route is the M69 south-west from Leicester to the M6 near Coventry, then the M6 north-west towards Birmingham and into the city centre. Weekday rush hour, roadworks on the M6 and big events at the city-centre venues can add time, so we build realistic timings into your booking. If you need to be somewhere for a set time — a meeting, a show or an appointment — tell us and we will plan the pickup around it.</p>
+
+          <h2>When a taxi beats the train</h2>
+          <p>There are direct trains from Leicester to Birmingham New Street, and for a single traveller heading to the station with a small bag they are often the cheaper option. A <strong>Birmingham taxi from Leicester</strong> is the better choice when:</p>
+          <ul>
+            <li><strong>You are travelling as a group.</strong> One fixed fare shared between three or four people often compares well with individual tickets, especially when booking at short notice.</li>
+            <li><strong>You have luggage, equipment or shopping.</strong> No carrying cases through two busy stations — the car takes you from door to door.</li>
+            <li><strong>You are going direct to an address.</strong> The NEC, Edgbaston, Villa Park, St Andrew's, the Queen Elizabeth Hospital, business parks and hotels all mean a further journey from New Street. We drop you at the door.</li>
+            <li><strong>You are coming back late.</strong> After a concert, a match or a long evening, a pre-booked return saves waiting on a platform or missing the last convenient train.</li>
+            <li><strong>You would otherwise drive.</strong> City-centre parking is expensive, and older cars driven into Birmingham's Clean Air Zone can face a daily charge. A taxi removes both.</li>
+          </ul>
+
+          <h2>Popular reasons for the trip</h2>
+          <p>Business travel is the most common — a return booking with a confirmed collection time after a meeting, often posted to a <a href="/corporate-taxi-account-leicester">corporate taxi account</a> so staff do not need to pay on the day. We also take families shopping at the Bullring, groups heading to concerts and exhibitions in the city and at the NEC, football fans, and patients attending appointments at Birmingham's hospitals, where arriving at the right entrance matters. If you are flying rather than visiting the city, see our dedicated <a href="/taxi-to-birmingham-airport">taxi to Birmingham Airport</a> page for airport fares and flight-tracking details.</p>
+
+          <h2>How to book your Leicester to Birmingham taxi</h2>
+          <ol>
+            <li><strong>Call</strong> <strong>0116 233 8888</strong> with your pickup address, your destination in Birmingham, the time and the number of passengers.</li>
+            <li><strong>WhatsApp</strong> <strong>+447535855786</strong> with the same details — useful for return trips where the finish time might change.</li>
+            <li><strong>Book online</strong> and confirm your fixed price before you commit.</li>
+          </ol>
+          <p>We operate 24/7, including weekends and bank holidays, with licensed, DBS-checked drivers and a choice of saloons and MPVs. Book the return at the same time and both legs are fixed before you set off.</p>
+
+          <p style="text-align:center; margin-top:2rem;">
+            <a href="https://wa.me/447535855786?text=Hi!%20I%20need%20a%20taxi%20from%20Leicester%20to%20Birmingham" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#25D366; color:#fff; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none; margin-right:1rem; margin-bottom:0.75rem;">WhatsApp +447535855786</a>
+            <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
+          </p>
+        `,
+        date: "2026-11-13",
+        author: "Aylestone Taxis Team",
+        category: "Fare Guide",
+        // Photo: Margo Evardson / Unsplash (Unsplash Licence) — the Bullring bull, Birmingham
+        image: "/Blog-Taxi-Leicester-to-Birmingham.webp",
+      },
+      {
         id: "corporate-christmas-party-taxi-leicester",
         title:
-          "Corporate Christmas Party Taxi Leicester 2026: Book Before December Fills Up",
+          "Corporate Christmas Party Taxi Leicester 2026 — Book Before December Fills Up",
         metaTitle: "Corporate Christmas Party Taxi Leicester 2026 | Book Early",
         metaDescription:
           "Pre-book your Leicester Christmas party taxi. Fixed fares, no surge pricing, saloons and people carriers for staff nights out.",
@@ -1102,8 +1283,8 @@ export const siteData = {
           <p>December Fridays and Saturdays sit among the busiest taxi nights of the year. Work parties empty restaurants, hotels and event spaces within the same narrow window, and hundreds of people open a booking app at once. Waiting on the street after a work do — cold pavement, unclear pickup point, colleagues splitting in different directions — is exactly the problem a pre-booked <strong>christmas party taxi Leicester</strong> journey is meant to solve.</p>
           <p>Pre-booking does three useful things. It reserves a licensed vehicle at a time when every operator is stretched. It gives your group a clear meeting point and a confirmed fare before anyone leaves the venue. And it means the organiser is not left on the phone at midnight trying to find cars for eight people who all live in different suburbs. Even if the party might overrun, locking in a return window or agreeing that someone will WhatsApp when you are ready is far safer than hoping a free car appears outside the door.</p>
 
-          <h2>Fixed fares versus surge pricing on party nights</h2>
-          <p>On busy nights, many app-based rides raise the price as demand rises. The same short hop home that looked reasonable at 8pm can cost noticeably more when every bar and dining room turns out together. That is frustrating after a company night out, especially when the fare is being split or claimed later.</p>
+          <h2>Fixed fares versus Uber surge on Christmas party nights</h2>
+          <p>On busy nights, Uber and other app-based rides raise the price as demand rises, and December Fridays and Saturdays are when surge pricing in Leicester is at its worst. The same short hop home that looked reasonable at 8pm can cost noticeably more when every bar and dining room turns out together. That is frustrating after a company night out, especially when the fare is being split or claimed later.</p>
           <p>Aylestone Taxis works the other way. We quote a <strong>fixed fare at booking</strong>, and that price does not climb because the city centre has emptied all at once. There is no surge multiplier on a December Saturday. Final pricing depends on pickup, destination and vehicle size — we do not publish a one-size-fits-all Christmas rate — so when price matters, use our <a href="/#fare-estimator">fare estimator</a> for an indicative figure, then confirm the exact quote when you book online or by phone. You know the cost before the driver sets off, which makes splitting the bill or posting it to a company account straightforward.</p>
 
           <h2>Choosing the right vehicle for your staff night out</h2>
@@ -3988,6 +4169,14 @@ export const nearbyAreasBySlug: Record<string, string[]> = {
     "south-wigston",
     "evington",
   ],
+  evington: [
+    "oadby",
+    "stoneygate",
+    "highfields",
+    "spinney-hills",
+    "clarendon-park",
+    "knighton",
+  ],
   blaby: [
     "wigston",
     "narborough",
@@ -4018,7 +4207,7 @@ export const nearbyAreasBySlug: Record<string, string[]> = {
     "hamilton",
     "thurmaston",
     "syston",
-    "braunstone",
+    "glenfield",
   ],
   birstall: [
     "thurmaston",
@@ -4074,7 +4263,7 @@ export const nearbyAreasBySlug: Record<string, string[]> = {
     "south-wigston",
     "blaby",
     "enderby",
-    "knighton",
+    "wigston",
   ],
   "broughton-astley": [
     "narborough",
