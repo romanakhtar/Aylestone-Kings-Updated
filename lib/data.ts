@@ -1234,7 +1234,7 @@ export const siteData = {
             <a href="tel:01162338888" style="display:inline-block; border:2px solid #06A0A6; color:#06A0A6; padding:0.875rem 2rem; border-radius:0.5rem; font-weight:600; text-decoration:none;">Call 0116 233 8888</a>
           </p>
         `,
-        date: "2026-11-13",
+        date: "2026-11-09",
         author: "Aylestone Taxis Team",
         category: "Fare Guide",
         // Photo: Margo Evardson / Unsplash (Unsplash Licence) — the Bullring bull, Birmingham
@@ -1327,7 +1327,8 @@ export const siteData = {
         date: "2026-11-05",
         author: "Aylestone Taxis Team",
         category: "Travel Tips",
-        image: "/Blog corporate-taxi-accounts-leicester-explained.webp",
+        // Photo: site's own Curve & Athena night shot (Curve-theater-and-athena.webp), cropped on Athena's fairy-lit windows
+        image: "/Blog-Christmas-Party-Taxi-Leicester-Athena-Curve.webp",
       },
       {
         id: "halloween-taxi-leicester-2026-pre-book-before-surge-prices-hit",
