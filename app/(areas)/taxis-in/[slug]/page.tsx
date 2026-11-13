@@ -90,15 +90,15 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 4. Wigston
   wigston: {
-    title: "Wigston Taxis & Taxis Wigston | South Wigston | Aylestone",
+    title: "Taxi Wigston | South Wigston Pickups 24/7",
     description:
-      "Wigston taxis across Wigston, South Wigston & Long Street: airport transfers, station pickups, 24/7. Book taxis Wigston online or call 0116 2338888.",
+      "Need a taxi in Wigston? Covering South Wigston, Long Street and Leicester runs. Fixed fares 24/7 — call 0116 233 8888.",
   },
   // 5. Evington
   evington: {
-    title: "Taxis in Evington — Fixed Fares, Airport Transfers | 24/7",
+    title: "Taxi Evington | Evington Taxis Leicester 24/7",
     description:
-      "Taxi in Evington, Leicester: fixed fares with no surge, hospital runs and airport transfers. Licensed drivers 24/7 — call 0116 233 8888.",
+      "Evington taxis for the village, Evington Road, Stoughton Road and Victoria Park. Fixed fares, no surge, 24/7 — call 0116 233 8888.",
   },
   // 6. Belgrave
   belgrave: {
@@ -138,9 +138,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 12. Beaumont Leys
   "beaumont-leys": {
-    title: "Beaumont Leys Taxi | Taxis in Beaumont Leys | 24/7",
+    title: "Taxi Beaumont Leys | Beaumont Leys Taxis Leicester",
     description:
-      "Beaumont Leys taxi for shopping, school runs and airports. Taxis in Beaumont Leys across LE4 — call 0116 2338888 or book online 24/7.",
+      "Beaumont Leys taxis for the Shopping Centre, Anstey Lane and Glenfield Hospital. City centre in 20–25 mins, fixed fares 24/7 — call 0116 233 8888.",
   },
   // 13. Braunstone
   braunstone: {
@@ -174,9 +174,9 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   },
   // 18. Blaby
   blaby: {
-    title: "Taxis in Blaby — Fixed Fares, Airport Transfers | 24/7",
+    title: "Taxi Blaby | Blaby Taxis Leicester — Fixed Fares 24/7",
     description:
-      "Taxi in Blaby: fixed fares from £7 to the city centre, EMA from £25, school runs and retail park trips. DBS-checked drivers — call 0116 233 8888.",
+      "Taxi Blaby for the village, retail park and Grove Park. City and airport runs, fixed fares 24/7 — call 0116 233 8888.",
   },
   // 19. Narborough
   narborough: {
@@ -400,15 +400,16 @@ const AREA_CUSTOM_H1: Record<string, string> = {
   thurmaston: "Taxis in Thurmaston, Leicester",
   highfields: "Taxis in Highfields, Leicester",
   braunstone: "Taxis in Braunstone, Leicester",
-  evington: "Taxis in Evington, Leicester",
+  evington: "Taxi Evington — Victoria Park & City Centre",
   glenfield: "Taxis in Glenfield, Leicester",
   loughborough: "Taxis in Loughborough, Leicestershire",
-  blaby: "Taxis in Blaby, Leicestershire",
+  blaby: "Taxi Blaby — Village, Retail Park & Grove Park",
+  wigston: "Taxi Wigston — South Wigston & City Runs",
   narborough: "Taxis in Narborough, Leicestershire",
   enderby: "Taxis in Enderby, Leicestershire",
   "leicester-city-centre": "Taxi Leicester City Centre – Aylestone Taxis",
   hamilton: "Hamilton Taxi Leicester — Taxis in Hamilton",
-  "beaumont-leys": "Beaumont Leys Taxi — Taxis in Beaumont Leys",
+  "beaumont-leys": "Taxi Beaumont Leys — Shopping Centre & City",
   "market-harborough": "Market Harborough Taxis, Cabs & Local Pickups",
   "fosse-park": "Fosse Park Taxi — Pickups at Fosse Shopping Park",
   "kirby-muxloe": "Kirby Muxloe Taxi — Taxis in Kirby Muxloe",
@@ -721,33 +722,33 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   blaby: {
     bodyParagraphs: [
-      "Blaby is a thriving market town on Leicester's southern fringe — a place where village character meets practical everyday travel. Blaby Road runs through the heart of the area connecting residential streets to the A426 corridor, Grove Farm Triangle draws shoppers and families to its retail cluster, Blaby Retail Park hosts major high-street names and click-and-collect collections, and neighbouring Whetstone is just minutes away for passengers who straddle both communities. Aylestone Taxis has served south Leicestershire since 1995, and our Blaby passengers typically fall into three groups: families needing school runs and weekend outings, commuters heading into Leicester city centre for work, and shoppers who want a straightforward ride to the retail park without hunting for parking.",
-      "Families in Blaby book us for the journeys that matter on a school day — the wet-morning run when the bus is not appealing, a lift to after-school clubs in Leicester, or a Saturday trip into town with children and bags. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each morning so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean and comfortable for family travel. Pre-booking a return pickup from Blaby Retail Park after a big shop means you are not wrestling with trolley loads onto a bus.",
-      "Commuters treat Blaby as a practical base south of the city. Morning runs into Leicester offices, Leicester Railway Station, and business parks along the A426 are among our most frequent bookings. Blaby's position close to the M69 junction also makes it one of south Leicestershire's better-connected areas for airport days — but the everyday commute is where fixed pricing matters most. We quote agreed fares before the car arrives, so your weekly travel cost is predictable with no surge multipliers on rainy Tuesdays or match-day evenings.",
-      "Shoppers use our Blaby taxi service for Grove Farm Triangle, Blaby Retail Park, and trips onward to Fosse Park or Leicester city centre. Retail park forecourts can be busy on weekends, so tell us your preferred pickup point — store entrance, car park aisle, or a nearby side road — and we will note it on the job. Whether you are collecting a large click-and-collect order, visiting the weekly market in Blaby town centre, or meeting friends for lunch before an afternoon in the city, a pre-booked taxi keeps the day simple.",
-      "Typical journey times from Blaby reflect the town's favourable road position: Leicester city centre is around 12–15 minutes in normal traffic via Blaby Road and the A426, East Midlands Airport is roughly 15 minutes via the M1 corridor, and Birmingham Airport is around 50 minutes on a clear run via the M69 and M42. Example fares for Blaby to Leicester city centre and Blaby to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
-      "Core services from Blaby include 24/7 availability with no night surcharge, fixed prices confirmed before you travel, DBS-checked licensed drivers, airport transfers to all major UK airports, school-run standing bookings, and retail park trips to Blaby Retail Park and Grove Farm Triangle. Blaby sits close to Narborough, Wigston, and Glen Parva, and we cover the whole south Leicestershire area without boundary surcharges. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are a parent on the school run, a commuter heading to the city, or a family catching an early EMA flight, Aylestone Taxis gives Blaby a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+      "Need a taxi in Blaby for the village, the retail park or Grove Park? Blaby sits south of Leicester on the A426, with Blaby village around the high street and church, the retail park a short hop along the same corridor, and Grove Park used for office and warehouse runs towards Enderby. Blaby taxis are booked for that mix of local streets and the commute into town — not as a generic south Leicester pickup, but as a named village with its own roads and meeting points.",
+      "Blaby village pickups cluster on the streets off Leicester Road and the high street, where parking is tight and a timed collection is easier than circling. The retail park is a different job: large car parks, store fronts and click-and-collect bays. Tell us the store or the entrance you will wait at, because a pin in the middle of the park wastes time on a Saturday. Grove Park sits a few minutes west and is a regular short run from Blaby for people travelling between the village and the business park, or onwards to Fosse Park.",
+      "A taxi from Blaby to Leicester city centre takes about 15 to 20 minutes in normal traffic, usually via Blaby Road and the A426 towards the southern approaches. East Midlands Airport is around 20 minutes on a clear run via the M1, which is why early flights from this side of Leicestershire are often booked the night before. We do not publish a set cash figure for either route here — the fare is quoted as a fixed price when you book, and that is the price you pay, including late at night.",
+      "Commuter runs into Leicester railway station and city offices are among the most frequent Blaby taxi Leicester bookings. Standing weekday pickups are simple to set up if you travel the same way each morning. The same applies to hospital appointments at Leicester Royal Infirmary or Glenfield: give us the entrance or department so the driver does not default to the main gate. Recurring school-run slots can be held at a set time rather than rebooked every evening.",
+      "Evenings into Leicester are the other pattern. Once buses thin out, the return from the city centre is easier if you pre-book or message when you are ready to leave. Neighbouring Wigston, South Wigston, Glen Parva and Narborough are all on the same coverage, so a drop in one and a pickup in another does not change how we treat the job. For invoiced staff travel from Grove Park or the retail park, a corporate account keeps the quotes and references in one place.",
+      "Every driver is licensed and DBS-checked. Saloons cover a single passenger; estates and MPVs are better for shopping bags, luggage or a group. Wheelchair accessible vehicles are available if you ask when you book. To book a taxi in Blaby, call 0116 233 8888, message us on WhatsApp, or book online and confirm the fixed fare before the car is sent.",
     ],
     faqs: [
       {
-        question: "How much does a taxi from Blaby to Leicester city centre cost?",
+        question: "How long does a taxi from Blaby to Leicester city centre take?",
         answer:
-          "Blaby to Leicester city centre fares start from £7 depending on your exact pickup and drop-off points. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
+          "About 15 to 20 minutes in normal traffic via Blaby Road and the A426. Peak inbound traffic can add a few minutes, which we allow for when you tell us the time you need to arrive.",
       },
       {
-        question: "How long does a taxi from Blaby to Leicester take?",
+        question: "Do you cover Blaby Retail Park and Grove Park?",
         answer:
-          "Most journeys from Blaby to Leicester city centre take around 12–15 minutes in normal traffic via Blaby Road and the A426.",
+          "Yes. Blaby Retail Park and Grove Park are regular pickup and drop-off points. Name the store, entrance or office when you book so the driver meets you at the right frontage rather than the middle of the car park.",
       },
       {
-        question: "Do you offer 24/7 taxi service in Blaby?",
+        question: "Can I book a regular taxi from Blaby?",
         answer:
-          "Yes. Aylestone Taxis operates 24 hours a day, seven days a week across Blaby and surrounding villages — including early-morning airport runs and late-night pickups.",
+          "Yes. Standing bookings are available for weekday commutes into Leicester, school runs and recurring appointments. Call 0116 233 8888 or book online and we will hold the same pickup time rather than asking you to rebook each day.",
       },
       {
-        question: "Can I book a regular taxi for commuting or school runs from Blaby?",
+        question: "Do you run airport transfers from Blaby?",
         answer:
-          "Yes. We support pre-scheduled and recurring bookings for commuting, school runs, and regular weekday travel to Leicester offices and hospitals. Contact us by phone or online to set up a standing booking with consistent pickup times.",
+          "Yes. East Midlands Airport is around 20 minutes from Blaby on a clear run, and we also cover Birmingham, Heathrow, Gatwick, Stansted, Luton and Manchester. The fare is fixed when you book, and we cover early-morning departures 24/7.",
       },
     ],
   },
@@ -807,28 +808,33 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   evington: {
     bodyParagraphs: [
-      "Evington is a quiet, established suburb on Leicester's eastern edge — a neighbourhood where village character meets practical city access. Evington Village sits at the historic heart of the ward, Evington Park provides green space for families and dog walkers, Evington Road runs north connecting the area to the wider city, and Leicester General Hospital lies just minutes away in nearby Evington parish. Aylestone Taxis has served Evington since 1995, and our bookings here reflect the area's residents: families needing school runs and shopping trips, elderly passengers who value patient, assisted travel, and NHS workers travelling to and from Leicester General on every shift pattern.",
-      "Families in Evington rely on taxis for the journeys that buses and walking cannot always cover comfortably — the school run on a rainy morning, a Saturday outing, or a trip to visit relatives across Leicester. We arrange standing school-run bookings with consistent pickup times and, where possible, the same DBS-checked driver each day so parents and children know who to expect. All drivers are licensed by Leicester City Council, and vehicles are clean and comfortable for family travel.",
-      "Elderly residents in Evington are a significant part of our daily work. Many passengers need a little extra time getting in and out of the vehicle, help with shopping bags, or a driver who will wait at the door rather than driving off the moment you step outside. We offer assisted taxi rides with patient, DBS-checked drivers who are used to supporting older passengers on hospital visits, GP appointments, and social outings. Mention any mobility or assistance needs when you book and we will note them on your job.",
-      "NHS workers at Leicester General Hospital book us for shift changes at all hours — early-morning starts, late finishes, and rotating night patterns that do not align with bus timetables. A typical run from Evington to Leicester General Hospital takes around five minutes, and we know the main entrances, outpatient clinics, and staff collection points. The same drivers who cover hospital staff also serve patients and visitors attending appointments, so you are travelling with people who understand the layout and timing pressures of a busy NHS site.",
-      "Typical journey times from Evington: Leicester city centre around 10–12 minutes in normal traffic via Evington Road or the A47, Leicester General Hospital around five minutes, East Midlands Airport roughly 25 minutes, and Birmingham Airport around 50 minutes on a clear run. Example fares for Evington to Leicester city centre and Evington to East Midlands Airport are shown below — your exact quote is confirmed at booking based on pickup point, vehicle size, and time of travel.",
-      "Evington sits close to Oadby, Highfields, and Spinney Hills, and we cover the whole east Leicester area without boundary surcharges. Core services include 24/7 local taxis, hospital runs to Leicester General and other medical sites, elderly assistance, school-run standing bookings, and airport transfers to all major UK airports. For detailed airport route guidance — terminal drop-offs, flight-timing advice, and fixed-fare booking — see our airport transfers service. Whether you are an elderly resident heading to a GP appointment, an NHS worker finishing a night shift, or a family on the school run, Aylestone Taxis gives Evington a taxi service built on fixed fares, licensed drivers, and genuine round-the-clock availability.",
+      "Need a taxi in Evington for the village, Evington Road or a short run towards Victoria Park? Evington sits east of Leicester city centre, with Evington village around the green and the older streets, Evington Road carrying traffic in towards Highfields and town, and Stoughton Road running out towards Oadby. Evington taxis are booked on those roads every day — village pickups, hospital runs to Leicester General, and drops at the park or the university area rather than a generic east Leicester pin.",
+      "Evington village is compact: the green, the church, and the residential streets that feed off Main Street and Downing Drive. Give us a house number or a landmark, because several closes sit close together and look similar on a map. Evington Road is a different pattern — shops, bus stops and through-traffic towards the city — so a pickup there needs a clear side of the road. Evington is home to one of Leicester's largest South Asian communities, and much of our work here follows that: family visits across the city, trips to the shops and restaurants along Evington Road and Belgrave, MPVs for weddings and celebrations, and long-haul airport runs for visits abroad. Stoughton Road is the link towards Oadby and Stoughton, used for longer local hops as well as the start of a city run.",
+      "Victoria Park sits on the city side of Evington, a few minutes by car along Evington Road and the London Road approaches. It is a regular drop-off for events, sport and walks, and a practical meeting point if you are heading on to the University of Leicester campus just beyond the park. Tell us which gate or road you want — the park has more than one usable edge, and a driver waiting on the wrong side of the perimeter adds a walk you did not plan.",
+      "A taxi from Evington to Leicester city centre takes about 10 to 15 minutes in normal traffic via Evington Road or the A47. Leicester General Hospital is a short local run from most of the village; name the entrance or department when you book. East Midlands Airport is typically around 25 minutes via the A563 and M1. Existing local quotes on this site for Evington to the city centre often start from about £6, but your fare is always confirmed as a fixed price at booking and can change with the exact street and vehicle.",
+      "An Evington taxi Leicester booking is often a standing one: the same school-run time, a weekly shop, or a regular appointment at the General. We can hold those slots. Evenings into the city are straightforward if you pre-book the return, because the last useful buses stop earlier than most nights out. Neighbouring Oadby, Highfields, Stoneygate and Spinney Hills are all covered on the same dispatch — we do not add a boundary fee for crossing from Evington into those streets.",
+      "Drivers are licensed and DBS-checked. Saloons cover most local hops; estates and MPVs help with luggage, shopping or a group heading to the park or the airport. Ask at booking if you need extra time boarding or a wheelchair accessible vehicle. To book, call 0116 233 8888, message us on WhatsApp, or book online and see the fixed fare before you confirm.",
     ],
     faqs: [
       {
-        question: "Do you offer assisted taxi rides for elderly passengers in Evington?",
+        question: "How long does a taxi from Evington to Leicester city centre take?",
         answer:
-          "Yes. Our drivers are patient and experienced with elderly passengers, including help with bags, extra time boarding, and door-to-door assistance. Mention any mobility needs when you book and we will note them on your job. All drivers are DBS checked and licensed by Leicester City Council.",
+          "About 10 to 15 minutes in normal traffic via Evington Road or the A47. Peak times on the inner approaches can add a few minutes — tell us when you need to arrive and we will set the pickup accordingly.",
+      },
+      {
+        question: "Do you cover Evington village and Stoughton Road?",
+        answer:
+          "Yes. We pick up throughout Evington village, along Evington Road and on Stoughton Road towards Oadby. Give the street and a landmark or house number so the driver comes to the right close rather than the main road.",
+      },
+      {
+        question: "Can I get a taxi from Evington to Victoria Park or the university area?",
+        answer:
+          "Yes. Victoria Park and the University of Leicester campus sit a short ride west of Evington. Tell us which park gate or campus entrance you need. The same drivers cover Highfields, Stoneygate and Oadby on the way.",
       },
       {
         question: "Can I book a taxi from Evington to Leicester General Hospital?",
         answer:
-          "Yes. We provide hospital runs from Evington to Leicester General Hospital 24/7 for appointments, visiting, staff shift changes, and discharge pickups. Journey time is around five minutes. Mention the entrance or department when you book.",
-      },
-      {
-        question: "How much is a taxi from Evington to Leicester city centre?",
-        answer:
-          "A taxi from Evington to Leicester city centre typically starts from £6 depending on your exact pickup and drop-off points. Journey time is around 10–12 minutes in normal traffic via Evington Road. You will receive a fixed quote before you confirm.",
+          "Yes. Leicester General is a short local run from most of Evington. We cover appointments, visiting and discharge pickups 24/7. Mention the entrance or department when you book so you are not dropped at the wrong frontage.",
       },
     ],
   },
@@ -994,30 +1000,33 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   "beaumont-leys": {
     bodyParagraphs: [
-      "A Beaumont Leys taxi is one of the most booked local journeys on our board: estates, schools, Beaumont Shopping Centre, and evening returns when buses thin out. Taxis in Beaumont Leys run all day across LE4. Aylestone Taxis is an independent Leicester operator covering this suburb 24/7 — school runs, errands, family visits, and shopping pickups with a fare confirmed before you travel.",
-      "A normal journey from Beaumont Leys to Leicester city centre takes around 18 minutes via the A563 and inner-city routes, with longer times during rush-hour inflow. East Midlands Airport is the closest major airport from this area, usually around 35 to 40 minutes via ring-road links and the M1 corridor. Typical fares from Beaumont Leys to EMA are about GBP 46 to GBP 58, and we confirm expected costs before travel so passengers can budget clearly.",
-      "Two of the most common pickup landmarks are Beaumont Shopping Centre and Beaumont Park, both generating regular weekday and weekend demand. We also run many journeys to Leicester Royal Infirmary and Leicester Railway Station for onward travel. Where frontage roads are crowded, we provide clear alternative meeting points nearby to keep boarding safe for families, older passengers, and customers travelling with shopping or luggage.",
-      "Because Beaumont Leys journeys are often short but time-sensitive, consistency matters more than novelty. We focus on arriving when promised, keeping communication straightforward, and adjusting route choices around known traffic pinch points. Customers can book one-off rides quickly, but we also support repeat schedules for work shifts, school transport, and appointment routines where missing a pickup can disrupt the whole day.",
-      "Aylestone Taxis serves Beaumont Leys especially well thanks to our city-wide dispatch footprint and experience with high-frequency local requests. Our drivers know the ring-road approach options, understand peak retail patterns, and can switch routes intelligently when congestion builds. That local practicality, combined with licensed professional service, gives Beaumont Leys passengers a dependable taxi option they can use again and again.",
-      "Planning a flight? See /airport-transfers-leicester for transfer guidance by airport and route. To check likely costs first, review /pricing before confirming. This simple planning step helps Beaumont Leys customers travel with confidence and avoid last-minute surprises.",
+      "A taxi in Beaumont Leys covers the shopping centre, Anstey Lane, Beaumont Leys Lane and the residential streets between them. Beaumont Leys sits in north-west Leicester, with its own shopping centre as the main meeting point and the A563 ring road as the usual way into town. Beaumont Leys taxis are booked here for short local hops — a lift with shopping bags, a school-run slot, a run to Glenfield Hospital — as well as the longer trip into the city centre.",
+      "Beaumont Leys Shopping Centre is the landmark most passengers name. The car parks and store fronts get busy, so tell us which entrance or shop you will wait at rather than a pin in the middle of the site. Anstey Lane is the western approach, used for pickups on the way towards Glenfield and Anstey. Beaumont Leys Lane runs through the estate and is the road we use for a lot of house collections. If your street sits off either lane, the house number and a nearby shop or school is enough for the driver to find you without looping the estate.",
+      "Glenfield Hospital is a short, regular run from Beaumont Leys. We use Anstey Lane and the Glenfield approaches rather than dragging the job through the city. Name the entrance, clinic or ward when you book so you are not left at the wrong frontage. The same drivers cover Glenfield village, Birstall and the north ring-road, so a drop at the hospital and a later pickup on Beaumont Leys Lane is one continuous patch of coverage, not two different firms.",
+      "A taxi from Beaumont Leys to Leicester city centre takes about 20 to 25 minutes in normal traffic, typically via the A563 and the inner approaches. Peak hours on the ring road add a few minutes. We quote a fixed fare at booking rather than leaving you with a meter — there is no published flat cash figure for this route, because the exact street and vehicle change the price. East Midlands Airport is usually reached via the ring road and the M1; pre-book early departures so the car is allocated before 4am.",
+      "Taxis in Beaumont Leys Leicester also cover standing weekday slots: the same school-run time, a regular shop at the centre, or shift changes at the hospital. Evenings into town are easier if you pre-book the return, because buses thin out on the north-west side earlier than the last bars close. Neighbouring Glenfield, Birstall and Syston are on the same board. Corporate accounts are available if a workplace on the north side of the city needs invoiced travel.",
+      "Drivers are licensed and DBS-checked. Saloons cover most local jobs; estates and MPVs help with shopping and luggage. Ask if you need a wheelchair accessible vehicle. To book a Beaumont Leys taxi, call 0116 233 8888, message us on WhatsApp, or book online and confirm the fare before the car is sent.",
     ],
     faqs: [
       {
-        question: "Do you pick up from Beaumont Shopping Centre?",
-        answer: "Yes, we provide pickups and drop-offs around Beaumont Shopping Centre and nearby residential streets.",
+        question: "How much is a taxi from Beaumont Leys to Leicester city centre?",
+        answer:
+          "The journey takes about 20 to 25 minutes in normal traffic via the A563. We quote a fixed fare at booking based on your exact street and vehicle — there is no meter and no late-night surge. Call 0116 233 8888 or book online for the confirmed price.",
+      },
+      {
+        question: "Do you cover Glenfield Hospital from Beaumont Leys?",
+        answer:
+          "Yes. Glenfield Hospital is a regular short run from Beaumont Leys, usually via Anstey Lane and the Glenfield approaches. Tell us the entrance or department when you book. We cover appointments, visiting and staff shift changes 24/7.",
+      },
+      {
+        question: "Do you pick up from Beaumont Leys Shopping Centre?",
+        answer:
+          "Yes. Beaumont Leys Shopping Centre is one of our most used pickup points in the area. Name the store or entrance and we will meet you there rather than in the middle of the car park.",
       },
       {
         question: "How do I book a Beaumont Leys taxi?",
         answer:
-          "Book a Beaumont Leys taxi online or call 0116 233 8888. Taxis in Beaumont Leys run 24/7 with a fixed fare before you travel.",
-      },
-      {
-        question: "How long does Beaumont Leys to Leicester City Centre usually take?",
-        answer: "Most trips take about 15 to 25 minutes, depending on ring-road and city-centre traffic.",
-      },
-      {
-        question: "Can I pre-book an airport transfer from Beaumont Leys?",
-        answer: "Yes, we recommend pre-booking for EMA and BHX so timing and route preferences are confirmed in advance.",
+          "Book a Beaumont Leys taxi online or call 0116 233 8888. Taxis in Beaumont Leys run 24/7 with a fixed fare confirmed before you travel.",
       },
     ],
   },
@@ -1193,25 +1202,33 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
   },
   wigston: {
     bodyParagraphs: [
-      "Wigston is one of south Leicester's busiest suburban centres, known for everyday high-street activity, residential travel, and regular commuting into the city. Taxi demand here is constant and highly practical - school runs, appointments, station links, and evening returns. Aylestone Taxis serves Wigston with reliable local coverage built around real traffic patterns and clear pickup coordination, helping passengers avoid unnecessary stress on journeys that are often time-sensitive.",
-      "A normal taxi from Wigston to Leicester city centre is around 20 minutes via A5199 or A6 approaches, with peak-time congestion occasionally increasing journey time. East Midlands Airport is generally the nearest major airport for Wigston passengers, typically around 32 to 40 minutes via A563 and M1 links. Standard fares to EMA are usually in the GBP 45 to GBP 57 range, and we confirm expected pricing before travel.",
-      "Frequent local destinations include Wigston town centre and Wigston Pool and Fitness Centre, with additional demand around Leicester Road shopping areas and nearby station connections. We also complete many direct trips to Leicester Royal Infirmary and university zones for customers who prefer one reliable vehicle over multiple bus changes. If traffic is heavy at the requested pickup point, we provide an alternative location close by.",
-      "Wigston residents often need both flexible short-notice rides and planned longer bookings. We support one-way and return journeys, recurring weekday transport, and airport runs that need precise departure timing. Our focus stays on practical service fundamentals: punctual arrival, easy communication, and route choices adapted to live road conditions rather than fixed assumptions that can fail during busy periods.",
-      "Aylestone Taxis is especially well positioned for Wigston because our operating base and south Leicester coverage allow quick response across this corridor. Drivers know the local approach roads, common bottlenecks, and the best alternatives at different times of day. This combination of local insight and professional standards gives Wigston customers a service they can trust repeatedly.",
-      "For airport route breakdowns and transfer options, visit /airport-transfers-leicester before you book. To see likely costs in advance, check /pricing and plan with full fare visibility. That keeps Wigston journeys clear, predictable, and easier to organise.",
+      "Book a taxi in Wigston for pickups across the town centre, South Wigston, Blaby Road and Long Street. Wigston sits south of Leicester, with the A5199 Leicester Road as the main run into town and Blaby Road carrying traffic towards South Wigston and Blaby. Wigston taxis are booked on those roads all day — shops on Long Street, houses off Blaby Road, and station collections — rather than as a vague south Leicester pin. One detail matters more than any other here: Wigston Magna and South Wigston are different areas. We cover both, but they are not interchangeable on a booking sheet.",
+      "Wigston Magna is the town centre around Long Street and Bell Street: shops, bus stops, car parks and the residential streets that feed off them. South Wigston sits further south-west, with its own shops along Blaby Road and South Wigston railway station on the line towards Nuneaton and Birmingham. A south Wigston taxi is often a station job or a drop on Blaby Road. A Magna pickup more often starts on Long Street, Bell Street or the closes behind the centre. The hop between the two is short, so if your trip uses both, say so when you book instead of hoping the driver guesses.",
+      "Approximate fares from Wigston to Leicester city centre are about £10 to £12, depending on the exact street and time of day. In normal traffic the run takes around 15 to 20 minutes via the A5199 or the A6 approaches; the morning peak on the way in can add a few minutes. Wigston to East Midlands Airport is typically about £20 to £25 for a standard car, heading out via the A563 and the M1. These figures are a guide. The fare is fixed and confirmed when you book, and that is the price you pay — including late at night, when there is no surge.",
+      "A taxi from Wigston to Leicester is as often a standing weekday slot as a one-off. Commutes into the city, school-run times and weekly shops along Blaby Road or over to Fosse Park can all be held at a set hour. Hospital runs to Leicester Royal Infirmary use the same south Leicester roads; name the entrance when you book. If you want a regular taxi from Wigston, tell us the days and times and we will keep the slot rather than making you rebook from scratch each evening.",
+      "Airport days and nights out into Leicester are the other two patterns. For East Midlands, Birmingham and the London airports, pre-book so the car is allocated before a 4am departure. Neighbouring Oadby, Glen Parva, Blaby and Aylestone sit on the same coverage — we do not treat the south Leicester boundary as a surcharge line. South Wigston station remains the usual rail pickup when you are heading west; Leicester railway station is the usual choice for London and the north.",
+      "Drivers are licensed and DBS-checked. Saloons cover a single passenger; estates and MPVs help with luggage, shopping or a group. Wheelchair accessible vehicles are available if you ask at booking. To book, call 0116 233 8888, message us on WhatsApp, or book online and see the fixed price before you confirm.",
     ],
     faqs: [
       {
-        question: "Do you cover all areas of Wigston for local pickups?",
-        answer: "Yes, we provide local coverage across Wigston for shopping, appointments, stations, and airport journeys.",
+        question: "How much is a taxi from Wigston to Leicester?",
+        answer:
+          "Approximate fares from Wigston to Leicester city centre are about £10 to £12, depending on your exact street, vehicle and time of day. The run is usually 15 to 20 minutes. Your fare is fixed and confirmed when you book — no meter, and no surge at night.",
       },
       {
-        question: "How long is a taxi from Wigston to Leicester City Centre?",
-        answer: "Most city-centre trips are around 15 to 25 minutes depending on route and traffic conditions.",
+        question: "Do you cover South Wigston?",
+        answer:
+          "Yes. South Wigston is a different area from Wigston Magna, and we cover both. South Wigston pickups include Blaby Road and South Wigston railway station. Name the street or the station when you book so the driver does not head to the town centre by default.",
       },
       {
-        question: "Can I pre-book a family airport transfer from Wigston?",
-        answer: "Yes, family airport transfers can be pre-booked with timings and pickup notes confirmed in advance.",
+        question: "Can I book a regular taxi from Wigston?",
+        answer:
+          "Yes. Standing bookings are available for commutes, school runs and recurring appointments, with the same pickup time each day. Call 0116 233 8888 or book online and we will hold the slot.",
+      },
+      {
+        question: "Can I pre-book an airport transfer from Wigston?",
+        answer:
+          "Yes. Wigston to East Midlands Airport is typically about £20 to £25 for a standard car, confirmed as a fixed fare when you book. We also run to Birmingham, Heathrow and the other major UK airports, including early-morning departures.",
       },
     ],
   },
@@ -2137,11 +2154,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const areaKeywords: Record<string, string[]> = {
     hamilton: ["Hamilton taxi Leicester", "taxis in Hamilton", "taxi Hamilton Leicester", "Hamilton taxis"],
     "beaumont-leys": [
+      "taxi beaumont leys",
+      "beaumont leys taxis",
+      "taxi beaumont leys leicester",
       "Beaumont Leys taxi",
-      "taxis in Beaumont Leys",
-      "taxi Beaumont Leys Leicester",
-      "Beaumont Leys taxis",
     ],
+    wigston: ["taxi wigston", "wigston taxis", "taxi from wigston to leicester", "south wigston taxi"],
+    blaby: ["taxi blaby", "blaby taxis", "taxi blaby leicester"],
+    evington: ["taxi evington", "evington taxis", "evington taxi leicester"],
     "market-harborough": [
       "Market Harborough taxis",
       "taxi Market Harborough",
@@ -2380,11 +2400,99 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 ) : null}
                 {slug === "evington" && index === 4 ? (
                   <p className="text-gray-700">
-                    Evington residents heading into Leicester for an evening out can rely on our{" "}
+                    Evington passengers heading into Leicester for an evening out can rely on our{" "}
                     <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
                       late night taxi Leicester
                     </Link>{" "}
-                    service for fixed-fare rides home from the city centre — no surge pricing on Friday nights.
+                    service for fixed-fare rides home from the city centre — no surge pricing on Friday nights. Neighbouring{" "}
+                    <Link href="/taxis-in/oadby" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Oadby
+                    </Link>
+                    ,{" "}
+                    <Link href="/taxis-in/highfields" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Highfields
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="/taxis-in/stoneygate" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Stoneygate
+                    </Link>{" "}
+                    sit on the same east Leicester coverage.
+                  </p>
+                ) : null}
+                {slug === "blaby" && index === 4 ? (
+                  <p className="text-gray-700">
+                    After evenings in the city, our{" "}
+                    <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      late night taxi Leicester
+                    </Link>{" "}
+                    service covers the return to Blaby with a fare agreed before you travel. Neighbouring{" "}
+                    <Link href="/taxis-in/wigston" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Wigston
+                    </Link>
+                    ,{" "}
+                    <Link href="/taxis-in/glen-parva" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Glen Parva
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="/taxis-in/narborough" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Narborough
+                    </Link>{" "}
+                    are on the same south Leicestershire board. Workplaces around Grove Park can set up a{" "}
+                    <Link
+                      href="/corporate-taxi-account-leicester"
+                      className="text-[#06A0A6] hover:underline underline-offset-2"
+                    >
+                      corporate taxi account
+                    </Link>{" "}
+                    for invoiced staff travel.
+                  </p>
+                ) : null}
+                {slug === "wigston" && index === 4 ? (
+                  <p className="text-gray-700">
+                    We also cover neighbouring{" "}
+                    <Link href="/taxis-in/south-wigston" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      South Wigston
+                    </Link>
+                    ,{" "}
+                    <Link href="/taxis-in/oadby" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Oadby
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="/taxis-in/glen-parva" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Glen Parva
+                    </Link>
+                    . For terminal-by-terminal airport timing see our{" "}
+                    <Link
+                      href="/airport-transfers-leicester"
+                      className="text-[#06A0A6] hover:underline underline-offset-2"
+                    >
+                      Leicester airport transfers
+                    </Link>
+                    .
+                  </p>
+                ) : null}
+                {slug === "beaumont-leys" && index === 4 ? (
+                  <p className="text-gray-700">
+                    Neighbouring{" "}
+                    <Link href="/taxis-in/glenfield" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Glenfield
+                    </Link>
+                    ,{" "}
+                    <Link href="/taxis-in/birstall" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Birstall
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="/taxis-in/syston" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Syston
+                    </Link>{" "}
+                    share the same north Leicester coverage. North-side workplaces can use a{" "}
+                    <Link
+                      href="/corporate-taxi-account-leicester"
+                      className="text-[#06A0A6] hover:underline underline-offset-2"
+                    >
+                      corporate taxi account
+                    </Link>{" "}
+                    for invoiced journeys.
                   </p>
                 ) : null}
                 {slug === "highfields" && index === 2 ? (
@@ -3015,27 +3123,35 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
               {isWigston && (
                 <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Taxis in Wigston — Town Centre, Bell Street &amp; South Wigston Station</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Taxis in Wigston — Long Street, Blaby Road &amp; the station</h2>
                   <p className="text-gray-700 mb-3">
-                    Licensed drivers available through Aylestone Taxis provide journeys to and from Wigston – from Wigston town centre and Bell Street shopping area to residential streets and South Wigston station.
-                    Whether you are heading home after shopping, catching a train or need a late-night pickup, you can book fast, reliable, local journeys.
+                    Long Street and Bell Street are the usual town-centre meeting points. Blaby Road is the spine towards
+                    South Wigston. If you are catching a train, name{" "}
+                    <Link href="/taxis-in/south-wigston" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      South Wigston
+                    </Link>{" "}
+                    station rather than Leicester, unless you actually need the London line. We also cover{" "}
+                    <Link href="/taxis-in/oadby" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Oadby
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="/taxis-in/glen-parva" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Glen Parva
+                    </Link>{" "}
+                    on the same south Leicester patch.
                   </p>
-                  <p className="text-gray-700 mb-3">
-                    We know the key Wigston spots, including Bell Street, the town centre car parks and South Wigston station pick-up points, so your driver can meet you exactly where you need.
-                    You can pre-book or request a taxi on demand, with options for card payment in many vehicles.
-                  </p>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Wigston</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times and fares from Wigston</h3>
                   <ul className="list-disc pl-5 text-gray-700 space-y-1">
-                    <li>Wigston town centre → Leicester City Centre: around 15–20 minutes in normal traffic</li>
-                    <li>Bell Street, Wigston → South Wigston Station: around 5–10 minutes</li>
-                    <li>Wigston → Fosse Park: around 15–20 minutes</li>
-                    <li>Wigston → Leicester Royal Infirmary: around 15–20 minutes</li>
+                    <li>Wigston → Leicester city centre: about 15–20 minutes, typically £10 to £12</li>
+                    <li>Bell Street → South Wigston station: around 5–10 minutes</li>
+                    <li>Wigston → East Midlands Airport: typically £20 to £25 for a standard car</li>
                   </ul>
                   <p className="mt-3 text-sm text-gray-600">
-                    Times are approximate and depend on traffic and time of day. For live journey estimates and pricing, get an instant quote through our online booking.
+                    Times and fares are approximate. The price quoted at booking is the price you pay.
                   </p>
                   <p className="mt-4 text-gray-800 font-medium">
-                    Need a taxi in Wigston right now? Book online in seconds or call {contactInfo.phone} for fast pickup from Wigston town centre, Bell Street or South Wigston station.
+                    Need a taxi in Wigston now? Book online or call {contactInfo.phone} for Long Street, Blaby Road or
+                    South Wigston station.
                   </p>
                 </div>
               )}
@@ -3290,51 +3406,41 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               {isEvington && (
                 <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
                   <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-                    Taxis in Evington — journey times, fares &amp; services
+                    Taxi Evington — village, Stoughton Road and Victoria Park
                   </h2>
                   <p className="text-gray-700 mb-4">
-                    Evington Village, Evington Park, Evington Road, and Leicester General Hospital are all within easy
-                    reach — making Evington popular with families, elderly residents, and NHS workers. We also cover
-                    neighbouring{" "}
+                    Evington village, Evington Road and Stoughton Road are the streets we use most. Victoria Park and
+                    the university area sit a short ride west. We also cover neighbouring{" "}
                     <Link href="/taxis-in/oadby" className="text-[#06A0A6] hover:underline underline-offset-2">
                       Oadby
+                    </Link>
+                    ,{" "}
+                    <Link href="/taxis-in/highfields" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Highfields
                     </Link>{" "}
-                    and the wider east Leicester area.
+                    and{" "}
+                    <Link href="/taxis-in/stoneygate" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Stoneygate
+                    </Link>
+                    . Airport days go through our{" "}
+                    <Link
+                      href="/airport-transfers-leicester"
+                      className="text-[#06A0A6] hover:underline underline-offset-2"
+                    >
+                      Leicester airport transfers
+                    </Link>{" "}
+                    page.
                   </p>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Evington</h3>
                   <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
-                    <li>Evington → Leicester city centre: around 10–12 minutes in normal traffic</li>
-                    <li>Evington → Leicester General Hospital: around 5 minutes</li>
-                    <li>Evington → East Midlands Airport (EMA): around 25 minutes</li>
-                    <li>Evington → Birmingham Airport (BHX): around 50 minutes</li>
-                  </ul>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Evington</h3>
-                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
-                    <li>Evington → Leicester city centre: from £6</li>
-                    <li>Evington → East Midlands Airport: from £28</li>
+                    <li>Evington → Leicester city centre: about 10 to 15 minutes</li>
+                    <li>Evington → Leicester General Hospital: a short local run — name the entrance</li>
+                    <li>Evington → Victoria Park / university area: a few minutes via Evington Road</li>
                   </ul>
                   <p className="text-sm text-gray-600 mb-4">
-                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
-                    receive a fixed quote before you confirm.
+                    Times are approximate. Local city-centre quotes on this site often start from about £6; the fare
+                    quoted at booking is the one you pay.
                   </p>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Evington</h3>
-                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
-                    <li>24/7 availability — including night shifts and early-morning hospital runs</li>
-                    <li>Fixed prices confirmed at booking</li>
-                    <li>DBS-checked, Leicester City Council licensed drivers</li>
-                    <li>Hospital runs to Leicester General Hospital and other medical sites</li>
-                    <li>Elderly assistance with patient, door-to-door support</li>
-                    <li>
-                      <Link
-                        href="/airport-transfers-leicester"
-                        className="text-[#06A0A6] hover:underline underline-offset-2"
-                      >
-                        Airport transfers
-                      </Link>{" "}
-                      to EMA, Birmingham, Heathrow, and all major UK airports
-                    </li>
-                    <li>Regular school runs with standing bookings</li>
-                  </ul>
                   <div className="flex flex-col sm:flex-row gap-3 mt-4">
                     <Link
                       href={contactInfo.booking.online}
@@ -3687,48 +3793,46 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               {isBlaby && (
                 <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
                   <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-                    Taxis in Blaby — journey times, fares &amp; services
+                    Taxi Blaby — village, retail park and Grove Park
                   </h2>
                   <p className="text-gray-700 mb-4">
-                    Blaby Road, Grove Farm Triangle, Blaby Retail Park, and neighbouring Whetstone are all within easy
-                    reach — making Blaby popular with families, commuters, and shoppers. We also cover{" "}
+                    Name the village high street, Blaby Retail Park or Grove Park when you book so the driver does not
+                    wait on the wrong frontage. We also cover{" "}
+                    <Link href="/taxis-in/wigston" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Wigston
+                    </Link>
+                    ,{" "}
+                    <Link href="/taxis-in/glen-parva" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Glen Parva
+                    </Link>{" "}
+                    and{" "}
                     <Link href="/taxis-in/narborough" className="text-[#06A0A6] hover:underline underline-offset-2">
                       Narborough
+                    </Link>
+                    . Airport days are booked through our{" "}
+                    <Link
+                      href="/airport-transfers-leicester"
+                      className="text-[#06A0A6] hover:underline underline-offset-2"
+                    >
+                      Leicester airport transfers
                     </Link>{" "}
-                    and the wider south Leicestershire area.
+                    service; invoiced Grove Park travel can go on a{" "}
+                    <Link
+                      href="/corporate-taxi-account-leicester"
+                      className="text-[#06A0A6] hover:underline underline-offset-2"
+                    >
+                      corporate taxi account
+                    </Link>
+                    .
                   </p>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Blaby</h3>
                   <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
-                    <li>Blaby → Leicester city centre: around 12–15 minutes in normal traffic</li>
-                    <li>Blaby → East Midlands Airport (EMA): around 15 minutes</li>
-                    <li>Blaby → Birmingham Airport (BHX): around 50 minutes</li>
-                  </ul>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Example fares from Blaby</h3>
-                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
-                    <li>Blaby → Leicester city centre: from £7</li>
-                    <li>Blaby → East Midlands Airport: from £25</li>
+                    <li>Blaby → Leicester city centre: about 15 to 20 minutes</li>
+                    <li>Blaby → East Midlands Airport: about 20 minutes</li>
                   </ul>
                   <p className="text-sm text-gray-600 mb-4">
-                    Times and fares are approximate and depend on traffic, pickup point, and vehicle type. You will
-                    receive a fixed quote before you confirm.
+                    Times are approximate. The fare is quoted as a fixed price at booking.
                   </p>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Services from Blaby</h3>
-                  <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
-                    <li>24/7 availability — including early-morning airport runs and evening retail park pickups</li>
-                    <li>Fixed prices confirmed at booking</li>
-                    <li>DBS-checked, Leicester City Council licensed drivers</li>
-                    <li>
-                      <Link
-                        href="/airport-transfers-leicester"
-                        className="text-[#06A0A6] hover:underline underline-offset-2"
-                      >
-                        Airport transfers
-                      </Link>{" "}
-                      to EMA, Birmingham, Heathrow, and all major UK airports
-                    </li>
-                    <li>Regular school runs with standing bookings</li>
-                    <li>Retail park trips to Blaby Retail Park and Grove Farm Triangle</li>
-                  </ul>
                   <div className="flex flex-col sm:flex-row gap-3 mt-4">
                     <Link
                       href={contactInfo.booking.online}
@@ -3888,25 +3992,44 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
               {isBeaumontLeys && (
                 <div className="mt-5 rounded-lg border border-gray-200 p-5 bg-[#F9FAFB]">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Taxis in Beaumont Leys — Shopping Centre, City &amp; EMA</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+                    Taxi Beaumont Leys — shopping centre, Anstey Lane and Glenfield Hospital
+                  </h2>
                   <p className="text-gray-700 mb-3">
-                    Beaumont Leys is a key area we serve every day. Whether you need a taxi from <strong>Beaumont Leys Shopping Centre</strong>, the surrounding estates or a ride into Leicester or the airport, Aylestone Taxis provides reliable, fixed-fare taxis across Beaumont Leys – so you have a trusted local option alongside any other taxi service in the area.
-                  </p>
-                  <p className="text-gray-700 mb-3">
-                    We pick up and drop off at the shopping centre, residential streets and local landmarks. Pre-book for airport runs or busy times, or call when you need an immediate taxi in Beaumont Leys.
+                    Name Beaumont Leys Shopping Centre, Anstey Lane or Beaumont Leys Lane when you book. Glenfield
+                    Hospital is a regular short run from here — we also cover neighbouring{" "}
+                    <Link href="/taxis-in/glenfield" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Glenfield
+                    </Link>
+                    ,{" "}
+                    <Link href="/taxis-in/birstall" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Birstall
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="/taxis-in/syston" className="text-[#06A0A6] hover:underline underline-offset-2">
+                      Syston
+                    </Link>
+                    . Airport timing is on our{" "}
+                    <Link
+                      href="/airport-transfers-leicester"
+                      className="text-[#06A0A6] hover:underline underline-offset-2"
+                    >
+                      Leicester airport transfers
+                    </Link>{" "}
+                    guide.
                   </p>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Beaumont Leys</h3>
                   <ul className="list-disc pl-5 text-gray-700 space-y-1">
-                    <li>Beaumont Leys → Leicester City Centre: around 15–20 minutes in normal traffic</li>
-                    <li>Beaumont Leys Shopping Centre → East Midlands Airport (EMA): around 25–35 minutes</li>
-                    <li>Beaumont Leys → Fosse Park: around 15–20 minutes</li>
-                    <li>Beaumont Leys → Leicester Royal Infirmary: around 15–20 minutes</li>
+                    <li>Beaumont Leys → Leicester city centre: about 20 to 25 minutes via the A563</li>
+                    <li>Beaumont Leys → Glenfield Hospital: a short local run via Anstey Lane</li>
+                    <li>Beaumont Leys Shopping Centre → city or hospital: agree the store entrance as the meeting point</li>
                   </ul>
                   <p className="mt-3 text-sm text-gray-600">
-                    Times are approximate and depend on traffic. For live estimates and fixed prices, book online or call us.
+                    Times are approximate. The fare is quoted as a fixed price at booking.
                   </p>
                   <p className="mt-4 text-gray-800 font-medium">
-                    Need a taxi in Beaumont Leys? Book online in seconds or call {contactInfo.phone} for fast pickup from the shopping centre or anywhere in Beaumont Leys – we’re here to get you there.
+                    Need a taxi in Beaumont Leys? Book online or call {contactInfo.phone} for the shopping centre,
+                    Anstey Lane or Beaumont Leys Lane.
                   </p>
                 </div>
               )}

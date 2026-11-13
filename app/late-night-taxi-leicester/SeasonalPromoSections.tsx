@@ -50,12 +50,12 @@ export default function SeasonalPromoSections() {
               Christmas Party Season in Leicester: Book Early
             </h2>
             <p className="text-lg text-[#E4E4E4] mb-8 leading-relaxed">
-              From mid-November through December, demand for late-night taxis in Leicester rises sharply.
-              Friday and Saturday nights are the busiest, as office parties and staff nights out empty
-              venues across the city at once. We offer fixed fares with no surge pricing, so the quote
-              you receive when you book is the price you pay — even when the city centre is at its peak.
-              Pre-booking is the safest way to get home. For vehicle choices, corporate groups and venue
-              pickup tips, read our{" "}
+              From mid-November through December, late-night taxi demand in Leicester doubles as office
+              parties and staff nights out empty venues across the city at once. Uber surge pricing is at
+              its worst on December Fridays and Saturdays. Aylestone Taxis offers fixed fares with no
+              surge pricing, so the quote you receive when you book is the price you pay — even when the
+              city centre is at its peak. Pre-booking is the safest way to get home. For vehicle choices,
+              corporate groups and venue pickup tips, read our{" "}
               <Link
                 href="/blog/corporate-christmas-party-taxi-leicester"
                 className="text-[#06A0A6] underline underline-offset-2 hover:text-white"

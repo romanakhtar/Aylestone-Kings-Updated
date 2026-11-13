@@ -318,7 +318,15 @@ export default function LutonPage() {
               first sign of a late landing. Having a named driver and vehicle
               for your <strong>Luton airport pickup</strong> is especially
               reassuring after a long flight or when you are travelling with
-              children.
+              children. For journey timing, delayed-flight cover and how far
+              ahead to book, read our{" "}
+              <Link
+                href="/blog/taxi-leicester-to-luton-airport-fixed-price-no-surge"
+                className="text-[#06A0A6] font-semibold underline underline-offset-2 hover:text-[#0F0D3E]"
+              >
+                Leicester to Luton Airport taxi guide
+              </Link>
+              .
             </p>
             <p>
               First-time flyers sometimes worry about where exactly to meet

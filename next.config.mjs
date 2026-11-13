@@ -140,6 +140,9 @@ const nextConfig = {
       { source: '/contact.html', destination: '/contact', permanent: true },
       // Clean up airport pages for better SERP URLs
       { source: '/pricing/airports/Birmingham', destination: '/taxi-to-birmingham-airport', permanent: true },
+      // November 2026 brief URLs → the single canonical page for each topic (avoids two URLs competing for one keyword)
+      { source: '/corporate-taxi-leicester', destination: '/corporate-taxi-account-leicester', permanent: true },
+      { source: '/taxi-leicester-to-birmingham', destination: '/blog/taxi-leicester-to-birmingham-cost-time-booking-guide-2026', permanent: true },
       // Legacy venue and service pages (hyphenated path → dedicated landing page)
       { source: '/taxis-in-morningside-arena', destination: '/match-day-taxi-leicester', permanent: true },
       { source: '/taxis-in-de-montfort-hall', destination: '/prom-taxi-leicester', permanent: true },
