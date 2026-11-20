@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import type { CityCentreClusterSlug } from "@/lib/data"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import { PHONE_DISPLAY } from "@/lib/data"
 
 /**
  * Content for the Leicester city centre nights out cluster pages.
@@ -55,7 +56,7 @@ export const clusterPages: ClusterPageContent[] = [
     h1: "Taxi to Leicester Nightclubs",
     title: "Taxi to Leicester Nightclubs | Book Your Ride Home",
     description:
-      "Book a taxi to or from Leicester nightclubs including Mosh, Club Republic and Motto. Fixed fares agreed before you travel, 24/7. Call 0116 233 8888.",
+      `Book a taxi to or from Leicester nightclubs including Mosh, Club Republic and Motto. Fixed fares agreed before you travel, 24/7. Call ${PHONE_DISPLAY}.`,
     eyebrow: "City centre nightclubs",
     intro: [
       "Leicester's clubs are spread across the north and east of the city centre rather than clustered on one strip, which changes how you plan getting there and back. Gravel Street, Belgrave Gate, Abbey Street and St Nicholas Place all sit on different sides of the centre, so a group meeting at one venue and moving to another is covering real distance rather than walking a few doors down.",
@@ -207,7 +208,7 @@ export const clusterPages: ClusterPageContent[] = [
     h1: "Taxi to Leicester High Street Pubs",
     title: "Taxi to Leicester High Street Pubs | Book Online 24/7",
     description:
-      "Book a taxi to Leicester High Street — Queen of Bradgate, Tree Leicester and The High Cross. Fixed fares, licensed drivers, booking online or by phone 24/7.",
+      "Book a taxi to Leicester High Street: Queen of Bradgate, Tree Leicester and The High Cross. Fixed fares, licensed drivers, book online or by phone 24/7.",
     eyebrow: "High Street",
     intro: [
       "High Street is the simplest part of the city centre to be picked up from. Three of the pubs we are regularly asked for sit on the same short stretch and share a postcode, and the street itself is wide enough that finding each other is rarely the problem it can be in The Lanes.",

@@ -1,19 +1,20 @@
 import { ArrowRight, Clock, MapPin, Phone, Plane, Shield, GraduationCap, Building2, Route } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
-const PAGE_PHONE = "0116 233 8888"
+const PAGE_PHONE = PHONE_DISPLAY
 const CANONICAL = buildCanonical("/leicester-taxi-company")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Leicester Taxi Company Since 1995 | Aylestone Taxis",
   description:
-    "A licensed Leicester taxi company running since 1995, with DBS-checked drivers and a maintained local fleet. Call 0116 233 8888 to book or open an account.",
+    `A licensed Leicester taxi company running since 1995, with DBS-checked drivers and a maintained local fleet. Call ${PHONE_DISPLAY} to book or open an account.`,
   alternates: {
     canonical: CANONICAL,
   },
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
       "Aylestone Taxis — Leicester's trusted taxi company since 1995. Fixed prices, DBS-checked drivers, available 24/7.",
     url: CANONICAL,
   },
-}
+})
 
 const SERVICES = [
   {
@@ -115,7 +116,7 @@ export default function LeicesterTaxiCompanyPage() {
                 Aylestone Taxis has worked out of Aylestone Road since 1995. Every driver is
                 council-licensed and DBS-checked, every vehicle is maintained and tested, and the
                 person who answers the phone is in Leicester, not a call centre. That is the standard
-                behind every <Link href="/taxi-leicester" className="text-[#06A0A6] font-semibold underline underline-offset-2">taxi Leicester</Link> journey we run.
+                behind every <Link href="/" className="text-[#06A0A6] font-semibold underline underline-offset-2">Leicester taxi</Link> journey we run.
               </p>
             </div>
           </div>

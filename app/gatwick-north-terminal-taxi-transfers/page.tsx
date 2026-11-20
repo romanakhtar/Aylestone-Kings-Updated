@@ -1,20 +1,20 @@
 import { ArrowRight, Briefcase, Calendar, Clock, MapPin, Phone, Plane, Shield, Users } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import TerminalGuide from "@/components/seo/TerminalGuide"
 
 const canonical = buildCanonical("/gatwick-north-terminal-taxi-transfers")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Leicester to Gatwick North Taxi | Fixed Fares | Aylestone",
   description:
-    "Taxi from Leicester to Gatwick North Terminal: fixed fares, flight monitoring, saloons and MPVs. 24/7 — call 0116 233 8888.",
-  keywords:
-    "Leicester to Gatwick North taxi, Gatwick North terminal taxi Leicester, taxi to Gatwick North from Leicester, Gatwick airport transfer Leicester, Gatwick North pickup",
+    `Leicester to Gatwick North Terminal taxi for easyJet, Emirates and Qatar Airways flights. Fixed fares, flight monitoring, 24/7 — call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical,
   },
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Leicester to Gatwick North Taxi | Fixed Fares | Aylestone",
     description:
-      "Leicester to Gatwick North: fixed pricing, flight tracking, professional drivers. Book online or call 0116 2338888.",
+      `Leicester to Gatwick North: fixed pricing, flight tracking, professional drivers. Book online or call ${PHONE_DISPLAY}.`,
     url: canonical,
   },
-}
+})
 
 export default function GatwickNorthTerminalTaxiTransfersPage() {
   const faqs = [
@@ -129,6 +129,8 @@ export default function GatwickNorthTerminalTaxiTransfersPage() {
             </div>
           </div>
         </section>
+
+        <TerminalGuide terminal="gatwick-north" />
 
         <section className="py-20 bg-[#E4E4E4]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

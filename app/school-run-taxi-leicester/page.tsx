@@ -6,21 +6,21 @@ import {
   Calendar,
   Users,
 } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import RelatedGuides from "@/components/RelatedGuides"
 
 const canonical = buildCanonical("/school-run-taxi-leicester")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "School Run Taxi Leicester | DBS Drivers | Aylestone Taxis",
   description:
-    "School run taxi Leicester with enhanced DBS-checked drivers and the same driver where possible. Daily or weekly bookings — call 0116 233 8888.",
-  keywords:
-    "school run taxi Leicester, school taxi Leicester, school transport Leicester, school run taxis Leicester, DBS checked school taxi Leicester, regular school run taxi Leicester, school run taxi Aylestone, school run taxi Wigston, school run taxi Knighton, school run taxi Clarendon Park",
+    `School run taxi Leicester with enhanced DBS-checked drivers and the same driver where possible. Daily or weekly bookings — call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical,
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "Safe, reliable school run taxi Leicester service with enhanced DBS-checked drivers and an option for the same regular driver. Covering Aylestone, Wigston, Knighton and Clarendon Park.",
   },
-}
+})
 
 export default function SchoolRunTaxiLeicesterPage() {
   return (
@@ -408,7 +408,7 @@ export default function SchoolRunTaxiLeicesterPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">How do I set up a regular school run booking?</h3>
-                <p className="text-[#2E3C44]">Call 0116 233 8888 to discuss your requirements — days, times, addresses, and any specific needs — and we&apos;ll set up a recurring booking with a consistent driver where possible.</p>
+                <p className="text-[#2E3C44]">Call {PHONE_DISPLAY} to discuss your requirements — days, times, addresses, and any specific needs — and we&apos;ll set up a recurring booking with a consistent driver where possible.</p>
               </div>
             </div>
           </div>
@@ -458,7 +458,7 @@ export default function SchoolRunTaxiLeicesterPage() {
                   "name": "How do I set up a regular school run booking?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Call 0116 233 8888 to discuss your requirements — days, times, addresses, and any specific needs — and we'll set up a recurring booking with a consistent driver where possible."
+                    "text": `Call ${PHONE_DISPLAY} to discuss your requirements — days, times, addresses, and any specific needs — and we'll set up a recurring booking with a consistent driver where possible.`
                   }
                 }
               ]
@@ -503,6 +503,7 @@ export default function SchoolRunTaxiLeicesterPage() {
             </div>
           </div>
         </section>
+        <RelatedGuides slugs={["school-run-taxi-leicester-setup-guide","affordable-school-run-taxi-services-leicester"]} />
       </main>
     </div>
   )

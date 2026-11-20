@@ -5,15 +5,15 @@ import JsonLd from "@/components/seo/JsonLd"
 import { getTaxiServiceJsonLd } from "@/lib/seo/siteJsonLd"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import { PHONE_DISPLAY } from "@/lib/data"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const CANONICAL_URL = buildCanonical("/taxi-to-birmingham-airport")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Leicester to Birmingham Airport Taxi | Fixed Fares from £60",
   description:
-    "Fixed-fare transfer from Leicester to Birmingham Airport from £60. Licensed drivers, flight tracking, no surge. Book online or call 0116 233 8888.",
-  keywords:
-    "Leicester to Birmingham Airport taxi, Birmingham Airport transfer from Leicester, BHX taxi from Leicester, Leicestershire to BHX taxi",
+    `Fixed-fare transfer from Leicester to Birmingham Airport from £60. Licensed drivers, flight tracking, no surge. Book online or call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical: CANONICAL_URL,
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Leicester to Birmingham Airport Taxi | Fixed Fares from £60",
     description:
-      "Fixed-fare transfer from Leicester to Birmingham Airport from £60. Licensed drivers, flight tracking, no surge. Book online or call 0116 233 8888.",
+      `Fixed-fare transfer from Leicester to Birmingham Airport from £60. Licensed drivers, flight tracking, no surge. Book online or call ${PHONE_DISPLAY}.`,
     url: CANONICAL_URL,
     siteName: "Aylestone Taxis",
     locale: "en_GB",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Leicester to Birmingham Airport Taxi | Fixed Fares from £60",
     description:
-      "Fixed-fare transfer from Leicester to Birmingham Airport from £60. Licensed drivers, flight tracking, no surge. Book online or call 0116 233 8888.",
+      `Fixed-fare transfer from Leicester to Birmingham Airport from £60. Licensed drivers, flight tracking, no surge. Book online or call ${PHONE_DISPLAY}.`,
   },
-}
+})
 
 export default function TaxiToBirminghamAirportPage() {
   const serviceJsonLd = getTaxiServiceJsonLd({

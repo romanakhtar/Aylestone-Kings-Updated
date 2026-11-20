@@ -1,3 +1,4 @@
+import { PHONE_DISPLAY } from "@/lib/data"
 // Site-wide configuration and data
 export const siteData = {
   // Company Information
@@ -16,7 +17,7 @@ export const siteData = {
   },
   // Contact Information
   contact: {
-    phone: "0116 2338888",
+    phone: PHONE_DISPLAY,
     email: "info@aylestone-taxis.co.uk",
     address: {
       street: "753A Aylestone Road",
@@ -26,7 +27,7 @@ export const siteData = {
     },
     booking: {
       online: "https://aylestonekings.webbooker.icabbi.com/",
-      phone: "0116 2338888"
+      phone: PHONE_DISPLAY
     }
   },
 

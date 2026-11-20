@@ -345,7 +345,7 @@ export default function AnimatedHero() {
             {/* Visible phone number */}
             <div className="mb-8 flex flex-col sm:flex-row sm:items-center gap-3">
               <a
-                href={`tel:${contactInfo.phone}`}
+                href={`tel:${contactInfo.phoneTel}`}
                 onClick={onPhoneClick}
                 className={`w-full sm:w-auto inline-flex items-center justify-center rounded-lg px-8 py-4 text-sm font-semibold shadow-md hover:shadow-lg transition-[transform,opacity] whitespace-nowrap ${
                   isValentineActive
@@ -374,8 +374,9 @@ export default function AnimatedHero() {
                     width={560}
                     height={224}
                     sizes="(max-width: 768px) 80px, 280px"
-                    className="relative z-10 w-auto max-w-[80px] lg:max-w-[280px] drop-shadow-2xl"
-                    style={{ width: "auto", height: "auto" }}
+                    // Explicit width + h-auto keeps the 560×224 aspect ratio reserved before the file loads
+                    // (width:auto discarded it and caused a layout shift). Rendered size is unchanged.
+                    className="relative z-10 w-[80px] lg:w-[280px] h-auto drop-shadow-2xl"
                     priority
                   />
                 </div>

@@ -9,21 +9,23 @@ import {
   Sparkles,
   Users,
 } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import RelatedGuides from "@/components/RelatedGuides"
 
 const CANONICAL = buildCanonical("/prom-taxi-leicester")
-const PROM_PHONE = "0116 233 8888"
+const PROM_PHONE = PHONE_DISPLAY
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Prom Taxi Leicester | Fixed Prices, DBS Drivers",
   description:
-    "Fixed-price prom taxis in Leicester — group bookings, photo-stop flexibility, DBS-checked drivers. From £15. Book early, call 0116 233 8888.",
+    `Fixed-price prom taxis in Leicester — group bookings, photo-stop flexibility, DBS-checked drivers. From £15. Book early, call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical: CANONICAL,
   },
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Prom Taxi Leicester | Fixed Prices, DBS Drivers",
     description:
-      "Fixed-price prom taxis in Leicester — group bookings, photo-stop flexibility, DBS-checked drivers. From £15. Book early, call 0116 233 8888.",
+      `Fixed-price prom taxis in Leicester — group bookings, photo-stop flexibility, DBS-checked drivers. From £15. Book early, call ${PHONE_DISPLAY}.`,
     url: CANONICAL,
   },
   twitter: {
@@ -39,9 +41,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Prom Taxi Leicester | Fixed Prices, DBS Drivers",
     description:
-      "Fixed-price prom taxis in Leicester — group bookings, photo-stop flexibility, DBS-checked drivers. From £15. Book early, call 0116 233 8888.",
+      `Fixed-price prom taxis in Leicester — group bookings, photo-stop flexibility, DBS-checked drivers. From £15. Book early, call ${PHONE_DISPLAY}.`,
   },
-}
+})
 
 const faqs = [
   {
@@ -404,6 +406,7 @@ export default function PromTaxiLeicesterPage() {
             </div>
           </div>
         </section>
+        <RelatedGuides slugs={["prom-night-taxi-guide-leicester-parents-2026","taxi-to-de-montfort-hall-leicester-concerts-events-parking-guide"]} />
       </main>
     </div>
   )

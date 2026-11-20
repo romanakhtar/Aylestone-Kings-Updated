@@ -10,32 +10,28 @@ import {
   Sun,
   Calendar,
 } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const canonical = buildCanonical("/24-hour-taxi-leicester")
 
-export const metadata: Metadata = {
-  title: "24 Hour Taxi Leicester | Day & Night | Aylestone Taxis",
+export const metadata: Metadata = finalizeMetadata({
+  title: "24 Hour Taxi Leicester | Open Every Night of the Year",
   description:
-    "A 24 hour taxi service in Leicester: early mornings, overnight runs, weekends and bank holidays. Fixed fares whatever the hour. Call 0116 233 8888.",
-  keywords:
-    "24 hour taxi Leicester, 24 hour taxi in Leicester, all night taxi Leicester, 24/7 taxi Leicester, late night taxi Leicester, taxi Leicester 24 hours, overnight taxi Leicester",
+    "Taxis in Leicester around the clock: early airport runs, night-shift pickups, late finishes and bank holidays. Same fixed fares at any hour. Book 24/7.",
   alternates: {
     canonical,
   },
   openGraph: {
     images: [OG_IMAGE],
-    title: "24 Hour Taxi Leicester | Day & Night | Aylestone Taxis",
-    description:
-      "24 hour taxi Leicester - Round-the-clock taxi service. Day or night, bank holidays included. Book now or call 0116 2338888.",
     url: canonical,
   },
-}
+})
 
 export default function TwentyFourHourTaxiLeicesterPage() {
   return (
@@ -59,7 +55,7 @@ export default function TwentyFourHourTaxiLeicesterPage() {
                 We run every hour of every day, including Christmas Day and bank holidays. That
                 means 4am airport runs, shift changes at the hospitals, and the journey home long
                 after the last bus — all at a fare agreed before you set off, exactly as with any{" "}
-                <Link href="/taxi-leicester" className="text-[#06A0A6] font-semibold underline underline-offset-2">taxi Leicester</Link> booking. Heading out for the evening? Our{" "}
+                <Link href="/taxi-leicester" className="text-[#06A0A6] font-semibold underline underline-offset-2">booking by phone, app or WhatsApp</Link>. Heading out for the evening? Our{" "}
                 <Link href="/late-night-taxi-leicester" className="text-[#06A0A6] font-semibold underline underline-offset-2">late night taxi page</Link> covers nights out in
                 particular.
               </p>

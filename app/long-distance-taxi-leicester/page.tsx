@@ -1,19 +1,19 @@
 import { Check, ArrowRight, Clock, Shield, Star, Phone, Briefcase, Route } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import RelatedGuides from "@/components/RelatedGuides"
 
 const canonical = buildCanonical("/long-distance-taxi-leicester")
 
-export const metadata: Metadata = {
-  title: "Long-Distance Taxi Leicester | UK-Wide | Book 0116 2338888",
+export const metadata: Metadata = finalizeMetadata({
+  title: `Long-Distance Taxi Leicester | UK-Wide | Book ${PHONE_DISPLAY}`,
   description:
-    "Long-distance taxi from Leicester: London from £180, Manchester from £150, Nottingham from £45. Saloons and MPVs — call 0116 233 8888.",
-  keywords:
-    "long distance taxi Leicester, long distance taxis, taxi for long distance, corporate taxi Leicester, business taxi Leicester, intercity taxi Leicester",
+    `Long-distance taxi from Leicester: London from £180, Manchester from £150, Nottingham from £45. Saloons and MPVs — call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical,
   },
@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Long-Distance Taxi Leicester | UK-Wide | Aylestone Taxis",
     description:
-      "Corporate and long-distance taxi from Leicester with guide prices on popular routes. Agreed fares, 24/7. Book online or call 0116 2338888.",
+      `Corporate and long-distance taxi from Leicester with guide prices on popular routes. Agreed fares, 24/7. Book online or call ${PHONE_DISPLAY}.`,
     url: canonical,
   },
-}
+})
 
 const LONG_DISTANCE_GUIDE_PRICES: {
   route: string
@@ -394,6 +394,7 @@ export default function LongDistanceTaxiLeicesterPage() {
             </div>
           </div>
         </section>
+        <RelatedGuides slugs={["taxi-leicester-to-nottingham-cost-time-booking-guide-2026","leicester-to-manchester-taxi-cost-time-guide-2026","leicester-to-london-taxi-cost-time","taxi-leicester-to-birmingham-cost-time-booking-guide-2026"]} />
       </main>
     </div>
   )

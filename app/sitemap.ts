@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next'
-import { siteData, footerData } from '@/lib/data'
+import { footerData } from '@/lib/data'
+import { blogPosts } from '@/lib/blogPosts'
+import { NOINDEX_AREA_SLUGS } from '@/lib/seo/indexing'
 
 const baseUrl = 'https://aylestone-taxis.co.uk'
 
@@ -43,7 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // SEO Target Pages - High priority
   urls.push(createUrl('/taxi-leicester', 0.9, 'weekly'))
   urls.push(createUrl('/taxi-near-me-leicester', 0.9, 'weekly'))
-  urls.push(createUrl('/leicester-airport-taxi', 0.9, 'weekly'))
   urls.push(createUrl('/leicester-to-east-midlands-airport-taxi', 0.9, 'weekly'))
   urls.push(createUrl('/leicester-taxi-company', 0.9, 'weekly'))
   urls.push(createUrl('/cheap-taxi-leicester', 0.9, 'weekly'))
@@ -65,6 +66,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   urls.push(createUrl('/prom-taxi-leicester', 0.85, 'monthly'))
   urls.push(createUrl('/student-taxi-leicester', 0.85, 'monthly'))
   urls.push(createUrl('/late-night-taxi-leicester', 0.85, 'monthly'))
+  // The Halloween page is now the single Halloween URL (the old blog post 301s here).
+  urls.push(createUrl('/halloween-taxi-leicester', 0.6, 'monthly'))
   urls.push(createUrl('/match-day-taxi-leicester', 0.85, 'monthly'))
   urls.push(createUrl('/wheelchair-accessible-taxi-leicester', 0.85, 'monthly'))
   urls.push(createUrl('/taxi-to-birmingham-airport', 0.9, 'weekly'))
@@ -78,21 +81,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Airport Pricing Pages
   const airports = [
-    'East-Midlands',
+    // 'East-Midlands' is omitted: /pricing/airports/East-Midlands is the fare table and
+    // canonicalises to /leicester-to-east-midlands-airport-taxi, which is listed above.
     // 'Birmingham' is omitted: /pricing/airports/Birmingham 308-redirects
     // to /taxi-to-birmingham-airport, which is listed above.
     'Heathrow',
     'Gatwick',
     'Luton',
     'Stansted',
-    'Manchester'
+    'Manchester',
+    'London-City',
   ]
   airports.forEach(airport => {
     urls.push(createUrl(`/pricing/airports/${airport}`, 0.8, 'monthly'))
   })
 
   // Blog Posts - Dynamic
-  siteData.blogPage.blogs.forEach(blog => {
+  blogPosts.forEach(blog => {
     urls.push(createUrl(`/blog/${blog.id}`, 0.6, 'monthly', blog.date))
   })
 
@@ -149,9 +154,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   }
 
-  // Remove duplicates (in case same area appears in multiple groups)
+  // Remove duplicates (in case same area appears in multiple groups), and drop noindexed area pages
+  const noindexUrls = new Set([...NOINDEX_AREA_SLUGS].map((slug) => `${baseUrl}/taxis-in/${slug}`))
   const uniqueUrls = urls.filter((url, index, self) =>
-    index === self.findIndex((u) => u.url === url.url)
+    index === self.findIndex((u) => u.url === url.url) && !noindexUrls.has(url.url)
   )
 
   return uniqueUrls

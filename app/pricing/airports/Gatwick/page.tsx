@@ -1,21 +1,22 @@
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 import AirportPricingBreadcrumbs from "@/components/seo/AirportPricingBreadcrumbs"
 import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
 import { buildAirportMetadata } from "@/lib/seo/airportSeo"
 import { gatwickLeicesterFacts, gatwickPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
-export const metadata = buildAirportMetadata({
+export const metadata = finalizeMetadata(buildAirportMetadata({
   airportName: "Gatwick",
   airportCode: "LGW",
   slug: "Gatwick",
   fromPrice: "£210",
   title: "Gatwick taxi Leicester | From £210 | ~150 mi | Book 24/7",
   description:
-    "Leicester to Gatwick (LGW): ~150 mi, ~2h45–3h30 via M1/M25/M23. North and South terminals. Fixed from £210 — call 0116 233 8888.",
-})
+    `Leicester to Gatwick (LGW): ~150 mi, ~2h45–3h30 via M1/M25/M23. North and South terminals. Fixed from £210 — call ${PHONE_DISPLAY}.`,
+}))
 
 const faqs = gatwickPricingFaqs
 

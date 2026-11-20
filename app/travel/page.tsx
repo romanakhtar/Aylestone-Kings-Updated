@@ -1,27 +1,26 @@
 import Image from "next/image"
-import { contactInfo, siteData } from "@/lib/data"
+import { contactInfo, siteData, PHONE_DISPLAY, GOOGLE_RATING } from "@/lib/data"
 import { ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const canonical = buildCanonical("/travel")
 
-export const metadata: Metadata = {
-  title: "Leicester Taxi Travel | Fixed Fares, Book 24/7",
+export const metadata: Metadata = finalizeMetadata({
+  title: "Getting Around Leicester by Taxi | Stations, Uni & Events",
   description:
-    "Travel Leicester by taxi — stations, uni, matches & more. Fixed fares, no surge. Book online or call 0116 233 8888.",
+    "Taxi travel around Leicester: railway station runs, university trips, match days and events. Fixed fares agreed before you travel, no surge. Book 24/7.",
   alternates: {
     canonical,
   },
   openGraph: {
     images: [OG_IMAGE],
-    title: "Travel by Taxi Leicester | Aylestone Taxis",
-    description: "Stations, airports, events — book on 0116 2338888 or online.",
     url: canonical,
   },
-}
+})
 
 export default function OurTeamPage() {
   return (
@@ -104,18 +103,18 @@ export default function OurTeamPage() {
               </h2>
               <p className="text-lg text-[#2E3C44] mb-8 leading-relaxed">
                 Affordable, dependable taxi services for students and staff at De Montfort University. Travel across Leicester with trusted, friendly drivers.
-                We offer safe, affordable, and student-friendly taxi services across Leicester. Our local drivers know all the major campuses and accommodation areas. Enjoy discounted rates, secure travel, and 24/7 availability—because your time and safety matter.
+                We offer safe, affordable, and student-friendly taxi services across Leicester. Our local drivers know all the major campuses and accommodation areas. You get a fare agreed before you travel, licensed drivers and 24/7 availability—because your time and safety matter.
               </p>
               
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-6 bg-white rounded-xl shadow-professional hover-lift">
-                  <div className="text-3xl font-bold text-[#06A0A6] mb-2">{siteData.company.satisfactionRating}</div>
-                  <div className="text-[#2E3C44] font-medium">Satisfaction Rating</div>
+                  <div className="text-3xl font-bold text-[#06A0A6] mb-2">{GOOGLE_RATING.value}★</div>
+                  <div className="text-[#2E3C44] font-medium">Google rating ({GOOGLE_RATING.count} reviews)</div>
                 </div>
                 <div className="text-center p-6 bg-white rounded-xl shadow-professional hover-lift">
                   <div className="text-3xl font-bold text-[#06A0A6] mb-2">{siteData.company.yearsExperience}</div>
-                  <div className="text-[#2E3C44] font-medium">Years Experience</div>
+                  <div className="text-[#2E3C44] font-medium">Years serving Leicester</div>
                 </div>
               </div>
               <div className="mt-12">

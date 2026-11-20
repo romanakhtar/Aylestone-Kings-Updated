@@ -1,19 +1,21 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Calendar, User, ArrowRight, BookOpen } from "lucide-react"
-import { siteData, contactInfo } from "@/lib/data"
+import { siteData, contactInfo, PHONE_DISPLAY } from "@/lib/data"
+import { blogPosts } from "@/lib/blogPosts"
 import type { Metadata } from "next"
 import BlogListingJsonLd from "@/components/seo/BlogListingJsonLd"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const canonical = buildCanonical("/blog")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Leicester Taxi Blog | Tips, Airports & Travel | Aylestone",
   description:
-    "Leicester travel guides from Aylestone Taxis: airport transfers, matchday taxis, student moves and fare comparisons. Call 0116 233 8888.",
+    `Leicester travel guides from Aylestone Taxis: airport transfers, matchday taxis, student moves and fare comparisons. Call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical,
   },
@@ -21,13 +23,13 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Leicester Taxi Blog | Aylestone Taxis",
     description:
-      "Practical Leicester travel guides — airports, matchdays, prom nights, student moves, and fare tips from Aylestone Taxis. Book 24/7 on 0116 2338888.",
+      `Practical Leicester travel guides — airports, matchdays, prom nights, student moves, and fare tips from Aylestone Taxis. Book 24/7 on ${PHONE_DISPLAY}.`,
     url: canonical,
   },
-}
+})
 
 export default function BlogPage() {
-  const blogs = siteData.blogPage.blogs
+  const blogs = blogPosts
 
   return (
     <div className="min-h-screen bg-white">
@@ -88,7 +90,7 @@ export default function BlogPage() {
               organising prom transport, or moving out of university halls, our guides are written to help
               Leicester passengers plan ahead. Every article covers fixed pricing, booking tips, and local
               knowledge from a licensed operator you can call any time on{" "}
-              <a href={`tel:${contactInfo.phone}`} className="text-[#06A0A6] font-semibold hover:text-[#0F0D3E]">
+              <a href={`tel:${contactInfo.phoneTel}`} className="text-[#06A0A6] font-semibold hover:text-[#0F0D3E]">
                 {contactInfo.phone}
               </a>
               .
@@ -182,7 +184,7 @@ export default function BlogPage() {
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
-              <a href={`tel:${contactInfo.phone}`} className="w-full sm:w-auto">
+              <a href={`tel:${contactInfo.phoneTel}`} className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 hover:bg-white hover:text-[#06A0A6]">
                   Call {contactInfo.phone}
                 </button>

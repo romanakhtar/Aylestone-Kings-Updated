@@ -12,28 +12,21 @@ import {
   Ship,
   Users,
 } from "lucide-react"
-import { contactInfo, siteData } from "@/lib/data"
+import { contactInfo, siteData, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const company = siteData.company
 const canonical = buildCanonical("/seaport-transfers-uk")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Seaport Taxi UK | Cruise Port from Leicester | Aylestone",
   description:
-    "Cruise port taxi from Leicester to Southampton, Dover, Portsmouth and Harwich. Fixed quotes, room for luggage, 24/7. Call 0116 233 8888.",
-  keywords: [
-    "seaport taxi transfer",
-    "cruise port transfer UK",
-    "taxi to Southampton port",
-    "Dover cruise taxi",
-    "Portsmouth port taxi",
-    "Harwich cruise transfer",
-  ],
+    `Cruise port taxi from Leicester to Southampton, Dover, Portsmouth and Harwich. Fixed quotes, room for luggage, 24/7. Call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical,
   },
@@ -44,7 +37,7 @@ export const metadata: Metadata = {
       "Pre-booked cruise port transfers from Leicester and the Midlands. Southampton port taxis, Dover, Portsmouth, Harwich — luggage-friendly vehicles, agreed fares.",
     url: canonical,
   },
-}
+})
 
 const faqs = [
   {
@@ -618,7 +611,7 @@ export default function SeaportTransfersUkPage() {
             <p className="max-w-3xl mx-auto mt-6 text-[#2E3C44] text-center text-lg leading-relaxed">
               From{" "}
               <Link
-                href="/leicester-airport-taxi"
+                href="/airport-taxi-leicester"
                 className="text-[#06A0A6] font-semibold underline hover:text-[#0F0D3E]"
               >
                 Leicester

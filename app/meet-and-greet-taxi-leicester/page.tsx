@@ -6,15 +6,14 @@ import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const canonical = buildCanonical("/meet-and-greet-taxi-leicester")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Meet and Greet Taxi Leicester | EMA & BHX | Aylestone",
   description:
     "Meet and greet taxi Leicester for EMA and Birmingham Airport. Your driver meets you in arrivals with a name board and helps with luggage.",
-  keywords:
-    "meet and greet taxi Leicester, meet & greet taxi Leicester, airport meet and greet Leicester, East Midlands Airport meet and greet taxi, EMA meet and greet taxi, Birmingham Airport meet and greet taxi, BHX meet and greet taxi, taxi with name board Leicester",
   alternates: {
     canonical,
   },
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
       "Pre-book a meet and greet taxi Leicester for EMA and BHX. Your driver meets you in arrivals with a name sign, assists with luggage and walks you to your taxi.",
     url: canonical,
   },
-}
+})
 
 export default function MeetAndGreetTaxiLeicesterPage() {
   const faqs = [

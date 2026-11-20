@@ -3,15 +3,22 @@ import Image from "next/image"
 import Link from "next/link"
 import { Check, ArrowRight, Star, MapPin, Clock, Shield, ShieldCheck, BadgeCheck, Users, Car, Plane } from "@/lib/icons"
 import { Briefcase, Calendar, Sparkles } from "lucide-react"
-import { siteData, contactInfo } from "@/lib/data"
+import { siteData, contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import { onBookNowClick } from "@/lib/analytics"
 import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/AnimatedHero"
 import HomeReviewsSection from "@/components/home/HomeReviewsSection"
+import { homeFaqs } from "@/components/home/homeFaqs"
 import { useHalloweenTheme } from "@/components/HalloweenThemeProvider"
 import { useValentineTheme } from "@/components/ValentineThemeProvider"
 
-const FareEstimator = dynamic(() => import("@/components/FareEstimator"), { ssr: false })
+// Client-only, so it renders nothing in the HTML. The placeholder reserves its measured height
+// (≈944px on phones, 844px from md up) so the "About Us" section below doesn't jump when it mounts
+// (that jump was the homepage's only layout shift: CLS 0.075 on desktop).
+const FareEstimator = dynamic(() => import("@/components/FareEstimator"), {
+  ssr: false,
+  loading: () => <section aria-hidden="true" className="bg-[#f0f4f8] min-h-[944px] md:min-h-[844px]" />,
+})
 const FAQSchema = dynamic(() => import("@/components/seo/FAQSchema"))
 const AppDownloadButtons = dynamic(() => import("@/components/AppDownloadButtons"), { ssr: false })
 const HomeFAQSection = dynamic(() => import("@/components/home/HomeFAQSection"))
@@ -19,45 +26,6 @@ const HomeFAQSection = dynamic(() => import("@/components/home/HomeFAQSection"))
 export default function HomePageClient() {
   const { isHalloweenActive } = useHalloweenTheme()
   const { isValentineActive } = useValentineTheme()
-
-  const homeFaqs = [
-    {
-      question: "How do I book a taxi Leicester passengers use every day?",
-      answer:
-        "Book Leicester taxis and Leicester cabs online in seconds, call 0116 233 8888, or WhatsApp us. You see a fixed fare before you confirm.",
-    },
-    {
-      question: "Are Leicester cabs and Leicester taxis the same service?",
-      answer:
-        "Yes. Leicester cabs, Leicester taxi and taxi Leicester searches all point to the same Aylestone Taxis service — licensed drivers, fixed fares, no surge.",
-    },
-    {
-      question: "Do you cover Leicestershire taxis outside the city?",
-      answer:
-        "Yes. Leicestershire taxis with Aylestone Taxis cover towns and villages across the county, including Hamilton, Beaumont Leys, Fosse Park, Kirby Muxloe and Market Harborough, plus airport transfers.",
-    },
-    {
-      question: "Are you available 24/7?",
-      answer: "Yes, we operate 24/7 including weekends and bank holidays.",
-    },
-    {
-      question: "Do you offer fixed prices?",
-      answer: "Yes, you'll see the price before confirming your booking.",
-    },
-    {
-      question: "Can I pre-book a taxi in advance?",
-      answer: "Yes, pre-booking is available and recommended during busy times.",
-    },
-    {
-      question: "Do you provide airport transfers?",
-      answer: "Yes, we provide fixed-price airport transfers to all major UK airports.",
-    },
-    {
-      question: "Do you have larger vehicles for groups or luggage?",
-      answer: "Yes, you can choose the appropriate vehicle type during booking, subject to availability.",
-    },
-  ]
-
   return (
     <div className="min-h-screen bg-white">
       <FAQSchema faqs={homeFaqs} />
@@ -243,179 +211,23 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* For Drivers Section */}
-      <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
-                Self-Employed Driver Opportunities
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">Self-Employed Driver Opportunities</h2>
-              <p className="text-xl text-[#2E3C44] mb-4 leading-relaxed max-w-3xl mx-auto">
-              Licensed self-employed drivers can register to access booking opportunities through the Aylestone Taxis booking and dispatch platform.
-              </p>
-              <p className="text-lg text-[#2E3C44] leading-relaxed max-w-3xl mx-auto">
-                With over 30 years of experience serving the Leicester community, Aylestone Taxis offers a supportive,
-                professional environment where self-employed drivers can thrive. Whether you&apos;re looking to Choose when you make yourself available for bookings
-                flexibility, we have opportunities that fit your lifestyle.
-              </p>
-            </div>
-
-            {/* Benefits Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
-                <div className="flex items-center gap-3 mb-3">
-                  <Check className="h-6 w-6 text-[#06A0A6]" />
-                  <h3 className="text-lg font-semibold text-[#0F0D3E]">Competitive Earnings</h3>
-                </div>
-                <p className="text-[#2E3C44]">
-                  Earn competitive rates with flexible payment options. Transparent commission structure with Weekly transfer of booking funds
-                  directly to your bank account. Keep more of what you earn with our fair pricing model.
-                </p>
-              </div>
-
-              <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
-                <div className="flex items-center gap-3 mb-3">
-                  <Check className="h-6 w-6 text-[#06A0A6]" />
-                  <h3 className="text-lg font-semibold text-[#0F0D3E]">Flexible Schedule</h3>
-                </div>
-                <p className="text-[#2E3C44]">
-                Decide when you wish to make yourself available for booking opportunities.
-                This allows you to balance work with personal commitments and choose your own hours and availability.
-                </p>
-              </div>
-
-              <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
-                <div className="flex items-center gap-3 mb-3">
-                  <Check className="h-6 w-6 text-[#06A0A6]" />
-                  <h3 className="text-lg font-semibold text-[#0F0D3E]">Vehicle Options</h3>
-                </div>
-                <p className="text-[#2E3C44]">
-                  Use your own licensed vehicle or inquire about company vehicle options. We support both arrangements and provide
-                  guidance on licensing and insurance requirements.
-                </p>
-              </div>
-
-              <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
-                <div className="flex items-center gap-3 mb-3">
-                  <Check className="h-6 w-6 text-[#06A0A6]" />
-                  <h3 className="text-lg font-semibold text-[#0F0D3E]">24/7 Driver Support</h3>
-                </div>
-                <p className="text-[#2E3C44]">
-                  Booking and dispatch support is available for booking-related queries.
-                  Round-the-clock support from our dedicated operations team. Help is always available when you need it, day or
-                  night. We&apos;re here to support your success.
-                </p>
-              </div>
-
-              <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
-                <div className="flex items-center gap-3 mb-3">
-                  <Check className="h-6 w-6 text-[#06A0A6]" />
-                  <h3 className="text-lg font-semibold text-[#0F0D3E]">Steady Bookings</h3>
-                </div>
-                <p className="text-[#2E3C44]">
-                  Benefit from our established customer base and online booking platform. Regular work with a steady stream of
-                  bookings through our app, phone bookings, and corporate accounts.
-                </p>
-              </div>
-
-              <div className="bg-[#E4E4E4] rounded-xl p-6 halloween-card">
-                <div className="flex items-center gap-3 mb-3">
-                  <Check className="h-6 w-6 text-[#06A0A6]" />
-                  <h3 className="text-lg font-semibold text-[#0F0D3E]">Training & Development</h3>
-                </div>
-                <p className="text-[#2E3C44]">
-                  Comprehensive onboarding and ongoing training opportunities. Learn best practices, customer service skills, and
-                  stay updated with the latest industry standards.
-                </p>
-              </div>
-            </div>
-
-            {/* Additional Benefits List */}
-            <div className="bg-gradient-to-r from-[#06A0A6]/10 to-[#2E3C44]/10 rounded-xl p-8 mb-12 halloween-card">
-              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-6 text-center">Why Choose Aylestone Taxis?</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
-                  <span className="text-[#2E3C44]">Established reputation since 1995</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
-                  <span className="text-[#2E3C44]">Supportive and friendly team environment</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
-                  <span className="text-[#2E3C44]">Modern technology and booking systems</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
-                  <span className="text-[#2E3C44]">Fair and transparent commission structure</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
-                  <span className="text-[#2E3C44]">Guidance on licensing and compliance</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
-                  <span className="text-[#2E3C44]">Work in your local community</span>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-[#06A0A6] mt-0.5" />
-                  <span className="text-[#2E3C44]">Professional development support</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Requirements Preview */}
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-6 text-center">What We&apos;re Looking For</h3>
-              <div className="bg-white border border-gray-200 rounded-xl p-6 halloween-card">
-                <p className="text-[#2E3C44] mb-4 leading-relaxed">We welcome drivers who meet our requirements:</p>
-                <ul className="space-y-3 text-[#2E3C44]">
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#06A0A6] font-bold mt-0.5">•</span>
-                    <span>Valid UK driving licence held for at least 2 years</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#06A0A6] font-bold mt-0.5">•</span>
-                    <span>Private hire driver&apos;s badge from Leicester City Council or Wolverhampton City Council</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#06A0A6] font-bold mt-0.5">•</span>
-                    <span>Enhanced DBS certificate (preferably on the Update Service)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#06A0A6] font-bold mt-0.5">•</span>
-                    <span>Valid right to work in the UK</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#06A0A6] font-bold mt-0.5">•</span>
-                    <span>Professional attitude and excellent customer service skills</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="text-center">
-              <p className="text-lg text-[#2E3C44] mb-6">
-                Ready to start your journey with Aylestone Taxis? Apply today and Sign-up for Leicester&apos;s most trusted taxi service.
-              </p>
-              <a href="/drivers" className="inline-block">
-                <button
-                  className={`${
-                    isHalloweenActive ? "halloween-cta-glow" : "bg-[#06A0A6] hover:bg-[#0F0D3E]"
-                  } text-white px-8 py-4 rounded-lg font-semibold  flex items-center gap-3 mx-auto`}
-                >
-                  Sign Up as a Self-Employed Driver now
-                  <ArrowRight className="h-5 w-5" />
-                </button>
-              </a>
-            </div>
-          </div>
+      {/* For Drivers Section — short teaser; full details live on /drivers */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-4 leading-tight">Drive with Aylestone Taxis</h2>
+          <p className="text-lg text-[#2E3C44] mb-6 leading-relaxed">
+            Licensed self-employed drivers can register to take bookings through our dispatch platform and choose when
+            they are available. Requirements, benefits and the application form are on our drivers page.
+          </p>
+          <Link
+            href="/drivers"
+            className={`${
+              isHalloweenActive ? "halloween-cta-glow" : "bg-[#06A0A6] hover:bg-[#0F0D3E]"
+            } inline-flex items-center gap-3 text-white px-8 py-4 rounded-lg font-semibold`}
+          >
+            Become a driver
+            <ArrowRight className="h-5 w-5" />
+          </Link>
         </div>
       </section>
 
@@ -611,13 +423,13 @@ export default function HomePageClient() {
                 <Car className="h-8 w-8 text-[#06A0A6]" />
               </div>
               <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6]">
-                taxi Leicester service
+                Book a taxi in Leicester: phone, app &amp; WhatsApp
               </h3>
               <p className="text-[#2E3C44] mb-6">
-                Fixed-price Leicester taxis with licensed drivers, 24/7 booking, and no surge charging across the city.
+                Our number, WhatsApp and app in one place, plus what to have ready so booking takes under a minute.
               </p>
               <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
-                Learn More
+                How to book
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
@@ -733,6 +545,22 @@ export default function HomePageClient() {
                 <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
+
+            <Link href="/leicester-city-centre-nights-out-taxi" className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-[transform,opacity] group halloween-card">
+              <div className="w-16 h-16 bg-[#06A0A6]/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#06A0A6]/30">
+                <Sparkles className="h-8 w-8 text-[#06A0A6]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4 group-hover:text-[#06A0A6]">
+                Club &amp; Night Out Taxis
+              </h3>
+              <p className="text-[#2E3C44] mb-6">
+                Taxis to the city centre clubs, bars and pubs, with tips on safe pickups and getting home.
+              </p>
+              <div className="flex items-center text-[#06A0A6] font-semibold group-hover:gap-2 transition-[transform,opacity]">
+                Learn More
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -762,7 +590,7 @@ export default function HomePageClient() {
               </ul>
               <div className="mt-4 text-[#2E3C44] text-sm">
                 <div>Call: {siteData.company.phone}</div>
-                <div>WhatsApp: {siteData.company.whatsapp}</div>
+                <div>WhatsApp: {contactInfo.whatsappDisplay}</div>
                 <div>
                   Book online:{" "}
                   <a href={contactInfo.booking.online} className="underline text-[#06A0A6]" onClick={onBookNowClick}>
@@ -828,8 +656,8 @@ export default function HomePageClient() {
             </ul>
           </div>
 
-          {/* Areas */}
-          <div className="mb-16">
+          {/* Areas — anchor target for "View all areas" links and the area-page breadcrumb hub */}
+          <div id="areas" className="mb-16 scroll-mt-28">
             <h3 className="text-2xl font-semibold text-[#0F0D3E] mb-4">{siteData.homepage.seoContent.areas.heading}</h3>
             <p className="text-[#2E3C44]">{siteData.homepage.seoContent.areas.text}</p>
             {siteData.homepage.seoContent.areas.links && (

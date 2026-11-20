@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { MessageCircle, Phone, Globe, Star, Car } from 'lucide-react'
 import AppDownloadButtons from '@/components/AppDownloadButtons'
-import { contactInfo } from '@/lib/data'
+import { contactInfo, WHATSAPP_WA } from '@/lib/data'
 import { onBookNowClick, onPhoneClick, onWhatsAppClick } from '@/lib/analytics'
 
 import { useChristmasTheme } from "@/components/ChristmasThemeProvider"
@@ -29,7 +29,7 @@ export default function ContactModeCards({ className = '', transparentBackground
       color: '#25D366', // WhatsApp green
       bgColor: 'bg-[#25D366]',
       hoverBgColor: 'hover:bg-[#128C7E]',
-      href: `https://wa.me/${contactInfo.whatsapp.replace('+', '')}?text=Hi! I need a taxi from Aylestone Taxis`
+      href: `https://wa.me/${WHATSAPP_WA}?text=Hi! I need a taxi from Aylestone Taxis`
     },
     {
       name: 'Landline',
@@ -118,7 +118,7 @@ export default function ContactModeCards({ className = '', transparentBackground
         </div>
       )}
       
-      <h3 className={`text-xl lg:text-lg font-bold mb-6 lg:mb-4 text-center border-b ${
+      <h2 className={`text-xl lg:text-lg font-bold mb-6 lg:mb-4 text-center border-b ${
         transparentBackground
           ? 'text-white border-white/30'
           : isValentineActive
@@ -137,7 +137,7 @@ export default function ContactModeCards({ className = '', transparentBackground
             ? 'bg-gradient-to-r from-[#D9B35A] to-[#EF5B6A]'
             : 'bg-gradient-to-r from-[#06A0A6] to-[#0F0D3E]'
         }`}></div>
-      </h3>
+      </h2>
       
       <div className="space-y-3 lg:space-y-2.5">
         {contactModes.map((mode, index) => {
@@ -170,7 +170,7 @@ export default function ContactModeCards({ className = '', transparentBackground
               <div className="flex flex-col items-start relative z-10 flex-1 min-w-0">
                 <span className="font-semibold text-sm lg:text-xs">{mode.name}</span>
                 {mode.name === 'WhatsApp' && (
-                  <span className="text-xs opacity-90 text-white/90 break-all">{contactInfo.whatsapp}</span>
+                  <span className="text-xs opacity-90 text-white/90 break-all">{contactInfo.whatsappDisplay}</span>
                 )}
                 {mode.name === 'Landline' && (
                   <span className="text-xs opacity-90 text-white/90">{contactInfo.phone}</span>

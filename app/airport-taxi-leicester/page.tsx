@@ -1,5 +1,5 @@
 import { ArrowRight, Clock, Phone, Plane, Shield, MapPin } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
@@ -9,13 +9,15 @@ import { getAreaServiceAreaLocalBusinessJsonLd } from "@/lib/seo/siteJsonLd"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import RelatedGuides from "@/components/RelatedGuides"
 
 const CANONICAL = buildCanonical("/airport-taxi-leicester")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Airport Taxi Leicester | Fixed Fares 24/7 | Aylestone Taxis",
   description:
-    "Book a fixed-price airport taxi from Leicester to EMA, Birmingham, Heathrow, Gatwick & more. Licensed drivers, 24/7. Call 0116 233 8888.",
+    `Book a fixed-price airport taxi from Leicester to EMA, Birmingham, Heathrow, Gatwick & more. Licensed drivers, 24/7. Call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical: CANONICAL,
   },
@@ -23,18 +25,18 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Airport Taxi Leicester | Fixed Fares 24/7 | Aylestone Taxis",
     description:
-      "Fixed-price airport taxis from Leicester to every major UK airport. Licensed drivers, 24/7 — book online or call 0116 233 8888.",
+      `Fixed-price airport taxis from Leicester to every major UK airport. Licensed drivers, 24/7 — book online or call ${PHONE_DISPLAY}.`,
     url: CANONICAL,
     siteName: "Aylestone Taxis",
     locale: "en_GB",
     type: "website",
   },
-}
+})
 
 const AIRPORTS = [
   {
     name: "East Midlands Airport (EMA)",
-    href: "/pricing/airports/East-Midlands",
+    href: "/leicester-to-east-midlands-airport-taxi",
     description: "Closest airport to Leicester — ideal for Ryanair, Jet2, and short-haul holidays.",
   },
   {
@@ -72,7 +74,7 @@ const AIRPORTS = [
 const JOURNEY_OVERVIEW = [
   {
     airport: "East Midlands (EMA)",
-    href: "/pricing/airports/East-Midlands",
+    href: "/leicester-to-east-midlands-airport-taxi",
     distance: "~22–24 miles",
     time: "35–45 minutes",
     fare: "From £41",
@@ -130,7 +132,7 @@ const faqs = [
   {
     question: "How far in advance should I book an airport taxi in Leicester?",
     answer:
-      "For East Midlands and Birmingham, same-day booking is often fine, though we recommend booking at least 24 hours ahead for peace of mind. Long-haul airports — Heathrow, Gatwick, Stansted, Luton, and Manchester — are best booked several days in advance, especially for early-morning departures, bank holidays, and school-holiday peaks. You can book online or call 0116 233 8888 at any time.",
+      `For East Midlands and Birmingham, same-day booking is often fine, though we recommend booking at least 24 hours ahead for peace of mind. Long-haul airports — Heathrow, Gatwick, Stansted, Luton, and Manchester — are best booked several days in advance, especially for early-morning departures, bank holidays, and school-holiday peaks. You can book online or call ${PHONE_DISPLAY} at any time.`,
   },
   {
     question: "Do you monitor flights for delays?",
@@ -145,7 +147,7 @@ const faqs = [
   {
     question: "Which UK airports do you cover from Leicester?",
     answer:
-      "We cover all major UK airports from Leicester and Leicestershire, including East Midlands, Birmingham, Heathrow, Gatwick, Stansted, Luton, and Manchester — with fixed fares quoted per route. Use the airport links on this page for journey times and pricing, or call 0116 233 8888 if your destination is not listed and we will confirm availability.",
+      `We cover all major UK airports from Leicester and Leicestershire, including East Midlands, Birmingham, Heathrow, Gatwick, Stansted, Luton, and Manchester — with fixed fares quoted per route. Use the airport links on this page for journey times and pricing, or call ${PHONE_DISPLAY} if your destination is not listed and we will confirm availability.`,
   },
 ]
 
@@ -153,7 +155,6 @@ export default function AirportTaxiLeicesterPage() {
   const structuredData = getAreaServiceAreaLocalBusinessJsonLd({
     pageUrl: CANONICAL,
     serviceAreaName: "Leicester",
-    geo: { latitude: 52.6369, longitude: -1.1398 },
     description:
       "Fixed-price airport taxi service from Leicester to East Midlands, Birmingham, Heathrow, Gatwick, Stansted, Luton, Manchester, and all major UK airports. Licensed, DBS-checked drivers — 24/7.",
     serviceType: "Airport Taxi",
@@ -423,6 +424,7 @@ export default function AirportTaxiLeicesterPage() {
             </div>
           </div>
         </section>
+        <RelatedGuides slugs={["summer-holidays-airport-taxi-guide-leicester-2026","top-tips-smooth-airport-pickup-leicester","leicester-to-heathrow-taxi-everything-you-need-to-know"]} />
       </main>
     </div>
   )

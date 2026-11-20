@@ -1,20 +1,20 @@
 import { ArrowRight, Calendar, Clock, MapPin, Phone, Plane, Shield, Star, Users } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import TerminalGuide from "@/components/seo/TerminalGuide"
 
 const canonical = buildCanonical("/heathrow-terminal-4-taxi-transfers")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Leicester to Heathrow T4 Taxi | Fixed Fares | Aylestone",
   description:
-    "Taxi from Leicester to Heathrow Terminal 4: fixed fares, flight tracking and meet & greet. Licensed drivers 24/7 — call 0116 233 8888.",
-  keywords:
-    "Leicester to Heathrow T4 taxi, Heathrow Terminal 4 taxi Leicester, taxi to Heathrow T4 from Leicester, Heathrow T4 transfer Leicester, Heathrow Terminal 4 airport taxi",
+    `Leicester to Heathrow Terminal 4 taxi for Air France, KLM, Qatar Airways and other SkyTeam flights. Fixed fares, 24/7 — call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical,
   },
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Leicester to Heathrow T4 Taxi | Fixed Fares | Aylestone",
     description:
-      "Leicester to Heathrow T4 transfers: fixed pricing, flight monitoring, professional drivers. Book online or call 0116 2338888.",
+      `Leicester to Heathrow T4 transfers: fixed pricing, flight monitoring, professional drivers. Book online or call ${PHONE_DISPLAY}.`,
     url: canonical,
   },
-}
+})
 
 export default function HeathrowTerminal4TaxiTransfersPage() {
   const faqs = [
@@ -123,6 +123,8 @@ export default function HeathrowTerminal4TaxiTransfersPage() {
             </div>
           </div>
         </section>
+
+        <TerminalGuide terminal="heathrow-t4" />
 
         <section className="py-20 bg-[#E4E4E4]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

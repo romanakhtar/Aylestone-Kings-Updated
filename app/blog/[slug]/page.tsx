@@ -1,29 +1,30 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Calendar, User, ArrowLeft, ArrowRight, BookOpen } from "lucide-react"
-import { siteData, contactInfo } from "@/lib/data"
+import { contactInfo } from "@/lib/data"
+import { blogPosts } from "@/lib/blogPosts"
 import { notFound } from "next/navigation"
 import BlogFAQSection from "@/components/blog/BlogFAQSection"
 import BlogPostingJsonLd from "@/components/seo/BlogPostingJsonLd"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
-
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 export async function generateStaticParams() {
-  return siteData.blogPage.blogs.map((blog) => ({
+  return blogPosts.map((blog) => ({
     slug: blog.id,
   }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const blog = siteData.blogPage.blogs.find((b) => b.id === slug)
+  const blog = blogPosts.find((b) => b.id === slug)
   
   if (!blog) {
-    return {
+    return finalizeMetadata({
       title: "Blog Post Not Found | Aylestone Taxis",
       description: "The requested blog post could not be found. Browse our blog for travel tips and Leicester taxi guides.",
-    }
+    })
   }
 
   const canonicalUrl = buildCanonical(`/blog/${blog.id}`)
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const metaTitle = "metaTitle" in blog && blog.metaTitle ? blog.metaTitle : `${blog.title} | Aylestone Taxis`
   const metaDescription = "metaDescription" in blog && blog.metaDescription ? blog.metaDescription : blog.excerpt
 
-  return {
+  return finalizeMetadata({
     // Keep titles concise to reduce truncation and avoid Google rewrites
     title: metaTitle,
     description: metaDescription,
@@ -54,23 +55,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: metaDescription,
       images: blog.image ? [`https://aylestone-taxis.co.uk${blog.image}`] : undefined,
     },
-  }
+  })
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const blog = siteData.blogPage.blogs.find((b) => b.id === slug)
+  const blog = blogPosts.find((b) => b.id === slug)
 
   if (!blog) {
     notFound()
   }
 
-  const currentIndex = siteData.blogPage.blogs.findIndex((b) => b.id === slug)
-  const nextBlog = currentIndex < siteData.blogPage.blogs.length - 1 
-    ? siteData.blogPage.blogs[currentIndex + 1] 
+  const currentIndex = blogPosts.findIndex((b) => b.id === slug)
+  const nextBlog = currentIndex < blogPosts.length - 1 
+    ? blogPosts[currentIndex + 1] 
     : null
   const prevBlog = currentIndex > 0 
-    ? siteData.blogPage.blogs[currentIndex - 1] 
+    ? blogPosts[currentIndex - 1] 
     : null
 
   const canonicalUrl = buildCanonical(`/blog/${blog.id}`)
@@ -254,7 +255,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
-              <a href={`tel:${contactInfo.phone}`} className="w-full sm:w-auto">
+              <a href={`tel:${contactInfo.phoneTel}`} className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-[transform,opacity] duration-200 hover:bg-white hover:text-[#06A0A6]">
                   Call {contactInfo.phone}
                 </button>

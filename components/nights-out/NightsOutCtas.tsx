@@ -1,7 +1,7 @@
 "use client"
 
 import { Globe, MessageCircle, Phone } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, WHATSAPP_WA } from "@/lib/data"
 import { onBookNowClick, onPhoneClick, onWhatsAppClick } from "@/lib/analytics"
 
 /**
@@ -18,7 +18,7 @@ export default function NightsOutCtas({
   className?: string
 }) {
   const phoneHref = `tel:${contactInfo.phone.replace(/\s/g, "")}`
-  const whatsappHref = `https://wa.me/${contactInfo.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
+  const whatsappHref = `https://wa.me/${WHATSAPP_WA}?text=${encodeURIComponent(
     whatsappMessage
   )}`
 

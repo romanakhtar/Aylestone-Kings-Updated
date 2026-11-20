@@ -5,28 +5,27 @@ import {
   Clock, Shield, Stethoscope, MapPin, Heart, ShoppingBag, 
   Train, Hotel, UtensilsCrossed, CircleUser, Package, FileText
 } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const canonical = buildCanonical("/services")
 
-export const metadata: Metadata = {
-  title: "Leicester Taxi Services | Fixed Fares | Book 24/7",
+export const metadata: Metadata = finalizeMetadata({
+  title: "Taxi Services in Leicester | Local, Airport & Business",
   description:
-    "Explore Aylestone Taxis' Leicester services — airport transfers, school runs, corporate travel & more. Book today.",
+    "Every Aylestone Taxis service in one place: local trips, airport transfers, school runs, corporate accounts and 8-seaters. Fixed fares, easy 24/7 booking.",
   alternates: {
     canonical,
   },
   openGraph: {
     images: [OG_IMAGE],
-    title: "Taxi Services Leicester | Aylestone Taxis",
-    description: "Airport, local, school runs, business travel — book online or call 0116 2338888.",
     url: canonical,
   },
-}
+})
 
 const services = [
   {
@@ -214,7 +213,7 @@ export default function ServicesPage() {
                         <ArrowRight className="h-4 w-4" />
                       </a>
                       <a 
-                        href={`tel:${contactInfo.phone}`}
+                        href={`tel:${contactInfo.phoneTel}`}
                         className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#06A0A6] hover:text-white"
                       >
                         <Phone className="h-4 w-4" />
@@ -312,7 +311,7 @@ export default function ServicesPage() {
               </button>
             </a>
             <a 
-              href={`tel:${contactInfo.phone}`}
+              href={`tel:${contactInfo.phoneTel}`}
               className="inline-block"
             >
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#06A0A6] transition-[transform,opacity] duration-200 shadow-lg hover:shadow-xl flex items-center gap-3">

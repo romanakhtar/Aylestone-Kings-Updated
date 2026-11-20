@@ -8,7 +8,8 @@ import {
   PoundSterling,
   Shield,
 } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY, WHATSAPP_DISPLAY, siteData } from "@/lib/data"
+import { LOCAL_BUSINESS_ID } from "@/lib/seo/siteJsonLd"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
@@ -17,15 +18,17 @@ import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
 import SeasonalPromoSections from "./SeasonalPromoSections"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import RelatedGuides from "@/components/RelatedGuides"
 
 const CANONICAL = buildCanonical("/late-night-taxi-leicester")
-const LATE_NIGHT_PHONE = "0116 233 8888"
+const LATE_NIGHT_PHONE = PHONE_DISPLAY
 const WHATSAPP_HREF = "https://wa.me/447535855786?text=Hi!%20I%20need%20a%20late%20night%20taxi%20in%20Leicester"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Late Night Taxi Leicester | Fixed Fares, No Surge",
   description:
-    "Late night taxi in Leicester with fixed prices and no surge. Pre-book or WhatsApp on the night, all city centre venues. Call 0116 233 8888.",
+    `Late night taxi in Leicester with fixed prices and no surge. Pre-book or WhatsApp on the night, all city centre venues. Call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical: CANONICAL,
   },
@@ -33,7 +36,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Late Night Taxi Leicester | Fixed Fares, No Surge",
     description:
-      "Late night taxi in Leicester with fixed prices and no surge. Pre-book or WhatsApp on the night, all city centre venues. Call 0116 233 8888.",
+      `Late night taxi in Leicester with fixed prices and no surge. Pre-book or WhatsApp on the night, all city centre venues. Call ${PHONE_DISPLAY}.`,
     url: CANONICAL,
   },
   twitter: {
@@ -41,9 +44,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Late Night Taxi Leicester | Fixed Fares, No Surge",
     description:
-      "Late night taxi in Leicester with fixed prices and no surge. Pre-book or WhatsApp on the night, all city centre venues. Call 0116 233 8888.",
+      `Late night taxi in Leicester with fixed prices and no surge. Pre-book or WhatsApp on the night, all city centre venues. Call ${PHONE_DISPLAY}.`,
   },
-}
+})
 
 const serviceJsonLd = {
   "@context": "https://schema.org",
@@ -52,7 +55,9 @@ const serviceJsonLd = {
   url: CANONICAL,
   provider: {
     "@type": "LocalBusiness",
+    "@id": LOCAL_BUSINESS_ID,
     name: "Aylestone Taxis",
+    legalName: siteData.company.legalName,
   },
   areaServed: {
     "@type": "City",
@@ -124,7 +129,7 @@ export default function LateNightTaxiLeicesterPage() {
                 >
                   <button className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-4 rounded-xl font-semibold transition-[transform,opacity] duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-lg">
                     <MessageCircle className="h-6 w-6" />
-                    WhatsApp +447535855786
+                    WhatsApp {WHATSAPP_DISPLAY}
                   </button>
                 </a>
                 <a
@@ -303,7 +308,7 @@ export default function LateNightTaxiLeicesterPage() {
                 href="/leicester-city-centre-nights-out-taxi"
                 className="text-[#06A0A6] underline underline-offset-2 hover:text-[#0F0D3E]"
               >
-                guide to Leicester city centre pubs, bars and clubs
+                guide to club and night out taxis in Leicester
               </Link>
               .
             </p>
@@ -353,7 +358,7 @@ export default function LateNightTaxiLeicesterPage() {
                 <h3 className="text-2xl font-bold text-[#0F0D3E] mb-4">WhatsApp On the Night</h3>
                 <p className="text-[#2E3C44] text-lg leading-relaxed mb-4">
                   Plans changed or you did not know when you would leave? Message us on WhatsApp at{" "}
-                  <strong>+447535855786</strong> when you are ready. Send your location pin, destination,
+                  <strong>{WHATSAPP_DISPLAY}</strong> when you are ready. Send your location pin, destination,
                   and how many passengers — we confirm your fixed fare and dispatch the nearest available
                   driver. Perfect for spontaneous <strong>Friday night taxi Leicester</strong> journeys
                   when you decide it is time to head home.
@@ -434,7 +439,7 @@ export default function LateNightTaxiLeicesterPage() {
               <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-3">
                   <MessageCircle className="h-5 w-5" />
-                  WhatsApp +447535855786
+                  WhatsApp {WHATSAPP_DISPLAY}
                 </button>
               </a>
               <a href={`tel:${LATE_NIGHT_PHONE.replace(/\s/g, "")}`} className="w-full sm:w-auto">
@@ -446,6 +451,7 @@ export default function LateNightTaxiLeicesterPage() {
             </div>
           </div>
         </section>
+        <RelatedGuides slugs={["late-night-taxi-leicester-how-to-get-home-safely-friday-night","corporate-christmas-party-taxi-leicester"]} extra={[{"href":"/halloween-taxi-leicester","title":"Halloween taxi Leicester: pre-book your night out"}]} />
       </main>
     </div>
   )

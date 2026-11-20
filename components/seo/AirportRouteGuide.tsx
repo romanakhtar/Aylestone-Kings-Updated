@@ -172,7 +172,7 @@ export default function AirportRouteGuide({
             Manchester
           </Link>
           , and{" "}
-          <Link href="/pricing/airports/East-Midlands" className="text-cyan-700 font-medium underline hover:text-cyan-900">
+          <Link href="/leicester-to-east-midlands-airport-taxi" className="text-cyan-700 font-medium underline hover:text-cyan-900">
             East Midlands
           </Link>
           .

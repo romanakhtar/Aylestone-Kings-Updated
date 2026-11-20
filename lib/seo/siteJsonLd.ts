@@ -1,4 +1,4 @@
-import { contactInfo, siteData } from "@/lib/data"
+import { contactInfo, siteData, GOOGLE_RATING } from "@/lib/data"
 import { SITE_ORIGIN } from "@/lib/seo/canonical"
 
 export { SITE_ORIGIN }
@@ -6,10 +6,14 @@ export { SITE_ORIGIN }
 /** Stable @id for the business entity (used across Service provider references). */
 export const LOCAL_BUSINESS_ID = `${SITE_ORIGIN}/#business`
 
-/** Approximate coordinates for 753A Aylestone Rd, Leicester LE2 8TG (GeoCoordinates for LocalBusiness). */
-const OFFICE_GEO = {
-  latitude: 52.6018,
-  longitude: -1.1516,
+/**
+ * Coordinates of the office, 753A Aylestone Rd, Leicester LE2 8TG — same values as the root
+ * layout's LocalBusiness schema (within ~60 m of the LE2 8TG postcode centroid, 52.602845,-1.155117).
+ * Every LocalBusiness node must use these: the address is the same, so the location must be too.
+ */
+export const OFFICE_GEO = {
+  latitude: 52.602358,
+  longitude: -1.155715,
 }
 
 function toUkE164(phone: string): string {
@@ -33,9 +37,9 @@ function postalAddress(): Record<string, unknown> {
 export function getAggregateRatingJsonLd(): Record<string, unknown> {
   return {
     "@type": "AggregateRating",
-    ratingValue: 4.7,
-    ratingCount: 195,
-    reviewCount: 195,
+    ratingValue: GOOGLE_RATING.value,
+    ratingCount: GOOGLE_RATING.count,
+    reviewCount: GOOGLE_RATING.count,
     bestRating: 5,
     worstRating: 1,
   }
@@ -52,7 +56,7 @@ export function getLocalBusinessJsonLd(): Record<string, unknown> {
     "@type": "LocalBusiness",
     "@id": LOCAL_BUSINESS_ID,
     name: siteData.company.name,
-    alternateName: ["Aylestone Taxis", "Leicester taxis", "Leicester cabs"],
+    legalName: siteData.company.legalName,
     description: desc.length > 500 ? `${desc.slice(0, 497)}...` : desc,
     url: SITE_ORIGIN,
     telephone: toUkE164(siteData.company.phone),
@@ -119,7 +123,7 @@ export function getTaxiServiceJsonLd(opts: {
   const provider = {
     "@type": "LocalBusiness",
     name: siteData.company.name,
-    alternateName: "Aylestone Taxis",
+    legalName: siteData.company.legalName,
     url: SITE_ORIGIN,
     telephone: toUkE164(siteData.company.phone),
     email: siteData.company.email,
@@ -158,7 +162,8 @@ export function getTaxiServiceJsonLd(opts: {
 export function getAreaServiceAreaLocalBusinessJsonLd(opts: {
   pageUrl: string
   serviceAreaName: string
-  geo: { latitude: number; longitude: number }
+  /** @deprecated ignored — LocalBusiness geo is always the office (OFFICE_GEO). */
+  geo?: { latitude: number; longitude: number }
   description: string
   serviceType?: string
   serviceName?: string
@@ -176,10 +181,13 @@ export function getAreaServiceAreaLocalBusinessJsonLd(opts: {
     url: opts.pageUrl,
     description: opts.description.replace(/\s+/g, " ").trim(),
     sameAs: LOCAL_BUSINESS_ID,
+    // `geo` is where the business is (the office, same as its address) — not the area served.
+    // The served locality is expressed in `areaServed` below, so `opts.geo` is not used here;
+    // putting city-centre coordinates on the office address made the entities contradict each other.
     geo: {
       "@type": "GeoCoordinates",
-      latitude: opts.geo.latitude,
-      longitude: opts.geo.longitude,
+      latitude: OFFICE_GEO.latitude,
+      longitude: OFFICE_GEO.longitude,
     },
     areaServed: [
       { "@type": "Place", name: opts.serviceAreaName },

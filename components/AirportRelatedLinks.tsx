@@ -59,7 +59,7 @@ export default function AirportRelatedLinks({
             href="/airport-taxi-leicester"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gray-200 text-[#0F0D3E] text-sm font-medium hover:border-[#06A0A6] hover:text-[#06A0A6] shadow-sm"
           >
-            Airport taxi Leicester hub
+            Every airport we cover from Leicester
             <ArrowRight className="h-4 w-4 shrink-0" />
           </Link>
           <Link

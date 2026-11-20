@@ -9,22 +9,21 @@ import {
   Plane,
   Calendar,
 } from "lucide-react"
-import { contactInfo, footerData } from "@/lib/data"
+import { contactInfo, footerData, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const canonical = buildCanonical("/airport-transfers-leicester")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Airport Transfers Leicester | Fixed Fares | Aylestone",
   description:
-    "Airport transfers from Leicester to EMA, Birmingham, Heathrow and Gatwick. Fixed fares, no surge, flight tracking. Call 0116 233 8888 or book online 24/7.",
-  keywords:
-    "airport transfers Leicester, airport taxi Leicester, airport taxis Leicester, Leicester airport transfers, airport taxi service Leicester, East Midlands airport taxi, Heathrow taxi Leicester, Gatwick taxi Leicester",
+    `Airport transfers from Leicester to EMA, Birmingham, Heathrow and Gatwick. Fixed fares, no surge, flight tracking. Call ${PHONE_DISPLAY} or book online 24/7.`,
   alternates: {
     canonical,
   },
@@ -32,16 +31,16 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Airport Transfers Leicester | Aylestone Taxis",
     description:
-      "Fixed-fare airport transfers and airport taxis from Leicester. EMA, BHX, Heathrow, Gatwick & more. Call 0116 2338888 or book online.",
+      `Fixed-fare airport transfers and airport taxis from Leicester. EMA, BHX, Heathrow, Gatwick & more. Call ${PHONE_DISPLAY} or book online.`,
     url: canonical,
   },
-}
+})
 
 const faqs = [
   {
     question: "How do I book a Leicester airport taxi?",
     answer:
-      "You can book online through our website or call us directly on 0116 2338888. Provide your flight details and pickup location in Leicester, and we'll handle the rest.",
+      `You can book online through our website or call us directly on ${PHONE_DISPLAY}. Provide your flight details and pickup location in Leicester, and we'll handle the rest.`,
   },
   {
     question: "Do you monitor my flight?",
@@ -359,7 +358,7 @@ export default function AirportTransfersLeicesterPage() {
                 {
                   name: "East Midlands Airport Taxi from Leicester",
                   desc: "Fast and affordable airport transfers from Leicester to East Midlands Airport with fixed fares and 24/7 availability.",
-                  href: "/pricing/airports/East-Midlands",
+                  href: "/leicester-to-east-midlands-airport-taxi",
                 },
                 {
                   name: "Birmingham Airport Taxi from Leicester",

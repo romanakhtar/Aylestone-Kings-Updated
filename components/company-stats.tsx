@@ -1,4 +1,4 @@
-import { siteData } from "@/lib/data"
+import { siteData, GOOGLE_RATING } from "@/lib/data"
 import { Clock, Shield, Users, Car } from "lucide-react"
 
 interface CompanyStatsProps {
@@ -17,7 +17,7 @@ export function CompanyStats({ className = "" }: CompanyStatsProps) {
             <div className="text-3xl md:text-4xl font-bold text-[#06A0A6] mb-2">
               {siteData.company.yearsExperience}
             </div>
-            <div className="text-[#2E3C44]">Years Experience</div>
+            <div className="text-[#2E3C44]">Years serving Leicester</div>
           </div>
           <div>
             <div className="flex items-center justify-center mb-3">
@@ -33,9 +33,9 @@ export function CompanyStats({ className = "" }: CompanyStatsProps) {
               <Users className="h-8 w-8 text-[#06A0A6]" />
             </div>
             <div className="text-3xl md:text-4xl font-bold text-[#06A0A6] mb-2">
-              {siteData.company.happyCustomers}
+              {GOOGLE_RATING.value}★
             </div>
-            <div className="text-[#2E3C44]">Happy Customers</div>
+            <div className="text-[#2E3C44]">Google rating ({GOOGLE_RATING.count} reviews)</div>
           </div>
           <div>
             <div className="flex items-center justify-center mb-3">

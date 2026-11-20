@@ -5,23 +5,19 @@ import JsonLd from "@/components/seo/JsonLd"
 import PageBreadcrumbs from "@/components/PageBreadcrumbs"
 import NightsOutCtas from "@/components/nights-out/NightsOutCtas"
 import VenueList from "@/components/nights-out/VenueList"
-import {
-  CITY_CENTRE_VENUES_LAST_CHECKED_LABEL,
-  cityCentreVenues,
-  venuesByType,
-  type CityCentreVenueType,
-} from "@/lib/data"
+import { CITY_CENTRE_VENUES_LAST_CHECKED_LABEL, cityCentreVenues, venuesByType, type CityCentreVenueType, PHONE_DISPLAY, WHATSAPP_DISPLAY } from "@/lib/data"
 import { clusterPages, NIGHTS_OUT_HUB_PATH } from "@/lib/cityCentreNightsOut"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const CANONICAL = buildCanonical(NIGHTS_OUT_HUB_PATH)
 
-const TITLE = "Taxi to Leicester City Centre Pubs, Bars & Clubs | 24/7"
+const TITLE = "Club Taxi Leicester | Nights Out, Pickups & Rides Home"
 const DESCRIPTION =
-  "Book a taxi to or from any Leicester city centre venue — pubs, bars and nightclubs. Fixed fares agreed before you travel, licensed drivers, 24/7 booking."
+  "Taxis to Leicester city centre clubs, bars and pubs, and a safe ride home after. Pre-book or WhatsApp on the night. Fixed fares, no surge. Book 24/7."
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
@@ -37,7 +33,7 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
   },
-}
+})
 
 /** Venue groups shown on the hub, each linking through to its cluster page. */
 const VENUE_GROUPS: {
@@ -71,9 +67,13 @@ const VENUE_GROUPS: {
 
 const faqs = [
   {
+    question: "What number do I call for a club taxi in Leicester?",
+    answer: `Call ${PHONE_DISPLAY} or WhatsApp ${WHATSAPP_DISPLAY}. Both are staffed 24 hours a day, so you can book a taxi to a club before you go out or a ride home at the end of the night.`,
+  },
+  {
     question: "Can I book a taxi to a Leicester city centre venue in advance?",
     answer:
-      "Yes, and for a night out it is worth doing. You can book online, call 0116 233 8888 or message us on WhatsApp. Give us the venue name and the street, your pickup address and how many of you are travelling, and we will confirm the fare before the driver sets off.",
+      `Yes, and for a night out it is worth doing. You can book online, call ${PHONE_DISPLAY} or message us on WhatsApp. Give us the venue name and the street, your pickup address and how many of you are travelling, and we will confirm the fare before the driver sets off.`,
   },
   {
     question: "Should I book my taxi home before I go out?",
@@ -156,13 +156,13 @@ export default function LeicesterCityCentreNightsOutTaxiPage() {
               Leicester city centre nights out
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-              Taxi to Leicester City Centre Pubs, Bars &amp; Nightclubs
+              Club &amp; Night Out Taxis in Leicester City Centre
             </h1>
 
             <p className="text-xl text-[#2E3C44] leading-relaxed mb-4">
-              <strong>Book a taxi to or from any Leicester city centre venue.</strong> We cover the
-              pubs, bars and clubs across The Lanes, the Market Place, High Street, King Street and
-              Granby Street — there and back, at any hour, with the fare agreed before you travel.
+              <strong>A taxi to the clubs, bars and pubs in Leicester city centre — and home again.</strong>{" "}
+              We cover The Lanes, the Market Place, High Street, King Street and Granby Street, there
+              and back at any hour, with the fare agreed before you travel and no surge on busy nights.
             </p>
             <p className="text-lg text-[#2E3C44] leading-relaxed">
               Licensed, DBS-checked drivers, 24 hours a day. Tell us the venue and how many of you
@@ -289,6 +289,38 @@ export default function LeicesterCityCentreNightsOutTaxiPage() {
           </div>
         </section>
 
+        {/* Pre-book vs on the night, and safe pickup */}
+        <section className="py-16 bg-[#F9FAFB]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#0F0D3E] mb-4">
+                Pre-book, or WhatsApp us on the night
+              </h2>
+              <p className="text-lg text-[#2E3C44] mb-4 leading-relaxed">
+                <strong>Pre-book</strong> if you know roughly when you are heading out and coming back —
+                it holds a car for you before the rush. Book the outbound and the return together, then
+                message us if the time moves.
+              </p>
+              <p className="text-lg text-[#2E3C44] leading-relaxed">
+                <strong>Not sure when you will leave?</strong> WhatsApp {WHATSAPP_DISPLAY} when you are
+                ready with the venue name and how many of you there are. We reply with a fixed fare before
+                the driver sets off, so there is no guessing the price.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#0F0D3E] mb-4">
+                Getting picked up safely
+              </h2>
+              <ul className="space-y-3 text-lg text-[#2E3C44] leading-relaxed list-disc pl-5">
+                <li>Wait inside or by the venue entrance until we tell you the car is outside.</li>
+                <li>Before you get in, check it is your booked car and ask the driver to confirm your name and destination.</li>
+                <li>Only travel in a car you have booked — private hire taxis cannot be flagged down in the street.</li>
+                <li>If the group splits up, tell us — we can add a stop or send a second car rather than leave anyone behind.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* Pickup areas */}
         <section className="py-16 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -314,7 +346,7 @@ export default function LeicesterCityCentreNightsOutTaxiPage() {
             <p className="mt-6 text-lg text-[#2E3C44] leading-relaxed">
               Not listed? We cover the whole city and county — see every{" "}
               <Link
-                href="/taxi-leicester"
+                href="/#areas"
                 className="text-[#06A0A6] underline underline-offset-2 hover:text-[#0F0D3E]"
               >
                 neighbourhood we serve across the city

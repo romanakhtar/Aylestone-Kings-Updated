@@ -1,4 +1,5 @@
 import JsonLd from "@/components/seo/JsonLd"
+import { siteData } from "@/lib/data"
 
 const SITE = "https://aylestone-taxis.co.uk"
 const LOGO = `${SITE}/Aylestone-Taxi-Logo.png`
@@ -54,6 +55,7 @@ export default function BlogPostingJsonLd({
     publisher: {
       "@type": "Organization",
       name: publisherName,
+      ...(publisherName === siteData.company.name ? { legalName: siteData.company.legalName } : {}),
       logo: {
         "@type": "ImageObject",
         url: LOGO,

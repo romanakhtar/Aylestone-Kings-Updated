@@ -1,27 +1,27 @@
 import Image from "next/image"
 import { Shield, Clock, Users, Award, MapPin, Phone, Check, ArrowRight, MessageCircle, Mail, Globe } from "lucide-react"
-import { contactInfo, siteData } from "@/lib/data"
+import { contactInfo, siteData, PHONE_DISPLAY, WHATSAPP_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import RelatedGuides from "@/components/RelatedGuides"
 
 const canonical = buildCanonical("/about")
 
-export const metadata: Metadata = {
-  title: "About Aylestone Taxis Taxi Leicester | Since 1995",
+export const metadata: Metadata = finalizeMetadata({
+  title: "About Us | Aylestone Taxis, 753A Aylestone Road",
   description:
-    "Aylestone Taxis: a Leicester taxi company since 1995. Licensed private hire, DBS-checked drivers, fixed fares. Call 0116 233 8888.",
+    "Who we are and how to reach us: Aylestone Taxis, 753A Aylestone Road, Leicester LE2 8TG. Licensed private hire, DBS-checked drivers, 24/7.",
   alternates: {
     canonical,
   },
   openGraph: {
     images: [OG_IMAGE],
-    title: "About Aylestone Taxis | Aylestone Road Leicester",
-    description: "Leicester's long-established taxi firm: licensed, insured, 24/7. Call 0116 2338888 or book online.",
     url: canonical,
   },
-}
+})
 
 export default function AboutPage() {
   return (
@@ -359,7 +359,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#0F0D3E] mb-1">WhatsApp</p>
-                    <p className="text-[#2E3C44]">{contactInfo.whatsapp}</p>
+                    <p className="text-[#2E3C44]">{contactInfo.whatsappDisplay}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -383,7 +383,7 @@ export default function AboutPage() {
                       rel="noopener noreferrer"
                       className="text-[#06A0A6] hover:text-[#0F0D3E] underline"
                     >
-                      {contactInfo.booking.online}
+                      Book a taxi online
                     </a>
                   </div>
                 </div>
@@ -452,7 +452,7 @@ export default function AboutPage() {
             </div>
             <div>
               <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">How do I book a taxi with Aylestone Taxis?</h3>
-              <p className="text-[#2E3C44]">You can book online in seconds, call 0116 233 8888, or send a WhatsApp message to +44 7535 855786. You'll see your fixed price before you confirm.</p>
+              <p className="text-[#2E3C44]">You can book online in seconds, call {PHONE_DISPLAY}, or send a WhatsApp message to {WHATSAPP_DISPLAY}. You'll see your fixed price before you confirm.</p>
             </div>
           </div>
         </div>
@@ -502,13 +502,14 @@ export default function AboutPage() {
                 "name": "How do I book a taxi with Aylestone Taxis?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "You can book online in seconds, call 0116 233 8888, or send a WhatsApp message to +44 7535 855786. You'll see your fixed price before you confirm."
+                  "text": `You can book online in seconds, call ${PHONE_DISPLAY}, or send a WhatsApp message to ${WHATSAPP_DISPLAY}. You'll see your fixed price before you confirm.`
                 }
               }
             ]
           })
         }}
       />
+      <RelatedGuides slugs={["why-leicester-locals-trust-aylestone-taxis","best-taxi-leicester-what-to-look-for"]} />
     </div>
   )
 }
