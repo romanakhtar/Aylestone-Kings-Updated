@@ -25,9 +25,9 @@ export const BOOKING_URL = "https://aylestonekings.webbooker.icabbi.com/"
 /**
  * Google Business Profile rating — update monthly from the live profile.
  * Feeds the AggregateRating schema AND every visible mention, so they always match.
- * Last updated: 13 Nov 2026 (4.7 from 195 reviews).
+ * Last updated: 20 Nov 2026 (4.7 from 199 reviews).
  */
-export const GOOGLE_RATING = { value: 4.7, count: 195 } as const
+export const GOOGLE_RATING = { value: 4.7, count: 199 } as const
 
 /**
  * London City Airport (LCY) standard fares, confirmed by the business owner (Nov 2026).

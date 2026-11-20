@@ -119,16 +119,16 @@ export function getTaxiServiceJsonLd(opts: {
   serviceType?: string
   offers: ServiceOfferInput[]
 }): Record<string, unknown> {
-  /** Full provider node so Service validates without a separate LocalBusiness @graph entry. */
+  /**
+   * Provider = a reference to the site-wide LocalBusiness (@id ${LOCAL_BUSINESS_ID}), which the root
+   * layout already outputs on every page with the address and aggregateRating. Repeating the rating
+   * here gave Google two AggregateRatings on one page ("Review has multiple aggregate ratings" in
+   * Search Console, Nov 2026), so the rating must only live on the root business node.
+   */
   const provider = {
     "@type": "LocalBusiness",
+    "@id": LOCAL_BUSINESS_ID,
     name: siteData.company.name,
-    legalName: siteData.company.legalName,
-    url: SITE_ORIGIN,
-    telephone: toUkE164(siteData.company.phone),
-    email: siteData.company.email,
-    address: postalAddress(),
-    aggregateRating: getAggregateRatingJsonLd(),
   }
 
   return {
@@ -229,15 +229,12 @@ export function getCorporateServiceGraphJsonLd(opts: {
   serviceName: string
   serviceDescription: string
 }): Record<string, unknown> {
-  const root = getLocalBusinessJsonLd()
-  const { ["@context"]: _ctx, ...localBusinessNode } = root as Record<string, unknown> & {
-    "@context": string
-  }
-
+  // The LocalBusiness itself (with the aggregateRating) is output site-wide by the root layout under
+  // LOCAL_BUSINESS_ID. Repeating it here gave this page two AggregateRatings (Search Console
+  // "Review has multiple aggregate ratings", Nov 2026), so the Service only references it.
   return {
     "@context": "https://schema.org",
     "@graph": [
-      localBusinessNode,
       {
         "@type": "Service",
         "@id": `${opts.serviceUrl}#corporate-service`,
