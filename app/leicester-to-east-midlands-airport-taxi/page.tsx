@@ -1,20 +1,19 @@
 import { Check, ArrowRight, MapPin, Clock, Shield, Phone, Calendar, Plane } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const CANONICAL = buildCanonical("/leicester-to-east-midlands-airport-taxi")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Leicester to East Midlands Airport Taxi | Fixed Fares",
   description:
-    "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £41. Call 0116 233 8888.",
-  keywords:
-    "Leicester to East Midlands Airport taxi, EMA taxi Leicester, East Midlands Airport transfer, Castle Donington airport taxi, fixed fare EMA",
+    `Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £41. Call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical: CANONICAL,
   },
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Leicester to East Midlands Airport Taxi | Fixed Fares",
     description:
-      "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £41. Call 0116 233 8888.",
+      `Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £41. Call ${PHONE_DISPLAY}.`,
     url: CANONICAL,
     siteName: "Aylestone Taxis",
     locale: "en_GB",
@@ -33,9 +32,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Leicester to East Midlands Airport Taxi | Fixed Fares",
     description:
-      "Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £41. Call 0116 233 8888.",
+      `Leicester to East Midlands Airport taxi: A46 route, journey times by area, terminal drop-off info. Fixed fares from £41. Call ${PHONE_DISPLAY}.`,
   },
-}
+})
 
 const faqs = [
   {
@@ -88,10 +87,23 @@ export default function LeicesterToEastMidlandsAirportTaxiPage() {
               <h1 className="text-5xl md:text-6xl font-bold text-[#0F0D3E] mb-6 leading-tight">
                 Leicester to East Midlands Airport taxi — fixed fares from £41
               </h1>
-              <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
-                If you are booking a <strong>Leicester to East Midlands Airport taxi</strong>, Aylestone Taxis offers
-                pre-booked saloon and MPV transfers with a fixed price before you travel. Drivers know the A46 and M1
-                approach into Castle Donington, and we coordinate simple return pickups after you land.
+              <p className="text-xl text-[#2E3C44] max-w-4xl mx-auto mb-6 leading-relaxed">
+                East Midlands Airport is the closest airport to Leicester: around 25 minutes from Oadby and 35–45
+                minutes from the city centre via the A46. We quote a <strong>fixed fare before you travel</strong>,
+                so traffic on the way does not change the price, and we run 24/7 — including 4am pickups for the
+                first flights out.
+              </p>
+              <p className="text-lg text-[#2E3C44] max-w-4xl mx-auto mb-12 leading-relaxed">
+                Flying back? Give us your flight number and we monitor your arrival, so a late landing does not
+                leave you waiting. Prefer to be met inside the terminal? Add our{" "}
+                <Link href="/meet-and-greet-taxi-leicester" className="text-[#06A0A6] underline underline-offset-2">
+                  meet and greet service
+                </Link>
+                . Every fare by vehicle size is in the{" "}
+                <Link href="/pricing/airports/East-Midlands" className="text-[#06A0A6] underline underline-offset-2">
+                  EMA fare table
+                </Link>
+                .
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

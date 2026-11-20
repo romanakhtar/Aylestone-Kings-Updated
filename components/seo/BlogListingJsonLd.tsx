@@ -1,4 +1,5 @@
 import JsonLd from "@/components/seo/JsonLd"
+import { siteData } from "@/lib/data"
 
 const SITE = "https://aylestone-taxis.co.uk"
 const BLOG_ID = `${SITE}/blog#blog`
@@ -57,6 +58,7 @@ export default function BlogListingJsonLd({ name, description, blogs }: Props) {
         publisher: {
           "@type": "Organization",
           name: "Aylestone Taxis",
+          legalName: siteData.company.legalName,
           logo: { "@type": "ImageObject", url: LOGO },
         },
         blogPost,

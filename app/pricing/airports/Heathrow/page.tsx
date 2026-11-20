@@ -1,21 +1,22 @@
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 import AirportPricingBreadcrumbs from "@/components/seo/AirportPricingBreadcrumbs"
 import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
 import { buildAirportMetadata } from "@/lib/seo/airportSeo"
 import { heathrowLeicesterFacts, heathrowPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
-export const metadata = buildAirportMetadata({
+export const metadata = finalizeMetadata(buildAirportMetadata({
   airportName: "Heathrow",
   airportCode: "LHR",
   slug: "Heathrow",
   fromPrice: "£160",
   title: "Leicester to Heathrow Taxi | All Terminals | £160",
   description:
-    "Reliable Leicester–Heathrow transfers, all terminals (T2–T5). Fixed £160 fare, no surge, flight-tracked. Call 0116 233 8888 or book online.",
-})
+    `Reliable Leicester–Heathrow transfers, all terminals (T2–T5). Fixed £160 fare, no surge, flight-tracked. Call ${PHONE_DISPLAY} or book online.`,
+}))
 
 const faqs = heathrowPricingFaqs
 

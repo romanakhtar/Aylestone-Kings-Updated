@@ -1,36 +1,31 @@
 import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Navigation, Home } from "lucide-react"
-import { contactInfo, siteData } from "@/lib/data"
+import { contactInfo, siteData, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import RelatedGuides from "@/components/RelatedGuides"
 
 const canonical = buildCanonical("/local-taxi-leicester")
 
-export const metadata: Metadata = {
-  title: "Local Taxi Leicester | Short Journeys | Aylestone Taxis",
+export const metadata: Metadata = finalizeMetadata({
+  title: "Local Taxi Leicester | Quick Trips Across the City, 24/7",
   description:
-    "Short local taxi journeys across Leicester — hospitals, shops, the railway station and every neighbourhood we cover. Fixed fares. Call 0116 233 8888.",
-  keywords: "local taxi Leicester, taxi service Leicester, local taxi Aylestone, quick taxi Leicester, affordable taxi Leicester",
+    `Short local taxi trips across Leicester: hospital appointments, the shops, the station and getting home. Fixed fares, no surge, 24/7. Call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical,
   },
   openGraph: {
     images: [OG_IMAGE],
-    title: "Local Taxi Leicester | Short Journeys | Aylestone Taxis",
-    description:
-      "Short local taxi journeys across Leicester — hospitals, shops, the railway station and every neighbourhood we cover. Fixed fares. Call 0116 233 8888.",
     url: canonical,
   },
   twitter: {
     images: [OG_IMAGE_URL],
     card: "summary_large_image",
-    title: "Local Taxi Leicester | Short Journeys | Aylestone Taxis",
-    description:
-      "Short local taxi journeys across Leicester — hospitals, shops, the railway station and every neighbourhood we cover. Fixed fares. Call 0116 233 8888.",
   },
-}
+})
 
 export default function LocalTaxiLeicesterPage() {
   return (
@@ -54,7 +49,7 @@ export default function LocalTaxiLeicesterPage() {
                 Most of what we do is short and local: the hospital appointment, the supermarket
                 run, the drop at the railway station, the trip across town when the weather turns.
                 Fares are fixed before you travel however short the journey. Find your neighbourhood
-                in the <Link href="/taxi-leicester" className="text-[#06A0A6] font-semibold underline underline-offset-2">taxi Leicester</Link> area guide, or call and we will send
+                in our <Link href="/#areas" className="text-[#06A0A6] font-semibold underline underline-offset-2">list of areas we cover</Link>, or call and we will send
                 the nearest car.
               </p>
 
@@ -261,7 +256,7 @@ export default function LocalTaxiLeicesterPage() {
                 href="/taxi-leicester"
                 className="inline-flex items-center justify-center gap-2 bg-white text-[#0F0D3E] px-6 py-3 rounded-xl font-semibold shadow-md hover:text-[#06A0A6] transition-colors"
               >
-                Leicester Taxi Service
+                How to Book a Taxi
               </Link>
               <Link
                 href="/taxi-near-me-leicester"
@@ -270,10 +265,10 @@ export default function LocalTaxiLeicesterPage() {
                 Taxi Near Me in Leicester
               </Link>
               <Link
-                href="/local-taxi-leicester"
+                href="/24-hour-taxi-leicester"
                 className="inline-flex items-center justify-center gap-2 bg-white text-[#0F0D3E] px-6 py-3 rounded-xl font-semibold shadow-md hover:text-[#06A0A6] transition-colors"
               >
-                Local Taxi Leicester
+                24 Hour Taxi Leicester
               </Link>
             </div>
           </div>
@@ -305,6 +300,7 @@ export default function LocalTaxiLeicesterPage() {
             </div>
           </div>
         </section>
+        <RelatedGuides slugs={["areas-we-cover-leicester-local-taxi-service","taxi-to-leicester-royal-infirmary-everything-you-need-to-know","explore-leicester-with-aylestone-taxis"]} />
       </main>
     </div>
   )

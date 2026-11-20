@@ -84,20 +84,8 @@ function genericAreaFaqs(areaPlain: string): AreaFaq[] {
       answer:
         "Fares vary with traffic and pickup point, but we offer fixed, competitive pricing. Get an instant quote and book online.",
     },
-    {
-      question: "What vehicle types are available?",
-      answer:
-        "Choose from saloons, estates, MPVs and minibuses for larger groups. All vehicles are clean, comfortable and licensed.",
-    },
-    {
-      question: "Do you provide child seats on request?",
-      answer: "Yes. Add a note during booking and we'll provide appropriate child seating where available.",
-    },
-    {
-      question: "Can I pay by card?",
-      answer:
-        "We accept multiple secure payment methods including card and contactless, subject to vehicle availability.",
-    },
+    // Removed Nov 2026: three generic FAQs (vehicle types, child seats, card payments) were repeated on 19 pages,
+    // and the child-seat and card-payment claims are not confirmed by the business. Re-add only once confirmed.
   ]
 }
 

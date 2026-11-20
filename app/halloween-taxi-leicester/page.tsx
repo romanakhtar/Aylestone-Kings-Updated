@@ -3,22 +3,22 @@ import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import { PHONE_DISPLAY, WHATSAPP_DISPLAY, BOOKING_URL } from "@/lib/data"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const CANONICAL = buildCanonical("/halloween-taxi-leicester")
-const PHONE = "0116 233 8888"
+const PHONE = PHONE_DISPLAY
 const WHATSAPP_HREF =
   "https://wa.me/447535855786?text=Hi!%20I%20need%20a%20Halloween%20taxi%20in%20Leicester"
-const BOOK_ONLINE = "https://aylestonekings.webbooker.icabbi.com/"
+const BOOK_ONLINE = BOOKING_URL
 
 const ORANGE = "#FF7B00"
 const BLACK = "#111111"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Halloween Taxi Leicester | Fixed Fares, No Surge",
   description:
-    "Halloween taxi Leicester — fixed fares and no surge pricing on 31 October. Pre-book your ride home from every city centre venue. Call 0116 233 8888.",
-  keywords:
-    "halloween taxi leicester, taxi halloween leicester, halloween night out leicester taxi, halloween party taxi leicester, pre book halloween taxi leicester",
+    `Halloween taxi Leicester — fixed fares and no surge pricing on 31 October. Pre-book your ride home from every city centre venue. Call ${PHONE_DISPLAY}.`,
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: CANONICAL,
     type: "website",
   },
-}
+})
 
 const faqs = [
   {
@@ -44,7 +44,7 @@ const faqs = [
   {
     question: "Can I book a taxi on Halloween night itself?",
     answer:
-      "Yes. Message us on WhatsApp at +447535855786 when you are ready to leave, send your location and destination, and we confirm a fixed fare before the driver sets off. Pre-booking is still safer on the night, because demand across Leicester peaks between 11pm and 2am.",
+      `Yes. Message us on WhatsApp at ${WHATSAPP_DISPLAY} when you are ready to leave, send your location and destination, and we confirm a fixed fare before the driver sets off. Pre-booking is still safer on the night, because demand across Leicester peaks between 11pm and 2am.`,
   },
   {
     question: "Which Leicester Halloween venues do you collect from?",
@@ -237,7 +237,7 @@ export default function HalloweenTaxiLeicesterPage() {
               <span className="font-bold" style={{ color: ORANGE }}>
                 1.
               </span>{" "}
-              Message <strong className="text-white">+44 7535 855786</strong> when you are ready to go.
+              Message <strong className="text-white">{WHATSAPP_DISPLAY}</strong> when you are ready to go.
             </li>
             <li>
               <span className="font-bold" style={{ color: ORANGE }}>
@@ -259,7 +259,7 @@ export default function HalloweenTaxiLeicesterPage() {
             className="inline-flex items-center justify-center rounded-lg px-8 py-4 font-bold transition-opacity hover:opacity-90"
             style={{ backgroundColor: ORANGE, color: BLACK }}
           >
-            WhatsApp +44 7535 855786
+            WhatsApp {WHATSAPP_DISPLAY}
           </a>
         </div>
       </section>
@@ -281,15 +281,15 @@ export default function HalloweenTaxiLeicesterPage() {
             ))}
           </div>
           <p className="mt-10 text-[#9CA3AF]">
-            Planning the whole night? Read our{" "}
+            Heading home after midnight? Read our{" "}
             <Link
-              href="/blog/halloween-taxi-leicester-2026-pre-book-before-surge-prices-hit"
+              href="/late-night-taxi-leicester"
               className="underline underline-offset-4"
               style={{ color: ORANGE }}
             >
-              Halloween taxi Leicester 2026 guide
+              late night taxi Leicester guide
             </Link>{" "}
-            for costs, timings and the pre-booking window.
+            for pickups, timings and getting home safely.
           </p>
         </div>
       </section>

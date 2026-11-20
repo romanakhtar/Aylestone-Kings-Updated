@@ -1,13 +1,15 @@
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
 import HomePageClient from "./HomePageClient"
+import { PHONE_DISPLAY } from "@/lib/data"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const canonical = buildCanonical("/")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Aylestone Taxis | Leicester Cabs & Airport Transfers",
   description:
-    "Aylestone Taxis has served Leicester since 1995 — local cabs, fixed-fare airport transfers and 24/7 booking by phone, app or WhatsApp. Call 0116 233 8888.",
+    `Aylestone Taxis has served Leicester since 1995 — local cabs, fixed-fare airport transfers and 24/7 booking by phone, app or WhatsApp. Call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical,
   },
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-}
+})
 
 export default function Home() {
   return (

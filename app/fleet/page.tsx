@@ -1,27 +1,28 @@
 import Image from "next/image"
 import { Check, ArrowRight, Users, Car, Shield, Star, Clock } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const canonical = buildCanonical("/fleet")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Taxi Fleet Leicester | Saloons, MPVs & 8-Seaters | Aylestone",
   description:
-    "Our Leicester taxi fleet: saloons, executive cars, 6- and 8-seaters. Clean, licensed, maintained in-house. Call 0116 233 8888.",
+    `Our Leicester taxi fleet: saloons, executive cars, 6- and 8-seaters. Clean, licensed, maintained in-house. Call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical,
   },
   openGraph: {
     images: [OG_IMAGE],
     title: "Taxi Fleet Leicester | Aylestone Taxis",
-    description: "Modern vehicles for every journey. Book on 0116 2338888 or online.",
+    description: `Modern vehicles for every journey. Book on ${PHONE_DISPLAY} or online.`,
     url: canonical,
   },
-}
+})
 
 export default function FleetPage() {
   return (
@@ -284,7 +285,7 @@ export default function FleetPage() {
                       <Users className="h-5 w-5 md:h-6 md:w-6 text-blue-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Spacious Interiors</h4>
+                      <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Spacious Interiors</h3>
                       <p className="text-gray-600 text-sm md:text-base">
                         Plenty of room for passengers and luggage, ensuring everyone travels in comfort.
                       </p>
@@ -295,7 +296,7 @@ export default function FleetPage() {
                       <Car className="h-5 w-5 md:h-6 md:w-6 text-green-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Comfortable Seating</h4>
+                      <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Comfortable Seating</h3>
                       <p className="text-gray-600 text-sm md:text-base">
                         Ergonomically designed seats with premium materials for maximum comfort during your journey.
                       </p>
@@ -306,7 +307,7 @@ export default function FleetPage() {
                       <Shield className="h-5 w-5 md:h-6 md:w-6 text-purple-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Advanced Safety Features</h4>
+                      <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Advanced Safety Features</h3>
                       <p className="text-gray-600 text-sm md:text-base">
                         Equipped with the latest safety technology to ensure your peace of mind throughout the journey.
                       </p>
@@ -363,7 +364,7 @@ export default function FleetPage() {
                       <Star className="h-5 w-5 md:h-6 md:w-6 text-purple-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Luxury Interiors</h4>
+                      <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Luxury Interiors</h3>
                       <p className="text-gray-600 text-sm md:text-base">
                         Premium materials and finishes for a first-class experience that exceeds expectations.
                       </p>
@@ -374,7 +375,7 @@ export default function FleetPage() {
                       <Car className="h-5 w-5 md:h-6 md:w-6 text-blue-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Advanced Technology</h4>
+                      <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Advanced Technology</h3>
                       <p className="text-gray-600 text-sm md:text-base">
                         Cutting-edge infotainment and connectivity options to keep you connected and entertained.
                       </p>
@@ -385,7 +386,7 @@ export default function FleetPage() {
                       <Shield className="h-5 w-5 md:h-6 md:w-6 text-green-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Privacy and Comfort</h4>
+                      <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Privacy and Comfort</h3>
                       <p className="text-gray-600 text-sm md:text-base">
                         Tinted windows and plush seating for a private and comfortable journey every time.
                       </p>

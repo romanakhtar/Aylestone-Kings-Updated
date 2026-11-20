@@ -10,18 +10,20 @@ import {
   Train,
   Users,
 } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import RelatedGuides from "@/components/RelatedGuides"
 
 const CANONICAL = buildCanonical("/student-taxi-leicester")
-const STUDENT_PHONE = "0116 233 8888"
+const STUDENT_PHONE = PHONE_DISPLAY
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Student Taxi Leicester | Fixed Fares | Book Now",
   description:
     "Student taxi service in Leicester for house moves, airport runs & group bookings. Fixed, low fares. Book online today.",
@@ -32,16 +34,16 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Student Taxi Leicester | Moves & Airport Transfers",
     description:
-      "Student taxi services in Leicester for University of Leicester and DMU students. House moves, airport transfers and group bookings. Fixed prices. Call 0116 233 8888.",
+      `Student taxi services in Leicester for University of Leicester and DMU students. House moves, airport transfers and group bookings. Fixed prices. Call ${PHONE_DISPLAY}.`,
     url: CANONICAL,
   },
-}
+})
 
 const faqs = [
   {
     question: "Do you offer student discounts on taxi fares?",
     answer:
-      "We keep student taxi Leicester fares affordable with fixed pricing rather than surge charges — so you always know the cost before you travel. While we do not run a separate discount code scheme, our fixed fares for airport runs, train station trips, and local journeys are competitive for students on a budget. Book online or call 0116 233 8888 for a quote.",
+      `No, we do not offer student discounts. What we do offer is a fixed fare agreed before you travel, with no surge pricing at busy times, so you always know the cost in advance. The fare is for the whole vehicle rather than per person, so friends travelling together can share it. Book online or call ${PHONE_DISPLAY} for a quote.`,
   },
   {
     question: "Can you help with a house move at the end of term in Leicester?",
@@ -458,6 +460,7 @@ export default function StudentTaxiLeicesterPage() {
             </div>
           </div>
         </section>
+        <RelatedGuides slugs={["leicester-freshers-2026-taxi-guide-new-students","moving-out-university-halls-leicester-transport-guide"]} />
       </main>
     </div>
   )

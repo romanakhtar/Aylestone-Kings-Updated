@@ -7,6 +7,7 @@ import {
   onPhoneClick,
   onWhatsAppClick,
 } from "@/lib/analytics"
+import { PHONE_DISPLAY, PHONE_TEL, BOOKING_URL } from "@/lib/data"
 
 type Airport = {
   code: string
@@ -231,7 +232,7 @@ const FareEstimator: React.FC = () => {
                     <div className="parking-note">
                       <strong>Standard saloon car (up to 4 passengers).</strong> Need a larger vehicle?{" "}
                       <a
-                        href="https://aylestonekings.webbooker.icabbi.com/"
+                        href={BOOKING_URL}
                         target="_blank"
                         rel="noreferrer"
                         onClick={onBookNowClick}
@@ -319,7 +320,7 @@ const FareEstimator: React.FC = () => {
                       </div>
                       <div className="result-btns">
                         <a
-                          href="https://aylestonekings.webbooker.icabbi.com/"
+                          href={BOOKING_URL}
                           className="btn-book"
                           target="_blank"
                           rel="noreferrer"
@@ -327,7 +328,7 @@ const FareEstimator: React.FC = () => {
                         >
                           Book Online Now
                         </a>
-                        <a href="tel:01162338888" className="btn-call" onClick={onPhoneClick}>
+                        <a href={`tel:${PHONE_TEL}`} className="btn-call" onClick={onPhoneClick}>
                           📞 Call
                         </a>
                       </div>
@@ -537,7 +538,7 @@ const FareEstimator: React.FC = () => {
                       </div>
                       <div className="result-btns">
                         <a
-                          href="https://aylestonekings.webbooker.icabbi.com/"
+                          href={BOOKING_URL}
                           className="btn-book"
                           target="_blank"
                           rel="noreferrer"
@@ -545,7 +546,7 @@ const FareEstimator: React.FC = () => {
                         >
                           Book Airport Transfer
                         </a>
-                        <a href="tel:01162338888" className="btn-call" onClick={onPhoneClick}>
+                        <a href={`tel:${PHONE_TEL}`} className="btn-call" onClick={onPhoneClick}>
                           📞 Call
                         </a>
                       </div>
@@ -566,7 +567,7 @@ const FareEstimator: React.FC = () => {
                       
                       <strong>Standard saloon car (up to 4 passengers).</strong> Need a larger vehicle?{" "}
                       <a
-                        href="https://aylestonekings.webbooker.icabbi.com/"
+                        href={BOOKING_URL}
                         target="_blank"
                         rel="noreferrer"
                         onClick={onBookNowClick}
@@ -634,7 +635,7 @@ const FareEstimator: React.FC = () => {
                         ))}
                       </div>
                       <div className="result-btns">
-                        <a href="tel:01162338888" className="btn-book" onClick={onPhoneClick}>
+                        <a href={`tel:${PHONE_TEL}`} className="btn-book" onClick={onPhoneClick}>
                           📞 Call for Exact Quote
                         </a>
                         <a href="https://wa.me/447535855786" className="btn-call" target="_blank" rel="noreferrer" onClick={onWhatsAppClick}>
@@ -643,7 +644,7 @@ const FareEstimator: React.FC = () => {
                       </div>
                     </div>
                     <div className="note">
-                      Long distance fares are estimates based on mileage. Call 0116 2338888 or WhatsApp for a confirmed
+                      Long distance fares are estimates based on mileage. Call {PHONE_DISPLAY} or WhatsApp for a confirmed
                       fixed price.
                     </div>
                   </form>

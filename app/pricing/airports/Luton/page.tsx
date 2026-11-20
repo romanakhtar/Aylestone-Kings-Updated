@@ -9,7 +9,7 @@ import {
   Calendar,
 } from "lucide-react"
 import Link from "next/link"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 import AirportPricingBreadcrumbs from "@/components/seo/AirportPricingBreadcrumbs"
@@ -20,16 +20,17 @@ import {
   lutonPricingExtraFaqs,
   type AirportFaqItem,
 } from "@/lib/seo/airportLeicesterFacts"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
-export const metadata = buildAirportMetadata({
+export const metadata = finalizeMetadata(buildAirportMetadata({
   airportName: "Luton",
   airportCode: "LTN",
   slug: "Luton",
   fromPrice: "£130",
   title: "Luton taxi Leicester | From £130 | M1 route | Aylestone",
   description:
-    "Leicester to Luton (LTN): ~85–95 mi, ~1h15–1h45 via M1. Main terminal drop-off. Fixed from £130 — call 0116 233 8888, 24/7.",
-})
+    `Leicester to Luton (LTN): ~85–95 mi, ~1h15–1h45 via M1. Main terminal drop-off. Fixed from £130 — call ${PHONE_DISPLAY}, 24/7.`,
+}))
 
 const faqs: AirportFaqItem[] = [
   ...lutonPricingExtraFaqs,
@@ -678,10 +679,10 @@ export default function LutonPage() {
               </li>
               <li>
                 <Link
-                  href="/leicester-airport-taxi"
+                  href="/airport-taxi-leicester"
                   className="inline-block px-5 py-3 rounded-xl border-2 border-cyan-600 text-cyan-700 font-semibold hover:bg-cyan-600 hover:text-white"
                 >
-                  Leicester airport taxi hub
+                  Leicester airport taxis
                 </Link>
               </li>
             </ul>

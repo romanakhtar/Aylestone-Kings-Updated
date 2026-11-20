@@ -37,7 +37,7 @@ function Navigation() {
 
   const handleCallToBook = () => {
     trackPhoneClick()
-    window.open(`tel:${contactInfo.booking.phone}`, "_self")
+    window.open(`tel:${contactInfo.phoneTel}`, "_self")
   }
 
   return (

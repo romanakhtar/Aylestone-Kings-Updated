@@ -8,21 +8,23 @@ import {
   Shield,
   Users,
 } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import RelatedGuides from "@/components/RelatedGuides"
 
 const CANONICAL = buildCanonical("/match-day-taxi-leicester")
-const MATCH_DAY_PHONE = "0116 233 8888"
+const MATCH_DAY_PHONE = PHONE_DISPLAY
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Match Day Taxi Leicester | Fixed Prices, No Surge",
   description:
-    "Match day taxi to King Power Stadium and Welford Road. Fixed prices, no surge, group vehicles available. Call 0116 233 8888.",
+    `Match day taxi to King Power Stadium and Welford Road. Fixed prices, no surge, group vehicles available. Call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical: CANONICAL,
   },
@@ -30,10 +32,10 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Match Day Taxi Leicester | Fixed Prices, No Surge",
     description:
-      "Match day taxi to King Power Stadium and Welford Road. Fixed prices, no surge, group vehicles available. Call 0116 233 8888.",
+      `Match day taxi to King Power Stadium and Welford Road. Fixed prices, no surge, group vehicles available. Call ${PHONE_DISPLAY}.`,
     url: CANONICAL,
   },
-}
+})
 
 const faqs = [
   {
@@ -372,6 +374,7 @@ export default function MatchDayTaxiLeicesterPage() {
             </div>
           </div>
         </section>
+        <RelatedGuides slugs={["leicester-city-matchday-travel-taxi-guide-2026"]} />
       </main>
     </div>
   )

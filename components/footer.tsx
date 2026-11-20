@@ -5,7 +5,7 @@ import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, MessageCircle, Rocke
 import Logo from "@/components/logo"
 import FooterSeasonalBanners from "@/components/footer-seasonal-banners"
 import HalloweenFooterLink from "@/components/HalloweenFooterLink"
-import { companyInfo, contactInfo, socialLinks, footerData, copyrightInfo } from "@/lib/data"
+import { companyInfo, contactInfo, socialLinks, footerData, copyrightInfo, WHATSAPP_WA } from "@/lib/data"
 
 // Icon mapping function
 function getIconComponent(iconName: string) {
@@ -93,12 +93,12 @@ export default function Footer() {
                   { name: "Local Taxi Service", href: "/local-taxi-leicester" },
                   { name: "Long-Distance & Corporate", href: "/long-distance-taxi-leicester" },
                   { name: "Corporate Taxi Account Leicester", href: "/corporate-taxi-account-leicester" },
-                  { name: "Taxi Leicester", href: "/taxi-leicester" },
+                  { name: "Taxi Number & Booking", href: "/taxi-leicester" },
                   { name: "Taxi Near Me Leicester", href: "/taxi-near-me-leicester" },
-                  { name: "Leicester Airport Taxi", href: "/leicester-airport-taxi" },
                   { name: "Leicester to EMA Taxi", href: "/leicester-to-east-midlands-airport-taxi" },
                   { name: "Cheap Taxi Leicester", href: "/cheap-taxi-leicester" },
                   { name: "24 Hour Taxi Leicester", href: "/24-hour-taxi-leicester" },
+                  { name: "Club & Night Out Taxis", href: "/leicester-city-centre-nights-out-taxi" },
                   { name: "Leicester Taxi Company", href: "/leicester-taxi-company" }
                 ]}
               />
@@ -345,12 +345,12 @@ export default function Footer() {
                 <li className="flex items-center gap-3">
                   <MessageCircle className="h-4 w-4 text-[#06A0A6] flex-shrink-0" aria-hidden />
                   <a
-                    href={`https://wa.me/${contactInfo.whatsapp.replace(/\D/g, "")}`}
+                    href={`https://wa.me/${WHATSAPP_WA}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-[#06A0A6] transition-colors"
                   >
-                    {contactInfo.whatsapp}
+                    {contactInfo.whatsappDisplay}
                   </a>
                 </li>
                 <li className="flex items-center gap-3">

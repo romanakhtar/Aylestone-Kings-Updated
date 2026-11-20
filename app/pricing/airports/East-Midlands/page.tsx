@@ -1,5 +1,5 @@
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
@@ -10,16 +10,20 @@ import { eastMidlandsLeicesterFacts, eastMidlandsPricingFaqs } from "@/lib/seo/a
 import JsonLd from "@/components/seo/JsonLd"
 import { getTaxiServiceJsonLd } from "@/lib/seo/siteJsonLd"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
-export const metadata = buildAirportMetadata({
+export const metadata = finalizeMetadata(buildAirportMetadata({
   airportName: "East Midlands",
   airportCode: "EMA",
   slug: "East-Midlands",
   fromPrice: "£41",
-  title: "East Midlands Airport Taxi Leicester | £41 | 24/7",
+  title: "East Midlands Airport Taxi Fares from Leicester",
   description:
-    "Fixed-price taxi Leicester to East Midlands Airport from £41. Closest airport, licensed drivers, no surge pricing. Book online or call 0116 233 8888.",
-})
+    `Full fare table for Leicester to East Midlands Airport taxis by vehicle size. Fixed prices, no surge, licensed drivers. Book online or call ${PHONE_DISPLAY}.`,
+  // Fare table only: the primary EMA page is /leicester-to-east-midlands-airport-taxi, so this
+  // URL canonicalises there (and is left out of the sitemap) to stop the two competing.
+  canonicalPath: "/leicester-to-east-midlands-airport-taxi",
+}))
 
 const faqs = eastMidlandsPricingFaqs
 
@@ -35,7 +39,7 @@ export default function EastMidlandsPage() {
     serviceType: "Airport taxi transfer",
     offers: [
       {
-        price: "40",
+        price: "41",
         name: "Standard saloon (1–4 passengers)",
         description: "Leicester city centre to East Midlands Airport (EMA) — from £41",
         url: EMA_PRICING_URL,

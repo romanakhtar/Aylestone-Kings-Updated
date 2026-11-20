@@ -1,19 +1,20 @@
 import { Calendar, MapPin, CreditCard, Clock, MessageCircle, Headphones, Check, Star, Shield, Zap, Users, Car } from "lucide-react"
 import {  ArrowRight } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY, LONDON_CITY_FARES } from "@/lib/data"
 import Link from "next/link"
 import type { Metadata } from "next"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const canonical = buildCanonical("/pricing")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Airport Taxi Prices Leicester | From £41 | 24/7",
   description:
-    "Compare fixed airport taxi prices from Leicester — from £41 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
+    `Compare fixed airport taxi prices from Leicester — from £41 to EMA, all major UK airports covered. No hidden fees. Book online or call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical,
   },
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Airport Taxi Prices Leicester | From £41 | 24/7",
     description:
-      "Compare fixed airport taxi prices from Leicester — from £41 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
+      `Compare fixed airport taxi prices from Leicester — from £41 to EMA, all major UK airports covered. No hidden fees. Book online or call ${PHONE_DISPLAY}.`,
     url: canonical,
   },
   twitter: {
@@ -29,9 +30,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Airport Taxi Prices Leicester | From £41 | 24/7",
     description:
-      "Compare fixed airport taxi prices from Leicester — from £41 to EMA, all major UK airports covered. No hidden fees. Book online or call 0116 233 8888.",
+      `Compare fixed airport taxi prices from Leicester — from £41 to EMA, all major UK airports covered. No hidden fees. Book online or call ${PHONE_DISPLAY}.`,
   },
-}
+})
 
 export default function PricingPage() {
   const faqs = [
@@ -56,9 +57,9 @@ export default function PricingPage() {
         "Absolutely! We offer custom pricing for special routes, multiple stops, and unique requirements. Contact us directly or use our app for a personalized quote based on your specific needs.",
     },
     {
-      question: "Do you offer discounts for regular customers or corporate accounts?",
+      question: "Do you offer discounts for regular customers?",
       answer:
-        "Yes! We offer loyalty discounts for regular customers and special rates for corporate accounts with volume bookings. Contact our business team to discuss corporate pricing options.",
+        "No. We do not run loyalty, regular-customer or group discounts. Every customer gets a fixed fare agreed before travel, with no surge pricing. Businesses that travel often can open a corporate account for monthly invoicing.",
     },
     {
       question: "What payment methods do you accept?",
@@ -170,7 +171,7 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">Corporate account discounts available</span>
+                    <span className="text-gray-700">Corporate accounts with monthly invoicing</span>
                   </div>
                 </div>
                 <div className="space-y-4">
@@ -235,7 +236,7 @@ export default function PricingPage() {
                   <tbody>
                     <tr className="border-b border-cyan-100 hover:bg-cyan-50">
                       <td className="px-6 py-4 font-medium text-gray-900 text-base">
-                        <Link href="/pricing/airports/East-Midlands" className="hover:text-cyan-600 cursor-pointer">
+                        <Link href="/leicester-to-east-midlands-airport-taxi" className="hover:text-cyan-600 cursor-pointer">
                           East Midlands
                         </Link>
                       </td>
@@ -296,6 +297,15 @@ export default function PricingPage() {
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£160</td>
                       <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">£220</td>
                     </tr>
+                    <tr className="hover:bg-cyan-50">
+                      <td className="px-6 py-4 font-medium text-gray-900 text-base">
+                        <Link href="/pricing/airports/London-City" className="hover:text-cyan-600 cursor-pointer">
+                          London City
+                        </Link>
+                      </td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">{LONDON_CITY_FARES[0].price}</td>
+                      <td className="px-6 py-4 text-cyan-700 font-semibold text-base text-left">{LONDON_CITY_FARES[1].price}</td>
+                    </tr>
                   </tbody>
                 </table>
                 
@@ -332,7 +342,7 @@ export default function PricingPage() {
                   <div className="flex items-center space-x-4 mb-4">
                     <Car className="h-12 w-12 text-blue-600" />
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">Standard Saloon</h4>
+                      <h3 className="text-xl font-bold text-gray-900">Standard Saloon</h3>
                       <p className="text-gray-600 text-sm">Perfect for small groups and business travel</p>
                     </div>
                   </div>
@@ -357,7 +367,7 @@ export default function PricingPage() {
                   <div className="flex items-center space-x-4 mb-4">
                     <Car className="h-12 w-12 text-blue-600" />
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">Six Seater </h4>
+                      <h3 className="text-xl font-bold text-gray-900">Six Seater </h3>
                       <p className="text-gray-600 text-sm">Perfect for six people travel</p>
                     </div>
                   </div>
@@ -383,7 +393,7 @@ export default function PricingPage() {
                   <div className="flex items-center space-x-4 mb-4">
                     <Users className="h-12 w-12 text-blue-600" />
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">Eight Seater</h4>
+                      <h3 className="text-xl font-bold text-gray-900">Eight Seater</h3>
                       <p className="text-gray-600 text-sm">Ideal for large groups and family travel</p>
                     </div>
                   </div>
@@ -470,10 +480,10 @@ export default function PricingPage() {
             {/* FAQ 5 */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                Do you offer discounts for regular customers or corporate accounts?
+                Do you offer discounts for regular customers?
               </h3>
               <p className="text-gray-600">
-                Yes! We offer loyalty discounts for regular customers and special rates for corporate accounts with volume bookings. Contact our business team to discuss corporate pricing options.
+                No. We do not run loyalty, regular-customer or group discounts. Every customer gets a fixed fare agreed before travel, with no surge pricing. Businesses that travel often can open a corporate account for monthly invoicing.
               </p>
             </div>
 
@@ -587,8 +597,8 @@ export default function PricingPage() {
               <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Group Discounts</h3>
-              <p className="text-gray-600">Save more when travelling with family or colleagues</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Group Travel</h3>
+              <p className="text-gray-600">One fixed fare covers the whole vehicle, so a group can share it</p>
             </div>
           </div>
         </div>

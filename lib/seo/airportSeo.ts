@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import { PHONE_DISPLAY } from "@/lib/data"
 
 type AirportSeoConfig = {
   airportName: string
@@ -13,7 +14,6 @@ type AirportSeoConfig = {
   description?: string
   /** Override canonical when two route URLs share the same intent. */
   canonicalPath?: string
-  keywords?: string[]
 }
 
 export function buildAirportMetadata({
@@ -24,7 +24,6 @@ export function buildAirportMetadata({
   title: titleOverride,
   description: descriptionOverride,
   canonicalPath,
-  keywords: keywordOverride,
 }: AirportSeoConfig): Metadata {
   const route = `/pricing/airports/${slug}`
   const canonical = buildCanonical(canonicalPath ?? route)
@@ -33,17 +32,11 @@ export function buildAirportMetadata({
     `Leicester to ${airportName} Airport Taxi | From ${fromPrice} | Book 24/7`
   const description =
     descriptionOverride ??
-    `Book a Leicester to ${airportName} Airport taxi (${airportCode}) from ${fromPrice}. Fixed fares, licensed drivers, flight tracking, door-to-door across Leicestershire. See your price online or call 0116 2338888 — 24/7.`
+    `Book a Leicester to ${airportName} Airport taxi (${airportCode}) from ${fromPrice}. Fixed fares, licensed drivers, flight tracking, door-to-door across Leicestershire. See your price online or call ${PHONE_DISPLAY} — 24/7.`
 
   return {
     title,
     description,
-    keywords: keywordOverride ?? [
-      `Leicester to ${airportName} Airport taxi`,
-      `${airportName} airport transfer from Leicester`,
-      `taxi from Leicester to ${airportName} Airport`,
-      `${airportCode} taxi from Leicester`,
-    ],
     alternates: {
       canonical,
     },

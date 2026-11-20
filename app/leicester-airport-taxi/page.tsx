@@ -1,29 +1,28 @@
 import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar, Plane } from "lucide-react"
-import { contactInfo, siteData } from "@/lib/data"
+import { contactInfo, siteData, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const canonical = buildCanonical("/leicester-airport-taxi")
 
-export const metadata: Metadata = {
-  title: "Leicester Airport Taxi | Transfers 24/7 | 0116 2338888",
+export const metadata: Metadata = finalizeMetadata({
+  title: `Leicester Airport Taxi | Transfers 24/7 | ${PHONE_DISPLAY}`,
   description:
-    "Leicester airport taxi to every major UK airport. Fixed fares agreed before you travel, no surge, flight tracking. Call 0116 233 8888 or book online 24/7.",
-  keywords:
-    "Leicester Airport Taxi, Leicester airport taxis, airport taxi Leicester, Leicester airport transfers, Leicester airport transfer, airport taxi from Leicester, Leicester to airport taxi",
+    `Leicester airport taxi to every major UK airport. Fixed fares agreed before you travel, no surge, flight tracking. Call ${PHONE_DISPLAY} or book online 24/7.`,
   alternates: {
     canonical,
   },
   openGraph: {
     images: [OG_IMAGE],
     title: "Leicester Airport Taxi | Transfers & Airport Taxis",
-    description: "UK-wide airport transfers from Leicester. Book online or call 0116 2338888 — 24/7.",
+    description: `UK-wide airport transfers from Leicester. Book online or call ${PHONE_DISPLAY} — 24/7.`,
     url: canonical,
   },
-}
+})
 
 export default function LeicesterAirportTaxiPage() {
   return (

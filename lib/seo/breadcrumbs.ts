@@ -5,8 +5,11 @@ export type BreadcrumbItem = {
   href?: string
 }
 
-/** Hub for local area pages (lists neighbourhoods we serve) */
-export const AREAS_HUB_PATH = "/taxi-leicester"
+/**
+ * Hub for local area pages: the full "Areas we cover" list on the homepage.
+ * (/taxi-leicester used to be the hub; it is now the "taxi number & how to book" page.)
+ */
+export const AREAS_HUB_PATH = "/#areas"
 
 /** Ensures BreadcrumbList `item` values are always absolute URLs (required by Google). */
 export function absoluteUrl(pathOrUrl: string): string {

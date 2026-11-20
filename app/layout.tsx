@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Roboto } from "next/font/google"
+import { Inter } from "next/font/google"
 import "./globals.css"
 import "../styles/halloween.css"
 import "../styles/christmas.css"
@@ -15,6 +15,9 @@ import ThirdPartyScripts from "@/components/analytics/ThirdPartyScripts"
 import Footer from "@/components/footer"
 import { getAggregateRatingJsonLd } from "@/lib/seo/siteJsonLd"
 import { buildCanonical } from "@/lib/seo/canonical"
+import { PHONE_DISPLAY, PHONE_E164, BOOKING_URL, siteData } from "@/lib/data"
+
+const BOOKING_ORIGIN = new URL(BOOKING_URL).origin
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -23,26 +26,20 @@ const inter = Inter({
   adjustFontFallback: true,
 })
 
-const roboto = Roboto({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-roboto",
-  preload: true,
-  adjustFontFallback: true,
-})
+// Roboto was loaded and preloaded here but never used (nothing referenced --font-roboto);
+// removed to save a font download competing with LCP on every page.
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aylestone-taxis.co.uk"),
   title: "Aylestone Taxis | Leicester Cabs & Airport Transfers",
   description:
-    "Aylestone Taxis has served Leicester since 1995 — local cabs, fixed-fare airport transfers and 24/7 booking. Call 0116 233 8888 or book online.",
+    `Aylestone Taxis has served Leicester since 1995 — local cabs, fixed-fare airport transfers and 24/7 booking. Call ${PHONE_DISPLAY} or book online.`,
   generator: "Aylestone Taxis",
   authors: [{ name: "Aylestone Taxis" }],
   openGraph: {
     title: "Aylestone Taxis | Leicester Cabs & Airport Transfers",
     description:
-    "Aylestone Taxis has served Leicester since 1995 — local cabs, fixed-fare airport transfers and 24/7 booking. Call 0116 233 8888 or book online.",
+    `Aylestone Taxis has served Leicester since 1995 — local cabs, fixed-fare airport transfers and 24/7 booking. Call ${PHONE_DISPLAY} or book online.`,
     url: buildCanonical("/"),
     siteName: "Aylestone Taxis",
     locale: "en_GB",
@@ -64,11 +61,10 @@ export const metadata: Metadata = {
     images: ["https://aylestone-taxis.co.uk/og-image.jpg"],
   },
   other: {
-    "preconnect": "https://aylestonekings.webbooker.icabbi.com",
     "geo.region": "GB-LEI",
     "geo.placename": "Leicester",
-    "geo.position": "52.6369;-1.1398",
-    "ICBM": "52.6369, -1.1398",
+    "geo.position": "52.602358;-1.155715",
+    "ICBM": "52.602358, -1.155715",
   },
 }
 
@@ -76,14 +72,14 @@ const schemaData = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "TaxiService"],
   "@id": "https://aylestone-taxis.co.uk/#business",
-  name: "Aylestone Taxis Taxi Service",
-  alternateName: "Aylestone Taxis",
+  name: "Aylestone Taxis",
+  legalName: siteData.company.legalName,
   description:
     "Leicester taxis and Leicester cabs since 1995. 24/7 airport transfers, local taxis, and long-distance travel across Leicester, Leicestershire and the East Midlands. Licensed by Leicester City Council.",
   url: "https://aylestone-taxis.co.uk",
   logo: "https://aylestone-taxis.co.uk/Aylestone-Taxi-Logo.png",
   image: "https://aylestone-taxis.co.uk/white-modern-taxi-side.webp",
-  telephone: "+441162338888",
+  telephone: PHONE_E164,
   email: "info@aylestone-taxis.co.uk",
   foundingDate: "1995",
   address: {
@@ -112,11 +108,9 @@ const schemaData = {
     { "@type": "AdministrativeArea", name: "Leicestershire" },
     { "@type": "AdministrativeArea", name: "East Midlands" },
   ],
-  sameAs: [
-    "https://www.facebook.com/aylestone.taxis/",
-    "https://play.google.com/store/apps/details?id=co.uk.aylestone.taxis",
-    "https://apps.apple.com/gb/app/aylestone-kings/id1061012064",
-  ],
+  // Only profiles branded "Aylestone Taxis". The App Store / Google Play listings are titled
+  // a different name, so they are not declared as the same entity (download links stay on-page).
+  sameAs: ["https://www.facebook.com/aylestone.taxis/"],
   priceRange: "££",
   aggregateRating: getAggregateRatingJsonLd(),
 }
@@ -127,16 +121,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${roboto.variable} antialiased`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} antialiased`}>
       <head>
         {/* Resource Hints */}
-        <link rel="preconnect" href="https://aylestonekings.webbooker.icabbi.com" />
-        <link rel="dns-prefetch" href="https://aylestonekings.webbooker.icabbi.com" />
+        <link rel="preconnect" href={BOOKING_ORIGIN} />
+        <link rel="dns-prefetch" href={BOOKING_ORIGIN} />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
-        {/* Preconnect to Google Fonts for faster font loading */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* No Google Fonts preconnect: next/font self-hosts Inter, so those origins are never used. */}
         
         {/* Viewport */}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />

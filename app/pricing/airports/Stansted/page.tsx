@@ -1,21 +1,22 @@
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 import AirportPricingBreadcrumbs from "@/components/seo/AirportPricingBreadcrumbs"
 import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
 import { buildAirportMetadata } from "@/lib/seo/airportSeo"
 import { stanstedLeicesterFacts, stanstedPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
-export const metadata = buildAirportMetadata({
+export const metadata = finalizeMetadata(buildAirportMetadata({
   airportName: "Stansted",
   airportCode: "STN",
   slug: "Stansted",
   fromPrice: "£160",
   title: "Stansted Airport Taxi Leicester | From £160",
   description:
-    "Leicester to Stansted (STN): ~115 mi, ~2h–2h45 via M1/M11. One-terminal drop-off. Fixed from £160 — call 0116 233 8888, 24/7.",
-})
+    `Leicester to Stansted (STN): ~115 mi, ~2h–2h45 via M1/M11. One-terminal drop-off. Fixed from £160 — call ${PHONE_DISPLAY}, 24/7.`,
+}))
 
 const faqs = stanstedPricingFaqs
 

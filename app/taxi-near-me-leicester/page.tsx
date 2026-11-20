@@ -1,37 +1,36 @@
 import { Check, ArrowRight, MapPin, Clock, Shield, Star, Phone, Calendar, Navigation } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY, GOOGLE_RATING } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const canonical = buildCanonical("/taxi-near-me-leicester")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Taxi Near Me Leicester | Quick Pick-Ups | Aylestone Taxis",
   description:
-    "Need a taxi near you in Leicester? Quick pick-ups across Aylestone and the surrounding areas. Call or WhatsApp and we send the nearest car. 0116 233 8888.",
-  keywords:
-    "taxi near me, taxis near me, Taxi Near Me Leicester, taxi near me leicester, Leicester taxi near me, find taxi Leicester, nearest taxi Leicester, 6 seater taxi near me",
+    `Need a taxi near you in Leicester? Quick pick-ups across Aylestone and the surrounding areas. Call or WhatsApp and we send the nearest car. ${PHONE_DISPLAY}.`,
   alternates: {
     canonical,
   },
   openGraph: {
     images: [OG_IMAGE],
     title: "Taxi Near Me Leicester | Quick Pick-Ups | Aylestone Taxis",
-    description: "Taxi near me Leicester: instant quotes, 6-seaters available, 24/7. Call 0116 2338888 or book online.",
+    description: `Taxi near me Leicester: instant quotes, 6-seaters available, 24/7. Call ${PHONE_DISPLAY} or book online.`,
     url: canonical,
   },
-}
+})
 
 export default function TaxiNearMeLeicesterPage() {
   const faqs = [
     {
       question: "How do I book a Taxi Near Me Leicester?",
       answer:
-        "You can book online, call us on 0116 2338888, or send a WhatsApp message. Tell us where you are and we'll send the nearest available driver.",
+        `You can book online, call us on ${PHONE_DISPLAY}, or send a WhatsApp message. Tell us where you are and we'll send the nearest available driver.`,
     },
     {
       question: "Will my taxi really be near me?",
@@ -73,7 +72,7 @@ export default function TaxiNearMeLeicesterPage() {
                 around it, so the nearest free driver is usually minutes away instead of across the
                 city. Call us or send a WhatsApp message and we will tell you honestly how long the
                 wait is. If you are planning ahead instead of travelling right now, our{" "}
-                <Link href="/taxi-leicester" className="text-[#06A0A6] font-semibold underline underline-offset-2">taxi Leicester</Link> page covers the wider service.
+                <Link href="/taxi-leicester" className="text-[#06A0A6] font-semibold underline underline-offset-2">guide to booking a taxi in Leicester</Link> has every way to book ahead.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -157,8 +156,8 @@ export default function TaxiNearMeLeicesterPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#0F0D3E] mb-3">30+ Years Experience</h3>
                 <p className="text-[#2E3C44]">
-                  Leicester's most trusted <strong>Taxi Near Me Leicester</strong> service since 1995. 
-                  Over 10,000 satisfied customers.
+                  Serving Leicester from Aylestone Road since 1995, and rated {GOOGLE_RATING.value} out of 5
+                  from {GOOGLE_RATING.count} Google reviews.
                 </p>
               </div>
 
@@ -305,13 +304,13 @@ export default function TaxiNearMeLeicesterPage() {
                 href="/taxi-leicester"
                 className="inline-flex items-center justify-center gap-2 bg-white text-[#0F0D3E] px-6 py-3 rounded-xl font-semibold shadow-md hover:text-[#06A0A6] transition-colors"
               >
-                Leicester Taxi Service
+                How to Book a Taxi
               </Link>
               <Link
-                href="/taxi-near-me-leicester"
+                href="/late-night-taxi-leicester"
                 className="inline-flex items-center justify-center gap-2 bg-white text-[#0F0D3E] px-6 py-3 rounded-xl font-semibold shadow-md hover:text-[#06A0A6] transition-colors"
               >
-                Taxi Near Me in Leicester
+                Late Night Taxi Leicester
               </Link>
               <Link
                 href="/local-taxi-leicester"

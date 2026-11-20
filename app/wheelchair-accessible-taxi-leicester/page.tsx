@@ -8,21 +8,22 @@ import {
   Accessibility,
   ClipboardList,
 } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
-const PAGE_PHONE = "0116 233 8888"
+const PAGE_PHONE = PHONE_DISPLAY
 const CANONICAL = buildCanonical("/wheelchair-accessible-taxi-leicester")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Wheelchair Accessible Taxi Leicester | Aylestone Taxis",
   description:
-    "Wheelchair accessible taxis across Leicester: safe, comfortable vehicles with trained drivers. Pre-book online or call 0116 233 8888.",
+    `Wheelchair accessible taxis across Leicester: safe, comfortable vehicles with trained drivers. Pre-book online or call ${PHONE_DISPLAY}.`,
   alternates: {
     canonical: CANONICAL,
   },
@@ -30,10 +31,10 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
     title: "Wheelchair Accessible Taxi Leicester | Aylestone Taxis",
     description:
-      "Safe, comfortable wheelchair accessible taxis across Leicester. Pre-book online or call 0116 233 8888.",
+      `Safe, comfortable wheelchair accessible taxis across Leicester. Pre-book online or call ${PHONE_DISPLAY}.`,
     url: CANONICAL,
   },
-}
+})
 
 const BOOKING_STEPS = [
   {

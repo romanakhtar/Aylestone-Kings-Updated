@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, MapPin, Plane, Clock, Shield, Car } from "lucide-react"
-import { footerData, companyInfo, contactInfo, nearbyAreasBySlug } from "@/lib/data"
+import { footerData, companyInfo, contactInfo, nearbyAreasBySlug, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import { JSX } from "react"
 import PageBreadcrumbs from "@/components/PageBreadcrumbs"
@@ -15,6 +15,8 @@ import { collectAreaPageFaqs } from "@/lib/seo/areaPageFaqs"
 import { getAreaServiceAreaLocalBusinessJsonLd } from "@/lib/seo/siteJsonLd"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import { NOINDEX_AREA_SLUGS } from "@/lib/seo/indexing"
 
 type AreaItem = { name: string; href: string }
 
@@ -54,7 +56,7 @@ const DEDICATED_FAQ_AREA_SLUGS = new Set([
 ])
 
 const POPULAR_JOURNEY_AIRPORTS = [
-  { label: "East Midlands Airport", href: "/pricing/airports/East-Midlands", code: "EMA" },
+  { label: "East Midlands Airport", href: "/leicester-to-east-midlands-airport-taxi", code: "EMA" },
   { label: "Birmingham Airport", href: "/taxi-to-birmingham-airport", code: "BHX" },
   { label: "Heathrow Airport", href: "/pricing/airports/Heathrow", code: "LHR" },
   { label: "Gatwick Airport", href: "/pricing/airports/Gatwick", code: "LGW" },
@@ -68,281 +70,281 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   thurcaston: {
     title: "Taxi Thurcaston | Thurcaston Taxis 24/7 Fixed Fares",
     description:
-      "Thurcaston taxis: 20 minutes to Leicester city centre, airport transfers, Watermead and Beaumont Leys runs. Fixed fares 24/7 — call 0116 233 8888.",
+      `Thurcaston taxis: 20 minutes to Leicester city centre, airport transfers, Watermead and Beaumont Leys runs. Fixed fares 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // Thurcaston (October brief, Block B)
   oadby: {
     title: "Taxi Oadby | Oadby Taxis to Leicester & EMA 24/7",
     description:
-      "Taxi in Oadby from £12 to Leicester city centre, £30-35 to EMA. Racecourse, Stoughton Road, station runs. Fixed fares 24/7 — call 0116 233 8888.",
+      `Taxi in Oadby from £12 to Leicester city centre, £30-35 to EMA. Racecourse, Stoughton Road, station runs. Fixed fares 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // 1. Aylestone
   aylestone: {
-    title: "Taxis in Aylestone — Fixed Fares, Airport Transfers | 24/7",
+    title: "Taxi in Aylestone | Local Firm on Aylestone Road Since 1995",
     description:
-      "Need a taxi in Aylestone? Aylestone Taxis has served the area since 1995. Fixed airport fares, 24/7 local rides, DBS-checked drivers. Call 0116 2338888.",
+      `Taxi in Aylestone from the firm based on Aylestone Road since 1995. Saffron Lane, Grace Road and the Meadows covered. Fixed fares 24/7. Call ${PHONE_DISPLAY}.`,
   },
   // 2. Leicester City Centre
   "leicester-city-centre": {
-    title: "Taxis in Leicester City Centre — Fixed Fares | 24/7",
+    title: "Taxi in Leicester City Centre | Highcross, Station & Curve",
     description:
-      "Fast, fixed-price taxis across Leicester city centre — Highcross, Curve Theatre, train station. Book online or call 0116 233 8888.",
+      "Taxi pickups across Leicester city centre: Highcross, the railway station, Curve and the Market. Fixed fare agreed before you travel. Book 24/7.",
   },
   // 4. Wigston
   wigston: {
     title: "Taxi Wigston | South Wigston Pickups 24/7",
     description:
-      "Need a taxi in Wigston? Covering South Wigston, Long Street and Leicester runs. Fixed fares 24/7 — call 0116 233 8888.",
+      `Need a taxi in Wigston? Covering South Wigston, Long Street and Leicester runs. Fixed fares 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // 5. Evington
   evington: {
     title: "Taxi Evington | Evington Taxis Leicester 24/7",
     description:
-      "Evington taxis for the village, Evington Road, Stoughton Road and Victoria Park. Fixed fares, no surge, 24/7 — call 0116 233 8888.",
+      `Evington taxis for the village, Evington Road, Stoughton Road and Victoria Park. Fixed fares, no surge, 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // 6. Belgrave
   belgrave: {
     title: "Taxis in Belgrave — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Fast, reliable taxis in Belgrave, Leicester. Airport transfers, local rides, and 24/7 service from Aylestone Taxis. Licensed drivers. Call 0116 2338888.",
+      `Fast, reliable taxis in Belgrave, Leicester. Airport transfers, local rides, and 24/7 service from Aylestone Taxis. Licensed drivers. Call ${PHONE_DISPLAY}.`,
   },
   // 7. Spinney Hills
   "spinney-hills": {
     title: "Taxis in Spinney Hills | Fixed Fares 24/7",
     description:
-      "Reliable taxi service in Spinney Hills, Leicester. Local journeys, airport transfers, school runs. Licensed drivers available 24/7. Call 0116 2338888.",
+      `Reliable taxi service in Spinney Hills, Leicester. Local journeys, airport transfers, school runs. Licensed drivers available 24/7. Call ${PHONE_DISPLAY}.`,
   },
   // 8. Highfields
   highfields: {
     title: "Taxis in Highfields — Hospital & Airport Transfers | 24/7",
     description:
-      "Taxi in Highfields, Leicester: fixed fares, hospital runs, airport transfers and local journeys. Licensed drivers 24/7 — call 0116 233 8888.",
+      `Taxi in Highfields, Leicester: fixed fares, hospital runs, airport transfers and local journeys. Licensed drivers 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // 9. Clarendon Park
   "clarendon-park": {
     title: "Taxis in Clarendon Park | Fixed Fares 24/7",
     description:
-      "Taxi in Clarendon Park, Leicester: fixed fares, airport transfers and late-night rides home. Licensed drivers 24/7 — call 0116 233 8888.",
+      `Taxi in Clarendon Park, Leicester: fixed fares, airport transfers and late-night rides home. Licensed drivers 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // 10. Knighton
   knighton: {
     title: "Taxis in Knighton — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Taxi in Knighton, Leicester: fixed fares, airport transfers, school runs and local journeys. Licensed drivers 24/7 — call 0116 233 8888.",
+      `Taxi in Knighton, Leicester: fixed fares, airport transfers, school runs and local journeys. Licensed drivers 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // 11. Hamilton
   hamilton: {
     title: "Hamilton Taxi Leicester | Taxis in Hamilton | 24/7",
     description:
-      "Hamilton taxi Leicester: taxis in Hamilton for school runs, shopping and airports. Taxi Hamilton pickups 24/7 — call 0116 233 8888 or book online.",
+      `Hamilton taxi Leicester: taxis in Hamilton for school runs, shopping and airports. Taxi Hamilton pickups 24/7 — call ${PHONE_DISPLAY} or book online.`,
   },
   // 12. Beaumont Leys
   "beaumont-leys": {
     title: "Taxi Beaumont Leys | Beaumont Leys Taxis Leicester",
     description:
-      "Beaumont Leys taxis for the Shopping Centre, Anstey Lane and Glenfield Hospital. City centre in 20–25 mins, fixed fares 24/7 — call 0116 233 8888.",
+      `Beaumont Leys taxis for the Shopping Centre, Anstey Lane and Glenfield Hospital. City centre in 20–25 mins, fixed fares 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // 13. Braunstone
   braunstone: {
     title: "Taxis in Braunstone — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Taxi in Braunstone, Leicester: fixed fares, airport transfers, school runs and local journeys. Licensed drivers 24/7 — call 0116 233 8888.",
+      `Taxi in Braunstone, Leicester: fixed fares, airport transfers, school runs and local journeys. Licensed drivers 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // 14. Thurmaston
   thurmaston: {
     title: "Taxis in Thurmaston — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Taxi in Thurmaston, Leicester: fixed fares, airport transfers, shopping trips and local journeys. 24/7 — call 0116 233 8888.",
+      `Taxi in Thurmaston, Leicester: fixed fares, airport transfers, shopping trips and local journeys. 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // 15. Syston
   syston: {
     title: "Syston Taxis | Station Pickups & EMA from £25",
     description:
-      "Taxi Syston: station pickups, 20 mins to Leicester city centre, East Midlands Airport from £25. Fixed fares, 24/7. Call 0116 233 8888 or book online.",
+      `Taxi Syston: station pickups, 20 mins to Leicester city centre, East Midlands Airport from £25. Fixed fares, 24/7. Call ${PHONE_DISPLAY} or book online.`,
   },
   // 16. Birstall
   birstall: {
-    title: "Taxis in Birstall — Local & Airport | Aylestone Taxis",
+    title: "Birstall Taxi | Watermead, Park & Ride and Leicester Runs",
     description:
-      "Birstall taxis Leicester: reliable Birstall taxis for local trips and airports, 24/7. Book Birstall taxis online or call 0116 2338888.",
+      `Birstall taxis for Watermead, the Park & Ride and trips into Leicester, about 20 minutes via the A6. Fixed fares, no surge, 24/7. Call ${PHONE_DISPLAY}.`,
   },
   // 17. Glenfield
   glenfield: {
     title: "Taxis in Glenfield — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Taxi in Glenfield, Leicester: fixed fares, Glenfield Hospital runs and airport transfers. Licensed drivers 24/7 — call 0116 233 8888.",
+      `Taxi in Glenfield, Leicester: fixed fares, Glenfield Hospital runs and airport transfers. Licensed drivers 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // 18. Blaby
   blaby: {
     title: "Taxi Blaby | Blaby Taxis Leicester — Fixed Fares 24/7",
     description:
-      "Taxi Blaby for the village, retail park and Grove Park. City and airport runs, fixed fares 24/7 — call 0116 233 8888.",
+      `Taxi Blaby for the village, retail park and Grove Park. City and airport runs, fixed fares 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // 19. Narborough
   narborough: {
     title: "Taxis in Narborough — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Taxi in Narborough: fixed fares from £8 to the city centre, EMA from £22, station pickups and school runs 24/7. Call 0116 233 8888.",
+      `Taxi in Narborough: fixed fares from £8 to the city centre, EMA from £22, station pickups and school runs 24/7. Call ${PHONE_DISPLAY}.`,
   },
   // 20. Enderby
   enderby: {
     title: "Taxis in Enderby — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Taxi in Enderby and Meridian Business Park: fixed fares from £8 to Leicester, EMA from £22, corporate accounts. Call 0116 233 8888.",
+      `Taxi in Enderby and Meridian Business Park: fixed fares from £8 to Leicester, EMA from £22, corporate accounts. Call ${PHONE_DISPLAY}.`,
   },
   // 21. Loughborough
   loughborough: {
     title: "Taxis in Loughborough | Fixed Fares & Airports",
     description:
-      "Taxi in Loughborough: fixed fares 24/7, East Midlands Airport transfers, Leicester runs and station pickups. Call 0116 233 8888.",
+      `Taxi in Loughborough: fixed fares 24/7, East Midlands Airport transfers, Leicester runs and station pickups. Call ${PHONE_DISPLAY}.`,
   },
   // 22. Hinckley
   hinckley: {
     title: "Hinckley Taxi | Fixed Fares 24/7 | Aylestone Taxis",
     description:
-      "Need a taxi in Hinckley? Aylestone Taxis offers fixed-price journeys, airport transfers, and 24/7 service. Licensed drivers. Call 0116 2338888.",
+      `Need a taxi in Hinckley? Aylestone Taxis offers fixed-price journeys, airport transfers, and 24/7 service. Licensed drivers. Call ${PHONE_DISPLAY}.`,
   },
   // 23. Coalville
   coalville: {
-    title: "Taxi Coalville | Airport & Local 24/7 | Aylestone",
+    title: "Coalville Taxi | Leicester Runs & EMA Transfers, 24/7",
     description:
-      "Taxi Coalville & Coalville taxis: local rides and airport transfers. Getting around Coalville — book online or call 0116 2338888, 24/7.",
+      "Taxi in Coalville for local trips, Leicester (about 35 minutes) and East Midlands Airport (about 25 minutes). Fixed fare before you travel. Book 24/7.",
   },
   // 24. Melton Mowbray
   "melton-mowbray": {
     title: "Melton Taxis & Melton Mowbray Taxi | Airport | Aylestone",
     description:
-      "Melton taxis and Melton Mowbray taxi: call 0116 2338888 for airport & local trips. Melton taxi numbers for Aylestone Taxis — book online 24/7.",
+      `Melton taxis and Melton Mowbray taxi: call ${PHONE_DISPLAY} for airport & local trips. Melton taxi numbers for Aylestone Taxis — book online 24/7.`,
   },
   // 25. Market Harborough
   "market-harborough": {
     title: "Market Harborough Taxis | Taxi & Cabs 24/7",
     description:
-      "Market Harborough taxis, taxi Market Harborough and cabs for town, station and airports. Fixed fares 24/7 — call 0116 2338888 or book online.",
+      `Market Harborough taxis, taxi Market Harborough and cabs for town, station and airports. Fixed fares 24/7 — call ${PHONE_DISPLAY} or book online.`,
   },
   // 26. Rushey Mead
   "rushey-mead": {
     title: "Taxis in Rushey Mead — 24/7 Pickups | Fixed Fares",
     description:
-      "Reliable taxi service in Rushey Mead, Leicester. Local rides, airport transfers, school runs. 24/7 availability. Call 0116 2338888.",
+      `Reliable taxi service in Rushey Mead, Leicester. Local rides, airport transfers, school runs. 24/7 availability. Call ${PHONE_DISPLAY}.`,
   },
   // 27. Stoneygate
   stoneygate: {
     title: "Taxis in Stoneygate — Fixed Fares, Airport Transfers | 24/7",
     description:
-      "Taxi in Stoneygate, Leicester: fixed fares, airport transfers, corporate travel and local journeys. 24/7 — call 0116 233 8888.",
+      `Taxi in Stoneygate, Leicester: fixed fares, airport transfers, corporate travel and local journeys. 24/7 — call ${PHONE_DISPLAY}.`,
   },
   // 28. South Wigston
   "south-wigston": {
     title: "Taxis in South Wigston — Fixed Fares | 24/7",
     description:
-      "Taxi service in South Wigston, Leicestershire. Airport transfers, local rides, station pickups. 24/7 from Aylestone Taxis. Call 0116 2338888.",
+      `Taxi service in South Wigston, Leicestershire. Airport transfers, local rides, station pickups. 24/7 from Aylestone Taxis. Call ${PHONE_DISPLAY}.`,
   },
   // 29. Humberstone
   humberstone: {
     title: "Taxis in Humberstone — 24/7 Service | Fixed Fares",
     description:
-      "Reliable taxi service in Humberstone, Leicester. Local rides, airport transfers, 24/7 availability. Call Aylestone Taxis on 0116 2338888.",
+      `Reliable taxi service in Humberstone, Leicester. Local rides, airport transfers, 24/7 availability. Call Aylestone Taxis on ${PHONE_DISPLAY}.`,
   },
   // 30. Thurnby Lodge
   "thurnby-lodge": {
     title: "Taxis in Thurnby Lodge — Airport Transfers | 24/7",
     description:
-      "Fast taxi service in Thurnby Lodge, Leicester. Local rides, airport transfers, 24/7 availability from Aylestone Taxis. Call 0116 2338888.",
+      `Fast taxi service in Thurnby Lodge, Leicester. Local rides, airport transfers, 24/7 availability from Aylestone Taxis. Call ${PHONE_DISPLAY}.`,
   },
   // 31. Westcotes
   westcotes: {
     title: "Taxis in Westcotes | 24/7 | Aylestone Taxis",
     description:
-      "Reliable taxi service in Westcotes, Leicester. Local rides, airport transfers, 24/7 service from Aylestone Taxis. Call 0116 2338888.",
+      `Reliable taxi service in Westcotes, Leicester. Local rides, airport transfers, 24/7 service from Aylestone Taxis. Call ${PHONE_DISPLAY}.`,
   },
   // 32. Eyres Monsell
   "eyres-monsell": {
     title: "Taxis in Eyres Monsell — Airport Transfers | 24/7",
     description:
-      "Fast, affordable taxi service in Eyres Monsell, Leicester. Local rides, airport transfers, 24/7 availability. Call 0116 2338888.",
+      `Fast, affordable taxi service in Eyres Monsell, Leicester. Local rides, airport transfers, 24/7 availability. Call ${PHONE_DISPLAY}.`,
   },
   // 33. Glen Parva
   "glen-parva": {
     title: "Taxi Glen Parva | EMA in 15 Mins | Fixed Fares",
     description:
-      "Glen Parva taxis: 20 mins to Leicester city centre, East Midlands Airport in about 15 minutes, HMP Fosse Way visits. Fixed fares 24/7. Call 0116 233 8888.",
+      `Glen Parva taxis: 20 mins to Leicester city centre, East Midlands Airport in about 15 minutes, HMP Fosse Way visits. Fixed fares 24/7. Call ${PHONE_DISPLAY}.`,
   },
   // 34. Fosse Park
   "fosse-park": {
     title: "Fosse Park Taxi | Taxi to Fosse Park Leicester",
     description:
-      "Fosse Park taxi for shopping pickups and drop-offs at Fosse Shopping Park. Taxi to Fosse Park from Leicester — skip parking, call 0116 2338888 or book online.",
+      `Fosse Park taxi for shopping pickups and drop-offs at Fosse Shopping Park. Skip the parking from Leicester: call ${PHONE_DISPLAY} or book online, 24/7.`,
   },
   "kirby-muxloe": {
     title: "Kirby Muxloe Taxi | Taxis in Kirby Muxloe | 24/7",
     description:
-      "Kirby Muxloe taxi for village pickups, station links and airports. Taxis in Kirby Muxloe 24/7 — call 0116 2338888 or book online.",
+      `Kirby Muxloe taxi for village pickups, station links and airports. Taxis in Kirby Muxloe 24/7 — call ${PHONE_DISPLAY} or book online.`,
   },
   // 35. Braunstone Town
   "braunstone-town": {
     title: "Braunstone Town Taxi | 24/7 | Aylestone Taxis",
     description:
-      "Taxi service in Braunstone Town, Leicestershire. Local rides, airport transfers, 24/7 availability. Call Aylestone Taxis on 0116 2338888.",
+      `Taxi service in Braunstone Town, Leicestershire. Local rides, airport transfers, 24/7 availability. Call Aylestone Taxis on ${PHONE_DISPLAY}.`,
   },
   // 36. Groby
   groby: {
     title: "Groby Taxi Leicestershire | Airport 24/7",
     description:
-      "Reliable taxi service in Groby, Leicestershire. Airport transfers to EMA and BHX, local rides, 24/7 availability. Call 0116 2338888.",
+      `Reliable taxi service in Groby, Leicestershire. Airport transfers to EMA and BHX, local rides, 24/7 availability. Call ${PHONE_DISPLAY}.`,
   },
   // 37. Wigston Fields
   "wigston-fields": {
     title: "Taxis in Wigston Fields — Fixed Fares | 24/7",
     description:
-      "Fast taxi service in Wigston Fields, Leicestershire. Airport transfers, local rides, 24/7 availability. Call Aylestone Taxis on 0116 2338888.",
+      `Fast taxi service in Wigston Fields, Leicestershire. Airport transfers, local rides, 24/7 availability. Call Aylestone Taxis on ${PHONE_DISPLAY}.`,
   },
   // 38. Broughton Astley
   "broughton-astley": {
     title: "Broughton Astley Taxi | 24/7 | Aylestone Taxis",
     description:
-      "Reliable taxi service in Broughton Astley. Airport transfers, local rides, 24/7 availability from Aylestone Taxis. Call 0116 2338888.",
+      `Reliable taxi service in Broughton Astley. Airport transfers, local rides, 24/7 availability from Aylestone Taxis. Call ${PHONE_DISPLAY}.`,
   },
   // 39. Cosby
   cosby: {
     title: "Cosby Taxi Leicestershire | Fixed Fares 24/7",
     description:
-      "Reliable 24/7 taxi service in Cosby, Leicestershire. Airport transfers, local rides, licensed drivers. Call Aylestone Taxis on 0116 2338888.",
+      `Reliable 24/7 taxi service in Cosby, Leicestershire. Airport transfers, local rides, licensed drivers. Call Aylestone Taxis on ${PHONE_DISPLAY}.`,
   },
   // 40. Countesthorpe
   countesthorpe: {
     title: "Countesthorpe Taxi | 24/7 Service | Aylestone",
     description:
-      "Fast taxi service in Countesthorpe, Leicestershire. Airport transfers, local rides, 24/7. Licensed drivers. Call 0116 2338888.",
+      `Fast taxi service in Countesthorpe, Leicestershire. Airport transfers, local rides, 24/7. Licensed drivers. Call ${PHONE_DISPLAY}.`,
   },
   // 41. Kibworth
   kibworth: {
     title: "Kibworth Taxi Leicestershire | Airport 24/7",
     description:
-      "Reliable taxi service in Kibworth, Leicestershire. Fixed airport fares, local rides, 24/7 availability. Call Aylestone Taxis on 0116 2338888.",
+      `Reliable taxi service in Kibworth, Leicestershire. Fixed airport fares, local rides, 24/7 availability. Call Aylestone Taxis on ${PHONE_DISPLAY}.`,
   },
   // 42. Lutterworth
   lutterworth: {
     title: "Lutterworth Taxi | Fixed Fares 24/7 | Aylestone",
     description:
-      "Professional taxi service in Lutterworth, Leicestershire. Airport transfers to BHX & EMA, local rides, 24/7. Call 0116 2338888.",
+      `Professional taxi service in Lutterworth, Leicestershire. Airport transfers to BHX & EMA, local rides, 24/7. Call ${PHONE_DISPLAY}.`,
   },
   // 43. Whetstone
   whetstone: {
     title: "Whetstone Taxi Leicestershire | 24/7 Fixed",
     description:
-      "Fast, reliable taxi service in Whetstone, Leicestershire. Airport transfers, local rides, 24/7 availability. Call Aylestone Taxis on 0116 2338888.",
+      `Fast, reliable taxi service in Whetstone, Leicestershire. Airport transfers, local rides, 24/7 availability. Call Aylestone Taxis on ${PHONE_DISPLAY}.`,
   },
   // 44. University & College Areas – De Montfort University & University of Leicester
   "de-montfort-university": {
     title: "Taxi to De Montfort University — Airport Transfers | 24/7",
     description:
-      "Taxi to De Montfort University: fast, affordable DMU rides 24/7, airport transfers and city journeys. Student-friendly — call 0116 233 8888.",
+      `Taxi to De Montfort University: fast, affordable DMU rides 24/7, airport transfers and city journeys. Student-friendly — call ${PHONE_DISPLAY}.`,
   },
   "university-of-leicester": {
     title: "Taxi to University of Leicester | 24/7 Rides",
     description:
-      "Taxi to the University of Leicester: reliable 24/7 student rides, airport transfers and local journeys. Call 0116 233 8888.",
+      `Taxi to the University of Leicester: reliable 24/7 student rides, airport transfers and local journeys. Call ${PHONE_DISPLAY}.`,
   },
   // 45. Leicester Railway Station
   "leicester-railway-station": {
@@ -360,25 +362,25 @@ const areaMeta: Record<string, { title: string; description: string }> = {
   "south-wigston-station": {
     title: "South Wigston Station Taxi | Pre-Book Train Pickups",
     description:
-      "Taxi to or from South Wigston Station. Fixed fares, pickups timed to your train, rides across Wigston & Leicester. Call 0116 233 8888 or book online.",
+      `Taxi to or from South Wigston Station. Fixed fares, pickups timed to your train, rides across Wigston & Leicester. Call ${PHONE_DISPLAY} or book online.`,
   },
   // 48. Tesco Narborough Road
   "tesco-narborough-road": {
     title: "Tesco Narborough Road Taxi | Weekly Shop Rides 24/7",
     description:
-      "Taxi to Tesco Narborough Road for your weekly shop. Fixed fares, help with shopping bags and a ride back home. Book online or call 0116 233 8888, 24/7.",
+      `Taxi to Tesco Narborough Road for your weekly shop. Fixed fares, help with shopping bags and a ride back home. Book online or call ${PHONE_DISPLAY}, 24/7.`,
   },
   // 49. Narborough Station
   "narborough-station": {
     title: "Narborough Station Taxi | Pre-Book Train Pickups",
     description:
-      "Taxi to or from Narborough Station. Fixed fares, pickups timed to your train, onward rides to Leicester or EMA. Call 0116 233 8888 or book online.",
+      `Taxi to or from Narborough Station. Fixed fares, pickups timed to your train, onward rides to Leicester or EMA. Call ${PHONE_DISPLAY} or book online.`,
   },
   // 50. De Montfort Hall
   "de-montfort-hall": {
     title: "Taxi to De Montfort Hall | Concerts & Events 24/7",
     description:
-      "Taxi to De Montfort Hall for concerts, graduations and shows. Fixed fares and pre-booked pickups home after the event. Call 0116 233 8888 or book online.",
+      `Taxi to De Montfort Hall for concerts, graduations and shows. Fixed fares and pre-booked pickups home after the event. Call ${PHONE_DISPLAY} or book online.`,
   },
 }
 
@@ -394,6 +396,7 @@ type PriorityAreaSeoContent = {
 
 /** Optional per-area H1 override (default: Taxi Service in {area} – Aylestone Taxis). */
 const AREA_CUSTOM_H1: Record<string, string> = {
+  aylestone: "Taxi in Aylestone — Your Local Firm on Aylestone Road",
   knighton: "Taxis in Knighton, Leicester",
   "clarendon-park": "Taxis in Clarendon Park, Leicester",
   stoneygate: "Taxis in Stoneygate, Leicester",
@@ -447,6 +450,12 @@ const AREA_BLOG_CALLOUTS: Record<
   string,
   { href: string; title: string; teaser: string }
 > = {
+  "leicester-royal-infirmary": {
+    href: "/blog/taxi-to-leicester-royal-infirmary-everything-you-need-to-know",
+    title: "Taxi to Leicester Royal Infirmary — Everything You Need to Know",
+    teaser:
+      "Entrances, departments and the best drop-off points for appointments and visits are covered in",
+  },
   oadby: {
     href: "/blog/leicester-to-birmingham-airport-taxi-complete-guide-cost-time-tips",
     title: "Leicester to Birmingham Airport: Cost, Time & Tips",
@@ -529,7 +538,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Leicester Racecourse on Oadby Road is the single biggest driver of event bookings in the area. Race days fill the car parks and the surrounding roads, and pre-booking a taxi both ways is far easier than hunting for a space. We also run constantly along Stoughton Road and the residential streets off it, to and from The Parade for shopping, and out to Oadby Grange and Brocks Hill. For rail connections, South Wigston station is a short hop from Oadby and a common booking for commuters heading to Birmingham or Nuneaton, while Leicester railway station is the usual choice for London and the north.",
       "Night-time cover matters here. Oadby is far enough out that the last buses stop early, and a lot of our Oadby work is the journey home from a restaurant on Granby Street or a night out around the Clock Tower. We operate 24 hours a day, every day of the year, so a 1am pickup on a Saturday is treated exactly like a 9am one on a Tuesday: a licensed, DBS-checked driver and a price agreed in advance.",
       "Regular bookings are straightforward to set up. Parents arrange the same school run each morning, often with the same driver where we can manage it, and older residents book recurring hospital and GP appointments to Leicester Royal Infirmary, Glenfield Hospital and Leicester General. Businesses along the A6 corridor use standing bookings for staff and clients. Tell us the days and times you need and we will hold the slot rather than making you book from scratch each week.",
-      "Our vehicles range from standard saloons for a single commuter to estates and MPVs for families, race-day groups and airport trips with luggage. Wheelchair accessible vehicles are available on request — just mention it when you book so the right vehicle is allocated. To book a taxi in Oadby, call 0116 233 8888, message us on WhatsApp, or book online in under a minute.",
+      `Our vehicles range from standard saloons for a single commuter to estates and MPVs for families, race-day groups and airport trips with luggage. Wheelchair accessible vehicles are available on request — just mention it when you book so the right vehicle is allocated. To book a taxi in Oadby, call ${PHONE_DISPLAY}, message us on WhatsApp, or book online in under a minute.`,
     ],
     faqs: [
       {
@@ -545,7 +554,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I book a regular taxi from Oadby?",
         answer:
-          "Yes. We set up standing bookings for school runs, commutes, hospital appointments and regular business travel, with the same pickup time each day and, where possible, the same DBS-checked driver. Call 0116 233 8888 or book online to arrange one.",
+          `Yes. We set up standing bookings for school runs, commutes, hospital appointments and regular business travel, with the same pickup time each day and, where possible, the same DBS-checked driver. Call ${PHONE_DISPLAY} or book online to arrange one.`,
       },
       {
         question: "Can you take me to Leicester Racecourse or South Wigston station?",
@@ -560,7 +569,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "A taxi from Thurcaston to Leicester city centre takes around 20 minutes in normal traffic, heading south on Thurcaston Road and through the Beaumont Leys and Blackbird Road approaches. Peak-hour traffic on the way into the city adds a few minutes, so if you need to be somewhere for a fixed time, tell us when you book and we will set the pickup accordingly. Fares are fixed and confirmed before you travel — no meter, no surge pricing in the evenings, and no change to the price if the traffic is heavier than expected.",
       "Beaumont Leys is the nearest large centre, a few minutes down the road, and trips to the shopping centre there are among our most frequent Thurcaston bookings. Watermead Country Park, just to the east across the Soar, draws visitors and dog walkers throughout the year and is an easy drop-off and collection for us. We also run regularly to Birstall, Anstey and Rothley, into Leicester for the railway station and the hospitals, and out to the retail parks on the north side of the city.",
       "Airport travel is the other big one. East Midlands Airport is the closest major airport to Thurcaston, with Birmingham a longer run for international flights. These are the bookings where a fixed fare and a reliable pickup matter most, and we are happy to take a booking weeks ahead for a 4am departure. Flight monitoring is available on return journeys so we are there when you land rather than when you were scheduled to.",
-      "Every driver is licensed by the council and DBS-checked, and the fleet runs from saloons through to estates and MPVs for families, groups and luggage-heavy airport trips. Wheelchair accessible vehicles are available if you request one at the time of booking. To book a taxi in Thurcaston, call 0116 233 8888, message us on WhatsApp, or book online and see your fixed price before you confirm.",
+      `Every driver is licensed by the council and DBS-checked, and the fleet runs from saloons through to estates and MPVs for families, groups and luggage-heavy airport trips. Wheelchair accessible vehicles are available if you request one at the time of booking. To book a taxi in Thurcaston, call ${PHONE_DISPLAY}, message us on WhatsApp, or book online and see your fixed price before you confirm.`,
     ],
     faqs: [
       {
@@ -603,7 +612,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I get a taxi from Knighton late at night?",
         answer:
-          "Yes. We operate 24/7 in Knighton, including late-night pickups after city-centre events, DMU society evenings, and early-morning airport runs. Call 0116 233 8888 or book online at any hour.",
+          `Yes. We operate 24/7 in Knighton, including late-night pickups after city-centre events, DMU society evenings, and early-morning airport runs. Call ${PHONE_DISPLAY} or book online at any hour.`,
       },
       {
         question: "What is the fare from Knighton to Leicester city centre?",
@@ -625,7 +634,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Do you cover late night pickups in Clarendon Park?",
         answer:
-          "Yes. We operate 24/7 in Clarendon Park, including late-night pickups after city-centre events, university society evenings, and restaurant trips along London Road. Call 0116 233 8888 or book online at any hour — no late-night surcharge.",
+          `Yes. We operate 24/7 in Clarendon Park, including late-night pickups after city-centre events, university society evenings, and restaurant trips along London Road. Call ${PHONE_DISPLAY} or book online at any hour — no late-night surcharge.`,
       },
       {
         question: "Can I get a fixed price taxi from Clarendon Park to the airport?",
@@ -662,7 +671,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I book a corporate taxi from Stoneygate?",
         answer:
-          "Yes. We offer corporate taxi accounts for Stoneygate businesses and regular commuters, including standing airport runs, client meetings, and itemised billing. Call 0116 233 8888 or book online to set up an account or pre-book a journey.",
+          `Yes. We offer corporate taxi accounts for Stoneygate businesses and regular commuters, including standing airport runs, client meetings, and itemised billing. Call ${PHONE_DISPLAY} or book online to set up an account or pre-book a journey.`,
       },
     ],
   },
@@ -684,7 +693,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I book a regular taxi from Highfields for night shifts?",
         answer:
-          "Yes. Many NHS workers and shift workers in Highfields set up regular standing bookings for night-shift pickups and drop-offs. Call 0116 233 8888 to arrange a recurring booking with consistent times and, where possible, the same driver.",
+          `Yes. Many NHS workers and shift workers in Highfields set up regular standing bookings for night-shift pickups and drop-offs. Call ${PHONE_DISPLAY} to arrange a recurring booking with consistent times and, where possible, the same driver.`,
       },
       {
         question: "What is the fare from Highfields to Leicester city centre?",
@@ -716,7 +725,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I book a school run taxi from Braunstone?",
         answer:
-          "Yes. We set up regular school runs from Braunstone with consistent pickup times and, where possible, the same DBS-checked driver each morning. Call 0116 233 8888 or book online to arrange a standing school-run booking.",
+          `Yes. We set up regular school runs from Braunstone with consistent pickup times and, where possible, the same DBS-checked driver each morning. Call ${PHONE_DISPLAY} or book online to arrange a standing school-run booking.`,
       },
     ],
   },
@@ -727,7 +736,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "A taxi from Blaby to Leicester city centre takes about 15 to 20 minutes in normal traffic, usually via Blaby Road and the A426 towards the southern approaches. East Midlands Airport is around 20 minutes on a clear run via the M1, which is why early flights from this side of Leicestershire are often booked the night before. We do not publish a set cash figure for either route here — the fare is quoted as a fixed price when you book, and that is the price you pay, including late at night.",
       "Commuter runs into Leicester railway station and city offices are among the most frequent Blaby taxi Leicester bookings. Standing weekday pickups are simple to set up if you travel the same way each morning. The same applies to hospital appointments at Leicester Royal Infirmary or Glenfield: give us the entrance or department so the driver does not default to the main gate. Recurring school-run slots can be held at a set time rather than rebooked every evening.",
       "Evenings into Leicester are the other pattern. Once buses thin out, the return from the city centre is easier if you pre-book or message when you are ready to leave. Neighbouring Wigston, South Wigston, Glen Parva and Narborough are all on the same coverage, so a drop in one and a pickup in another does not change how we treat the job. For invoiced staff travel from Grove Park or the retail park, a corporate account keeps the quotes and references in one place.",
-      "Every driver is licensed and DBS-checked. Saloons cover a single passenger; estates and MPVs are better for shopping bags, luggage or a group. Wheelchair accessible vehicles are available if you ask when you book. To book a taxi in Blaby, call 0116 233 8888, message us on WhatsApp, or book online and confirm the fixed fare before the car is sent.",
+      `Every driver is licensed and DBS-checked. Saloons cover a single passenger; estates and MPVs are better for shopping bags, luggage or a group. Wheelchair accessible vehicles are available if you ask when you book. To book a taxi in Blaby, call ${PHONE_DISPLAY}, message us on WhatsApp, or book online and confirm the fixed fare before the car is sent.`,
     ],
     faqs: [
       {
@@ -743,7 +752,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I book a regular taxi from Blaby?",
         answer:
-          "Yes. Standing bookings are available for weekday commutes into Leicester, school runs and recurring appointments. Call 0116 233 8888 or book online and we will hold the same pickup time rather than asking you to rebook each day.",
+          `Yes. Standing bookings are available for weekday commutes into Leicester, school runs and recurring appointments. Call ${PHONE_DISPLAY} or book online and we will hold the same pickup time rather than asking you to rebook each day.`,
       },
       {
         question: "Do you run airport transfers from Blaby?",
@@ -775,7 +784,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I book a regular school run from Narborough?",
         answer:
-          "Yes. We set up regular school runs from Narborough with consistent pickup times and, where possible, the same DBS-checked driver each morning. Call 0116 233 8888 or book online to arrange a standing school-run booking.",
+          `Yes. We set up regular school runs from Narborough with consistent pickup times and, where possible, the same DBS-checked driver each morning. Call ${PHONE_DISPLAY} or book online to arrange a standing school-run booking.`,
       },
     ],
   },
@@ -792,7 +801,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Do you offer corporate taxi accounts for Meridian Business Park?",
         answer:
-          "Yes. We provide corporate taxi accounts for businesses at Meridian Business Park and across Enderby, including invoicing, reference fields on bookings, and standing weekday pickups for staff. Contact us on 0116 233 8888 or visit our corporate taxi account page to set up an account.",
+          `Yes. We provide corporate taxi accounts for businesses at Meridian Business Park and across Enderby, including invoicing, reference fields on bookings, and standing weekday pickups for staff. Contact us on ${PHONE_DISPLAY} or visit our corporate taxi account page to set up an account.`,
       },
       {
         question: "How much is a taxi from Enderby to East Midlands Airport?",
@@ -802,7 +811,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I book a regular taxi for commuting from Enderby?",
         answer:
-          "Yes. Many Enderby and Meridian Business Park commuters set up regular standing bookings for weekday travel to Leicester city centre, stations, and other workplaces. Call 0116 233 8888 to arrange a recurring pickup with consistent times and, where possible, the same DBS-checked driver.",
+          `Yes. Many Enderby and Meridian Business Park commuters set up regular standing bookings for weekday travel to Leicester city centre, stations, and other workplaces. Call ${PHONE_DISPLAY} to arrange a recurring pickup with consistent times and, where possible, the same DBS-checked driver.`,
       },
     ],
   },
@@ -813,7 +822,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Victoria Park sits on the city side of Evington, a few minutes by car along Evington Road and the London Road approaches. It is a regular drop-off for events, sport and walks, and a practical meeting point if you are heading on to the University of Leicester campus just beyond the park. Tell us which gate or road you want — the park has more than one usable edge, and a driver waiting on the wrong side of the perimeter adds a walk you did not plan.",
       "A taxi from Evington to Leicester city centre takes about 10 to 15 minutes in normal traffic via Evington Road or the A47. Leicester General Hospital is a short local run from most of the village; name the entrance or department when you book. East Midlands Airport is typically around 25 minutes via the A563 and M1. Existing local quotes on this site for Evington to the city centre often start from about £6, but your fare is always confirmed as a fixed price at booking and can change with the exact street and vehicle.",
       "An Evington taxi Leicester booking is often a standing one: the same school-run time, a weekly shop, or a regular appointment at the General. We can hold those slots. Evenings into the city are straightforward if you pre-book the return, because the last useful buses stop earlier than most nights out. Neighbouring Oadby, Highfields, Stoneygate and Spinney Hills are all covered on the same dispatch — we do not add a boundary fee for crossing from Evington into those streets.",
-      "Drivers are licensed and DBS-checked. Saloons cover most local hops; estates and MPVs help with luggage, shopping or a group heading to the park or the airport. Ask at booking if you need extra time boarding or a wheelchair accessible vehicle. To book, call 0116 233 8888, message us on WhatsApp, or book online and see the fixed fare before you confirm.",
+      `Drivers are licensed and DBS-checked. Saloons cover most local hops; estates and MPVs help with luggage, shopping or a group heading to the park or the airport. Ask at booking if you need extra time boarding or a wheelchair accessible vehicle. To book, call ${PHONE_DISPLAY}, message us on WhatsApp, or book online and see the fixed fare before you confirm.`,
     ],
     faqs: [
       {
@@ -905,7 +914,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "How much does a taxi from Melton Mowbray to Leicester city centre cost?",
         answer:
-          "Fares from Melton Mowbray to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
+          `Fares from Melton Mowbray to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call ${PHONE_DISPLAY} or book online for a confirmed quote.`,
       },
       {
         question: "How long does a taxi from Melton Mowbray to Leicester take?",
@@ -942,7 +951,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "How much does a taxi from Market Harborough to Leicester city centre cost?",
         answer:
-          "Fares from Market Harborough to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
+          `Fares from Market Harborough to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call ${PHONE_DISPLAY} or book online for a confirmed quote.`,
       },
       {
         question: "How long does a taxi from Market Harborough to Leicester take?",
@@ -962,7 +971,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Do you provide Market Harborough taxis and cabs 24/7?",
         answer:
-          "Yes. Market Harborough taxis and cabs Market Harborough are available day and night, including bank holidays. Book a taxi Market Harborough online or call 0116 233 8888.",
+          `Yes. Market Harborough taxis and cabs Market Harborough are available day and night, including bank holidays. Book a taxi Market Harborough online or call ${PHONE_DISPLAY}.`,
       },
     ],
   },
@@ -972,14 +981,14 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "From Coalville to Leicester city centre, a typical taxi journey is around 35 minutes via the A511 and city approach roads, with rush-hour traffic occasionally extending the run. East Midlands Airport is the nearest major airport for most Coalville passengers, usually around 25 minutes depending on the A511 and M1 flow. Typical fares to EMA are approximately GBP 38 to GBP 50 for standard vehicles, and we confirm the expected fare before dispatch.",
       "Frequent local destinations include Snibston Colliery Park and the Clock Tower area, both regular points for shopping and social journeys. We also complete many pickups around Hermitage Leisure Centre and nearby business locations where shift-based timings are critical. When a main-road pickup is busy, drivers can coordinate a safer side-street meeting point so boarding is quicker and the onward route starts without unnecessary waiting.",
       "Coalville customers often need a blend of short local runs and planned long-distance travel. Families use us for school and healthcare schedules, while workers rely on punctual collections for industrial and logistics sites where lateness creates immediate problems. Our booking flow supports one-off requests and recurring rides, so regular users can keep travel predictable without entering the same details every day.",
-      "Aylestone Taxis performs strongly in Coalville because we already understand the local demand profile: early starts, practical journeys, and airport transfers where accurate timing matters. Our dispatch team gives realistic ETAs, our licensed drivers communicate clearly, and our service standards stay consistent across local and longer routes. That combination is why many Coalville passengers use us repeatedly instead of relying on ad-hoc ride options.",
+      "Coalville passengers come back to us because we know how the area travels: early starts, practical journeys, and airport transfers where accurate timing matters. Our dispatch team gives realistic ETAs, our licensed drivers communicate clearly, and our service standards stay consistent across local and longer routes. That combination is why many Coalville passengers use us repeatedly instead of relying on ad-hoc ride options.",
       "If you want airport route detail before booking, visit /airport-transfers-leicester. For upfront fare planning, check /pricing so your cost expectations are clear in advance. This keeps Coalville travel transparent and dependable from first enquiry to final drop-off.",
     ],
     faqs: [
       {
         question: "How much does a taxi from Coalville to Leicester city centre cost?",
         answer:
-          "Fares from Coalville to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
+          `Fares from Coalville to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call ${PHONE_DISPLAY} or book online for a confirmed quote.`,
       },
       {
         question: "How long does a taxi from Coalville to Leicester take?",
@@ -1005,13 +1014,13 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Glenfield Hospital is a short, regular run from Beaumont Leys. We use Anstey Lane and the Glenfield approaches rather than dragging the job through the city. Name the entrance, clinic or ward when you book so you are not left at the wrong frontage. The same drivers cover Glenfield village, Birstall and the north ring-road, so a drop at the hospital and a later pickup on Beaumont Leys Lane is one continuous patch of coverage, not two different firms.",
       "A taxi from Beaumont Leys to Leicester city centre takes about 20 to 25 minutes in normal traffic, typically via the A563 and the inner approaches. Peak hours on the ring road add a few minutes. We quote a fixed fare at booking rather than leaving you with a meter — there is no published flat cash figure for this route, because the exact street and vehicle change the price. East Midlands Airport is usually reached via the ring road and the M1; pre-book early departures so the car is allocated before 4am.",
       "Taxis in Beaumont Leys Leicester also cover standing weekday slots: the same school-run time, a regular shop at the centre, or shift changes at the hospital. Evenings into town are easier if you pre-book the return, because buses thin out on the north-west side earlier than the last bars close. Neighbouring Glenfield, Birstall and Syston are on the same board. Corporate accounts are available if a workplace on the north side of the city needs invoiced travel.",
-      "Drivers are licensed and DBS-checked. Saloons cover most local jobs; estates and MPVs help with shopping and luggage. Ask if you need a wheelchair accessible vehicle. To book a Beaumont Leys taxi, call 0116 233 8888, message us on WhatsApp, or book online and confirm the fare before the car is sent.",
+      `Drivers are licensed and DBS-checked. Saloons cover most local jobs; estates and MPVs help with shopping and luggage. Ask if you need a wheelchair accessible vehicle. To book a Beaumont Leys taxi, call ${PHONE_DISPLAY}, message us on WhatsApp, or book online and confirm the fare before the car is sent.`,
     ],
     faqs: [
       {
         question: "How much is a taxi from Beaumont Leys to Leicester city centre?",
         answer:
-          "The journey takes about 20 to 25 minutes in normal traffic via the A563. We quote a fixed fare at booking based on your exact street and vehicle — there is no meter and no late-night surge. Call 0116 233 8888 or book online for the confirmed price.",
+          `The journey takes about 20 to 25 minutes in normal traffic via the A563. We quote a fixed fare at booking based on your exact street and vehicle — there is no meter and no late-night surge. Call ${PHONE_DISPLAY} or book online for the confirmed price.`,
       },
       {
         question: "Do you cover Glenfield Hospital from Beaumont Leys?",
@@ -1026,7 +1035,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "How do I book a Beaumont Leys taxi?",
         answer:
-          "Book a Beaumont Leys taxi online or call 0116 233 8888. Taxis in Beaumont Leys run 24/7 with a fixed fare confirmed before you travel.",
+          `Book a Beaumont Leys taxi online or call ${PHONE_DISPLAY}. Taxis in Beaumont Leys run 24/7 with a fixed fare confirmed before you travel.`,
       },
     ],
   },
@@ -1036,7 +1045,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "A taxi from Syston to Leicester city centre takes around 20 minutes along the A607 in normal traffic, with peak-hour flow adding a few minutes on the approach into town. East Midlands Airport is the nearest major airport and the most common long trip we run from the village, with fares usually in the region of £25 to £30 for a standard car. Prices are fixed and confirmed before you travel, which matters most on early-morning airport runs when nobody wants a surprise at the end of the journey.",
       "Syston railway station is the busiest pickup point in the village, with services towards Leicester and Loughborough, and we time collections to the train rather than to a rough guess. Birstall Road, Melton Road and the residential streets off them make up most of our local work, along with trips to Syston Health Centre, the Co-op and the retail stretch on Melton Road. We also run regularly to Leicester Royal Infirmary and Glenfield Hospital for appointments, and to Thurmaston Shopping Centre just down the road.",
       "A lot of Syston travel is repeat travel, so we make that easy. Commuters book a standing morning pickup to the station; parents set up the school run; families arrange the airport transfer weeks ahead with a confirmed price. One-off bookings are just as simple, and we are available 24 hours a day, seven days a week, including the late-evening returns that public transport no longer covers.",
-      "Every driver is licensed by the council and DBS-checked, and our fleet runs from saloons for single passengers up to estates and MPVs for families and luggage-heavy airport trips. To book a taxi in Syston, call 0116 233 8888, message us on WhatsApp, or book online and get your fixed price in seconds.",
+      `Every driver is licensed by the council and DBS-checked, and our fleet runs from saloons for single passengers up to estates and MPVs for families and luggage-heavy airport trips. To book a taxi in Syston, call ${PHONE_DISPLAY}, message us on WhatsApp, or book online and get your fixed price in seconds.`,
     ],
     faqs: [
       {
@@ -1084,7 +1093,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I book a taxi from Thurmaston Shopping Centre?",
         answer:
-          "Yes. We regularly pick up and drop off at Thurmaston Shopping Centre and the surrounding retail park — ideal when you have shopping bags or want a pre-booked return after your trip. Call 0116 233 8888 or book online.",
+          `Yes. We regularly pick up and drop off at Thurmaston Shopping Centre and the surrounding retail park — ideal when you have shopping bags or want a pre-booked return after your trip. Call ${PHONE_DISPLAY} or book online.`,
       },
     ],
   },
@@ -1125,7 +1134,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "How much does a taxi from Lutterworth to Leicester city centre cost?",
         answer:
-          "Fares from Lutterworth to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
+          `Fares from Lutterworth to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call ${PHONE_DISPLAY} or book online for a confirmed quote.`,
       },
       {
         question: "How long does a taxi from Lutterworth to Leicester take?",
@@ -1181,7 +1190,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "How much does a taxi from Hinckley to Leicester city centre cost?",
         answer:
-          "Fares from Hinckley to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
+          `Fares from Hinckley to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call ${PHONE_DISPLAY} or book online for a confirmed quote.`,
       },
       {
         question: "How long does a taxi from Hinckley to Leicester take?",
@@ -1207,7 +1216,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "Approximate fares from Wigston to Leicester city centre are about £10 to £12, depending on the exact street and time of day. In normal traffic the run takes around 15 to 20 minutes via the A5199 or the A6 approaches; the morning peak on the way in can add a few minutes. Wigston to East Midlands Airport is typically about £20 to £25 for a standard car, heading out via the A563 and the M1. These figures are a guide. The fare is fixed and confirmed when you book, and that is the price you pay — including late at night, when there is no surge.",
       "A taxi from Wigston to Leicester is as often a standing weekday slot as a one-off. Commutes into the city, school-run times and weekly shops along Blaby Road or over to Fosse Park can all be held at a set hour. Hospital runs to Leicester Royal Infirmary use the same south Leicester roads; name the entrance when you book. If you want a regular taxi from Wigston, tell us the days and times and we will keep the slot rather than making you rebook from scratch each evening.",
       "Airport days and nights out into Leicester are the other two patterns. For East Midlands, Birmingham and the London airports, pre-book so the car is allocated before a 4am departure. Neighbouring Oadby, Glen Parva, Blaby and Aylestone sit on the same coverage — we do not treat the south Leicester boundary as a surcharge line. South Wigston station remains the usual rail pickup when you are heading west; Leicester railway station is the usual choice for London and the north.",
-      "Drivers are licensed and DBS-checked. Saloons cover a single passenger; estates and MPVs help with luggage, shopping or a group. Wheelchair accessible vehicles are available if you ask at booking. To book, call 0116 233 8888, message us on WhatsApp, or book online and see the fixed price before you confirm.",
+      `Drivers are licensed and DBS-checked. Saloons cover a single passenger; estates and MPVs help with luggage, shopping or a group. Wheelchair accessible vehicles are available if you ask at booking. To book, call ${PHONE_DISPLAY}, message us on WhatsApp, or book online and see the fixed price before you confirm.`,
     ],
     faqs: [
       {
@@ -1223,7 +1232,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I book a regular taxi from Wigston?",
         answer:
-          "Yes. Standing bookings are available for commutes, school runs and recurring appointments, with the same pickup time each day. Call 0116 233 8888 or book online and we will hold the slot.",
+          `Yes. Standing bookings are available for commutes, school runs and recurring appointments, with the same pickup time each day. Call ${PHONE_DISPLAY} or book online and we will hold the slot.`,
       },
       {
         question: "Can I pre-book an airport transfer from Wigston?",
@@ -1245,7 +1254,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "How much does a taxi from Wigston Fields to Leicester city centre cost?",
         answer:
-          "Fares from Wigston Fields to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
+          `Fares from Wigston Fields to Leicester city centre depend on your exact pickup point and time of travel. We offer fixed prices agreed before you travel — call ${PHONE_DISPLAY} or book online for a confirmed quote.`,
       },
       {
         question: "How long does a taxi from Wigston Fields to Leicester take?",
@@ -1301,7 +1310,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "How much does a taxi from Fosse Park to Leicester city centre cost?",
         answer:
-          "Fosse Park to Leicester city centre fares start from £6 depending on your exact pickup and drop-off points. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
+          `Fosse Park to Leicester city centre fares start from £6 depending on your exact pickup and drop-off points. We offer fixed prices agreed before you travel — call ${PHONE_DISPLAY} or book online for a confirmed quote.`,
       },
       {
         question: "How long does a taxi from Fosse Park to Leicester take?",
@@ -1316,7 +1325,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I book a taxi to Fosse Park for a shopping trip with a fixed return pickup time?",
         answer:
-          "Yes. You can pre-book a taxi to Fosse Park for your shopping trip and schedule a fixed return pickup time — ideal when you want to skip parking and know exactly when your driver will meet you with your bags. Call 0116 233 8888 or book online and note your preferred return time and meeting point.",
+          `Yes. You can pre-book a taxi to Fosse Park for your shopping trip and schedule a fixed return pickup time — ideal when you want to skip parking and know exactly when your driver will meet you with your bags. Call ${PHONE_DISPLAY} or book online and note your preferred return time and meeting point.`,
       },
       {
         question: "Do you offer a Fosse Park taxi from other parts of Leicester?",
@@ -1338,7 +1347,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "What taxi companies in Hamilton offer fixed prices?",
         answer:
-          "Aylestone Taxis offers fixed prices on agreed Hamilton routes — you receive your fare before the car arrives, with no meter running on airport or city-centre journeys. Call 0116 233 8888 or book online for an upfront quote.",
+          `Aylestone Taxis offers fixed prices on agreed Hamilton routes — you receive your fare before the car arrives, with no meter running on airport or city-centre journeys. Call ${PHONE_DISPLAY} or book online for an upfront quote.`,
       },
       {
         question: "How much is a taxi from Hamilton to Leicester city centre?",
@@ -1348,7 +1357,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "How do I book a taxi Hamilton Leicester?",
         answer:
-          "Call 0116 233 8888 or book online. We cover Hamilton Leicester 24/7 including Hamilton Shopping Centre, Park and Ride, and residential streets — you get a fixed fare before the car arrives.",
+          `Call ${PHONE_DISPLAY} or book online. We cover Hamilton Leicester 24/7 including Hamilton Shopping Centre, Park and Ride, and residential streets — you get a fixed fare before the car arrives.`,
       },
       {
         question: "Do you offer airport transfers from Hamilton Leicester?",
@@ -1363,7 +1372,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       "A taxi from Glen Parva to Leicester city centre takes around 20 minutes in normal traffic, heading north on the A426 and through the southern approaches. East Midlands Airport is remarkably close from this side of the city — around 15 minutes on a clear run via the M1 — which makes Glen Parva one of the easier areas in Leicestershire for an early flight. Every fare is fixed and agreed before you travel, so an airport run booked for 4am costs exactly what you were quoted the week before.",
       "Local pickups cluster along Lutterworth Road, Little Glen Road and the estates around them, with regular trips to Glen Parva Manor, South Leicestershire College and the Grove Park and Fosse Park retail sites. The prison on the former Glen Parva site reopened as HMP Fosse Way in 2023, and visitor journeys there are a steady booking for us — if you are travelling for a visit, give us your visiting slot when you book and we will time the pickup so you arrive with time in hand, and arrange the return for when the session ends.",
       "We also run constantly to the Leicester hospitals from Glen Parva: Leicester Royal Infirmary in the city centre, Glenfield Hospital to the north-west and Leicester General out to the east. Tell us the department when you book and the driver will take you to the nearest entrance rather than the main gate. Recurring appointments can be set up as standing bookings so you are not rebooking the same trip each week.",
-      "Our drivers are licensed by the council and DBS-checked, and we operate 24 hours a day, every day of the year. Vehicles range from saloons to estates and MPVs for groups and luggage, with wheelchair accessible vehicles available on request. To book a taxi in Glen Parva, call 0116 233 8888, message us on WhatsApp, or book online for an instant fixed price.",
+      `Our drivers are licensed by the council and DBS-checked, and we operate 24 hours a day, every day of the year. Vehicles range from saloons to estates and MPVs for groups and luggage, with wheelchair accessible vehicles available on request. To book a taxi in Glen Parva, call ${PHONE_DISPLAY}, message us on WhatsApp, or book online for an instant fixed price.`,
     ],
     faqs: [
       {
@@ -1384,7 +1393,7 @@ const priorityAreaSeoContent: Record<string, PriorityAreaSeoContent> = {
       {
         question: "Can I book a regular taxi in Glen Parva?",
         answer:
-          "Yes. Standing bookings are available for commutes, school runs, college travel and recurring hospital appointments, with the same time each day and a consistent driver where possible. Call 0116 233 8888 to set one up.",
+          `Yes. Standing bookings are available for commutes, school runs, college travel and recurring hospital appointments, with the same time each day and a consistent driver where possible. Call ${PHONE_DISPLAY} to set one up.`,
       },
     ],
   },
@@ -1423,7 +1432,7 @@ const areaContent: Record<string, AreaContent> = {
           recommended on matchdays.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888, WhatsApp +447535855786, or book online — we operate 24 hours a day.
+          Call {PHONE_DISPLAY}, WhatsApp {WHATSAPP_DISPLAY}, or book online — we operate 24 hours a day.
         </p>
       </div>
     ),
@@ -1431,7 +1440,7 @@ const areaContent: Record<string, AreaContent> = {
       {
         question: "How much does a taxi from Aylestone to Leicester city centre cost?",
         answer:
-          "Aylestone to Leicester city centre fares typically range from £5 to £9 depending on your exact pickup and drop-off points. We offer fixed prices agreed before you travel — call 0116 233 8888 or book online for a confirmed quote.",
+          `Aylestone to Leicester city centre fares typically range from £5 to £9 depending on your exact pickup and drop-off points. We offer fixed prices agreed before you travel — call ${PHONE_DISPLAY} or book online for a confirmed quote.`,
       },
       {
         question: "How long does a taxi from Aylestone to Leicester take?",
@@ -1471,7 +1480,7 @@ const areaContent: Record<string, AreaContent> = {
           terminal. We cover all major UK airports.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888 anytime — Eyres Monsell is one of our most active local areas.
+          Call {PHONE_DISPLAY} anytime — Eyres Monsell is one of our most active local areas.
         </p>
       </div>
     ),
@@ -1505,7 +1514,7 @@ const areaContent: Record<string, AreaContent> = {
           addresses quickly.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888 or book online — available 24 hours a day, every day.
+          Call {PHONE_DISPLAY} or book online — available 24 hours a day, every day.
         </p>
       </div>
     ),
@@ -1538,7 +1547,7 @@ const areaContent: Record<string, AreaContent> = {
           Airport is around 45 minutes via the M69. All airport fares are fixed at booking.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888 or WhatsApp +447535855786 to book anytime.
+          Call {PHONE_DISPLAY} or WhatsApp {WHATSAPP_DISPLAY} to book anytime.
         </p>
       </div>
     ),
@@ -1571,7 +1580,7 @@ const areaContent: Record<string, AreaContent> = {
           confirmed at booking, with flight monitoring included for return trips.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888 or book online anytime — we&apos;re available 24 hours a day, every day of the year.
+          Call {PHONE_DISPLAY} or book online anytime — we&apos;re available 24 hours a day, every day of the year.
         </p>
       </div>
     ),
@@ -1603,7 +1612,7 @@ const areaContent: Record<string, AreaContent> = {
           M69). Fixed fares only — we don&apos;t use meters on pre-booked journeys.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888 or WhatsApp +447535855786 anytime.
+          Call {PHONE_DISPLAY} or WhatsApp {WHATSAPP_DISPLAY} anytime.
         </p>
       </div>
     ),
@@ -1636,7 +1645,7 @@ const areaContent: Record<string, AreaContent> = {
           minutes). All airport fares are fixed and confirmed at booking — no meters.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888 anytime or book online. Available every hour, every day.
+          Call {PHONE_DISPLAY} anytime or book online. Available every hour, every day.
         </p>
       </div>
     ),
@@ -1670,7 +1679,7 @@ const areaContent: Record<string, AreaContent> = {
           M1. Fixed prices confirmed at booking, flight monitoring included.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888 or book online 24/7. Pre-booking is recommended for early morning airport runs from
+          Call {PHONE_DISPLAY} or book online 24/7. Pre-booking is recommended for early morning airport runs from
           Kibworth.
         </p>
       </div>
@@ -1703,7 +1712,7 @@ const areaContent: Record<string, AreaContent> = {
           minutes via the M69. All fares fixed, flight monitoring included on all airport bookings.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888 or book online 24/7.
+          Call {PHONE_DISPLAY} or book online 24/7.
         </p>
       </div>
     ),
@@ -1736,7 +1745,7 @@ const areaContent: Record<string, AreaContent> = {
           groups of students sharing the cost.
         </p>
         <p className="text-gray-700">
-          Book online, call 0116 2338888, or WhatsApp +447535855786 for your DMU taxi.
+          Book online, call {PHONE_DISPLAY}, or WhatsApp {WHATSAPP_DISPLAY} for your DMU taxi.
         </p>
       </div>
     ),
@@ -1801,7 +1810,7 @@ const areaContent: Record<string, AreaContent> = {
         </p>
         <p className="text-gray-700">
           Whether it&apos;s a daily commute, a hospital appointment at the Leicester General, or an airport transfer,
-          we&apos;re here whenever you need us. Call 0116 2338888 or book online 24/7.
+          we&apos;re here whenever you need us. Call {PHONE_DISPLAY} or book online 24/7.
         </p>
       </div>
     ),
@@ -1832,7 +1841,7 @@ const areaContent: Record<string, AreaContent> = {
           Airport (approximately 30–35 minutes). All airport fares are fixed, pre-agreed, and include flight monitoring.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888 or WhatsApp anytime — we operate 24/7 with no late-night or early-morning surcharges.
+          Call {PHONE_DISPLAY} or WhatsApp anytime — we operate 24/7 with no late-night or early-morning surcharges.
         </p>
       </div>
     ),
@@ -1897,7 +1906,7 @@ const areaContent: Record<string, AreaContent> = {
           Pre-booking for school runs is simple and we&apos;ll confirm your regular driver and time.
         </p>
         <p className="text-gray-700">
-          Call 0116 2338888, WhatsApp, or book online anytime — 24 hours a day, seven days a week.
+          Call {PHONE_DISPLAY}, WhatsApp, or book online anytime — 24 hours a day, seven days a week.
         </p>
       </div>
     ),
@@ -1988,7 +1997,7 @@ const areaContent: Record<string, AreaContent> = {
       {
         question: "How much does a taxi cost in Leicester city centre?",
         answer:
-          "Fares depend on distance, time of day, and vehicle size, but we quote fixed prices before you confirm so there are no meter surprises. Short trips within the centre are typically among our most affordable local journeys — use online booking or call 0116 233 8888 for an upfront quote tailored to your pickup and drop-off.",
+          `Fares depend on distance, time of day, and vehicle size, but we quote fixed prices before you confirm so there are no meter surprises. Short trips within the centre are typically among our most affordable local journeys — use online booking or call ${PHONE_DISPLAY} for an upfront quote tailored to your pickup and drop-off.`,
       },
       {
         question: "How quickly can I get a taxi in Leicester city centre?",
@@ -1998,7 +2007,7 @@ const areaContent: Record<string, AreaContent> = {
       {
         question: "Do you offer late-night taxis in Leicester city centre?",
         answer:
-          "Yes. We provide late-night and early-morning taxis across Leicester city centre 24 hours a day, with no late-night surcharge on our standard fixed fares. Call 0116 233 8888, book online, or WhatsApp when you are ready to leave — pre-booking a return journey is recommended on busy Friday and Saturday nights.",
+          `Yes. We provide late-night and early-morning taxis across Leicester city centre 24 hours a day, with no late-night surcharge on our standard fixed fares. Call ${PHONE_DISPLAY}, book online, or WhatsApp when you are ready to leave — pre-booking a return journey is recommended on busy Friday and Saturday nights.`,
       },
       {
         question: "Can I book a taxi to Leicester train station?",
@@ -2013,7 +2022,7 @@ const areaContent: Record<string, AreaContent> = {
       {
         question: "Do you pick up from the Clock Tower in Leicester city centre?",
         answer:
-          "Yes — the Clock Tower is our main city centre pickup point, available 24/7 including Friday and Saturday nights. Call 0116 233 8888 or WhatsApp us to arrange your pickup from the Clock Tower area.",
+          `Yes — the Clock Tower is our main city centre pickup point, available 24/7 including Friday and Saturday nights. Call ${PHONE_DISPLAY} or WhatsApp us to arrange your pickup from the Clock Tower area.`,
       },
       {
         question: "Is it cheaper to get a taxi from Leicester city centre on a Friday night than Uber?",
@@ -2045,7 +2054,7 @@ const areaContent: Record<string, AreaContent> = {
         </p>
         <p className="text-gray-700">
           The area is also well served for school runs, with several primary and secondary schools in and around
-          Belgrave that we cover regularly. Call 0116 2338888 or WhatsApp us anytime.
+          Belgrave that we cover regularly. Call {PHONE_DISPLAY} or WhatsApp us anytime.
         </p>
       </div>
     ),
@@ -2151,26 +2160,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     (footerData as any).priorityAreas?.optionalPriority?.some((d: any) => slugFromHref(d.href) === slug)
 
   const customMeta = areaMeta[slug]
-  const areaKeywords: Record<string, string[]> = {
-    hamilton: ["Hamilton taxi Leicester", "taxis in Hamilton", "taxi Hamilton Leicester", "Hamilton taxis"],
-    "beaumont-leys": [
-      "taxi beaumont leys",
-      "beaumont leys taxis",
-      "taxi beaumont leys leicester",
-      "Beaumont Leys taxi",
-    ],
-    wigston: ["taxi wigston", "wigston taxis", "taxi from wigston to leicester", "south wigston taxi"],
-    blaby: ["taxi blaby", "blaby taxis", "taxi blaby leicester"],
-    evington: ["taxi evington", "evington taxis", "evington taxi leicester"],
-    "market-harborough": [
-      "Market Harborough taxis",
-      "taxi Market Harborough",
-      "cabs Market Harborough",
-      "Market Harborough taxi",
-    ],
-    "fosse-park": ["Fosse Park taxi", "taxi to Fosse Park", "Fosse Park taxis Leicester"],
-    "kirby-muxloe": ["Kirby Muxloe taxi", "taxis in Kirby Muxloe", "taxi Kirby Muxloe"],
-  }
   // Long area names push the descriptive variant past 60 chars and Google
   // truncates it, so fall back to the short form only when it would overflow.
   const descriptiveTitle = `Taxis in ${areaName} — Fixed Fares, Airport Transfers | 24/7`
@@ -2184,18 +2173,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const description = customMeta
     ? customMeta.description
     : isDestination
-      ? `Taxi to ${areaName}, Leicester — fixed fares, licensed drivers, 24/7. Book online or call 0116 2338888.`
-      : `Need a taxi in ${areaName}? Aylestone Taxis: fast local pickups, airport transfers, school runs. Book online in seconds or call 0116 2338888 — 24/7.`
+      ? `Taxi to ${areaName}, Leicester — fixed fares, licensed drivers, 24/7. Book online or call ${PHONE_DISPLAY}.`
+      : `Need a taxi in ${areaName}? Aylestone Taxis: fast local pickups, airport transfers, school runs. Book online in seconds or call ${PHONE_DISPLAY} — 24/7.`
   
   const canonicalUrl = buildCanonical(`/taxis-in/${slug}`)
   
-  return {
+  return finalizeMetadata({
     title,
     description,
-    keywords: areaKeywords[slug],
     alternates: {
       canonical: canonicalUrl,
     },
+    // Template-only destination pages: live for visitors, kept out of the index (see lib/seo/indexing.ts).
+    ...(NOINDEX_AREA_SLUGS.has(slug) ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       images: [OG_IMAGE],
       title,
@@ -2210,7 +2200,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title,
       description,
     },
-  }
+  })
 }
 
 export default async function AreaPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -2308,6 +2298,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const selectedAreaContent = areaContent[slug]
   const selectedPriorityContent = priorityAreaSeoContent[slug]
   const isPrioritySeoArea = Boolean(selectedPriorityContent)
+  const hasResearchedCopy = Object.prototype.hasOwnProperty.call(destinationAreaContent, slug)
   const resolvedContent: AreaContent = selectedPriorityContent
     ? {
         body: (
@@ -2555,7 +2546,6 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     ? getAreaServiceAreaLocalBusinessJsonLd({
         pageUrl: buildCanonical("/taxis-in/leicester-city-centre"),
         serviceAreaName: "Leicester City Centre",
-        geo: { latitude: 52.6369, longitude: -1.1398 },
         description:
           "Fixed-price taxi service in Leicester city centre from Aylestone Taxis — Highcross, Curve Theatre, Leicester Railway Station, and central Leicester 24/7.",
       })
@@ -2584,25 +2574,37 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 {AREA_CUSTOM_H1[slug] ??
                   (isDestination ? `Taxi to ${areaPlain}` : `Taxi Service in ${areaPlain} – Aylestone Taxis`)}
               </h1>
-              <p className="mt-3 max-w-2xl text-white/85">
-                {isDestination 
-                  ? `Need a taxi to ${areaPlain}? We offer reliable, on-time journeys with professional drivers and fixed fares. Perfect for appointments, events, shopping and travel connections.`
-                  : `Reliable 24/7 taxis across ${areaPlain}, Leicester & Leicestershire. Fixed fares, licensed drivers, and fast pick-ups.`
-                }
-                {isDestination 
-                  ? ` Book online in seconds — or contact us for help with luggage and special requests.`
-                  : ` Looking for a reliable taxi in ${areaPlain}? Our trusted local taxi service is available 24/7, whether you need a short trip, an airport transfer, business travel, or a long-distance journey. With courteous drivers, comfortable modern vehicles, and fair, competitive pricing, we make travelling around ${areaPlain} simple, safe, and stress-free.`
-                }
-              </p>
-              <p className="mt-3 max-w-2xl text-white/85">
-                {isDestination 
-                  ? `Our drivers know the best routes to ${areaPlain} and can help with luggage, accessibility needs, and special requests.`
-                  : `Whether you're heading to the airport, commuting for work, or exploring the local area, Licensed drivers available through Aylestone Taxis ${areaPlain} are always ready to get you there on time. We take pride in offering reliable, comfortable, and budget-friendly travel solutions tailored to your needs.`
-                }
-              </p>
-              <p className="mt-3 max-w-2xl text-white/85">
-                Book your taxi today and get where you need to be – on time, every time.
-              </p>
+              {/* Pages with researched copy in destinationAreaContent skip the generic hero text, which
+                  was identical on ~90 area pages; their own body copy follows straight after. */}
+              {hasResearchedCopy ? (
+                <p className="mt-3 max-w-2xl text-white/85">
+                  {isDestination
+                    ? `Taxis to and from ${areaPlain}, 24/7, with licensed drivers and the fare agreed before you travel.`
+                    : `Taxis in ${areaPlain}, 24/7, with licensed drivers and the fare agreed before you travel.`}
+                </p>
+              ) : (
+                <>
+                <p className="mt-3 max-w-2xl text-white/85">
+                  {isDestination 
+                    ? `Need a taxi to ${areaPlain}? We offer reliable, on-time journeys with licensed drivers and a fare agreed before you travel.`
+                    : `Reliable 24/7 taxis across ${areaPlain}, Leicester & Leicestershire. Fixed fares, licensed drivers, and fast pick-ups.`
+                  }
+                  {isDestination 
+                    ? ` Book online in seconds — or contact us for help with luggage and special requests.`
+                    : ` Looking for a reliable taxi in ${areaPlain}? Our trusted local taxi service is available 24/7, whether you need a short trip, an airport transfer, business travel, or a long-distance journey. With courteous drivers, comfortable modern vehicles, and fair, competitive pricing, we make travelling around ${areaPlain} simple, safe, and stress-free.`
+                  }
+                </p>
+                <p className="mt-3 max-w-2xl text-white/85">
+                  {isDestination 
+                    ? `Our drivers know the best routes to ${areaPlain} and can help with luggage, accessibility needs, and special requests.`
+                    : `Whether you're heading to the airport, commuting for work, or exploring the local area, Licensed drivers available through Aylestone Taxis ${areaPlain} are always ready to get you there on time. We take pride in offering reliable, comfortable, and budget-friendly travel solutions tailored to your needs.`
+                  }
+                </p>
+                <p className="mt-3 max-w-2xl text-white/85">
+                  Book your taxi today and get where you need to be – on time, every time.
+                </p>
+                </>
+              )}
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href={contactInfo.booking.online}>
@@ -2688,7 +2690,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <p className="text-gray-700">
                         <strong>Pre-booking is recommended</strong> for Friday and Saturday nights, especially after
                         midnight when demand peaks across the city centre. Reserve your return pickup online or by
-                        calling 0116 233 8888 before you head out, or message us on WhatsApp at +447535855786 when you
+                        calling {PHONE_DISPLAY} before you head out, or message us on WhatsApp at {WHATSAPP_DISPLAY} when you
                         are ready to leave — we confirm your fixed fare and dispatch a licensed driver to your location.
                         For full venue coverage, fixed fares, and booking options, see our{" "}
                         <Link
@@ -2754,10 +2756,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                         coverage across the town centre, surrounding villages, and popular routes to Leicester and East
                         Midlands Airport. Our booking line is open around the clock — call{" "}
                         <Link
-                          href="tel:01162338888"
+                          href={`tel:${PHONE_TEL}`}
                           className="text-[#06A0A6] font-bold text-lg hover:underline underline-offset-2"
                         >
-                          0116 233 8888
+                          {PHONE_DISPLAY}
                         </Link>{" "}
                         to arrange a local pickup, station transfer, or airport journey at any time of day or night.
                       </p>
@@ -2783,10 +2785,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <p className="text-gray-800 font-medium mb-4">
                         Save our number for whenever you need a ride:{" "}
                         <Link
-                          href="tel:01162338888"
+                          href={`tel:${PHONE_TEL}`}
                           className="text-[#06A0A6] font-bold text-xl hover:underline underline-offset-2"
                         >
-                          0116 233 8888
+                          {PHONE_DISPLAY}
                         </Link>
                         . Available 24 hours a day, seven days a week, including bank holidays.
                       </p>
@@ -2799,10 +2801,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                           <ArrowRight className="h-4 w-4" aria-hidden />
                         </Link>
                         <Link
-                          href="tel:01162338888"
+                          href={`tel:${PHONE_TEL}`}
                           className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                         >
-                          0116 233 8888
+                          {PHONE_DISPLAY}
                         </Link>
                       </div>
                     </div>
@@ -2879,7 +2881,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                         className="inline-flex items-center gap-2 text-[#06A0A6] hover:underline underline-offset-2 font-medium"
                       >
                         <ArrowRight className="h-4 w-4" />
-                        Airport transfers from Leicester (hub page)
+                        Airport transfers from Leicester
                       </Link>
                     </div>
                     <div className="flex flex-wrap gap-2">
@@ -2912,7 +2914,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
                   <div id="why-choose-us" className="rounded-lg border border-gray-200 p-5">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                      <Shield className="h-5 w-5 text-[#06A0A6]" /> Why Choose Us in {areaPlain}
+                      <Shield className="h-5 w-5 text-[#06A0A6]" /> {isDestination ? "Why choose Aylestone Taxis" : `Why Choose Us in ${areaPlain}`}
                     </h3>
                     <ul className="text-gray-700 grid grid-cols-1 sm:grid-cols-2 gap-2">
                       <li>Licensed &amp; insured • DBS-checked drivers</li>
@@ -2946,7 +2948,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   {/* SEO Content: About our service in Area */}
                   <div className="rounded-lg border border-gray-200 p-5">
                     <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-                      Taxi Service in {areaPlain} — What to Expect
+                      {isDestination ? `Taxis to ${areaPlain} — What to Expect` : `Taxi Service in ${areaPlain} — What to Expect`}
                     </h2>
                     <p className="text-gray-700 mb-3">
                       {isSupermarketDestination
@@ -2983,7 +2985,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                         : `From ${areaPlain}, popular destinations include Leicester City Centre, Fosse Park, De Montfort University, University of Leicester and both Leicester and South Wigston train stations. We also cover nearby neighbourhoods, ensuring seamless connections for work, study and leisure.`}
                     </p>
                     <p className="text-gray-700">
-                      Need an airport transfer from {areaPlain}? We operate 24/7 to Birmingham (BHX), East Midlands (EMA),
+                      {isDestination ? "Flying afterwards?" : `Need an airport transfer from ${areaPlain}?`} We operate 24/7 to Birmingham (BHX), East Midlands (EMA),
                       Heathrow (LHR), Gatwick (LGW), Luton (LTN), Stansted (STN) and Manchester (MAN) with flight tracking
                       and meet &amp; greet on request.
                     </p>
@@ -3048,10 +3050,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3112,10 +3114,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3169,7 +3171,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   </p>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Example journey times from Oadby</h3>
                   <ul className="list-disc pl-5 text-gray-700 space-y-1">
-                    <li>Oadby (Stoughton Road) → Leicester City Centre: around 10–15 minutes in normal traffic</li>
+                    <li>Oadby (Stoughton Road) → Leicester City Centre: around 15–20 minutes in normal traffic</li>
                     <li>Oadby → Leicester Racecourse: around 5–10 minutes</li>
                     <li>Oadby → Fosse Park: around 15–20 minutes</li>
                     <li>Oadby → Leicester Royal Infirmary: around 10–15 minutes</li>
@@ -3238,10 +3240,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3264,7 +3266,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     <li>Kirby Muxloe → East Midlands Airport: typically 20–25 minutes</li>
                   </ul>
                   <p className="text-gray-800 font-medium">
-                    Book a taxi Kirby Muxloe online or call 0116 233 8888 — 24/7 including early airport runs.
+                    Book a taxi Kirby Muxloe online or call {PHONE_DISPLAY} — 24/7 including early airport runs.
                   </p>
                 </div>
               )}
@@ -3326,10 +3328,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3394,10 +3396,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3450,10 +3452,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3513,10 +3515,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3579,10 +3581,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3643,10 +3645,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3718,10 +3720,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3781,10 +3783,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3842,10 +3844,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3919,10 +3921,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -3981,10 +3983,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <ArrowRight className="h-4 w-4" aria-hidden />
                     </Link>
                     <Link
-                      href="tel:01162338888"
+                      href={`tel:${PHONE_TEL}`}
                       className="inline-flex items-center justify-center gap-2 border-2 border-[#06A0A6] text-[#06A0A6] px-6 py-3 rounded-lg font-semibold hover:bg-[#06A0A6] hover:text-white transition-smooth"
                     >
-                      0116 233 8888
+                      {PHONE_DISPLAY}
                     </Link>
                   </div>
                 </div>
@@ -4053,8 +4055,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             </div>
             <aside className="space-y-2 lg:sticky lg:top-28 h-fit lg:max-h-[calc(100vh-7rem)]">
               <div className="rounded-lg border border-gray-200 p-4 bg-gradient-to-r from-[#06A0A6]/10 to-transparent">
-                <h3 className="font-semibold text-gray-900 mb-1">Quick contacts</h3>
-                <p className="text-sm text-gray-700">Phone: <Link href={`tel:${contactInfo.phone}`} className="hover:underline underline-offset-2">{contactInfo.phone}</Link></p>
+                <h2 className="font-semibold text-gray-900 mb-1 text-[clamp(1.5rem,3vw,2rem)] leading-[1.3]">Quick contacts</h2>
+                <p className="text-sm text-gray-700">Phone: <Link href={`tel:${contactInfo.phoneTel}`} className="hover:underline underline-offset-2">{contactInfo.phone}</Link></p>
                 <p className="text-sm text-gray-700">Email: <Link href={`mailto:${contactInfo.email}`} className="hover:underline underline-offset-2">{contactInfo.email}</Link></p>
                 <p className="text-sm text-gray-700">Address: {contactInfo.address.street}, {contactInfo.address.city} {contactInfo.address.postcode}</p>
               </div>
@@ -4064,7 +4066,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   {footerData.airportLinks?.slice(0,6).map((ap) => (
                     <li key={ap.name}>
                       <Link href={ap.href} className="text-gray-700 hover:underline underline-offset-2">
-                        {ap.name} Transfers
+                        {/Transfers$/.test(ap.name) ? ap.name : `${ap.name} Transfers`}
                       </Link>
                     </li>
                   ))}

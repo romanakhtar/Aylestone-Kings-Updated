@@ -1,45 +1,7 @@
 "use client"
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-
-const homeFaqs = [
-  {
-    question: "How do I book a taxi Leicester passengers use every day?",
-    answer:
-      "Book Leicester taxis and Leicester cabs online in seconds, call 0116 233 8888, or WhatsApp us. You see a fixed fare before you confirm.",
-  },
-  {
-    question: "Are Leicester cabs and Leicester taxis the same service?",
-    answer:
-      "Yes. Leicester cabs, Leicester taxi and taxi Leicester searches all point to the same Aylestone Taxis service — licensed drivers, fixed fares, no surge.",
-  },
-  {
-    question: "Do you cover Leicestershire taxis outside the city?",
-    answer:
-      "Yes. Leicestershire taxis with Aylestone Taxis cover towns and villages across the county, including Hamilton, Beaumont Leys, Fosse Park, Kirby Muxloe and Market Harborough, plus airport transfers.",
-  },
-  {
-    question: "Are you available 24/7?",
-    answer: "Yes, we operate 24/7 including weekends and bank holidays.",
-  },
-  {
-    question: "Do you offer fixed prices?",
-    answer: "Yes, you'll see the price before confirming your booking.",
-  },
-  {
-    question: "Can I pre-book a taxi in advance?",
-    answer: "Yes, pre-booking is available and recommended during busy times.",
-  },
-  {
-    question: "Do you provide airport transfers?",
-    answer: "Yes, we provide fixed-price airport transfers to all major UK airports.",
-  },
-  {
-    question: "Do you have larger vehicles for groups or luggage?",
-    answer: "Yes, you can choose the appropriate vehicle type during booking, subject to availability.",
-  },
-] as const
-
+import { homeFaqs } from "@/components/home/homeFaqs"
 export default function HomeFAQSection() {
   return (
     <section className="py-20 bg-white">
@@ -47,7 +9,7 @@ export default function HomeFAQSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F0D3E] mb-6">Frequently Asked Questions</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Common questions about Leicester taxis, Leicester cabs and Leicestershire taxis
+            Common questions about booking a taxi in Leicester and Leicestershire
           </p>
         </div>
 

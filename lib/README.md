@@ -24,9 +24,8 @@ siteData.company.founded                 // "1995"
 // Founders information removed
 
 // Statistics
-siteData.company.yearsExperience         // "30+"
-siteData.company.passengersServed        // "10,608,000"
-siteData.company.satisfactionRating      // "99.7%"
+siteData.company.yearsExperience         // "30+"  (founded 1995)
+GOOGLE_RATING                            // { value, count } — update monthly; feeds schema + visible copy
 
 // Images
 siteData.images.heroTaxi                 // "/white-modern-taxi-side.png"

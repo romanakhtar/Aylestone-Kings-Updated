@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_DISPLAY } from "@/lib/data"
 
 /**
  * Seasonal promo blocks for /late-night-taxi-leicester.
@@ -72,10 +72,10 @@ export default function SeasonalPromoSections() {
                 Pre-Book Your Christmas Taxi
               </Link>
               <a
-                href="tel:01162338888"
+                href={`tel:${PHONE_TEL}`}
                 className="inline-flex items-center justify-center rounded-lg border border-white/40 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-white/10"
               >
-                Call 0116 233 8888
+                Call {PHONE_DISPLAY}
               </a>
             </div>
           </div>
@@ -107,10 +107,10 @@ export default function SeasonalPromoSections() {
             </p>
             <p className="text-lg text-[#E4E4E4] mb-8 leading-relaxed">
               Not sure when you will be leaving? Message us on WhatsApp at{" "}
-              <strong className="text-white">+44 7535 855786</strong> on the night and we will confirm a fixed fare
+              <strong className="text-white">{WHATSAPP_DISPLAY}</strong> on the night and we will confirm a fixed fare
               before the driver sets off. For costs, venues and the full pre-booking window, read our{" "}
               <Link
-                href="/blog/halloween-taxi-leicester-2026-pre-book-before-surge-prices-hit"
+                href="/halloween-taxi-leicester"
                 className="text-[#06A0A6] underline underline-offset-2 hover:text-white"
               >
                 Halloween taxi Leicester guide
@@ -125,10 +125,10 @@ export default function SeasonalPromoSections() {
                 Pre-Book Your Halloween Taxi
               </Link>
               <a
-                href="tel:01162338888"
+                href={`tel:${PHONE_TEL}`}
                 className="inline-flex items-center justify-center rounded-lg border border-white/40 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-white/10"
               >
-                Call 0116 233 8888
+                Call {PHONE_DISPLAY}
               </a>
             </div>
           </div>

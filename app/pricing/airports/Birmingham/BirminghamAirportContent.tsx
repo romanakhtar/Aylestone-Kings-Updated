@@ -1,5 +1,5 @@
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY, PHONE_TEL } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 import AirportPricingBreadcrumbs from "@/components/seo/AirportPricingBreadcrumbs"
@@ -229,9 +229,9 @@ export default function BirminghamAirportContent({ faqs }: { faqs: AirportFaqIte
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </a>
-              <a href="tel:01162338888" className="w-full sm:w-auto">
+              <a href={`tel:${PHONE_TEL}`} className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto border-2 border-cyan-600 text-cyan-600 px-8 py-4 rounded-xl font-semibold hover:bg-cyan-600 hover:text-white transition-[transform,opacity] duration-200">
-                  0116 233 8888
+                  {PHONE_DISPLAY}
                 </button>
               </a>
             </div>

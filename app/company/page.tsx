@@ -1,28 +1,26 @@
 import Image from "next/image"
-import { siteData } from "@/lib/data"
+import { siteData, GOOGLE_RATING } from "@/lib/data"
 import { Shield, Users, Award, Clock, Check, ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const canonical = buildCanonical("/company")
 
-export const metadata: Metadata = {
-  title: "Leicester Taxi Company | Aylestone Taxis Since '95",
+export const metadata: Metadata = finalizeMetadata({
+  title: "Our Story, People & Values | Aylestone Taxis",
   description:
-    "Meet Aylestone Taxis, Leicester's trusted taxi company since 1995. Licensed drivers, fixed fares. Learn more & book.",
+    "How Aylestone Taxis works: our history on Aylestone Road since 1995, our drivers, our standards and the values behind every journey.",
   alternates: {
     canonical,
   },
   openGraph: {
     images: [OG_IMAGE],
-    title: "Aylestone Taxis — Leicester Taxi Company",
-    description:
-      "Aylestone Taxis — Leicester taxi company with 30+ years experience. 10,000 passengers per year, 99.7% satisfaction rating. Licensed DBS-checked drivers available 24/7.",
     url: canonical,
   },
-}
+})
 
 export default function CompanyPage() {
   return (
@@ -54,7 +52,7 @@ export default function CompanyPage() {
             
             {/* Enhanced Description */}
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-10 font-light">
-              <span className="text-[#06A0A6] font-semibold">10,000 passengers per year</span>, 99.7% satisfaction rating, licensed by Leicester City Council, operating since 1995 — the verified credentials behind Leicester&apos;s established private hire operator.
+              Licensed by Leicester City Council and based on Aylestone Road <span className="text-[#06A0A6] font-semibold">since 1995</span> — a local private hire operator with fixed fares, DBS-checked drivers and a phone line answered in Leicester, 24/7.
             </p>
             
             {/* Trust Indicators */}
@@ -141,10 +139,10 @@ export default function CompanyPage() {
             </div>
             <div className="order-1 lg:order-2 fade-in">
               <div className="inline-flex items-center px-4 py-2 bg-[#06A0A6]/20 text-[#0F0D3E] rounded-full text-sm font-medium mb-6">
-                Trusted by Thousands
+                Our Reputation
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-[#0F0D3E] mb-6 leading-tight">
-                Each year, we serve over <span className="text-[#06A0A6]">{siteData.company.passengersServed}</span> passengers
+                Trusted in Leicester <span className="text-[#06A0A6]">since {siteData.company.founded}</span>
               </h2>
               <p className="text-lg text-[#2E3C44] mb-8 leading-relaxed">
                 {siteData.companyPage.trusted.description}
@@ -153,12 +151,12 @@ export default function CompanyPage() {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-6 bg-white rounded-xl shadow-professional hover-lift">
-                  <div className="text-3xl font-bold text-[#06A0A6] mb-2">{siteData.company.satisfactionRating}</div>
-                  <div className="text-[#2E3C44] font-medium">Satisfaction Rating</div>
+                  <div className="text-3xl font-bold text-[#06A0A6] mb-2">{GOOGLE_RATING.value}★</div>
+                  <div className="text-[#2E3C44] font-medium">Google rating ({GOOGLE_RATING.count} reviews)</div>
                 </div>
                 <div className="text-center p-6 bg-white rounded-xl shadow-professional hover-lift">
                   <div className="text-3xl font-bold text-[#06A0A6] mb-2">{siteData.company.yearsExperience}</div>
-                  <div className="text-[#2E3C44] font-medium">Years Experience</div>
+                  <div className="text-[#2E3C44] font-medium">Years serving Leicester</div>
                 </div>
               </div>
             </div>
@@ -282,8 +280,8 @@ export default function CompanyPage() {
               <p className="text-[#2E3C44]">Yes. We provide corporate accounts with centralised billing, complete booking history and reporting, customisable invoices, and a dedicated account manager for your business.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">How many passengers does Aylestone Taxis serve each year?</h3>
-              <p className="text-[#2E3C44]">We serve over 10,000 passengers annually, with a 99.7% customer satisfaction rating, and we're licensed by Leicester City Council.</p>
+              <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">How long has Aylestone Taxis been operating?</h3>
+              <p className="text-[#2E3C44]">Since 1995. We are based at 753A Aylestone Road, Leicester, and licensed by Leicester City Council.</p>
             </div>
             <div>
               <h3 className="font-semibold text-[#0F0D3E] text-lg mb-2">Is Aylestone Taxis licensed to operate across Leicestershire?</h3>
@@ -318,10 +316,10 @@ export default function CompanyPage() {
               },
               {
                 "@type": "Question",
-                "name": "How many passengers does Aylestone Taxis serve each year?",
+                "name": "How long has Aylestone Taxis been operating?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We serve over 10,000 passengers annually, with a 99.7% customer satisfaction rating, and we're licensed by Leicester City Council."
+                  "text": "Since 1995. We are based at 753A Aylestone Road, Leicester, and licensed by Leicester City Council."
                 }
               },
               {

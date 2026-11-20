@@ -1,21 +1,22 @@
 import { Check, ArrowRight, MapPin, Clock, Users, Car, Shield, Calendar } from "lucide-react"
-import { contactInfo } from "@/lib/data"
+import { contactInfo, PHONE_DISPLAY } from "@/lib/data"
 import FAQSchema from "@/components/seo/FAQSchema"
 import AirportRelatedLinks from "@/components/AirportRelatedLinks"
 import AirportPricingBreadcrumbs from "@/components/seo/AirportPricingBreadcrumbs"
 import { AirportLeicesterGuide, AirportPricingFaqSection } from "@/components/seo/AirportLeicesterGuide"
 import { buildAirportMetadata } from "@/lib/seo/airportSeo"
 import { manchesterLeicesterFacts, manchesterPricingFaqs } from "@/lib/seo/airportLeicesterFacts"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
-export const metadata = buildAirportMetadata({
+export const metadata = finalizeMetadata(buildAirportMetadata({
   airportName: "Manchester",
   airportCode: "MAN",
   slug: "Manchester",
   fromPrice: "£160",
   title: "Leicester to Manchester Airport Taxi | From £160",
   description:
-    "Leicester to Manchester Airport (MAN): ~90–100 mi, ~2h–2h45 via M69/M6. Drop-off at T1, T2, or T3. Fixed from £160 — book or call 0116 2338888 24/7.",
-})
+    `Leicester to Manchester Airport (MAN): ~90–100 mi, ~2h–2h45 via M69/M6. Drop-off at T1, T2, or T3. Fixed from £160 — book or call ${PHONE_DISPLAY} 24/7.`,
+}))
 
 const faqs = manchesterPricingFaqs
 

@@ -23,10 +23,11 @@ import { getCorporateServiceGraphJsonLd } from "@/lib/seo/siteJsonLd"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
 
 const CORPORATE_CANONICAL = buildCanonical("/corporate-taxi-account-leicester")
 
-export const metadata: Metadata = {
+export const metadata: Metadata = finalizeMetadata({
   title: "Corporate Taxi Accounts Leicester | Business Travel",
   description:
     "Corporate taxi accounts in Leicester: monthly invoicing, staff travel and airport runs. Enquire at " +
@@ -34,8 +35,6 @@ export const metadata: Metadata = {
     " or call " +
     contactInfo.phone +
     ".",
-  keywords:
-    "corporate taxi accounts Leicester, business taxi account Leicester, staff transport Leicester, corporate travel Leicester, taxi account Leicester, invoiced taxi Leicester, B2B taxi Leicester, Meridian Business Park taxi account, executive taxi Leicester",
   alternates: {
     canonical: CORPORATE_CANONICAL,
   },
@@ -53,7 +52,7 @@ export const metadata: Metadata = {
     description:
       "Business taxi accounts with monthly invoicing, staff booking, and account management. Serving Leicester and the wider East Midlands. Enquire today.",
   },
-}
+})
 
 const INDUSTRIES = [
   {

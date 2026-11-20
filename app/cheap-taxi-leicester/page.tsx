@@ -9,32 +9,30 @@ import {
   Calendar,
   PoundSterling,
 } from "lucide-react"
-import { contactInfo, siteData } from "@/lib/data"
+import { contactInfo, siteData, PHONE_DISPLAY } from "@/lib/data"
 import type { Metadata } from "next"
 import Link from "next/link"
 import FAQSchema from "@/components/seo/FAQSchema"
 import { buildCanonical } from "@/lib/seo/canonical"
 import { OG_IMAGE, OG_IMAGE_URL } from "@/lib/seo/openGraph"
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd"
+import { finalizeMetadata } from "@/lib/seo/pageMetadata"
+import RelatedGuides from "@/components/RelatedGuides"
 
 const canonical = buildCanonical("/cheap-taxi-leicester")
 
-export const metadata: Metadata = {
-  title: "Cheap Taxi Leicester | No Hidden Charges | Aylestone",
+export const metadata: Metadata = finalizeMetadata({
+  title: "Cheap Taxi Leicester | Fixed Fares, No Surge Pricing",
   description:
-    "Affordable taxis in Leicester with transparent fixed fares agreed up front. No hidden charges and no surge pricing, ever. Call 0116 233 8888 for a quote.",
-  keywords: "Cheap Taxi Leicester, cheapest taxi Leicester, cheap taxi in Leicester, cheapest taxi in Leicester, 24 hour taxi Leicester, affordable taxi Leicester, budget taxi Leicester, low cost taxi Leicester, cheap taxi to East Midlands Airport",
+    "An honest cheap taxi in Leicester: you see the fare before you book and it never surges, day or night. No hidden extras. Get an instant quote, 24/7.",
   alternates: {
     canonical,
   },
   openGraph: {
     images: [OG_IMAGE],
-    title: "Cheap Taxi Leicester | No Hidden Charges | Aylestone",
-    description:
-      "Affordable Leicester taxis with transparent pricing. Book online or call 0116 2338888 — 24/7.",
     url: canonical,
   },
-}
+})
 
 export default function CheapTaxiLeicesterPage() {
   const faqs = [
@@ -78,7 +76,7 @@ export default function CheapTaxiLeicesterPage() {
                 is agreed before you travel and it does not move because it is raining, because it is
                 a Friday, or because half the city wants a car at once. No booking fee, no card
                 surcharge, no surge. The same fixed pricing applies right across our{" "}
-                <Link href="/taxi-leicester" className="text-[#06A0A6] font-semibold underline underline-offset-2">taxi Leicester</Link> service.
+                <Link href="/" className="text-[#06A0A6] font-semibold underline underline-offset-2">Leicester taxi</Link> service.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -236,7 +234,7 @@ export default function CheapTaxiLeicesterPage() {
                 <div className="flex items-start gap-4">
                   <Check className="h-6 w-6 text-[#06A0A6] flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Group Discounts</h3>
+                    <h3 className="text-xl font-bold text-[#0F0D3E] mb-2">Group Travel</h3>
                     <p className="text-[#2E3C44]">
                       Our <strong>Cheap Taxi Leicester</strong> service offers great value for groups. 
                       MPV and minibus options provide cost-effective transport for larger parties.
@@ -383,6 +381,7 @@ export default function CheapTaxiLeicesterPage() {
             </div>
           </div>
         </section>
+        <RelatedGuides slugs={["taxi-vs-uber-leicester-cheaper-2026","how-much-does-taxi-cost-leicester-2026-fare-guide"]} />
       </main>
     </div>
   )
